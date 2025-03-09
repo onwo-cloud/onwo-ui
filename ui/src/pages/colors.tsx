@@ -26,14 +26,14 @@ export const ColorPage = () => (
                   <div data-phx-id="m6-phx-GCr85SSZMc8fh0kh" class="relative w-full">
                     <input phx-focus="[[&quot;push&quot;,{&quot;target&quot;:10,&quot;event&quot;:&quot;open_me&quot;}]]" phx-keyup="[[&quot;push&quot;,{&quot;target&quot;:5,&quot;event&quot;:&quot;change_filter&quot;}]]" placeholder="Search..." autocomplete="off" class="moon-comboinput ps-[2.5rem] bg-goku hover:border-trunks h-10 w-full rounded-moon-s-sm border border-beerus py-2 px-3 focus:outline-none focus:ring-0 placeholder:text-trunks placeholder:opacity-100 placeholder:transition-opacity placeholder:delay-75" />
 
-                      <svg data-phx-id="m7-phx-GCr85SSZMc8fh0kh" class="absolute text-trunks cursor-pointer transition-transform z-[3] top-1/2 text-moon-24 w-6 h-6 -translate-y-1/2 fill-none moon-icon start-3 start-[9px] transition-200" data-moon-id="icon">
-                        <use href="/moon_icons/svgs/icons_new/generic-search.svg#item"></use>
-                      </svg>
+                    <svg data-phx-id="m7-phx-GCr85SSZMc8fh0kh" class="absolute text-trunks cursor-pointer transition-transform z-[3] top-1/2 text-moon-24 w-6 h-6 -translate-y-1/2 fill-none moon-icon start-3 start-[9px] transition-200" data-moon-id="icon">
+                      <use href="/moon_icons/svgs/icons_new/generic-search.svg#item"></use>
+                    </svg>
 
 
-                      <button data-phx-id="m8-phx-GCr85SSZMc8fh0kh" class="absolute text-trunks cursor-pointer transition z-[3] top-1/2 text-moon-14 -translate-y-1/2 end-4 transform">
-                        Clear
-                      </button>
+                    <button data-phx-id="m8-phx-GCr85SSZMc8fh0kh" class="absolute text-trunks cursor-pointer transition z-[3] top-1/2 text-moon-14 -translate-y-1/2 end-4 transform">
+                      Clear
+                    </button>
 
 
                   </div>
@@ -558,7 +558,7 @@ export const ColorPage = () => (
 
                 <div class="w-full">
                   <h3 class="w-full">
-                    <button phx-click="[[&quot;push&quot;,{&quot;target&quot;:6,&quot;event&quot;:&quot;on_change_default&quot;}]]" type="button" aria-expanded="false" is-content-outside="true" size="md" value="0" class="relative flex py-2 bg-goku text-bulma cursor-pointer text-start items-center justify-between flex-1 font-medium rounded-moon-s-sm gap-1 text-moon-14 w-full false pe-2 ps-3">
+                    <button phx-click="[[&quot;push&quot;,{&quot;target&quot;:6,&quot;event&quot;:&quot;on_change_default&quot;}]]" type="button" aria-expanded="false" is-content-outside="true" data--size="md" value="0" class="relative flex py-2 bg-goku text-bulma cursor-pointer text-start items-center justify-between flex-1 font-medium rounded-moon-s-sm gap-1 text-moon-14 w-full false pe-2 ps-3">
                       Button
                       <svg class="moon-icon fill-none text-trunks text-moon-24 transition-200 transition-transform">
                         <use href="/moon_icons/svgs/icons_new/controls-chevron-down.svg#item"></use>
@@ -632,7 +632,7 @@ export const ColorPage = () => (
 
                 <div class="w-full">
                   <h3 class="w-full">
-                    <button phx-click="[[&quot;push&quot;,{&quot;target&quot;:7,&quot;event&quot;:&quot;on_change_default&quot;}]]" type="button" aria-expanded="false" is-content-outside="true" size="md" value="0" class="relative flex py-2 bg-goku text-bulma cursor-pointer text-start items-center justify-between flex-1 font-medium rounded-moon-s-sm gap-1 text-moon-14 w-full false pe-2 ps-3">
+                    <button phx-click="[[&quot;push&quot;,{&quot;target&quot;:7,&quot;event&quot;:&quot;on_change_default&quot;}]]" type="button" aria-expanded="false" is-content-outside="true" data--size="md" value="0" class="relative flex py-2 bg-goku text-bulma cursor-pointer text-start items-center justify-between flex-1 font-medium rounded-moon-s-sm gap-1 text-moon-14 w-full false pe-2 ps-3">
                       Form
                       <svg class="moon-icon fill-none text-trunks text-moon-24 transition-200 transition-transform">
                         <use href="/moon_icons/svgs/icons_new/controls-chevron-down.svg#item"></use>
@@ -732,7 +732,7 @@ export const ColorPage = () => (
 
                 <div class="w-full">
                   <h3 class="w-full">
-                    <button phx-click="[[&quot;push&quot;,{&quot;target&quot;:8,&quot;event&quot;:&quot;on_change_default&quot;}]]" type="button" aria-expanded="false" is-content-outside="true" size="md" value="0" class="relative flex py-2 bg-goku text-bulma cursor-pointer text-start items-center justify-between flex-1 font-medium rounded-moon-s-sm gap-1 text-moon-14 w-full false pe-2 ps-3">
+                    <button phx-click="[[&quot;push&quot;,{&quot;target&quot;:8,&quot;event&quot;:&quot;on_change_default&quot;}]]" type="button" aria-expanded="false" is-content-outside="true" data--size="md" value="0" class="relative flex py-2 bg-goku text-bulma cursor-pointer text-start items-center justify-between flex-1 font-medium rounded-moon-s-sm gap-1 text-moon-14 w-full false pe-2 ps-3">
                       Progress
                       <svg class="moon-icon fill-none text-trunks text-moon-24 transition-200 transition-transform">
                         <use href="/moon_icons/svgs/icons_new/controls-chevron-down.svg#item"></use>
@@ -845,7 +845,7 @@ export const ColorPage = () => (
 
                 <div class="w-full">
                   <h3 class="w-full">
-                    <button phx-click="[[&quot;push&quot;,{&quot;target&quot;:9,&quot;event&quot;:&quot;on_change_default&quot;}]]" type="button" aria-expanded="false" is-content-outside="true" size="md" value="0" class="relative flex py-2 bg-goku text-bulma cursor-pointer text-start items-center justify-between flex-1 font-medium rounded-moon-s-sm gap-1 text-moon-14 w-full false pe-2 ps-3">
+                    <button phx-click="[[&quot;push&quot;,{&quot;target&quot;:9,&quot;event&quot;:&quot;on_change_default&quot;}]]" type="button" aria-expanded="false" is-content-outside="true" data--size="md" value="0" class="relative flex py-2 bg-goku text-bulma cursor-pointer text-start items-center justify-between flex-1 font-medium rounded-moon-s-sm gap-1 text-moon-14 w-full false pe-2 ps-3">
                       Old components
                       <svg class="moon-icon fill-none text-trunks text-moon-24 transition-200 transition-transform">
                         <use href="/moon_icons/svgs/icons_new/controls-chevron-down.svg#item"></use>

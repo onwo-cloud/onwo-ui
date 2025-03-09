@@ -7,6 +7,7 @@ function withOpacityValue(rgbColor, opacityValue) {
   return `rgb(var(${rgbColor}) / ${opacityValue})`;
 }
 
+// TODO: fix this
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {

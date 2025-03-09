@@ -17,14 +17,17 @@
     "lib-types"
   ],
   "engines": {
-    "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+    "node": "^20.3.0"
   },
   "private": false,
   "type": "module",
   "scripts": {
     "build": "qwik build",
-    "build.lib": "vite build --mode lib",
+    "build.client": "vite build -c ./vite.config.client.ts",
+    "build.preview": "vite build  -c ./vite.config.client.ts --ssr src/entry.preview.tsx",
+    "build.server": "vite build",
     "build.types": "tsc --emitDeclarationOnly",
+    "build.lib": "vite build --mode lib",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
@@ -37,6 +40,7 @@
   },
   "devDependencies": {
     "@builder.io/qwik": "1.12.1",
+    "@builder.io/qwik-city": "^1.12.1",
     "@tailwindcss/vite": "^4.0.12",
     "@types/eslint": "8.56.10",
     "@types/node": "20.14.11",

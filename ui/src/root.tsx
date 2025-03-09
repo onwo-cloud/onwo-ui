@@ -1,17 +1,18 @@
+import { QwikCityProvider, RouterOutlet } from '@builder.io/qwik-city';
 import './global.css';
 import '../../themes/moon.css';
-import { ColorPage } from './pages/colors';
 
 export default () => {
   return (
-    <>
+    <QwikCityProvider>
       <head>
         <meta charset="utf-8" />
         <title>Qwik Blank App</title>
       </head>
       <body class="theme-moon-light">
-        <ColorPage />
-      </body >
-    </>
+        <RouterOutlet />
+        {/*<ServiceWorkerRegister /> to add pwa*/}
+      </body>
+    </QwikCityProvider>
   );
 };

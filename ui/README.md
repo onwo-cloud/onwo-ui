@@ -33,7 +33,7 @@ Inside your project, you'll see the following directories and files:
 Development mode uses [Vite's development server](https://vitejs.dev/). For Qwik during development, the `dev` command will also server-side render (SSR) the output. The client-side development modules are loaded by the browser.
 
 ```
-npm run dev
+yarn dev
 ```
 
 > Note: during dev mode, Vite will request many JS files, which does not represent a Qwik production build.
@@ -43,5 +43,11 @@ npm run dev
 The production build should generate the production build of your component library in (./lib) and the typescript type definitions in (./lib-types).
 
 ```
-npm run build
+yarn build
+```
+
+## Static Site Generator (Node.js)
+
+```shell
+yarn build.server
 ```

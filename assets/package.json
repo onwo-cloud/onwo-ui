@@ -12,6 +12,9 @@
     "postcss-import": "^14.0.2",
     "scroll-into-view-if-needed": "^3.0.10",
     "smooth-scroll-into-view-if-needed": "^2.0.0",
-    "tailwindcss": "^4.0.12"
+    "tailwindcss": "^4"
+  },
+   "engines": {
+    "node": "^20.3.0"
   }
 }

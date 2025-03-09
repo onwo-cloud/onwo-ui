@@ -3,8 +3,8 @@
   }) {} }:
 pkgs.mkShell {
   nativeBuildInputs = [
-    pkgs.nodejs_18
-    pkgs.corepack
+    pkgs.nodejs_20
+    pkgs.nodePackages.yarn
     pkgs.nodePackages.typescript-language-server
     pkgs.vscode-langservers-extracted
   ];
