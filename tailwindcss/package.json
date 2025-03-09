@@ -1,0 +1,23 @@
+{
+  "name": "@onwo/tailwindcss",
+  "version": "0.0.0",
+  "url": "https://ui.onwo.cloud/",
+  "repository": "https://github.com/onwo-cloud/onwo-ui",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "files": [
+    "src/*.js",
+    "src/*.d.ts",
+    "dist/"
+  ],
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.4.0"
+  },
+  "peerDependencies": {
+    "tailwindcss": "(>=4 && <5) || insiders"
+  },
+  "engines": {
+    "node": "^20.3.0"
+  }
+}

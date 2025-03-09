@@ -1,6 +1,5 @@
 import { QwikCityProvider, RouterOutlet } from '@builder.io/qwik-city';
 import './global.css';
-import '../../themes/moon.css';
 
 export default () => {
   return (

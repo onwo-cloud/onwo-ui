@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "@tailwindcss/forms": "^0.4.0",
-    "tailwindcss": "^4"
-  },
-   "engines": {
-    "node": "^20.3.0"
-  }
-}

@@ -1,0 +1,21 @@
+/* NB: need to review tailwindcss integration at some point */
+@import "tailwindcss";
+@plugin '@onwo/tailwindcss';
+@import '@onwo/tailwindcss/themes/moon.css';
+
+@custom-variant dark (&:is(body[data-color-mode='dark'], body[data-color-mode="dark"] *, .dark, .dark *));
+
+/* app.css */
+html,
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-size-adjust: none; /* Prevent automatic zooming of fonts on some mobile devices. */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; /* Consistent font display behavior on OSX. */
+  -moz-osx-font-smoothing: grayscale; /* Consistent font display behavior on OSX. */
+}
+
+.moon-icon {
+  @apply inline-block align-middle h-[1em] w-[1em];
+}

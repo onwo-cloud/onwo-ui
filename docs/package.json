@@ -1,24 +1,10 @@
 {
-  "name": "@onwo/ui",
+  "name": "@onwo/ui-docs",
   "version": "0.0.0",
+  "description": "Documentation website for onwo-ui",
   "url": "https://ui.onwo.cloud/",
-  "description": "An ui library for qwik.js inspired by moon.io",
   "repository": "https://github.com/onwo-cloud/onwo-ui",
   "license": "MIT",
-  "main": "./lib/index.qwik.mjs",
-  "qwik": "./lib/index.qwik.mjs",
-  "types": "./lib-types/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./lib/index.qwik.mjs",
-      "require": "./lib/index.qwik.cjs",
-      "types": "./lib-types/index.d.ts"
-    }
-  },
-  "files": [
-    "lib",
-    "lib-types"
-  ],
   "engines": {
     "node": "^20.3.0"
   },
@@ -26,8 +12,10 @@
   "type": "module",
   "scripts": {
     "build": "qwik build",
+    "build.client": "vite build -c ./vite.config.client.ts",
+    "build.preview": "vite build -c ./vite.config.client.ts --ssr src/entry.preview.tsx",
+    "build.server": "vite build",
     "build.types": "tsc --emitDeclarationOnly",
-    "build.lib": "vite build -c ./vite.config.lib.ts --mode lib",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
@@ -40,6 +28,7 @@
   },
   "devDependencies": {
     "@builder.io/qwik": "1.12.1",
+    "@builder.io/qwik-city": "^1.12.1",
     "@tailwindcss/vite": "^4.0.12",
     "@types/eslint": "8.56.10",
     "@types/node": "20.14.11",
@@ -54,5 +43,10 @@
     "undici": "*",
     "vite": "5.3.5",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "@onwo/tailwindcss": "link:../tailwindcss",
+    "@onwo/ui": "link:../ui",
+    "@tailwindcss/typography": "^0.5.16"
   }
 }

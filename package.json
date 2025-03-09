@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "onwo",
+  "workspaces": [
+    "docs",
+    "tailwindcss",
+    "ui"
+  ]
+}
