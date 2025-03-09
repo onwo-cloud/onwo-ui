@@ -1,9 +1,4 @@
-insp
-
-node_modules
-
 # Build
-.env
 /dist
 /lib
 /lib-types
@@ -11,11 +6,11 @@ node_modules
 
 # Development
 node_modules
-*.local
 
 # Cache
 .cache
 .mf
+.vscode
 .rollup.cache
 tsconfig.tsbuildinfo
 
@@ -29,10 +24,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Editor
-.vscode/*
-!.vscode/launch.json
-!.vscode/*.code-snippets
-
+!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -44,11 +36,3 @@ lerna-debug.log*
 # Yarn
 .yarn/*
 !.yarn/releases
-
-# Nix
-.direnv
-
-# Misc
-TODO.txt
-pwa
-
