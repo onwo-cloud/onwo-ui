@@ -24,10 +24,10 @@
   "scripts": {
     "build": "qwik build",
     "build.client": "vite build -c ./vite.config.client.ts",
-    "build.preview": "vite build  -c ./vite.config.client.ts --ssr src/entry.preview.tsx",
+    "build.preview": "vite build -c ./vite.config.client.ts --ssr src/entry.preview.tsx",
     "build.server": "vite build",
     "build.types": "tsc --emitDeclarationOnly",
-    "build.lib": "vite build --mode lib",
+    "build.lib": "vite build -c ./vite.config.lib.ts --mode lib",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
