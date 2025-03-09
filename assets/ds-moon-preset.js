@@ -181,19 +181,19 @@ module.exports = {
         },
         rightslide: {
           "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0%)"}
+          "100%": { transform: "translateX(0%)" }
         },
         leftslide: {
           "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(0%)"}
+          "100%": { transform: "translateX(0%)" }
         },
         topslide: {
           "0%": { transform: "translateY(-100%)" },
-          "100%": { transform: "translateY(0%)"}
+          "100%": { transform: "translateY(0%)" }
         },
         bottomslide: {
           "0%": { transform: "translateY(100%)" },
-          "100%": { transform: "translateY(0%)"}
+          "100%": { transform: "translateY(0%)" }
         },
         rightslideout: {
           "0%": { transform: "translateX(0%)" },
@@ -224,7 +224,7 @@ module.exports = {
           "100%": { opacity: 1, transform: "scale(1)" }
         },
         modalfadeout: {
-          "0%": { opacity: 1 , transform: "scale(1)" },
+          "0%": { opacity: 1, transform: "scale(1)" },
           "100%": { opacity: 0, transform: "scale(.95)" }
         },
       },
@@ -244,7 +244,7 @@ module.exports = {
           "0 0 0 var(--border-i-width) rgb(var(--chichi)) inset",
         "input-focus":
           "0 0 0 var(--border-i-width) rgb(var(--piccolo)) inset",
-        'input-cell-focus': 
+        'input-cell-focus':
           '0 0 0 var(--border-width) rgb(var(--bulma)) inset',
         "moon-sm":
           "0 6px 6px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)",
@@ -261,7 +261,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    plugin(function ({ addVariant }) {
+    plugin(function({ addVariant }) {
       for (let state of ['checked', 'selected', 'active', 'disabled']) {
         addVariant(`moon-${state}`, [
           `&[aria-${state}="true"]`,
@@ -286,5 +286,5 @@ module.exports = {
       addVariant('not-first', '&:not(:first-child)');
       addVariant('empty', '&:empty');
     }),
-  ],  
+  ],
 };
