@@ -73,10 +73,17 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+
       - name: Build & publish ui package
         if: ${{ steps.check-ui.outputs.ui == 'true' || github.event_name == 'workflow_dispatch' }}
         run: |
-          cd ui
+          # @onwo/tailwindcss built step could have been skipped
+          # so we rebuild it.
+          cd tailwindcss
+          yarn install
+          yarn build
+
+          cd ../ui
           yarn install
           yarn build
           yarn publish --access public || true
