@@ -69,7 +69,7 @@ jobs:
           cd tailwindcss
           yarn install
           yarn build
-          yarn publish --access public
+          yarn publish --access public || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -79,6 +79,6 @@ jobs:
           cd ui
           yarn install
           yarn build
-          yarn publish --access public
+          yarn publish --access public || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
