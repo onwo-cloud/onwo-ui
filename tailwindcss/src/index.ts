@@ -1,5 +1,5 @@
 import plugin, { PluginAPI } from 'tailwindcss/plugin';
-import { colors } from './colors';
+import { colors } from './colors.js';
 
 export default plugin(
   ({ addVariant }: PluginAPI) => {

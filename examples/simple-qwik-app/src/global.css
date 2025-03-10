@@ -1,0 +1,7 @@
+/* Import the theme first or copy it over */
+@import '@onwo/tailwindcss/themes/moon.css';
+
+@import "tailwindcss";
+
+/* then the plugin after tailwind */
+@plugin '@onwo/tailwindcss';
