@@ -1,6 +1,6 @@
 {
   "name": "@onwo/tailwindcss",
-  "version": "0.0.0",
+  "version": "0.0.0-alpha",
   "url": "https://ui.onwo.cloud/",
   "repository": "https://github.com/onwo-cloud/onwo-ui",
   "license": "MIT",
@@ -19,5 +19,8 @@
   },
   "engines": {
     "node": "^20.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

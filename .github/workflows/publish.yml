@@ -1,0 +1,84 @@
+name: Publish to NPM Registry
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'tailwindcss/**'
+      - 'ui/**'
+      - 'package.json'
+      - 'yarn.lock'
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "publish"
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Check for tailwind changes
+        id: check-tailwind
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            tailwind:
+              - 'tailwindcss/**'
+              - 'package.json'
+              - 'yarn.lock'
+
+      - name: Check for UI changes
+        id: check-ui
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            ui:
+              - 'ui/**'
+              - 'package.json'
+              - 'yarn.lock'
+
+      - name: Build & publish tailwindcss package
+        if: ${{ steps.check-tailwind.outputs.tailwind == 'true' || github.event_name == 'workflow_dispatch' }}
+        run: |
+          cd tailwindcss
+          yarn install
+          #yarn build
+          yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build & publish ui package
+        if: ${{ steps.check-ui.outputs.ui == 'true' || github.event_name == 'workflow_dispatch' }}
+        run: |
+          cd ui
+          yarn install
+          yarn build
+          yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
