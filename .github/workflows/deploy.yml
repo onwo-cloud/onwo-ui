@@ -44,6 +44,10 @@ jobs:
         working-directory: .
         run: yarn install
 
+      - name: Build ui library
+        working-directory: ./ui
+        run: yarn build
+
       - name: Build documentation website
         working-directory: ./docs
         run: yarn build
