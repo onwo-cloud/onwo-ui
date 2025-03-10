@@ -1,4 +1,4 @@
-{
+export const colors = {
     "krillin-10": "rgb(var(--krillin-10))",
     "krillin-60": "rgb(var(--krillin-60))",
     "krillin": "rgb(var(--krillin))",
@@ -46,9 +46,9 @@
     "trunks": "rgb(var(--trunks))",
     "popo": "rgb(var(--popo))",
     "jiren": "rgb(var(--jiren))",
-    "heles": "rgb(var(--heles))", 
+    "heles": "rgb(var(--heles))",
     "zeno": "rgb(var(--zeno))",
     "black": "#000",
     "hover": "rgba(34, 34, 37, 0.12))",
     "primary-hover": "rgba(0, 0, 0, 0.08))"
-}
+} as const;

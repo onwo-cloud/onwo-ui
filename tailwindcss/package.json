@@ -4,15 +4,22 @@
   "url": "https://ui.onwo.cloud/",
   "repository": "https://github.com/onwo-cloud/onwo-ui",
   "license": "MIT",
-  "main": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "tailwindcss",
+    "plugin"
+  ],
   "files": [
-    "src/*.js",
-    "src/*.d.ts",
     "dist/"
   ],
+  "scripts": {
+    "build": "tsc"
+  },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.4.0"
+    "@tailwindcss/forms": "^0.4.0",
+    "tailwindcss": "^4.0.12"
   },
   "peerDependencies": {
     "tailwindcss": "(>=4 && <5) || insiders"

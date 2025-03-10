@@ -8,6 +8,11 @@
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
   "types": "./lib-types/index.d.ts",
+  "keywords": [
+    "tailwindcss",
+    "ui-library",
+    "qwik.js"
+  ],
   "exports": {
     ".": {
       "import": "./lib/index.qwik.mjs",

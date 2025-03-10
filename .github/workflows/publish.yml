@@ -68,7 +68,7 @@ jobs:
         run: |
           cd tailwindcss
           yarn install
-          #yarn build
+          yarn build
           yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

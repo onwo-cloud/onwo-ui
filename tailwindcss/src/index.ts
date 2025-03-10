@@ -1,32 +1,33 @@
-const plugin = require('tailwindcss/plugin');
-const colors = require("./colors.json");
+import plugin, { PluginAPI } from 'tailwindcss/plugin';
+import { colors } from './colors';
 
-module.exports = plugin(function({ addVariant }) {
-  // Add custom variants
-  for (let state of ['checked', 'selected', 'active', 'disabled']) {
-    addVariant(`moon-${state}`, [
-      `&[aria-${state}="true"]`,
-      `:where([aria-${state}="true"]) &`,
+export default plugin(
+  ({ addVariant }: PluginAPI) => {
+    // Add custom variants
+    for (let state of ['checked', 'selected', 'active', 'disabled']) {
+      addVariant(`moon-${state}`, [
+        `&[aria-${state}="true"]`,
+        `:where([aria-${state}="true"]) &`,
+      ]);
+      addVariant(`moon-not-${state}`, [
+        `&[aria-${state}="false"]`,
+        `:where([aria-${state}="false"]) &`,
+      ]);
+    }
+
+    addVariant(`moon-open`, [
+      `&[aria-open="true"]`,
+      `:where([aria-open="true"]) &`,
+      `&[data-state="open"]`,
+      `:where([data-state="open"]) &`,
     ]);
-    addVariant(`moon-not-${state}`, [
-      `&[aria-${state}="false"]`,
-      `:where([aria-${state}="false"]) &`,
-    ]);
-  }
 
-  addVariant(`moon-open`, [
-    `&[aria-open="true"]`,
-    `:where([aria-open="true"]) &`,
-    `&[data-state="open"]`,
-    `:where([data-state="open"]) &`,
-  ]);
+    addVariant(`moon-error`, [`&[error]`, `:where([error]) &`]);
+    addVariant('not-last', '&:not(:last-child)');
+    addVariant('not-first', '&:not(:first-child)');
+    addVariant('empty', '&:empty');
 
-  addVariant(`moon-error`, [`&[error]`, `:where([error]) &`]);
-  addVariant('not-last', '&:not(:last-child)');
-  addVariant('not-first', '&:not(:first-child)');
-  addVariant('empty', '&:empty');
-
-}, {
+  }, {
   theme: {
     extend: {
       colors,
@@ -167,4 +168,4 @@ module.exports = plugin(function({ addVariant }) {
       },
     }
   }
-});
+}) as any;
