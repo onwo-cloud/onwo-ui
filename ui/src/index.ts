@@ -1,1 +1,1 @@
-//export { Counter } from "./components/counter/counter";
+export { HelloWorld } from "./hello-world";

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 :root.theme-travel-light,
 .theme-travel-light {
   --piccolo: 39 90 219; /* #275adb */
@@ -67,7 +69,6 @@
   --opacity-moon: 0.6;
 
   /* fonts */
-  --averta: 'Averta Std';
   --dm-sans: 'DM Sans';
 
   /* box-shadow */

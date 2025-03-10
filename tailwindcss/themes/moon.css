@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 :root.theme-moon-light,
 .theme-moon-light {
   --piccolo: 92 51 207; /* #5c33cf */
@@ -67,7 +69,6 @@
   --opacity-moon: 0.6;
 
   /* fonts */
-  --averta: 'Averta Std';
   --dm-sans: 'DM Sans';
   --grotesk: 'Space Grotesk';
 
@@ -149,7 +150,6 @@
   --opacity-moon: 0.6;
 
   /* fonts */
-  --averta: 'Averta Std';
   --dm-sans: 'DM Sans';
   --grotesk: 'Space Grotesk';
 

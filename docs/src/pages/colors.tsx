@@ -1,3 +1,5 @@
+import { HelloWorld } from "@onwo/ui";
+
 export const ColorPage = () => (
   <div id="phx-GCr85SSZMc8fh0kh" data-phx-main="" data-phx-session="SFMyNTY.g2gDaAJhBXQAAAAIdwJpZG0AAAAUcGh4LUdDcjg1U1NaTWM4Zmgwa2h3BHZpZXd3H0VsaXhpci5Nb29uV2ViLlBhZ2VzLlZpc2lvblBhZ2V3CnBhcmVudF9waWR3A25pbHcGcm91dGVydxVFbGl4aXIuTW9vbldlYi5Sb3V0ZXJ3B3Nlc3Npb250AAAAAHcJcm9vdF92aWV3dx9FbGl4aXIuTW9vbldlYi5QYWdlcy5WaXNpb25QYWdldwhyb290X3BpZHcDbmlsdwxsaXZlX3Nlc3Npb25oAncHZGVmYXVsdG4IAA82adz4Wh0YbgYAj5FueJUBYgABUYA.GHJ6FYf7o8k1OgtzKV2znxOtZWzIP79vUYpQ7Dui8is" data-phx-static="SFMyNTY.g2gDaAJhBXQAAAADdwJpZG0AAAAUcGh4LUdDcjg1U1NaTWM4Zmgwa2h3BWZsYXNodAAAAAB3CmFzc2lnbl9uZXdqbgYAj5FueJUBYgABUYA.wyrgZmYk6cvULBtiBFHS92irXOg5hi3BI51LeDTnx8E" data-phx-root-id="phx-GCr85SSZMc8fh0kh" class="phx-connected"><div data-phx-id="m1-phx-GCr85SSZMc8fh0kh" role="main" class="pt-16 lg:pt-0 bg-gohan text-bulma flex" dir="ltr">
     <div data-phx-id="c1-phx-GCr85SSZMc8fh0kh" data-phx-component="1" id="left-menu" phx-hook="Animation" data-is_closing="false" data-lg_persists="" aria-expanded="false" class="fixed hidden z-[99999] inset-auto lg:flex lg:z-50 lg:inset-y-0 lg:w-80 lg:start-0">
@@ -420,7 +422,6 @@ export const ColorPage = () => (
               Colours
 
             </a>
-
 
 
 
@@ -951,6 +952,8 @@ export const ColorPage = () => (
               </div>
               <div class="flex flex-col items-start gap-2 text-moon-16">
 
+
+                <HelloWorld />
                 <p>Our design system is decentralized and built for multi-product purposes. Having different-color naming conventions and numbers etc... makes it harder to maintain it.</p>
                 <p>For that, we made a decision to give our colours unique names.</p>
                 <p>Meet the <span class="font-semibold">Dragon Ball Z approach</span>.</p>

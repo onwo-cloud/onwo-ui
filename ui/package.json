@@ -27,9 +27,7 @@
   "scripts": {
     "build": "qwik build",
     "build.types": "tsc --emitDeclarationOnly",
-    "build.lib": "vite build -c ./vite.config.lib.ts --mode lib",
-    "dev": "vite --mode ssr",
-    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "build.lib": "vite build --mode lib",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
@@ -53,6 +51,7 @@
     "typescript": "5.4.5",
     "undici": "*",
     "vite": "5.3.5",
-    "vite-tsconfig-paths": "^4.2.1"
+    "vite-tsconfig-paths": "^4.2.1",
+    "@onwo/tailwindcss": "link:../tailwindcss"
   }
 }

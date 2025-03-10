@@ -1,8 +1,10 @@
-import { UserConfig, defineConfig } from "vite";
-import pkg from "./package.json";
-import { qwikVite } from "@builder.io/qwik/optimizer";
-import tsconfigPaths from "vite-tsconfig-paths";
+import { UserConfig, defineConfig } from 'vite';
+import pkg from './package.json';
+import { qwikVite } from '@builder.io/qwik/optimizer';
+import tsconfigPaths from 'vite-tsconfig-paths';
 import tailwindcss from '@tailwindcss/vite'
+import onwoTailwindPlugin from '@onwo/tailwindcss';
+
 
 const { dependencies = {}, peerDependencies = {} } = pkg as any;
 const makeRegex = (dep) => new RegExp(`^${dep}(/.*)?$`);
@@ -10,17 +12,18 @@ const excludeAll = (obj) => Object.keys(obj).map(makeRegex);
 
 export const baseConfig = {
   build: {
-    target: "es2020",
+    sourcemap: false,
+    target: 'es2020',
     lib: {
-      entry: "./src/index.ts",
-      formats: ["es", "cjs"],
+      entry: './src/index.ts',
+      formats: ['es', 'cjs'],
       fileName: (format, entryName) =>
-        `${entryName}.qwik.${format === "es" ? "mjs" : "cjs"}`,
+        `${entryName}.qwik.${format === 'es' ? 'mjs' : 'cjs'}`,
     },
     rollupOptions: {
       output: {
         preserveModules: true,
-        preserveModulesRoot: "src",
+        preserveModulesRoot: 'src',
       },
       // externalize deps that shouldn't be bundled into the library
       external: [
@@ -33,8 +36,9 @@ export const baseConfig = {
   plugins: [
     qwikVite(),
     tsconfigPaths(),
-    // This will need to be moved out at some point
-    tailwindcss()
+    tailwindcss({
+      plugins: [onwoTailwindPlugin],
+    })
   ],
 } satisfies UserConfig;
 
