@@ -1,6 +1,6 @@
 {
   "name": "@onwo/ui",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "url": "https://ui.onwo.cloud/",
   "description": "An ui library for qwik.js inspired by moon.io",
   "repository": "https://github.com/onwo-cloud/onwo-ui",
