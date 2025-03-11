@@ -96,7 +96,14 @@ body {
 
                 </pre>
 
-                <p>You should be ready to go!</p>
+                <p class="mt-2">Add your theme specific class to the body element or the element where you want the theme applied:</p>
+                <pre class="theme-moon-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-moon-14 text-bulma rounded-moon-s-sm leading-[17px]">
+                  <code>
+                    <span class="bg-roshi/40">{`<body class="theme-moon-light">...</body>`}</span>
+                  </code>
+
+                </pre>
+                <p class="mt-2">You are good to go!</p>
               </div>
             </div>
 
