@@ -5,13 +5,16 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import tailwindcss from '@tailwindcss/vite'
 import onwoTailwindPlugin from '@onwo/tailwindcss';
 
-
 const { dependencies = {}, peerDependencies = {} } = pkg as any;
 const makeRegex = (dep) => new RegExp(`^${dep}(/.*)?$`);
 const excludeAll = (obj) => Object.keys(obj).map(makeRegex);
 
 export const baseConfig = {
   build: {
+    // NB: May need this:
+    //watch: {
+    //  include: ['../tailwindcss/**/*'],
+    //},
     sourcemap: false,
     target: 'es2020',
     lib: {

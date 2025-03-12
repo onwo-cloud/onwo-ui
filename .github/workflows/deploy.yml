@@ -44,7 +44,7 @@ jobs:
         working-directory: .
         run: yarn install
 
-      - name: Build ui library
+      - name: Build tailwindcss plugin
         working-directory: ./tailwindcss
         run: yarn build
 

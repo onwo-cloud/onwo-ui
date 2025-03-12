@@ -1,11 +1,14 @@
 import { UserConfig, defineConfig } from "vite";
-import pkg from "./package.json";
 import { qwikVite } from "@builder.io/qwik/optimizer";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { qwikCity } from "@builder.io/qwik-city/vite";
 import { staticAdapter } from "@builder.io/qwik-city/adapters/static/vite";
-
 import tailwindcss from '@tailwindcss/vite'
+import { hackwatcher } from '../misc/hackwatcher';
+
+// This will update the root.tsx utime every time the ui plugin
+// is updated.
+hackwatcher('../ui/dist', './src/root.tsx');
 
 export const baseConfig = {
   plugins: [

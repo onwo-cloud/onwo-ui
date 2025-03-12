@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "onwo",
+  "name": "onwo-ui",
   "workspaces": [
     "docs",
     "tailwindcss",

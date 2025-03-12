@@ -33,21 +33,19 @@
     "build": "qwik build",
     "build.types": "tsc --emitDeclarationOnly",
     "build.lib": "vite build --mode lib",
-    "fmt": "prettier --write .",
-    "fmt.check": "prettier --check .",
-    "lint": "eslint \"src/**/*.ts*\"",
-    "release": "np",
-    "start": "vite --open --mode ssr",
-    "test": "echo \"No test specified\" && exit 0",
-    "qwik": "qwik"
+    "dev": "vite build --mode lib -c ./vite.config.dev.ts",
+    "ts-watch": "tsc --noEmit --incremental --preserveWatchOutput --pretty --watch"
   },
   "devDependencies": {
     "@builder.io/qwik": "1.12.1",
+    "@onwo/tailwindcss": "link:../tailwindcss",
     "@tailwindcss/vite": "^4.0.12",
     "@types/eslint": "8.56.10",
     "@types/node": "20.14.11",
+    "@types/tailwindcss": "^3.1.0",
     "@typescript-eslint/eslint-plugin": "7.16.1",
     "@typescript-eslint/parser": "7.16.1",
+    "chokidar": "^4.0.3",
     "eslint": "8.57.0",
     "eslint-plugin-qwik": "1.12.1",
     "np": "^8.0.4",
@@ -56,10 +54,13 @@
     "typescript": "5.4.5",
     "undici": "*",
     "vite": "5.3.5",
-    "vite-tsconfig-paths": "^4.2.1",
-    "@onwo/tailwindcss": "link:../tailwindcss"
+    "vite-tsconfig-paths": "^4.2.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.0.2"
   }
 }

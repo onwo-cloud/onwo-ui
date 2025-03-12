@@ -15,7 +15,9 @@
     "dist/"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsc --incremental --preserveWatchOutput --pretty --watch",
+    "ts-watch": "yarn dev -- --noEmit"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.4.0",

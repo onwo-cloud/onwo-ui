@@ -77,7 +77,7 @@ jobs:
       - name: Build & publish ui package
         if: ${{ steps.check-ui.outputs.ui == 'true' || github.event_name == 'workflow_dispatch' }}
         run: |
-          # @onwo/tailwindcss built step could have been skipped
+          # tailwindcss plugin built step could have been skipped
           # so we rebuild it.
           cd tailwindcss
           yarn install
