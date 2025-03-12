@@ -11,6 +11,7 @@
  *
  */
 import { renderToStream, type RenderToStreamOptions } from '@builder.io/qwik/server';
+// eslint-disable-next-line import/no-unresolved
 import { manifest } from '@qwik-client-manifest';
 import Root from './root';
 
@@ -25,4 +26,3 @@ export default function (opts: RenderToStreamOptions) {
     },
   });
 }
-

@@ -1,18 +1,17 @@
-import { JSXChildren } from "@builder.io/qwik";
+import type { JSXChildren } from '@builder.io/qwik';
+import { cn } from '~/utils/cn';
 
 export type ButtonProps = {
-  variant?: "fill" | "outline" | "ghost"; // default: fill
+  variant?: 'fill' | 'outline' | 'ghost'; // default: fill
   type?: 'button' | 'submit'; // default: button
-  size?: "xs" | "sm" | "md" | "lg" | "xl"; // default: md
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'; // default: md
   disabled?: boolean;
-  animation?: "progress" | "success" | "error" | "pulse";
+  animation?: 'progress' | 'success' | 'error' | 'pulse';
   class?: string;
   children?: JSXChildren;
-}
+};
 
-import { component$, Slot, QRL, PropsOf } from '@builder.io/qwik';
-
-export const Button = component$(({
+export const Button = ({
   variant = 'fill',
   size = 'md',
   type = 'button',
@@ -21,7 +20,8 @@ export const Button = component$(({
   class: className,
   ...rest
 }: ButtonProps) => {
-
+  return <></>;
+  /*
   return (
     <button
       class={cn(className)}
@@ -46,5 +46,5 @@ LG Button
 XL Button
 </button>
   );
-});
-
+  */
+};

@@ -3,6 +3,11 @@ set dotenv-load := true
 build-tailwind-plugin:
   yarn build --cwd=tailwindcss
 
+workspace CMD:
+    yarn --cwd=tailwindcss   {{CMD}} || true
+    yarn --cwd=ui            {{CMD}} || true
+    yarn --cwd=docs          {{CMD}} || true
+
 build-ui:
   yarn build --cwd=ui
 

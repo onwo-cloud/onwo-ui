@@ -31,4 +31,3 @@ export const buildHead = (data: BuildHead) => ({
     { name: 'twitter:image', content: data.shareImage },
   ].filter((x?: DocumentMeta | false): x is DocumentMeta => !!x) as DocumentMeta[],
 });
-

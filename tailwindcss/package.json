@@ -17,10 +17,13 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --incremental --preserveWatchOutput --pretty --watch",
-    "ts-watch": "yarn dev -- --noEmit"
+    "ts-watch": "yarn dev -- --noEmit",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "lint.fix": "npm run lint -- --fix"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.4.0",
+    "@types/tailwindcss": "^3.1.0",
     "tailwindcss": "^4.0.12"
   },
   "peerDependencies": {
