@@ -1,51 +1,109 @@
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const prettierConfig = require('./.prettierrc.cjs');
 
-module.exports = {
+// extension used when running `just lint` or `just lint.fix`
+// includes unicorn, sonarjs and promise specific lints
+// kept of of LSP as it's too slow
+const extendedConfig = {
   root: true,
   env: {
     browser: true,
-    es2021: true,
+    es2024: true,
     node: true,
   },
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
+    'plugin:promise/recommended',
+    'plugin:sonarjs/recommended-legacy',
+    'plugin:unicorn/recommended',
+  ],
+  plugins: ['sonarjs', 'unicorn', 'promise'],
+  rules: {
+    'unicorn/prefer-ternary': 'off',
+    'unicorn/no-anonymous-default-export': 'off',
+    'unicorn/prevent-abbreviations': 'off',
+    'sonarjs/function-return-type': 'off',
+    'sonarjs/unused-import': 'off',
+  }
+};
+
+let minimalConfig = {
+  root: true,
+  env: {
+    browser: true,
+    es2024: true,
+    node: true,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:import/recommended',
     'plugin:prettier/recommended',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2021,
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
   },
   plugins: ['@typescript-eslint', 'import'],
   rules: {
-    // Shared rules across all projects
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
-    'import/order': ['error', {
-      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-      alphabetize: { order: 'asc', caseInsensitive: true }
-    }],
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        alphabetize: { order: 'asc', caseInsensitive: true },
+      },
+    ],
     'prettier/prettier': [
       'error',
       prettierConfig,
       {
         prettierPath: require.resolve('prettier'),
-      }
-    ]
+      },
+    ],
   },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
       rules: {
         // TypeScript-specific rules
-        '@typescript-eslint/consistent-type-imports': 'warn'
+        '@typescript-eslint/consistent-type-imports': 'warn',
+      },
+    },
+  ],
+};
+
+const isObject = (o) => o && typeof item === 'object' && !Array.isArray(o);
+
+function mergeDeep(target, source) {
+  // Create a deep clone of the target to avoid modifying the original
+  const result = { ...target };
+
+  for (const key in source) {
+    if (Object.prototype.hasOwnProperty.call(source, key)) {
+      if (isObject(source[key]) && isObject(target[key])) {
+        // If both values are objects, merge them recursively
+        result[key] = mergeDeep(target[key], source[key]);
+      } else if (Array.isArray(source[key]) && Array.isArray(target[key])) {
+        // If both values are arrays, concatenate them without duplicates
+        result[key] = [...new Set([...target[key], ...source[key]])];
+      } else {
+        // Otherwise, use the value from the source
+        result[key] = source[key];
       }
     }
-  ]
-};
+  }
+
+  return result;
+}
+
+if (process.env.ESLINT_MODE === 'full') {
+  module.exports = mergeDeep(extendedConfig, minimalConfig);
+} else {
+  module.exports = minimalConfig;
+}

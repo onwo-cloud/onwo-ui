@@ -8,6 +8,16 @@ workspace CMD:
     yarn --cwd=ui            {{CMD}} || true
     yarn --cwd=docs          {{CMD}} || true
 
+lint:
+  #!/usr/bin/env bash
+  export ESLINT_MODE=full
+  just workspace lint
+
+lint-fix:
+  #!/usr/bin/env bash
+  export ESLINT_MODE=full
+  just workspace lint.fix
+
 build-ui:
   yarn build --cwd=ui
 

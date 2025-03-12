@@ -11,12 +11,15 @@
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
     "concurrently": "^9.1.2",
-    "eslint": "^8",
+    "eslint": "^8.56",
     "eslint-config-prettier": "^10.1.1",
     "eslint-import-resolver-typescript": "^3.8.5",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-qwik": "^1.12.1",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "eslint-plugin-unicorn": "56.0.0",
     "prettier": "^3.5.3"
   }
 }
