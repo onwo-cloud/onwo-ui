@@ -1,5 +1,6 @@
 import { component$, useSignal, Slot, type QwikIntrinsicElements } from '@builder.io/qwik';
 
+// Finish coding the implementations. AI!
 export type TabsProps = QwikIntrinsicElements['div'] & {
   id: string;
   testid?: string;
