@@ -1,8 +1,7 @@
 import { component$, useSignal, Slot, type QwikIntrinsicElements, useTask$, $ } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 
-// can you make it so that all non Tabs component are exported here as Tabs.[[Component]]?. AI!
-export type TabsProps = QwikIntrinsicElements['div'] & {
+export const Tabs = component$<Tabs.TabsProps>(
   id: string;
   testid?: string;
   class?: string;
@@ -10,7 +9,16 @@ export type TabsProps = QwikIntrinsicElements['div'] & {
   onChange$?: (index: number) => void;
 };
 
-export const Tabs = component$<TabsProps>(
+export namespace Tabs {
+  export type TabsProps = QwikIntrinsicElements['div'] & {
+    id: string;
+    testid?: string;
+    class?: string;
+    selected?: number;
+    onChange$?: (index: number) => void;
+  };
+
+  export const Root = component$<TabsProps>(
   ({ id, testid, class: className, selected = 0, onChange$, ...props }) => {
     const selectedIndex = useSignal(selected);
 
@@ -32,9 +40,10 @@ export const Tabs = component$<TabsProps>(
       </div>
     );
   },
-);
+  );
+}
 
-export type TabProps = QwikIntrinsicElements['button'] & {
+  export type TabProps = QwikIntrinsicElements['button'] & {
   id?: string;
   disabled?: boolean;
   class?: string;
@@ -47,7 +56,7 @@ export type TabProps = QwikIntrinsicElements['button'] & {
   onChange$?: (index: number) => void;
 }
 
-export const Tab = component$<TabProps>(
+  export const Tab = component$<TabProps>(
   ({
     id,
     disabled = false,
@@ -85,7 +94,7 @@ export const Tab = component$<TabProps>(
   },
 );
 
-export type ListProps = QwikIntrinsicElements['div'] & {
+  export type ListProps = QwikIntrinsicElements['div'] & {
   id?: string;
   testid?: string;
   class?: string;
@@ -97,7 +106,7 @@ export type ListProps = QwikIntrinsicElements['div'] & {
   onChange$?: (index: number) => void;
 }
 
-export const List = component$<ListProps>(
+  export const List = component$<ListProps>(
   ({
     id,
     testid,
@@ -133,12 +142,12 @@ export const List = component$<ListProps>(
   },
 );
 
-export type PillProps = TabProps & {
+  export type PillProps = TabProps & {
   unselectedClass?: string;
   selectedClass?: string;
 }
 
-export const Pill = component$<PillProps>(
+  export const Pill = component$<PillProps>(
   ({
     id,
     disabled = false,
@@ -172,14 +181,14 @@ export const Pill = component$<PillProps>(
   },
 );
 
-export type PanelsProps = QwikIntrinsicElements['div'] & {
+  export type PanelsProps = QwikIntrinsicElements['div'] & {
   id?: string;
   testid?: string;
   class?: string;
   selected?: number;
 }
 
-export const Panels = component$<PanelsProps>(
+  export const Panels = component$<PanelsProps>(
   ({ id, testid, class: className, selected, ...props }) => {
     return (
       <div id={id} data-testid={testid} class={className} {...props}>
@@ -189,14 +198,14 @@ export const Panels = component$<PanelsProps>(
   },
 );
 
-export type PanelProps = QwikIntrinsicElements['div'] & {
+  export type PanelProps = QwikIntrinsicElements['div'] & {
   id?: string;
   testid?: string;
   class?: string;
   selected?: boolean;
 }
 
-export const Panel = component$<PanelProps>(
+  export const Panel = component$<PanelProps>(
   ({ id, testid, class: className, selected = false, ...props }) => {
     return (
       <div
