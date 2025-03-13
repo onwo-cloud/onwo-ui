@@ -152,7 +152,7 @@ export default plugin(
         },
         fontWeight: {
           normal: 400,
-          semibold: 500,
+          semibold: 500, // that may be confusing
         },
         boxShadow: {
           border: '0 0 0 2px rgba(var(--piccolo)) inset',
