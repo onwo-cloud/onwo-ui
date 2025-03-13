@@ -1,4 +1,4 @@
-import { component$, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { Slot, component$, type QwikIntrinsicElements } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 
 export type PanelProps = QwikIntrinsicElements['div'] & {
@@ -14,11 +14,7 @@ export const Panel = component$<PanelProps>(
       <div
         id={id}
         data-testid={testid}
-        class={cn(
-          selected ? 'block' : 'hidden',
-          'p-4 focus:outline-none',
-          className,
-        )}
+        class={cn(selected ? 'block' : 'hidden', 'p-4 focus:outline-none', className)}
         role="tabpanel"
         aria-labelledby={`${id}-tab`}
         tabIndex={selected ? 0 : -1}

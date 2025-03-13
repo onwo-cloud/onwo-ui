@@ -109,7 +109,7 @@ export default component$(() => (
                 <SidebarButtonSmall disabled href="/components/avatar">
                   Avatar
                 </SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/bottomsheet">
+                <SidebarButtonSmall disabled href="/components/bottom-sheet">
                   {' '}
                   Bottom Sheet{' '}
                 </SidebarButtonSmall>
@@ -138,7 +138,7 @@ export default component$(() => (
                 <SidebarButtonSmall disabled href="/components/loader">
                   Loader
                 </SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/menu_item">
+                <SidebarButtonSmall disabled href="/components/menu-item">
                   Menu Item
                 </SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/modal">
@@ -165,7 +165,7 @@ export default component$(() => (
                 <SidebarButtonSmall disabled href="/components/table">
                   Table
                 </SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/tabs">
+                <SidebarButtonSmall href="/components/tabs">
                   Tabs
                 </SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/tag">

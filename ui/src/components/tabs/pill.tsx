@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { Slot, component$ } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 import type { TabProps } from './tab';
 

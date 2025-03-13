@@ -1,4 +1,4 @@
-import { component$, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { Slot, component$, type QwikIntrinsicElements } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 
 export type TabProps = QwikIntrinsicElements['button'] & {

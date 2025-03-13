@@ -1,4 +1,4 @@
-import { component$, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { Slot, component$, type QwikIntrinsicElements } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 
 export type ListProps = QwikIntrinsicElements['div'] & {
@@ -35,11 +35,7 @@ export const List = component$<ListProps>(
       <div
         id={id}
         data-testid={testid}
-        class={cn(
-          'flex justify-around gap-2 border-b border-beerus',
-          sizeClasses[size],
-          className,
-        )}
+        class={cn('flex justify-around gap-2 border-b border-beerus', sizeClasses[size], className)}
         role="tablist"
         {...props}
       >

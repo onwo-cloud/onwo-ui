@@ -1,4 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
+import { Button } from '@onwo/ui';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { buildHead } from '~/utils/build-head';
 
@@ -8,7 +9,7 @@ export default () => (
       title="Button"
       breadcrumbs={[{ label: 'button', url: '/components/button' }]}
     />
-    <p>wip</p>
+    <Button> Default </Button>
   </div>
 );
 

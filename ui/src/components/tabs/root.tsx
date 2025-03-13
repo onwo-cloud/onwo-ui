@@ -1,4 +1,4 @@
-import { component$, useSignal, type QwikIntrinsicElements, useTask$, $ } from '@builder.io/qwik';
+import { component$, useSignal, type QwikIntrinsicElements, useTask$, $, Slot } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 
 export type TabsProps = QwikIntrinsicElements['div'] & {

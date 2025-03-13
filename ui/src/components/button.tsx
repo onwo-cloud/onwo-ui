@@ -1,4 +1,4 @@
-import type { JSXChildren, ButtonHTMLAttributes } from '@builder.io/qwik';
+import type { ButtonHTMLAttributes, JSX } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 
 export type ButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'> & {
@@ -15,7 +15,7 @@ export const Button = ({
   class: className,
   children,
   ...props
-}: ButtonProps): JSXChildren => {
+}: ButtonProps): JSX.Element => {
   return (
     <button
       type={type}
@@ -36,6 +36,7 @@ export const Button = ({
         },
         className,
       )}
+      {...props}
     >
       {children}
     </button>
