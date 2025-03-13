@@ -31,7 +31,6 @@ export const RoadmapPage = () => (
     </p>
     <ul>
       <li>- Cleanup this documentation + QA</li>
-      <li>- Review design fundamentals</li>
       <li>- Node.js compatibility for v20 & v21</li>
       <li>- Official release 🚀</li>
     </ul>
@@ -41,6 +40,7 @@ export const RoadmapPage = () => (
       <li>- Keep integrating the more advanced moon.io components</li>
       <li>- Add logics utilities (forms management, hooks, cookie banner, etc.)</li>
       <li>- Improve CI for automatic versionning + related QOL / security features</li>
+      <li>- Provide ready to use templates & themes</li>
       <li>- Continual refinement based on community feedback</li>
     </ul>
 
