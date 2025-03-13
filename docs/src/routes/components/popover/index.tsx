@@ -4,7 +4,10 @@ import { buildHead } from '~/utils/build-head';
 
 export default () => (
   <div>
-    <PageHeadSection title="Popover" breadcrumbs={[{ label: 'popover', url: '/components/popover' }]} />
+    <PageHeadSection
+      title="Popover"
+      breadcrumbs={[{ label: 'popover', url: '/components/popover' }]}
+    />
   </div>
 );
 

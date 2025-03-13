@@ -18,9 +18,32 @@ export const Button = ({
   disabled = false,
   animation,
   class: className,
-  ...rest
-}: ButtonProps) => {
-  return <></>;
+  children,
+}: ButtonProps): JSX.Element => {
+  return (
+    <button
+      type={type}
+      disabled={disabled}
+      class={cn(
+        'relative flex select-none items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-all duration-200',
+        {
+          'bg-piccolo text-goten': variant === 'fill',
+          'border border-piccolo text-piccolo': variant === 'outline',
+          'text-piccolo': variant === 'ghost',
+          'h-6 px-1 text-moon-12 rounded-moon-s-xs': size === 'xs',
+          'h-8 px-1 text-moon-14 rounded-moon-s-sm': size === 'sm',
+          'h-10 px-2 text-moon-14 rounded-moon-s-sm': size === 'md',
+          'h-12 px-3 text-moon-16 rounded-moon-s-sm': size === 'lg',
+          'h-14 px-4 text-moon-16 rounded-moon-s-md': size === 'xl',
+          'active:scale-90': !disabled,
+          'opacity-50 cursor-not-allowed': disabled,
+        },
+        className,
+      )}
+    >
+      {children}
+    </button>
+  );
   /*
   return (
     <button

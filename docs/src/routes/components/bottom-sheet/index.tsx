@@ -4,7 +4,10 @@ import { buildHead } from '~/utils/build-head';
 
 export default () => (
   <div>
-    <PageHeadSection title="Bottom Sheet" breadcrumbs={[{ label: 'bottom-sheet', url: '/components/bottom-sheet' }]} />
+    <PageHeadSection
+      title="Bottom Sheet"
+      breadcrumbs={[{ label: 'bottom-sheet', url: '/components/bottom-sheet' }]}
+    />
   </div>
 );
 

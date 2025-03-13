@@ -78,7 +78,7 @@ let minimalConfig = {
   ],
 };
 
-const isObject = (o) => o && typeof item === 'object' && !Array.isArray(o);
+const isObject = (o) => o && typeof o === 'object' && !Array.isArray(o);
 
 function mergeDeep(target, source) {
   // Create a deep clone of the target to avoid modifying the original
@@ -103,7 +103,7 @@ function mergeDeep(target, source) {
 }
 
 if (process.env.ESLINT_MODE === 'full') {
-  module.exports = mergeDeep(extendedConfig, minimalConfig);
+  module.exports = mergeDeep(minimalConfig, extendedConfig);
 } else {
   module.exports = minimalConfig;
 }

@@ -15,8 +15,8 @@ import { renderToStream, type RenderToStreamOptions } from '@builder.io/qwik/ser
 import { manifest } from '@qwik-client-manifest';
 import Root from './root';
 
-export default function (options: RenderToStreamOptions) {
-  return renderToStream(<Root />, {
+export default (options: RenderToStreamOptions) =>
+  renderToStream(<Root />, {
     manifest,
     ...options,
     // Use container attributes to set attributes on the html tag.
@@ -25,4 +25,3 @@ export default function (options: RenderToStreamOptions) {
       ...options.containerAttributes,
     },
   });
-}

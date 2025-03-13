@@ -4,7 +4,10 @@ import { buildHead } from '~/utils/build-head';
 
 export default () => (
   <div>
-    <PageHeadSection title="Carousel" breadcrumbs={[{ label: 'carousel', url: '/components/carousel' }]} />
+    <PageHeadSection
+      title="Carousel"
+      breadcrumbs={[{ label: 'carousel', url: '/components/carousel' }]}
+    />
   </div>
 );
 

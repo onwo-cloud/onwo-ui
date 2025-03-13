@@ -4,7 +4,10 @@ import { buildHead } from '~/utils/build-head';
 
 export default () => (
   <div>
-    <PageHeadSection title="Dropdown" breadcrumbs={[{ label: 'dropdown', url: '/components/dropdown' }]} />
+    <PageHeadSection
+      title="Dropdown"
+      breadcrumbs={[{ label: 'dropdown', url: '/components/dropdown' }]}
+    />
   </div>
 );
 
