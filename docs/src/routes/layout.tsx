@@ -1,4 +1,24 @@
+import type { JSXChildren } from '@builder.io/qwik';
 import { Slot, component$ } from '@builder.io/qwik';
+import { cn } from '@onwo/ui';
+
+type SidebarButtonSmallProps = {
+  href: string;
+  children: JSXChildren;
+  disabled?: boolean;
+};
+
+export const SidebarButtonSmall = (props: SidebarButtonSmallProps) => (
+  <a
+    class={cn(
+      'flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles',
+      props.disabled && 'text-trunks cursor-not-allowed',
+    )}
+    href={props.href}
+  >
+    {props.children}
+  </a>
+);
 
 export default component$(() => (
   <div class="phx-connected">
@@ -80,180 +100,80 @@ export default component$(() => (
                 </div>
               </div>
               <div class="flex flex-col gap-1">
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/accordion"
-                >
+                <SidebarButtonSmall disabled href="/components/accordion">
                   Accordion
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/alert"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/alert">
                   Alert
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/avatar"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/avatar">
                   Avatar
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/bottomsheet"
-                >
-                  Bottom Sheet
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/breadcrumb"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/bottomsheet">
+                  {' '}
+                  Bottom Sheet{' '}
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/breadcrumb">
                   Breadcrumb
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/button"
-                >
-                  Button
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/carousel"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/button">Button</SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/carousel">
                   Carousel
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/chip"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/chip">
                   Chip
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/drawer"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/drawer">
                   Drawer
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/dropdown"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/dropdown">
                   Dropdown
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/form"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/form">
                   Form
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/icons"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/icons">
                   Icons
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/loader"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/loader">
                   Loader
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/menu_item"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/menu_item">
                   Menu Item
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/modal"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/modal">
                   Modal
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/pagination"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/pagination">
                   Pagination
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/popover"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/popover">
                   Popover
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/progress"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/progress">
                   Progress
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/search"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/search">
                   Search
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/snackbar"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/snackbar">
                   Snackbar
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/switch"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/switch">
                   Switch
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/table"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/table">
                   Table
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/tabs"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/tabs">
                   Tabs
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/tag"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/tag">
                   Tag
-                </a>
-
-                <a
-                  class="flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles text-trunks pointer-events-none"
-                  href="/components/v2/tooltip"
-                >
+                </SidebarButtonSmall>
+                <SidebarButtonSmall disabled href="/components/tooltip">
                   Tooltip
-                </a>
+                </SidebarButtonSmall>
               </div>
             </div>
           </nav>

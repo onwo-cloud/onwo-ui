@@ -1,40 +1,15 @@
+import { PageHeadSection } from '~/commons/page-head-section';
+
 export const TypographyPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
-    <div class="pb-12 hidden lg:block">
-      <nav aria-label="Breadcrumb">
-        <ol class="flex flex-wrap items-center">
-          <li class="flex text-trunks items-center text-moon-14 last:text-bulma">
-            <span class="transition-colors duration-200">
-              <a href="/">Home</a>
-            </span>
-          </li>
-
-          <li class="flex text-trunks items-center text-moon-14 last:text-bulma">
-            <svg
-              class="mx-2 text-trunks text-moon-16 rtl:rotate-180 fill-none moon-icon"
-              data-moon-id="icon"
-            >
-              <use href="/moon_icons/svgs/icons_new/arrows-right.svg#item"></use>
-            </svg>
-
-            <span class="transition-colors duration-200">
-              <a href="/typography">Typography</a>
-            </span>
-          </li>
-        </ol>
-      </nav>
-    </div>
+    <PageHeadSection
+      title="Typography"
+      breadcrumbs={[{ label: 'typography', url: '/typography' }]}
+    />
 
     <div class="flex flex-col gap-12 flex-1 relative focus:outline-none">
-      <div class="flex flex-col gap-4 lg:flex-row">
-        <div class="flex flex-col gap-12 lg:basis-1/2">
-          <div class="flex flex-col gap-2">
-            <h1 class="text-moon-48 font-semibold">Typography</h1>
-          </div>
-          <div class="flex flex-col items-start gap-2 text-moon-16">
-            <p>Typography includes text, headings, and captions.</p>
-          </div>
-        </div>
+      <div class="flex flex-col items-start gap-2 text-moon-16">
+        <p>Typography includes text, headings, and captions.</p>
       </div>
 
       <section class="flex flex-col">
