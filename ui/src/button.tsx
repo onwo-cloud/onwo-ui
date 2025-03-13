@@ -6,18 +6,15 @@ export type ButtonProps = {
   type?: 'button' | 'submit'; // default: button
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'; // default: md
   disabled?: boolean;
-  animation?: 'progress' | 'success' | 'error' | 'pulse';
   class?: string;
   children?: JSXChildren;
 };
 
-// remove animation props. AI!
 export const Button = ({
   variant = 'fill',
   size = 'md',
   type = 'button',
   disabled = false,
-  animation,
   class: className,
   children,
 }: ButtonProps): JSX.Element => {
