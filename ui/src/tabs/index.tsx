@@ -1,14 +1,6 @@
 import { component$, useSignal, Slot, type QwikIntrinsicElements, useTask$, $ } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 
-export const Tabs = component$<Tabs.TabsProps>(
-  id: string;
-  testid?: string;
-  class?: string;
-  selected?: number;
-  onChange$?: (index: number) => void;
-};
-
 export namespace Tabs {
   export type TabsProps = QwikIntrinsicElements['div'] & {
     id: string;
