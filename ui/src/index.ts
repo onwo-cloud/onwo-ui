@@ -1,10 +1,8 @@
 export { HelloWorld } from './hello-world';
 export { Button } from './button';
+export { Tabs, Tab, List, Pill, Panels, Panel } from './tabs';
 
 export { cn } from './utils/cn';
-
-// Code this file using the qwik.js framework and typescript. AI!
-// Tabs props
 // Name 	Type 	Required 	Default 	Description
 // id 	string 	Yes 	- 	The id of the live component (required by LiveView for stateful components).
 // testid 	string 	No 	- 	Id attribute for DOM element
