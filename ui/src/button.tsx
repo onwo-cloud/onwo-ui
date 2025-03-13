@@ -1,6 +1,7 @@
 import type { JSXChildren } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 
+// Add the qwik.js default button props to this, with the '&' notation. AI!
 export type ButtonProps = {
   variant?: 'fill' | 'outline' | 'ghost'; // default: fill
   type?: 'button' | 'submit'; // default: button
@@ -17,7 +18,7 @@ export const Button = ({
   disabled = false,
   class: className,
   children,
-}: ButtonProps): JSX.Element => {
+}: ButtonProps): JSXChildren => {
   return (
     <button
       type={type}
