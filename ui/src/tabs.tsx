@@ -1,13 +1,12 @@
 import { component$, useSignal, Slot, type QwikIntrinsicElements } from '@builder.io/qwik';
 
-// Convert interfaces here to types. AI!
-export interface TabsProps extends QwikIntrinsicElements['div'] {
+export type TabsProps = QwikIntrinsicElements['div'] & {
   id: string;
   testid?: string;
   class?: string;
   selected?: number;
   onChange$?: (index: number) => void;
-}
+};
 
 export const Tabs = component$<TabsProps>(
   ({ id, testid, class: className, selected = 0, onChange$, ...props }) => {
@@ -21,7 +20,7 @@ export const Tabs = component$<TabsProps>(
   },
 );
 
-export interface TabProps extends QwikIntrinsicElements['button'] {
+export type TabProps = QwikIntrinsicElements['button'] & {
   id?: string;
   disabled?: boolean;
   class?: string;
@@ -68,7 +67,7 @@ export const Tab = component$<TabProps>(
   },
 );
 
-export interface ListProps extends QwikIntrinsicElements['div'] {
+export type ListProps = QwikIntrinsicElements['div'] & {
   id?: string;
   testid?: string;
   class?: string;
@@ -107,7 +106,7 @@ export const List = component$<ListProps>(
   },
 );
 
-export interface PillProps extends TabProps {
+export type PillProps = TabProps & {
   unselectedClass?: string;
   selectedClass?: string;
 }
@@ -146,7 +145,7 @@ export const Pill = component$<PillProps>(
   },
 );
 
-export interface PanelsProps extends QwikIntrinsicElements['div'] {
+export type PanelsProps = QwikIntrinsicElements['div'] & {
   id?: string;
   testid?: string;
   class?: string;
@@ -163,7 +162,7 @@ export const Panels = component$<PanelsProps>(
   },
 );
 
-export interface PanelProps extends QwikIntrinsicElements['div'] {
+export type PanelProps = QwikIntrinsicElements['div'] & {
   id?: string;
   testid?: string;
   class?: string;
