@@ -11,6 +11,7 @@ export type ButtonProps = {
   children?: JSXChildren;
 };
 
+// remove animation props. AI!
 export const Button = ({
   variant = 'fill',
   size = 'md',
