@@ -1,10 +1,10 @@
 import type { JSXChildren, ButtonHTMLAttributes } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 
-// Omit the button 'type' property and inline it instead. AI!
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'> & {
   variant?: 'fill' | 'outline' | 'ghost'; // default: fill
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'; // default: md
+  type?: 'button' | 'submit'; // default: button
 };
 
 export const Button = ({
