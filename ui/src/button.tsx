@@ -1,6 +1,7 @@
 import type { JSXChildren, ButtonHTMLAttributes } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
 
+// Omit the button 'type' property and inline it instead. AI!
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'fill' | 'outline' | 'ghost'; // default: fill
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'; // default: md
@@ -13,6 +14,7 @@ export const Button = ({
   disabled = false,
   class: className,
   children,
+  ...props
 }: ButtonProps): JSXChildren => {
   return (
     <button
