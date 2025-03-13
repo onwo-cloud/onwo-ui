@@ -1,3 +1,4 @@
+// please recreate the namespace because we lost it. AI!
 export { Root } from './root';
 export { Tab } from './tab';
 export { List } from './list';
@@ -11,4 +12,3 @@ export * from './list';
 export * from './pill';
 export * from './panels';
 export * from './panel';
-
