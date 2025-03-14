@@ -9,7 +9,7 @@ export const RoadmapPage = () => (
       interfaces. This roadmap will evolve as I progress and incorporate feedback
     </p>
 
-    <h2 class="text-moon-24 font-semibold mt-10">Current goals</h2>
+    <h2 class="text-onwo-24 font-semibold mt-10">Current goals</h2>
     <p class="mt-4">
       <b>Initial Setup</b>
     </p>
@@ -35,7 +35,7 @@ export const RoadmapPage = () => (
       <li>- Official release 🚀</li>
     </ul>
 
-    <h2 class="text-moon-24 font-semibold mt-10">Long term visions</h2>
+    <h2 class="text-onwo-24 font-semibold mt-10">Long term visions</h2>
     <ul class="mt-4">
       <li>- Keep integrating the more advanced moon.io components</li>
       <li>- Add logics utilities (forms management, hooks, cookie banner, etc.)</li>
@@ -44,7 +44,7 @@ export const RoadmapPage = () => (
       <li>- Continual refinement based on community feedback</li>
     </ul>
 
-    <h2 class="text-moon-24 font-semibold mt-10">How to Contribute</h2>
+    <h2 class="text-onwo-24 font-semibold mt-10">How to Contribute</h2>
     <p class="mt-4">
       Whether you're fixing a typo in the docs or adding a complex new component any addition is
       welcomed! Let me know if you are looking to take a more active part in the project, there's
@@ -54,7 +54,7 @@ export const RoadmapPage = () => (
       <div role="tabpanel" tabIndex={1} class="w-full">
         <section class="flex flex-col lg:flex-row gap-6">
           <div class="flex flex-col w-full gap-6">
-            <div class="w-full flex flex-col gap-2 text-moon-16"></div>
+            <div class="w-full flex flex-col gap-2 text-onwo-16"></div>
           </div>
         </section>
       </div>

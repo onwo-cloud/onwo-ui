@@ -12,11 +12,11 @@ export const GettingStartedPage = () => (
         <section class="flex flex-col lg:flex-row gap-6">
           <div class="flex flex-col w-full gap-6">
             <a href="#Overview">
-              <h2 id="Overview" class="text-moon-24 font-medium">
+              <h2 id="Overview" class="text-onwo-24 font-medium">
                 Overview
               </h2>
             </a>
-            <div class="w-full flex flex-col gap-2 text-moon-16">
+            <div class="w-full flex flex-col gap-2 text-onwo-16">
               <p>
                 <span class="font-medium">Onwo-ui</span> provides open-source qwik.js components to
                 use in any of your projects, this section will describe the setup procedure you will
@@ -34,11 +34,11 @@ export const GettingStartedPage = () => (
         <section class="flex flex-col lg:flex-row gap-6 mt-10">
           <div class="flex flex-col w-full gap-6">
             <a href="#Prerequisites">
-              <h2 id="Prerequisites" class="text-moon-24 font-medium">
+              <h2 id="Prerequisites" class="text-onwo-24 font-medium">
                 Prerequisites
               </h2>
             </a>
-            <div class="w-full flex flex-col gap-2 text-moon-16">
+            <div class="w-full flex flex-col gap-2 text-onwo-16">
               <p>To start using onwo-ui, you will need:</p>
               <ul>
                 <li>
@@ -59,14 +59,14 @@ export const GettingStartedPage = () => (
         <section class="flex flex-col lg:flex-row gap-6 mt-10">
           <div class="flex flex-col w-full gap-6">
             <a href="#Project-creating">
-              <h2 id="Project-creating" class="text-moon-24 font-medium">
+              <h2 id="Project-creating" class="text-onwo-24 font-medium">
                 Setup with qwik
               </h2>
             </a>
 
-            <div class="w-full flex flex-col gap-2 text-moon-16">
+            <div class="w-full flex flex-col gap-2 text-onwo-16">
               <p>Add onwo-ui dependencies to your project</p>
-              <pre class="theme-moon-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-moon-14 text-bulma rounded-moon-s-sm whitespace-pre-line">
+              <pre class="theme-onwo-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm whitespace-pre-line">
                 <code>npm install @onwo/ui @onwo/tailwindcss</code>
               </pre>
 
@@ -79,7 +79,7 @@ export const GettingStartedPage = () => (
                 and add the following to your <code>global.css</code>. Make sure to preserve the
                 order!
               </p>
-              <pre class="theme-moon-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-moon-14 text-bulma rounded-moon-s-sm leading-[17px]">
+              <pre class="theme-onwo-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm leading-[17px]">
                 <code>
                   <span class="bg-roshi/40">{`@import '@onwo/tailwindcss/themes/moon.css';`}</span>
                   <br />
@@ -106,9 +106,9 @@ body {
                 Add your theme specific class to the body element or the element where you want the
                 theme applied:
               </p>
-              <pre class="theme-moon-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-moon-14 text-bulma rounded-moon-s-sm leading-[17px]">
+              <pre class="theme-onwo-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm leading-[17px]">
                 <code>
-                  <span class="bg-roshi/40">{`<body class="theme-moon-light">...</body>`}</span>
+                  <span class="bg-roshi/40">{`<body class="theme-onwo-light">...</body>`}</span>
                 </code>
               </pre>
               <p class="mt-2">You are good to go!</p>

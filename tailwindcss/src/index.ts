@@ -8,21 +8,21 @@ export default plugin(
   ({ addVariant }: PluginAPI) => {
     // Add custom variants
     for (const state of ['checked', 'selected', 'active', 'disabled']) {
-      addVariant(`moon-${state}`, [`&[aria-${state}="true"]`, `:where([aria-${state}="true"]) &`]);
-      addVariant(`moon-not-${state}`, [
+      addVariant(`onwo-${state}`, [`&[aria-${state}="true"]`, `:where([aria-${state}="true"]) &`]);
+      addVariant(`onwo-not-${state}`, [
         `&[aria-${state}="false"]`,
         `:where([aria-${state}="false"]) &`,
       ]);
     }
 
-    addVariant(`moon-open`, [
+    addVariant(`onwo-open`, [
       `&[aria-open="true"]`,
       `:where([aria-open="true"]) &`,
       `&[data-state="open"]`,
       `:where([data-state="open"]) &`,
     ]);
 
-    addVariant(`moon-error`, [`&[error]`, `:where([error]) &`]);
+    addVariant(`onwo-error`, [`&[error]`, `:where([error]) &`]);
     addVariant('not-last', '&:not(:last-child)');
     addVariant('not-first', '&:not(:first-child)');
     addVariant('empty', '&:empty');
@@ -46,31 +46,31 @@ export default plugin(
             'var(--dm-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
         },
         fontSize: {
-          'moon-9': ['0.5625rem', { lineHeight: '1rem' }],
-          'moon-9-caption': ['0.5625rem', { lineHeight: '1rem', letterSpacing: '0.0625rem' }],
-          'moon-10': ['0.625rem', { lineHeight: '1rem' }],
-          'moon-10-caption': ['0.625rem', { lineHeight: '1rem', letterSpacing: '0.0313rem' }],
-          'moon-12': ['0.75rem', { lineHeight: '1rem' }],
-          'moon-14': ['0.875rem', { lineHeight: '1.5rem' }],
-          'moon-16': ['1rem', { lineHeight: '1.5rem' }],
-          'moon-18': ['1.125rem', { lineHeight: '1.5rem' }],
-          'moon-20': ['1.25rem', { lineHeight: '2rem' }],
-          'moon-24': ['1.5rem', { lineHeight: '2rem' }],
-          'moon-32': ['2rem', { lineHeight: '2.5rem', letterSpacing: '-0.03125rem' }],
-          'moon-40': ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.03125rem' }],
-          'moon-48': ['3rem', { lineHeight: '3.5rem', letterSpacing: '-0.0625rem' }],
-          'moon-56': ['3.5rem', { lineHeight: '4rem', letterSpacing: '-0.09375rem' }],
-          'moon-64': ['4rem', { lineHeight: '4.5rem', letterSpacing: '-0.125rem' }],
-          'moon-72': ['4.5rem', { lineHeight: '4.75rem', letterSpacing: '-0.15625rem' }],
+          'onwo-9': ['0.5625rem', { lineHeight: '1rem' }],
+          'onwo-9-caption': ['0.5625rem', { lineHeight: '1rem', letterSpacing: '0.0625rem' }],
+          'onwo-10': ['0.625rem', { lineHeight: '1rem' }],
+          'onwo-10-caption': ['0.625rem', { lineHeight: '1rem', letterSpacing: '0.0313rem' }],
+          'onwo-12': ['0.75rem', { lineHeight: '1rem' }],
+          'onwo-14': ['0.875rem', { lineHeight: '1.5rem' }],
+          'onwo-16': ['1rem', { lineHeight: '1.5rem' }],
+          'onwo-18': ['1.125rem', { lineHeight: '1.5rem' }],
+          'onwo-20': ['1.25rem', { lineHeight: '2rem' }],
+          'onwo-24': ['1.5rem', { lineHeight: '2rem' }],
+          'onwo-32': ['2rem', { lineHeight: '2.5rem', letterSpacing: '-0.03125rem' }],
+          'onwo-40': ['2.5rem', { lineHeight: '3rem', letterSpacing: '-0.03125rem' }],
+          'onwo-48': ['3rem', { lineHeight: '3.5rem', letterSpacing: '-0.0625rem' }],
+          'onwo-56': ['3.5rem', { lineHeight: '4rem', letterSpacing: '-0.09375rem' }],
+          'onwo-64': ['4rem', { lineHeight: '4.5rem', letterSpacing: '-0.125rem' }],
+          'onwo-72': ['4.5rem', { lineHeight: '4.75rem', letterSpacing: '-0.15625rem' }],
         },
         borderRadius: {
-          'moon-i-xs': 'var(--radius-i-xs)',
-          'moon-i-sm': 'var(--radius-i-sm)',
-          'moon-i-md': 'var(--radius-i-md)',
-          'moon-s-xs': 'var(--radius-s-xs)',
-          'moon-s-sm': 'var(--radius-s-sm)',
-          'moon-s-md': 'var(--radius-s-md)',
-          'moon-s-lg': 'var(--radius-s-lg)',
+          'onwo-i-xs': 'var(--radius-i-xs)',
+          'onwo-i-sm': 'var(--radius-i-sm)',
+          'onwo-i-md': 'var(--radius-i-md)',
+          'onwo-s-xs': 'var(--radius-s-xs)',
+          'onwo-s-sm': 'var(--radius-s-sm)',
+          'onwo-s-md': 'var(--radius-s-md)',
+          'onwo-s-lg': 'var(--radius-s-lg)',
         },
         opacity: {
           disabled: 'var(--opacity--disabled)',
@@ -165,10 +165,10 @@ export default plugin(
           'input-err': '0 0 0 var(--border-i-width) rgb(var(--chichi)) inset',
           'input-focus': '0 0 0 var(--border-i-width) rgb(var(--piccolo)) inset',
           'input-cell-focus': '0 0 0 var(--border-width) rgb(var(--bulma)) inset',
-          'moon-sm': '0 6px 6px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)',
-          'moon-md': '0 12px 12px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)',
-          'moon-lg': '0 8px 24px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)',
-          'moon-xl':
+          'onwo-sm': '0 6px 6px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)',
+          'onwo-md': '0 12px 12px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)',
+          'onwo-lg': '0 8px 24px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)',
+          'onwo-xl':
             '0 32px 32px -8px rgba(0, 0, 0, 0.08), 0 0 32px -8px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.2)',
         },
       },

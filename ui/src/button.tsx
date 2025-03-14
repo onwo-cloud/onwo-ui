@@ -26,11 +26,11 @@ export const Button = ({
           'bg-piccolo text-goten': variant === 'fill',
           'border border-piccolo text-piccolo': variant === 'outline',
           'text-piccolo': variant === 'ghost',
-          'h-6 px-1 text-moon-12 rounded-moon-s-xs': size === 'xs',
-          'h-8 px-1 text-moon-14 rounded-moon-s-sm': size === 'sm',
-          'h-10 px-2 text-moon-14 rounded-moon-s-sm': size === 'md',
-          'h-12 px-3 text-moon-16 rounded-moon-s-sm': size === 'lg',
-          'h-14 px-4 text-moon-16 rounded-moon-s-md': size === 'xl',
+          'h-6 px-1 text-onwo-12 rounded-onwo-s-xs': size === 'xs',
+          'h-8 px-1 text-onwo-14 rounded-onwo-s-sm': size === 'sm',
+          'h-10 px-2 text-onwo-14 rounded-onwo-s-sm': size === 'md',
+          'h-12 px-3 text-onwo-16 rounded-onwo-s-sm': size === 'lg',
+          'h-14 px-4 text-onwo-16 rounded-onwo-s-md': size === 'xl',
           'active:scale-90': !disabled,
           'opacity-50 cursor-not-allowed': disabled,
         },
@@ -49,19 +49,19 @@ export const Button = ({
     >
       <Slot />
     </button>
-  <button type="button" data-size="xs" class="relative flex bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-moon-s-xs gap-1 z-0 text-moon-12 h-6 active:scale-90 group pe-2 ps-1 row">
+  <button type="button" data-size="xs" class="relative flex bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-onwo-s-xs gap-1 z-0 text-onwo-12 h-6 active:scale-90 group pe-2 ps-1 row">
 XS Button
 </button>
-  <button type="button" data-size="sm" class="relative flex bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-moon-s-sm gap-1 z-0 text-moon-14 h-8 active:scale-90 group pe-3 ps-1 row">
+  <button type="button" data-size="sm" class="relative flex bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-onwo-s-sm gap-1 z-0 text-onwo-14 h-8 active:scale-90 group pe-3 ps-1 row">
 SM Button
 </button>
-  <button type="button" data-size="md" class="relative flex bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-moon-s-sm gap-2 z-0 text-moon-14 h-10 active:scale-90 group pe-4 ps-2 row">
+  <button type="button" data-size="md" class="relative flex bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-onwo-s-sm gap-2 z-0 text-onwo-14 h-10 active:scale-90 group pe-4 ps-2 row">
 MD Button is default
 </button>
-  <button type="button" data-size="lg" class="relative flex bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-moon-s-sm gap-2 z-0 text-moon-16 h-12 active:scale-90 group pe-4 ps-3 row">
+  <button type="button" data-size="lg" class="relative flex bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-onwo-s-sm gap-2 z-0 text-onwo-16 h-12 active:scale-90 group pe-4 ps-3 row">
 LG Button
 </button>
-  <button type="button" data-size="xl" class="relative flex bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-moon-s-md gap-2 z-0 text-moon-16 h-14 active:scale-90 group pe-6 ps-4 row">
+  <button type="button" data-size="xl" class="relative flex bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-onwo-s-md gap-2 z-0 text-onwo-16 h-14 active:scale-90 group pe-6 ps-4 row">
 XL Button
 </button>
   );

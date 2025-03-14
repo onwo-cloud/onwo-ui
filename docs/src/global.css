@@ -15,6 +15,6 @@ body {
   -moz-osx-font-smoothing: grayscale; /* Consistent font display behavior on OSX. */
 }
 
-.moon-icon {
+.onwo-icon {
   @apply inline-block align-middle h-[1em] w-[1em];
 }

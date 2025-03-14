@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-:root.theme-moon-light,
-.theme-moon-light {
+:root.theme-onwo-light,
+.theme-onwo-light {
   --piccolo: 92, 51, 207; /* #5c33cf */
   --hit: 27, 210, 154; /* #1bd29a */
   --beerus: 220, 222, 227; /* #dcdee3 */
@@ -66,7 +66,7 @@
   --border-i-width: 0.125rem; /* 2px */
 
   /* opacity */
-  --opacity-moon: 0.6;
+  --opacity-onwo: 0.6;
 
   /* fonts */
   --dm-sans: 'DM Sans';
@@ -81,8 +81,8 @@
     0 0 32px -8px rgb(0 0 0 / 0.12), 0 0 1px rgb(0 0 0 / 0.2);
 }
 
-:root.theme-moon-dark,
-.theme-moon-dark {
+:root.theme-onwo-dark,
+.theme-onwo-dark {
   --piccolo: 92, 51, 207; /* #5c33cf */
   --hit: 27, 210, 154; /* #1bd29a */
   --beerus: 68, 68, 68; /* #444444 */
@@ -147,7 +147,7 @@
   --border-i-width: 0.125rem; /* 2px */
 
   /* opacity */
-  --opacity-moon: 0.6;
+  --opacity-onwo: 0.6;
 
   /* fonts */
   --dm-sans: 'DM Sans';

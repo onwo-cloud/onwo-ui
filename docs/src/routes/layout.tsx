@@ -11,7 +11,7 @@ type SidebarButtonSmallProps = {
 export const SidebarButtonSmall = (props: SidebarButtonSmallProps) => (
   <a
     class={cn(
-      'flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles',
+      'flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles',
       props.disabled && 'text-trunks cursor-not-allowed',
     )}
     href={props.href}
@@ -22,7 +22,7 @@ export const SidebarButtonSmall = (props: SidebarButtonSmallProps) => (
 
 export default component$(() => (
   <div class="phx-connected">
-    <div role="main" class="pt-16 lg:pt-0 bg-gohan text-bulma flex theme-moon-light" dir="ltr">
+    <div role="main" class="pt-16 lg:pt-0 bg-gohan text-bulma flex theme-onwo-light" dir="ltr">
       <div
         id="left-menu"
         data-is_closing="true"
@@ -30,12 +30,12 @@ export default component$(() => (
         aria-expanded="false"
         class="fixed hidden z-[99999] inset-auto lg:flex lg:z-50 lg:inset-y-0 lg:w-80 lg:start-0"
       >
-        <div class="fixed bg-zeno inset-0 lg:hidden moon-backdrop"></div>
+        <div class="fixed bg-zeno inset-0 lg:hidden onwo-backdrop"></div>
 
         <div
           data-animate_enter_class="ltr:animate-drawer_enter_left rtl:animate-drawer_enter_right"
           data-animate_leave_class="ltr:animate-drawer_leave_left rtl:animate-drawer_leave_right"
-          class="fixed bg-gohan text-bulma shadow-moon-none inset-y-0 w-80 max-w-md rtl:right-0 ltr:left-0 moon-panel"
+          class="fixed bg-gohan text-bulma shadow-onwo-none inset-y-0 w-80 max-w-md rtl:right-0 ltr:left-0 onwo-panel"
         >
           <nav
             aria-label="Sidebar"
@@ -48,52 +48,52 @@ export default component$(() => (
             </div>
             <div class="flex flex-col gap-1">
               <a
-                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/roadmap"
               >
-                <svg class="w-6 h-6 fill-none moon-icon" data-moon-id="icon">
-                  <use href="/moon_icons/svgs/icons_new/other-rocket.svg#item"></use>
+                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
+                  <use href="/onwo_icons/svgs/icons_new/other-rocket.svg#item"></use>
                 </svg>
                 Roadmap
               </a>
 
               <a
-                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/getting-started"
               >
-                <svg class="w-6 h-6 fill-none moon-icon" data-moon-id="icon">
-                  <use href="/moon_icons/svgs/icons_new/other-rocket.svg#item"></use>
+                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
+                  <use href="/onwo_icons/svgs/icons_new/other-rocket.svg#item"></use>
                 </svg>
                 Getting Started
               </a>
 
               <a
-                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/colours"
               >
-                <svg class="w-6 h-6 fill-none moon-icon" data-moon-id="icon">
-                  <use href="/moon_icons/svgs/icons_new/software-settings.svg#item"></use>
+                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
+                  <use href="/onwo_icons/svgs/icons_new/software-settings.svg#item"></use>
                 </svg>
                 Colours
               </a>
 
               <a
-                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-moon-i-sm gap-2 text-moon-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/typography"
               >
-                <svg class="w-6 h-6 fill-none moon-icon" data-moon-id="icon">
-                  <use href="/moon_icons/svgs/icons_new/text-size.svg#item"></use>
+                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
+                  <use href="/onwo_icons/svgs/icons_new/text-size.svg#item"></use>
                 </svg>
                 Typography
               </a>
             </div>
             <div class="flex flex-col gap-2">
-              <div class="ps-2 text-moon-10-caption flex gap-2 font-medium">
+              <div class="ps-2 text-onwo-10-caption flex gap-2 font-medium">
                 <p class="text-trunks uppercase">Components</p>
                 <div>
                   <div
                     data-phx-id="m14-phx-GCuiyuFRmjSIjCiB"
-                    class="uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-moon-i-xs gap-1 text-moon-9 h-4"
+                    class="uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4"
                   >
                     WIP
                   </div>
@@ -184,13 +184,13 @@ export default component$(() => (
         <div class="relative z-10 py-4 lg:hidden flex flex-row gap-2 items-center justify-between text-bulma">
           <button type="button" class="focus:outline-none">
             <span class="sr-only">Open sidebar</span>
-            <svg class="moon-icon fill-none text-moon-32">
-              <use href="/moon_icons/svgs/icons_new/generic-menu.svg#item"></use>
+            <svg class="onwo-icon fill-none text-onwo-32">
+              <use href="/onwo_icons/svgs/icons_new/generic-menu.svg#item"></use>
             </svg>
           </button>
           <a href="/" aria-label="surface.moon.io main page">
-            <svg class="moon-logo" style="height: 2em; width: 2em">
-              <use href="/moon_icons/svgs/logos/logo-moon-design-short.svg#item"></use>
+            <svg class="onwo-logo" style="height: 2em; width: 2em">
+              <use href="/onwo_icons/svgs/logos/logo-onwo-design-short.svg#item"></use>
             </svg>
           </a>
         </div>
