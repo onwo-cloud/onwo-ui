@@ -1,9 +1,9 @@
 import { PageHeadSection } from '~/commons/page-head-section';
 
 export const RoadmapPage = () => (
-  <div class="flex flex-col grow max-w-screen-xl">
+  <div>
     <PageHeadSection title="Roadmap" breadcrumbs={[{ label: 'roadmap', url: '/roadmap' }]} />
-    <p class="max-w-lg">
+    <p class="max-w-5xl">
       This document describe the planned journey of this library, as a new project, I am starting
       with the essentials and gradually expanding to create a complete toolkit for modern web
       interfaces. This roadmap will evolve as I progress and incorporate feedback

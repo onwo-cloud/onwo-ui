@@ -1,5 +1,4 @@
-export { HelloWorld } from './components/hello-world';
-export { Button } from './components/button';
-export * as Tabs from './components/tabs';
+export * as primitives from './primitives';
+export * from './components';
 
 export { cn } from './utils/cn';

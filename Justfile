@@ -28,7 +28,7 @@ build: build-tailwind-plugin build-ui build-docs
 
 dev:
   concurrently \
-    --names '   tw,   ui, tsui,  web,tsweb' \
+    --names '    tw,    ui,  tsui,  docs,tsdocs' \
     --prefix-colors 'blue.bold,green.bold,green.bold,red.bold' \
     "yarn --cwd=tailwindcss   dev"  \
     "yarn --cwd=ui            dev"  \

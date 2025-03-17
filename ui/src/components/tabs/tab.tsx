@@ -1,53 +1,22 @@
-import { Slot, component$, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { Tabs } from '~/primitives';
 import { cn } from '~/utils/cn';
 
-export type TabProps = QwikIntrinsicElements['button'] & {
-  id?: string;
-  disabled?: boolean;
-  class?: string;
-  testid?: string;
-  unselectedClass?: string;
-  selectedClass?: string;
-  tabindex?: number;
-  isSelected?: boolean;
-  size?: 'sm' | 'md';
-  onChange$?: (index: number) => void;
-};
+export type TabProps<Name extends string> = Tabs.TabProps<Name>;
 
-export const Tab = component$<TabProps>(
-  ({
-    id,
-    disabled = false,
-    class: className,
-    testid,
-    unselectedClass = 'after:scale-x-0 text-bulma',
-    selectedClass = 'after:scale-x-100 text-piccolo',
-    tabindex,
-    isSelected = false,
-    size,
-    onChange$,
-    ...props
-  }) => {
-    return (
-      <button
-        id={id}
-        data-testid={testid}
-        class={cn(
-          'relative px-2 py-1 text-sm font-medium transition-colors duration-200',
-          'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-piccolo after:transition-transform after:duration-300',
-          isSelected ? selectedClass : unselectedClass,
-          disabled && 'opacity-50 cursor-not-allowed',
-          className,
-        )}
-        disabled={disabled}
-        tabIndex={tabindex}
-        onClick$={() => onChange$?.(tabindex ?? 0)}
-        role="tab"
-        aria-selected={isSelected}
-        {...props}
-      >
-        <Slot />
-      </button>
-    );
-  },
+export const Tab = <Name extends string>({ class: className, ...props }: TabProps<Name>) => (
+  <Tabs.Tab
+    class={cn(
+      'relative flex cursor-pointer items-center justify-center font-semibold gap-2 focus:outline-none data-selected:text-piccolo text-onwo-14 hover:text-piccolo ',
+      /* disabled */
+      'disabled:text-trunks',
+      /* underline */
+      'after:scale-x-0 after:absolute after:transition-transform after:content-[""] after:scale-y-100 after:duration-300 after:left-0 after:bottom-0 after:w-full after:h-[2px] after:origin-top-left after:bg-piccolo data-selected:after:scale-x-100 after:hover:scale-100 after:hover:origin-top-left',
+      /* sizing */
+      'px-3 py-2 group-[[data--size=sm]]/tablist:px-2 group-[[data--size=sm]]/tablist:py-1',
+      className,
+    )}
+    {...props}
+  >
+    {props.children}
+  </Tabs.Tab>
 );

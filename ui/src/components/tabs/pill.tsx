@@ -1,42 +1,20 @@
-import { Slot, component$ } from '@builder.io/qwik';
+import { Tabs } from '~/primitives';
 import { cn } from '~/utils/cn';
-import type { TabProps } from './tab';
 
-export type PillProps = TabProps & {
-  unselectedClass?: string;
-  selectedClass?: string;
-};
+export type PillProps<Name extends string> = Tabs.TabProps<Name>;
 
-export const Pill = component$<PillProps>(
-  ({
-    id,
-    disabled = false,
-    class: className,
-    testid,
-    unselectedClass = '',
-    selectedClass = 'bg-goku',
-    tabindex,
-    isSelected = false,
-    size,
-    onChange$,
-    ...props
-  }) => {
-    return (
-      <button
-        id={id}
-        data-testid={testid}
-        class={cn(
-          'px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200',
-          isSelected ? selectedClass : unselectedClass,
-          className,
-        )}
-        disabled={disabled}
-        tabIndex={tabindex}
-        onClick$={() => onChange$?.(tabindex ?? 0)}
-        {...props}
-      >
-        <Slot />
-      </button>
-    );
-  },
+export const Pill = <Name extends string>({ class: className, ...props }: PillProps<Name>) => (
+  <Tabs.Tab
+    class={cn(
+      'relative flex text-bulma cursor-pointer transition-colors items-center justify-center font-semibold rounded-onwo-i-sm gap-2 focus:outline-none data-selected:bg-goku text-onwo-14 hover:bg-goku',
+      /* disabled */
+      'disabled:text-trunks',
+      /* sizing */
+      'px-3 py-2 group-[[data--size=sm]]/tablist:px-2 group-[[data--size=sm]]/tablist:py-1',
+      className,
+    )}
+    {...props}
+  >
+    {props.children}
+  </Tabs.Tab>
 );

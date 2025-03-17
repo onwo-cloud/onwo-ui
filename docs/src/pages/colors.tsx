@@ -1,10 +1,10 @@
 import { PageHeadSection } from '~/commons/page-head-section';
 
 export const ColorPage = () => (
-  <div class="flex flex-col grow max-w-screen-xl">
+  <div>
     <PageHeadSection title="Colors" breadcrumbs={[{ label: 'color', url: '/colors' }]} />
 
-    <div class="flex gap-2 flex-col max-w-2xl mb-8">
+    <div class="flex gap-2 flex-col max-w-5xl mb-8">
       <p>
         Our design system is decentralized and built for multi-product purposes. Having
         different-color naming conventions and numbers etc... makes it harder to maintain it.

@@ -89,6 +89,8 @@ export const GettingStartedPage = () => (
                   <br />
                   <span class="bg-roshi/40">{`@plugin '@onwo/tailwindcss';`}</span>
                   <br />
+                  <span class="bg-roshi/40">{`@source '@onwo/ui';`}</span>
+                  <br />
                   <br />
                   <span class="bg-roshi/40">{`html,
 body {

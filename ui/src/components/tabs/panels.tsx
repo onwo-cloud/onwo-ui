@@ -1,18 +1,10 @@
-import { Slot, component$, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { Tabs } from '~/primitives';
+import { cn } from '~/utils/cn';
 
-export type PanelsProps = QwikIntrinsicElements['div'] & {
-  id?: string;
-  testid?: string;
-  class?: string;
-  selected?: number;
-};
+export type PanelsProps = Tabs.PanelsProps;
 
-export const Panels = component$<PanelsProps>(
-  ({ id, testid, class: className, selected, ...props }) => {
-    return (
-      <div id={id} data-testid={testid} class={className} {...props}>
-        <Slot />
-      </div>
-    );
-  },
+export const Panels = ({ children, class: className, ...props }: PanelsProps) => (
+  <Tabs.Panels class={cn('mt-4', className)} {...props}>
+    {children}
+  </Tabs.Panels>
 );

@@ -9,6 +9,8 @@ import { hackwatcher } from '../misc/hackwatcher';
 // This will update the root.tsx utime every time the ui plugin
 // is updated.
 hackwatcher('../ui/dist', './src/root.tsx');
+hackwatcher('../ui/dist', './src/routes/layout.tsx');
+hackwatcher('../ui/dist', './vite.config.ts');
 
 export const baseConfig = {
   plugins: [

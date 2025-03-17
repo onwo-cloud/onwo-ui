@@ -1,8 +1,8 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { GettingStartedPage } from '~/pages/getting-started';
-import { buildHead } from '~/utils/build-head';
+import { PrimitivesPage } from '~/pages/primitives';
+import { buildHead } from '../../utils/build-head';
 
-export default () => <GettingStartedPage />;
+export default () => <PrimitivesPage />;
 
 export const head: DocumentHead = buildHead({
   title: 'onwo design system',

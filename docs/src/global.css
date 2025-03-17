@@ -1,8 +1,10 @@
-@import '@onwo/tailwindcss/themes/moon.css';
+@import '../../tailwindcss/themes/moon.css';
 @import "tailwindcss";
-@plugin '@onwo/tailwindcss';
+@plugin '../../tailwindcss';
+@source "../../ui/lib";
 
 @custom-variant dark (&:is(body[data-color-mode='dark'], body[data-color-mode="dark"] *, .dark, .dark *));
+
 
 /* app.css */
 html,

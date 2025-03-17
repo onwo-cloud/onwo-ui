@@ -1,27 +1,14 @@
-import { Slot, component$, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { Tabs } from '~/primitives';
 import { cn } from '~/utils/cn';
 
-export type PanelProps = QwikIntrinsicElements['div'] & {
-  id?: string;
-  testid?: string;
-  class?: string;
-  selected?: boolean;
-};
+export type PanelProps<N extends string> = Tabs.PanelProps<N>;
 
-export const Panel = component$<PanelProps>(
-  ({ id, testid, class: className, selected = false, ...props }) => {
-    return (
-      <div
-        id={id}
-        data-testid={testid}
-        class={cn(selected ? 'block' : 'hidden', 'p-4 focus:outline-none', className)}
-        role="tabpanel"
-        aria-labelledby={`${id}-tab`}
-        tabIndex={selected ? 0 : -1}
-        {...props}
-      >
-        <Slot />
-      </div>
-    );
-  },
+export const Panel = <N extends string>({
+  children,
+  class: className,
+  ...props
+}: PanelProps<N>) => (
+  <Tabs.Panel class={cn('hidden data-active:block', className)} {...props}>
+    {children}
+  </Tabs.Panel>
 );

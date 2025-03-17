@@ -34,7 +34,7 @@ export const PageHeadSection = (props: PageHeadSectionProps) => (
     </div>
 
     <div class="flex flex-col gap-12 flex-1 relative focus:outline-none mb-8">
-      <h1 class="text-onwo-48 font-semibold">{props.title}</h1>
+      <h1 class="text-onwo-40 font-semibold">{props.title}</h1>
     </div>
   </main>
 );
