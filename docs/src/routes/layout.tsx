@@ -2,6 +2,8 @@ import type { JSXChildren } from '@builder.io/qwik';
 import { Slot, component$ } from '@builder.io/qwik';
 import { cn } from '@onwo/ui';
 
+import LogoImg from '~/assets/onwo.svg?jsx';
+
 type SidebarButtonSmallProps = {
   href: string;
   children: JSXChildren;
@@ -39,11 +41,11 @@ export default component$(() => (
         >
           <nav
             aria-label="Sidebar"
-            class="z-10 fixed top-0 h-screen w-80 flex flex-col flex-grow gap-6 pt-12 pb-20 px-5 lg:px-8 overflow-y-scroll"
+            class="z-10 fixed top-0 h-screen w-80 flex flex-col flex-grow gap-6 pt-10 pb-20 px-5 lg:px-8 overflow-y-scroll"
           >
-            <div class="flex items-center flex-shrink-0 ps-3 text-bulma">
+            <div class="flex items-center flex-shrink-0 px-3 text-bulma">
               <a href="/" aria-label="Surface.moon.io main page">
-                <img src="/onwo.svg" class="w-auto" />
+                <LogoImg height={32} class="h-[32px] w-fit" />
               </a>
             </div>
             <div class="flex flex-col gap-1">
@@ -165,9 +167,7 @@ export default component$(() => (
                 <SidebarButtonSmall disabled href="/components/table">
                   Table
                 </SidebarButtonSmall>
-                <SidebarButtonSmall href="/components/tabs">
-                  Tabs
-                </SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/tabs">Tabs</SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/tag">
                   Tag
                 </SidebarButtonSmall>
