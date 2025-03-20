@@ -70,6 +70,11 @@ export const GettingStartedPage = () => (
                 <code>npm install @onwo/ui @onwo/tailwindcss</code>
               </pre>
 
+              <p>Optionally you can also install onwo-ui icons library</p>
+              <pre class="theme-onwo-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm whitespace-pre-line">
+                <code>npm install @onwo/icons</code>
+              </pre>
+
               <p>
                 {' '}
                 Choose a theme from{' '}

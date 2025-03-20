@@ -98,6 +98,15 @@ export default component$(() => (
                 </svg>
                 Primitives
               </a>
+              <a
+                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                href="/icons"
+              >
+                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
+                  <use href="/onwo_icons/svgs/icons_new/text-size.svg#item"></use>
+                </svg>
+                Icons
+              </a>
             </div>
             <div class="flex flex-col gap-2">
               <div class="ps-2 text-onwo-10-caption flex gap-2 font-medium">

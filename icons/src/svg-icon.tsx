@@ -4,10 +4,10 @@ type IconSize = 'sm' | 'md' | 'lg' | 'xl';
 
 const getIconSizePx = (size: IconSize) =>
   ({
-    sm: '0.875rem',
-    md: '1rem',
-    lg: '1.125rem',
-    xl: '1.25rem',
+    sm: '1.25rem',
+    md: '1.5rem',
+    lg: '1.75rem',
+    xl: '2.25rem',
   })[size];
 
 export type IconProps = {

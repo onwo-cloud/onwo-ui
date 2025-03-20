@@ -1,10 +1,11 @@
 @import '../../tailwindcss/themes/moon.css';
 @import "tailwindcss";
 @plugin '../../tailwindcss';
+
 @source "../../ui/lib";
+@source "../../icons/lib";
 
 @custom-variant dark (&:is(body[data-color-mode='dark'], body[data-color-mode="dark"] *, .dark, .dark *));
-
 
 /* app.css */
 html,
