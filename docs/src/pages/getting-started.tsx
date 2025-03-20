@@ -4,7 +4,7 @@ export const GettingStartedPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
     <PageHeadSection
       title="Getting started"
-      breadcrumbs={[{ label: 'getting-started', url: '/getting-started' }]}
+      breadcrumbs={[{ label: 'Getting Started', url: '/getting-started' }]}
     />
 
     <div id="getting started" class="flex items-center justify-between flex-wrap gap-6 w-full">

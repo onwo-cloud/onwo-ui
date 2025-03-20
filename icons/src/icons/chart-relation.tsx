@@ -1,7 +1,7 @@
 import type { IconProps } from '../svg-icon';
 import { SvgIcon } from '../svg-icon';
 export default (props: IconProps) => (
-  <SvgIcon {...props} viewBox="0 0 32 32">
+  <SvgIcon data--icon-name="chart-relation" {...props} viewBox="0 0 32 32">
     <path
       d="M25.5 18.9231C25.5 22.5554 22.5554 25.5 18.9231 25.5C15.2907 25.5 12.3462 22.5554 12.3462 18.9231C12.3462 15.2907 15.2907 12.3462 18.9231 12.3462C22.5554 12.3462 25.5 15.2907 25.5 18.9231Z"
       stroke="currentColor"

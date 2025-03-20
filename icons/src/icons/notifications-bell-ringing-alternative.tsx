@@ -1,7 +1,7 @@
 import type { IconProps } from '../svg-icon';
 import { SvgIcon } from '../svg-icon';
 export default (props: IconProps) => (
-  <SvgIcon {...props} viewBox="0 0 32 32">
+  <SvgIcon data--icon-name="notifications-bell-ringing-alternative" {...props} viewBox="0 0 32 32">
     <path
       d="M13.5899 21.5335C12.7972 22.9065 11.0415 23.3769 9.66856 22.5842C8.29558 21.7915 7.82517 20.0359 8.61786 18.6629L13.5899 21.5335Z"
       stroke="currentColor"

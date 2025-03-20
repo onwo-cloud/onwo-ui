@@ -4,7 +4,7 @@ export const TypographyPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
     <PageHeadSection
       title="Typography"
-      breadcrumbs={[{ label: 'typography', url: '/typography' }]}
+      breadcrumbs={[{ label: 'Typography', url: '/typography' }]}
     />
 
     <div class="flex flex-col gap-12 flex-1 relative focus:outline-none">

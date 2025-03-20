@@ -1,33 +1,36 @@
+import { Icons } from '@onwo/icons';
+
 type Breadcrumb = { label: string; url: string };
 type PageHeadSectionProps = {
   title: string;
   breadcrumbs: Breadcrumb[];
 };
 
+type BreadcrumbLinkProps = {
+  to: string;
+  label: string;
+};
+
+const BreadcrumbLink = (props: BreadcrumbLinkProps) => (
+  <li class="text-onwo-14 last:text-bulma">
+    <span class="transition-colors duration-200">
+      <a href={props.to}>{props.label}</a>
+    </span>
+  </li>
+);
+
 export const PageHeadSection = (props: PageHeadSectionProps) => (
   <main>
     <div class="pb-12 hidden lg:block">
       <nav aria-label="Breadcrumb">
-        <ol class="flex flex-wrap items-center">
-          <li class="flex text-trunks items-center text-onwo-14 last:text-bulma">
-            <span class="transition-colors duration-200">
-              <a href="/">Home</a>
-            </span>
-          </li>
+        <ol class="text-trunks flex gap-2 flex-wrap items-center">
+          <BreadcrumbLink to="/" label="Home" />
 
           {props.breadcrumbs.map(({ url, label }, idx) => (
-            <li key={idx} class="flex text-trunks items-center text-onwo-14 last:text-bulma">
-              <svg
-                class="mx-2 text-trunks text-onwo-16 rtl:rotate-180 fill-none onwo-icon"
-                data-onwo-id="icon"
-              >
-                <use href="/onwo_icons/svgs/icons_new/arrows-right.svg#item"></use>
-              </svg>
-
-              <span class="transition-colors duration-200">
-                <a href={url}>{label}</a>
-              </span>
-            </li>
+            <div key={idx} class="contents">
+              <Icons.ArrowsRight size="xs" />
+              <BreadcrumbLink to={url} label={label} />
+            </div>
           ))}
         </ol>
       </nav>

@@ -6,7 +6,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Drawer"
-      breadcrumbs={[{ label: 'drawer', url: '/components/drawer' }]}
+      breadcrumbs={[{ label: 'Drawer', url: '/components/drawer' }]}
     />
   </div>
 );

@@ -4,7 +4,7 @@ import { buildHead } from '~/utils/build-head';
 
 export default () => (
   <div>
-    <PageHeadSection title="Modal" breadcrumbs={[{ label: 'modal', url: '/components/modal' }]} />
+    <PageHeadSection title="Modal" breadcrumbs={[{ label: 'Modal', url: '/components/modal' }]} />
   </div>
 );
 

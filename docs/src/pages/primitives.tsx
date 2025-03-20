@@ -4,7 +4,7 @@ export const PrimitivesPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
     <PageHeadSection
       title="Primitives"
-      breadcrumbs={[{ label: 'primitives', url: '/primitives' }]}
+      breadcrumbs={[{ label: 'Primitives', url: '/primitives' }]}
     />
     <p>
       In our UI library, primitives are the unstyled building blocks that contain the core logic for

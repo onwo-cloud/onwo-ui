@@ -4,7 +4,7 @@ import { buildHead } from '~/utils/build-head';
 
 export default () => (
   <div>
-    <PageHeadSection title="Alert" breadcrumbs={[{ label: 'alert', url: '/components/alert' }]} />
+    <PageHeadSection title="Alert" breadcrumbs={[{ label: 'Alert', url: '/components/alert' }]} />
   </div>
 );
 

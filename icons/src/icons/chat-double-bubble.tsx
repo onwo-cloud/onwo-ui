@@ -1,7 +1,7 @@
 import type { IconProps } from '../svg-icon';
 import { SvgIcon } from '../svg-icon';
 export default (props: IconProps) => (
-  <SvgIcon {...props} viewBox="0 0 32 32">
+  <SvgIcon data--icon-name="chat-double-bubble" {...props} viewBox="0 0 32 32">
     <path
       d="M6.5 13.6342L6.5 10.5C6.5 8.29086 8.29087 6.49999 10.5 6.5L18.3936 6.50002C19.9586 6.50002 21.2272 7.76868 21.2272 9.33365C21.2272 10.8986 19.9586 12.1673 18.3936 12.1673L10.0065 12.1673L8.27139 14.2705C7.67463 14.9939 6.5 14.5719 6.5 13.6342Z"
       stroke="currentColor"

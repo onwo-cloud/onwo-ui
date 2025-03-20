@@ -2,7 +2,7 @@ import { PageHeadSection } from '~/commons/page-head-section';
 
 export const ColorPage = () => (
   <div>
-    <PageHeadSection title="Colors" breadcrumbs={[{ label: 'color', url: '/colors' }]} />
+    <PageHeadSection title="Colors" breadcrumbs={[{ label: 'Colors', url: '/colors' }]} />
 
     <div class="flex gap-2 flex-col max-w-5xl mb-8">
       <p>

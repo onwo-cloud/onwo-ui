@@ -1,7 +1,7 @@
 import type { IconProps } from '../svg-icon';
 import { SvgIcon } from '../svg-icon';
 export default (props: IconProps) => (
-  <SvgIcon {...props} viewBox="0 0 32 32">
+  <SvgIcon data--icon-name="controls-vertical-double-chevron" {...props} viewBox="0 0 32 32">
     <path
       d="M11 13L16 8L21 13"
       stroke="currentColor"

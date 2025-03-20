@@ -1,7 +1,7 @@
 import type { IconProps } from '../svg-icon';
 import { SvgIcon } from '../svg-icon';
 export default (props: IconProps) => (
-  <SvgIcon {...props} viewBox="0 0 32 32">
+  <SvgIcon data--icon-name="shop-bank" {...props} viewBox="0 0 32 32">
     <path
       d="M16 5L4 9.94675V10.4964L4.52174 11.5957H27.4783L28 10.4964V9.94675L16 5Z"
       stroke="currentColor"

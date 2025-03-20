@@ -1,5 +1,6 @@
 import type { JSXChildren } from '@builder.io/qwik';
 import { Slot, component$ } from '@builder.io/qwik';
+import { Icons } from '@onwo/icons';
 import { cn } from '@onwo/ui';
 
 import LogoImg from '~/assets/onwo.svg?jsx';
@@ -53,9 +54,7 @@ export default component$(() => (
                 class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/roadmap"
               >
-                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
-                  <use href="/onwo_icons/svgs/icons_new/other-rocket.svg#item"></use>
-                </svg>
+                <Icons.GenericTrophy />
                 Roadmap
               </a>
 
@@ -63,9 +62,7 @@ export default component$(() => (
                 class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/getting-started"
               >
-                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
-                  <use href="/onwo_icons/svgs/icons_new/other-rocket.svg#item"></use>
-                </svg>
+                <Icons.OtherRocket />
                 Getting Started
               </a>
 
@@ -73,9 +70,7 @@ export default component$(() => (
                 class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/colours"
               >
-                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
-                  <use href="/onwo_icons/svgs/icons_new/software-settings.svg#item"></use>
-                </svg>
+                <Icons.SoftwareSettings />
                 Colours
               </a>
 
@@ -83,9 +78,7 @@ export default component$(() => (
                 class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/typography"
               >
-                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
-                  <use href="/onwo_icons/svgs/icons_new/text-size.svg#item"></use>
-                </svg>
+                <Icons.TextSize />
                 Typography
               </a>
 
@@ -93,18 +86,14 @@ export default component$(() => (
                 class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/primitives"
               >
-                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
-                  <use href="/onwo_icons/svgs/icons_new/text-size.svg#item"></use>
-                </svg>
+                <Icons.SoftwarePlate />
                 Primitives
               </a>
               <a
                 class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/icons"
               >
-                <svg class="w-6 h-6 fill-none onwo-icon" data-onwo-id="icon">
-                  <use href="/onwo_icons/svgs/icons_new/text-size.svg#item"></use>
-                </svg>
+                <Icons.SoftwarePuzzle />
                 Icons
               </a>
             </div>

@@ -4,7 +4,7 @@ import { buildHead } from '~/utils/build-head';
 
 export default () => (
   <div>
-    <PageHeadSection title="Table" breadcrumbs={[{ label: 'table', url: '/components/table' }]} />
+    <PageHeadSection title="Table" breadcrumbs={[{ label: 'Table', url: '/components/table' }]} />
   </div>
 );
 

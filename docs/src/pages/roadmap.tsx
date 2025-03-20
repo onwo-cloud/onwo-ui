@@ -2,7 +2,7 @@ import { PageHeadSection } from '~/commons/page-head-section';
 
 export const RoadmapPage = () => (
   <div>
-    <PageHeadSection title="Roadmap" breadcrumbs={[{ label: 'roadmap', url: '/roadmap' }]} />
+    <PageHeadSection title="Roadmap" breadcrumbs={[{ label: 'Roadmap', url: '/roadmap' }]} />
     <p class="max-w-5xl">
       This document describe the planned journey of this library, as a new project, I am starting
       with the essentials and gradually expanding to create a complete toolkit for modern web

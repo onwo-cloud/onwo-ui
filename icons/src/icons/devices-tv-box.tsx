@@ -1,7 +1,7 @@
 import type { IconProps } from '../svg-icon';
 import { SvgIcon } from '../svg-icon';
 export default (props: IconProps) => (
-  <SvgIcon {...props} viewBox="0 0 32 32">
+  <SvgIcon data--icon-name="devices-tv-box" {...props} viewBox="0 0 32 32">
     <path
       d="M10.8542 13.625H12.8333M12.8333 13.625H14.8125M12.8333 13.625V18.375M16.7917 13.625L18.7708 18.375L20.75 13.625M21.5 6.5L10.5 6.5C8.29086 6.5 6.5 8.29086 6.5 10.5L6.5 21.5C6.5 23.7091 8.29086 25.5 10.5 25.5H21.5C23.7091 25.5 25.5 23.7091 25.5 21.5L25.5 10.5C25.5 8.29087 23.7091 6.5 21.5 6.5Z"
       stroke="currentColor"
