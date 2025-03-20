@@ -13,11 +13,13 @@ export default () => (
       Tabs to allow users to navigate easily between views within the same context.
       <br />
       <br />
-      Each tab should contain content that is distinct from other tabs in a set for example, tabs can present different sections of news, different genres of music, or different themes of documents.
-
+      Each tab should contain content that is distinct from other tabs in a set for example, tabs
+      can present different sections of news, different genres of music, or different themes of
+      documents.
     </p>
-    <Anatomy variants={{
-      Default: `<Tabs.Root>
+    <Anatomy
+      variants={{
+        Default: `<Tabs.Root>
   <Tabs.List>
     <Tabs.Tab>...</Tabs.Tab>
     <Tabs.Tab>...</Tabs.Tab>
@@ -28,8 +30,9 @@ export default () => (
     <Tabs.Panel>...</Tabs.Panel>
     <Tabs.Panel>...</Tabs.Panel>
   </Tabs.Panels>
-</Tabs.Root>`
-    }} />
+</Tabs.Root>`,
+      }}
+    />
 
     <Showcase
       title="Default"

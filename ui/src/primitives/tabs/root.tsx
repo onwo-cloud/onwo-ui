@@ -1,4 +1,4 @@
-import { Slot, component$, useId, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { Slot, component$, type QwikIntrinsicElements } from '@builder.io/qwik';
 import { useTabsContextProvider } from './use-tabs-context';
 
 export type RootProps = QwikIntrinsicElements['div'] & {

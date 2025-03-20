@@ -7,9 +7,9 @@ export type Letter =
   | 'u' | 'v' | 'w' | 'x' | 'y'
   | 'z';
 
-export type Number = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
+export type NumberChars = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
 
-type ValidNameCharacter = Letter | Number | '-';
+type ValidNameCharacter = Letter | NumberChars | '-';
 
 export type ValidName<T extends string> = T extends `${Letter}${infer Rest}`
   ? // eslint-disable-next-line @typescript-eslint/no-unused-vars
