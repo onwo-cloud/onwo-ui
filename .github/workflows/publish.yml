@@ -63,6 +63,16 @@ jobs:
               - 'package.json'
               - 'yarn.lock'
 
+      - name: Check for icons changes
+        id: check-icons
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            icons:
+              - 'icons/**'
+              - 'package.json'
+              - 'yarn.lock'
+
       - name: Build & publish tailwindcss package
         if: ${{ steps.check-tailwind.outputs.tailwind == 'true' || github.event_name == 'workflow_dispatch' }}
         run: |
@@ -84,6 +94,22 @@ jobs:
           yarn build
 
           cd ../ui
+          yarn install
+          yarn build
+          yarn publish --access public || true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build & publish icon package
+        if: ${{ steps.check-icons.outputs.icons == 'true' || github.event_name == 'workflow_dispatch' }}
+        run: |
+          # tailwindcss plugin built step could have been skipped
+          # so we rebuild it.
+          cd tailwindcss
+          yarn install
+          yarn build
+
+          cd ../icons
           yarn install
           yarn build
           yarn publish --access public || true

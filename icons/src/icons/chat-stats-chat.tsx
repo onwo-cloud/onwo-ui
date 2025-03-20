@@ -1,0 +1,12 @@
+import type { IconProps } from '../svg-icon';
+import { SvgIcon } from '../svg-icon';
+export default (props: IconProps) => (
+  <SvgIcon {...props} viewBox="0 0 32 32">
+    <path
+      d="M18.1111 19.1667V12.8333M13.8889 19.1667V16M15.9696 25.5C10.7229 25.5 6.5 21.1722 6.5 15.952C6.5 10.7318 10.7533 6.5 16 6.5C21.2467 6.5 25.5 10.7318 25.5 15.952C25.5 17.8845 24.9171 19.6815 23.9167 21.1786L25.5 25.5H15.9696Z"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </SvgIcon>
+);

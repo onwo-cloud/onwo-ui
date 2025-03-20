@@ -38,6 +38,7 @@
   "dependencies": {
     "@onwo/tailwindcss": "link:../tailwindcss",
     "@onwo/ui": "link:../ui",
+    "@onwo/icons": "link:../icons",
     "@tailwindcss/typography": "^0.5.16"
   }
 }

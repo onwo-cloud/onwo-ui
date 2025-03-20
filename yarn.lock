@@ -395,12 +395,17 @@
   resolved "https://registry.yarnpkg.com/@nolyfill/is-core-module/-/is-core-module-1.0.39.tgz#3dc35ba0f1e66b403c00b39344f870298ebb1c8e"
   integrity sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==
 
+"@onwo/icons@link:icons":
+  version "0.0.0"
+  uid ""
+
 "@onwo/tailwindcss@link:tailwindcss":
   version "0.0.2-alpha"
 
 "@onwo/ui@link:ui":
   version "0.0.2-alpha"
   dependencies:
+    "@tailwindcss/vite" "^4.0.14"
     clsx "^2.1.1"
     tailwind-merge "^3.0.2"
 

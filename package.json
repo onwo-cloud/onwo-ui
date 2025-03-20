@@ -4,7 +4,8 @@
   "workspaces": [
     "docs",
     "tailwindcss",
-    "ui"
+    "ui",
+    "icons"
   ],
   "devDependencies": {
     "@types/eslint": "^9.6.1",
