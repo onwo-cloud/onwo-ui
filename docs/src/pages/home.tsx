@@ -31,8 +31,7 @@ export const HomePage = () => (
             </ul>
             <div class="flex flex-col rounded-onwo-s-md py-6 px-8 gap-6 bg-gohan">
               <p class="text-onwo-24 text-goten">
-                This project was built fully on the foundation laid by the people at moon.io! ♥️
-                check out{' '}
+                This project was built fully on the work laid by the people at moon.io! ♥️ check out{' '}
                 <a class="underline" href="https://moon.io">
                   their amazing work
                 </a>
