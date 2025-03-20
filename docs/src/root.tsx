@@ -6,11 +6,10 @@ export default () => {
     <QwikCityProvider>
       <head>
         <meta charset="utf-8" />
-        <title>Qwik Blank App</title>
+        <title>Onwo-ui</title>
       </head>
       <body class="theme-onwo-light">
         <RouterOutlet />
-        {/*<ServiceWorkerRegister /> to add pwa*/}
       </body>
     </QwikCityProvider>
   );

@@ -5,8 +5,7 @@ import { buildHead } from '~/utils/build-head';
 export default () => <GettingStartedPage />;
 
 export const head: DocumentHead = buildHead({
-  title: 'onwo design system',
-  description:
-    'My personal blog, where I talk about the technology I love, explore new areas and share my programming knowledge.',
+  title: 'Onwo-ui - getting started',
+  description: '',
   shareImage: '/share.png',
 });
