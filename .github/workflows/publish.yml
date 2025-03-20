@@ -6,6 +6,7 @@ on:
     paths:
       - 'tailwindcss/**'
       - 'ui/**'
+      - 'icons/**'
       - 'package.json'
       - 'yarn.lock'
 
