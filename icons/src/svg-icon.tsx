@@ -7,8 +7,8 @@ const getIconSizePx = (size: IconSize) =>
     xs: '1rem',
     sm: '1.25rem',
     md: '1.5rem',
-    lg: '1.75rem',
-    xl: '2.25rem',
+    lg: '2rem',
+    xl: '2.5rem',
   })[size];
 
 export type IconProps = {
@@ -39,7 +39,10 @@ export const SvgIcon = ({
 
   return (
     <svg
-      style={{ 'min-width': sizePx, 'min-height': sizePx }}
+      style={{
+        'min-width': sizePx,
+        'min-height': sizePx,
+      }}
       width={sizePx}
       height={sizePx}
       fill={fill}

@@ -24,7 +24,7 @@ export const SidebarButtonSmall = (props: SidebarButtonSmallProps) => (
 );
 
 export default component$(() => (
-  <div class="phx-connected">
+  <div>
     <div role="main" class="pt-16 lg:pt-0 bg-gohan text-bulma flex theme-onwo-light" dir="ltr">
       <div
         id="left-menu"
@@ -101,10 +101,7 @@ export default component$(() => (
               <div class="ps-2 text-onwo-10-caption flex gap-2 font-medium">
                 <p class="text-trunks uppercase">Components</p>
                 <div>
-                  <div
-                    data-phx-id="m14-phx-GCuiyuFRmjSIjCiB"
-                    class="uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4"
-                  >
+                  <div class="uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
                     WIP
                   </div>
                 </div>
@@ -189,18 +186,11 @@ export default component$(() => (
       </div>
 
       <header class="fixed top-0 bg-goku z-50 px-5 w-full">
-        <div class="relative z-10 py-4 lg:hidden flex flex-row gap-2 items-center justify-between text-bulma">
-          <button type="button" class="focus:outline-none">
+        <div class="relative z-10 py-4 lg:hidden flex flex-row gap-2 items-center justify-between">
+          <button type="button">
             <span class="sr-only">Open sidebar</span>
-            <svg class="onwo-icon fill-none text-onwo-32">
-              <use href="/onwo_icons/svgs/icons_new/generic-menu.svg#item"></use>
-            </svg>
+            <Icons.GenericMenu size="lg" />
           </button>
-          <a href="/" aria-label="surface.moon.io main page">
-            <svg class="onwo-logo" style="height: 2em; width: 2em">
-              <use href="/onwo_icons/svgs/logos/logo-onwo-design-short.svg#item"></use>
-            </svg>
-          </a>
         </div>
       </header>
 
