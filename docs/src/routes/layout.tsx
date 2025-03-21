@@ -3,7 +3,7 @@ import { Slot, component$ } from '@builder.io/qwik';
 import { Icons } from '@onwo/icons';
 import { cn } from '@onwo/ui';
 
-import LogoImg from '~/assets/onwo.svg?jsx';
+import LogoImg from '~/assets/onwo-3.svg?jsx';
 
 type SidebarButtonSmallProps = {
   href: string;
@@ -35,19 +35,386 @@ export default component$(() => (
       >
         <div class="fixed bg-zeno inset-0 lg:hidden onwo-backdrop"></div>
 
-        <div
-          data-animate_enter_class="ltr:animate-drawer_enter_left rtl:animate-drawer_enter_right"
-          data-animate_leave_class="ltr:animate-drawer_leave_left rtl:animate-drawer_leave_right"
-          class="fixed bg-gohan text-bulma shadow-onwo-none inset-y-0 w-80 max-w-md rtl:right-0 ltr:left-0 onwo-panel"
-        >
+        <div class="fixed bg-gohan text-bulma shadow-onwo-none inset-y-0 w-80 max-w-md left-0 onwo-panel">
           <nav
             aria-label="Sidebar"
-            class="z-10 fixed top-0 h-screen w-80 flex flex-col flex-grow gap-6 pt-10 pb-20 px-5 lg:px-8 overflow-y-scroll"
+            class="z-10 fixed top-0 h-screen w-80 flex flex-col flex-grow gap-4 pt-8 pb-10 px-5 lg:px-8 overflow-y-scroll"
           >
             <div class="flex items-center flex-shrink-0 px-3 text-bulma">
-              <a href="/" aria-label="Surface.moon.io main page">
-                <LogoImg height={32} class="h-[32px] w-fit" />
+              <a href="/" class="flex gap-2 items-center" aria-label="ui.onwo.cloud main page">
+                <LogoImg height={20} class="h-[20px] w-fit" />
+                <h4 class="text-onwo-20 font-semibold">onwo/ui</h4>
               </a>
+            </div>
+            <div>
+              <div>
+                <div id="onwo-search" class="w-full focus:bg-heles" aria-label="Search">
+                  <div class="relative" id="onwo-search-dropdown">
+                    <div class="relative w-full">
+                      <input
+                        placeholder="Search..."
+                        autocomplete="off"
+                        class="onwo-comboinput ps-[2.5rem] bg-goku hover:border-trunks h-10 w-full rounded-onwo-s-sm border border-beerus py-2 px-3 focus:outline-none focus:ring-0 placeholder:text-trunks placeholder:opacity-100 placeholder:transition-opacity placeholder:delay-75"
+                      />
+
+                      <Icons.GenericSearch class="absolute text-trunks cursor-pointer transition-transform z-[3] top-1/2 text-onwo-24 w-6 h-6 -translate-y-1/2 fill-none onwo-icon start-3 start-[9px] transition-200" />
+
+                      <button class="absolute text-trunks cursor-pointer transition z-[3] top-1/2 text-onwo-14 -translate-y-1/2 end-4 transform">
+                        Clear
+                      </button>
+                    </div>
+
+                    <div
+                      class="ease-in-out absolute flex p-2 mt-0 my-2 bg-goku transition-all flex-col overflow-auto box-border scale-95 duration-300 shadow-onwo-lg rounded-tl-none rounded-tr-none rounded-onwo-s-md z-[99] top-full w-full max-h-0 focus:outline-none opacity-0 transform"
+                      role="listbox"
+                    >
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/vision"
+                      >
+                        Vision
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/getting-started"
+                      >
+                        Getting Started
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/contribute"
+                      >
+                        How To Contribute
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/colours"
+                      >
+                        Colours
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/tokens"
+                      >
+                        Tokens
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/typography"
+                      >
+                        Typography
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components"
+                      >
+                        Components
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/manifest"
+                      >
+                        Manifest
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/accordion"
+                      >
+                        Accordion
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/alert"
+                      >
+                        Alert
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/avatar"
+                      >
+                        Avatar
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/bottomsheet"
+                      >
+                        Bottom Sheet
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/breadcrumb"
+                      >
+                        Breadcrumb
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/button"
+                      >
+                        Button
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/icon_button"
+                      >
+                        Icon Button
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/carousel"
+                      >
+                        Carousel
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/chip"
+                      >
+                        Chip
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/drawer"
+                      >
+                        Drawer
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/dropdown"
+                      >
+                        Dropdown
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/icons"
+                      >
+                        Icons
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/loader"
+                      >
+                        Loader
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/menu_item"
+                      >
+                        Menu Item
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/modal"
+                      >
+                        Modal
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/pagination"
+                      >
+                        Pagination
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/popover"
+                      >
+                        Popover
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/progress"
+                      >
+                        Linear Progress
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/circularprogress"
+                      >
+                        Circular Progress
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/search"
+                      >
+                        Search
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/snackbar"
+                      >
+                        Snackbar
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/switch"
+                      >
+                        Switch
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/table"
+                      >
+                        Table
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/tabs"
+                      >
+                        Tabs
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/tag"
+                      >
+                        Tag
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/tooltip"
+                      >
+                        Tooltip
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/form/auth_code"
+                      >
+                        Auth Code
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/form/checkbox"
+                      >
+                        Checkbox
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/form/combobox"
+                      >
+                        Combobox
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/form/group"
+                      >
+                        Group
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/form/input"
+                      >
+                        Input
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/form/inset_input"
+                      >
+                        Inset Input
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/form/radio"
+                      >
+                        Radio
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/form/select"
+                      >
+                        Select
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/form/textarea"
+                      >
+                        Text Area
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="flex flex-col gap-1">
               <a
@@ -194,7 +561,7 @@ export default component$(() => (
         </div>
       </header>
 
-      <div class="min-h-screen lg:ms-80 bg-goku flex-1 w-0 flex flex-col ltr:lg:rounded-tl-3xl rtl:lg:rounded-tr-3xl px-5 xl:px-20 2xl:px-32 lg:pt-12 lg:pb-52">
+      <div class="main-content min-h-screen lg:ms-80 bg-goku flex-1 flex flex-col px-5 xl:px-20 2xl:px-32 lg:pt-12 lg:pb-52">
         <Slot />
       </div>
     </div>

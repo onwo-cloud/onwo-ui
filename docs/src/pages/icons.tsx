@@ -19,12 +19,14 @@ export const IconsPage = () => (
         <code>npm install @onwo/icons</code>
       </pre>
     </div>
+
     <Anatomy
       variants={{
         Default: `<Icons.ArrowsLeft />
 <Icons.FilesCopy size="lg" class="text-roshi fill-roshi/20" />`,
       }}
     />
+
     <Showcase
       title="Different sizes and styling"
       component={

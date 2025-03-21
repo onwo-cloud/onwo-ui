@@ -21,3 +21,13 @@ body {
 .onwo-icon {
   @apply inline-block align-middle h-[1em] w-[1em];
 }
+
+.main-content {
+  max-width: 100vw;
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    max-width: calc(100vw - calc(var(--spacing) * 80));
+  }
+}

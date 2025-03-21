@@ -1,4 +1,5 @@
 import { PageHeadSection } from '~/commons/page-head-section';
+import { PageLink } from '~/commons/page-navigation';
 
 export const ColorPage = () => (
   <div>
@@ -22,11 +23,11 @@ export const ColorPage = () => (
 
     <section class="flex flex-col lg:flex-row gap-6">
       <div class="flex flex-col w-full gap-6">
-        <a href="#Main-colours">
+        <PageLink label="Main colours" id="main-colours">
           <h2 id="Main-colours" class="text-onwo-24 font-medium">
             Main colours
           </h2>
-        </a>
+        </PageLink>
         <div class="w-full flex flex-col gap-2 text-onwo-16">
           <h3 class="font-onwo-16 font-semibold">Accent colours</h3>
           <div class="flex gap-4 items-start font-onwo-16">
@@ -147,11 +148,11 @@ export const ColorPage = () => (
 
     <section class="flex flex-col lg:flex-row gap-6">
       <div class="flex flex-col w-full gap-6">
-        <a href="#Supportive-colours">
+        <PageLink label="Supportive-colours" id="supportive-colours">
           <h2 id="Supportive-colours" class="text-onwo-24 font-medium">
             Supportive colours
           </h2>
-        </a>
+        </PageLink>
         <div class="w-full flex flex-col gap-2 text-onwo-16">
           <h3 class="font-onwo-16 font-semibold">
             Krillin

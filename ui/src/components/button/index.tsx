@@ -1,24 +1,22 @@
 import type { ButtonHTMLAttributes, JSX } from '@builder.io/qwik';
+import { Button as BaseButton } from '~/primitives/button';
 import { cn } from '~/utils/cn';
 
 export type ButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'> & {
   variant?: 'fill' | 'outline' | 'ghost'; // default: fill
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'; // default: md
-  type?: 'button' | 'submit'; // default: button
 };
 
 export const Button = ({
   variant = 'fill',
   size = 'md',
-  type = 'button',
   disabled = false,
   class: className,
   children,
   ...props
 }: ButtonProps): JSX.Element => {
   return (
-    <button
-      type={type}
+    <BaseButton
       disabled={disabled}
       class={cn(
         'relative flex select-none items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-all duration-200',
@@ -39,7 +37,7 @@ export const Button = ({
       {...props}
     >
       {children}
-    </button>
+    </BaseButton>
   );
   /*
   return (

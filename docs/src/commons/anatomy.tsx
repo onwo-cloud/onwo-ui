@@ -1,4 +1,5 @@
 import { Tabs } from '@onwo/ui';
+import { PageLink } from './page-navigation';
 
 type AnatomyProps = {
   variants: Record<string, string>;
@@ -6,10 +7,13 @@ type AnatomyProps = {
 
 export const Anatomy = (props: AnatomyProps) => {
   const keys = Object.keys(props.variants);
+
   return (
     <Tabs.Root class="mt-16">
       <div class="flex justify-between w-full">
-        <h2 class="text-onwo-24 font-semibold">Anatomy</h2>
+        <PageLink label="Anatomy" id="anatomy">
+          <h2 class="text-onwo-24 font-semibold">Anatomy</h2>
+        </PageLink>
         <Tabs.List class="flex rounded-onwo-s-md gap-1 w-fit justify-left">
           {keys.length > 1 && keys.map((k, idx) => <Tabs.Tab key={idx}>{k}</Tabs.Tab>)}
         </Tabs.List>

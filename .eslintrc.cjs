@@ -20,6 +20,7 @@ const extendedConfig = {
   rules: {
     'unicorn/prefer-ternary': 'off',
     'unicorn/no-anonymous-default-export': 'off',
+    'unicorn/no-empty-file': 'warn',
     'unicorn/prevent-abbreviations': 'off',
     'sonarjs/function-return-type': 'off',
     'sonarjs/unused-import': 'off',

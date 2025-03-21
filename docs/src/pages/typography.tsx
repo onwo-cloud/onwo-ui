@@ -1,4 +1,5 @@
 import { PageHeadSection } from '~/commons/page-head-section';
+import { PageLink } from '~/commons/page-navigation';
 
 export const TypographyPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
@@ -19,7 +20,9 @@ export const TypographyPage = () => (
               id="text_1-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <h2 class="text-onwo-24 font-semibold order-1">Text</h2>
+              <PageLink label="Text" id="text">
+                <h2 class="text-onwo-24 font-semibold order-1">Text</h2>
+              </PageLink>
 
               <div
                 class="flex p-1 bg-gohan items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
@@ -60,7 +63,9 @@ export const TypographyPage = () => (
               id="text_2-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <h2 class="text-onwo-24 font-semibold order-1">Heading</h2>
+              <PageLink label="Heading" id="heading">
+                <h2 class="text-onwo-24 font-semibold order-1">Heading</h2>
+              </PageLink>
 
               <div
                 class="flex p-1 bg-gohan items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
@@ -101,7 +106,9 @@ export const TypographyPage = () => (
               id="text_3-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <h2 class="text-onwo-24 font-semibold order-1">Caption</h2>
+              <PageLink label="Caption" id="caption">
+                <h2 class="text-onwo-24 font-semibold order-1">Caption</h2>
+              </PageLink>
 
               <div
                 class="flex p-1 bg-gohan items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
@@ -131,7 +138,9 @@ export const TypographyPage = () => (
               id="text_4-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <h2 class="text-onwo-24 font-semibold order-1">Custom Colours</h2>
+              <PageLink label="Custom colours" id="custom-colours">
+                <h2 class="text-onwo-24 font-semibold order-1">Custom Colours</h2>
+              </PageLink>
 
               <div
                 class="flex p-1 bg-gohan items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"

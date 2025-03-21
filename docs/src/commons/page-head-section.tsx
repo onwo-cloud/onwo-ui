@@ -3,6 +3,7 @@ import { Icons } from '@onwo/icons';
 type Breadcrumb = { label: string; url: string };
 type PageHeadSectionProps = {
   title: string;
+  description?: string;
   breadcrumbs: Breadcrumb[];
 };
 
@@ -21,7 +22,7 @@ const BreadcrumbLink = (props: BreadcrumbLinkProps) => (
 
 export const PageHeadSection = (props: PageHeadSectionProps) => (
   <main>
-    <div class="pb-12 hidden lg:block">
+    <div class="pb-8 hidden lg:block">
       <nav aria-label="Breadcrumb">
         <ol class="text-trunks flex gap-2 flex-wrap items-center">
           <BreadcrumbLink to="/" label="Home" />
@@ -36,8 +37,9 @@ export const PageHeadSection = (props: PageHeadSectionProps) => (
       </nav>
     </div>
 
-    <div class="flex flex-col gap-12 flex-1 relative focus:outline-none mb-8">
-      <h1 class="text-onwo-40 font-semibold">{props.title}</h1>
+    <div class="flex flex-col gap-2 flex-1 relative focus:outline-none mb-8">
+      <h1 class="text-onwo-32 font-bold">{props.title}</h1>
+      <p class="text-base text-trunks max-w-screen-sm">{props.description ?? 'Lorem ipsum'}</p>
     </div>
   </main>
 );
