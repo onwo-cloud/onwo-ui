@@ -1,5 +1,29 @@
+const BgShape = () => (
+  <svg
+    class="absolute top-0 right-0 w-[100vw] h-[100vh] translate-x-[90vh] translate-y-[40vh]"
+    width="1053"
+    height="1001"
+    viewBox="0 0 1053 1001"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0.5 0.5H434.5V425.5H0.5V0.5Z" class="text-hit" fill="currentColor" />
+    <path
+      d="M1052.6 999.5L434.5 425.5H0.5L638.5 999.5H1052.6Z"
+      class="text-piccolo"
+      fill="currentColor"
+    />
+    <path
+      d="M434.5 0.5V425.5L1052.5 1000.59V594.5L434.5 0.5Z"
+      class="text-piccolo/80"
+      fill="currentColor"
+    />
+  </svg>
+);
+
 export const HomePage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
+    <BgShape />
     <div class="flex flex-col gap-12 flex-1 relative focus:outline-none">
       <div
         class="uppercase flex px-2 py-0.5 bg-bulma text-goku select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4 self-start"
