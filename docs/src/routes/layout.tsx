@@ -255,6 +255,14 @@ export default component$(() => (
                       <a
                         role="option"
                         class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
+                        href="/components/v2/page-navigation"
+                      >
+                        Page navigation
+                      </a>
+
+                      <a
+                        role="option"
+                        class="flex px-3 py-2 bg-transparent text-bulma cursor-pointer transition whitespace-nowrap rounded-onwo-i-sm text-onwo-14 w-full h-10 hover:bg-heles focus:bg-heles focus:outline-none"
                         href="/components/v2/pagination"
                       >
                         Pagination
@@ -435,6 +443,14 @@ export default component$(() => (
 
               <a
                 class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                href="/core-concepts"
+              >
+                <Icons.SoftwarePlate />
+                Core concepts
+              </a>
+
+              <a
+                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
                 href="/colours"
               >
                 <Icons.SoftwareSettings />
@@ -447,14 +463,6 @@ export default component$(() => (
               >
                 <Icons.TextSize />
                 Typography
-              </a>
-
-              <a
-                class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
-                href="/primitives"
-              >
-                <Icons.SoftwarePlate />
-                Primitives
               </a>
               <a
                 class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
@@ -547,6 +555,21 @@ export default component$(() => (
                   Tooltip
                 </SidebarButtonSmall>
               </div>
+            </div>
+
+            <div class="ps-2 text-onwo-10-caption flex gap-2 font-medium">
+              <p class="text-trunks uppercase">Composites</p>
+              <div>
+                <div class="uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
+                  WIP
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <SidebarButtonSmall href="/components/page-navigation">
+                Page navigation
+              </SidebarButtonSmall>
             </div>
           </nav>
         </div>

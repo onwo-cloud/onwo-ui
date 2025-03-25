@@ -7,19 +7,26 @@ import { buildHead } from '~/utils/build-head';
 
 export default () => (
   <div>
-    <PageHeadSection title="Tabs" breadcrumbs={[{ label: 'Tabs', url: '/components/tabs' }]} />
+    <PageHeadSection
+      title="Tabs"
+      description="Navigate easily between views within the same context."
+      breadcrumbs={[{ label: 'Tabs', url: '/components/tabs' }]}
+    />
 
     <p>
-      Tabs to allow users to navigate easily between views within the same context.
-      <br />
-      <br />
-      Each tab should contain content that is distinct from other tabs in a set for example, tabs
-      can present different sections of news, different genres of music, or different themes of
-      documents.
+      By organizing frequently used features within a tab structure, users can quickly switch
+      between different sections without navigating through multiple screens or complex menu
+      hierarchies.
+    </p>
+    <p class="mt-2">
+      Tabs frequently serve as a mean of secondary navigation on desktop, but in mobile app, they
+      often become the primary navigation layer due to their compact vertical design.
     </p>
     <Anatomy
       variants={{
-        Default: `<Tabs.Root>
+        Default: `import { Tabs } from '@onwo/ui';
+
+<Tabs.Root>
   <Tabs.List>
     <Tabs.Tab>...</Tabs.Tab>
     <Tabs.Tab>...</Tabs.Tab>

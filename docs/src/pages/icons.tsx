@@ -22,7 +22,9 @@ export const IconsPage = () => (
 
     <Anatomy
       variants={{
-        Default: `<Icons.ArrowsLeft />
+        Default: `import { Icons } from '@onwo/icons';
+
+<Icons.ArrowsLeft />
 <Icons.FilesCopy size="lg" class="text-roshi fill-roshi/20" />`,
       }}
     />

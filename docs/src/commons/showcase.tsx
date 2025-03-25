@@ -1,7 +1,6 @@
 import type { JSXChildren } from '@builder.io/qwik';
 import { Icons } from '@onwo/icons';
-import { Tabs, cn } from '@onwo/ui';
-import { PageLink } from './page-navigation';
+import { Tabs, cn, PageNavigation as PNav } from '@onwo/ui';
 
 type ShowcaseProps = {
   title: string;
@@ -13,9 +12,9 @@ type ShowcaseProps = {
 export const Showcase = (props: ShowcaseProps) => (
   <Tabs.Root class="mt-16">
     <div class="flex justify-between w-full">
-      <PageLink label={props.title} id={props.title.replace(' ', '-')}>
+      <PNav.Link label={props.title} id={props.title.replace(' ', '-')}>
         <h2 class="text-onwo-24 font-semibold">{props.title}</h2>
-      </PageLink>
+      </PNav.Link>
       {!!props.code && (
         <Tabs.List class="flex p-1 bg-gohan rounded-onwo-s-md gap-1 w-fit justify-left">
           <Tabs.Pill>

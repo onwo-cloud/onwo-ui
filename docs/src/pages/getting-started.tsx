@@ -1,5 +1,5 @@
+import { PageNavigation as PNav } from '@onwo/ui';
 import { PageHeadSection } from '~/commons/page-head-section';
-import { PageLink } from '~/commons/page-navigation';
 
 export const GettingStartedPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
@@ -30,11 +30,11 @@ export const GettingStartedPage = () => (
 
         <section class="flex flex-col lg:flex-row gap-6 mt-10">
           <div class="flex flex-col w-full gap-6">
-            <PageLink label="Prerequisites" id="prerequisites">
+            <PNav.Link label="Prerequisites" id="prerequisites">
               <h2 id="Prerequisites" class="text-onwo-24 font-medium">
                 Prerequisites
               </h2>
-            </PageLink>
+            </PNav.Link>
             <div class="w-full flex flex-col gap-2 text-onwo-16">
               <p>To start using onwo-ui, you will need:</p>
               <ul>
@@ -55,11 +55,11 @@ export const GettingStartedPage = () => (
 
         <section class="flex flex-col lg:flex-row gap-6 mt-10">
           <div class="flex flex-col w-full gap-6">
-            <PageLink label="Project-creating" id="project-creating">
+            <PNav.Link label="Project-creating" id="project-creating">
               <h2 id="Project-creating" class="text-onwo-24 font-medium">
                 Setup with qwik
               </h2>
-            </PageLink>
+            </PNav.Link>
 
             <div class="w-full flex flex-col gap-2 text-onwo-16">
               <p>Add onwo-ui dependencies to your project</p>
