@@ -5,23 +5,20 @@ export const ColorPage = () => (
   <div>
     <PageHeadSection title="Colors" breadcrumbs={[{ label: 'Colors', url: '/colors' }]} />
 
-    <div class="flex gap-2 flex-col max-w-5xl mb-8">
+    <div class="onwo-format max-w-5xl">
       <p>
         Our design system is decentralized and built for multi-product purposes. Having
         different-color naming conventions and numbers etc... makes it harder to maintain it.
       </p>
       <p>For that, we made a decision to give our colours unique names.</p>
       <p>
-        Meet the <span class="font-semibold">Dragon Ball Z approach</span>.
-      </p>
-      <p>
-        Each color name is assigned for specific purpose and for each product these values are
-        different.
+        Meet the <span class="font-semibold">Dragon Ball Z approach</span>. Each color name is
+        assigned for specific purpose and for each product these values are different.
       </p>
       <p>Please never use Hex values, they won"t change if you need theme support.</p>
     </div>
 
-    <section class="flex flex-col lg:flex-row gap-6">
+    <section class="mt-12 flex flex-col lg:flex-row gap-6">
       <div class="flex flex-col w-full gap-6">
         <PNav.Link label="Main colours" id="main-colours">
           <h2 id="Main-colours" class="text-onwo-24 font-medium">

@@ -6,7 +6,7 @@ import { Showcase } from '~/commons/showcase';
 export const IconsPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
     <PageHeadSection title="Icons" breadcrumbs={[{ label: 'Icons', url: '/icons' }]} />
-    <div class="flex gap-2 flex-col">
+    <div class="onwo-format">
       <p>
         This icon set includes essential UI elements for navigation, actions, notifications, and
         content organization. They all fall under the MIT license and can be used as is without
@@ -15,7 +15,7 @@ export const IconsPage = () => (
       <p>
         The icon packages needs to be installed separately, if you havent already, run the command:
       </p>
-      <pre class="theme-onwo-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm whitespace-pre-line">
+      <pre class="theme-onwo-dark">
         <code>npm install @onwo/icons</code>
       </pre>
     </div>

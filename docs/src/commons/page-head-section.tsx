@@ -21,7 +21,7 @@ const BreadcrumbLink = (props: BreadcrumbLinkProps) => (
 );
 
 export const PageHeadSection = (props: PageHeadSectionProps) => (
-  <main>
+  <main class="onwo-no-format">
     <div class="pb-8 hidden lg:block">
       <nav aria-label="Breadcrumb">
         <ol class="text-trunks flex gap-2 flex-wrap items-center">

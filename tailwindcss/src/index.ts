@@ -3,29 +3,36 @@ import type { PluginAPI } from 'tailwindcss/plugin';
 import plugin from 'tailwindcss/plugin';
 // eslint-disable-next-line import/no-unresolved
 import { colors } from './colors.js';
+// eslint-disable-next-line import/no-unresolved
+import { typography } from './typography/index.js';
 
 export default plugin(
-  ({ addVariant }: PluginAPI) => {
+  (api: PluginAPI) => {
     // Add custom variants
     for (const state of ['checked', 'selected', 'active', 'disabled']) {
-      addVariant(`onwo-${state}`, [`&[aria-${state}="true"]`, `:where([aria-${state}="true"]) &`]);
-      addVariant(`onwo-not-${state}`, [
+      api.addVariant(`onwo-${state}`, [
+        `&[aria-${state}="true"]`,
+        `:where([aria-${state}="true"]) &`,
+      ]);
+      api.addVariant(`onwo-not-${state}`, [
         `&[aria-${state}="false"]`,
         `:where([aria-${state}="false"]) &`,
       ]);
     }
 
-    addVariant(`onwo-open`, [
+    api.addVariant(`onwo-open`, [
       `&[aria-open="true"]`,
       `:where([aria-open="true"]) &`,
       `&[data-state="open"]`,
       `:where([data-state="open"]) &`,
     ]);
 
-    addVariant(`onwo-error`, [`&[error]`, `:where([error]) &`]);
-    addVariant('not-last', '&:not(:last-child)');
-    addVariant('not-first', '&:not(:first-child)');
-    addVariant('empty', '&:empty');
+    api.addVariant(`onwo-error`, [`&[error]`, `:where([error]) &`]);
+    api.addVariant('not-last', '&:not(:last-child)');
+    api.addVariant('not-first', '&:not(:first-child)');
+    api.addVariant('empty', '&:empty');
+
+    typography(api);
   },
   {
     theme: {

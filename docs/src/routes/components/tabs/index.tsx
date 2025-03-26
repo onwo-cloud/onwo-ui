@@ -13,15 +13,18 @@ export default () => (
       breadcrumbs={[{ label: 'Tabs', url: '/components/tabs' }]}
     />
 
-    <p>
-      By organizing frequently used features within a tab structure, users can quickly switch
-      between different sections without navigating through multiple screens or complex menu
-      hierarchies.
-    </p>
-    <p class="mt-2">
-      Tabs frequently serve as a mean of secondary navigation on desktop, but in mobile app, they
-      often become the primary navigation layer due to their compact vertical design.
-    </p>
+    <div class="onwo-format">
+      <p>
+        By organizing frequently used features within a tab structure, users can quickly switch
+        between different sections without navigating through multiple screens or complex menu
+        hierarchies.
+      </p>
+      <p class="mt-2">
+        Tabs frequently serve as a mean of secondary navigation on desktop, but in mobile app, they
+        often become the primary navigation layer due to their compact vertical design.
+      </p>
+    </div>
+
     <Anatomy
       variants={{
         Default: `import { Tabs } from '@onwo/ui';

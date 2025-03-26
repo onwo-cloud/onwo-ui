@@ -13,16 +13,18 @@ export default () => (
       breadcrumbs={[{ label: 'Page navigation', url: '/components/progress' }]}
     />
 
-    <p>
-      Page navigation through anchor is used for sharing or bookmarking differents section of a
-      page, depending on the configuration chosen, right clicking a navigation element will save the
-      link to the clipboard.
-    </p>
+    <div class="onwo-format">
+      <p>
+        Page navigation through anchor is used for sharing or bookmarking differents section of a
+        page, depending on the configuration chosen, right clicking a navigation element will save
+        the link to the clipboard.
+      </p>
 
-    <p class="mt-2">
-      Anchor points are computed by parsing links labels, be wary of collisions, e.g., "Link 1" and
-      "link__1" will both result in the anchor point `link-1`.
-    </p>
+      <p>
+        Anchor points are computed by parsing links labels, be wary of collisions, e.g., "Link 1"
+        and "link__1" will both result in the anchor point `link-1`.
+      </p>
+    </div>
 
     <Anatomy
       variants={{
@@ -56,9 +58,15 @@ export default () => (
       component={
         <PNav.Provider>
           <div class="p-1 flex bg-goku w-fit gap-4 mb-4">
-            <PNav.Link id="link-1" label="Link 1">Link 1</PNav.Link>
-            <PNav.Link id="link-2" label="Link 2">Link 2</PNav.Link>
-            <PNav.Link id="link-3" label="Link 3">Link 3</PNav.Link>
+            <PNav.Link id="link-1" label="Link 1">
+              Link 1
+            </PNav.Link>
+            <PNav.Link id="link-2" label="Link 2">
+              Link 2
+            </PNav.Link>
+            <PNav.Link id="link-3" label="Link 3">
+              Link 3
+            </PNav.Link>
           </div>
           <PNav.Appendix />
         </PNav.Provider>

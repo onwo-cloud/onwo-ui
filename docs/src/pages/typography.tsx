@@ -8,11 +8,15 @@ export const TypographyPage = () => (
       breadcrumbs={[{ label: 'Typography', url: '/typography' }]}
     />
 
-    <div class="flex flex-col gap-12 flex-1 relative focus:outline-none">
-      <div class="flex flex-col items-start gap-2 text-onwo-16">
-        <p>Typography includes text, headings, and captions.</p>
-      </div>
+    <div class="onwo-format">
+      <p>Typography includes text, headings, and captions.</p>
+      <p>
+        you can apply the `onwo-format` class to section of your code you want to be automatically
+        formatted.
+      </p>
+    </div>
 
+    <div class="mt-10 flex flex-col gap-12 flex-1 relative focus:outline-none">
       <section class="flex flex-col">
         <div class="flex flex-row items-center justify-between">
           <div class="flex flex-row gap-2 w-full">
