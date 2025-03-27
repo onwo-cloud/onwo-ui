@@ -5,10 +5,13 @@ import { cn } from '~/utils/cn';
 
 type AppendixProps = {
   class?: string;
+  // When set will only display links above the specified level.
+  maxLevelShown?: number;
 };
 
 export const Appendix = (props: AppendixProps) => (
   <PageNavigation.Appendix
+    maxLevelShown={props.maxLevelShown}
     class={cn(' overflow-y-auto sticky', props.class)}
     render$={$((elements: NavigationElement[]) => (
       <div class="sticky flex flex-col gap-4">

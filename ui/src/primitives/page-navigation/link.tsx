@@ -1,10 +1,11 @@
-import type { QwikIntrinsicElements } from '@builder.io/qwik';
+import type { Component, QwikIntrinsicElements } from '@builder.io/qwik';
 import { Slot, component$, useContext, useTask$ } from '@builder.io/qwik';
 import { PageNavigationContext } from './provider';
 
-type PageNavigationLinkData<T extends keyof QwikIntrinsicElements = 'a'> = {
+type PageNavigationLinkData = {
   label: string;
   id: string;
+  // If not specified will default to -1
   level?: number;
 };
 
@@ -36,7 +37,7 @@ export const Link = component$(function <T extends keyof QwikIntrinsicElements =
   ...props
 }: LinkProps<T>) {
   usePageNavigationLink(props);
-  const Elem = elem ?? 'a';
+  const Elem = (elem ?? 'a') as unknown as Component;
 
   return (
     <Elem {...props}>

@@ -82,6 +82,46 @@ export default () => (
   <PNav.Appendix />
 </PNav.Provider>`}
     />
+
+    <Showcase
+      title="Custom anchors"
+      component={
+        <PNav.Provider class="grid grid-cols-[1fr_auto] gap-8">
+          <div class="onwo-format">
+            <PNav.Link level={1} elem="h2" id="hlink-2" label="H2">
+              Title 1
+            </PNav.Link>
+            <PNav.Link level={2} elem="h3" id="hlink-3" label="H3">
+              Title 2
+            </PNav.Link>
+            <PNav.Link level={3} elem="h4" id="hlink-4" label="H4">
+              Title 3
+            </PNav.Link>
+          </div>
+          <PNav.Appendix maxLevelShown={2} />
+        </PNav.Provider>
+      }
+      code={`import { PageNavigation as PNav } from '@onwo/ui';
+
+<PNav.Provider class="grid grid-cols-[1fr_auto] gap-8">
+  <div class="onwo-format">
+    <PNav.Link elem="h2" id="hlink-2" label="H2">
+      Title 1
+    </PNav.Link>
+    <PNav.Link elem="h3" level={2} id="hlink-3" label="H3">
+      Title 2
+    </PNav.Link>
+    <PNav.Link elem="h4" level={3} id="hlink-4" label="H4">
+      Title 3
+    </PNav.Link>
+  </div>
+  <PNav.Appendix maxLevelShown={2} />
+</PNav.Provider>`}
+    />
+    <p class="mt-6">
+      Rather than nesting heading element inside of page navigation link you can simply set the elem
+      prop to the element of your choosing, you can also set the level prop to define the link importance. You can also set the maxLevelShown prop on the appendix to hide undesired links.
+    </p>
   </div>
 );
 
