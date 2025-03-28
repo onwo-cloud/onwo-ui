@@ -1,5 +1,8 @@
 name: Publish to NPM Registry
 
+env:
+  ESLINT_MODE: full
+
 on:
   push:
     branches: ["main"]

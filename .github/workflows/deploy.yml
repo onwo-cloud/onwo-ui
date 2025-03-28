@@ -1,5 +1,8 @@
 name: Deploy documentation
 
+env:
+  ESLINT_MODE: full
+
 on:
   push:
     branches: ["main"]
