@@ -584,7 +584,7 @@ export default component$(() => (
         </div>
       </header>
 
-      <div class="relative main-content overflow-hidden min-h-screen bg-goku flex-1 flex flex-col lg:ms-80 px-5 xl:px-20 2xl:px-32 lg:pt-12 lg:pb-52">
+      <div class="relative main-content overflow-x-hidden overflow-y-auto h-screen bg-goku flex-1 flex flex-col lg:ms-80 px-5 xl:px-20 2xl:px-32 lg:pt-12 lg:pb-52">
         <Slot />
       </div>
     </div>

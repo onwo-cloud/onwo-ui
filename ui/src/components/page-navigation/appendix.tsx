@@ -7,14 +7,15 @@ type AppendixProps = {
   class?: string;
   // When set will only display links above the specified level.
   maxLevelShown?: number;
+  sticky?: boolean;
 };
 
 export const Appendix = (props: AppendixProps) => (
   <PageNavigation.Appendix
     maxLevelShown={props.maxLevelShown}
-    class={cn(' overflow-y-auto sticky', props.class)}
+    class={cn('h-full', props.class)}
     render$={$((elements: NavigationElement[]) => (
-      <div class="sticky flex flex-col gap-4">
+      <div class={cn('flex flex-col gap-4', props.sticky && 'sticky top-0')}>
         <p class="text-onwo-10-caption font-semibold uppercase text-bulma">On this page</p>
         <ul class="flex text-trunks flex-col gap-1">
           {elements.map((elem) => (
