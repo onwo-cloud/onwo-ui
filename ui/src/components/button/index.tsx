@@ -1,6 +1,6 @@
 import type { Component, JSX, QwikIntrinsicElements } from '@builder.io/qwik';
 import { Button as BaseButton } from '~/primitives/button';
-import { IconProps, IconSize } from '~/primitives/svg-icon';
+import type { IconProps, IconSize } from '~/primitives/svg-icon';
 import { cn } from '~/utils/cn';
 import type { ExactlyOne } from '~/utils/types';
 
@@ -15,13 +15,23 @@ export type ButtonProps<T extends keyof QwikIntrinsicElements> = QwikIntrinsicEl
 
 const desiredIconSize = (buttonSize: ButtonSize): IconSize => {
   switch (buttonSize) {
-    case 'xs': return 'xs';
-    case 'sm': return 'sm';
-    case 'md': return 'sm';
-    case 'lg': return 'md';
-    case 'xl': return 'md';
+    case 'xs': {
+      return 'xs';
+    }
+    case 'sm': {
+      return 'sm';
+    }
+    case 'md': {
+      return 'sm';
+    }
+    case 'lg': {
+      return 'md';
+    }
+    case 'xl': {
+      return 'md';
+    }
   }
-}
+};
 
 export const Button = function <T extends keyof QwikIntrinsicElements = 'button'>({
   as = 'button' as T,
@@ -33,7 +43,7 @@ export const Button = function <T extends keyof QwikIntrinsicElements = 'button'
   end: EndIcon,
   ...props
 }: ButtonProps<T>): JSX.Element {
-  const Elem = (as !== 'button' ? as : BaseButton) as unknown as Component;
+  const Elem = (as === 'button' ? BaseButton : as) as unknown as Component;
 
   return (
     <Elem

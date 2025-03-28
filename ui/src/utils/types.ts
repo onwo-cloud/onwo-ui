@@ -1,8 +1,7 @@
 export type Classes<T extends string> = Partial<Record<T, string>>;
 
-export type Prettify<T> = {
-  [K in keyof T]: T[K];
-} & {};
+// eslint-disable-next-line sonarjs/no-useless-intersection
+export type Prettify<T> = { [K in keyof T]: T[K] } & {};
 
 export type ExactlyOne<T, K extends keyof T = keyof T> = Prettify<
   {
