@@ -1,6 +1,5 @@
 import { primitives as P } from '@onwo/ui';
 
-
 export default (props: P.IconProps) => (
   <P.SvgIcon data--icon-name="arrows-left-curved" {...props} viewBox="0 0 32 32">
     <path

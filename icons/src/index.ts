@@ -1,5 +1,6 @@
-import * as Icons from './icons';
+import type * as Icons from './icons';
 
 export type IconsName = keyof typeof Icons;
 
-export { Icons };
+// eslint-disable-next-line unicorn/prefer-export-from
+export * as Icons from './icons';

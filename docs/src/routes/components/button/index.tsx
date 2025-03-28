@@ -1,6 +1,7 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { Icons } from '@onwo/icons';
-import { Button, primitives as P } from '@onwo/ui';
+import type { primitives as P } from '@onwo/ui';
+import { Button } from '@onwo/ui';
 import IconMarginDemo from '~/assets/icon-margin-demo.png?jsx';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';

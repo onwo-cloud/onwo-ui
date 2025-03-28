@@ -6,6 +6,7 @@ build-tailwind-plugin:
 workspace CMD:
     yarn --cwd=tailwindcss   {{CMD}} || true
     yarn --cwd=ui            {{CMD}} || true
+    yarn --cwd=icons         {{CMD}} || true
     yarn --cwd=docs          {{CMD}} || true
 
 lint:
