@@ -1,7 +1,7 @@
-import type { IconProps } from '../svg-icon';
-import { SvgIcon } from '../svg-icon';
-export default (props: IconProps) => (
-  <SvgIcon data--icon-name="shop-crypto-coin" {...props} viewBox="0 0 32 32">
+import { primitives as P } from '@onwo/ui';
+
+export default (props: P.IconProps) => (
+  <P.SvgIcon data--icon-name="shop-crypto-coin" {...props} viewBox="0 0 32 32">
     <path
       d="M16 28.5C22.9036 28.5 28.5 22.9036 28.5 16C28.5 9.09644 22.9036 3.5 16 3.5C9.09644 3.5 3.5 9.09644 3.5 16C3.5 22.9036 9.09644 28.5 16 28.5Z"
       stroke="currentColor"
@@ -14,5 +14,5 @@ export default (props: IconProps) => (
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </SvgIcon>
+  </P.SvgIcon>
 );

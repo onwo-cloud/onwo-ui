@@ -88,13 +88,13 @@ export default () => (
       component={
         <PNav.Provider class="grid grid-cols-[1fr_auto] gap-8">
           <div class="onwo-format">
-            <PNav.Link level={1} elem="h2" id="hlink-2" label="H2">
+            <PNav.Link level={1} as="h2" id="hlink-2" label="H2">
               Title 1
             </PNav.Link>
-            <PNav.Link level={2} elem="h3" id="hlink-3" label="H3">
+            <PNav.Link level={2} as="h3" id="hlink-3" label="H3">
               Title 2
             </PNav.Link>
-            <PNav.Link level={3} elem="h4" id="hlink-4" label="H4">
+            <PNav.Link level={3} as="h4" id="hlink-4" label="H4">
               Title 3
             </PNav.Link>
           </div>
@@ -105,13 +105,13 @@ export default () => (
 
 <PNav.Provider class="grid grid-cols-[1fr_auto] gap-8">
   <div class="onwo-format">
-    <PNav.Link elem="h2" id="hlink-2" label="H2">
+    <PNav.Link as="h2" id="hlink-2" label="H2">
       Title 1
     </PNav.Link>
-    <PNav.Link elem="h3" level={2} id="hlink-3" label="H3">
+    <PNav.Link as="h3" level={2} id="hlink-3" label="H3">
       Title 2
     </PNav.Link>
-    <PNav.Link elem="h4" level={3} id="hlink-4" label="H4">
+    <PNav.Link as="h4" level={3} id="hlink-4" label="H4">
       Title 3
     </PNav.Link>
   </div>
@@ -119,8 +119,9 @@ export default () => (
 </PNav.Provider>`}
     />
     <p class="mt-6">
-      Rather than nesting heading element inside of page navigation link you can simply set the elem
-      prop to the element of your choosing, you can also set the level prop to define the link importance. You can also set the maxLevelShown prop on the appendix to hide undesired links.
+      Set the `elem` prop to create heading-level navigation elements without nesting, adjust link
+      importance with `level`, and use `maxLevelShown` on the appendix to filter displayed links
+      based on their hierarchy.
     </p>
   </div>
 );

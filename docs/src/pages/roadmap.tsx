@@ -15,35 +15,29 @@ export const RoadmapPage = () => (
         interfaces. This roadmap will evolve as I progress and incorporate feedback
       </p>
 
-      <PNav.Link elem="h2" id="current-goals" label="Current goals">
+      <PNav.Link as="h2" id="current-goals" label="Current goals">
         Current goals
       </PNav.Link>
-      <p>
-        <b>Initial Setup</b>
-      </p>
+      <h4>Initial Setup </h4>
       <ul>
         <li>Make the library available for use on npm registry ✅</li>
         <li>Implement CI/CD pipeline for automated deployments ✅</li>
       </ul>
 
-      <p>
-        <b>Core</b>
-      </p>
+      <h4>Core</h4>
       <ul>
         <li>Import moon.io stylings and fonts ✅</li>
         <li>Deliver foundational components (buttons, inputs, icons, etc.) 🕒</li>
       </ul>
 
-      <p>
-        <b>Release preparation</b>
-      </p>
+      <h4>Release preparation</h4>
       <ul>
         <li>Cleanup this documentation + QA</li>
         <li>Node.js compatibility for v20 & v21</li>
         <li>Official release 🚀</li>
       </ul>
 
-      <PNav.Link elem="h2" id="long-term" label="Long term">
+      <PNav.Link as="h2" id="long-term" label="Long term">
         Long term visions
       </PNav.Link>
       <ul>
@@ -53,7 +47,7 @@ export const RoadmapPage = () => (
         <li>Provide ready to use templates & themes</li>
         <li>Continual refinement based on community feedback</li>
       </ul>
-      <PNav.Link elem="h2" id="contribute" label="Contribute">
+      <PNav.Link as="h2" id="contribute" label="Contribute">
         How to Contribute
       </PNav.Link>
       <p>

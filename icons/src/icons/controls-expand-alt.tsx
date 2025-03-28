@@ -1,7 +1,7 @@
-import type { IconProps } from '../svg-icon';
-import { SvgIcon } from '../svg-icon';
-export default (props: IconProps) => (
-  <SvgIcon data--icon-name="controls-expand-alt" {...props} viewBox="0 0 32 32">
+import { primitives as P } from '@onwo/ui';
+
+export default (props: P.IconProps) => (
+  <P.SvgIcon data--icon-name="controls-expand-alt" {...props} viewBox="0 0 32 32">
     <path
       d="M20 19.9927L6.5 6.50005M6.5 6.50005V14.7288M6.5 6.50005L14.7288 6.5"
       stroke="currentColor"
@@ -14,5 +14,5 @@ export default (props: IconProps) => (
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </SvgIcon>
+  </P.SvgIcon>
 );

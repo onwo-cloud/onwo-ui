@@ -1,7 +1,7 @@
-import type { IconProps } from '../svg-icon';
-import { SvgIcon } from '../svg-icon';
-export default (props: IconProps) => (
-  <SvgIcon data--icon-name="sport-curling" {...props} viewBox="0 0 32 32">
+import { primitives as P } from '@onwo/ui';
+
+export default (props: P.IconProps) => (
+  <P.SvgIcon data--icon-name="sport-curling" {...props} viewBox="0 0 32 32">
     <path
       d="M22.2609 26H9.73913C6.57217 26 4 23.464 4 20.3416C4 17.2191 6.57217 14.6831 9.73913 14.6831H22.2609C25.4278 14.6831 28 17.2191 28 20.3416C28 23.464 25.4278 26 22.2609 26Z"
       stroke="currentColor"
@@ -12,5 +12,5 @@ export default (props: IconProps) => (
       stroke="currentColor"
       stroke-miterlimit="10"
     />
-  </SvgIcon>
+  </P.SvgIcon>
 );

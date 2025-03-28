@@ -1,6 +1,6 @@
 import type { JSXChildren, QwikIntrinsicElements } from '@builder.io/qwik';
 
-type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 const getIconSizePx = (size: IconSize) =>
   ({
@@ -19,8 +19,9 @@ export type IconProps = {
 export type SvgIconProps = {
   viewBox: string;
   children: JSXChildren;
+  class?: string;
 } & IconProps &
-  Omit<QwikIntrinsicElements['svg'], 'viewBox'>;
+  Omit<QwikIntrinsicElements['svg'], 'viewBox' | 'class'>;
 
 /*
  * Generic SVG element, can be use to build higher level icons.
@@ -33,6 +34,7 @@ export const SvgIcon = ({
   children,
   fill = 'none',
   xmlns = 'http://www.w3.org/2000/svg',
+  class: className,
   ...props
 }: SvgIconProps) => {
   const sizePx = getIconSizePx(size ?? 'md');
@@ -43,6 +45,7 @@ export const SvgIcon = ({
         'min-width': sizePx,
         'min-height': sizePx,
       }}
+      class={`onwo-icon ${className}`}
       width={sizePx}
       height={sizePx}
       fill={fill}

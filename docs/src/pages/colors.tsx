@@ -3,7 +3,11 @@ import { PageHeadSection } from '~/commons/page-head-section';
 
 export const ColorPage = () => (
   <div>
-    <PageHeadSection title="Colors" breadcrumbs={[{ label: 'Colors', url: '/colors' }]} />
+    <PageHeadSection
+      title="Colors"
+      description="A theme-agnostic color system design across all products"
+      breadcrumbs={[{ label: 'Colors', url: '/colors' }]}
+    />
 
     <div class="onwo-format max-w-5xl">
       <p>

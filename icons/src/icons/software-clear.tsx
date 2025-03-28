@@ -1,7 +1,7 @@
-import type { IconProps } from '../svg-icon';
-import { SvgIcon } from '../svg-icon';
-export default (props: IconProps) => (
-  <SvgIcon data--icon-name="software-clear" {...props} viewBox="0 0 32 32">
+import { primitives as P } from '@onwo/ui';
+
+export default (props: P.IconProps) => (
+  <P.SvgIcon data--icon-name="software-clear" {...props} viewBox="0 0 32 32">
     <path
       d="M20.2255 15.2227L25.4658 8.03803C25.8192 7.59601 25.9771 7.03894 25.9045 6.48938C25.832 5.93982 25.535 5.44278 25.079 5.10761C24.623 4.77244 24.0452 4.62657 23.4729 4.70213C22.9005 4.77769 22.3804 5.06848 22.027 5.5105L16.7706 12.6973L5.69474 15.2227C5.57704 17.7267 7.59711 21.0519 11.045 23.5861C14.4929 26.1203 17.8864 27.8054 20.3778 27.0461L20.2255 15.2227Z"
       stroke="currentColor"
@@ -30,5 +30,5 @@ export default (props: IconProps) => (
       stroke-miterlimit="10"
       stroke-linecap="round"
     />
-  </SvgIcon>
+  </P.SvgIcon>
 );

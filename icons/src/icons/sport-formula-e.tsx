@@ -1,7 +1,7 @@
-import type { IconProps } from '../svg-icon';
-import { SvgIcon } from '../svg-icon';
-export default (props: IconProps) => (
-  <SvgIcon data--icon-name="sport-formula-e" {...props} viewBox="0 0 32 32">
+import { primitives as P } from '@onwo/ui';
+
+export default (props: P.IconProps) => (
+  <P.SvgIcon data--icon-name="sport-formula-e" {...props} viewBox="0 0 32 32">
     <path
       d="M4 17.7335C4.02923 17.5444 4.13255 17.4617 4.21072 17.3678C5.9502 15.2892 8.15802 14.2636 10.8165 14.2622C15.2791 14.2601 14.2357 14.2594 18.6975 14.258C20.2038 14.258 21.7102 14.2615 23.2165 14.2559C23.9024 14.2538 24.4801 13.7333 24.561 13.0656C24.6324 12.475 24.298 12.0309 23.7263 11.9671C23.5808 11.951 23.432 11.9573 23.2851 11.9573C18.8002 11.9573 14.3152 11.9573 9.8302 11.9573H9.42847C9.38225 11.8046 9.49101 11.7471 9.55354 11.6778C11.3542 9.65383 13.5403 8.49368 16.2511 8.50068C18.9354 8.50699 21.6198 8.49228 24.3041 8.50629C26.1516 8.5161 27.59 9.72598 27.921 11.5244C28.1236 12.6242 27.9312 13.6751 27.4044 14.637C26.3175 16.6203 24.6875 17.73 22.4361 17.7314C14.5871 17.7377 12.2447 17.7342 4.39561 17.7342H4V17.7335Z"
       stroke="currentColor"
@@ -14,5 +14,5 @@ export default (props: IconProps) => (
       stroke-miterlimit="10"
       stroke-linecap="round"
     />
-  </SvgIcon>
+  </P.SvgIcon>
 );

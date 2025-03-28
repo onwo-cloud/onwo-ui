@@ -1,7 +1,7 @@
-import type { IconProps } from '../svg-icon';
-import { SvgIcon } from '../svg-icon';
-export default (props: IconProps) => (
-  <SvgIcon data--icon-name="text-cards" {...props} viewBox="0 0 32 32">
+import { primitives as P } from '@onwo/ui';
+
+export default (props: P.IconProps) => (
+  <P.SvgIcon data--icon-name="text-cards" {...props} viewBox="0 0 32 32">
     <path
       d="M11.968 6C7.05335 6 6 7.05335 6 11.968V12.4C6 13.2837 6.71634 14 7.6 14H24.4C25.2837 14 26 13.2837 26 12.4V11.968C26 7.05335 24.9466 6 20.032 6H11.968Z"
       stroke="currentColor"
@@ -14,5 +14,5 @@ export default (props: IconProps) => (
       d="M6 20.032C6 24.9466 7.05335 26 11.968 26H12.6C13.3732 26 14 25.3732 14 24.6V19.4C14 18.6268 13.3732 18 12.6 18H7.6C6.71634 18 6 18.7163 6 19.6V20.032Z"
       stroke="currentColor"
     />
-  </SvgIcon>
+  </P.SvgIcon>
 );

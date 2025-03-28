@@ -1,7 +1,7 @@
-import type { IconProps } from '../svg-icon';
-import { SvgIcon } from '../svg-icon';
-export default (props: IconProps) => (
-  <SvgIcon data--icon-name="travel-beach-chair" {...props} viewBox="0 0 32 32">
+import { primitives as P } from '@onwo/ui';
+
+export default (props: P.IconProps) => (
+  <P.SvgIcon data--icon-name="travel-beach-chair" {...props} viewBox="0 0 32 32">
     <path
       d="M5.00684 15.9715C5.00684 12.3385 8.16012 8.98943 12.578 8.1995C16.996 7.40956 21.1517 9.45621 22.4396 12.8575"
       stroke="currentColor"
@@ -83,5 +83,5 @@ export default (props: IconProps) => (
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </SvgIcon>
+  </P.SvgIcon>
 );

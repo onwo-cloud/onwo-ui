@@ -1,7 +1,7 @@
-import type { IconProps } from '../svg-icon';
-import { SvgIcon } from '../svg-icon';
-export default (props: IconProps) => (
-  <SvgIcon data--icon-name="sport-american-football" {...props} viewBox="0 0 32 32">
+import { primitives as P } from '@onwo/ui';
+
+export default (props: P.IconProps) => (
+  <P.SvgIcon data--icon-name="sport-american-football" {...props} viewBox="0 0 32 32">
     <path
       d="M11.0881 17.8008C11.8087 16.3587 12.7494 15.0368 13.8902 13.8952C15.0311 12.7536 16.3521 11.8122 17.7931 11.0912M13.2142 13.2186L14.686 14.6915M11.2518 15.6733L13.0507 16.8189M16.6485 13.055L15.5038 11.2549M7.32445 18.3422C8.92711 20.9115 11.0858 23.0716 13.6533 24.6754M18.3301 7.32873C20.8976 8.93248 23.0563 11.0926 24.659 13.6619M8.4855 24.7736C10.0064 25.0845 13.1463 25.3627 16.8422 23.5299C19.7368 22.0898 22.0917 19.7332 23.5309 16.8367C25.3625 13.1546 25.0845 10.0125 24.7737 8.47425C24.6429 7.83602 24.1523 7.34508 23.5145 7.21416C21.9773 6.9196 18.8374 6.6414 15.1578 8.47425C12.2632 9.91435 9.90827 12.2709 8.46915 15.1674C6.63754 18.8495 6.91555 21.9916 7.22627 23.5299C7.3571 24.1517 7.84771 24.6427 8.4855 24.7736Z"
       stroke="currentColor"
@@ -9,5 +9,5 @@ export default (props: IconProps) => (
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </SvgIcon>
+  </P.SvgIcon>
 );

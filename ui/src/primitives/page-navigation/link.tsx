@@ -30,14 +30,16 @@ export type LinkProps<T extends keyof QwikIntrinsicElements> = Omit<
   QwikIntrinsicElements[T],
   'id' | 'children'
 > &
-  PageNavigationLinkData & { elem?: T };
+  PageNavigationLinkData & { as?: T };
 
 export const Link = component$(function <T extends keyof QwikIntrinsicElements = 'a'>({
-  elem,
+  as,
+  level,
+  label,
   ...props
 }: LinkProps<T>) {
-  usePageNavigationLink(props);
-  const Elem = (elem ?? 'a') as unknown as Component;
+  usePageNavigationLink({ level, label, id: props.id });
+  const Elem = (as ?? 'a') as unknown as Component;
 
   return (
     <Elem {...props}>

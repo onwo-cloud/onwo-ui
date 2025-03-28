@@ -30,7 +30,7 @@ export const GettingStartedPage = () => (
 
         <section>
           <div>
-            <PNav.Link elem="h2" label="Prerequisites" id="prerequisites">
+            <PNav.Link as="h2" label="Prerequisites" id="prerequisites">
               Prerequisites
             </PNav.Link>
             <div>
@@ -53,7 +53,7 @@ export const GettingStartedPage = () => (
 
         <section>
           <div>
-            <PNav.Link elem="h2" label="Setup with qwik" id="qwik-setup">
+            <PNav.Link as="h2" label="Setup with qwik" id="qwik-setup">
               Setup with qwik
             </PNav.Link>
 

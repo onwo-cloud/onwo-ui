@@ -1,24 +1,24 @@
+import { PageNavigation as PNav } from '@onwo/ui';
 import { PageHeadSection } from '~/commons/page-head-section';
 
 export const PrimitivesPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
     <PageHeadSection
       title="Primitives"
+      description="Reusables building block"
       breadcrumbs={[{ label: 'Primitives', url: '/primitives' }]}
     />
-    <p>
-      In our UI library, primitives are the unstyled building blocks that contain the core logic for
-      various user interface elements. They serve as the foundation upon which styled components are
-      built. This page will explain the goals of separating primitives from components.
-    </p>
+    <div class="onwo-format">
+      <p>
+        In our UI library, primitives are the unstyled building blocks that contain the core logic
+        for various user interface elements. They serve as the foundation upon which styled
+        components are built. This page will explain the goals of separating primitives from
+        components.
+      </p>
 
-    <div class="flex flex-col gap-2">
-      <h2>Goals of Separation</h2>
-      <a href="#Goals">
-        <h2 id="Goals" class="mt-10 text-onwo-24 font-medium">
-          Why the separation?
-        </h2>
-      </a>
+      <PNav.Link as="h2" id="goals" label="Why the separation">
+        Why the separation?
+      </PNav.Link>
       <p>
         This is not exactly a new pattern, it became the standard for ui library design and we get a
         lot from it, here is a quick breakdown:

@@ -1,7 +1,7 @@
-import type { IconProps } from '../svg-icon';
-import { SvgIcon } from '../svg-icon';
-export default (props: IconProps) => (
-  <SvgIcon data--icon-name="notifications-add-bell" {...props} viewBox="0 0 32 32">
+import { primitives as P } from '@onwo/ui';
+
+export default (props: P.IconProps) => (
+  <P.SvgIcon data--icon-name="notifications-add-bell" {...props} viewBox="0 0 32 32">
     <path
       d="M18.702 22.6852C18.702 24.2398 17.4092 25.5 15.8144 25.5C14.2196 25.5 12.9268 24.2398 12.9268 22.6852H18.702Z"
       stroke="currentColor"
@@ -11,5 +11,5 @@ export default (props: IconProps) => (
       stroke="currentColor"
     />
     <path d="M26.5 1.5V9.5M22.5 5.5H30.5" stroke="currentColor" stroke-linecap="round" />
-  </SvgIcon>
+  </P.SvgIcon>
 );

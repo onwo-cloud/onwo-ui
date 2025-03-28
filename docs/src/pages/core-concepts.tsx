@@ -5,49 +5,47 @@ export const CoreConceptsPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
     <PageHeadSection
       title="Core concepts"
-      description="How this library is structured"
+      description="What you should know before starting"
       breadcrumbs={[{ label: 'Core concepts', url: '/core-concepts' }]}
     />
     <div class="onwo-format">
-      <PNav.Link elem="h2" id="component-hierarchy" label="Component Hierarchy">
-        Component hierarchy in our documentation
+      <PNav.Link as="h2" id="component-hierarchy" label="Component Hierarchy">
+        Terminology
       </PNav.Link>
       <p>
-        Our documentation helps user understand components hierarchy throughs tags, based on their
-        complexity and flexibility. We distinguish between the following categories:
+        We don't divert too much from others UI library, but understanding our terminology will give
+        you a good picture of how this library categorize differents sections, here are the core of
+        it:
       </p>
-
-      <PNav.Link elem="h3" level={2} id="commons" label="Commons">
+      <PNav.Link as="h3" level={2} id="commons" label="Commons">
         Commons
       </PNav.Link>
       <p>
-        These are the fundamental building blocks that are highly flexible and minimally
-        opinionated. They're designed to be used in many different contexts and customized easily.
-        For example, a Button component simply renders a clickable element with some basic styling,
-        but doesn't make assumptions about how you'll use it.
+        These are the fundamental components that are highly flexible and minimally opinionated.
+        They're designed to be used in many different contexts and customized easily.
       </p>
-
-      <PNav.Link elem="h3" level={2} id="composites" label="Composites">
+      <p>Buttons, inputs, select, icons</p>
+      <PNav.Link as="h3" level={2} id="composites" label="Composites">
         Composites
       </PNav.Link>
       <p>
-        These are more advanced structures often built by combining multiple basic components. They
-        embody more abstract structure or user interface conventions (e.g. tabs, modal), making them
-        more opinionated and less flexible, but also more powerful for specific use cases.
+        These are more advanced components, often embodying more abstract structure or user
+        interface conventions (e.g. page navigation), this make them more opinionated and less
+        flexible, but also more powerful for specific use cases.
       </p>
       <p>
         For instance, Page Navigation composites make uses of contexts to track down links to
         provide an appendix.
       </p>
 
-      <PNav.Link elem="h3" level={2} id="hooks" label="Hooks">
+      <PNav.Link as="h3" level={2} id="hooks" label="Hooks">
         Hooks
       </PNav.Link>
       <p>
-        If you used react you are already familiar with this one, hooks are helpers methods that you
-        can use as-is in your components to provide behavioral logic.
+        Hooks are utility functions that manage behavioral logic in your components, they often
+        contains their own state and wrap other qwik.js hooks (useSignal, useContext...).
       </p>
-      <PNav.Link elem="h3" level={2} id="primitives" label="Primitives">
+      <PNav.Link as="h3" level={2} id="primitives" label="Primitives">
         Primitives
       </PNav.Link>
       <p>

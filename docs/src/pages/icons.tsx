@@ -5,7 +5,11 @@ import { Showcase } from '~/commons/showcase';
 
 export const IconsPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
-    <PageHeadSection title="Icons" breadcrumbs={[{ label: 'Icons', url: '/icons' }]} />
+    <PageHeadSection
+      title="Icons"
+      description="A fitted icon library for all your projects"
+      breadcrumbs={[{ label: 'Icons', url: '/icons' }]}
+    />
     <div class="onwo-format">
       <p>
         This icon set includes essential UI elements for navigation, actions, notifications, and

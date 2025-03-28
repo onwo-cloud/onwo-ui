@@ -5,6 +5,7 @@ export const TypographyPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
     <PageHeadSection
       title="Typography"
+      description="Auto formatting and cohesive fonts accross your website"
       breadcrumbs={[{ label: 'Typography', url: '/typography' }]}
     />
 
