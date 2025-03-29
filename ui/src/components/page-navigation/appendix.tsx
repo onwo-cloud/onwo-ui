@@ -1,10 +1,11 @@
+import type { ClassList } from '@builder.io/qwik';
 import { $ } from '@builder.io/qwik';
 import { PageNavigation } from '~/primitives';
 import type { NavigationElement } from '~/primitives/page-navigation/provider';
 import { cn } from '~/utils/cn';
 
 type AppendixProps = {
-  class?: string;
+  class?: ClassList;
   // When set will only display links above the specified level.
   maxLevelShown?: number;
   sticky?: boolean;

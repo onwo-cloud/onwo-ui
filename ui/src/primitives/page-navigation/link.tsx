@@ -1,5 +1,5 @@
-import type { Component, QwikIntrinsicElements } from '@builder.io/qwik';
 import { Slot, component$, useContext, useTask$ } from '@builder.io/qwik';
+import { withAs } from '~/utils/as';
 import { PageNavigationContext } from './provider';
 
 type PageNavigationLinkData = {
@@ -26,24 +26,17 @@ const usePageNavigationLink = ({ label, id, level }: PageNavigationLinkData) => 
   });
 };
 
-export type LinkProps<T extends keyof QwikIntrinsicElements> = Omit<
-  QwikIntrinsicElements[T],
-  'id' | 'children'
-> &
-  PageNavigationLinkData & { as?: T };
+export type LinkProps = PageNavigationLinkData;
 
-export const Link = component$(function <T extends keyof QwikIntrinsicElements = 'a'>({
-  as,
-  level,
-  label,
-  ...props
-}: LinkProps<T>) {
-  usePageNavigationLink({ level, label, id: props.id });
-  const Elem = (as ?? 'a') as unknown as Component;
+export const Link = component$(
+  withAs('a')<LinkProps>(({ As, level, label, ...props }) => {
+    // eslint-disable-next-line qwik/use-method-usage
+    usePageNavigationLink({ level, label, id: props.id });
 
-  return (
-    <Elem {...props}>
-      <Slot />
-    </Elem>
-  );
-});
+    return (
+      <As {...props}>
+        <Slot />
+      </As>
+    );
+  }),
+);

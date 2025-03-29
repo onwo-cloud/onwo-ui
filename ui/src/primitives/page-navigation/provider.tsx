@@ -1,4 +1,4 @@
-import type { QwikIntrinsicElements } from '@builder.io/qwik';
+import type { QwikHTMLElements } from '@builder.io/qwik';
 import { Slot, component$, createContextId, useContextProvider, useStore } from '@builder.io/qwik';
 
 export type NavigationElement = {
@@ -14,7 +14,7 @@ type PageNavigationContext = {
 
 export const PageNavigationContext = createContextId<PageNavigationContext>('tabs-context-1');
 
-export type PageNavigationProviderProps = QwikIntrinsicElements['div'];
+export type PageNavigationProviderProps = QwikHTMLElements['div'];
 
 export const usePageNavigationProvider = (): PageNavigationContext => {
   const data: PageNavigationContext = useStore({

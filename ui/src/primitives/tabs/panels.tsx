@@ -1,8 +1,7 @@
-import { Slot, component$, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { Slot, component$, type QwikHTMLElements } from '@builder.io/qwik';
 
-export type PanelsProps = QwikIntrinsicElements['div'] & {
+export type PanelsProps = QwikHTMLElements['div'] & {
   id?: string;
-  class?: string;
   selected?: number;
 };
 

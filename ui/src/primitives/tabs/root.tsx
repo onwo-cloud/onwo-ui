@@ -1,8 +1,8 @@
-import { Slot, component$, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { Slot, component$, type QwikHTMLElements } from '@builder.io/qwik';
 import { useTabsContextProvider } from './use-tabs-context';
 
-export type RootProps = QwikIntrinsicElements['div'] & {
-  defaultSelected: string;
+export type RootProps = QwikHTMLElements['div'] & {
+  defaultSelected?: string;
 };
 
 export const Root = component$((props: RootProps) => {

@@ -30,13 +30,13 @@ export default () => (
       variants={{
         Default: `import { PageNavigation as PNav } from '@onwo/ui';
 
-<PNav.Provider rigid>
+<PNav.Provider>
   <div>
     <PNav.Link label="Link 1">Link 1</PNav.Link>
     <PNav.Link label="Link 2">Sublink 1</PNav.Link>
     <PNav.Link label="Link 3">Link 3</PNav.Link>
   </div>
-  <PNav.Appendix />
+  <PNav.Appendix sticky />
 </PNav.Provider>`,
         'Computed JSX': `<>
   <div>

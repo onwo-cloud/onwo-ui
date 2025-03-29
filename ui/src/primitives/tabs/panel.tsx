@@ -1,10 +1,9 @@
-import { Slot, component$, useComputed$, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { Slot, component$, useComputed$, type QwikHTMLElements } from '@builder.io/qwik';
 import type { ValidName } from '~/types/case-control';
 import { cn } from '~/utils/cn';
 import { useTabsContext } from './use-tabs-context';
 
-export type PanelProps<TabName extends string> = QwikIntrinsicElements['div'] & {
-  class?: string;
+export type PanelProps<TabName extends string> = QwikHTMLElements['div'] & {
   for?: ValidName<TabName>;
 };
 

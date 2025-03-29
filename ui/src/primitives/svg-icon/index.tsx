@@ -1,4 +1,4 @@
-import type { JSXChildren, QwikIntrinsicElements } from '@builder.io/qwik';
+import type { ClassList, JSXChildren, QwikIntrinsicElements } from '@builder.io/qwik';
 
 export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
@@ -13,15 +13,14 @@ const getIconSizePx = (size: IconSize) =>
 
 export type IconProps = {
   size?: IconSize;
-  class?: string;
+  class?: ClassList;
 };
 
 export type SvgIconProps = {
   viewBox: string;
   children: JSXChildren;
-  class?: string;
 } & IconProps &
-  Omit<QwikIntrinsicElements['svg'], 'viewBox' | 'class'>;
+  Omit<QwikIntrinsicElements['svg'], 'viewBox'>;
 
 /*
  * Generic SVG element, can be use to build higher level icons.

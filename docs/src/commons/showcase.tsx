@@ -10,7 +10,7 @@ type ShowcaseProps = {
 };
 
 export const Showcase = (props: ShowcaseProps) => (
-  <Tabs.Root class="mt-16">
+  <Tabs class="mt-16">
     <div class="flex justify-between w-full">
       <PNav.Link label={props.title} id={props.title.toLowerCase().split(' ').join('-')}>
         <h2 class="text-onwo-24 font-semibold">{props.title}</h2>
@@ -45,5 +45,5 @@ export const Showcase = (props: ShowcaseProps) => (
         </Tabs.Panel>
       )}
     </Tabs.Panels>
-  </Tabs.Root>
+  </Tabs>
 );

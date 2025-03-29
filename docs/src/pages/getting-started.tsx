@@ -59,12 +59,12 @@ export const GettingStartedPage = () => (
 
             <div>
               <p>Add onwo-ui dependencies to your project</p>
-              <pre class="theme-onwo-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm whitespace-pre-line">
+              <pre class="theme-onwo-dark w-full bg-gohan overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm whitespace-pre-line">
                 <code>npm install @onwo/ui @onwo/tailwindcss</code>
               </pre>
 
               <p>Optionally you can also install onwo-ui icons library</p>
-              <pre class="theme-onwo-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm whitespace-pre-line">
+              <pre class="theme-onwo-dark w-full bg-gohan overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm whitespace-pre-line">
                 <code>npm install @onwo/icons</code>
               </pre>
 
@@ -77,7 +77,7 @@ export const GettingStartedPage = () => (
                 and add the following to your <code>global.css</code>. Make sure to preserve the
                 order!
               </p>
-              <div class="theme-onwo-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm leading-[17px]">
+              <div class="theme-onwo-dark w-full bg-gohan overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm leading-[17px]">
                 <pre class="w-max">
                   <code>
                     <span class="bg-roshi/40">{`@import '@onwo/tailwindcss/themes/moon.css';`}</span>
@@ -108,7 +108,7 @@ body {
                 Add your theme specific class to the body element or the element where you want the
                 theme applied:
               </p>
-              <pre class="theme-onwo-dark w-full bg-gohan overflow-scroll overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm leading-[17px]">
+              <pre class="theme-onwo-dark w-full bg-gohan overflow-x-auto p-4 text-onwo-14 text-bulma rounded-onwo-s-sm leading-[17px]">
                 <code>
                   <span class="bg-roshi/40">{`<body class="theme-onwo-light">...</body>`}</span>
                 </code>

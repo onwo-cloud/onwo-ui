@@ -29,7 +29,7 @@ export default () => (
       variants={{
         Default: `import { Tabs } from '@onwo/ui';
 
-<Tabs.Root>
+<Tabs>
   <Tabs.List>
     <Tabs.Tab>...</Tabs.Tab>
     <Tabs.Tab>...</Tabs.Tab>
@@ -40,14 +40,14 @@ export default () => (
     <Tabs.Panel>...</Tabs.Panel>
     <Tabs.Panel>...</Tabs.Panel>
   </Tabs.Panels>
-</Tabs.Root>`,
+</Tabs>`,
       }}
     />
 
     <Showcase
       title="Default"
       component={
-        <Tabs.Root>
+        <Tabs>
           <Tabs.List>
             <Tabs.Tab>First tab</Tabs.Tab>
             <Tabs.Tab>Second tab</Tabs.Tab>
@@ -58,9 +58,9 @@ export default () => (
             <Tabs.Panel>Hi</Tabs.Panel>
             <Tabs.Panel>Bonjour</Tabs.Panel>
           </Tabs.Panels>
-        </Tabs.Root>
+        </Tabs>
       }
-      code={`<Tabs.Root>
+      code={`<Tabs>
   <Tabs.List>
     <Tabs.Tab>First tab</Tabs.Tab>
     <Tabs.Tab>Second tab</Tabs.Tab>
@@ -71,13 +71,13 @@ export default () => (
     <Tabs.Panel>Hi</Tabs.Panel>
     <Tabs.Panel>Bonjour</Tabs.Panel>
   </Tabs.Panels>
-</Tabs.Root>`}
+</Tabs>`}
     />
 
     <Showcase
       title="With pills"
       component={
-        <Tabs.Root>
+        <Tabs>
           <Tabs.List>
             <Tabs.Pill>First tab</Tabs.Pill>
             <Tabs.Pill>Second tab</Tabs.Pill>
@@ -88,9 +88,9 @@ export default () => (
             <Tabs.Panel>Hi</Tabs.Panel>
             <Tabs.Panel>Bonjour</Tabs.Panel>
           </Tabs.Panels>
-        </Tabs.Root>
+        </Tabs>
       }
-      code={`<Tabs.Root>
+      code={`<Tabs>
   <Tabs.List>
     <Tabs.Pill>First tab</Tabs.Pill>
     <Tabs.Pill>Second tab</Tabs.Pill>
@@ -101,72 +101,72 @@ export default () => (
     <Tabs.Panel>Hi</Tabs.Panel>
     <Tabs.Panel>Bonjour</Tabs.Panel>
   </Tabs.Panels>
-</Tabs.Root>`}
+</Tabs>`}
     />
 
     <Showcase
       title="Sizes"
       component={
         <div class="grid grid-cols-2 gap-4">
-          <Tabs.Root>
+          <Tabs>
             <Tabs.List size="sm">
               <Tabs.Pill>Pill-sm</Tabs.Pill>
               <Tabs.Pill>Pill-sm</Tabs.Pill>
               <Tabs.Pill>Pill-sm</Tabs.Pill>
             </Tabs.List>
-          </Tabs.Root>
-          <Tabs.Root>
+          </Tabs>
+          <Tabs>
             <Tabs.List>
               <Tabs.Pill>Pill-md</Tabs.Pill>
               <Tabs.Pill>Pill-md</Tabs.Pill>
               <Tabs.Pill>Pill-md</Tabs.Pill>
             </Tabs.List>
-          </Tabs.Root>
-          <Tabs.Root>
+          </Tabs>
+          <Tabs>
             <Tabs.List size="sm">
               <Tabs.Tab>Tab-sm</Tabs.Tab>
               <Tabs.Tab>Tab-sm</Tabs.Tab>
               <Tabs.Tab>Tab-sm</Tabs.Tab>
             </Tabs.List>
-          </Tabs.Root>
-          <Tabs.Root>
+          </Tabs>
+          <Tabs>
             <Tabs.List>
               <Tabs.Tab>Tab-md</Tabs.Tab>
               <Tabs.Tab>Tab-md</Tabs.Tab>
               <Tabs.Tab>Tab-md</Tabs.Tab>
             </Tabs.List>
-          </Tabs.Root>
+          </Tabs>
         </div>
       }
       code={`<div class="grid grid-cols-2 gap-4">
-  <Tabs.Root>
+  <Tabs>
     <Tabs.List size="sm">
       <Tabs.Pill>Pill-sm</Tabs.Pill>
       <Tabs.Pill>Pill-sm</Tabs.Pill>
       <Tabs.Pill>Pill-sm</Tabs.Pill>
     </Tabs.List>
-  </Tabs.Root>
-  <Tabs.Root>
+  </Tabs>
+  <Tabs>
     <Tabs.List>
       <Tabs.Pill>Pill-md</Tabs.Pill>
       <Tabs.Pill>Pill-md</Tabs.Pill>
       <Tabs.Pill>Pill-md</Tabs.Pill>
     </Tabs.List>
-  </Tabs.Root>
-  <Tabs.Root>
+  </Tabs>
+  <Tabs>
     <Tabs.List size="sm">
       <Tabs.Tab>Tab-sm</Tabs.Tab>
       <Tabs.Tab>Tab-sm</Tabs.Tab>
       <Tabs.Tab>Tab-sm</Tabs.Tab>
     </Tabs.List>
-  </Tabs.Root>
-  <Tabs.Root>
+  </Tabs>
+  <Tabs>
     <Tabs.List>
       <Tabs.Tab>Tab-md</Tabs.Tab>
       <Tabs.Tab>Tab-md</Tabs.Tab>
       <Tabs.Tab>Tab-md</Tabs.Tab>
     </Tabs.List>
-  </Tabs.Root>
+  </Tabs>
 </div>`}
     />
 
@@ -174,7 +174,7 @@ export default () => (
       title="Custom styling"
       component={
         <div class="flex flex-col gap-4">
-          <Tabs.Root>
+          <Tabs>
             <Tabs.List>
               <Tabs.Tab class="after:bg-hit hover:text-hit data-selected:text-hit">
                 Green tab
@@ -184,18 +184,18 @@ export default () => (
                 Green tab
               </Tabs.Tab>
             </Tabs.List>
-          </Tabs.Root>
-          <Tabs.Root>
+          </Tabs>
+          <Tabs>
             <Tabs.List>
               <Tabs.Pill class="hover:bg-hit/30 data-selected:bg-hit/30">Green pill</Tabs.Pill>
               <Tabs.Pill disabled>Disabled pill</Tabs.Pill>
               <Tabs.Pill class="hover:bg-hit/30 data-selected:bg-hit/30">Green tab pill</Tabs.Pill>
             </Tabs.List>
-          </Tabs.Root>
+          </Tabs>
         </div>
       }
       code={`<div class="flex flex-col gap-4">
-  <Tabs.Root>
+  <Tabs>
     <Tabs.List>
       <Tabs.Tab class="after:bg-hit hover:text-hit data-selected:text-hit">
         Green tab
@@ -205,14 +205,14 @@ export default () => (
         Green tab
       </Tabs.Tab>
     </Tabs.List>
-  </Tabs.Root>
-  <Tabs.Root>
+  </Tabs>
+  <Tabs>
     <Tabs.List>
       <Tabs.Pill class="hover:bg-hit/30 data-selected:bg-hit/30">Green pill</Tabs.Pill>
       <Tabs.Pill disabled>Disabled pill</Tabs.Pill>
       <Tabs.Pill class="hover:bg-hit/30 data-selected:bg-hit/30">Green tab pill</Tabs.Pill>
     </Tabs.List>
-  </Tabs.Root>
+  </Tabs>
 </div>`}
     />
 

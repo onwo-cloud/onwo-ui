@@ -1,10 +1,10 @@
-import type { JSXOutput, QRL } from '@builder.io/qwik';
+import type { ClassList, JSXOutput, QRL } from '@builder.io/qwik';
 import { component$, useComputed$, useContext } from '@builder.io/qwik';
 import type { NavigationElement } from './provider';
 import { PageNavigationContext } from './provider';
 
 type AppendixProps = {
-  class?: string;
+  class?: ClassList;
   // When set will only display links above the specified level.
   maxLevelShown?: number;
   render$: QRL<(entries: NavigationElement[]) => JSXOutput>;
