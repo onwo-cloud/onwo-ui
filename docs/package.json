@@ -16,7 +16,7 @@
     "build.preview": "vite build -c ./vite.config.client.ts --ssr src/entry.preview.tsx",
     "build.server": "vite build",
     "build.types": "tsc --emitDeclarationOnly",
-    "dev": "vite --mode ssr",
+    "dev": "vite -c ./vite.config.dev.ts --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "lint": "eslint \"src/**/*.ts*\"",
     "lint.fix": "npm run lint -- --fix",
