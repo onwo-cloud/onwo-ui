@@ -8,7 +8,7 @@ const base: Record<string, Field> = {
   h3: 'text-onwo-20 font-medium mt-8',
   h4: 'text-onwo-16 font-bold mt-6',
   'h4, h5, h6, p, ul, ol': 'mt-6',
-  li: 'mt-4',
+  li: 'mt-2',
   'li:first': 'mt-0',
   'h1, h2, h3': {
     ['@apply tracking-tight scroll-m-20']: {},
