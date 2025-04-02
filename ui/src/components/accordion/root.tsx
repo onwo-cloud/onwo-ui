@@ -1,7 +1,7 @@
-import type { QwikHTMLElements } from '@builder.io/qwik';
 import { Accordion } from '~/primitives';
+import type { Primitive } from '~/utils/types';
 
-export type RootProps = QwikHTMLElements['div'] & {
+export type RootProps = Primitive<'div'> & {
   singleOpen?: boolean;
 };
 

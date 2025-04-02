@@ -1,12 +1,12 @@
-import type { QwikHTMLElements } from '@builder.io/qwik';
 import { cn } from '~/utils/cn';
+import type { Primitive } from '~/utils/types';
 
 type Y = 'top' | 'bottom';
 type X = 'left' | 'right';
 
 type XY = `${Y}-${X}`;
 
-export type StatusProps = QwikHTMLElements['div'] & {
+export type StatusProps = Primitive<'div'> & {
   position?: XY;
 };
 

@@ -1,0 +1,105 @@
+@layer qwik-ui {
+  [data-qui-carousel-viewport] {
+    overflow: hidden;
+  }
+
+  [data-qui-carousel-scroller] {
+    transform: var(--transform);
+    will-change: transform;
+    transition: 0.3s transform ease-out;
+
+    display: flex;
+    gap: var(--gap);
+    flex-direction: var(--orientation);
+
+    /* for initial slide position */
+    scroll-snap-type: both mandatory;
+    max-height: calc(var(--max-slide-height));
+  }
+
+  [data-qui-carousel-slide] {
+    /* default, feel free to override */
+    --total-gap-width: calc(var(--gap) * (var(--slides-per-view) - 1));
+    --available-slide-width: calc(100% - var(--total-gap-width));
+    --slide-width: calc(var(--available-slide-width) / var(--slides-per-view));
+
+    flex-basis: var(--slide-width);
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  [data-qui-carousel-scroller][data-initial] {
+    overflow: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-qui-carousel-player] {
+      display: none;
+    }
+  }
+
+  /* workaround until scroll-snap-start is added to CSS */
+  [data-qui-scroll-start] {
+    --remove-flex-gap: calc(-1 * var(--gap) - 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    white-space: nowrap;
+    visibility: hidden;
+    display: none;
+  }
+
+  /* should not affect padding on non-scroller carousels */
+  [data-qui-carousel-scroller] [data-qui-scroll-start] {
+    display: revert;
+  }
+
+  /* Offsetting the scroll-start - Horizontal orientation */
+  [data-qui-scroll-start][data-orientation='horizontal'][data-start] {
+    margin-right: var(--remove-flex-gap);
+  }
+
+  [data-qui-scroll-start][data-orientation='horizontal'][data-end] {
+    margin-left: var(--remove-flex-gap);
+  }
+
+  /* Vertical orientation (remove start gap) */
+  [data-qui-scroll-start][data-orientation='vertical'][data-start] {
+    margin-top: var(--remove-flex-gap);
+  }
+
+  [data-qui-scroll-start]::before {
+    content: '';
+    height: 1px;
+    width: 1px;
+    display: block;
+    /* changes to none on first interaction */
+    scroll-snap-align: var(--scroll-snap-align, start);
+  }
+
+  /* position the marker to the start */
+  [data-qui-scroll-start][data-start]::before {
+    margin-top: calc(var(--remove-flex-gap) * -1);
+  }
+
+  /* position the marker to the end */
+  [data-qui-scroll-start][data-end]::before {
+    margin-top: calc(var(--remove-flex-gap) * 1);
+  }
+
+  /* center verically */
+  [data-qui-scroll-start][data-center]::before {
+    position: absolute;
+    margin-top: -0.5px;
+    inset: 50%;
+  }
+
+  /* remove the marker's snap-align on hover */
+  [data-qui-carousel-scroller]:hover [data-qui-scroll-start]::before {
+    scroll-snap-align: unset;
+  }
+
+  [data-initial] [hidden] {
+    display: none;
+  }
+}

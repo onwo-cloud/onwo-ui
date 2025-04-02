@@ -1,27 +1,52 @@
+import { component$, useSignal } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
+import { primitives as P } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
 import { buildHead } from '~/utils/build-head';
 
-export default () => (
-  <div>
-    <PageHeadSection
-      title="Pagination"
-      breadcrumbs={[{ label: 'Pagination', url: '/components/pagination' }]}
-    />
+export default component$(() => {
+  const selectedPage = useSignal(1);
+  const totalPages = useSignal(10);
 
-    <div class="onwo-format"></div>
+  return (
+    <div>
+      <PageHeadSection
+        title="Pagination"
+        breadcrumbs={[{ label: 'Pagination', url: '/components/pagination' }]}
+      />
 
-    <Anatomy
-      variants={{
-        Default: ``,
-      }}
-    />
+      <div class="onwo-format"></div>
 
-    <Showcase title="Default" component={<div />} code={``} />
-  </div>
-);
+      <Anatomy
+        variants={{
+          Default: ``,
+        }}
+      />
+
+      <Showcase
+        title="Default"
+        component={
+          <P.Pagination
+            selectedPage={selectedPage.value}
+            totalPages={totalPages.value}
+            onPageChange$={(page: number) => {
+              selectedPage.value = page;
+            }}
+            class="pagination-wrapper"
+            selectedClass="pagination-selected-btn"
+            defaultClass="pagination-btn"
+            dividerClass="pagination-divider"
+            prevButtonClass="prevNextButtons"
+            nextButtonClass="prevNextButtons"
+          />
+        }
+        code={``}
+      />
+    </div>
+  );
+});
 
 export const head: DocumentHead = buildHead({
   title: 'Pagination - Onwo UI',

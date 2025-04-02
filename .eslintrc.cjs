@@ -24,6 +24,13 @@ const extendedConfig = {
     'unicorn/prevent-abbreviations': 'off',
     'sonarjs/function-return-type': 'off',
     'sonarjs/unused-import': 'off',
+    'sonarjs/deprecation': 'warn',
+    'sonarjs/todo-tag': 'warn',
+    'sonarjs/no-unused-vars': 'off',
+    'sonarjs/redundant-type-aliases': 'off',
+    'sonarjs/no-redundant-jump': 'off',
+    'unicorn/no-null': 'off',
+    'sonarjs/different-types-comparison': 'warn',
   },
 };
 

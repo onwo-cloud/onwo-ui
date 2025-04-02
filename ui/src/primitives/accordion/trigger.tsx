@@ -20,6 +20,7 @@ export const Trigger = component$(({ onPointerDown$, onClick$, ...props }: Trigg
         { onPointerDown$, onClick$ },
         $(() => {
           if (rootContext.singleOpen === true) {
+            // eslint-disable-next-line sonarjs/no-ignored-return, sonarjs/array-callback-without-return
             Object.entries(rootContext.opened).map(([k, v]) => {
               if (k === itemId) return;
               v.value = false;

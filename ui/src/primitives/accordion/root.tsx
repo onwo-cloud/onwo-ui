@@ -1,4 +1,4 @@
-import type { Signal, QwikHTMLElements } from '@builder.io/qwik';
+import type { Signal } from '@builder.io/qwik';
 import {
   Slot,
   component$,
@@ -6,6 +6,7 @@ import {
   useContext,
   useContextProvider,
 } from '@builder.io/qwik';
+import type { Primitive } from '~/utils/types';
 
 type AccordionContext = {
   singleOpen?: boolean;
@@ -25,7 +26,7 @@ export const useAccordionRootContextProvider = (singleOpen: boolean): AccordionC
   return data;
 };
 
-export type RootProps = QwikHTMLElements['div'] & {
+export type RootProps = Primitive<'div'> & {
   singleOpen?: boolean;
 };
 

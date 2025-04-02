@@ -1,4 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
+import { primitives as P } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -15,11 +16,27 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: ``,
+        Default: `<P.Popover.Root gutter={4}>
+  <P.Popover.Trigger class="popover-trigger">Click me</P.Popover.Trigger>
+  <P.Popover.Panel class="popover-panel">
+    I am anchored to the popover trigger!
+  </P.Popover.Panel>
+</P.Popover.Root>`,
       }}
     />
 
-    <Showcase title="Default" component={<div />} code={``} />
+    <Showcase
+      title="Default"
+      component={
+        <P.Popover.Root gutter={4}>
+          <P.Popover.Trigger class="popover-trigger">Click me</P.Popover.Trigger>
+          <P.Popover.Panel class="popover-panel">
+            I am anchored to the popover trigger!
+          </P.Popover.Panel>
+        </P.Popover.Root>
+      }
+      code={``}
+    />
   </div>
 );
 

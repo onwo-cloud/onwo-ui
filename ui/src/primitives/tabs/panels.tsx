@@ -1,6 +1,7 @@
-import { Slot, component$, type QwikHTMLElements } from '@builder.io/qwik';
+import { Slot, component$ } from '@builder.io/qwik';
+import type { Primitive } from '~/utils/types';
 
-export type PanelsProps = QwikHTMLElements['div'] & {
+export type PanelsProps = Primitive<'div'> & {
   id?: string;
   selected?: number;
 };

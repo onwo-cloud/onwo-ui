@@ -1,4 +1,3 @@
-import type { QwikHTMLElements } from '@builder.io/qwik';
 import {
   Slot,
   component$,
@@ -9,6 +8,7 @@ import {
   useSignal,
   useTask$,
 } from '@builder.io/qwik';
+import type { Primitive } from '~/utils/types';
 import { useAccordionRootContext } from './root';
 
 type AccordionContext = {
@@ -20,7 +20,7 @@ export const AccordionItemContext = createContextId<AccordionContext>('accordion
 // Custom hook for theme management
 export const useAccordionItemContext = () => useContext(AccordionItemContext);
 
-export type ItemProps = QwikHTMLElements['div'] & {
+export type ItemProps = Primitive<'div'> & {
   disabled?: boolean;
   name?: string;
   defaultOpen?: boolean;

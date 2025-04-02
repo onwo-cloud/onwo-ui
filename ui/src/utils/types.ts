@@ -1,4 +1,4 @@
-import type { JSXOutput } from '@builder.io/qwik';
+import type { CSSProperties, JSXOutput, QwikHTMLElements } from '@builder.io/qwik';
 
 export type Classes<T extends string> = Partial<Record<T, string>>;
 
@@ -12,3 +12,7 @@ export type ExactlyOne<T, K extends keyof T = keyof T> = Prettify<
 >;
 
 export type Props<T extends (props: unknown) => JSXOutput> = Parameters<T>[0];
+
+export type Primitive<T extends keyof QwikHTMLElements> = Omit<QwikHTMLElements[T], 'style'> & {
+  style?: CSSProperties;
+};

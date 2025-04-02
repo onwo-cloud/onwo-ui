@@ -112,23 +112,16 @@ export default component$(() => (
                 </SidebarButtonSmall>
                 <SidebarButtonSmall href="/components/breadcrumb">Breadcrumb</SidebarButtonSmall>
                 <SidebarButtonSmall href="/components/button">Button</SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/carousel">
-                  Carousel
-                </SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/carousel">Carousel</SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/chip">
                   Chip
                 </SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/drawer">
                   Drawer
                 </SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/dropdown">
-                  Dropdown
-                </SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/dropdown">Dropdown</SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/form">
                   Form
-                </SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/icons">
-                  Icons
                 </SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/loader">
                   Loader
@@ -136,21 +129,16 @@ export default component$(() => (
                 <SidebarButtonSmall disabled href="/components/menu-item">
                   Menu Item
                 </SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/modal">
-                  Modal
-                </SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/pagination">
-                  Pagination
-                </SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/popover">
-                  Popover
-                </SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/modal">Modal</SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/pagination">Pagination</SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/popover">Popover</SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/progress">
                   Progress
                 </SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/search">
                   Search
                 </SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/select">Select</SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/snackbar">
                   Snackbar
                 </SidebarButtonSmall>

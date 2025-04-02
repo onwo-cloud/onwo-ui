@@ -1,7 +1,8 @@
-import { Slot, component$, type QwikHTMLElements } from '@builder.io/qwik';
+import { Slot, component$ } from '@builder.io/qwik';
+import type { Primitive } from '~/utils/types';
 import { useTabsContextProvider } from './use-tabs-context';
 
-export type RootProps = QwikHTMLElements['div'] & {
+export type RootProps = Primitive<'div'> & {
   defaultSelected?: string;
 };
 

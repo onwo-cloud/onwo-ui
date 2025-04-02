@@ -1,5 +1,4 @@
 import type { QwikHTMLElements } from '@builder.io/qwik';
-import { QRL } from '@builder.io/qwik';
 import { SvgIcon } from '~/primitives';
 import { cn } from '~/utils/cn';
 

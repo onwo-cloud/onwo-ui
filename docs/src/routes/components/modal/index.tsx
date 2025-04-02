@@ -1,4 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
+import { primitives as P } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -12,11 +13,41 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: ``,
+        Default: `<P.Modal.Root>
+  <P.Modal.Trigger class="modal-trigger">Open Modal</P.Modal.Trigger>
+  <P.Modal.Panel class="modal-panel">
+    <P.Modal.Title>Edit Profile</P.Modal.Title>
+    <P.Modal.Description>
+      You can update your profile here. Hit the save button when finished.
+    </P.Modal.Description>
+    <footer>
+      <P.Modal.Close class="modal-close">Cancel</P.Modal.Close>
+      <P.Modal.Close class="modal-close">Save Changes</P.Modal.Close>
+    </footer>
+  </P.Modal.Panel>
+</P.Modal.Root>`,
       }}
     />
 
-    <Showcase title="Default" component={<div />} code={``} />
+    <Showcase
+      title="Default"
+      component={
+        <P.Modal.Root>
+          <P.Modal.Trigger class="modal-trigger">Open Modal</P.Modal.Trigger>
+          <P.Modal.Panel class="modal-panel">
+            <P.Modal.Title>Edit Profile</P.Modal.Title>
+            <P.Modal.Description>
+              You can update your profile here. Hit the save button when finished.
+            </P.Modal.Description>
+            <footer>
+              <P.Modal.Close class="modal-close">Cancel</P.Modal.Close>
+              <P.Modal.Close class="modal-close">Save Changes</P.Modal.Close>
+            </footer>
+          </P.Modal.Panel>
+        </P.Modal.Root>
+      }
+      code={``}
+    />
   </div>
 );
 

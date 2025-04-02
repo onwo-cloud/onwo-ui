@@ -57,7 +57,14 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "tailwind-merge": "^3.0.2"
+    "tailwind-merge": "^3.0.2",
+
+    "@floating-ui/core": "^1.6.2",
+    "@floating-ui/dom": "^1.6.5",
+    "@oddbird/popover-polyfill": "0.4.3",
+    "focus-trap": "7.5.4",
+    "body-scroll-lock-upgrade": "^1.1.0"
   }
 }
