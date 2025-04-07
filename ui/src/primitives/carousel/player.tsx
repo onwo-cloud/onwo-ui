@@ -2,7 +2,7 @@ import type { PropsOf } from '@builder.io/qwik';
 import { component$, Slot, useContext, $ } from '@builder.io/qwik';
 import { carouselContextId } from './context';
 
-export const CarouselPlayer = component$((props: PropsOf<'button'>) => {
+export const Player = component$((props: PropsOf<'button'>) => {
   const context = useContext(carouselContextId);
 
   const handleClick$ = $(() => {

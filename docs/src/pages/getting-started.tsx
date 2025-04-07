@@ -6,7 +6,7 @@ export const GettingStartedPage = () => (
     <PageHeadSection
       title="Getting started"
       description="An open-source library of stunning, accessible components in qwik.js."
-      breadcrumbs={[{ label: 'Getting Started', url: '/getting-started' }]}
+      breadcrumbs={[{ label: 'Getting Started', to: '/getting-started' }]}
     />
 
     <main class="onwo-format w-full">

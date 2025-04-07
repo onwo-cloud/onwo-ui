@@ -17,7 +17,7 @@ import { carouselContextId } from './context';
 import { useCarousel } from './use-carousel';
 import { useScroller } from './use-scroller';
 
-export const CarouselScroller = component$((props: PropsOf<'div'>) => {
+export const Scroller = component$((props: PropsOf<'div'>) => {
   useStyles$(styles);
   const context = useContext(carouselContextId);
 

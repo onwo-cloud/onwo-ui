@@ -8,7 +8,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Snackbar"
-      breadcrumbs={[{ label: 'Snackbar', url: '/components/snackbar' }]}
+      breadcrumbs={[{ label: 'Snackbar', to: '/components/snackbar' }]}
     />
 
     <div class="onwo-format"></div>

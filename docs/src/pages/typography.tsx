@@ -6,7 +6,7 @@ export const TypographyPage = () => (
     <PageHeadSection
       title="Typography"
       description="Auto formatting and cohesive fonts accross your website"
-      breadcrumbs={[{ label: 'Typography', url: '/typography' }]}
+      breadcrumbs={[{ label: 'Typography', to: '/typography' }]}
     />
 
     <div class="onwo-format">

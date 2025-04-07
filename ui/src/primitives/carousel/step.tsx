@@ -8,7 +8,7 @@ type StepProps = {
   _index?: number;
 };
 
-export const CarouselStep = component$(
+export const Step = component$(
   <C extends AllowedElements = 'button'>(
     props: QwikIntrinsicElements[C] & { as?: C } & StepProps,
   ) => {
@@ -33,6 +33,7 @@ export const CarouselStep = component$(
           aria-current={isCurrentSig.value}
           data-current={isCurrentSig.value ? '' : undefined}
           data-step={localIndexSig.value + 1}
+          data-active={context.currentIndexSig.value >= localIndexSig.value}
           {...(Comp === 'button' && { onClick$: [handleClick$, rest.onClick$] })}
           {...rest}
         >

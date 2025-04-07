@@ -16,7 +16,7 @@ type BulletProps = PropsOf<'button'> & {
   _index?: number;
 };
 
-export const CarouselBullet = component$(({ _index, ...props }: BulletProps) => {
+export const Bullet = component$(({ _index, ...props }: BulletProps) => {
   const context = useContext(carouselContextId);
   const bulletRef = useSignal<HTMLButtonElement>();
   const slideId = `${context.localId}-${_index ?? -1}`;

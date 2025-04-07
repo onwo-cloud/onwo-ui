@@ -6,7 +6,7 @@ import { buildHead } from '~/utils/build-head';
 
 export default () => (
   <div>
-    <PageHeadSection title="Table" breadcrumbs={[{ label: 'Table', url: '/components/table' }]} />
+    <PageHeadSection title="Table" breadcrumbs={[{ label: 'Table', to: '/components/table' }]} />
 
     <div class="onwo-format"></div>
 

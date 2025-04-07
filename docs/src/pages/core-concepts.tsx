@@ -6,7 +6,7 @@ export const CoreConceptsPage = () => (
     <PageHeadSection
       title="Core concepts"
       description="What you should know before starting"
-      breadcrumbs={[{ label: 'Core concepts', url: '/core-concepts' }]}
+      breadcrumbs={[{ label: 'Core concepts', to: '/core-concepts' }]}
     />
     <div class="onwo-format">
       <PNav.Link as="h2" id="component-hierarchy" label="Component Hierarchy">

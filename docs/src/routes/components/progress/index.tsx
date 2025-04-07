@@ -8,7 +8,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Progress"
-      breadcrumbs={[{ label: 'Progress', url: '/components/progress' }]}
+      breadcrumbs={[{ label: 'Progress', to: '/components/progress' }]}
     />
 
     <div class="onwo-format"></div>

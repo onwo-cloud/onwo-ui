@@ -10,7 +10,7 @@ export default () => (
     <PageHeadSection
       title="Page Navigation"
       description="Enables quick access to page sections through linked anchors."
-      breadcrumbs={[{ label: 'Page navigation', url: '/components/progress' }]}
+      breadcrumbs={[{ label: 'Page navigation', to: '/components/progress' }]}
     />
 
     <div class="onwo-format">

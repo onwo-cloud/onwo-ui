@@ -15,6 +15,7 @@ export const hackwatcher = (pathToWatch: string, projectEntryPath: string) => {
 
   const watcherFn = () => {
     const filePath = path.join(process.cwd(), projectEntryPath);
+    fs.utimes(filePath, new Date(), new Date());
     setTimeout(() => fs.utimes(filePath, new Date(), new Date()), Math.random() * 200);
   };
 

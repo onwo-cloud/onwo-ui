@@ -6,7 +6,7 @@ export const PrimitivesPage = () => (
     <PageHeadSection
       title="Primitives"
       description="Reusables building block"
-      breadcrumbs={[{ label: 'Primitives', url: '/primitives' }]}
+      breadcrumbs={[{ label: 'Primitives', to: '/primitives' }]}
     />
     <div class="onwo-format">
       <p>

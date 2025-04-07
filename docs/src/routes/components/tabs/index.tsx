@@ -10,7 +10,7 @@ export default () => (
     <PageHeadSection
       title="Tabs"
       description="Navigate easily between views within the same context."
-      breadcrumbs={[{ label: 'Tabs', url: '/components/tabs' }]}
+      breadcrumbs={[{ label: 'Tabs', to: '/components/tabs' }]}
     />
 
     <div class="onwo-format">

@@ -3,7 +3,7 @@ import { Slot, component$, useContext, useSignal, $, useComputed$ } from '@build
 import { carouselContextId } from './context';
 import { useCarousel } from './use-carousel';
 
-export const CarouselPrevious = component$((props: PropsOf<'button'>) => {
+export const Previous = component$((props: PropsOf<'button'>) => {
   const context = useContext(carouselContextId);
   const isKeyboardFocusSig = useSignal(false);
 

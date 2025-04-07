@@ -6,7 +6,7 @@ export const ColorPage = () => (
     <PageHeadSection
       title="Colors"
       description="A theme-agnostic color system design across all products"
-      breadcrumbs={[{ label: 'Colors', url: '/colors' }]}
+      breadcrumbs={[{ label: 'Colors', to: '/colors' }]}
     />
 
     <div class="onwo-format max-w-5xl">

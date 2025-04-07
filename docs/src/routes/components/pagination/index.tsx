@@ -14,7 +14,7 @@ export default component$(() => {
     <div>
       <PageHeadSection
         title="Pagination"
-        breadcrumbs={[{ label: 'Pagination', url: '/components/pagination' }]}
+        breadcrumbs={[{ label: 'Pagination', to: '/components/pagination' }]}
       />
 
       <div class="onwo-format"></div>

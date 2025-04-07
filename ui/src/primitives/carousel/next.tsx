@@ -11,7 +11,7 @@ import {
 import { carouselContextId } from './context';
 import { useCarousel } from './use-carousel';
 
-export const CarouselNext = component$((props: PropsOf<'button'>) => {
+export const Next = component$((props: PropsOf<'button'>) => {
   const context = useContext(carouselContextId);
   const isLastSlideInViewSig = useSignal(false);
   const initialLoadSig = useSignal(true);

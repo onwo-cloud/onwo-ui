@@ -1,19 +1,17 @@
-import { Breadcrumb } from "@onwo/ui";
 import { Icons } from '@onwo/icons';
+import { Breadcrumb } from '@onwo/ui';
 
 type PageHeadSectionProps = {
   title: string;
   description?: string;
-  breadcrumbs: { url: string; label: string }[];
+  breadcrumbs: { to: string; label: string }[];
 };
 
 export const PageHeadSection = (props: PageHeadSectionProps) => (
   <main class="onwo-no-format">
     <div class="pb-8 hidden lg:block">
       <Breadcrumb separator={Icons.ArrowsRight}>
-        {[{ url: '/', label: 'Home' }, ...props.breadcrumbs].map(({ url, label }, idx) => (
-          <Breadcrumb.Link key={idx} to={url} label={label} />
-        ))}
+        {Breadcrumb.Link.fromList([{ to: '/', label: 'Home' }, ...props.breadcrumbs])}
       </Breadcrumb>
     </div>
 
@@ -21,5 +19,5 @@ export const PageHeadSection = (props: PageHeadSectionProps) => (
       <h1 class="text-onwo-32 font-bold">{props.title}</h1>
       <p class="text-base text-trunks max-w-screen-sm">{props.description ?? 'Lorem ipsum'}</p>
     </div>
-  </main >
+  </main>
 );

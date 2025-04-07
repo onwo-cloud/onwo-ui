@@ -10,7 +10,7 @@ export default () => (
     <PageHeadSection
       title="Avatar"
       description="Display images, icons, or initials representing people or other entities."
-      breadcrumbs={[{ label: 'Avatar', url: '/components/avatar' }]}
+      breadcrumbs={[{ label: 'Avatar', to: '/components/avatar' }]}
     />
 
     <div class="onwo-format"></div>

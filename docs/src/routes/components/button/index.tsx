@@ -13,7 +13,7 @@ export default () => (
     <PageHeadSection
       title="Button"
       description="Display a text button with or without: icons, loaders, redirects"
-      breadcrumbs={[{ label: 'Button', url: '/components/button' }]}
+      breadcrumbs={[{ label: 'Button', to: '/components/button' }]}
     />
 
     <p>

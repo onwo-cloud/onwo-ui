@@ -11,7 +11,7 @@ export default () => (
     <PageHeadSection
       title="Alert"
       description="Communicate an important and usually time-sensitive message to the user."
-      breadcrumbs={[{ label: 'Alert', url: '/components/alert' }]}
+      breadcrumbs={[{ label: 'Alert', to: '/components/alert' }]}
     />
 
     <div class="onwo-format">

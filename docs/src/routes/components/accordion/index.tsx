@@ -10,7 +10,7 @@ export default () => (
     <PageHeadSection
       title="Accordion"
       description="Organize content in collapsible UI elements"
-      breadcrumbs={[{ label: 'Accordion', url: '/components/accordion' }]}
+      breadcrumbs={[{ label: 'Accordion', to: '/components/accordion' }]}
     />
 
     <div class="onwo-format">

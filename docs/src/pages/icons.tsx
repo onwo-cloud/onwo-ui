@@ -8,7 +8,7 @@ export const IconsPage = () => (
     <PageHeadSection
       title="Icons"
       description="A fitted icon library for all your projects"
-      breadcrumbs={[{ label: 'Icons', url: '/icons' }]}
+      breadcrumbs={[{ label: 'Icons', to: '/icons' }]}
     />
     <div class="onwo-format">
       <p>

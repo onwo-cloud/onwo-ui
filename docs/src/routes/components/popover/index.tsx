@@ -9,7 +9,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Popover"
-      breadcrumbs={[{ label: 'Popover', url: '/components/popover' }]}
+      breadcrumbs={[{ label: 'Popover', to: '/components/popover' }]}
     />
 
     <div class="onwo-format"></div>

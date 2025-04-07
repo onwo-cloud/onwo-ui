@@ -1,15 +1,23 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
+import { Icons } from '@onwo/icons';
+import { Breadcrumb } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
 import { buildHead } from '~/utils/build-head';
+
+const links = [
+  { to: '/', label: 'Home' },
+  { to: '/hello', label: 'Hello' },
+  { to: '/world', label: 'World' },
+] as const;
 
 export default () => (
   <div>
     <PageHeadSection
       title="Breadcrumb"
       description="Easy hierarchical navigation"
-      breadcrumbs={[{ label: 'Breadcrumb', url: '/components/breadcrumb' }]}
+      breadcrumbs={[{ label: 'Breadcrumb', to: '/components/breadcrumb' }]}
     />
 
     <div class="onwo-format">
@@ -21,11 +29,59 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: ``,
+        Default: `<Breadcrumb separator={Icons.ArrowsRight}>
+  <Breadcrumb.Link to="/" label="Home" />
+  <Breadcrumb.Link to="/hello" label="Hello" />
+  <Breadcrumb.Link to="/hello/world" label="World" />
+</Breadcrumb>`,
+        'From List': `const links = [
+  { to: '/', label: 'Home' },
+  { to: '/hello', label: 'Hello' },
+  { to: '/world', label: 'World' }
+] as const;
+
+<Breadcrumb separator={Icons.ArrowsRight}>
+  {Breadcrumb.Link.fromList(links)}
+</Breadcrumb>`,
       }}
     />
 
-    <Showcase title="Default" component={<div />} code={``} />
+    <Showcase
+      title="Default"
+      component={
+        <Breadcrumb separator={Icons.ArrowsRight}>
+          <Breadcrumb.Link to="#/" label="Home" />
+          <Breadcrumb.Link to="#/hello" label="Hello" />
+          <Breadcrumb.Link to="#/hello/world" label="World" />
+        </Breadcrumb>
+      }
+      code={`<Breadcrumb separator={Icons.ArrowsRight}>
+  <Breadcrumb.Link to="/" label="Home" />
+  <Breadcrumb.Link to="/hello" label="Hello" />
+  <Breadcrumb.Link to="/hello/world" label="World" />
+</Breadcrumb>`}
+    />
+
+    <Showcase
+      title="Custom separator icon"
+      component={
+        <div class="flex flex-col gap-4">
+          <Breadcrumb separator={Icons.ControlsChevronRight}>
+            {Breadcrumb.Link.fromList(links)}
+          </Breadcrumb>
+          <Breadcrumb separator={Icons.ArrowsChevronRightDouble}>
+            {Breadcrumb.Link.fromList(links)}
+          </Breadcrumb>
+        </div>
+      }
+      code={`<Breadcrumb separator={Icons.ControlsChevronRight}>
+  {Breadcrumb.Link.fromList(links)}
+</Breadcrumb>
+
+<Breadcrumb separator={Icons.ArrowsChevronRightDouble}>
+  {Breadcrumb.Link.fromList(links)}
+</Breadcrumb>`}
+    />
   </div>
 );
 

@@ -12,7 +12,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Select"
-      breadcrumbs={[{ label: 'Select', url: '/components/dropdown' }]}
+      breadcrumbs={[{ label: 'Select', to: '/components/dropdown' }]}
     />
 
     <div class="onwo-format"></div>

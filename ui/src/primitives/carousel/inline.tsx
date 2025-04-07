@@ -1,30 +1,30 @@
 import type { Component } from '@builder.io/qwik';
 import { findComponent, processChildren } from '~/imported/inline-component';
-import { CarouselBullet } from './bullet';
+import { Bullet } from './bullet';
 import type { PublicCarouselRootProps } from './root';
 import { CarouselBase } from './root';
-import { CarouselSlide } from './slide';
-import { CarouselStep } from './step';
-import { CarouselTitle } from './title';
+import { Slide } from './slide';
+import { Step } from './step';
+import { Title } from './title';
 
 type InternalProps = {
   value?: string;
   /**
    * @deprecated Use `slideComponent` instead.
    */
-  carouselSlideComponent?: typeof CarouselSlide;
+  carouselSlideComponent?: typeof Slide;
   /**
    * @deprecated Use `bulletComponent` instead.
    */
-  carouselBulletComponent?: typeof CarouselBullet;
+  carouselBulletComponent?: typeof Bullet;
 
-  slideComponent?: typeof CarouselSlide;
-  bulletComponent?: typeof CarouselBullet;
-  stepComponent?: typeof CarouselStep;
-  titleComponent?: typeof CarouselTitle;
+  slideComponent?: typeof Slide;
+  bulletComponent?: typeof Bullet;
+  stepComponent?: typeof Step;
+  titleComponent?: typeof Title;
 };
 
-export const CarouselRoot: Component<PublicCarouselRootProps & InternalProps> = (
+export const Root: Component<PublicCarouselRootProps & InternalProps> = (
   props: PublicCarouselRootProps & InternalProps,
 ) => {
   const {
@@ -37,10 +37,10 @@ export const CarouselRoot: Component<PublicCarouselRootProps & InternalProps> = 
     titleComponent: GivenTitle,
     ...rest
   } = props;
-  const Slide = GivenSlide || GivenSlideOld || CarouselSlide;
-  const Bullet = GivenBullet || GivenBulletOld || CarouselBullet;
-  const Step = GivenStep || CarouselStep;
-  const Title = GivenTitle || CarouselTitle;
+  const LSlide = GivenSlide || GivenSlideOld || Slide;
+  const LBullet = GivenBullet || GivenBulletOld || Bullet;
+  const LStep = GivenStep || Step;
+  const LTitle = GivenTitle || Title;
   let currSlideIndex = 0;
   let currBulletIndex = 0;
   let currStepIndex = 0;
@@ -48,26 +48,26 @@ export const CarouselRoot: Component<PublicCarouselRootProps & InternalProps> = 
   let isTitle = false;
 
   // code executes when the item component's shell is "seen"
-  findComponent(Slide, (slideProps) => {
+  findComponent(LSlide, (slideProps) => {
     slideProps._index = currSlideIndex;
 
     currSlideIndex++;
     numSlides++;
   });
 
-  findComponent(Bullet, (bulletProps) => {
+  findComponent(LBullet, (bulletProps) => {
     bulletProps._index = currBulletIndex;
 
     currBulletIndex++;
   });
 
-  findComponent(Step, (stepProps) => {
+  findComponent(LStep, (stepProps) => {
     stepProps._index = currStepIndex;
 
     currStepIndex++;
   });
 
-  findComponent(Title, () => {
+  findComponent(LTitle, () => {
     isTitle = true;
   });
 

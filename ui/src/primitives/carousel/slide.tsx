@@ -12,9 +12,10 @@ import { carouselContextId } from './context';
 
 export type CarouselSlideProps = PropsOf<'div'> & {
   _index?: number;
+  forceVisible?: boolean;
 };
 
-export const CarouselSlide = component$(({ _index, ...props }: CarouselSlideProps) => {
+export const Slide = component$(({ _index, ...props }: CarouselSlideProps) => {
   const context = useContext(carouselContextId);
   const slideRef = useSignal<HTMLDivElement | undefined>();
   const slideId = `${context.localId}-${_index ?? -1}`;
@@ -50,12 +51,16 @@ export const CarouselSlide = component$(({ _index, ...props }: CarouselSlideProp
         ref={slideRef}
         id={slideId}
         inert={!isVisibleSig.value}
-        hidden={isInactiveSig.value}
+        hidden={
+          props.forceVisible === undefined || props.forceVisible === false
+            ? isInactiveSig.value
+            : false
+        }
         aria-roledescription="slide"
         data-orientation={context.orientationSig.value}
         role={context.bulletRefsArray.value.length > 0 ? 'tabpanel' : undefined}
         data-qui-carousel-slide
-        data-active={isVisibleSig.value ? '' : undefined}
+        data-active={isVisibleSig.value}
         aria-label={`${_index !== undefined && _index + 1} of ${context.numSlidesSig.value}`}
         onFocusIn$={[handleFocusIn$, props.onFocusIn$]}
         {...props}

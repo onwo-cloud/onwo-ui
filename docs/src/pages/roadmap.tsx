@@ -6,7 +6,7 @@ export const RoadmapPage = () => (
     <PageHeadSection
       title="Roadmap"
       description="Upcoming change to the onwo ui library."
-      breadcrumbs={[{ label: 'Roadmap', url: '/roadmap' }]}
+      breadcrumbs={[{ label: 'Roadmap', to: '/roadmap' }]}
     />
     <div class="onwo-format">
       <p class="max-w-5xl">
