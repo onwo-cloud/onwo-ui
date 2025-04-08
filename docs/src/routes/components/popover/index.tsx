@@ -9,6 +9,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Popover"
+      description="Display a Popover component"
       breadcrumbs={[{ label: 'Popover', to: '/components/popover' }]}
     />
 

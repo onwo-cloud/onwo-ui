@@ -8,6 +8,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Bottom Sheet"
+      description="Display a Bottom Sheet component"
       breadcrumbs={[{ label: 'Bottom Sheet', to: '/components/bottom-sheet' }]}
     />
 

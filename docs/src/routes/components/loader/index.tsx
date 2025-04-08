@@ -8,6 +8,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Loader"
+      description="Display a Loader component"
       breadcrumbs={[{ label: 'Loader', to: '/components/loader' }]}
     />
 

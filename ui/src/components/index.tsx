@@ -7,4 +7,5 @@ export { Accordion } from './accordion';
 export { Alert } from './alert';
 export { Masonry } from './masonry';
 export { Carousel } from './carousel';
+export { Calendar } from './calendar';
 export * as PageNavigation from './page-navigation';

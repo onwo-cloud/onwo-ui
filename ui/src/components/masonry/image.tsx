@@ -38,7 +38,7 @@ export const Image = component$(
         {...props}
         ref={composeRefs(ref, props.ref)}
         class="mm-masonry__item"
-        style={width !== undefined ? `--w: ${width}; --h: ${height}` : ''}
+        style={width === undefined ? '' : `--w: ${width}; --h: ${height}`}
       >
         <img ref={imageRef} width={width} height={height} class="mm-masonry__img" src={src} />
       </div>

@@ -8,6 +8,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Snackbar"
+      description="Display a Snackbar component"
       breadcrumbs={[{ label: 'Snackbar', to: '/components/snackbar' }]}
     />
 

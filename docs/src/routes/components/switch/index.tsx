@@ -8,6 +8,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Switch"
+      description="Display a Switch component"
       breadcrumbs={[{ label: 'Switch', to: '/components/switch' }]}
     />
 

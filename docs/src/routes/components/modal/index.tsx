@@ -7,7 +7,11 @@ import { buildHead } from '~/utils/build-head';
 
 export default () => (
   <div>
-    <PageHeadSection title="Modal" breadcrumbs={[{ label: 'Modal', to: '/components/modal' }]} />
+    <PageHeadSection
+      title="Modal"
+      description="Display a Modal component"
+      breadcrumbs={[{ label: 'Modal', to: '/components/modal' }]}
+    />
 
     <div class="onwo-format"></div>
 

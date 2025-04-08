@@ -20,6 +20,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Dropdown"
+      description="Display a Dropdown component"
       breadcrumbs={[{ label: 'Dropdown', to: '/components/dropdown' }]}
     />
 

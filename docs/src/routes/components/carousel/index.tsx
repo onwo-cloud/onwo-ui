@@ -16,6 +16,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Carousel"
+      description="Display a Carousel component"
       breadcrumbs={[{ label: 'Carousel', to: '/components/carousel' }]}
     />
 

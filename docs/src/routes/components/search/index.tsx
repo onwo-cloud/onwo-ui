@@ -8,6 +8,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Search"
+      description="Display a Search component"
       breadcrumbs={[{ label: 'Search', to: '/components/search' }]}
     />
 

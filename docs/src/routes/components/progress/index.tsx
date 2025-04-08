@@ -8,6 +8,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Progress"
+      description="Display a Progress component"
       breadcrumbs={[{ label: 'Progress', to: '/components/progress' }]}
     />
 

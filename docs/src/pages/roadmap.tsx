@@ -15,6 +15,23 @@ export const RoadmapPage = () => (
         interfaces. This roadmap will evolve as I progress and incorporate feedback
       </p>
 
+      <PNav.Link as="h2" id="why" label="Why this library">
+        Why this library
+      </PNav.Link>
+      <p>
+        I have been using Qwik for a while and I used or explored a few libraries while using it,
+        the most proeminent one being <a href="https://qwikui.com/">qwikui</a>. In my projects I
+        amassed a large amount of components or utility, but it was always quite messy to
+        orchestrate them and moving them around, there was no unified way to share them accross
+        projects, and rather than create a close sourced library for my own pleasure I decided to
+        open up this project.
+      </p>
+
+      <p>
+        Currently my sole goal is to release it with a few dozen styled and accessible components
+        following the styles from moon.io but also leveraging the works from qwikui, shadcn and by
+        extension radix-ui.
+      </p>
       <PNav.Link as="h2" id="current-goals" label="Current goals">
         Current goals
       </PNav.Link>
@@ -41,11 +58,15 @@ export const RoadmapPage = () => (
         Long term visions
       </PNav.Link>
       <ul>
-        <li>Keep integrating the more advanced moon.io components</li>
+        <li>
+          Keep integrating components from diverse ui libraries, shadcn being the prime inspiration
+        </li>
         <li>Add logics utilities (forms management, hooks, cookie banner, etc.)</li>
         <li>Improve CI for automatic versionning + related QOL / security features</li>
-        <li>Provide ready to use templates & themes</li>
-        <li>Continual refinement based on community feedback</li>
+        <li>
+          Ready to use templates & themes, inspired by{' '}
+          <a href="https://www.shadcnblocks.com/">shadcnblocks</a>
+        </li>
       </ul>
       <PNav.Link as="h2" id="contribute" label="Contribute">
         How to Contribute

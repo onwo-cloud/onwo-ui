@@ -8,6 +8,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Tooltip"
+      description="Display a Tooltip component"
       breadcrumbs={[{ label: 'Tooltip', to: '/components/tooltip' }]}
     />
 

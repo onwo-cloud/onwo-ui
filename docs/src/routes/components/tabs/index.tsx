@@ -218,7 +218,7 @@ export default () => (
 
     <Showcase
       title="Wizard"
-      disabled
+      experimental
       component={
         <div class="flex flex-wrap items-center justify-around gap-2 w-full bg-transparent">
           <div class="relative w-full">

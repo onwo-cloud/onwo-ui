@@ -12,6 +12,9 @@ export const TypographyPage = () => (
     <div class="onwo-format">
       <p>Typography includes text, headings, and captions.</p>
       <p>
+        <span class="inline-block mr-2 uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
+          WIP
+        </span>
         you can apply the `onwo-format` class to section of your code you want to be automatically
         formatted.
       </p>

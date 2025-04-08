@@ -17,7 +17,7 @@ export const Root = withAs('nav')<RootProps>(({ As, class: className, ...props }
         {props.children.map((child, idx) => (
           <div key={idx} class="contents">
             {child}
-            {idx !== (props.children.length - 1) && <Sep size="xs" />}
+            {idx !== props.children.length - 1 && <Sep size="xs" />}
           </div>
         ))}
       </ol>

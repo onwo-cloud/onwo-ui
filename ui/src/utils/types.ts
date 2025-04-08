@@ -12,18 +12,17 @@ export type Primitive<T extends keyof QwikHTMLElements> = Omit<QwikHTMLElements[
   style?: CSSProperties;
 };
 
-type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (k: infer I) => void
-  ? I
-  : never;
-
 export type OneKeyOf<T, K extends keyof T = keyof T> = Prettify<
   {
     [P in K]: { [Q in P]: T[P] } & { [Q in Exclude<K, P>]?: never };
   }[K]
 >;
 
+// Helper types
+type KeysOfUnion<T> = T extends any ? keyof T : never;
+
 export type OneObjectOf<T extends Record<any, unknown>[]> = {
   [K in keyof T]: T[K] & {
-    [P in Exclude<keyof UnionToIntersection<T[number]>, keyof T[K]>]?: undefined;
+    [P in Exclude<KeysOfUnion<T[number]>, keyof T[K]>]?: never;
   };
 }[number];

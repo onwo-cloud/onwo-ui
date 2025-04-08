@@ -5,6 +5,7 @@ import { Tabs, cn, PageNavigation as PNav } from '@onwo/ui';
 type ShowcaseProps = {
   title: string;
   component: JSXChildren;
+  experimental?: boolean;
   code?: string;
   disabled?: boolean;
 };
@@ -12,9 +13,17 @@ type ShowcaseProps = {
 export const Showcase = (props: ShowcaseProps) => (
   <Tabs class="mt-16">
     <div class="flex justify-between w-full">
-      <PNav.Link label={props.title} id={props.title.toLowerCase().split(' ').join('-')}>
-        <h2 class="text-onwo-24 font-semibold">{props.title}</h2>
-      </PNav.Link>
+      <div class="flex gap-2 items-center">
+        {props.experimental && (
+          <div class="uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
+            WIP
+          </div>
+        )}
+
+        <PNav.Link label={props.title} id={props.title.toLowerCase().split(' ').join('-')}>
+          <h2 class="text-onwo-24 font-semibold">{props.title}</h2>
+        </PNav.Link>
+      </div>
       {!!props.code && (
         <Tabs.List class="flex p-1 bg-gohan rounded-onwo-s-md gap-1 w-fit justify-left">
           <Tabs.Pill>

@@ -30,6 +30,7 @@ const extendedConfig = {
     'sonarjs/redundant-type-aliases': 'off',
     'sonarjs/no-redundant-jump': 'off',
     'unicorn/no-null': 'off',
+    'unicorn/no-useless-switch-case': 'off',
     'unicorn/no-array-for-each': 'off',
     'sonarjs/different-types-comparison': 'warn',
   },

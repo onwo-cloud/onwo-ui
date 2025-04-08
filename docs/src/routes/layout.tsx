@@ -113,6 +113,7 @@ export default component$(() => (
                 <SidebarButtonSmall href="/components/breadcrumb">Breadcrumb</SidebarButtonSmall>
                 <SidebarButtonSmall href="/components/button">Button</SidebarButtonSmall>
                 <SidebarButtonSmall href="/components/carousel">Carousel</SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/calendar">Calendar</SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/chip">
                   Chip
                 </SidebarButtonSmall>

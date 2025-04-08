@@ -1,5 +1,5 @@
 import { Slot, component$, useStyles$ } from '@builder.io/qwik';
-import { Primitive } from '~/utils/types';
+import type { Primitive } from '~/utils/types';
 
 export const style = `
 .mm-masonry {

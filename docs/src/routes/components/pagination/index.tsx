@@ -14,6 +14,7 @@ export default component$(() => {
     <div>
       <PageHeadSection
         title="Pagination"
+        description="Display a Pagination component"
         breadcrumbs={[{ label: 'Pagination', to: '/components/pagination' }]}
       />
 

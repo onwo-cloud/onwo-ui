@@ -5,8 +5,6 @@ import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
 import { buildHead } from '~/utils/build-head';
 
-import './mm-masonry.css';
-
 const photos = [
   { width: 300, height: 450, src: '/photos/photo-98fd-300x450.jpg' },
   { width: 300, height: 200, src: '/photos/photo-ea54-300x200.jpg' },
@@ -65,6 +63,7 @@ export default () => (
   <div>
     <PageHeadSection
       title="Masonry"
+      description="Display a Masonry component"
       breadcrumbs={[{ label: 'Masonry', to: '/components/masonry' }]}
     />
 
