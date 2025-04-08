@@ -1,13 +1,13 @@
 import { SvgIcon } from '~/primitives';
 import { withAs } from '~/utils/as';
 import { cn } from '~/utils/cn';
-import type { ExactlyOne } from '~/utils/types';
+import type { OneKeyOf } from '~/utils/types';
 
 export type RootSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
 export type RootProps = {
   size?: RootSize; // default: md
-} & ExactlyOne<{
+} & OneKeyOf<{
   imageUrl: string;
   name: string;
 }>;

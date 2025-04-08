@@ -2,7 +2,7 @@ import type { Component, JSX, QwikHTMLElements } from '@builder.io/qwik';
 import { Button as BaseButton } from '~/primitives/button';
 import type { IconProps, IconSize } from '~/primitives/svg-icon';
 import { cn } from '~/utils/cn';
-import type { ExactlyOne } from '~/utils/types';
+import type { OneKeyOf } from '~/utils/types';
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
@@ -11,7 +11,7 @@ export type ButtonProps<T extends keyof QwikHTMLElements> = QwikHTMLElements[T] 
   variant?: 'fill' | 'outline' | 'ghost'; // default: fill
   size?: ButtonSize; // default: md
   disabled?: boolean;
-} & ExactlyOne<{ start: Component<IconProps>; end: Component<IconProps> }>;
+} & OneKeyOf<{ start: Component<IconProps>; end: Component<IconProps> }>;
 
 const desiredIconSize = (buttonSize: ButtonSize): IconSize => {
   switch (buttonSize) {

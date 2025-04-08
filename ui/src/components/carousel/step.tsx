@@ -1,9 +1,7 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { Carousel as C } from '~/primitives/carousel';
 
-type StepProps = PropsOf<typeof C.Step> & {
-  step: number;
-};
+type StepProps = PropsOf<typeof C.Step>;
 
 export const Step = (props: StepProps) => (
   <C.Step

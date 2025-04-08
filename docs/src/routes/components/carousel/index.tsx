@@ -173,9 +173,7 @@ export default () => (
         <Carousel gap={30}>
           <Carousel.Stepper class="mb-4">
             {Array.from({ length: 3 }).map((_, index) => (
-              <Carousel.Step key={index} step={index + 1}>
-                Header {index + 1}
-              </Carousel.Step>
+              <Carousel.Step key={index}>Header {index + 1}</Carousel.Step>
             ))}
           </Carousel.Stepper>
           <Carousel.Scroller>
@@ -190,7 +188,7 @@ export default () => (
       code={`<Carousel gap={30}>
   <Carousel.Stepper class="mb-4">
     {Array.from({ length: 3 }).map((_, index) => (
-      <Carousel.Step key={index} step={index + 1}>
+      <Carousel.Step key={index}>
         Header {index + 1}
       </Carousel.Step>
     ))}

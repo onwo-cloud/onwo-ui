@@ -5,5 +5,6 @@ export { Avatar } from './avatar';
 export { Breadcrumb } from './breadcrumb';
 export { Accordion } from './accordion';
 export { Alert } from './alert';
+export { Masonry } from './masonry';
 export { Carousel } from './carousel';
 export * as PageNavigation from './page-navigation';

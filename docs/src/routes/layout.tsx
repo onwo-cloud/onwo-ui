@@ -126,6 +126,7 @@ export default component$(() => (
                 <SidebarButtonSmall disabled href="/components/loader">
                   Loader
                 </SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/masonry">Masonry</SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/menu-item">
                   Menu Item
                 </SidebarButtonSmall>
