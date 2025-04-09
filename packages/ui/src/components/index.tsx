@@ -5,6 +5,8 @@ export { Avatar } from './avatar';
 export * as Breadcrumb from './breadcrumb';
 export * as Accordion from './accordion';
 export { Alert } from './alert';
+export { Chip } from './chip';
+export { Spinner } from './spinner';
 export * as Masonry from './masonry';
 export * as Carousel from './carousel';
 export { Calendar } from './calendar';

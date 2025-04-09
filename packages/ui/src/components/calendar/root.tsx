@@ -16,6 +16,7 @@ import { CalendarViewDays } from './views/days';
 import { CalendarViewDecade } from './views/decades';
 import { CalendarViewMonth } from './views/months';
 import { CalendarViewYear } from './views/years';
+import { Icons } from '@onwo/icons';
 
 type RootProps = {
   ref?: Signal<HTMLDivElement | undefined>;
@@ -193,7 +194,7 @@ export const Root = component$(
               class="mb-2 flex items-center justify-between"
             >
               <HeadNavButton
-                icon={<></>}
+                icon={<Icons.ControlsChevronLeftSmall />}
                 onClick$={$(async () => {
                   viewDate.value = await getViewDatePage$(view.value, viewDate.value, -1);
                 })}
@@ -209,7 +210,7 @@ export const Root = component$(
               </button>
 
               <HeadNavButton
-                icon={<></>}
+                icon={<Icons.ControlsChevronRightSmall />}
                 onClick$={$(async () => {
                   viewDate.value = await getViewDatePage$(view.value, viewDate.value, +1);
                 })}

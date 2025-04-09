@@ -20,10 +20,10 @@ export const Root = withAs('div')<RootProps>(
       class={cn(
         'uppercase relative flex bg-goku text-bulma items-center justify-center overflow-hidden font-medium bg-cover',
         size === 'xs' && 'rounded-onwo-i-xs text-onwo-10-caption w-6 h-6',
-        size === 'sm' && 'rounded-onwo-i-sm ext-onwo-12 w-8 h-8',
-        size === 'md' && 'rounded-onwo-i-sm ext-onwo-14 w-10 h-10',
-        size === 'lg' && 'rounded-onwo-i-sm ext-onwo-16 w-12 h-12',
-        size === 'xl' && 'rounded-onwo-i-sm ext-onwo-16 w-14 h-14',
+        size === 'sm' && 'rounded-onwo-i-sm text-onwo-12 w-8 h-8',
+        size === 'md' && 'rounded-onwo-i-sm text-onwo-14 w-10 h-10',
+        size === 'lg' && 'rounded-onwo-i-sm text-onwo-16 w-12 h-12',
+        size === 'xl' && 'rounded-onwo-i-sm text-onwo-16 w-14 h-14',
         size === '2xl' && 'rounded-onwo-i-md text-onwo-20 w-16 h-16',
         className,
       )}

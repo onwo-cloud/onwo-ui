@@ -1,4 +1,6 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
+import { Icons } from '@onwo/icons';
+import { Chip } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -16,11 +18,96 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: ``,
+        Default: `import { Chip } from '@onwo/ui';
+
+<Chip>Default</Chip>`,
       }}
     />
 
-    <Showcase title="Default" component={<div />} code={``} />
+    <Showcase
+      title="Default"
+      component={
+        <div class="flex justify-center">
+          <Chip>Default</Chip>
+        </div>
+      }
+      code={`<Chip>Default</Chip>`}
+    />
+
+    <Showcase
+      title="Sizes"
+      component={
+        <div class="flex items-center justify-around">
+          <Chip size="sm">Small</Chip>
+          <Chip>Medium</Chip>
+        </div>
+      }
+      code={`<Chip size="small">Small</Chip>
+<Chip>Medium</Chip>`}
+    />
+
+    <Showcase
+      title="Variants"
+      component={
+        <div class="flex gap-2 flex-wrap items-center justify-around">
+          <Chip variant="ghost">Ghost variant</Chip>
+          <Chip variant="stroke">Stroke variant</Chip>
+          <Chip>Default variant</Chip>
+        </div>
+      }
+      code={`<Chip variant="ghost">Ghost variant</Chip>
+<Chip>Default variant</Chip>`}
+    />
+
+    <Showcase
+      title="Status"
+      component={
+        <div class="flex gap-2 flex-wrap items-center justify-around">
+          <Chip active>Active</Chip>
+          <Chip variant="stroke" active>
+            Active
+          </Chip>
+          <Chip disabled>Disabled</Chip>
+          <Chip variant="ghost" disabled>
+            Disabled
+          </Chip>
+        </div>
+      }
+      code={`<Chip active>Active</Chip>
+<Chip variant="stroke" active>Active</Chip>
+<Chip disabled>Disabled</Chip>
+<Chip variant="ghost" disabled>Disabled</Chip>`}
+    />
+
+    <Showcase
+      title="With icons"
+      component={
+        <div class="flex  gap-2 flex-wrap items-center justify-around">
+          <Chip variant="stroke">
+            <Icons.MediaMusic />
+            Left Icon
+          </Chip>
+          <Chip variant="stroke">
+            Right Icon
+            <Icons.MediaMusic />
+          </Chip>
+          <Chip variant="stroke">
+            <Icons.MediaMusic />
+          </Chip>
+        </div>
+      }
+      code={`<Chip variant="stroke">
+  <Icons.MediaMusic />
+  Left Icon
+</Chip>
+<Chip variant="stroke">
+  Right Icon
+  <Icons.MediaMusic />
+</Chip>
+<Chip variant="stroke">
+  <Icons.MediaMusic />
+</Chip>`}
+    />
   </div>
 );
 

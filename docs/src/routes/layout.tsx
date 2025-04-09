@@ -114,9 +114,7 @@ export default component$(() => (
                 <SidebarButtonSmall href="/components/button">Button</SidebarButtonSmall>
                 <SidebarButtonSmall href="/components/carousel">Carousel</SidebarButtonSmall>
                 <SidebarButtonSmall href="/components/calendar">Calendar</SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/chip">
-                  Chip
-                </SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/chip">Chip</SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/drawer">
                   Drawer
                 </SidebarButtonSmall>
@@ -124,9 +122,7 @@ export default component$(() => (
                 <SidebarButtonSmall disabled href="/components/form">
                   Form
                 </SidebarButtonSmall>
-                <SidebarButtonSmall disabled href="/components/loader">
-                  Loader
-                </SidebarButtonSmall>
+                <SidebarButtonSmall href="/components/spinner">Spinner</SidebarButtonSmall>
                 <SidebarButtonSmall href="/components/masonry">Masonry</SidebarButtonSmall>
                 <SidebarButtonSmall disabled href="/components/menu-item">
                   Menu Item
