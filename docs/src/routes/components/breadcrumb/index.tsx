@@ -29,7 +29,7 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: `<Breadcrumb.Root separator={Icons.ArrowsRight}>
+        Default: `<Breadcrumb.Root>
   <Breadcrumb.Link to="/" label="Home" />
   <Breadcrumb.Link to="/hello" label="Hello" />
   <Breadcrumb.Link to="/hello/world" label="World" />
@@ -40,7 +40,7 @@ export default () => (
   { to: '/world', label: 'World' }
 ] as const;
 
-<Breadcrumb.Root separator={Icons.ArrowsRight}>
+<Breadcrumb.Root>
   {Breadcrumb.Link.fromList(links)}
 </Breadcrumb.Root>`,
       }}
@@ -49,13 +49,13 @@ export default () => (
     <Showcase
       title="Default"
       component={
-        <Breadcrumb.Root separator={Icons.ArrowsRight}>
+        <Breadcrumb.Root>
           <Breadcrumb.Link to="#/" label="Home" />
           <Breadcrumb.Link to="#/hello" label="Hello" />
           <Breadcrumb.Link to="#/hello/world" label="World" />
         </Breadcrumb.Root>
       }
-      code={`<Breadcrumb separator={Icons.ArrowsRight}>
+      code={`<Breadcrumb>
   <Breadcrumb.Link to="/" label="Home" />
   <Breadcrumb.Link to="/hello" label="Hello" />
   <Breadcrumb.Link to="/hello/world" label="World" />

@@ -423,14 +423,22 @@
 "@onwo/icons@link:packages/icons":
   version "0.0.5-alpha"
   dependencies:
-    "@onwo/ui" "link:packages/ui"
+    "@onwo/primitives" "link:packages/primitives"
     "@tailwindcss/vite" "^4.0.14"
     clsx "^2.1.1"
     tailwind-merge "^3.0.2"
 
 "@onwo/primitives@link:packages/primitives":
-  version "0.0.0"
-  uid ""
+  version "0.0.5-alpha"
+  dependencies:
+    "@floating-ui/core" "^1.6.2"
+    "@floating-ui/dom" "^1.6.5"
+    "@oddbird/popover-polyfill" "0.4.3"
+    "@tailwindcss/vite" "^4.0.14"
+    body-scroll-lock-upgrade "^1.1.0"
+    clsx "^2.1.1"
+    focus-trap "7.5.4"
+    tailwind-merge "^3.0.2"
 
 "@onwo/tailwindcss@link:packages/tailwindcss":
   version "0.0.5-alpha"
@@ -440,15 +448,7 @@
 "@onwo/ui@link:packages/ui":
   version "0.0.5-alpha"
   dependencies:
-    "@floating-ui/core" "^1.6.2"
-    "@floating-ui/dom" "^1.6.5"
-    "@oddbird/popover-polyfill" "0.4.3"
     "@tailwindcss/vite" "^4.0.14"
-    body-scroll-lock-upgrade "^1.1.0"
-    class-variance-authority "^0.7.1"
-    clsx "^2.1.1"
-    focus-trap "7.5.4"
-    tailwind-merge "^3.0.2"
 
 "@pkgr/core@^0.1.0":
   version "0.1.1"
@@ -1528,13 +1528,6 @@ ci-info@^4.0.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-4.2.0.tgz#cbd21386152ebfe1d56f280a3b5feccbd96764c7"
   integrity sha512-cYY9mypksY8NRqgDB1XD1RiJL338v/551niynFTGkZOO2LHuB2OmOYxDIe/ttN9AHwrqdum1360G3ald0W9kCg==
-
-class-variance-authority@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/class-variance-authority/-/class-variance-authority-0.7.1.tgz#4008a798a0e4553a781a57ac5177c9fb5d043787"
-  integrity sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==
-  dependencies:
-    clsx "^2.1.1"
 
 clean-regexp@^1.0.0:
   version "1.0.0"

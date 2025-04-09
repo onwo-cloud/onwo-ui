@@ -1,5 +1,4 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Icons } from '@onwo/icons';
 import { Carousel } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
@@ -25,8 +24,8 @@ export default () => (
     <Anatomy
       variants={{
         Default: `<Carousel.Root gap={30}>
-  <Carousel.Previous icon={Icons.ControlsChevronLeft} />
-  <Carousel.Next icon={Icons.ControlsChevronRight} />
+  <Carousel.Previous />
+  <Carousel.Next />
   <Carousel.Scroller>
     {Array.from({ length: 10 }, (_, idx) => idx).map((label) => (
       <Carousel.Slide key={label} class="h-48">
@@ -42,8 +41,8 @@ export default () => (
       title="Default"
       component={
         <Carousel.Root gap={30} slidesPerView={3} move={3}>
-          <Carousel.Previous icon={Icons.ControlsChevronLeft} />
-          <Carousel.Next icon={Icons.ControlsChevronRight} />
+          <Carousel.Previous />
+          <Carousel.Next />
           <Carousel.Scroller>
             {Array.from({ length: 10 }).map((_, label) => (
               <Carousel.Slide key={label} class="h-48">
@@ -54,8 +53,8 @@ export default () => (
         </Carousel.Root>
       }
       code={`<Carousel.Root gap={30} slidesPerView={3} move={3}>
-  <Carousel.Previous icon={Icons.ControlsChevronLeft} />
-  <Carousel.Next icon={Icons.ControlsChevronRight} />
+  <Carousel.Previous />
+  <Carousel.Next />
   <Carousel.Scroller>
     {Array.from({ length: 10 }).map((_, label) => (
       <Carousel.Slide key={label} class="h-48">
@@ -70,8 +69,8 @@ export default () => (
       title="Vertical"
       component={
         <Carousel.Root gap={30} orientation="vertical" maxSlideHeight={160}>
-          <Carousel.Previous icon={Icons.ControlsChevronLeft} />
-          <Carousel.Next icon={Icons.ControlsChevronRight} />
+          <Carousel.Previous />
+          <Carousel.Next />
           <Carousel.Scroller>
             {Array.from({ length: 10 }).map((_, label) => (
               <Carousel.Slide key={label} class="p-16">
@@ -82,8 +81,8 @@ export default () => (
         </Carousel.Root>
       }
       code={`<Carousel.Root gap={30} orientation="vertical" maxSlideHeight={160}>
-  <Carousel.Previous icon={Icons.ControlsChevronLeft} />
-  <Carousel.Next icon={Icons.ControlsChevronRight} />
+  <Carousel.Previous />
+  <Carousel.Next />
   <Carousel.Scroller>
     {Array.from({ length: 10 }).map((_, label) => (
       <Carousel.Slide key={label} class="p-16">
@@ -98,8 +97,8 @@ export default () => (
       title="Fade animation"
       component={
         <Carousel.Root class="h-48" gap={0}>
-          <Carousel.Previous icon={Icons.ControlsChevronLeft} />
-          <Carousel.Next icon={Icons.ControlsChevronRight} />
+          <Carousel.Previous />
+          <Carousel.Next />
           <div>
             {colors.map((color, idx) => (
               <Carousel.Slide
@@ -115,8 +114,8 @@ export default () => (
         </Carousel.Root>
       }
       code={`<Carousel.Root class="h-48" gap={0}>
-  <Carousel.Previous icon={Icons.ControlsChevronLeft} />
-  <Carousel.Next icon={Icons.ControlsChevronRight} />
+  <Carousel.Previous />
+  <Carousel.Next />
   <div>
     {colors.map((color, idx) => (
       <Carousel.Slide
