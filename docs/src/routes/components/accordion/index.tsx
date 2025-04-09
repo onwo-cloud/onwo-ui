@@ -24,7 +24,7 @@ export default () => (
       variants={{
         Default: `import { Accordion } from '@onwo/ui';
 
-<Accordion>
+<Accordion.Root>
   <Accordion.Item>
     <Accordion.Trigger>...</Accordion.Trigger>
     <Accordion.Content>...</Accordion.Content>
@@ -33,7 +33,7 @@ export default () => (
     <Accordion.Trigger>...</Accordion.Trigger>
     <Accordion.Content>...</Accordion.Content>
   </Accordion.Item>
-</Accordion>
+</Accordion.Root>
 `,
       }}
     />
@@ -41,7 +41,7 @@ export default () => (
     <Showcase
       title="Default"
       component={
-        <Accordion class="w-full">
+        <Accordion.Root class="w-full">
           <Accordion.Item>
             <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
             <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
@@ -58,9 +58,9 @@ export default () => (
               Yes. It's animated by default, but you can disable it if you prefer.
             </Accordion.Content>
           </Accordion.Item>
-        </Accordion>
+        </Accordion.Root>
       }
-      code={`<Accordion class="w-full">
+      code={`<Accordion.Root class="w-full">
   <Accordion.Item>
     <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
     <Accordion.Content> ... </Accordion.Content>
@@ -73,13 +73,13 @@ export default () => (
     <Accordion.Trigger>Is it animated?</Accordion.Trigger>
     <Accordion.Content> ... </Accordion.Content>
   </Accordion.Item>
-</Accordion>`}
+</Accordion.Root>`}
     />
 
     <Showcase
       title="Single open"
       component={
-        <Accordion singleOpen class="w-full">
+        <Accordion.Root singleOpen class="w-full">
           <Accordion.Item>
             <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
             <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
@@ -96,9 +96,9 @@ export default () => (
               Yes. It's animated by default, but you can disable it if you prefer.
             </Accordion.Content>
           </Accordion.Item>
-        </Accordion>
+        </Accordion.Root>
       }
-      code={`<Accordion singleOpen class="w-full">
+      code={`<Accordion.Root singleOpen class="w-full">
   <Accordion.Item>
     <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
     <Accordion.Content> ... </Accordion.Content>
@@ -111,7 +111,7 @@ export default () => (
     <Accordion.Trigger>Is it animated?</Accordion.Trigger>
     <Accordion.Content> ... </Accordion.Content>
   </Accordion.Item>
-</Accordion>`}
+</Accordion.Root>`}
     />
   </div>
 );

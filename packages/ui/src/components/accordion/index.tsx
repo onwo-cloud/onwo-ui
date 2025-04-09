@@ -1,10 +1,4 @@
-import { Content } from './content';
-import { Item } from './item';
-import { Root } from './root';
-import { Trigger } from './trigger';
-
-export const Accordion = Object.assign(Root, {
-  Content,
-  Item,
-  Trigger,
-});
+export { Content } from './content';
+export { Item } from './item';
+export { Root } from './root';
+export { Trigger } from './trigger';

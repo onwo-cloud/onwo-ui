@@ -29,31 +29,31 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: `<Breadcrumb separator={Icons.ArrowsRight}>
+        Default: `<Breadcrumb.Root separator={Icons.ArrowsRight}>
   <Breadcrumb.Link to="/" label="Home" />
   <Breadcrumb.Link to="/hello" label="Hello" />
   <Breadcrumb.Link to="/hello/world" label="World" />
-</Breadcrumb>`,
+</Breadcrumb.Root>`,
         'From List': `const links = [
   { to: '/', label: 'Home' },
   { to: '/hello', label: 'Hello' },
   { to: '/world', label: 'World' }
 ] as const;
 
-<Breadcrumb separator={Icons.ArrowsRight}>
+<Breadcrumb.Root separator={Icons.ArrowsRight}>
   {Breadcrumb.Link.fromList(links)}
-</Breadcrumb>`,
+</Breadcrumb.Root>`,
       }}
     />
 
     <Showcase
       title="Default"
       component={
-        <Breadcrumb separator={Icons.ArrowsRight}>
+        <Breadcrumb.Root separator={Icons.ArrowsRight}>
           <Breadcrumb.Link to="#/" label="Home" />
           <Breadcrumb.Link to="#/hello" label="Hello" />
           <Breadcrumb.Link to="#/hello/world" label="World" />
-        </Breadcrumb>
+        </Breadcrumb.Root>
       }
       code={`<Breadcrumb separator={Icons.ArrowsRight}>
   <Breadcrumb.Link to="/" label="Home" />
@@ -66,12 +66,12 @@ export default () => (
       title="Custom separator icon"
       component={
         <div class="flex flex-col gap-4">
-          <Breadcrumb separator={Icons.ControlsChevronRight}>
+          <Breadcrumb.Root separator={Icons.ControlsChevronRight}>
             {Breadcrumb.Link.fromList(links)}
-          </Breadcrumb>
-          <Breadcrumb separator={Icons.ArrowsChevronRightDouble}>
+          </Breadcrumb.Root>
+          <Breadcrumb.Root separator={Icons.ArrowsChevronRightDouble}>
             {Breadcrumb.Link.fromList(links)}
-          </Breadcrumb>
+          </Breadcrumb.Root>
         </div>
       }
       code={`<Breadcrumb separator={Icons.ControlsChevronRight}>

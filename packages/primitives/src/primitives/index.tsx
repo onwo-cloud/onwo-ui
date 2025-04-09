@@ -4,7 +4,7 @@ export { SvgIcon } from './svg-icon';
 export type { IconProps, IconSize } from './svg-icon';
 export * as PageNavigation from './page-navigation';
 export * as Accordion from './accordion';
-export { Carousel } from './carousel';
+export * as Carousel from './carousel';
 export { Separator, type SeparatorProps } from './separator';
 
 export * as Checkbox from './checkbox';

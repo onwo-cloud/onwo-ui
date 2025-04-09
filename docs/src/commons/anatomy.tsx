@@ -8,7 +8,7 @@ export const Anatomy = (props: AnatomyProps) => {
   const keys = Object.keys(props.variants);
 
   return (
-    <Tabs class="mt-12">
+    <Tabs.Root class="mt-12">
       <div class="flex justify-between w-full">
         <PNav.Link label="Anatomy" id="anatomy">
           <h2 class="text-onwo-24 font-semibold">Anatomy</h2>
@@ -26,6 +26,6 @@ export const Anatomy = (props: AnatomyProps) => {
           </Tabs.Panel>
         ))}
       </Tabs.Panels>
-    </Tabs>
+    </Tabs.Root>
   );
 };

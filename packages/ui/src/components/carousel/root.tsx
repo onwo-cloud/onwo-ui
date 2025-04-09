@@ -7,10 +7,10 @@ import { Slide } from './slide';
 import { Step } from './step';
 import { Title } from './title';
 
-type RootProps = PropsOf<typeof C>;
+type RootProps = PropsOf<typeof C.Root>;
 
 export const Root = (props: RootProps) => (
-  <C
+  <C.Root
     slideComponent={Slide}
     bulletComponent={Bullet}
     stepComponent={Step}
@@ -19,5 +19,5 @@ export const Root = (props: RootProps) => (
     class={cn('relative', props.class)}
   >
     {props.children}
-  </C>
+  </C.Root>
 );

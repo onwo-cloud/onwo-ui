@@ -1,11 +1,11 @@
 export { Button } from './button';
 export type { ButtonSize, ButtonProps } from './button';
-export { Tabs } from './tabs';
+export * as Tabs from './tabs';
 export { Avatar } from './avatar';
-export { Breadcrumb } from './breadcrumb';
-export { Accordion } from './accordion';
+export * as Breadcrumb from './breadcrumb';
+export * as Accordion from './accordion';
 export { Alert } from './alert';
-export { Masonry } from './masonry';
-export { Carousel } from './carousel';
+export * as Masonry from './masonry';
+export * as Carousel from './carousel';
 export { Calendar } from './calendar';
 export * as PageNavigation from './page-navigation';

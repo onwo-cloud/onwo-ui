@@ -85,11 +85,11 @@ export default () => (
     <Showcase
       title="Default"
       component={
-        <Masonry columnWidth={140} gap={16}>
+        <Masonry.Root columnWidth={140} gap={16}>
           {photos.slice(0, 20).map(({ src, width, height }, idx) => (
             <Masonry.Image key={idx} src={src} width={width} height={height} />
           ))}
-        </Masonry>
+        </Masonry.Root>
       }
       code={`<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ src, width, height }, idx) => (
@@ -101,11 +101,11 @@ export default () => (
     <Showcase
       title="Images auto sizing"
       component={
-        <Masonry columnWidth={140} gap={16}>
+        <Masonry.Root columnWidth={140} gap={16}>
           {photos.slice(0, 20).map(({ src }, idx) => (
             <Masonry.Image key={idx} src={src} inferSize />
           ))}
-        </Masonry>
+        </Masonry.Root>
       }
       code={`<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ src }, idx) => (
@@ -117,7 +117,7 @@ export default () => (
     <Showcase
       title="Boxes"
       component={
-        <Masonry columnWidth={140} gap={16}>
+        <Masonry.Root columnWidth={140} gap={16}>
           {photos.slice(0, 20).map(({ width, height }, idx) => (
             <Masonry.Item
               class="flex items-center justify-center"
@@ -128,7 +128,7 @@ export default () => (
               <span>{idx}</span>
             </Masonry.Item>
           ))}
-        </Masonry>
+        </Masonry.Root>
       }
       code={`<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ width, height }, idx) => (

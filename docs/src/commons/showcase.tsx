@@ -11,7 +11,7 @@ type ShowcaseProps = {
 };
 
 export const Showcase = (props: ShowcaseProps) => (
-  <Tabs class="mt-16">
+  <Tabs.Root class="mt-16">
     <div class="flex justify-between w-full">
       <div class="flex gap-2 items-center">
         {props.experimental && (
@@ -54,5 +54,5 @@ export const Showcase = (props: ShowcaseProps) => (
         </Tabs.Panel>
       )}
     </Tabs.Panels>
-  </Tabs>
+  </Tabs.Root>
 );

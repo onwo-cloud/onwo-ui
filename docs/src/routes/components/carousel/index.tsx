@@ -24,7 +24,7 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: `<Carousel gap={30}>
+        Default: `<Carousel.Root gap={30}>
   <Carousel.Previous icon={Icons.ControlsChevronLeft} />
   <Carousel.Next icon={Icons.ControlsChevronRight} />
   <Carousel.Scroller>
@@ -34,14 +34,14 @@ export default () => (
       </Carousel.Slide>
     ))}
   </Carousel.Scroller>
-</Carousel>`,
+</Carousel.Root>`,
       }}
     />
 
     <Showcase
       title="Default"
       component={
-        <Carousel gap={30} slidesPerView={3} move={3}>
+        <Carousel.Root gap={30} slidesPerView={3} move={3}>
           <Carousel.Previous icon={Icons.ControlsChevronLeft} />
           <Carousel.Next icon={Icons.ControlsChevronRight} />
           <Carousel.Scroller>
@@ -51,9 +51,9 @@ export default () => (
               </Carousel.Slide>
             ))}
           </Carousel.Scroller>
-        </Carousel>
+        </Carousel.Root>
       }
-      code={`<Carousel gap={30} slidesPerView={3} move={3}>
+      code={`<Carousel.Root gap={30} slidesPerView={3} move={3}>
   <Carousel.Previous icon={Icons.ControlsChevronLeft} />
   <Carousel.Next icon={Icons.ControlsChevronRight} />
   <Carousel.Scroller>
@@ -63,13 +63,13 @@ export default () => (
       </Carousel.Slide>
     ))}
   </Carousel.Scroller>
-</Carousel>`}
+</Carousel.Root>`}
     />
 
     <Showcase
       title="Vertical"
       component={
-        <Carousel gap={30} orientation="vertical" maxSlideHeight={160}>
+        <Carousel.Root gap={30} orientation="vertical" maxSlideHeight={160}>
           <Carousel.Previous icon={Icons.ControlsChevronLeft} />
           <Carousel.Next icon={Icons.ControlsChevronRight} />
           <Carousel.Scroller>
@@ -79,9 +79,9 @@ export default () => (
               </Carousel.Slide>
             ))}
           </Carousel.Scroller>
-        </Carousel>
+        </Carousel.Root>
       }
-      code={`<Carousel gap={30} orientation="vertical" maxSlideHeight={160}>
+      code={`<Carousel.Root gap={30} orientation="vertical" maxSlideHeight={160}>
   <Carousel.Previous icon={Icons.ControlsChevronLeft} />
   <Carousel.Next icon={Icons.ControlsChevronRight} />
   <Carousel.Scroller>
@@ -91,13 +91,13 @@ export default () => (
       </Carousel.Slide>
     ))}
   </Carousel.Scroller>
-</Carousel>`}
+</Carousel.Root>`}
     />
 
     <Showcase
       title="Fade animation"
       component={
-        <Carousel class="h-48" gap={0}>
+        <Carousel.Root class="h-48" gap={0}>
           <Carousel.Previous icon={Icons.ControlsChevronLeft} />
           <Carousel.Next icon={Icons.ControlsChevronRight} />
           <div>
@@ -112,9 +112,9 @@ export default () => (
               </Carousel.Slide>
             ))}
           </div>
-        </Carousel>
+        </Carousel.Root>
       }
-      code={`<Carousel class="h-48" gap={0}>
+      code={`<Carousel.Root class="h-48" gap={0}>
   <Carousel.Previous icon={Icons.ControlsChevronLeft} />
   <Carousel.Next icon={Icons.ControlsChevronRight} />
   <div>
@@ -129,13 +129,13 @@ export default () => (
       </Carousel.Slide>
     ))}
   </div>
-</Carousel>`}
+</Carousel.Root>`}
     />
 
     <Showcase
       title="Pagination"
       component={
-        <Carousel gap={30}>
+        <Carousel.Root gap={30}>
           <Carousel.Scroller>
             {Array.from({ length: 5 }).map((_, label) => (
               <Carousel.Slide key={label} class="h-48">
@@ -148,9 +148,9 @@ export default () => (
               <Carousel.Bullet key={idx}>{idx}</Carousel.Bullet>
             ))}
           </Carousel.Pagination>
-        </Carousel>
+        </Carousel.Root>
       }
-      code={`<Carousel gap={30}>
+      code={`<Carousel.Root gap={30}>
   <Carousel.Scroller>
     {Array.from({ length: 5 }).map((_, label) => (
       <Carousel.Slide key={label} class="h-48">
@@ -165,13 +165,13 @@ export default () => (
       </Carousel.Bullet>
     ))}
   </Carousel.Pagination>
-</Carousel>`}
+</Carousel.Root>`}
     />
 
     <Showcase
       title="Stepper"
       component={
-        <Carousel gap={30}>
+        <Carousel.Root gap={30}>
           <Carousel.Stepper class="mb-4">
             {Array.from({ length: 3 }).map((_, index) => (
               <Carousel.Step key={index}>Header {index + 1}</Carousel.Step>
@@ -184,9 +184,9 @@ export default () => (
               </Carousel.Slide>
             ))}
           </Carousel.Scroller>
-        </Carousel>
+        </Carousel.Root>
       }
-      code={`<Carousel gap={30}>
+      code={`<Carousel.Root gap={30}>
   <Carousel.Stepper class="mb-4">
     {Array.from({ length: 3 }).map((_, index) => (
       <Carousel.Step key={index}>
@@ -201,7 +201,7 @@ export default () => (
       </Carousel.Slide>
     ))}
   </Carousel.Scroller>
-</Carousel>`}
+</Carousel.Root>`}
     />
   </div>
 );

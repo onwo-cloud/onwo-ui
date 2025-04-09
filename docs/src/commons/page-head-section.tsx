@@ -11,9 +11,9 @@ type PageHeadSectionProps = {
 export const PageHeadSection = (props: PageHeadSectionProps) => (
   <main class="onwo-no-format">
     <div class="pb-8 hidden lg:block">
-      <Breadcrumb separator={Icons.ArrowsRight}>
+      <Breadcrumb.Root separator={Icons.ArrowsRight}>
         {Breadcrumb.Link.fromList([{ to: '/', label: 'Home' }, ...props.breadcrumbs])}
-      </Breadcrumb>
+      </Breadcrumb.Root>
     </div>
 
     <div class="flex flex-col gap-2 flex-1 relative focus:outline-none mb-8">
