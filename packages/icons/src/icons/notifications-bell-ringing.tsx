@@ -1,7 +1,8 @@
-import { primitives as P } from '@onwo/ui';
+import type { IconProps } from '@onwo/primitives';
+import { SvgIcon } from '@onwo/primitives';
 
-export default (props: P.IconProps) => (
-  <P.SvgIcon data--icon-name="notifications-bell-ringing" {...props} viewBox="0 0 32 32">
+export default (props: IconProps) => (
+  <SvgIcon data--icon-name="notifications-bell-ringing" {...props} viewBox="0 0 32 32">
     <path
       d="M18.7021 22.6852C18.7021 24.2398 17.4093 25.5 15.8145 25.5C14.2197 25.5 12.9269 24.2398 12.9269 22.6852H18.7021Z"
       stroke="currentColor"
@@ -17,5 +18,5 @@ export default (props: P.IconProps) => (
       stroke="currentColor"
       stroke-linecap="round"
     />
-  </P.SvgIcon>
+  </SvgIcon>
 );

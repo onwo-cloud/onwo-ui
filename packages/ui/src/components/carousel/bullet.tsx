@@ -1,5 +1,5 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Carousel as C } from '~/primitives/carousel';
+import { Carousel as C } from '@onwo/primitives';
 import { cn } from '~/utils/cn';
 
 type BulletProps = PropsOf<typeof C.Bullet>;

@@ -51,12 +51,16 @@ jobs:
         working-directory: ./packages/tailwindcss
         run: yarn build
 
-      - name: Build ui library
-        working-directory: ./packages/ui
+      - name: Build primitives library
+        working-directory: ./packages/primitives
         run: yarn build
 
       - name: Build icons library
         working-directory: ./packages/icons
+        run: yarn build
+
+      - name: Build ui library
+        working-directory: ./packages/ui
         run: yarn build
 
       - name: Build documentation website

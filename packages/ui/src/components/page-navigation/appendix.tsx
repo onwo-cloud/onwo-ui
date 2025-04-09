@@ -1,7 +1,6 @@
 import type { ClassList } from '@builder.io/qwik';
 import { $ } from '@builder.io/qwik';
-import { PageNavigation } from '~/primitives';
-import type { NavigationElement } from '~/primitives/page-navigation/provider';
+import { PageNavigation } from '@onwo/primitives';
 import { cn } from '~/utils/cn';
 
 type AppendixProps = {
@@ -15,7 +14,7 @@ export const Appendix = (props: AppendixProps) => (
   <PageNavigation.Appendix
     maxLevelShown={props.maxLevelShown}
     class={cn('h-full', props.class)}
-    render$={$((elements: NavigationElement[]) => (
+    render$={$((elements: PageNavigation.NavigationElement[]) => (
       <div class={cn('flex flex-col gap-4', props.sticky && 'sticky top-0')}>
         <p class="text-onwo-10-caption font-semibold uppercase text-bulma">On this page</p>
         <ul class="flex text-trunks flex-col gap-1">

@@ -420,21 +420,25 @@
   resolved "https://registry.yarnpkg.com/@oddbird/popover-polyfill/-/popover-polyfill-0.4.3.tgz#310d61c8fc7ee12d8dba05cdfa8bd7e5d5a281a3"
   integrity sha512-kBS0ZAwH8kZqFl0mV89KPK4cLYl2ZoKSfYngK4dz1eLAhKzTK0yu4LrvLdMeM7JhjWK6GxBtiY+cl1s6vR2pUg==
 
-"@onwo/icons@link:icons":
+"@onwo/icons@link:packages/icons":
+  version "0.0.5-alpha"
+  dependencies:
+    "@onwo/ui" "link:packages/ui"
+    "@tailwindcss/vite" "^4.0.14"
+    clsx "^2.1.1"
+    tailwind-merge "^3.0.2"
+
+"@onwo/primitives@link:packages/primitives":
   version "0.0.0"
   uid ""
 
 "@onwo/tailwindcss@link:packages/tailwindcss":
-  version "0.0.4-alpha"
+  version "0.0.5-alpha"
   dependencies:
     postcss-selector-parser "6.0.10"
 
-"@onwo/tailwindcss@link:tailwindcss":
-  version "0.0.0"
-  uid ""
-
 "@onwo/ui@link:packages/ui":
-  version "0.0.4-alpha"
+  version "0.0.5-alpha"
   dependencies:
     "@floating-ui/core" "^1.6.2"
     "@floating-ui/dom" "^1.6.5"
@@ -445,10 +449,6 @@
     clsx "^2.1.1"
     focus-trap "7.5.4"
     tailwind-merge "^3.0.2"
-
-"@onwo/ui@link:ui":
-  version "0.0.0"
-  uid ""
 
 "@pkgr/core@^0.1.0":
   version "0.1.1"

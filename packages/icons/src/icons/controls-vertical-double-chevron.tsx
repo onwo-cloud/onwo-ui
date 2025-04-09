@@ -1,7 +1,8 @@
-import { primitives as P } from '@onwo/ui';
+import type { IconProps } from '@onwo/primitives';
+import { SvgIcon } from '@onwo/primitives';
 
-export default (props: P.IconProps) => (
-  <P.SvgIcon data--icon-name="controls-vertical-double-chevron" {...props} viewBox="0 0 32 32">
+export default (props: IconProps) => (
+  <SvgIcon data--icon-name="controls-vertical-double-chevron" {...props} viewBox="0 0 32 32">
     <path
       d="M11 13L16 8L21 13"
       stroke="currentColor"
@@ -14,5 +15,5 @@ export default (props: P.IconProps) => (
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </P.SvgIcon>
+  </SvgIcon>
 );

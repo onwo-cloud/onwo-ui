@@ -1,11 +1,12 @@
-import { primitives as P } from '@onwo/ui';
+import type { IconProps } from '@onwo/primitives';
+import { SvgIcon } from '@onwo/primitives';
 
-export default (props: P.IconProps) => (
-  <P.SvgIcon data--icon-name="shop-card" {...props} viewBox="0 0 32 32">
+export default (props: IconProps) => (
+  <SvgIcon data--icon-name="shop-card" {...props} viewBox="0 0 32 32">
     <path
       d="M7.23079 12.3636H24.7692M7.23079 16.7274H24.7692M6.5 12L6.5 20C6.5 22.2091 8.29086 24 10.5 24H21.5C23.7091 24 25.5 22.2091 25.5 20V12C25.5 9.79088 23.7091 8.00002 21.5 8.00002L10.5 8C8.29087 8 6.5 9.79086 6.5 12Z"
       stroke="currentColor"
       stroke-linecap="round"
     />
-  </P.SvgIcon>
+  </SvgIcon>
 );

@@ -1,7 +1,8 @@
-import { primitives as P } from '@onwo/ui';
+import type { IconProps } from '@onwo/primitives';
+import { SvgIcon } from '@onwo/primitives';
 
-export default (props: P.IconProps) => (
-  <P.SvgIcon data--icon-name="sport-ski-jumping" {...props} viewBox="0 0 32 32">
+export default (props: IconProps) => (
+  <SvgIcon data--icon-name="sport-ski-jumping" {...props} viewBox="0 0 32 32">
     <path
       d="M25.0785 8.30216C23.8819 8.79643 22.5447 8.32245 22.0917 7.24351C21.6387 6.16456 22.2415 4.88922 23.438 4.39495C24.6345 3.90068 25.9717 4.37466 26.4247 5.4536C26.8777 6.53255 26.275 7.80789 25.0785 8.30216Z"
       stroke="currentColor"
@@ -17,5 +18,5 @@ export default (props: P.IconProps) => (
       stroke="currentColor"
       stroke-linecap="round"
     />
-  </P.SvgIcon>
+  </SvgIcon>
 );

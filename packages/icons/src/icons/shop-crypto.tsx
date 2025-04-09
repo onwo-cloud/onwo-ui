@@ -1,7 +1,8 @@
-import { primitives as P } from '@onwo/ui';
+import type { IconProps } from '@onwo/primitives';
+import { SvgIcon } from '@onwo/primitives';
 
-export default (props: P.IconProps) => (
-  <P.SvgIcon data--icon-name="shop-crypto" {...props} viewBox="0 0 32 32">
+export default (props: IconProps) => (
+  <SvgIcon data--icon-name="shop-crypto" {...props} viewBox="0 0 32 32">
     <path
       d="M8 8.5H18.9091C19.8735 8.5 20.7984 8.89501 21.4804 9.59827C22.1623 10.3015 22.5455 11.2554 22.5455 12.25C22.5455 13.2446 22.1623 14.1985 21.4804 14.9017C20.7984 15.605 19.8735 16 18.9091 16"
       stroke="currentColor"
@@ -34,5 +35,5 @@ export default (props: P.IconProps) => (
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </P.SvgIcon>
+  </SvgIcon>
 );

@@ -1,4 +1,4 @@
-import { Accordion } from '~/primitives';
+import { Accordion } from '@onwo/primitives';
 import type { Primitive } from '~/utils/types';
 
 export type RootProps = Primitive<'div'> & {

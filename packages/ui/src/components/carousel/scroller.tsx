@@ -1,5 +1,5 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Carousel as C } from '~/primitives/carousel';
+import { Carousel as C } from '@onwo/primitives';
 
 type ScrollerProps = PropsOf<typeof C.Scroller>;
 

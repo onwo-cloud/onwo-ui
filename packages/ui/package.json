@@ -41,6 +41,7 @@
   "devDependencies": {
     "@builder.io/qwik": "1.12.1",
     "@onwo/tailwindcss": "link:../tailwindcss",
+    "@onwo/primitives": "link:../primitives",
     "@tailwindcss/vite": "^4.0.12",
     "@types/node": "20.14.11",
     "@types/tailwindcss": "^3.1.0",
@@ -52,18 +53,15 @@
     "vite": "5.3.5",
     "vite-tsconfig-paths": "^4.2.1"
   },
+  "peerDependencies": {
+    "@onwo/icons": "*",
+    "@onwo/primitives": "*",
+    "@onwo/tailwindcss": "*"
+  },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@floating-ui/core": "^1.6.2",
-    "@floating-ui/dom": "^1.6.5",
-    "@oddbird/popover-polyfill": "0.4.3",
     "@tailwindcss/vite": "^4.0.14",
-    "body-scroll-lock-upgrade": "^1.1.0",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "focus-trap": "7.5.4",
-    "tailwind-merge": "^3.0.2"
   }
 }

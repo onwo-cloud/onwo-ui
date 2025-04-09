@@ -1,6 +1,6 @@
 import type { JSXOutput, PropsOf } from '@builder.io/qwik';
-import type { IconProps } from '~/primitives';
-import { Carousel as C } from '~/primitives/carousel';
+import type { IconProps } from '@onwo/primitives';
+import { Carousel as C } from '@onwo/primitives';
 
 type NextProps = PropsOf<typeof C.Previous> & {
   icon: (props: IconProps) => JSXOutput;

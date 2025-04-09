@@ -1,3 +1,3 @@
-export * as primitives from './primitives';
+export * as primitives from '@onwo/primitives';
 export * from './components';
 export { cn } from './utils/cn';

@@ -1,5 +1,5 @@
 import type { JSXChildren, JSXOutput } from '@builder.io/qwik';
-import type { IconProps } from '~/primitives';
+import type { IconProps } from '@onwo/primitives';
 import { withAs } from '~/utils/as';
 import { cn } from '~/utils/cn';
 

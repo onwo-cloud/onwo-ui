@@ -41,6 +41,7 @@
   "devDependencies": {
     "@builder.io/qwik": "1.12.1",
     "@onwo/tailwindcss": "link:../tailwindcss",
+    "@onwo/primitives": "link:../primitives",
     "@tailwindcss/vite": "^4.0.12",
     "@types/node": "20.14.11",
     "@types/tailwindcss": "^3.1.0",
@@ -52,12 +53,14 @@
     "vite": "5.3.5",
     "vite-tsconfig-paths": "^4.2.1"
   },
+  "peerDependencies": {
+    "@onwo/primitives": "*"
+  },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
-    "@onwo/ui": "link:../ui",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.0.2"
   }

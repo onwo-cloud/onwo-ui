@@ -2,3 +2,5 @@
 ../packages/ui/lib-types/
 ../packages/icons/lib/
 ../packages/icons/lib-types/
+../packages/primitives/lib
+../packages/primitives/lib-types

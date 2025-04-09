@@ -1,8 +1,12 @@
-import { Accordion, SvgIcon } from '~/primitives';
-import type { TriggerProps } from '~/primitives/accordion/trigger';
+import type { PropsOf } from '@builder.io/qwik';
+import { Accordion, SvgIcon } from '@onwo/primitives';
 import { cn } from '~/utils/cn';
 
-export const Trigger = ({ children, class: className, ...props }: TriggerProps) => {
+export const Trigger = ({
+  children,
+  class: className,
+  ...props
+}: PropsOf<typeof Accordion.Trigger>) => {
   return (
     <Accordion.Trigger
       class={cn(

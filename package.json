@@ -4,6 +4,7 @@
   "workspaces": [
     "docs",
     "packages/tailwindcss",
+    "packages/primitives",
     "packages/ui",
     "packages/icons"
   ],

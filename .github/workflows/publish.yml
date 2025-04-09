@@ -59,8 +59,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Build & publish ui package
-        working-directory: ./packages/ui
+      - name: Build & publish primitives package
+        working-directory: ./packages/primitives
         run: |
           yarn build
           yarn publish --access public || true
@@ -69,6 +69,14 @@ jobs:
 
       - name: Build & publish icon package
         working-directory: ./packages/icons
+        run: |
+          yarn build
+          yarn publish --access public || true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build & publish ui package
+        working-directory: ./packages/ui
         run: |
           yarn build
           yarn publish --access public || true

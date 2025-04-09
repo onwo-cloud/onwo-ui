@@ -1,6 +1,6 @@
 import type { Component, JSX, QwikHTMLElements } from '@builder.io/qwik';
-import { Button as BaseButton } from '~/primitives/button';
-import type { IconProps, IconSize } from '~/primitives/svg-icon';
+import { Button as BaseButton } from '@onwo/primitives';
+import type { IconProps, IconSize } from '@onwo/primitives';
 import { cn } from '~/utils/cn';
 import type { OneKeyOf } from '~/utils/types';
 
