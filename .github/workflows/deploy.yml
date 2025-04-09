@@ -48,15 +48,15 @@ jobs:
         run: yarn install
 
       - name: Build tailwindcss plugin
-        working-directory: ./tailwindcss
+        working-directory: ./packages/tailwindcss
         run: yarn build
 
       - name: Build ui library
-        working-directory: ./ui
+        working-directory: ./packages/ui
         run: yarn build
 
       - name: Build icons library
-        working-directory: ./icons
+        working-directory: ./packages/icons
         run: yarn build
 
       - name: Build documentation website

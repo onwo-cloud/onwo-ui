@@ -3,9 +3,9 @@
   "name": "onwo-ui",
   "workspaces": [
     "docs",
-    "tailwindcss",
-    "ui",
-    "icons"
+    "packages/tailwindcss",
+    "packages/ui",
+    "packages/icons"
   ],
   "devDependencies": {
     "@types/eslint": "^9.6.1",

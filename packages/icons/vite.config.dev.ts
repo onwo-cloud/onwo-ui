@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import { baseConfig } from "./vite.config";
-import { hackwatcher } from '../misc/hackwatcher';
+import { hackwatcher } from '../../misc/hackwatcher';
 
 // This will update the index.ts utime every time the tailwind plugin
 // is updated.

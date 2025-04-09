@@ -421,19 +421,19 @@
   integrity sha512-kBS0ZAwH8kZqFl0mV89KPK4cLYl2ZoKSfYngK4dz1eLAhKzTK0yu4LrvLdMeM7JhjWK6GxBtiY+cl1s6vR2pUg==
 
 "@onwo/icons@link:icons":
-  version "0.0.4-alpha"
-  dependencies:
-    "@onwo/ui" "link:ui"
-    "@tailwindcss/vite" "^4.0.14"
-    clsx "^2.1.1"
-    tailwind-merge "^3.0.2"
+  version "0.0.0"
+  uid ""
 
-"@onwo/tailwindcss@link:tailwindcss":
+"@onwo/tailwindcss@link:packages/tailwindcss":
   version "0.0.4-alpha"
   dependencies:
     postcss-selector-parser "6.0.10"
 
-"@onwo/ui@link:ui":
+"@onwo/tailwindcss@link:tailwindcss":
+  version "0.0.0"
+  uid ""
+
+"@onwo/ui@link:packages/ui":
   version "0.0.4-alpha"
   dependencies:
     "@floating-ui/core" "^1.6.2"
@@ -445,6 +445,10 @@
     clsx "^2.1.1"
     focus-trap "7.5.4"
     tailwind-merge "^3.0.2"
+
+"@onwo/ui@link:ui":
+  version "0.0.0"
+  uid ""
 
 "@pkgr/core@^0.1.0":
   version "0.1.1"
@@ -6074,11 +6078,6 @@ ts-api-utils@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-2.0.1.tgz#660729385b625b939aaa58054f45c058f33f10cd"
   integrity sha512-dnlgjFSVetynI8nzgJ+qF62efpglpWRk8isUEWZGWlJYySCTD6aKvbUDu+zbPeDakk3bg5H4XpitHukgfL1m9w==
-
-ts-essentials@^10.0.4:
-  version "10.0.4"
-  resolved "https://registry.yarnpkg.com/ts-essentials/-/ts-essentials-10.0.4.tgz#db8381c2e44cddb3339a2286174c4763bc1dcedb"
-  integrity sha512-lwYdz28+S4nicm+jFi6V58LaAIpxzhg9rLdgNC1VsdP/xiFBseGhF1M/shwCk6zMmwahBZdXcl34LVHrEang3A==
 
 tsconfck@^3.0.3:
   version "3.1.5"

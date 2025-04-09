@@ -7,11 +7,7 @@ on:
   push:
     branches: ["main"]
     paths:
-      - 'tailwindcss/**'
-      - 'ui/**'
-      - 'icons/**'
-      - 'package.json'
-      - 'yarn.lock'
+      - 'packages/**/package.json'
 
   workflow_dispatch:
 
@@ -44,77 +40,36 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Check for changes
+        id: check-changes
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            changed:
+              - 'packages/**/package.json'
+
       - name: Install dependencies
         run: yarn install
 
-      - name: Check for tailwind changes
-        id: check-tailwind
-        uses: dorny/paths-filter@v2
-        with:
-          filters: |
-            tailwind:
-              - 'tailwindcss/**'
-              - 'package.json'
-              - 'yarn.lock'
-
-      - name: Check for UI changes
-        id: check-ui
-        uses: dorny/paths-filter@v2
-        with:
-          filters: |
-            ui:
-              - 'ui/**'
-              - 'package.json'
-              - 'yarn.lock'
-
-      - name: Check for icons changes
-        id: check-icons
-        uses: dorny/paths-filter@v2
-        with:
-          filters: |
-            icons:
-              - 'icons/**'
-              - 'package.json'
-              - 'yarn.lock'
-
       - name: Build & publish tailwindcss package
-        if: ${{ steps.check-tailwind.outputs.tailwind == 'true' || github.event_name == 'workflow_dispatch' }}
+        working-directory: ./packages/tailwindcss
         run: |
-          cd tailwindcss
-          yarn install
           yarn build
           yarn publish --access public || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-
       - name: Build & publish ui package
-        if: ${{ steps.check-ui.outputs.ui == 'true' || github.event_name == 'workflow_dispatch' }}
+        working-directory: ./packages/ui
         run: |
-          # tailwindcss plugin built step could have been skipped
-          # so we rebuild it.
-          cd tailwindcss
-          yarn install
-          yarn build
-
-          cd ../ui
-          yarn install
           yarn build
           yarn publish --access public || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Build & publish icon package
-        if: ${{ steps.check-icons.outputs.icons == 'true' || github.event_name == 'workflow_dispatch' }}
+        working-directory: ./packages/icons
         run: |
-          # tailwindcss plugin built step could have been skipped
-          # so we rebuild it.
-          cd tailwindcss
-          yarn install
-          yarn build
-
-          cd ../icons
-          yarn install
           yarn build
           yarn publish --access public || true
         env:

@@ -1,7 +1,7 @@
 module.exports = {
   plugins: ['qwik'],
   extends: [
-    '../.eslintrc.cjs',
+    '../../.eslintrc.cjs',
     'plugin:qwik/recommended'
   ],
   parserOptions: {
