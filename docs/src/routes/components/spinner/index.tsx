@@ -17,7 +17,9 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: ``,
+        Default: `import { Spinner } from '@onwo/ui';
+
+<Spinner />`,
       }}
     />
 
@@ -28,7 +30,43 @@ export default () => (
           <Spinner />
         </div>
       }
-      code={``}
+      code={`<Spinner />`}
+    />
+
+    <Showcase
+      title="Sizes"
+      component={
+        <div class="flex gap-2 flex-wrap items-center justify-around">
+          <Spinner size="xs" />
+          <Spinner size="sm" />
+          <Spinner />
+          <Spinner size="lg" />
+          <Spinner size="xl" />
+          <Spinner size={48} />
+        </div>
+      }
+      code={`<Spinner size="xs" />
+<Spinner size="sm" />
+<Spinner />
+<Spinner size="lg" />
+<Spinner size="xl" />
+<Spinner size={48} />`}
+    />
+
+    <Showcase
+      title="Colors"
+      component={
+        <div class="flex gap-2 flex-wrap items-center justify-around">
+          <Spinner class="text-roshi" />
+          <Spinner class="text-krillin" />
+          <Spinner class="text-dodoria" />
+          <Spinner class="text-whis" />
+        </div>
+      }
+      code={`<Spinner class="text-roshi" />
+<Spinner class="text-krillin" />
+<Spinner class="text-dodoria" />
+<Spinner class="text-whis" />`}
     />
   </div>
 );
