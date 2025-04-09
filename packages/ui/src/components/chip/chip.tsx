@@ -1,5 +1,5 @@
+import { cn } from '@onwo/primitives';
 import { withAs } from '~/utils/as';
-import { cn } from '~/utils/cn';
 
 export type ChipSize = 'sm' | 'md';
 export type ChipVariant =

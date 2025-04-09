@@ -1,6 +1,5 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Carousel as C } from '@onwo/primitives';
-import { cn } from '~/utils/cn';
+import { Carousel as C, cn } from '@onwo/primitives';
 
 type PaginationProps = PropsOf<typeof C.Pagination>;
 

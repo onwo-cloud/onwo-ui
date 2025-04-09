@@ -1,5 +1,5 @@
 import type { PropFunction, QRL } from '@builder.io/qwik';
-import { cn } from '~/utils/cn';
+import { cn } from '@onwo/primitives';
 
 type CalendarGridButtonProps = {
   class?: string;

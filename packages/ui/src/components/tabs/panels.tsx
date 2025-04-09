@@ -1,5 +1,4 @@
-import { Tabs } from '@onwo/primitives';
-import { cn } from '~/utils/cn';
+import { Tabs, cn } from '@onwo/primitives';
 
 export type PanelsProps = Tabs.PanelsProps;
 

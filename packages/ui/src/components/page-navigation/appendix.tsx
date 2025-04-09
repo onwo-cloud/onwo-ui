@@ -1,7 +1,6 @@
 import type { ClassList } from '@builder.io/qwik';
 import { $ } from '@builder.io/qwik';
-import { PageNavigation } from '@onwo/primitives';
-import { cn } from '~/utils/cn';
+import { PageNavigation, cn } from '@onwo/primitives';
 
 type AppendixProps = {
   class?: ClassList;

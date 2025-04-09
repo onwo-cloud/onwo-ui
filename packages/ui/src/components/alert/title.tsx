@@ -1,5 +1,5 @@
+import { cn } from '@onwo/primitives';
 import { withAs } from '~/utils/as';
-import { cn } from '~/utils/cn';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 type TitleProps = {};

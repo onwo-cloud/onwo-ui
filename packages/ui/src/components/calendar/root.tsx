@@ -1,6 +1,7 @@
 import { $, component$, useSignal, useTask$ } from '@builder.io/qwik';
 import type { JSXChildren, PropFunction, QRL, Signal } from '@builder.io/qwik';
-import { cn } from '~/utils/cn';
+import { Icons } from '@onwo/icons';
+import { cn } from '@onwo/primitives';
 import type { OneObjectOf } from '~/utils/types';
 import {
   addMonths,
@@ -16,7 +17,6 @@ import { CalendarViewDays } from './views/days';
 import { CalendarViewDecade } from './views/decades';
 import { CalendarViewMonth } from './views/months';
 import { CalendarViewYear } from './views/years';
-import { Icons } from '@onwo/icons';
 
 type RootProps = {
   ref?: Signal<HTMLDivElement | undefined>;

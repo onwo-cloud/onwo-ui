@@ -1,8 +1,8 @@
 import type { JSXChildren, JSXOutput } from '@builder.io/qwik';
 import { Icons } from '@onwo/icons';
 import type { IconProps } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
 import { withAs } from '~/utils/as';
-import { cn } from '~/utils/cn';
 
 type RootProps = {
   children: JSXChildren[];

@@ -1,6 +1,6 @@
 import { $, component$, useComputed$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import type { QRL } from '@builder.io/qwik';
-import { cn } from '~/utils/cn';
+import { cn } from '@onwo/primitives';
 import { Views } from './date-picker-helpers';
 
 export type TimeModuleProps = {

@@ -1,6 +1,5 @@
-import { SvgIcon } from '@onwo/primitives';
+import { SvgIcon, cn } from '@onwo/primitives';
 import { withAs } from '~/utils/as';
-import { cn } from '~/utils/cn';
 import type { OneKeyOf } from '~/utils/types';
 
 export type RootSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';

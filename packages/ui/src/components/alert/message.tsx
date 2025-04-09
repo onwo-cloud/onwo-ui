@@ -1,6 +1,6 @@
 import type { JSXChildren } from '@builder.io/qwik';
+import { cn } from '@onwo/primitives';
 import { withAs } from '~/utils/as';
-import { cn } from '~/utils/cn';
 
 export type MessageProps = {
   children: JSXChildren;

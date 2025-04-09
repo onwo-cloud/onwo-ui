@@ -1,6 +1,5 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Accordion, SvgIcon } from '@onwo/primitives';
-import { cn } from '~/utils/cn';
+import { Accordion, SvgIcon, cn } from '@onwo/primitives';
 
 export const Trigger = ({
   children,

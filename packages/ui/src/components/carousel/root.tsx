@@ -1,7 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Carousel as C } from '@onwo/primitives';
+import { Carousel as C, cn } from '@onwo/primitives';
 
-import { cn } from '~/utils/cn';
 import { Bullet } from './bullet';
 import { Slide } from './slide';
 import { Step } from './step';

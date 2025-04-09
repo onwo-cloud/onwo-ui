@@ -1,4 +1,4 @@
-import { cn } from '~/utils/cn';
+import { cn } from '@onwo/primitives';
 import type { Primitive } from '~/utils/types';
 
 type Y = 'top' | 'bottom';
