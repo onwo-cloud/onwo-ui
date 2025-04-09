@@ -1,11 +1,11 @@
 set dotenv-load := true
 
 workspace CMD:
-    yarn --cwd=tailwindcss         {{CMD}} || true
-    yarn --cwd=packages/primitives {{CMD}} || true
-    yarn --cwd=packages/ui         {{CMD}} || true
-    yarn --cwd=packages/icons      {{CMD}} || true
-    yarn --cwd=packages/docs       {{CMD}} || true
+    yarn --cwd=packages/tailwindcss {{CMD}} || true
+    yarn --cwd=packages/primitives  {{CMD}} || true
+    yarn --cwd=packages/ui          {{CMD}} || true
+    yarn --cwd=packages/icons       {{CMD}} || true
+    yarn --cwd=docs                 {{CMD}} || true
 
 lint:
   #!/usr/bin/env bash

@@ -64,18 +64,24 @@ export const Spinner = component$(
     // eslint-disable-next-line qwik/use-method-usage
     const sizePx = useComputed$(() => {
       switch (size) {
-        case 'xs':
+        case 'xs': {
           return 12;
-        case 'sm':
+        }
+        case 'sm': {
           return 16;
-        case 'md':
+        }
+        case 'md': {
           return 24;
-        case 'lg':
+        }
+        case 'lg': {
           return 28;
-        case 'xl':
+        }
+        case 'xl': {
           return 36;
-        default:
+        }
+        default: {
           return size;
+        }
       }
     });
 
