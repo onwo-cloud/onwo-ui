@@ -12,17 +12,33 @@ export type Primitive<T extends keyof QwikHTMLElements> = Omit<QwikHTMLElements[
   style?: CSSProperties;
 };
 
+type KeysOfUnion<T> = T extends any ? keyof T : never;
+
+/* Produces a discriminated union type between an object key.
+ *
+ * EXAMPLE:
+ *
+ * OneKeyOf<{ a: A, b: B }>
+ *  ^? { a: A, b?: undefined } | { a?: undefined, b: B }
+ */
 export type OneKeyOf<T, K extends keyof T = keyof T> = Prettify<
   {
     [P in K]: { [Q in P]: T[P] } & { [Q in Exclude<K, P>]?: never };
   }[K]
 >;
 
-// Helper types
-type KeysOfUnion<T> = T extends any ? keyof T : never;
-
-export type OneObjectOf<T extends Record<any, unknown>[]> = {
-  [K in keyof T]: T[K] & {
-    [P in Exclude<KeysOfUnion<T[number]>, keyof T[K]>]?: never;
-  };
-}[number];
+/* Produces a discriminated union type between a tuple of objects.
+ *
+ * EXAMPLE:
+ *
+ * OneObjectOf<[{ a: A, c: C }, { b: B, c: C }]>
+ *  ^? { a: A, c: C, b?: undefined } |
+ *     { b: B, c: C, a?: undefined }
+ */
+export type OneObjectOf<T extends Record<any, unknown>[]> = Prettify<
+  {
+    [K in keyof T]: T[K] & {
+      [P in Exclude<KeysOfUnion<T[number]>, keyof T[K]>]?: never;
+    };
+  }[number]
+>;

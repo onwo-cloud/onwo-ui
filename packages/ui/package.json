@@ -40,9 +40,9 @@
   },
   "devDependencies": {
     "@builder.io/qwik": "1.12.1",
-    "@onwo/tailwindcss": "link:../tailwindcss",
-    "@onwo/primitives": "link:../primitives",
     "@onwo/icons": "link:../icons",
+    "@onwo/primitives": "link:../primitives",
+    "@onwo/tailwindcss": "link:../tailwindcss",
     "@tailwindcss/vite": "^4.0.12",
     "@types/node": "20.14.11",
     "@types/tailwindcss": "^3.1.0",

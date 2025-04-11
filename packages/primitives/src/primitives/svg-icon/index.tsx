@@ -1,15 +1,17 @@
 import type { ClassList, JSXChildren, QwikIntrinsicElements } from '@builder.io/qwik';
+import { match } from '~/utils/match';
 
-export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | `${number}rem`;
 
 const getIconSizePx = (size: IconSize) =>
-  ({
-    xs: '1rem',
-    sm: '1.25rem',
-    md: '1.5rem',
-    lg: '2rem',
-    xl: '2.5rem',
-  })[size];
+  match(size, {
+    xs: () => '1rem',
+    sm: () => '1.25rem',
+    md: () => '1.5rem',
+    lg: () => '2rem',
+    xl: () => '2.5rem',
+    _: () => size,
+  });
 
 export type IconProps = {
   size?: IconSize;

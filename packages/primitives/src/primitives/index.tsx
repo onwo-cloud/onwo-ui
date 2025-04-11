@@ -6,6 +6,7 @@ export * as PageNavigation from './page-navigation';
 export * as Accordion from './accordion';
 export * as Carousel from './carousel';
 export { Separator, type SeparatorProps } from './separator';
+export { Animated } from './animated';
 
 export * as Checkbox from './checkbox';
 export * as Checklist from './checklist';

@@ -41,7 +41,7 @@ export const baseConfig = {
     tsconfigPaths(),
     tailwindcss({
       plugins: [onwoTailwindPlugin],
-    })
+    }),
   ],
 } satisfies UserConfig;
 

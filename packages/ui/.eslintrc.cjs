@@ -7,6 +7,9 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
+  rules: {
+    'qwik/use-method-usage': 'warn',
+  },
   settings: {
     'import/resolver': {
       typescript: {

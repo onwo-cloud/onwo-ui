@@ -7,6 +7,7 @@ export * as Accordion from './accordion';
 export { Alert } from './alert';
 export { Chip } from './chip';
 export { Spinner } from './spinner';
+export { BackdropOverlay } from './backdrop-overlay';
 export * as Masonry from './masonry';
 export * as Carousel from './carousel';
 export { Calendar } from './calendar';

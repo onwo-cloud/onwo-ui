@@ -110,7 +110,11 @@ export default component$(() => {
                 <div class="flex flex-col gap-1">
                   <SidebarButtonSmall href="/components/accordion">Accordion</SidebarButtonSmall>
                   <SidebarButtonSmall href="/components/alert">Alert</SidebarButtonSmall>
+                  <SidebarButtonSmall href="/components/animated">Animated</SidebarButtonSmall>
                   <SidebarButtonSmall href="/components/avatar">Avatar</SidebarButtonSmall>
+                  <SidebarButtonSmall href="/components/backdrop-overlay">
+                    Backdrop Overlay
+                  </SidebarButtonSmall>
                   <SidebarButtonSmall disabled href="/components/bottom-sheet">
                     Bottom Sheet
                   </SidebarButtonSmall>

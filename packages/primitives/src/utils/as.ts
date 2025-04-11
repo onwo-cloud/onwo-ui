@@ -14,7 +14,9 @@ export type WithAsProps<V, T extends As = As> = V &
 
 export const withAs =
   <R extends As>(defaultTag: R) =>
-  <V extends Record<string, any>>(comp: Comp<V, R>) => {
+  <V extends Record<string, any>>(
+    comp: Comp<V, R>,
+  ): (<T extends As = R>(props: WithAsProps<V, T>) => JSXOutput) => {
     return ((props: WithAsProps<V>) => {
       const { as, ...restProps } = props;
       const Tag = (as ?? defaultTag) as any;
