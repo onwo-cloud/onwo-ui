@@ -12,6 +12,7 @@
     "moduleResolution": "Bundler",
     "incremental": true,
     "types": ["vite/client"],
+    "outDir": "./lib",
     "paths": {
       "~/*": ["./src/*"]
     }

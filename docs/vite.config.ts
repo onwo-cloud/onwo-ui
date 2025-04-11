@@ -1,16 +1,16 @@
 import { UserConfig, defineConfig } from "vite";
-import { qwikVite } from "@builder.io/qwik/optimizer";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { qwikCity } from "@builder.io/qwik-city/vite";
 import { staticAdapter } from "@builder.io/qwik-city/adapters/static/vite";
 import tailwindcss from '@tailwindcss/vite'
+import { qwikVite } from "@builder.io/qwik/optimizer";
 
 export const baseConfig = {
   plugins: [
     qwikCity({}),
     qwikVite(),
     tsconfigPaths(),
-    tailwindcss()
+    tailwindcss(),
   ],
 } satisfies UserConfig;
 

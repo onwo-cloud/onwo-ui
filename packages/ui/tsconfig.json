@@ -9,6 +9,7 @@
     "declaration": true,
     "declarationDir": "lib-types",
     "declarationMap": true,
+    "outDir": "./lib",
     "moduleResolution": "Bundler",
     "incremental": true,
     "types": ["vite/client"],
