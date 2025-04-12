@@ -54,16 +54,16 @@ export type Animation = {
   fillMode?: AnimationFillMode;
   iterationCount?: number | 'infinite';
   playState?: 'running' | 'paused';
-  timingFunction?: BuiltinTimingFunction | { custom: string };
+  timing?: BuiltinTimingFunction | { custom: string };
 } & AnimationKind;
 
 export type AnimatedProps = {
-  visible?: Signal<boolean>;
+  ['bind:visible']?: Signal<boolean>;
   in?: Animation;
   out?: Animation;
 };
 
-const getTimingFunction = (timingFunction?: Animation['timingFunction']) => {
+const getTimingFunction = (timingFunction?: Animation['timing']) => {
   if (!timingFunction) return 'ease';
   if (typeof timingFunction !== 'string') return timingFunction.custom;
   return builtinTimings[timingFunction];
@@ -79,7 +79,7 @@ const getAnimationStyle = (animType: 'in' | 'out', animation: Animation) => {
     fillMode = 'forwards',
     iterationCount = 1,
     playState,
-    timingFunction,
+    timing: timingFunction,
     ...kind
   } = animation;
 
@@ -122,7 +122,7 @@ const getAnimationStyle = (animType: 'in' | 'out', animation: Animation) => {
 
 const AnimatedRaw = withAs('div')<AnimatedProps>(({
   As,
-  visible,
+  'bind:visible': visible,
   style,
   in: inAnimation,
   out: outAnimation,

@@ -65,7 +65,7 @@ export default () => (
 );
 
 export const head: DocumentHead = buildHead({
-  title: 'P.Select - Onwo UI',
+  title: 'Select - Onwo UI',
   description:
     'Customizable dropdown components using tailwind css and qwik.js for fast, responsive, and user-friendly interfaces. Explore our UI library for more components.',
 });

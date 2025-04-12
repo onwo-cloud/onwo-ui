@@ -8,6 +8,7 @@ import { buildHead } from '~/utils/build-head';
 
 export default component$(() => {
   const visible = useSignal<boolean>(false);
+
   return (
     <div>
       <PageHeadSection
@@ -24,25 +25,23 @@ export default component$(() => {
         variants={{
           Default: `import { BackdropOverlay } from '@onwo/ui';
 
-<BackdropOverlay open />`,
+const opened = useSignal<boolean>(false);
+<BackdropOverlay bind:open={opened} />`,
         }}
       />
 
       <Showcase
         title="Default"
         component={
-          <div class="flex justify-center">
-            <BackdropOverlay open={visible.value} onClick$={() => (visible.value = false)} />
-            <Button
-              onClick$={$(() => {
-                visible.value = true;
-              })}
-            >
-              Show overlay
-            </Button>
+          <div class="relative flex justify-center">
+            <BackdropOverlay bind:open={visible} />
+            <Button onClick$={$(() => (visible.value = true))}>Show overlay</Button>
           </div>
         }
-        code={`<Button> Default </Button>`}
+        code={`const opened = useSignal<boolean>(false);
+
+<Button onClick$={$(() => (visible.value = true))}>Show overlay</Button>
+<BackdropOverlay bind:open={opened} />`}
       />
     </div>
   );

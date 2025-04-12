@@ -49,7 +49,7 @@ export default component$(() => {
               Animate {visibleBox.value ? 'out' : 'in'}
             </Button>
             <Animated
-              visible={visibleBox}
+              bind:visible={visibleBox}
               in={{ timing: 'ease-in', opacity: 0, slide: { x: '-5rem' } }}
               out={{ timing: 'ease-in', opacity: 0, slide: { x: '5rem' } }}
               class="w-fit"
@@ -61,7 +61,7 @@ export default component$(() => {
         code={`const visibleBox = useSignal<boolean>(true);
 
 <Animated
-  visible={visibleBox}
+  bind:visible={visibleBox}
   in={{ timing: 'ease-in', opacity: 0, slide: { x: '-5rem' } }}
   out={{ timing: 'ease-in', opacity: 0, slide: { x: '5rem' } }}
   class="w-fit"
