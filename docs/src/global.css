@@ -2,8 +2,9 @@
 @import "tailwindcss";
 @plugin '../../packages/tailwindcss';
 
-@source "../../packages/ui/lib";
-@source "../../packages/icons/lib";
+@source "../../packages/ui/src/";
+@source "../../packages/primitives/src/";
+@source "../../packages/icons/src/";
 
 @custom-variant dark (&:is(body[data-color-mode='dark'], body[data-color-mode="dark"] *, .dark, .dark *));
 

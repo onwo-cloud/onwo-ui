@@ -1,1 +1,8 @@
-dist
+*
+
+!src/
+!themes/
+!.eslintrc.cjs
+!.gitignore
+!package.json
+!tsconfig.json

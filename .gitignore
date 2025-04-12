@@ -1,57 +1,86 @@
-insp
+# Tailwind v4 gitignore parsing is currently broken, see:
+# https://github.com/tailwindlabs/tailwindcss/issues/15452
+# Uncomment this star when fixed:
+# *
 
-node_modules
-
-# Build
-.env
-/dist
-/lib
-/lib-types
-/server
-
-# Development
-node_modules
-*.local
-
-# Cache
-.cache
-.mf
-.rollup.cache
-tsconfig.tsbuildinfo
-
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-# Editor
-.vscode/*
-!.vscode/launch.json
-!.vscode/*.code-snippets
-
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-*.timestamp-*.mjs
+# And delete this:
+.direnv/
+docs/dist/
+docs/lib-types/
+docs/node_modules/
+docs/server/
+docs/tsconfig.tsbuildinfo
+node_modules/
+packages/icons/lib-types/
+packages/icons/lib/
+packages/icons/node_modules/
+packages/icons/tsconfig.tsbuildinfo
+packages/primitives/lib-types/
+packages/primitives/lib/
+packages/primitives/node_modules/
+packages/primitives/tsconfig.tsbuildinfo
+packages/ui/lib-types/
+packages/ui/lib/
+packages/ui/node_modules/
+packages/ui/tsconfig.tsbuildinfo
 
 
-# Yarn
-.yarn/*
-!.yarn/releases
+# Root
+!.eslintrc.cjs
+!.github/
+!.gitignore
+!.prettierrc.cjs
+!examples/
+!Justfile
+!misc/
+!package.json
+!README.md
+!shell.nix
+!tsconfig.base.json
+!yarn.lock
 
-# Nix
-.direnv
+# Docs
+!docs/public/
+!docs/src/
+!docs/.eslintignore
+!docs/.eslintrc.cjs
+!docs/package.json
+!docs/q-insights.ts
+!docs/README.md
+!docs/tsconfig.json
+!docs/vite.config.client.ts
+!docs/vite.config.dev.ts
+!docs/vite.config.ts
 
-# Misc
-TODO.txt
-pwa
+# Icons
+!packages/icons/src/
+!packages/icons/.eslintignore
+!packages/icons/.eslintrc.cjs
+!packages/icons/.gitignore
+!packages/icons/package.json
+!packages/icons/tsconfig.json
+!packages/icons/tsconfig.tsbuildinfo
+!packages/icons/vite.config.dev.ts
+!packages/icons/vite.config.ts
 
-.aider*
+# Primitives
+!packages/primitives/src/
+!packages/primitives/.eslintignore
+!packages/primitives/.eslintrc.cjs
+!packages/primitives/.gitignore
+!packages/primitives/package.json
+!packages/primitives/tsconfig.json
+!packages/primitives/tsconfig.tsbuildinfo
+!packages/primitives/vite.config.dev.ts
+!packages/primitives/vite.config.ts
+
+# UI
+!packages/ui/src/
+!packages/ui/.eslintignore
+!packages/ui/.eslintrc.cjs
+!packages/ui/.gitignore
+!packages/ui/package.json
+!packages/ui/tsconfig.json
+!packages/ui/tsconfig.tsbuildinfo
+!packages/ui/vite.config.dev.ts
+!packages/ui/vite.config.ts
