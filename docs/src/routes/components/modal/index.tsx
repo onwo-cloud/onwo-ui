@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { primitives as P } from '@onwo/ui';
+import { Modal } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -17,38 +17,40 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: `<P.Modal.Root>
-  <P.Modal.Trigger class="modal-trigger">Open Modal</P.Modal.Trigger>
-  <P.Modal.Panel class="modal-panel">
-    <P.Modal.Title>Edit Profile</P.Modal.Title>
-    <P.Modal.Description>
+        Default: `<Modal.Root>
+  <Modal.Trigger class="modal-trigger">Open Modal</Modal.Trigger>
+  <Modal.nel class="modal-panel">
+    <Modal.Title>Edit ofile</Modal.Title>
+    <Modal.Description>
       You can update your profile here. Hit the save button when finished.
-    </P.Modal.Description>
+    </Modal.Description>
     <footer>
-      <P.Modal.Close class="modal-close">Cancel</P.Modal.Close>
-      <P.Modal.Close class="modal-close">Save Changes</P.Modal.Close>
+      <Modal.Close class="modal-close">Cancel</Modal.Close>
+      <Modal.Close class="modal-close">Save Changes</Modal.Close>
     </footer>
-  </P.Modal.Panel>
-</P.Modal.Root>`,
+  </Modal.nel>
+</Modal.Root>`,
       }}
     />
 
     <Showcase
       title="Default"
       component={
-        <P.Modal.Root>
-          <P.Modal.Trigger class="modal-trigger">Open Modal</P.Modal.Trigger>
-          <P.Modal.Panel class="modal-panel">
-            <P.Modal.Title>Edit Profile</P.Modal.Title>
-            <P.Modal.Description>
+        <Modal.Root>
+          <Modal.Trigger>Open Modal</Modal.Trigger>
+          <Modal.Panel id="bg-[red]">
+            <Modal.Header>
+              <Modal.Title>Edit ofile</Modal.Title>
+            </Modal.Header>
+            <Modal.Description>
               You can update your profile here. Hit the save button when finished.
-            </P.Modal.Description>
-            <footer>
-              <P.Modal.Close class="modal-close">Cancel</P.Modal.Close>
-              <P.Modal.Close class="modal-close">Save Changes</P.Modal.Close>
-            </footer>
-          </P.Modal.Panel>
-        </P.Modal.Root>
+            </Modal.Description>
+            <Modal.Footer>
+              <Modal.Close class="modal-close">Cancel</Modal.Close>
+              <Modal.Close class="modal-close">Save Changes</Modal.Close>
+            </Modal.Footer>
+          </Modal.Panel>
+        </Modal.Root>
       }
       code={``}
     />

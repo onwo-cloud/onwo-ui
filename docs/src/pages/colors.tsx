@@ -39,14 +39,6 @@ export const ColorPage = () => (
               <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-piccolo"></div>
               <p>piccolo</p>
             </div>
-
-            <div
-              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
-              key="1"
-            >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-hit"></div>
-              <p>hit</p>
-            </div>
           </div>
 
           <h3 class="font-onwo-16 font-semibold">Border and line colours</h3>

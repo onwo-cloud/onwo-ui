@@ -2,15 +2,16 @@
 
 :root.theme-onwo-light,
 .theme-onwo-light {
-  --piccolo: 92, 51, 207; /* #5c33cf */
-  --hit: 27, 210, 154; /* #1bd29a */
-  --beerus: 220, 222, 227; /* #dcdee3 */
-  --gohan: 246, 247, 249; /* #f6f7f9 */
-  --goten: 255, 255, 255; /* #ffffff */
-  --goku: 255, 255, 255; /* #ffffff */
-  --bulma: 0, 0, 0; /* #000000 */
-  --trunks: 104, 112, 131; /* #687083 */
-  --popo: 0, 0, 0; /* #000000 */
+  --piccolo: 50, 24, 217; /* #5c33cf */
+  --beerus: 233, 233, 234; /* #dcdee3 */
+  --gohan: 248, 248, 250;
+  --goku: 255, 255, 255;
+  --bulma: 18, 18, 32;
+  --trunks: 96, 98, 123;
+
+  --goten: 255, 255, 255;
+  --popo: 0, 0, 0;
+
   --jiren: 92 51 201 / 0.12; /* #5c33cf */
   --heles: 0 0 0 / 0.04; /* #000000 */
   --zeno: 0 0 0 / 0.56; /* #000000 */
@@ -84,7 +85,6 @@
 :root.theme-onwo-dark,
 .theme-onwo-dark {
   --piccolo: 92, 51, 207; /* #5c33cf */
-  --hit: 27, 210, 154; /* #1bd29a */
   --beerus: 68, 68, 68; /* #444444 */
   --gohan: 31, 31, 31; /* #1f1f1f */
   --goten: 255, 255, 255; /* #ffffff */

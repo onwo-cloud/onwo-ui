@@ -12,3 +12,4 @@ export * as Masonry from './masonry';
 export * as Carousel from './carousel';
 export { Calendar } from './calendar';
 export * as PageNavigation from './page-navigation';
+export * as Modal from './modal';

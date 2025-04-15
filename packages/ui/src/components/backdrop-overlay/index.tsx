@@ -15,10 +15,7 @@ export const BackdropOverlay = withAs('div')<BackdropOverlayProps>(
       out={{ timing: 'ease-in', durationMs: 100, opacity: 0 }}
       as={as as unknown as keyof HTMLElementTagNameMap}
       data-name="BackdropOverlay"
-      class={cn(
-        'fixed inset-0 z-50 opacity-100 bg-black/50',
-        className,
-      )}
+      class={cn('fixed inset-0 z-50 opacity-100 bg-black/50', className)}
       data-aria-hidden="true"
       aria-hidden="true"
       onClick$={[onClick$, $(() => (open.value = false))]}

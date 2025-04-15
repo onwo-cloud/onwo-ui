@@ -1,7 +1,7 @@
 import type { PropsOf, QRL, Signal } from '@builder.io/qwik';
 import { Slot, component$, useContextProvider, useId, useSignal } from '@builder.io/qwik';
-import type { ModalContext } from './modal-context';
-import { modalContextId } from './modal-context';
+import type { ModalContext } from './context';
+import { modalContextId } from './context';
 
 type ModalRootProps = {
   onShow$?: QRL<() => void>;
@@ -11,7 +11,7 @@ type ModalRootProps = {
   alert?: boolean;
 } & PropsOf<'div'>;
 
-export const HModalRoot = component$((props: ModalRootProps) => {
+export const Root = component$((props: ModalRootProps) => {
   const localId = useId();
 
   const { 'bind:show': givenShowSig, closeOnBackdropClick, onShow$, onClose$, alert } = props;
@@ -20,8 +20,8 @@ export const HModalRoot = component$((props: ModalRootProps) => {
   const showSig = givenShowSig ?? defaultShowSig;
 
   const context: ModalContext = {
-    localId,
-    showSig,
+    id: localId,
+    opened: showSig,
     closeOnBackdropClick,
     onShow$,
     onClose$,

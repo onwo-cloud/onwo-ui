@@ -19,7 +19,7 @@ const base: Record<string, Field> = {
   p: 'text-onwo-16',
   a: 'cursor-pointer',
   'p > a':
-    'text-piccolo font-medium transition-colors duration-200 hover:text-hit visited:text-hit cursor-pointer',
+    'text-piccolo font-medium transition-colors duration-200 hover:text-piccolo visited:text-piccolo cursor-pointer',
   pre: 'bg-gohan p-4 text-onwo-14 text-bulma rounded-onwo-s-sm whitespace-pre-line mt-4',
   ul: 'list-inside list-disc text-onwo-16',
 };

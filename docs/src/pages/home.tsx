@@ -7,7 +7,7 @@ const BgShape = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M0.5 0.5H434.5V425.5H0.5V0.5Z" class="text-hit" fill="currentColor" />
+    <path d="M0.5 0.5H434.5V425.5H0.5V0.5Z" class="text-piccolo" fill="currentColor" />
     <path
       d="M1052.6 999.5L434.5 425.5H0.5L638.5 999.5H1052.6Z"
       class="text-piccolo"

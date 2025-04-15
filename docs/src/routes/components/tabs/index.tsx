@@ -176,20 +176,20 @@ export default () => (
         <div class="flex flex-col gap-4">
           <Tabs.Root>
             <Tabs.List>
-              <Tabs.Tab class="after:bg-hit hover:text-hit data-selected:text-hit">
+              <Tabs.Tab class="after:bg-roshi hover:text-roshi data-selected:text-roshi">
                 Green tab
               </Tabs.Tab>
               <Tabs.Tab disabled>Disabled tab</Tabs.Tab>
-              <Tabs.Tab class="after:bg-hit hover:text-hit data-selected:text-hit">
+              <Tabs.Tab class="after:bg-roshi hover:text-roshi data-selected:text-roshi">
                 Green tab
               </Tabs.Tab>
             </Tabs.List>
           </Tabs.Root>
           <Tabs.Root>
             <Tabs.List>
-              <Tabs.Pill class="hover:bg-hit/30 data-selected:bg-hit/30">Green pill</Tabs.Pill>
+              <Tabs.Pill class="hover:bg-roshi/30 data-selected:bg-roshi/30">Green pill</Tabs.Pill>
               <Tabs.Pill disabled>Disabled pill</Tabs.Pill>
-              <Tabs.Pill class="hover:bg-hit/30 data-selected:bg-hit/30">Green tab pill</Tabs.Pill>
+              <Tabs.Pill class="hover:bg-roshi/30 data-selected:bg-roshi/30">Green tab pill</Tabs.Pill>
             </Tabs.List>
           </Tabs.Root>
         </div>
@@ -197,20 +197,20 @@ export default () => (
       code={`<div class="flex flex-col gap-4">
   <Tabs.Root>
     <Tabs.List>
-      <Tabs.Tab class="after:bg-hit hover:text-hit data-selected:text-hit">
+      <Tabs.Tab class="after:bg-roshi hover:text-roshi data-selected:text-roshi">
         Green tab
       </Tabs.Tab>
       <Tabs.Tab disabled>Disabled tab</Tabs.Tab>
-      <Tabs.Tab class="after:bg-hit hover:text-hit data-selected:text-hit">
+      <Tabs.Tab class="after:bg-roshi hover:text-roshi data-selected:text-roshi">
         Green tab
       </Tabs.Tab>
     </Tabs.List>
   </Tabs.Root>
   <Tabs.Root>
     <Tabs.List>
-      <Tabs.Pill class="hover:bg-hit/30 data-selected:bg-hit/30">Green pill</Tabs.Pill>
+      <Tabs.Pill class="hover:bg-roshi/30 data-selected:bg-roshi/30">Green pill</Tabs.Pill>
       <Tabs.Pill disabled>Disabled pill</Tabs.Pill>
-      <Tabs.Pill class="hover:bg-hit/30 data-selected:bg-hit/30">Green tab pill</Tabs.Pill>
+      <Tabs.Pill class="hover:bg-roshi/30 data-selected:bg-roshi/30">Green tab pill</Tabs.Pill>
     </Tabs.List>
   </Tabs.Root>
 </div>`}

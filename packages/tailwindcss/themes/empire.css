@@ -3,7 +3,6 @@
 :root.theme-empire-light,
 .theme-empire-light {
   --piccolo: 255, 37, 168; /* #ff25a8 */
-  --hit: 184, 166, 255; /* #b8a6ff */
   --beerus: 229, 228, 234; /* #e5e4ea */
   --gohan: 240, 238, 245; /* #f0eef5 */
   --goten: 255, 255, 255; /* #ffffff */
@@ -83,7 +82,6 @@
 :root.theme-empire-dark,
 .theme-empire-dark {
   --piccolo: 255, 37, 168; /* #ff25a8 */
-  --hit: 184, 166, 255; /* #b8a6ff */
   --beerus: 101, 74, 206; /* #654ace */
   --gohan: 72, 40, 197; /* #4828c5 */
   --goten: 255, 255, 255; /* #ffffff */
