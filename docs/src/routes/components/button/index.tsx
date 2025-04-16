@@ -86,7 +86,7 @@ export default () => (
         through the `start` or `end` props as shown in the following figure, it is generally advised
         to use them.
       </p>
-      <IconMarginDemo class="border border-beerus h-[64px] contrast-120 hue-rotate-290" />
+      <IconMarginDemo class="border border-line h-[64px] contrast-120 hue-rotate-290" />
     </div>
 
     <Showcase

@@ -29,7 +29,7 @@ export const IconsPage = () => (
         Default: `import { Icons } from '@onwo/icons';
 
 <Icons.ArrowsLeft />
-<Icons.FilesCopy size="lg" class="text-roshi fill-roshi/20" />`,
+<Icons.FilesCopy size="lg" class="text-success fill-success/20" />`,
       }}
     />
 
@@ -37,20 +37,20 @@ export const IconsPage = () => (
       title="Different sizes and styling"
       component={
         <div class="flex justify-between w-full items-center">
-          <Icons.FilesCopy size="sm" class="text-chichi" />
-          <Icons.FilesCopy size="md" class="text-trunks" />
-          <Icons.FilesCopy size="lg" class="text-roshi fill-roshi/20" />
-          <Icons.FilesCopy size="lg" class="text-piccolo" />
-          <Icons.FilesCopy size="xl" class="text-raditz" />
-          <Icons.FilesCopy size="xl" class="text-whis" />
+          <Icons.FilesCopy size="sm" class="text-error" />
+          <Icons.FilesCopy size="md" class="text-lead" />
+          <Icons.FilesCopy size="lg" class="text-success fill-success/20" />
+          <Icons.FilesCopy size="lg" class="text-accent" />
+          <Icons.FilesCopy size="xl" class="text-sand" />
+          <Icons.FilesCopy size="xl" class="text-neutron" />
         </div>
       }
-      code={`<Icons.FilesCopy size="sm" class="text-chichi" />
-<Icons.FilesCopy size="md" class="text-trunks" />
-<Icons.FilesCopy size="lg" class="text-roshi fill-roshi/20" />
-<Icons.FilesCopy size="lg" class="text-piccolo" />
-<Icons.FilesCopy size="xl" class="text-raditz" />
-<Icons.FilesCopy size="xl" class="text-whis" />`}
+      code={`<Icons.FilesCopy size="sm" class="text-error" />
+<Icons.FilesCopy size="md" class="text-lead" />
+<Icons.FilesCopy size="lg" class="text-success fill-success/20" />
+<Icons.FilesCopy size="lg" class="text-accent" />
+<Icons.FilesCopy size="xl" class="text-sand" />
+<Icons.FilesCopy size="xl" class="text-neutron" />`}
     />
 
     <Showcase

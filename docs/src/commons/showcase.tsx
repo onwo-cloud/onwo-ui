@@ -15,7 +15,7 @@ export const Showcase = (props: ShowcaseProps) => (
     <div class="flex justify-between w-full">
       <div class="flex gap-2 items-center">
         {props.experimental && (
-          <div class="uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
+          <div class="uppercase flex px-1 py-0.5 bg-warn text-forced-b select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
             WIP
           </div>
         )}
@@ -25,7 +25,7 @@ export const Showcase = (props: ShowcaseProps) => (
         </PNav.Link>
       </div>
       {!!props.code && (
-        <Tabs.List class="flex p-1 bg-gohan rounded-onwo-s-md gap-1 w-fit justify-left">
+        <Tabs.List class="flex p-1 bg-parchment rounded-onwo-s-md gap-1 w-fit justify-left">
           <Tabs.Pill>
             <Icons.ControlsEye />
             <span>Preview</span>
@@ -43,11 +43,13 @@ export const Showcase = (props: ShowcaseProps) => (
           work in progress
         </div>
       )}
-      <Tabs.Panel class={cn('bg-gohan p-4 rounded-onwo-s-sm', props.disabled && 'brightness-30')}>
+      <Tabs.Panel
+        class={cn('bg-parchment p-4 rounded-onwo-s-sm', props.disabled && 'brightness-30')}
+      >
         <div class={cn('w-full h-full', props.disabled && 'blur-xs')}>{props.component}</div>
       </Tabs.Panel>
       {!!props.code && (
-        <Tabs.Panel class="theme-onwo-dark p-4 rounded-onwo-s-sm text-bulma bg-gohan">
+        <Tabs.Panel class="theme-onwo-dark p-4 rounded-onwo-s-sm text-ink bg-parchment">
           <pre>
             <code>{props.code}</code>
           </pre>

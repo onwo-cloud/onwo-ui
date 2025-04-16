@@ -49,9 +49,9 @@ export const Button = function <T extends keyof QwikHTMLElements = 'button'>({
       class={cn(
         'relative flex select-none items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-all duration-200',
         {
-          'bg-piccolo text-goten': variant === 'fill',
-          'border border-piccolo text-piccolo': variant === 'outline',
-          'text-piccolo': variant === 'ghost',
+          'bg-accent text-forced-a': variant === 'fill',
+          'border border-accent text-accent': variant === 'outline',
+          'text-accent': variant === 'ghost',
           'gap-1 h-6 ps-1 pe-1 text-onwo-12 rounded-onwo-s-xs': size === 'xs',
           'gap-1 h-8 ps-1 pe-1 text-onwo-14 rounded-onwo-s-sm': size === 'sm',
           'gap-2 h-10 ps-2 pe-2 text-onwo-14 rounded-onwo-s-sm': size === 'md',

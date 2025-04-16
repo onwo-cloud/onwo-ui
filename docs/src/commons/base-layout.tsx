@@ -9,7 +9,7 @@ export const BaseLayout = (props: BaseLayoutProps) => (
     <p id="here" />
     <PageNavigation.Appendix
       sticky
-      class="shrink-0 pt-14 px-3 bg-goku w-64 2xl:w-92 hidden xl:block"
+      class="shrink-0 pt-14 px-3 bg-paper w-64 2xl:w-92 hidden xl:block"
     />
   </PageNavigation.Provider>
 );

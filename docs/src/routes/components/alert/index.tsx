@@ -67,21 +67,21 @@ export default () => (
         <div class="flex flex-col gap-4">
           <Alert>
             <Alert.Message>
-              <Icons.OtherFrame size="md" class="text-roshi" />
+              <Icons.OtherFrame size="md" class="text-success" />
               Generic style with coloured icon
             </Alert.Message>
             <Alert.Close />
           </Alert>
-          <Alert class="bg-transparent outline outline-1 outline-offset-[-1px] outline-roshi">
+          <Alert class="bg-transparent outline outline-1 outline-offset-[-1px] outline-success">
             <Alert.Message>
-              <Icons.OtherFrame class="text-roshi" size="md" />
+              <Icons.OtherFrame class="text-success" size="md" />
               Outline style
             </Alert.Message>
             <Alert.Close />
           </Alert>
-          <Alert class="bg-roshi-10">
+          <Alert class="bg-success-10">
             <Alert.Message>
-              <Icons.OtherFrame class="text-roshi" size="md" />
+              <Icons.OtherFrame class="text-success" size="md" />
               Colourful style
             </Alert.Message>
             <Alert.Close />
@@ -90,23 +90,23 @@ export default () => (
       }
       code={`<Alert>
   <Alert.Message>
-    <Icons.OtherFrame size="md" class="text-roshi" />
+    <Icons.OtherFrame size="md" class="text-success" />
     Generic style with coloured icon
   </Alert.Message>
   <Alert.Close />
 </Alert>
 
-<Alert class="bg-transparent outline outline-1 outline-offset-[-1px] outline-roshi">
+<Alert class="bg-transparent outline outline-1 outline-offset-[-1px] outline-success">
   <Alert.Message>
-    <Icons.OtherFrame class="text-roshi" size="md" />
+    <Icons.OtherFrame class="text-success" size="md" />
     Outline style
   </Alert.Message>
   <Alert.Close />
 </Alert>
 
-<Alert class="bg-roshi-10">
+<Alert class="bg-success-10">
   <Alert.Message>
-    <Icons.OtherFrame class="text-roshi" size="md" />
+    <Icons.OtherFrame class="text-success" size="md" />
     Colourful style
   </Alert.Message>
   <Alert.Close />

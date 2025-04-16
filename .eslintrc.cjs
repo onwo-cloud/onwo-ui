@@ -32,6 +32,7 @@ const extendedConfig = {
     'unicorn/no-null': 'off',
     'unicorn/no-useless-switch-case': 'off',
     'unicorn/no-array-for-each': 'off',
+    'unicorn/no-array-reduce': 'warn',
     'sonarjs/different-types-comparison': 'warn',
   },
 };

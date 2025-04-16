@@ -19,7 +19,7 @@ export const Anatomy = (props: AnatomyProps) => {
       </div>
       <Tabs.Panels class="relative flex text-onwo-14 w-full">
         {Object.values(props.variants).map((val, idx) => (
-          <Tabs.Panel key={idx} class="p-4 rounded-onwo-s-sm text-bulma bg-gohan">
+          <Tabs.Panel key={idx} class="p-4 rounded-onwo-s-sm text-ink bg-parchment">
             <pre>
               <code>{val}</code>
             </pre>

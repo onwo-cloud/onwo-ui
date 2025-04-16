@@ -24,6 +24,7 @@ packages/ui/lib/
 packages/ui/node_modules/
 packages/ui/tsconfig.tsbuildinfo
 
+vite.config.dev.ts.timestamp*
 
 # Root
 !.eslintrc.cjs

@@ -90,7 +90,7 @@ export default () => (
       component={
         <div class="flex w-full justify-around">
           <Avatar size="xl" imageUrl="/avatar.png">
-            <Avatar.Status class="bg-chichi" position="top-right" />
+            <Avatar.Status class="bg-error" position="top-right" />
           </Avatar>
           <Avatar size="xl" imageUrl="/avatar.png">
             <Avatar.Status />
@@ -98,7 +98,7 @@ export default () => (
         </div>
       }
       code={`<Avatar size="xl" imageUrl="/avatar.png">
-  <Avatar.Status class="bg-chichi" position="top-right" />
+  <Avatar.Status class="bg-error" position="top-right" />
 </Avatar>
 <Avatar size="xl" imageUrl="/avatar.png">
   <Avatar.Status />

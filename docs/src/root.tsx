@@ -6,7 +6,7 @@ import { RouterHead } from './commons/router-head';
 const Heuristics = component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
-    const w = window as any;
+    const w = globalThis as any;
     w.symbols = [];
     document.addEventListener('qsymbol', (e) => w.symbols.push((e as any).detail));
   });

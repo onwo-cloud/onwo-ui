@@ -26,7 +26,7 @@ export const TimeModule = component$((props: TimeModuleProps) => {
         class="left-0 top-0 pl-2 absolute flex py-2 h-full w-fit rounded-[inherit]"
       >
         <TimeSlider
-          class="border-r border-beerus"
+          class="border-r border-line"
           options={Array.from({ length: 24 }, (_, idx) => idx)}
           direction="inverted"
           scrollOnOption={hours.value ?? 12}
@@ -150,8 +150,8 @@ export const TimeSlider = component$((props: TimeSliderProps) => {
           data-option-index={idx}
           tabIndex={-1}
           class={cn(
-            'cursor-pointer inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-heles h-8 w-8 shrink-0 aspect-square',
-            props.selected === opt && 'bg-piccolo text-goten',
+            'cursor-pointer inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-scan h-8 w-8 shrink-0 aspect-square',
+            props.selected === opt && 'bg-accent text-forced-a',
           )}
           onClick$={() => {
             performScrollToElem$('smooth', opt);

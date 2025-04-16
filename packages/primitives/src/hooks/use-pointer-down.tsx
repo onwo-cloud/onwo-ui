@@ -33,7 +33,7 @@ export function usePointerDownOutside(
          * browser executres events. We need to ensure we don't reactivate pointer-events within
          * this timeframe otherwise the browser may execute events that should have been prevented.
          *
-         * Additionally, this also lets us deal automatically with cancellations when a click event
+         * Additionally, this also lets us deal automatically with canmintations when a click event
          * isn't raised because the page was considered scrolled/drag-scrolled, long-pressed, etc.
          *
          * This is why we also continuously remove the previous listener, because we cannot be

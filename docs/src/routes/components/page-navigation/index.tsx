@@ -57,7 +57,7 @@ export default () => (
       title="Default"
       component={
         <PNav.Provider>
-          <div class="p-1 flex bg-goku w-fit gap-4 mb-4">
+          <div class="p-1 flex bg-paper w-fit gap-4 mb-4">
             <PNav.Link id="link-1" label="Link 1">
               Link 1
             </PNav.Link>
@@ -74,7 +74,7 @@ export default () => (
       code={`import { PageNavigation as PNav } from '@onwo/ui';
 
 <PNav.Provider>
-  <div class="p-1 flex bg-goku w-fit gap-4 mb-4">
+  <div class="p-1 flex bg-paper w-fit gap-4 mb-4">
     <PNav.Link id="link-1" label="Link 1">Link 1</PNav.Link>
     <PNav.Link id="link-2" label="Link 2">Link 2</PNav.Link>
     <PNav.Link id="link-3" label="Link 3">Link 3</PNav.Link>

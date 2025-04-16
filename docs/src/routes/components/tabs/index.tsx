@@ -176,20 +176,24 @@ export default () => (
         <div class="flex flex-col gap-4">
           <Tabs.Root>
             <Tabs.List>
-              <Tabs.Tab class="after:bg-roshi hover:text-roshi data-selected:text-roshi">
+              <Tabs.Tab class="after:bg-success hover:text-success data-selected:text-success">
                 Green tab
               </Tabs.Tab>
               <Tabs.Tab disabled>Disabled tab</Tabs.Tab>
-              <Tabs.Tab class="after:bg-roshi hover:text-roshi data-selected:text-roshi">
+              <Tabs.Tab class="after:bg-success hover:text-success data-selected:text-success">
                 Green tab
               </Tabs.Tab>
             </Tabs.List>
           </Tabs.Root>
           <Tabs.Root>
             <Tabs.List>
-              <Tabs.Pill class="hover:bg-roshi/30 data-selected:bg-roshi/30">Green pill</Tabs.Pill>
+              <Tabs.Pill class="hover:bg-success/30 data-selected:bg-success/30">
+                Green pill
+              </Tabs.Pill>
               <Tabs.Pill disabled>Disabled pill</Tabs.Pill>
-              <Tabs.Pill class="hover:bg-roshi/30 data-selected:bg-roshi/30">Green tab pill</Tabs.Pill>
+              <Tabs.Pill class="hover:bg-success/30 data-selected:bg-success/30">
+                Green tab pill
+              </Tabs.Pill>
             </Tabs.List>
           </Tabs.Root>
         </div>
@@ -197,20 +201,20 @@ export default () => (
       code={`<div class="flex flex-col gap-4">
   <Tabs.Root>
     <Tabs.List>
-      <Tabs.Tab class="after:bg-roshi hover:text-roshi data-selected:text-roshi">
+      <Tabs.Tab class="after:bg-success hover:text-success data-selected:text-success">
         Green tab
       </Tabs.Tab>
       <Tabs.Tab disabled>Disabled tab</Tabs.Tab>
-      <Tabs.Tab class="after:bg-roshi hover:text-roshi data-selected:text-roshi">
+      <Tabs.Tab class="after:bg-success hover:text-success data-selected:text-success">
         Green tab
       </Tabs.Tab>
     </Tabs.List>
   </Tabs.Root>
   <Tabs.Root>
     <Tabs.List>
-      <Tabs.Pill class="hover:bg-roshi/30 data-selected:bg-roshi/30">Green pill</Tabs.Pill>
+      <Tabs.Pill class="hover:bg-success/30 data-selected:bg-success/30">Green pill</Tabs.Pill>
       <Tabs.Pill disabled>Disabled pill</Tabs.Pill>
-      <Tabs.Pill class="hover:bg-roshi/30 data-selected:bg-roshi/30">Green tab pill</Tabs.Pill>
+      <Tabs.Pill class="hover:bg-success/30 data-selected:bg-success/30">Green tab pill</Tabs.Pill>
     </Tabs.List>
   </Tabs.Root>
 </div>`}
@@ -237,18 +241,18 @@ export default () => (
                   value="0"
                 >
                   <div
-                    class="absolute mt-0.5 -ml-px bg-beerus left-3 top-4 w-0.5 h-full"
+                    class="absolute mt-0.5 -ml-px bg-line left-3 top-4 w-0.5 h-full"
                     aria-hidden="true"
                   ></div>
                   <span class="group relative flex items-start">
-                    <span class="flex bg-goku items-center rounded-full">
+                    <span class="flex bg-paper items-center rounded-full">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
                         fill="none"
-                        class="text-roshi"
+                        class="text-success"
                       >
                         <circle
                           cx="12"
@@ -275,18 +279,18 @@ export default () => (
 
                 <button class="relative" role="tab" type="button" tabIndex={1} disabled value="1">
                   <div
-                    class="absolute mt-0.5 -ml-px bg-beerus left-3 top-4 w-0.5 h-full"
+                    class="absolute mt-0.5 -ml-px bg-line left-3 top-4 w-0.5 h-full"
                     aria-hidden="true"
                   ></div>
                   <span class="group relative flex items-start">
-                    <span class="flex bg-goku items-center rounded-full">
+                    <span class="flex bg-paper items-center rounded-full">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
                         fill="none"
-                        class="text-beerus"
+                        class="text-line"
                       >
                         <circle
                           cx="12"
@@ -306,14 +310,14 @@ export default () => (
 
                 <button class="relative" role="tab" type="button" tabIndex={2} disabled value="2">
                   <span class="group relative flex items-start">
-                    <span class="flex bg-goku items-center rounded-full">
+                    <span class="flex bg-paper items-center rounded-full">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
                         fill="none"
-                        class="text-beerus"
+                        class="text-line"
                       >
                         <circle
                           cx="12"
@@ -344,7 +348,7 @@ export default () => (
                 disabled
                 type="button"
                 data-size="md"
-                class="relative flex px-4 bg-transparent text-trunks select-none cursor-not-allowed transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-onwo-s-sm gap-2 z-0 text-onwo-14 h-10 hover:text-bulma active:transform-none active:scale-90 group opacity-60 row"
+                class="relative flex px-4 bg-transparent text-lead select-none cursor-not-allowed transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-onwo-s-sm gap-2 z-0 text-onwo-14 h-10 hover:text-ink active:transform-none active:scale-90 group opacity-60 row"
               >
                 Previous
                 <span class="absolute block bg-transparent pointer-events-none transition-[background-color_0.2s_ease-in-out z-[-1] inset-0"></span>
@@ -353,10 +357,10 @@ export default () => (
               <button
                 type="button"
                 data-size="md"
-                class="relative flex px-4 bg-piccolo text-goten select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-onwo-s-sm gap-2 z-0 text-onwo-14 h-10 active:scale-90 group row"
+                class="relative flex px-4 bg-accent text-forced-a select-none transition-all whitespace-nowrap items-center justify-center overflow-hidden font-semibold duration-200 rounded-onwo-s-sm gap-2 z-0 text-onwo-14 h-10 active:scale-90 group row"
               >
                 Next
-                <span class="absolute block bg-transparent pointer-events-none transition-[background-color_0.2s_ease-in-out z-[-1] inset-0 group-hover:bg-heles"></span>
+                <span class="absolute block bg-transparent pointer-events-none transition-[background-color_0.2s_ease-in-out z-[-1] inset-0 group-hover:bg-scan"></span>
               </button>
             </div>
           </div>

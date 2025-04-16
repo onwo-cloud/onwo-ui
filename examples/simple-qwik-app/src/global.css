@@ -1,5 +1,5 @@
 /* Import the theme first or copy it over */
-@import '@onwo/tailwindcss/themes/moon.css';
+@import '@onwo/tailwindcss/themes/onwo.css';
 
 @import "tailwindcss";
 

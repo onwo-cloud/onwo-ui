@@ -57,16 +57,16 @@ export default () => (
       title="Colors"
       component={
         <div class="flex gap-2 flex-wrap items-center justify-around">
-          <Spinner class="text-roshi" />
-          <Spinner class="text-krillin" />
-          <Spinner class="text-dodoria" />
-          <Spinner class="text-whis" />
+          <Spinner class="text-success" />
+          <Spinner class="text-warn" />
+          <Spinner class="text-scarab" />
+          <Spinner class="text-neutron" />
         </div>
       }
-      code={`<Spinner class="text-roshi" />
-<Spinner class="text-krillin" />
-<Spinner class="text-dodoria" />
-<Spinner class="text-whis" />`}
+      code={`<Spinner class="text-success" />
+<Spinner class="text-warn" />
+<Spinner class="text-scarab" />
+<Spinner class="text-neutron" />`}
     />
   </div>
 );

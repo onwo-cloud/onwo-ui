@@ -17,11 +17,11 @@ type CalendarGridButtonProps = {
 export const CalendarGridButton = (props: CalendarGridButtonProps) => (
   <td
     class={cn(
-      'relative p-0 rounded-md text-center text-sm hover:bg-heles h-8 w-full',
-      props.dim && 'text-trunks',
-      props.highlight && 'bg-beerus',
-      props.isSelected && 'bg-piccolo hover:bg-piccolo text-goten',
-      props.isFocused && 'ring-1 ring-jiren',
+      'relative p-0 rounded-md text-center text-sm hover:bg-scan h-8 w-full',
+      props.dim && 'text-lead',
+      props.highlight && 'bg-line',
+      props.isSelected && 'bg-accent hover:bg-accent text-forced-a',
+      props.isFocused && 'ring-1 ring-stare',
     )}
     tabIndex={-1}
   >
@@ -32,9 +32,9 @@ export const CalendarGridButton = (props: CalendarGridButtonProps) => (
       class={cn(
         'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm disabled:pointer-events-none disabled:opacity-50 h-full w-full p-0 font-normal',
 
-        props.isDisabled && 'text-trunks',
+        props.isDisabled && 'text-lead',
       )}
-      role="gridcell"
+      role="gridmint"
       tabIndex={-1}
       type="button"
       onClick$={() => {

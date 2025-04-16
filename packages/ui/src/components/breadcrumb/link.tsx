@@ -4,7 +4,7 @@ type LinkProps = {
 };
 
 const Link = (props: LinkProps) => (
-  <li class="text-onwo-14 last:text-bulma">
+  <li class="text-onwo-14 last:text-ink">
     <span class="transition-colors duration-200">
       <a href={props.to}>{props.label}</a>
     </span>

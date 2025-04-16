@@ -15,8 +15,8 @@ type SidebarButtonSmallProps = {
 export const SidebarButtonSmall = (props: SidebarButtonSmallProps) => (
   <a
     class={cn(
-      'flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles',
-      props.disabled && 'text-trunks cursor-not-allowed',
+      'flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan',
+      props.disabled && 'text-lead cursor-not-allowed',
     )}
     href={props.href}
   >
@@ -29,7 +29,7 @@ export default component$(() => {
 
   return (
     <div>
-      <div role="main" class="pt-16 lg:pt-0 bg-gohan text-bulma flex theme-onwo-light" dir="ltr">
+      <div role="main" class="pt-16 lg:pt-0 bg-parchment text-ink flex theme-onwo-light" dir="ltr">
         <div
           id="left-menu"
           data-is_closing="true"
@@ -37,14 +37,14 @@ export default component$(() => {
           aria-expanded="false"
           class="fixed hidden z-[99999] inset-auto lg:flex lg:z-50 lg:inset-y-0 lg:w-80 lg:start-0"
         >
-          <div class="fixed bg-zeno inset-0 lg:hidden onwo-backdrop"></div>
+          <div class="fixed bg-gaze inset-0 lg:hidden onwo-backdrop"></div>
 
-          <div class="fixed bg-gohan text-bulma shadow-onwo-none inset-y-0 w-80 max-w-md left-0 onwo-panel">
+          <div class="fixed bg-parchment text-ink shadow-onwo-none inset-y-0 w-80 max-w-md left-0 onwo-panel">
             <nav
               aria-label="Sidebar"
               class="z-10 fixed top-0 h-screen w-80 flex flex-col flex-grow gap-4 pt-8 pb-10 px-5 lg:px-8 overflow-y-scroll"
             >
-              <div class="flex items-center flex-shrink-0 px-3 text-bulma">
+              <div class="flex items-center flex-shrink-0 px-3 text-ink">
                 <a href="/" class="flex gap-2 items-center" aria-label="ui.onwo.cloud main page">
                   <LogoImg height={20} class="h-[20px] w-fit" />
                   <h4 class="text-onwo-20 font-semibold">onwo/ui</h4>
@@ -52,7 +52,7 @@ export default component$(() => {
               </div>
               <div class="flex flex-col gap-1">
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
                   href="/roadmap"
                 >
                   <Icons.GenericTrophy />
@@ -60,7 +60,7 @@ export default component$(() => {
                 </a>
 
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
                   href="/getting-started"
                 >
                   <Icons.OtherRocket />
@@ -68,7 +68,7 @@ export default component$(() => {
                 </a>
 
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
                   href="/core-concepts"
                 >
                   <Icons.SoftwarePlate />
@@ -76,7 +76,7 @@ export default component$(() => {
                 </a>
 
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
                   href="/colours"
                 >
                   <Icons.SoftwareSettings />
@@ -84,14 +84,14 @@ export default component$(() => {
                 </a>
 
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
                   href="/typography"
                 >
                   <Icons.TextSize />
                   Typography
                 </a>
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-heles"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
                   href="/icons"
                 >
                   <Icons.SoftwarePuzzle />
@@ -100,9 +100,9 @@ export default component$(() => {
               </div>
               <div class="flex flex-col gap-2">
                 <div class="ps-2 text-onwo-10-caption flex gap-2 font-medium">
-                  <p class="text-trunks uppercase">Components</p>
+                  <p class="text-lead uppercase">Components</p>
                   <div>
-                    <div class="uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
+                    <div class="uppercase flex px-1 py-0.5 bg-warn text-forced-b select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
                       WIP
                     </div>
                   </div>
@@ -165,9 +165,9 @@ export default component$(() => {
               </div>
 
               <div class="ps-2 text-onwo-10-caption flex gap-2 font-medium">
-                <p class="text-trunks uppercase">Composites</p>
+                <p class="text-lead uppercase">Composites</p>
                 <div>
-                  <div class="uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
+                  <div class="uppercase flex px-1 py-0.5 bg-warn text-forced-b select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
                     WIP
                   </div>
                 </div>
@@ -182,7 +182,7 @@ export default component$(() => {
           </div>
         </div>
 
-        <header class="fixed top-0 bg-goku z-50 px-5 w-full">
+        <header class="fixed top-0 bg-paper z-50 px-5 w-full">
           <div class="relative z-10 py-4 lg:hidden flex flex-row gap-2 items-center justify-between">
             <button type="button">
               <span class="sr-only">Open sidebar</span>
@@ -193,7 +193,7 @@ export default component$(() => {
 
         <div
           class={cn(
-            'relative main-content overflow-x-hidden h-screen bg-goku flex-1 flex flex-col lg:ml-80',
+            'relative main-content overflow-x-hidden h-screen bg-paper flex-1 flex flex-col lg:ml-80',
             location.url.pathname !== '/' &&
               'overflow-y-auto px-5 lg:pl-20 2xl:pl-32 lg:pt-12 lg:pb-52',
           )}

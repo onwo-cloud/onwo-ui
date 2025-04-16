@@ -17,7 +17,7 @@ export const CalendarGrid = ({ onKeyDown$, ...props }: CalendarGridProps) => (
     aria-labelledby="calendar"
   >
     {props.headerCategories && (
-      <thead class="text-trunks">
+      <thead class="text-lead">
         <tr class="flex">
           {props.headerCategories.map((item, index) => (
             <th

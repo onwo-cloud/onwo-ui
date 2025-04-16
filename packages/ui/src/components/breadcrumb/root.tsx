@@ -14,7 +14,7 @@ export const Root = withAs('nav')<RootProps>(({ As, class: className, ...props }
 
   return (
     <As {...props} aria-label="Breadcrumb" class={cn(className)}>
-      <ol class="text-trunks flex gap-2 flex-wrap items-center">
+      <ol class="text-lead flex gap-2 flex-wrap items-center">
         {props.children.map((child, idx) => (
           <div key={idx} class="contents">
             {child}

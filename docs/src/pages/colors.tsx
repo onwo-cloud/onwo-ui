@@ -9,19 +9,6 @@ export const ColorPage = () => (
       breadcrumbs={[{ label: 'Colors', to: '/colors' }]}
     />
 
-    <div class="onwo-format max-w-5xl">
-      <p>
-        Our design system is decentralized and built for multi-product purposes. Having
-        different-color naming conventions and numbers etc... makes it harder to maintain it.
-      </p>
-      <p>For that, we made a decision to give our colours unique names.</p>
-      <p>
-        Meet the <span class="font-semibold">Dragon Ball Z approach</span>. Each color name is
-        assigned for specific purpose and for each product these values are different.
-      </p>
-      <p>Please never use Hex values, they won"t change if you need theme support.</p>
-    </div>
-
     <section class="mt-12 flex flex-col lg:flex-row gap-6">
       <div class="flex flex-col w-full gap-6">
         <PNav.Link label="Main colours" id="main-colours">
@@ -36,8 +23,8 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-piccolo"></div>
-              <p>piccolo</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-accent"></div>
+              <p>accent</p>
             </div>
           </div>
 
@@ -47,8 +34,8 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-beerus"></div>
-              <p>beerus</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-line"></div>
+              <p>line</p>
             </div>
           </div>
 
@@ -58,16 +45,16 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-goku"></div>
-              <p>goku</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-paper"></div>
+              <p>paper</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="1"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-gohan"></div>
-              <p>gohan</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-parchment"></div>
+              <p>parchment</p>
             </div>
           </div>
 
@@ -77,16 +64,16 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-bulma"></div>
-              <p>bulma</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-ink"></div>
+              <p>ink</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="1"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-trunks"></div>
-              <p>trunks</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-lead"></div>
+              <p>lead</p>
             </div>
           </div>
 
@@ -96,16 +83,16 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-goten"></div>
-              <p>goten</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-forced-a"></div>
+              <p>forced-a</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="1"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-popo"></div>
-              <p>popo</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-forced-b"></div>
+              <p>forced-b</p>
             </div>
           </div>
 
@@ -115,24 +102,105 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-jiren"></div>
-              <p>jiren</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-stare"></div>
+              <p>stare</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="1"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-heles"></div>
-              <p>heles</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-scan"></div>
+              <p>scan</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="2"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-zeno"></div>
-              <p>zeno</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-gaze"></div>
+              <p>gaze</p>
+            </div>
+          </div>
+
+          <h3 class="font-onwo-16 font-semibold">Warning colour</h3>
+          <div class="flex gap-4 items-start font-onwo-16">
+            <div
+              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
+              key="0"
+            >
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-warn"></div>
+              <p>warn</p>
+            </div>
+
+            <div
+              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
+              key="1"
+            >
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-warn-60"></div>
+              <p>warn-60</p>
+            </div>
+
+            <div
+              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
+              key="2"
+            >
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-warn-10"></div>
+              <p>warn-10</p>
+            </div>
+          </div>
+
+          <h3 class="font-onwo-16 font-semibold">Error colour</h3>
+          <div class="flex gap-4 items-start font-onwo-16">
+            <div
+              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
+              key="0"
+            >
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-error"></div>
+              <p>error</p>
+            </div>
+
+            <div
+              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
+              key="1"
+            >
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-error-60"></div>
+              <p>error-60</p>
+            </div>
+
+            <div
+              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
+              key="2"
+            >
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-error-10"></div>
+              <p>error-10</p>
+            </div>
+          </div>
+
+          <h3 class="font-onwo-16 font-semibold">Success colour</h3>
+          <div class="flex gap-4 items-start font-onwo-16">
+            <div
+              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
+              key="0"
+            >
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-success"></div>
+              <p>success</p>
+            </div>
+
+            <div
+              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
+              key="1"
+            >
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-success-60"></div>
+              <p>success-60</p>
+            </div>
+
+            <div
+              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
+              key="2"
+            >
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-success-10"></div>
+              <p>success-10</p>
             </div>
           </div>
         </div>
@@ -147,120 +215,30 @@ export const ColorPage = () => (
           </h2>
         </PNav.Link>
         <div class="w-full flex flex-col gap-2 text-onwo-16">
-          <h3 class="font-onwo-16 font-semibold">
-            Krillin
-            <span class="font-normal">- Warning colour</span>
-          </h3>
-          <div class="flex gap-4 items-start font-onwo-16">
-            <div
-              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
-              key="0"
-            >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-krillin"></div>
-              <p>krillin</p>
-            </div>
-
-            <div
-              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
-              key="1"
-            >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-krillin-60"></div>
-              <p>krillin-60</p>
-            </div>
-
-            <div
-              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
-              key="2"
-            >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-krillin-10"></div>
-              <p>krillin-10</p>
-            </div>
-          </div>
-
-          <h3 class="font-onwo-16 font-semibold">
-            Chi Chi
-            <span class="font-normal">- Error colour</span>
-          </h3>
-          <div class="flex gap-4 items-start font-onwo-16">
-            <div
-              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
-              key="0"
-            >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-chichi"></div>
-              <p>chichi</p>
-            </div>
-
-            <div
-              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
-              key="1"
-            >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-chichi-60"></div>
-              <p>chichi-60</p>
-            </div>
-
-            <div
-              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
-              key="2"
-            >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-chichi-10"></div>
-              <p>chichi-10</p>
-            </div>
-          </div>
-
-          <h3 class="font-onwo-16 font-semibold">
-            Roshi
-            <span class="font-normal">- Success colour</span>
-          </h3>
-          <div class="flex gap-4 items-start font-onwo-16">
-            <div
-              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
-              key="0"
-            >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-roshi"></div>
-              <p>roshi</p>
-            </div>
-
-            <div
-              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
-              key="1"
-            >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-roshi-60"></div>
-              <p>roshi-60</p>
-            </div>
-
-            <div
-              class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
-              key="2"
-            >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-roshi-10"></div>
-              <p>roshi-10</p>
-            </div>
-          </div>
-
           <h3 class="font-onwo-16 font-semibold">Dodoria</h3>
           <div class="flex gap-4 items-start font-onwo-16">
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-dodoria"></div>
-              <p>dodoria</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-scarab"></div>
+              <p>scarab</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="1"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-dodoria-60"></div>
-              <p>dodoria-60</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-scarab-60"></div>
+              <p>scarab-60</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="2"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-dodoria-10"></div>
-              <p>dodoria-10</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-scarab-10"></div>
+              <p>scarab-10</p>
             </div>
           </div>
 
@@ -270,24 +248,24 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-cell"></div>
-              <p>cell</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-mint"></div>
+              <p>mint</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="1"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-cell-60"></div>
-              <p>cell-60</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-mint-60"></div>
+              <p>mint-60</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="2"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-cell-10"></div>
-              <p>cell-10</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-mint-10"></div>
+              <p>mint-10</p>
             </div>
           </div>
 
@@ -297,24 +275,24 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-raditz"></div>
-              <p>raditz</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-sand"></div>
+              <p>sand</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="1"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-raditz-60"></div>
-              <p>raditz-60</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-sand-60"></div>
+              <p>sand-60</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="2"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-raditz-10"></div>
-              <p>raditz-10</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-sand-10"></div>
+              <p>sand-10</p>
             </div>
           </div>
 
@@ -324,24 +302,24 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-whis"></div>
-              <p>whis</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-neutron"></div>
+              <p>neutron</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="1"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-whis-60"></div>
-              <p>whis-60</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-neutron-60"></div>
+              <p>neutron-60</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="2"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-whis-10"></div>
-              <p>whis-10</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-neutron-10"></div>
+              <p>neutron-10</p>
             </div>
           </div>
 
@@ -351,24 +329,24 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-frieza"></div>
-              <p>frieza</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-prune"></div>
+              <p>prune</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="1"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-frieza-60"></div>
-              <p>frieza-60</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-prune-60"></div>
+              <p>prune-60</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="2"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-frieza-10"></div>
-              <p>frieza-10</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-prune-10"></div>
+              <p>prune-10</p>
             </div>
           </div>
 
@@ -378,24 +356,24 @@ export const ColorPage = () => (
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="0"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-nappa"></div>
-              <p>nappa</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-coffee"></div>
+              <p>coffee</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="1"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-nappa-60"></div>
-              <p>nappa-60</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-coffee-60"></div>
+              <p>coffee-60</p>
             </div>
 
             <div
               class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center"
               key="2"
             >
-              <div class="w-full h-40 rounded-onwo-s-sm border border-beerus bg-nappa-10"></div>
-              <p>nappa-10</p>
+              <div class="w-full h-40 rounded-onwo-s-sm border border-line bg-coffee-10"></div>
+              <p>coffee-10</p>
             </div>
           </div>
         </div>

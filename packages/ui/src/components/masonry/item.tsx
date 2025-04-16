@@ -11,7 +11,7 @@ type ItemProps = {
 export const Item = withAs('div')<ItemProps>(({ As, width, height, ...props }) => (
   <As
     {...props}
-    class={cn('mm-masonry__item rounded-xs border border-beerus', props.class)}
+    class={cn('mm-masonry__item rounded-xs border border-line', props.class)}
     style={{ '--w': width, '--h': height, ...props.style }}
   >
     {props.children}

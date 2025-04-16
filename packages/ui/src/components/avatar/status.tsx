@@ -14,7 +14,7 @@ export const Status = ({ position = 'bottom-right', class: className, ...props }
   <div
     class={cn(
       {
-        'absolute border-gohan bg-roshi rounded-full w-3 h-3 border-solid border-2': true,
+        'absolute border-parchment bg-success rounded-full w-3 h-3 border-solid border-2': true,
         'bottom-0 right-0': position === 'bottom-right',
         'bottom-0 left-0': position === 'bottom-left',
         'top-0 right-0': position === 'top-right',

@@ -175,7 +175,7 @@ export const Root = component$(
       <div
         ref={ref}
         class={cn(
-          'relative rounded-md flex px-4 items-stretch w-fit shadow-lg border border-beerus',
+          'relative rounded-md flex px-4 items-stretch w-fit shadow-lg border border-line',
           props.class,
         )}
       >
@@ -203,7 +203,7 @@ export const Root = component$(
               <button
                 type="button"
                 tabIndex={-1}
-                class="rounded-md px-3 py-1.5 text-sm font-medium hover:bg-heles"
+                class="rounded-md px-3 py-1.5 text-sm font-medium hover:bg-scan"
                 onClick$={async () => (view.value = await getNextView$())}
               >
                 {getViewTitle()}
@@ -242,7 +242,7 @@ export const Root = component$(
                   class={cn(
                     'w-full rounded-lg px-5 py-2 text-center text-sm font-medium focus:ring-4',
                     'focus:ring-blue-300',
-                    'border border-beerus',
+                    'border border-line',
                   )}
                   onClick$={() => {
                     changeSelectedDate$();
@@ -280,7 +280,7 @@ export const HeadNavButton = (props: HeadNavButtonProps) => (
   <button
     type="button"
     tabIndex={-1}
-    class="rounded-md text-trunks border border-beerus flex items-center justify-center w-7 h-7 transition-colors hover:bg-heles"
+    class="rounded-md text-lead border border-line flex items-center justify-center w-7 h-7 transition-colors hover:bg-scan"
     onClick$={props.onClick$}
   >
     {props.icon}

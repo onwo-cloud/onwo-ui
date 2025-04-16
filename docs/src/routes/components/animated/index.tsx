@@ -54,7 +54,7 @@ export default component$(() => {
               out={{ timing: 'ease-in', opacity: 0, slide: { x: '5rem' } }}
               class="w-fit"
             >
-              <div class="bg-cell w-32 h-32" />
+              <div class="bg-mint w-32 h-32" />
             </Animated>
           </div>
         }
@@ -66,7 +66,7 @@ export default component$(() => {
   out={{ timing: 'ease-in', opacity: 0, slide: { x: '5rem' } }}
   class="w-fit"
 >
-  <div class="bg-cell w-32 h-32" />
+  <div class="bg-mint w-32 h-32" />
 </Animated>`}
       />
 

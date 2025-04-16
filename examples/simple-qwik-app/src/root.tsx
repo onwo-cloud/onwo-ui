@@ -11,7 +11,7 @@ export default component$(() => {
         <meta charset="utf-8" />
       </head>
       <body lang="en" class="theme-moon-light w-screen h-screen flex items-center justify-center">
-        <div class="p-4 rounded-md bg-gohan">
+        <div class="p-4 rounded-md bg-parchment">
           <HelloWorld />
         </div>
       </body>

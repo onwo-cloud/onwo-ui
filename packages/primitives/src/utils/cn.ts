@@ -35,7 +35,7 @@ const twMerge = extendTailwindMerge({
         'input-hov',
         'input-err',
         'input-focus',
-        'input-cell-focus',
+        'input-mint-focus',
         'onwo-sm',
         'onwo-md',
         'onwo-lg',

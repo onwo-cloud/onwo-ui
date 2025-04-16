@@ -27,13 +27,13 @@ export const Chip = withAs('button')<ChipProps>(
     <As
       {...props}
       class={cn(
-        'relative flex p-1 px-2 py-1 text-bulma cursor-pointer disabled:text-trunks disabled:cursor-default transition items-center flex-row overflow-hidden duration-200 rounded-onwo-i-sm gap-1 z-0 hover:bg-piccolo/10 hover:text-piccolo w-min whitespace-nowrap',
+        'relative flex p-1 px-2 py-1 text-ink cursor-pointer disabled:text-lead disabled:cursor-default transition items-center flex-row overflow-hidden duration-200 rounded-onwo-i-sm gap-1 z-0 hover:bg-accent/10 hover:text-accent w-min whitespace-nowrap',
         size === 'sm' && 'rounded-onwo-i-sm text-onwo-14 h-8',
         size === 'md' && 'rounded-onwo-i-sm text-onwo-14 h-10',
-        variant !== 'ghost' && 'bg-goku disabled:bg-goku',
+        variant !== 'ghost' && 'bg-paper disabled:bg-paper',
         variant === 'ghost' && 'disabled:bg-transparent',
         variant === 'stroke' && 'hover:shadow-interactive disabled:shadow-none',
-        active && 'text-piccolo bg-piccolo/10',
+        active && 'text-accent bg-accent/10',
         active && variant === 'stroke' && 'shadow-interactive',
         className,
       )}

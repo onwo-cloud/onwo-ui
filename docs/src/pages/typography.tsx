@@ -12,7 +12,7 @@ export const TypographyPage = () => (
     <div class="onwo-format">
       <p>Typography includes text, headings, and captions.</p>
       <p>
-        <span class="inline-block mr-2 uppercase flex px-1 py-0.5 bg-krillin text-popo select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
+        <span class="inline-block mr-2 uppercase flex px-1 py-0.5 bg-warn text-forced-b select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4">
           WIP
         </span>
         you can apply the `onwo-format` class to section of your code you want to be automatically
@@ -33,13 +33,13 @@ export const TypographyPage = () => (
               </PNav.Link>
 
               <div
-                class="flex p-1 bg-gohan items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
+                class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
                 role="tablist"
                 aria-orientation="horizontal"
               ></div>
 
               <div role="tabpanel" tabIndex={0} class="order-4 w-full focus:outline-none">
-                <div class="flex p-4 bg-gohan rounded-onwo-s-sm text-onwo-14 w-full">
+                <div class="flex p-4 bg-parchment rounded-onwo-s-sm text-onwo-14 w-full">
                   <div class="flex flex-wrap items-center justify-around gap-2 w-full bg-transparent">
                     <div class="flex flex-col gap-2 w-full">
                       <p class="text-onwo-9 transition-colors">Size 9</p>
@@ -76,13 +76,13 @@ export const TypographyPage = () => (
               </PNav.Link>
 
               <div
-                class="flex p-1 bg-gohan items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
+                class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
                 role="tablist"
                 aria-orientation="horizontal"
               ></div>
 
               <div role="tabpanel" tabIndex={0} class="order-4 w-full focus:outline-none">
-                <div class="flex p-4 bg-gohan rounded-onwo-s-sm text-onwo-14 w-full">
+                <div class="flex p-4 bg-parchment rounded-onwo-s-sm text-onwo-14 w-full">
                   <div class="flex flex-wrap items-center justify-around gap-2 w-full bg-transparent">
                     <div class="flex flex-col gap-2 w-full">
                       <h3 class="text-onwo-9 font-medium transition-colors">Size 9</h3>
@@ -119,13 +119,13 @@ export const TypographyPage = () => (
               </PNav.Link>
 
               <div
-                class="flex p-1 bg-gohan items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
+                class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
                 role="tablist"
                 aria-orientation="horizontal"
               ></div>
 
               <div role="tabpanel" tabIndex={0} class="order-4 w-full focus:outline-none">
-                <div class="flex p-4 bg-gohan rounded-onwo-s-sm text-onwo-14 w-full">
+                <div class="flex p-4 bg-parchment rounded-onwo-s-sm text-onwo-14 w-full">
                   <div class="flex flex-wrap items-center justify-around gap-2 w-full bg-transparent">
                     <div class="flex flex-col gap-2 w-full">
                       <span class="text-onwo-9-caption uppercase transition-colors">Size 9</span>
@@ -151,19 +151,19 @@ export const TypographyPage = () => (
               </PNav.Link>
 
               <div
-                class="flex p-1 bg-gohan items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
+                class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
                 role="tablist"
                 aria-orientation="horizontal"
               ></div>
 
               <div role="tabpanel" tabIndex={0} class="order-4 w-full focus:outline-none">
-                <div class="flex p-4 bg-gohan rounded-onwo-s-sm text-onwo-14 w-full">
+                <div class="flex p-4 bg-parchment rounded-onwo-s-sm text-onwo-14 w-full">
                   <div class="flex flex-wrap items-center justify-around gap-2 w-full bg-transparent">
                     <div class="flex justify-around gap-2 w-full">
-                      <p class="text-trunks">Trunks</p>
-                      <p class="text-piccolo">Piccolo</p>
-                      <p class="text-roshi">Roshi</p>
-                      <p class="text-chichi">Chichi</p>
+                      <p class="text-lead">Trunks</p>
+                      <p class="text-accent">Accent</p>
+                      <p class="text-success">Roshi</p>
+                      <p class="text-error">Chichi</p>
                     </div>
                   </div>
                 </div>
