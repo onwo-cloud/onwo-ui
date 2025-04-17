@@ -11,6 +11,7 @@ docs/node_modules/
 docs/server/
 docs/tsconfig.tsbuildinfo
 node_modules/
+packages/tailwindcss/dist/
 packages/icons/lib-types/
 packages/icons/lib/
 packages/icons/node_modules/
