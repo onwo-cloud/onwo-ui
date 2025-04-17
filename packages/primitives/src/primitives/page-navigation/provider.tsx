@@ -12,7 +12,7 @@ type PageNavigationContext = {
   elements: Record<number, NavigationElement>;
 };
 
-export const PageNavigationContext = createContextId<PageNavigationContext>('tabs-context-1');
+export const PageNavigationContext = createContextId<PageNavigationContext>('page-navigation-context');
 
 export type PageNavigationProviderProps = Primitive<'div'>;
 

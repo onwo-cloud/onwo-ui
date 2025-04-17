@@ -51,7 +51,7 @@ build: install build-tailwind-plugin build-primitives build-icons build-ui build
 dev:
   concurrently \
     --names '    tw,  prim,tsprim,    ui,  tsui,  icon,tsicon,  docs,tsdocs' \
-    --prefix-colors 'blue.bold,orange.bold,orange.bold,,yellow.bold,yellow.bold,green.bold,green.bold,red.bold' \
+    --prefix-colors 'yellow.bold,cyan.bold,cyan.bold,yellow.bold,yellow.bold,green.bold,green.bold,red.bold' \
     "yarn --cwd=packages/tailwindcss   dev" \
     "yarn --cwd=packages/primitives    dev" \
     "yarn --cwd=packages/primitives    ts-watch" \
