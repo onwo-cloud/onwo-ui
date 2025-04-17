@@ -11,7 +11,7 @@ hackwatcher([
   '../primitives/lib-types',
   '../icons/lib',
   '../icons/lib-types'
-], './src/index.ts', 300);
+], './src/index.ts', 400);
 
 
 const customLogger: Logger = {

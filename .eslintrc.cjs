@@ -34,6 +34,7 @@ const extendedConfig = {
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-array-reduce': 'warn',
     'sonarjs/different-types-comparison': 'warn',
+    'sonarjs/no-commented-code': 'warn',
   },
 };
 

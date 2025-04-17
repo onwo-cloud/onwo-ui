@@ -20,7 +20,7 @@ const debounced = <CB extends () => unknown>(cb: CB, ms: number) => {
 export const hackwatcher = (
   pathToWatch: string | string[],
   projectEntryPath: string | string[],
-  debouncedMs = 1000,
+  debouncedMs = 100,
 ) => {
   const watcher = watch(pathToWatch, { ignoreInitial: true });
 
