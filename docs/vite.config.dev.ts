@@ -24,14 +24,14 @@ const customLogger: Logger = {
     console.warn(msg, options);
   },
   error(msg, options) {
-    console.error('ERROOR', msg, options);
+    console.error(msg, options);
   },
   clearScreen() { },
   hasErrorLogged(error) {
-    const e = String(error);
-    if (e.includes(' Does the file exist?') || e.includes('no such file or directory,')) {
-      return true
-    }
+    //const e = String(error);
+    //if (e.includes(' Does the file exist?') || e.includes('no such file or directory,')) {
+    //  return true
+    //}
     return false;
   },
   hasWarned: false,

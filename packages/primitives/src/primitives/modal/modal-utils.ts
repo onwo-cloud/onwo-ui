@@ -67,31 +67,3 @@ export const showModal = $(async (modal: HTMLDialogElement) => {
 export const closeModal = $(async (modal: HTMLDialogElement) => {
   await supportClosingAnimation(modal);
 });
-
-/**
- * Determines if the backdrop of the Modal has been clicked.
- */
-export const wasModalBackdropClicked = $(
-  (modal: HTMLDialogElement | undefined, clickEvent: MouseEvent): boolean => {
-    if (!modal) {
-      return false;
-    }
-
-    const rect = modal.getBoundingClientRect();
-
-    const wasBackdropClicked =
-      rect.left > clickEvent.clientX ||
-      rect.right < clickEvent.clientX ||
-      rect.top > clickEvent.clientY ||
-      rect.bottom < clickEvent.clientY;
-
-    /**
-     * If the inside focusable elements are not prevented, such as a button it will also fire a click event.
-     *
-     * Hitting the enter or space keys on a button inside of the dialog for example, will fire a "pointer" event. In reality, it fires our onClick$ handler because we have not prevented the default behavior.
-     *
-     * This is why we check if the pointerId is -1.
-     **/
-    return (clickEvent as PointerEvent).pointerId === -1 ? false : wasBackdropClicked;
-  },
-);

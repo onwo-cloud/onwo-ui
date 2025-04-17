@@ -7,7 +7,7 @@ export const Bullet = (props: BulletProps) => (
   <C.Bullet
     {...props}
     class={cn(
-      'flex p-2 px-4 bg-transparent cursor-pointer transition items-center justify-between rounded-onwo-i-sm gap-2 text-onwo-14 w-min focus:outline-none focus:shadow-focus hover:bg-scan data-active:bg-scan',
+      'flex p-2 px-4 bg-transparent cursor-pointer transition items-center justify-between rounded-onwo-i-sm gap-2 text-onwo-14 w-min outline-none focus:shadow-focus hover:bg-scan data-active:bg-scan',
       props.class,
     )}
   >

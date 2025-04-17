@@ -16,7 +16,7 @@ export const PageHeadSection = (props: PageHeadSectionProps) => (
       </Breadcrumb.Root>
     </div>
 
-    <div class="flex flex-col gap-2 flex-1 relative focus:outline-none mb-8">
+    <div class="flex flex-col gap-2 flex-1 relative outline-none mb-8">
       <h1 class="text-onwo-32 font-bold">{props.title}</h1>
       <p class="text-base text-lead max-w-screen-sm">
         {typeof props.description === 'string' ? props.description : props.description?.()}

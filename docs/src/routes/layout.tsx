@@ -15,7 +15,7 @@ type SidebarButtonSmallProps = {
 export const SidebarButtonSmall = (props: SidebarButtonSmallProps) => (
   <a
     class={cn(
-      'flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan',
+      'flex p-1 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full outline-none focus:shadow-focus hover:bg-scan',
       props.disabled && 'text-lead cursor-not-allowed',
     )}
     href={props.href}
@@ -52,7 +52,7 @@ export default component$(() => {
               </div>
               <div class="flex flex-col gap-1">
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full outline-none focus:shadow-focus hover:bg-scan"
                   href="/roadmap"
                 >
                   <Icons.GenericTrophy />
@@ -60,7 +60,7 @@ export default component$(() => {
                 </a>
 
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full outline-none focus:shadow-focus hover:bg-scan"
                   href="/getting-started"
                 >
                   <Icons.OtherRocket />
@@ -68,7 +68,7 @@ export default component$(() => {
                 </a>
 
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full outline-none focus:shadow-focus hover:bg-scan"
                   href="/core-concepts"
                 >
                   <Icons.SoftwarePlate />
@@ -76,7 +76,7 @@ export default component$(() => {
                 </a>
 
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full outline-none focus:shadow-focus hover:bg-scan"
                   href="/colours"
                 >
                   <Icons.SoftwareSettings />
@@ -84,14 +84,14 @@ export default component$(() => {
                 </a>
 
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full outline-none focus:shadow-focus hover:bg-scan"
                   href="/typography"
                 >
                   <Icons.TextSize />
                   Typography
                 </a>
                 <a
-                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full focus:outline-none focus:shadow-focus hover:bg-scan"
+                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full outline-none focus:shadow-focus hover:bg-scan"
                   href="/icons"
                 >
                   <Icons.SoftwarePuzzle />

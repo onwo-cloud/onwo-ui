@@ -6,15 +6,16 @@ export const Trigger = component$((props: PropsOf<'button'>) => {
   const context = useModalContext();
 
   const handleClick$ = $(() => {
-    context.opened.value = !context.opened.value;
+    if (!context.panel.value) return;
+    context.panel.value.opened.value = !context.panel.value.opened.value;
   });
 
   return (
     <button
       aria-haspopup="dialog"
-      aria-expanded={context.opened.value}
-      data-open={context.opened.value ? '' : undefined}
-      data-closed={context.opened.value ? undefined : ''}
+      aria-expanded={context.panel.value?.opened.value}
+      data-open={context.panel.value?.opened.value ? '' : undefined}
+      data-closed={context.panel.value?.opened.value ? undefined : ''}
       onClick$={[handleClick$, props.onClick$]}
       {...props}
     >

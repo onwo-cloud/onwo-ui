@@ -6,7 +6,8 @@ export const Close = component$((props: PropsOf<'button'>) => {
   const context = useModalContext();
 
   const handleClick$ = $(() => {
-    context.opened.value = false;
+    if (!context.panel.value) return;
+    context.panel.value.opened.value = false;
   });
 
   return (

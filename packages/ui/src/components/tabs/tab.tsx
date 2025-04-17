@@ -5,7 +5,7 @@ export type TabProps<Name extends string> = Tabs.TabProps<Name>;
 export const Tab = <Name extends string>({ class: className, ...props }: TabProps<Name>) => (
   <Tabs.Tab
     class={cn(
-      'relative flex cursor-pointer items-center justify-center focus:outline-none focus:shadow-focus font-semibold gap-2 data-selected:text-accent text-onwo-14 hover:text-accent ',
+      'relative flex cursor-pointer items-center justify-center outline-none focus-visible:shadow-focus font-semibold gap-2 rounded-sm data-selected:text-accent text-onwo-14 hover:text-accent ',
       /* disabled */
       'disabled:text-lead',
       /* underline */

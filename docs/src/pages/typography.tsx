@@ -20,7 +20,7 @@ export const TypographyPage = () => (
       </p>
     </div>
 
-    <div class="mt-10 flex flex-col gap-12 flex-1 relative focus:outline-none">
+    <div class="mt-10 flex flex-col gap-12 flex-1 relative outline-none">
       <section class="flex flex-col">
         <div class="flex flex-row items-center justify-between">
           <div class="flex flex-row gap-2 w-full">
@@ -38,7 +38,7 @@ export const TypographyPage = () => (
                 aria-orientation="horizontal"
               ></div>
 
-              <div role="tabpanel" tabIndex={0} class="order-4 w-full focus:outline-none">
+              <div role="tabpanel" tabIndex={0} class="order-4 w-full outline-none">
                 <div class="flex p-4 bg-parchment rounded-onwo-s-sm text-onwo-14 w-full">
                   <div class="flex flex-wrap items-center justify-around gap-2 w-full bg-transparent">
                     <div class="flex flex-col gap-2 w-full">
@@ -81,7 +81,7 @@ export const TypographyPage = () => (
                 aria-orientation="horizontal"
               ></div>
 
-              <div role="tabpanel" tabIndex={0} class="order-4 w-full focus:outline-none">
+              <div role="tabpanel" tabIndex={0} class="order-4 w-full outline-none">
                 <div class="flex p-4 bg-parchment rounded-onwo-s-sm text-onwo-14 w-full">
                   <div class="flex flex-wrap items-center justify-around gap-2 w-full bg-transparent">
                     <div class="flex flex-col gap-2 w-full">
@@ -124,7 +124,7 @@ export const TypographyPage = () => (
                 aria-orientation="horizontal"
               ></div>
 
-              <div role="tabpanel" tabIndex={0} class="order-4 w-full focus:outline-none">
+              <div role="tabpanel" tabIndex={0} class="order-4 w-full outline-none">
                 <div class="flex p-4 bg-parchment rounded-onwo-s-sm text-onwo-14 w-full">
                   <div class="flex flex-wrap items-center justify-around gap-2 w-full bg-transparent">
                     <div class="flex flex-col gap-2 w-full">
@@ -156,7 +156,7 @@ export const TypographyPage = () => (
                 aria-orientation="horizontal"
               ></div>
 
-              <div role="tabpanel" tabIndex={0} class="order-4 w-full focus:outline-none">
+              <div role="tabpanel" tabIndex={0} class="order-4 w-full outline-none">
                 <div class="flex p-4 bg-parchment rounded-onwo-s-sm text-onwo-14 w-full">
                   <div class="flex flex-wrap items-center justify-around gap-2 w-full bg-transparent">
                     <div class="flex justify-around gap-2 w-full">

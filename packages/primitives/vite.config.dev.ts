@@ -4,7 +4,7 @@ import { hackwatcher } from '../../misc/hackwatcher';
 
 // This will update the index.ts utime every time the tailwind plugin
 // is updated.
-hackwatcher(['../tailwindcss/dist', '../tailwindcss/themes'], './src/index.ts', 50);
+hackwatcher(['../tailwindcss/dist', '../tailwindcss/themes'], './src/index.ts', 400);
 
 const customLogger: Logger = {
   info(msg, _options) {
@@ -28,7 +28,6 @@ const customLogger: Logger = {
 
 export default defineConfig(() => ({
   ...baseConfig,
-  reportCompressedSize: false,
   plugins: [
     ...baseConfig.plugins,
   ],

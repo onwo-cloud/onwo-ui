@@ -25,7 +25,7 @@ export const HomePage = () => (
   <div class="relative h-screen max-h-screen overflow-hidden">
     <BgShape />
     <main class="px-5 lg:pl-20 2xl:pl-32 lg:pt-12 lg:pb-52 flex flex-col grow max-w-screen-xl">
-      <div class="flex flex-col gap-12 flex-1 relative focus:outline-none">
+      <div class="flex flex-col gap-12 flex-1 relative outline-none">
         <div
           class="uppercase flex px-2 py-0.5 bg-ink text-paper select-none tracking-[1px] items-center font-semibold rounded-onwo-i-xs gap-1 text-onwo-9 h-4 self-start"
           data-phx-id="m12-phx-GCuhJbGTummIAhxh"

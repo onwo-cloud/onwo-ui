@@ -9,7 +9,7 @@ hackwatcher([
   '../tailwindcss/themes',
   '../primitives/lib',
   '../primitives/lib-types'
-], './src/index.ts', 300);
+], './src/index.ts', 400);
 
 const customLogger: Logger = {
   info(msg, _options) {

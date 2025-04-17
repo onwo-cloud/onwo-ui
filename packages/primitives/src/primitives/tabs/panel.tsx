@@ -17,7 +17,7 @@ export const Panel = component$(
     return (
       <div
         id={'panel' + tabName.value}
-        class={cn('order-4 w-full focus:outline-none focus:shadow-focus', className)}
+        class={cn('order-4 w-full outline-none focus-visible:shadow-focus', className)}
         role="tabpanel"
         tabIndex={0}
         data-active={tabName.value === context.selected.value}
