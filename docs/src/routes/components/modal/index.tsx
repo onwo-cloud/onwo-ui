@@ -1,5 +1,6 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Modal } from '@onwo/ui';
+import { Icons } from '@onwo/icons';
+import { Button, Modal } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -37,17 +38,33 @@ export default () => (
       title="Default"
       component={
         <Modal.Root>
-          <Modal.Trigger>Open Modal</Modal.Trigger>
-          <Modal.Panel id="bg-[red]">
-            <Modal.Header>
-              <Modal.Title>Edit ofile</Modal.Title>
+          <Modal.Trigger class="block mx-auto">
+            <Button as="div">Open Modal</Button>
+          </Modal.Trigger>
+          <Modal.Panel>
+            <Modal.Header class="flex justify-between">
+              <Modal.Title class="font-medium">Opened a modal</Modal.Title>
+              <Modal.Close>
+                <Button as="div" size="xs" variant="ghost">
+                  <Icons.ControlsClose size="xs" />
+                </Button>
+              </Modal.Close>
             </Modal.Header>
             <Modal.Description>
-              You can update your profile here. Hit the save button when finished.
+              You can try typing in this input on mobile to check repositioning.
+              <input class="border border-line" name="text-input" />
             </Modal.Description>
-            <Modal.Footer>
-              <Modal.Close class="modal-close">Cancel</Modal.Close>
-              <Modal.Close class="modal-close">Save Changes</Modal.Close>
+            <Modal.Footer class="flex gap-4 justify-between">
+              <Modal.Close>
+                <Button as="div" size="sm" variant="ghost">
+                  Cancel
+                </Button>
+              </Modal.Close>
+              <Modal.Close>
+                <Button as="div" size="sm">
+                  Save changes
+                </Button>
+              </Modal.Close>
             </Modal.Footer>
           </Modal.Panel>
         </Modal.Root>

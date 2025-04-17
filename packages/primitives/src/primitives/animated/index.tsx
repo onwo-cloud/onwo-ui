@@ -1,5 +1,5 @@
 /* eslint-disable qwik/use-method-usage */
-import type { CSSProperties, Signal } from '@builder.io/qwik';
+import type { CSSProperties, QRL, Signal } from '@builder.io/qwik';
 import { Slot, component$, useComputed$, useSignal, useStyles$, useTask$ } from '@builder.io/qwik';
 import { withAs } from '~/utils/as';
 
@@ -61,6 +61,7 @@ export type AnimatedProps = {
   ['bind:visible']?: Signal<boolean>;
   in?: Animation;
   out?: Animation;
+  onOutEnd$?: QRL<() => void>;
 };
 
 const getTimingFunction = (timingFunction?: Animation['timing']) => {
@@ -126,6 +127,7 @@ const AnimatedRaw = withAs('div')<AnimatedProps>(({
   style,
   in: inAnimation,
   out: outAnimation,
+  onOutEnd$,
   ...props
 }) => {
   const mounted = useSignal<boolean>(visible?.value ?? true);
@@ -145,7 +147,9 @@ const AnimatedRaw = withAs('div')<AnimatedProps>(({
       (outAnimation.delayMs ?? 0) + (outAnimation.durationMs ?? DEFAULT_ANIMATION_DURATION);
     const timeoutId = setTimeout(() => {
       mounted.value = false;
+      onOutEnd$?.();
     }, animationTime);
+
     cleanup(() => clearTimeout(timeoutId));
   });
 

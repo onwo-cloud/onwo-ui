@@ -47,13 +47,13 @@ export const Button = function <T extends keyof QwikHTMLElements = 'button'>({
   return (
     <Elem
       class={cn(
-        'relative flex select-none items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-all duration-200',
+        'relative flex select-none items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-transform duration-100',
         {
-          'bg-accent text-forced-a': variant === 'fill',
-          'border border-accent text-accent': variant === 'outline',
-          'text-accent': variant === 'ghost',
+          'bg-accent hover:contrast-120 hover:brightness-120 text-forced-a': variant === 'fill',
+          'border border-accent text-accent hover:bg-scan': variant === 'outline',
+          'hover:bg-scan': variant === 'ghost',
           'gap-1 h-6 ps-1 pe-1 text-onwo-12 rounded-onwo-s-xs': size === 'xs',
-          'gap-1 h-8 ps-1 pe-1 text-onwo-14 rounded-onwo-s-sm': size === 'sm',
+          'gap-1 h-8 ps-2 pe-2 text-onwo-14 rounded-onwo-s-xs': size === 'sm',
           'gap-2 h-10 ps-2 pe-2 text-onwo-14 rounded-onwo-s-sm': size === 'md',
           'gap-2 h-12 ps-3 pe-3 text-onwo-16 rounded-onwo-s-sm': size === 'lg',
           'gap-2 h-14 ps-4 pe-4 text-onwo-16 rounded-onwo-s-md': size === 'xl',

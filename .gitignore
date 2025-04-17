@@ -24,8 +24,6 @@ packages/ui/lib/
 packages/ui/node_modules/
 packages/ui/tsconfig.tsbuildinfo
 
-vite.config.dev.ts.timestamp*
-
 # Root
 !.eslintrc.cjs
 !.github/
@@ -60,7 +58,6 @@ vite.config.dev.ts.timestamp*
 !packages/icons/.gitignore
 !packages/icons/package.json
 !packages/icons/tsconfig.json
-!packages/icons/tsconfig.tsbuildinfo
 !packages/icons/vite.config.dev.ts
 !packages/icons/vite.config.ts
 
@@ -71,7 +68,6 @@ vite.config.dev.ts.timestamp*
 !packages/primitives/.gitignore
 !packages/primitives/package.json
 !packages/primitives/tsconfig.json
-!packages/primitives/tsconfig.tsbuildinfo
 !packages/primitives/vite.config.dev.ts
 !packages/primitives/vite.config.ts
 
@@ -82,6 +78,5 @@ vite.config.dev.ts.timestamp*
 !packages/ui/.gitignore
 !packages/ui/package.json
 !packages/ui/tsconfig.json
-!packages/ui/tsconfig.tsbuildinfo
 !packages/ui/vite.config.dev.ts
 !packages/ui/vite.config.ts

@@ -1,38 +1,25 @@
-import type { PropsOf, QRL, Signal } from '@builder.io/qwik';
-import {
-  $,
-  Slot,
-  component$,
-  useSignal,
-  useStyles$,
-  useTask$,
-  sync$,
-  useContext,
-} from '@builder.io/qwik';
+import type { Signal } from '@builder.io/qwik';
+import { $, Slot, component$, useSignal, useTask$, sync$, useContext } from '@builder.io/qwik';
 
 import { useFocusTrap } from '~/hooks/use-focus-trap';
 import { cn } from '~/utils/cn';
+import type { Primitive } from '~/utils/types';
 import { modalContextId } from './context';
 
 import { closeModal, showModal, wasModalBackdropClicked } from './modal-utils';
-import styles from './modal.css?inline';
 
-export type ModalProps = Omit<PropsOf<'dialog'>, 'open'> & {
-  onShow$?: QRL<() => void>;
-  onClose$?: QRL<() => void>;
-  'bind:show': Signal<boolean>;
-  closeOnBackdropClick?: boolean;
-  alert?: boolean;
+export type PanelProps = Omit<Primitive<'dialog'>, 'open'> & {
+  // This can be used to force the open status while animation are still ongoing
+  'bind:override'?: Signal<boolean>;
 };
 
-export const Panel = component$((props: PropsOf<'dialog'>) => {
-  useStyles$(styles);
+export const Panel = component$(({ 'bind:override': overrideOpened, ...props }: PanelProps) => {
   const context = useContext(modalContextId);
   const panelRef = useSignal<HTMLDialogElement>();
   const focus = useFocusTrap(panelRef);
 
   useTask$(async function toggleModal({ track, cleanup }) {
-    const isOpen = track(() => context.opened.value);
+    const isOpen = track(() => overrideOpened?.value ?? context.opened.value);
 
     if (!panelRef.value) return;
     if (isOpen) {
@@ -106,7 +93,10 @@ export const Panel = component$((props: PropsOf<'dialog'>) => {
       data-closed={!context.opened.value && ''}
       role={context.alert === true ? 'alertdialog' : 'dialog'}
       ref={panelRef}
-      class={cn('backdrop:bg-transparent', props.class)}
+      class={cn(
+        'bg-transparent max-w-none max-w-none border-none backdrop:bg-transparent',
+        props.class,
+      )}
       onKeyDown$={[handleKeyDownSync$, handleKeyDown$, props.onKeyDown$]}
       onClick$={async (e) => {
         e.stopPropagation();

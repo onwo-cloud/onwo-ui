@@ -1,5 +1,5 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Slot, component$, useContext, $ } from '@builder.io/qwik';
+import { Slot, component$, $ } from '@builder.io/qwik';
 import { useModalContext } from './context';
 
 export const Close = component$((props: PropsOf<'button'>) => {

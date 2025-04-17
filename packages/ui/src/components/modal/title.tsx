@@ -1,3 +1,3 @@
-import { Modal } from '@onwo/primitives';
+import { Modal, styledcn } from '@onwo/primitives';
 
-export const Title = Modal.Title;
+export const Title: typeof Modal.Title = styledcn(Modal.Title)`text-onwo-16 font-semibold`;

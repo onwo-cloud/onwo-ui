@@ -63,6 +63,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@onwo/primitives": "link:../primitives",
     "@tailwindcss/vite": "^4.0.14"
   }
 }

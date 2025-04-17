@@ -30,8 +30,7 @@ export default component$(() => {
         variants={{
           Default: `import { Animated } from '@onwo/primitives';
 
-<Animated>
-</Animated>
+<Animated> ... </Animated>
 `,
         }}
       />
