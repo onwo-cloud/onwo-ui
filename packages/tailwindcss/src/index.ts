@@ -99,67 +99,10 @@ export default plugin(
           modal_enter: 'modalfadein 0.3s ease-out',
           modal_leave: 'modalfadeout 0.2s ease-in',
         },
-        keyframes: {
-          loader: {
-            '0%': { transform: 'rotate(0deg)' },
-            '100%': { transform: 'rotate(360deg)' },
-          },
-          rightslide: {
-            '0%': { transform: 'translateX(100%)' },
-            '100%': { transform: 'translateX(0%)' },
-          },
-          leftslide: {
-            '0%': { transform: 'translateX(-100%)' },
-            '100%': { transform: 'translateX(0%)' },
-          },
-          topslide: {
-            '0%': { transform: 'translateY(-100%)' },
-            '100%': { transform: 'translateY(0%)' },
-          },
-          bottomslide: {
-            '0%': { transform: 'translateY(100%)' },
-            '100%': { transform: 'translateY(0%)' },
-          },
-          rightslideout: {
-            '0%': { transform: 'translateX(0%)' },
-            '100%': { transform: 'translateX(100%)' },
-          },
-          leftslideout: {
-            '0%': { transform: 'translateX(0%)' },
-            '100%': { transform: 'translateX(-100%)' },
-          },
-          topslideout: {
-            '0%': { transform: 'translateY(0%)' },
-            '100%': { transform: 'translateY(-100%)' },
-          },
-          bottomslideout: {
-            '0%': { transform: 'translateY(0%)' },
-            '100%': { transform: 'translateY(100%)' },
-          },
-          fadein: {
-            '0%': { opacity: 0 },
-            '100%': { opacity: 1 },
-          },
-          fadeout: {
-            '0%': { opacity: 1 },
-            '100%': { opacity: 0 },
-          },
-          modalfadein: {
-            '0%': { opacity: 0, transform: 'scale(.95)' },
-            '100%': { opacity: 1, transform: 'scale(1)' },
-          },
-          modalfadeout: {
-            '0%': { opacity: 1, transform: 'scale(1)' },
-            '100%': { opacity: 0, transform: 'scale(.95)' },
-          },
-        },
-        fontWeight: {
-          normal: 400,
-          semibold: 500, // that may be confusing
-        },
         boxShadow: {
           border: '0 0 0 2px rgba(var(--accent)) inset',
           inset: '0 0 0 1px rgb(var(--accent)) inset',
+          flat: '0px -2px 0 0px rgba(128, 128, 163, 0.05) inset',
           interactive: '0 0 0 2px rgb(var(--accent)) inset',
           focus: `0 0 0 2px rgb(var(--stare))`,
           input: '0 0 0 var(--border-width) rgb(var(--line)) inset',

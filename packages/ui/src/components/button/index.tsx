@@ -46,6 +46,9 @@ export const Button = function <T extends keyof QwikHTMLElements = 'button'>({
 
   return (
     <Elem
+      style={{
+        boxShadow: '0px -2px 0 0px rgba(128, 128, 163, 0.05) inset',
+      }}
       class={cn(
         'relative flex select-none items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-transform duration-100',
         {

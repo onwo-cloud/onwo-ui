@@ -31,6 +31,7 @@ const twMerge = extendTailwindMerge({
         'inset',
         'interactive',
         'focus',
+        'contour',
         'input',
         'input-hov',
         'input-err',

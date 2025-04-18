@@ -1,5 +1,4 @@
 import type { JSXChildren } from '@builder.io/qwik';
-import { Icons } from '@onwo/icons';
 import { Tabs, cn, PageNavigation as PNav } from '@onwo/ui';
 
 type ShowcaseProps = {
@@ -25,13 +24,14 @@ export const Showcase = (props: ShowcaseProps) => (
         </PNav.Link>
       </div>
       {!!props.code && (
-        <Tabs.List class="flex p-1 bg-parchment rounded-onwo-s-md gap-1 w-fit justify-left">
+        <Tabs.List
+          size="sm"
+          class="flex p-1 bg-parchment rounded-onwo-s-xs gap-1 w-fit justify-left"
+        >
           <Tabs.Pill>
-            <Icons.ControlsEye />
             <span>Preview</span>
           </Tabs.Pill>
           <Tabs.Pill disabled={props.disabled}>
-            <Icons.SoftwareCode />
             <span>Code</span>
           </Tabs.Pill>
         </Tabs.List>

@@ -21,6 +21,6 @@ export const Close = ({ type: buttonType, class: className, ...props }: ClosePro
       />
     </SvgIcon>
 
-    <span class="absolute block bg-transparent pointer-events-none transition-[background-color_0.2s_ease-in-out z-[-1] inset-0 group-hover:bg-stare"></span>
+    <span class="absolute block bg-transparent pointer-events-none transition-[background-color_0.2s_ease-in-out z-[-1] inset-0 group-hover:bg-papyrus"></span>
   </Button>
 );
