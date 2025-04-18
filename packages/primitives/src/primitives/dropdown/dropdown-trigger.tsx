@@ -1,4 +1,5 @@
 import { $, Slot, component$, sync$, useContext, useSignal, type PropsOf } from '@builder.io/qwik';
+import { Button } from '../button';
 import { dropdownContextId } from './dropdown-context';
 import { useDropdown } from './use-dropdown';
 
@@ -68,7 +69,7 @@ export const HDropdownTrigger = component$<DropdownTriggerProps>((props) => {
   });
 
   return (
-    <button
+    <Button
       data-trigger
       {...props}
       id={triggerId}
@@ -83,6 +84,6 @@ export const HDropdownTrigger = component$<DropdownTriggerProps>((props) => {
       aria-haspopup="true"
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

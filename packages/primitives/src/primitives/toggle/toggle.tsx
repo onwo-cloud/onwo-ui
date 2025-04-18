@@ -1,6 +1,7 @@
 import type { PropsOf, QRL, Signal } from '@builder.io/qwik';
 import { $, component$, Slot, sync$, useTask$ } from '@builder.io/qwik';
 import { useBoundSignal } from '~/imported/bound-signal2';
+import { Button } from '../button';
 
 export type ToggleProps = PropsOf<'button'> & {
   /**
@@ -55,8 +56,7 @@ export const HToggle = component$<ToggleProps>((props) => {
   });
 
   return (
-    <button
-      type="button"
+    <Button
       aria-pressed={pressedSig.value}
       aria-disabled={props.disabled ? true : false}
       data-disabled={props.disabled ? '' : undefined}
@@ -66,6 +66,6 @@ export const HToggle = component$<ToggleProps>((props) => {
       onClick$={[props.onClick$, handleClick$]}
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

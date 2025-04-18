@@ -1,6 +1,7 @@
 import type { PropsOf, Signal } from '@builder.io/qwik';
 import { Slot, component$, sync$, useContext, $, useSignal, useTask$ } from '@builder.io/qwik';
 import { isServer } from '@builder.io/qwik/build';
+import { Button } from '../button';
 import { usePopover } from '../popover/use-popover';
 import type { TriggerDataState } from './tooltip-context';
 import { TooltipContextId } from './tooltip-context';
@@ -82,7 +83,7 @@ export const HTooltipTrigger = component$((props: PropsOf<'button'>) => {
   });
 
   return (
-    <button
+    <Button
       ref={context.triggerRef}
       onMouseOver$={[preventDefaultSync$, setTooltipOpen$]}
       onMouseLeave$={setTooltipClosed$}
@@ -94,6 +95,6 @@ export const HTooltipTrigger = component$((props: PropsOf<'button'>) => {
       {...props}
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

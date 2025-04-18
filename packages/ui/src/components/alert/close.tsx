@@ -1,10 +1,10 @@
 import type { QwikHTMLElements } from '@builder.io/qwik';
-import { SvgIcon, cn } from '@onwo/primitives';
+import { Button, SvgIcon, cn } from '@onwo/primitives';
 
 export type CloseProps = QwikHTMLElements['button'];
 
 export const Close = ({ type: buttonType, class: className, ...props }: CloseProps) => (
-  <button
+  <Button
     type={buttonType ?? 'button'}
     class={cn(
       'absolute flex p-1 bg-transparent text-ink select-none transition-all items-center justify-center overflow-hidden font-semibold duration-200 rounded-onwo-s-xs gap-2 z-0 text-onwo-16 w-6 h-6 hover:text-ink active:scale-90 end-4 group row top:4',
@@ -22,5 +22,5 @@ export const Close = ({ type: buttonType, class: className, ...props }: ClosePro
     </SvgIcon>
 
     <span class="absolute block bg-transparent pointer-events-none transition-[background-color_0.2s_ease-in-out z-[-1] inset-0 group-hover:bg-stare"></span>
-  </button>
+  </Button>
 );

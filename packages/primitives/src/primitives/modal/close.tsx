@@ -1,5 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { Slot, component$, $ } from '@builder.io/qwik';
+import { Button } from '../button';
 import { useModalContext } from './context';
 
 export const Close = component$((props: PropsOf<'button'>) => {
@@ -11,8 +12,8 @@ export const Close = component$((props: PropsOf<'button'>) => {
   });
 
   return (
-    <button onClick$={[handleClick$, props.onClick$]} {...props}>
+    <Button onClick$={[handleClick$, props.onClick$]} {...props}>
       <Slot />
-    </button>
+    </Button>
   );
 });

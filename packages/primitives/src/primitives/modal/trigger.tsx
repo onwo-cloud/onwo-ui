@@ -1,5 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { Slot, component$, $ } from '@builder.io/qwik';
+import { Button } from '../button';
 import { useModalContext } from './context';
 
 export const Trigger = component$((props: PropsOf<'button'>) => {
@@ -11,7 +12,7 @@ export const Trigger = component$((props: PropsOf<'button'>) => {
   });
 
   return (
-    <button
+    <Button
       aria-haspopup="dialog"
       aria-expanded={context.panel.value?.opened.value}
       data-open={context.panel.value?.opened.value ? '' : undefined}
@@ -20,6 +21,6 @@ export const Trigger = component$((props: PropsOf<'button'>) => {
       {...props}
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

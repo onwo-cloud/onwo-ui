@@ -1,5 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { $, Slot, component$, useContext, useOnWindow } from '@builder.io/qwik';
+import { Button } from '../button';
 import { collapsibleContextId } from './collapsible-context';
 
 export const HCollapsibleTrigger = component$<PropsOf<'button'>>(({ onClick$, ...props }) => {
@@ -15,7 +16,7 @@ export const HCollapsibleTrigger = component$<PropsOf<'button'>>(({ onClick$, ..
   useOnWindow('resize', context.getContentDimensions$);
 
   return (
-    <button
+    <Button
       {...props}
       id={triggerId}
       ref={context.triggerRef}
@@ -29,6 +30,6 @@ export const HCollapsibleTrigger = component$<PropsOf<'button'>>(({ onClick$, ..
       onClick$={[handleClick$, onClick$]}
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

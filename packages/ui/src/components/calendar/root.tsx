@@ -280,7 +280,7 @@ export const HeadNavButton = (props: HeadNavButtonProps) => (
   <button
     type="button"
     tabIndex={-1}
-    class="rounded-md text-lead border border-line flex items-center justify-center w-7 h-7 transition-colors hover:bg-scan"
+    class="touch-manipulation rounded-md text-lead border border-line flex items-center justify-center w-7 h-7 transition-colors hover:bg-scan"
     onClick$={props.onClick$}
   >
     {props.icon}

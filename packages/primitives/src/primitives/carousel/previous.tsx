@@ -1,5 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { Slot, component$, useContext, useSignal, $, useComputed$ } from '@builder.io/qwik';
+import { Button } from '../button';
 import { carouselContextId } from './context';
 import { useCarousel } from './use-carousel';
 
@@ -53,7 +54,7 @@ export const Previous = component$((props: PropsOf<'button'>) => {
   });
 
   return (
-    <button
+    <Button
       {...props}
       ref={context.prevButtonRef}
       aria-disabled={isFirstSlideSig.value && !context.isRewindSig.value}
@@ -65,6 +66,6 @@ export const Previous = component$((props: PropsOf<'button'>) => {
       aria-label="previous slide"
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

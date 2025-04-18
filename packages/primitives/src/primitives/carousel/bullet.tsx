@@ -9,6 +9,7 @@ import {
   sync$,
   useComputed$,
 } from '@builder.io/qwik';
+import { Button } from '../button';
 import { carouselContextId } from './context';
 import { useCarousel } from './use-carousel';
 
@@ -98,7 +99,7 @@ export const Bullet = component$(({ _index, ...props }: BulletProps) => {
   });
 
   return (
-    <button
+    <Button
       ref={bulletRef}
       role="tab"
       hidden={!isRenderedSig.value}
@@ -114,6 +115,6 @@ export const Bullet = component$(({ _index, ...props }: BulletProps) => {
       {...props}
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

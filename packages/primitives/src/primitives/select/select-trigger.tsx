@@ -1,5 +1,6 @@
 import { $, Slot, component$, sync$, useContext, useSignal, type PropsOf } from '@builder.io/qwik';
 import { useCombinedRef } from '~/hooks/use-combined-refs';
+import { Button } from '../button';
 import SelectContextId from './select-context';
 import { useSelect, useTypeahead } from './use-select';
 
@@ -118,7 +119,7 @@ export const HSelectTrigger = component$<SelectTriggerProps>((props) => {
   });
 
   return (
-    <button
+    <Button
       {...props}
       id={triggerId}
       ref={triggerRef}
@@ -138,6 +139,6 @@ export const HSelectTrigger = component$<SelectTriggerProps>((props) => {
       preventdefault:blur
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

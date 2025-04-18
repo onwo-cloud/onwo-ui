@@ -1,5 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { component$, Slot, useContext, $ } from '@builder.io/qwik';
+import { Button } from '../button';
 import { carouselContextId } from './context';
 
 export const Player = component$((props: PropsOf<'button'>) => {
@@ -10,7 +11,7 @@ export const Player = component$((props: PropsOf<'button'>) => {
   });
 
   return (
-    <button
+    <Button
       aria-label={
         context.isAutoplaySig.value ? 'stop automatic slide show' : 'start automatic slide show'
       }
@@ -19,6 +20,6 @@ export const Player = component$((props: PropsOf<'button'>) => {
       {...props}
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

@@ -9,7 +9,7 @@ export const Trigger = ({
   return (
     <Accordion.Trigger
       class={cn(
-        'flex flex-1 w-full items-center justify-between py-4 text-sm font-medium transition-all hover:underline text-left [&[data-state=opened]>svg]:rotate-180',
+        'flex flex-1 w-full items-center justify-between py-4 text-sm font-medium transition-all outline-none focus-visible:underline hover:underline text-left [&[data-state=opened]>svg]:rotate-180',
         className,
       )}
       {...props}

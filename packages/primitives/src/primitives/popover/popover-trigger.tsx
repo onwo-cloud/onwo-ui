@@ -1,5 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { Slot, component$, $, useContext } from '@builder.io/qwik';
+import { Button } from '../button';
 import { popoverContextId } from './popover-context';
 import { usePopover } from './use-popover';
 
@@ -54,7 +55,7 @@ export const HPopoverTrigger = component$<PopoverTriggerProps>((props: PopoverTr
   });
 
   return (
-    <button
+    <Button
       {...props}
       ref={context.triggerRef}
       id={triggerId}
@@ -65,6 +66,6 @@ export const HPopoverTrigger = component$<PopoverTriggerProps>((props: PopoverTr
       popoverTargetAction={context.hover ? 'show' : undefined}
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

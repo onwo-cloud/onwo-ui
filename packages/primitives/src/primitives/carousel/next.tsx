@@ -8,6 +8,7 @@ import {
   $,
   useComputed$,
 } from '@builder.io/qwik';
+import { Button } from '../button';
 import { carouselContextId } from './context';
 import { useCarousel } from './use-carousel';
 
@@ -73,7 +74,7 @@ export const Next = component$((props: PropsOf<'button'>) => {
   });
 
   return (
-    <button
+    <Button
       {...props}
       ref={context.nextButtonRef}
       aria-disabled={isLastSlideInViewSig.value && !context.isRewindSig.value}
@@ -85,6 +86,6 @@ export const Next = component$((props: PropsOf<'button'>) => {
       aria-label="next slide"
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

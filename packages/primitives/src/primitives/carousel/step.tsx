@@ -1,5 +1,6 @@
 import type { QwikIntrinsicElements } from '@builder.io/qwik';
 import { component$, Slot, useComputed$, useContext, $ } from '@builder.io/qwik';
+import { Button } from '../button';
 import { carouselContextId } from './context';
 
 type AllowedElements = 'button' | 'a' | 'div' | 'span';
@@ -14,7 +15,7 @@ export const Step = component$(
   ) => {
     const context = useContext(carouselContextId);
     const { as, _index, ...rest } = props;
-    const Comp = as ?? 'button';
+    const Comp = as ?? Button;
 
     const localIndexSig = useComputed$(() => _index ?? 0);
     const isCurrentSig = useComputed$(() =>

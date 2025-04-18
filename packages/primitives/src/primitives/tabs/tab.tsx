@@ -1,7 +1,7 @@
 import type { QRL, QwikHTMLElements } from '@builder.io/qwik';
-import { $, Slot, component$, useComputed$ } from '@builder.io/qwik';
+import { Slot, component$, useComputed$ } from '@builder.io/qwik';
 import type { ValidName } from '~/types/case-control';
-import { clickExtension } from '~/utils/click-events';
+import { Button } from '../button';
 import { useTabsContext } from './use-tabs-context';
 
 export type TabProps<Name extends string> = QwikHTMLElements['button'] & {
@@ -23,16 +23,12 @@ export const Tab = component$(
     const name = useComputed$(() => defaultName ?? String(++context.tabIndex));
 
     return (
-      <button
-        type="button"
+      <Button
         disabled={disabled}
-        {...clickExtension(
-          null,
-          $(() => {
-            context.selected.value = name.value;
-            onSelected$?.(name.value);
-          }),
-        )}
+        onClick$={() => {
+          context.selected.value = name.value;
+          onSelected$?.(name.value);
+        }}
         role="tab"
         data-selected={name.value === context.selected.value}
         aria-selected={name.value === context.selected.value}
@@ -41,7 +37,7 @@ export const Tab = component$(
         {...props}
       >
         <Slot />
-      </button>
+      </Button>
     );
   },
 );
