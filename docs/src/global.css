@@ -1,6 +1,4 @@
-@import '../../packages/tailwindcss/themes/onwo.css';
 @import "tailwindcss";
-@plugin '../../packages/tailwindcss';
 
 @source "../../packages/ui/src/";
 @source "../../packages/primitives/src/";

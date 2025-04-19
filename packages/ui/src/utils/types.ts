@@ -12,11 +12,11 @@ export type Primitive<T extends keyof QwikHTMLElements> = Omit<QwikHTMLElements[
   style?: CSSProperties;
 };
 
-export type OneKeyOf<T, K extends keyof T = keyof T> = Prettify<
-  {
-    [P in K]: { [Q in P]: T[P] } & { [Q in Exclude<K, P>]?: never };
-  }[K]
->;
+export type OneKeyOfInner<T, K extends keyof T = keyof T> = {
+  [P in K]: { [Q in P]: T[P] } & { [Q in Exclude<K, P>]?: never };
+}[K];
+
+export type OneKeyOf<T> = OneKeyOfInner<T>;
 
 // Helper types
 type KeysOfUnion<T> = T extends any ? keyof T : never;

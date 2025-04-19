@@ -160,10 +160,10 @@ export const TypographyPage = () => (
                 <div class="flex p-4 bg-parchment rounded-onwo-s-sm text-onwo-14 w-full">
                   <div class="flex flex-wrap items-center justify-around gap-2 w-full bg-transparent">
                     <div class="flex justify-around gap-2 w-full">
-                      <p class="text-lead">Trunks</p>
+                      <p class="text-lead">Lead</p>
                       <p class="text-accent">Accent</p>
-                      <p class="text-success">Roshi</p>
-                      <p class="text-error">Chichi</p>
+                      <p class="text-success">Success</p>
+                      <p class="text-error">Error</p>
                     </div>
                   </div>
                 </div>

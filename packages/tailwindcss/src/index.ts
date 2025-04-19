@@ -1,19 +1,28 @@
 import type { PluginAPI } from 'tailwindcss/plugin';
-// eslint-disable-next-line import/no-unresolved
 import plugin from 'tailwindcss/plugin';
-// eslint-disable-next-line import/no-unresolved
-import { colors } from './colors.js';
-// eslint-disable-next-line import/no-unresolved
+import type { OnwoTheme } from './themes/index.js';
 import { typography } from './typography/index.js';
 
-export default plugin(
-  (api: PluginAPI) => {
+export * as themes from './themes/index.js';
+
+type OnwoPluginOption = {
+  themes?: OnwoTheme[];
+};
+
+type PluginWithOptions<T> = {
+  (options?: T): any;
+  __isOptionsFunction: true;
+};
+
+export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOptions<OnwoPluginOption>(
+  (_option) => (api: PluginAPI) => {
     // Add custom variants
     for (const state of ['checked', 'selected', 'active', 'disabled']) {
       api.addVariant(`onwo-${state}`, [
         `&[aria-${state}="true"]`,
         `:where([aria-${state}="true"]) &`,
       ]);
+
       api.addVariant(`onwo-not-${state}`, [
         `&[aria-${state}="false"]`,
         `:where([aria-${state}="false"]) &`,
@@ -32,12 +41,20 @@ export default plugin(
     api.addVariant('not-first', '&:not(:first-child)');
     api.addVariant('empty', '&:empty');
 
+    // colors: Object.fromEntries(
+    //   baseColorNames.map((color) => [
+    //     color,
+    //     {
+    //       DEFAULT: [`oklch(from rgb(var(--${color})) l c h)`],
+    //     },
+    //   ]),
+    // ),
+
     typography(api);
   },
-  {
+  () => ({
     theme: {
       extend: {
-        colors,
         backgroundOpacity: {
           12: '0.12',
         },
@@ -119,5 +136,7 @@ export default plugin(
         },
       },
     },
-  },
-) as any;
+  }),
+);
+
+export default onwoPlugin;
