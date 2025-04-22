@@ -52,7 +52,7 @@ export const Button = function <T extends keyof QwikHTMLElements = 'button'>({
       class={cn(
         'relative flex select-none items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-transform duration-100',
         {
-          'bg-accent hover:contrast-120 hover:brightness-120 text-forced-a': variant === 'fill',
+          'bg-accent hover:contrast-120 hover:brightness-120 text-contrast': variant === 'fill',
           'border border-accent text-accent hover:bg-scan': variant === 'outline',
           'hover:bg-scan': variant === 'ghost',
           'gap-1 h-6 ps-1 pe-1 text-onwo-12 rounded-onwo-s-xs': size === 'xs',

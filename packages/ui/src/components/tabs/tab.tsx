@@ -1,4 +1,4 @@
-import { Tabs, cn, styledcn } from '@onwo/primitives';
+import { Tabs, styledcn } from '@onwo/primitives';
 
 export type TabProps<Name extends string> = Tabs.TabProps<Name>;
 

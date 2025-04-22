@@ -5,4 +5,4 @@ export type OnwoTheme = {
   baseColors: ColorDefinition;
 };
 
-export { onwo } from './onwo.js';
+//export { onwo } from './onwo.js';

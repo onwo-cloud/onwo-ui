@@ -4,7 +4,7 @@ import { useLocation } from '@builder.io/qwik-city';
 import { Icons } from '@onwo/icons';
 import { cn } from '@onwo/ui';
 
-import LogoImg from '~/assets/onwo-3.svg?jsx';
+import LogoImg from '~/assets/onwo.svg?jsx';
 
 type SidebarButtonSmallProps = {
   href: string;
@@ -47,7 +47,12 @@ export default component$(() => {
               <div class="flex items-center flex-shrink-0 px-3 text-ink">
                 <a href="/" class="flex gap-2 items-center" aria-label="ui.onwo.cloud main page">
                   <LogoImg height={20} class="h-[20px] w-fit" />
-                  <h4 class="text-onwo-20 font-semibold">onwo/ui</h4>
+                  <h4
+                    class="text-onwo-24 font-semibold leading-none h-[16px]"
+                    style={{ lineHeight: '16px' }}
+                  >
+                    onwo
+                  </h4>
                 </a>
               </div>
               <div class="flex flex-col gap-1">

@@ -77,7 +77,7 @@ export const GettingStartedPage = () => (
                 and add the following to your <code>global.css</code>. Make sure to preserve the
                 order!
               </p>
-              <div class="theme-onwo-dark w-full bg-parchment overflow-x-auto p-4 text-onwo-14 text-ink rounded-onwo-s-sm leading-[17px]">
+              <div class="theme-onwo-dark w-full bg-parchment overflow-x-auto p-4 text-onwo-14 text-ink rounded-onwo-s-sm">
                 <pre class="w-max">
                   <code>
                     <span class="bg-success/40">{`@import '@onwo/tailwindcss/themes/moon.css';`}</span>
@@ -108,7 +108,7 @@ body {
                 Add your theme specific class to the body element or the element where you want the
                 theme applied:
               </p>
-              <pre class="theme-onwo-dark w-full bg-parchment overflow-x-auto p-4 text-onwo-14 text-ink rounded-onwo-s-sm leading-[17px]">
+              <pre class="theme-onwo-dark w-full bg-parchment overflow-x-auto p-4 text-onwo-14 text-ink rounded-onwo-s-sm">
                 <code>
                   <span class="bg-success/40">{`<body class="theme-onwo-light">...</body>`}</span>
                 </code>

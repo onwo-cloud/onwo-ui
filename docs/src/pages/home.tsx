@@ -48,28 +48,12 @@ export const HomePage = () => (
             data-phx-id="m13-phx-GCud8J3A5t03ngVB"
             class="flex flex-col 2xl:flex-row items-center gap-8 2xl:gap-18 3xl:gap-36"
           >
-            <div class="theme-onwo-dark flex flex-col bg-paper rounded-onwo-s-lg gap-14 p-2">
+            <div class="border border-line flex flex-col bg-paper rounded-onwo-s-lg gap-14 p-2">
               <ul class="text-onwo-20 text-right pr-8 text-lead">
-                <li>✓ built on tailwind v4</li>
-                <li>✓ no third party libraries</li>
+                <li>✓ tailwind v4</li>
+                <li>✓ XXXKb bundles</li>
                 <li>✓ fully open-source</li>
               </ul>
-              <div class="flex flex-col rounded-onwo-s-md py-6 px-8 gap-6 bg-parchment">
-                <p class="text-onwo-24 text-forced-a">
-                  This project was built fully on the work laid by the people at moon.io! ♥️ check
-                  out{' '}
-                  <a class="underline" href="https://moon.io">
-                    their amazing work
-                  </a>
-                </p>
-                <div class="flex items-center gap-2">
-                  <div class="flex flex-col">
-                    <p class="text-onwo-18 text-forced-a">
-                      - Emilien, <a href="https://emje.dev">emje.dev</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

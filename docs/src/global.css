@@ -1,20 +1,88 @@
+/* Outfit, Manjari, "Rethink Sans", Sono, Inclusive Sans, Gantari, Jura */
+
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Commissioner:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+
 @import "tailwindcss";
+
+@plugin '../../packages/tailwindcss';
+@plugin '../../packages/tailwindcss/dist/theme' {
+  name: 'onwo-light';
+
+  color-accent-accent: rgb(63, 43, 215);
+
+  color-border-line: rgb(230, 229, 244);
+
+  color-bg-paper: rgb(255, 255, 255);
+  color-bg-parchment: rgb(248, 248, 250);
+  color-bg-papyrus: rgb(242, 242, 248);
+
+  color-text-ink: rgb(2, 0, 40);
+  color-text-lead: rgb(99, 98, 137);
+  color-text-graphite: rgb(117, 116, 139);
+  color-text-contrast: rgb(252, 252, 255);
+
+  color-hint-stare: rgb(39, 125, 97);
+  color-hint-scan: rgba(12, 12, 33, 0.13);
+  color-hint-gaze: rgba(12, 12, 33, 0.56);
+
+  color-status-warn: #ffb319;
+  color-status-error: #ff4e64;
+  color-status-success: #49b356;
+}
 
 @source "../../packages/ui/src/";
 @source "../../packages/primitives/src/";
 @source "../../packages/icons/src/";
 
+:root.theme-onwo-light, .theme-onwo-light {
+
+  /* border-radius */
+  --radius-i-xs: 0.25rem;
+  --radius-i-sm: 0.5rem;
+  --radius-i-md: 0.75rem;
+  --radius-s-xs: 0.25rem;
+  --radius-s-sm: 0.5rem;
+  --radius-s-md: 0.75rem;
+  --radius-s-lg: 1rem;
+
+  /* border-width */
+  --border-width: 0.0625rem;
+  --border-i-width: 0.125rem;
+
+  /* opacity */
+  --opacity-onwo: 0.6;
+
+  /* fonts */
+  --font-display: 'Satoshi';
+  --font-body: 'Satoshi';
+  --font-mono: 'Martian Mono';
+
+  /* enable satoshi customs */
+  font-feature-settings: "ss02" 1, "ss03" 1, "ss04" 1;
+
+  /* box-shadow */
+  --shadow-xs: 0 4px 12px -6px rgb(0 0 0 / 0.06);
+  --shadow-sm: 0 6px 6px -6px rgb(0 0 0 / 0.16), 0 0 1px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 12px 12px -6px rgb(0 0 0 / 0.16), 0 0 1px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 8px 24px -6px rgb(0 0 0 / 0.16), 0 0 1px rgb(0 0 0 / 0.4);
+  --shadow-xl: 0 32px 32px -8px rgb(0 0 0 / 0.08),
+    0 0 32px -8px rgb(0 0 0 / 0.12), 0 0 1px rgb(0 0 0 / 0.2);
+}
+
+
 @custom-variant dark (&:is(body[data-color-mode='dark'], body[data-color-mode="dark"] *, .dark, .dark *));
 
-/* app.css */
 html,
 body {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  text-size-adjust: none; /* Prevent automatic zooming of fonts on some mobile devices. */
+  text-size-adjust: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased; /* Consistent font display behavior on OSX. */
-  -moz-osx-font-smoothing: grayscale; /* Consistent font display behavior on OSX. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .onwo-icon {
