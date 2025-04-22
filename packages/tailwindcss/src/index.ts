@@ -1,21 +1,35 @@
+/* eslint-disable import/no-unresolved */
 import type { PluginAPI } from 'tailwindcss/plugin';
 import plugin from 'tailwindcss/plugin';
-import type { OnwoTheme } from './themes/index.js';
-import { typography } from './typography/index.js';
-
+//import type { OnwoTheme } from './themes/index.js';
 export * as themes from './themes/index.js';
+import type { ColorCategory, ColorOfCategory } from './colors.js';
+import { baseColors, colorPurpose } from './colors.js';
+import { typography } from './typography/index.js';
+import { typedEntries } from './utils.js';
 
-type OnwoPluginOption = {
-  themes?: OnwoTheme[];
-};
+type OnwoPluginOption = object;
 
-type PluginWithOptions<T> = {
+export type PluginWithOptions<T> = {
   (options?: T): any;
   __isOptionsFunction: true;
 };
 
 export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOptions<OnwoPluginOption>(
   (_option) => (api: PluginAPI) => {
+    api.addBase({
+      'html, body': {
+        '@apply font-body': {},
+        'text-size-adjust': 'none', // Prevent automatic zooming of fonts on some mobile devices.
+        'text-rendering': 'optimizeLegibility',
+        '-webkit-font-smoothing': 'antialiased', // Consistent font display behavior on OSX.
+        '-moz-osx-font-smoothing': 'grayscale', // Consistent font display behavior on OSX.
+      },
+      'h1, h2, h3, h4, h5,h6': {
+        '@apply font-display': {},
+      },
+    });
+
     // Add custom variants
     for (const state of ['checked', 'selected', 'active', 'disabled']) {
       api.addVariant(`onwo-${state}`, [
@@ -41,14 +55,96 @@ export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOption
     api.addVariant('not-first', '&:not(:first-child)');
     api.addVariant('empty', '&:empty');
 
-    // colors: Object.fromEntries(
-    //   baseColorNames.map((color) => [
-    //     color,
-    //     {
-    //       DEFAULT: [`oklch(from rgb(var(--${color})) l c h)`],
-    //     },
-    //   ]),
-    // ),
+    api.addUtilities(
+      Object.fromEntries(
+        [
+          ['text', 'color'],
+          ['bg', 'background-color'],
+          ['border', 'border'],
+          ['ring', 'ring'],
+        ].map(([key, cssProperty]) => [
+          `.onwo-${key}`,
+          {
+            [cssProperty]: `oklch(clamp(0, calc(var(--tw-current-${key}-l) + var(--tw-l-${key}-offset, 0)), 1) var(--tw-current-${key}-c) var(--tw-current-${key}-h) / var(--tw-current-${key}-a))`,
+          },
+        ]),
+      ),
+    );
+
+    const associatedClassUtils = (color: string) => (key: string) => {
+      // Generate utility shorthand for colors, e.g. accent-80
+      api.matchUtilities(
+        {
+          // eslint-disable-next-line sonarjs/no-nested-functions
+          [`${key}-${color}`]: (value) => ({
+            [`@apply ${key}-${color}`]: {},
+            [`--tw-l-${key}-offset`]: value,
+          }),
+        },
+        {
+          values: Object.fromEntries(
+            Array.from({ length: 21 }, (_, i) => [String(i * 10), String((i - 10) / 10)]),
+          ),
+        },
+      );
+
+      api.addUtilities({
+        [`.${key}-${color}`]: {
+          [`@apply onwo-${key}`]: {},
+          [`--tw-current-${key}-l`]: `var(--tw-l--${color})`,
+          [`--tw-current-${key}-c`]: `var(--tw-c--${color})`,
+          [`--tw-current-${key}-h`]: `var(--tw-h--${color})`,
+          [`--tw-current-${key}-a`]: `var(--tw-a--${color})`,
+        },
+      });
+    };
+
+    const parsedEntries: [ColorCategory, ColorOfCategory][] = typedEntries(baseColors).flatMap(
+      ([k, v]) => v.map((x) => [k, x]),
+    ) as any;
+
+    for (const [purpose, color] of parsedEntries) {
+      const purposes = colorPurpose[purpose];
+      const addAssociatedClass = associatedClassUtils(color);
+      const override = true;
+
+      if (override || purposes.includes('text')) {
+        addAssociatedClass('text');
+      }
+
+      if (override || purposes.includes('bg')) {
+        addAssociatedClass('bg');
+      }
+
+      if (override || purposes.includes('border')) {
+        addAssociatedClass('border');
+        addAssociatedClass('ring');
+      }
+    }
+
+    //api.matchUtilities(
+    //  {
+    //    [`text-${color}`]: (value) => ({
+    //      '--tw-current-fg-l': `var(--tw-l--${value})`,
+    //    }),
+    //  },
+    //  { values: Array.from({ length: 21}, (_, i) => [i] },
+    //);
+
+    // Text color utilities
+    //api.matchUtilities(
+    //  {
+    //    text: (value) => ({
+    //      '--tw-current-fg-l': `var(--tw-l--${value})`,
+    //    }),
+    //  },
+    //  { values: api.theme('colors') },
+    //);
+
+    // Background color utilities
+
+    //for (let c of flattenedColorsPLACEHOLDER) {
+    //}
 
     typography(api);
   },
@@ -62,8 +158,10 @@ export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOption
           '3xl': '1800px',
         },
         fontFamily: {
-          'dm-sans':
-            'var(--dm-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+          display:
+            'var(--font-display), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+          body: 'var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+          mono: 'var(--font-mono), monospace',
         },
         fontSize: {
           'onwo-9': ['0.5625rem', { lineHeight: '1rem' }],
@@ -95,39 +193,12 @@ export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOption
         opacity: {
           disabled: 'var(--opacity--disabled)',
         },
-        animation: {
-          loader: 'loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite',
-          rightslide: 'rightslide 0.2s ease-in-out',
-          leftslide: 'leftslide 0.2s ease-in-out',
-          topslide: 'topslide 0.2s ease-in-out',
-          bottomslide: 'bottomslide 0.2s ease-in-out',
-          fadeout: 'fadeout 0.5s ease-in-out',
-          drawer_enter_right: 'rightslide 0.3s ease-out',
-          drawer_enter_left: 'leftslide 0.3s ease-out',
-          drawer_enter_top: 'topslide 0.3s ease-out',
-          drawer_enter_bottom: 'bottomslide 0.3s ease-out',
-          drawer_leave_right: 'rightslideout 0.2s ease-in',
-          drawer_leave_left: 'leftslideout 0.2s ease-in',
-          drawer_leave_top: 'topslideout 0.2s ease-in',
-          drawer_leave_bottom: 'bottomslideout 0.2s ease-in',
-          backdrop_enter: 'fadein 0.3s ease-out',
-          backdrop_leave: 'fadeout 0.2s ease-in',
-          backdrop_leave_swipe: 'fadeout 0.1s ease-in-out',
-          modal_enter: 'modalfadein 0.3s ease-out',
-          modal_leave: 'modalfadeout 0.2s ease-in',
-        },
         boxShadow: {
           border: '0 0 0 2px rgba(var(--accent)) inset',
           inset: '0 0 0 1px rgb(var(--accent)) inset',
           flat: '0px -2px 0 0px rgba(128, 128, 163, 0.05) inset',
           interactive: '0 0 0 2px rgb(var(--accent)) inset',
           focus: `0 0 0 2px rgb(var(--stare))`,
-          input: '0 0 0 var(--border-width) rgb(var(--line)) inset',
-          'input-hov':
-            '0 0 0 var(--border-i-width) rgb(var(--ink) / 7%) inset, 0 0 0 var(--border-i-width) rgb(var(--line)) inset',
-          'input-err': '0 0 0 var(--border-i-width) rgb(var(--error)) inset',
-          'input-focus': '0 0 0 var(--border-i-width) rgb(var(--accent)) inset',
-          'input-mint-focus': '0 0 0 var(--border-width) rgb(var(--ink)) inset',
           'onwo-sm': '0 6px 6px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)',
           'onwo-md': '0 12px 12px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)',
           'onwo-lg': '0 8px 24px -6px rgba(0, 0, 0, 0.16), 0 0 1px rgba(0, 0, 0, 0.4)',

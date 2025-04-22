@@ -9,9 +9,14 @@ const ColorSection = (props: { title: string; children: JSXChildren }) => (
   </div>
 );
 
-const Color = (props: { name: string }) => (
+const Color = (props: { name: string; class?: string }) => (
   <div class="flex flex-col basis-1/2 lg:basis-40 gap-2 justify-center items-center">
-    <div class={`w-full h-40 rounded-onwo-s-sm shadow-flat border border-line ${props.name}`} />
+    <div
+      class={
+        `w-full h-40 rounded-onwo-s-sm shadow-flat border border-line ${props.name} ` +
+          props.class ?? ''
+      }
+    />
     <p>
       <span>{props.name.slice(3)}</span>
     </p>
@@ -48,6 +53,7 @@ export const ColorPage = () => (
             <Color name="bg-ink" />
             <Color name="bg-lead" />
             <Color name="bg-graphite" />
+            <Color name="bg-contrast" />
           </ColorSection>
 
           <ColorSection title="Border and line colours">
@@ -61,67 +67,21 @@ export const ColorPage = () => (
           </ColorSection>
 
           <ColorSection title="Warning colour">
+            <Color name="bg-warn-80" />
             <Color name="bg-warn" />
-            <Color name="bg-warn-60" />
-            <Color name="bg-warn-10" />
+            <Color name="bg-warn-120" />
           </ColorSection>
 
           <ColorSection title="Error colour">
+            <Color name="bg-error-80" />
             <Color name="bg-error" />
-            <Color name="bg-error-60" />
-            <Color name="bg-error-10" />
+            <Color name="bg-error-120" />
           </ColorSection>
 
           <ColorSection title="Success colour">
+            <Color name="bg-success-80" />
             <Color name="bg-success" />
-            <Color name="bg-success-60" />
-            <Color name="bg-success-10" />
-          </ColorSection>
-
-          <ColorSection title="Forced colours">
-            <Color name="bg-forced-a" />
-            <Color name="bg-forced-b" />
-          </ColorSection>
-        </div>
-      </div>
-    </section>
-
-    <section class="flex flex-col lg:flex-row gap-6">
-      <div class="flex flex-col w-full gap-6">
-        <PNav.Link label="Supportive-colours" id="supportive-colours">
-          <h2 id="Supportive-colours" class="text-onwo-24 font-medium">
-            Supportive colours
-          </h2>
-        </PNav.Link>
-        <div class="w-full flex flex-col gap-2 text-onwo-16">
-          <ColorSection title="Dodoria">
-            <Color name="bg-scarab" />
-            <Color name="bg-scarab-60" />
-            <Color name="bg-scarab-10" />
-          </ColorSection>
-
-          <ColorSection title="Cell">
-            <Color name="bg-mint" />
-            <Color name="bg-mint-60" />
-            <Color name="bg-mint-10" />
-          </ColorSection>
-
-          <ColorSection title="Raditz">
-            <Color name="bg-sand" />
-            <Color name="bg-sand-60" />
-            <Color name="bg-sand-10" />
-          </ColorSection>
-
-          <ColorSection title="Whis">
-            <Color name="bg-neutron" />
-            <Color name="bg-neutron-60" />
-            <Color name="bg-neutron-10" />
-          </ColorSection>
-
-          <ColorSection title="Frieza">
-            <Color name="bg-prune" />
-            <Color name="bg-prune-60" />
-            <Color name="bg-prune-10" />
+            <Color name="bg-success-120" />
           </ColorSection>
         </div>
       </div>

@@ -18,6 +18,9 @@ const extendedConfig = {
   ],
   plugins: ['sonarjs', 'unicorn', 'promise'],
   rules: {
+    'sonarjs/no-useless-intersection': 'off',
+    'sonarjs/no-nested-functions': 'off',
+    'unicorn/consistent-function-scoping': 'off',
     'unicorn/prefer-ternary': 'off',
     'unicorn/no-anonymous-default-export': 'off',
     'unicorn/no-empty-file': 'warn',
@@ -61,6 +64,7 @@ let minimalConfig = {
   },
   plugins: ['@typescript-eslint', 'import'],
   rules: {
+    'qwik/valid-lexical-scope': 'off', // this one rule is flaky, it crashes eslint
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': [

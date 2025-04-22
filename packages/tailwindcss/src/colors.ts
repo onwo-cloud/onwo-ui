@@ -1,16 +1,27 @@
 export const baseColors = {
   accent: ['accent'],
+  text: ['ink', 'lead', 'graphite', 'contrast'],
+  bg: ['paper', 'parchment', 'papyrus'],
   border: ['line'],
-  background: ['paper', 'parchment', 'papyrus'],
-  text: ['ink', 'lead', 'graphite'],
-  absolute: ['forced-a', 'forced-b'],
-  utils: ['stare', 'scan', 'gaze'],
+  hint: ['stare', 'scan', 'gaze'],
   status: ['warn', 'error', 'success'],
 } as const;
 
 export type ColorCategory = keyof typeof baseColors;
 
-export type ColorOfCategory<K extends ColorCategory> = (typeof baseColors)[K][number];
+export type ColorPurpose = 'text' | 'bg' | 'border';
+
+export const colorPurpose: Record<ColorCategory, ColorPurpose[]> = {
+  accent: ['bg', 'text'],
+  text: ['text'],
+  bg: ['bg'],
+  border: ['border'],
+  hint: ['bg'],
+  status: ['bg', 'text'],
+};
+
+export type ColorOfCategory<K extends ColorCategory = ColorCategory> =
+  (typeof baseColors)[K][number];
 
 export type Prettify<T> = { [K in keyof T]: T[K] } & {};
 
@@ -30,3 +41,15 @@ export type OneKeyOf<T> = OneKeyOfInner<T>;
 export type ColorDefinition = Prettify<{
   [K in ColorCategory]: Record<ColorOfCategory<K>, OneKeyOf<DynColor>>;
 }>;
+
+export type ColorDefinitionFlattened = {
+  [K in ColorCategory]: `color-${K}-${ColorOfCategory<K>}`;
+}[ColorCategory];
+
+export const flattenedColors = Object.entries(baseColors).flatMap(([category, colors]) =>
+  colors.map((color) => `color-${category}-${color}` as ColorDefinitionFlattened),
+);
+
+export const flattenedColorsPLACEHOLDER = Object.entries(baseColors).flatMap(
+  ([_, colors]) => colors,
+);

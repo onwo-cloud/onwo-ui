@@ -4,16 +4,13 @@ import { qwikCity } from "@builder.io/qwik-city/vite";
 import { staticAdapter } from "@builder.io/qwik-city/adapters/static/vite";
 import tailwindcss from '@tailwindcss/vite'
 import { qwikVite } from "@builder.io/qwik/optimizer";
-import { onwoPlugin, themes } from '../packages/tailwindcss';
 
 export const baseConfig = {
   plugins: [
     qwikCity({}),
     qwikVite(),
     tsconfigPaths(),
-    tailwindcss({
-      plugins: [onwoPlugin({ themes: [themes.onwo] })]
-    }),
+    tailwindcss(),
   ],
 } satisfies UserConfig;
 

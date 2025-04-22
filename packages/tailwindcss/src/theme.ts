@@ -17,7 +17,7 @@ const abort = (s: string) => {
 };
 
 const warn = (s: string) => {
-  console.warn(`\x1b[33m⚠️ Warning: onwo-theme-plugin: ${s}\x1b[0m`);
+  console.warn(`\u001B[33m⚠️ Warning: onwo-theme-plugin: ${s}\u001B[0m`);
 };
 
 const convertToOklch = (name: string, value: string) => {
@@ -29,8 +29,8 @@ const convertToOklch = (name: string, value: string) => {
   }
 };
 
-// Help
 const decimalRound = (precision: number) => (s: number) =>
+  // eslint-disable-next-line sonarjs/slow-regex
   s.toFixed(precision).replace(/\.?0+$/, '');
 
 export const onwoThemePlugin: PluginWithOptions<OnwoTheme> = plugin.withOptions<OnwoTheme>(
@@ -50,31 +50,29 @@ export const onwoThemePlugin: PluginWithOptions<OnwoTheme> = plugin.withOptions<
       });
 
       const colorMap = Object.fromEntries(
-        colors
-          .map(([color, value]) => {
-            const colorOklch: Color = convertToOklch(color, value);
-            // eslint-disable-next-line prefer-const
-            let [L, C, H] = colorOklch.coords;
+        colors.flatMap(([color, value]) => {
+          const colorOklch: Color = convertToOklch(color, value);
+          // eslint-disable-next-line prefer-const
+          let [L, C, H] = colorOklch.coords;
 
-            if (C < 0.01) {
-              C = 0;
-              H = 0;
-            }
-            H = ((H % 360) + 360) % 360;
+          if (C < 0.01) {
+            C = 0;
+            H = 0;
+          }
+          H = ((H % 360) + 360) % 360;
 
-            // This removes 'color' at the start of the variable
-            const colorName = color.split('-').slice(2).join('-'); // TODO
+          // This removes 'color' at the start of the variable
+          const colorName = color.split('-').slice(2).join('-'); // TODO
 
-            const round = decimalRound(precision);
+          const round = decimalRound(precision);
 
-            return [
-              [`--tw-a--${colorName}`, round(colorOklch.alpha)],
-              [`--tw-l--${colorName}`, round(L)],
-              [`--tw-c--${colorName}`, round(C)],
-              [`--tw-h--${colorName}`, round(H)],
-            ];
-          })
-          .flat(),
+          return [
+            [`--tw-a--${colorName}`, round(colorOklch.alpha)],
+            [`--tw-l--${colorName}`, round(L)],
+            [`--tw-c--${colorName}`, round(C)],
+            [`--tw-h--${colorName}`, round(H)],
+          ];
+        }),
       );
 
       const themeName = `theme-${options.name}`;
