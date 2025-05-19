@@ -98,9 +98,9 @@ export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOption
       });
     };
 
-    const parsedEntries: [ColorCategory, ColorOfCategory][] = typedEntries(baseColors)
-      .map(([k, v]) => v.map((x) => [k, x]))
-      .flat() as any;
+    const parsedEntries: [ColorCategory, ColorOfCategory][] = typedEntries(baseColors).flatMap(
+      ([k, v]) => v.map((x) => [k, x]),
+    ) as any;
 
     for (const [purpose, color] of parsedEntries) {
       const purposes = colorPurpose[purpose];

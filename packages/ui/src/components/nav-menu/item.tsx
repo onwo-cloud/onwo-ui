@@ -4,7 +4,6 @@ type ItemProps = QwikIntrinsicElements['a'] & {
   label: string;
   href?: string;
   onSelect$?: () => void;
-  children: JSXChildren;
 };
 
 export const Item = ({ label, href = '#', onSelect$, children, ...aProps }: ItemProps) => (
@@ -19,7 +18,7 @@ export const Item = ({ label, href = '#', onSelect$, children, ...aProps }: Item
       class="block px-4 py-2 focus:outline-none focus:bg-gray-200 dark:focus:bg-gray-700"
       {...aProps}
     >
-      {children}
+      {label}
     </a>
   </li>
 );

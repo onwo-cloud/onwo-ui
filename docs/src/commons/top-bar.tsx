@@ -1,6 +1,5 @@
 import { Link } from '@builder.io/qwik-city';
 import { cn } from '@onwo/ui';
-import * as Menu from './menu';
 
 type TopBarProps = {
   borderVisible?: boolean;
@@ -42,10 +41,6 @@ export const TopBar = (props: TopBarProps) => {
     <div class={cn(props.borderVisible && 'border-b', 'py-4 px-10')}>
       <div class="flex justify-between gap-8">
         <Logo />
-        <Menu.Root>
-          <Menu.Item>Docs</Menu.Item>
-          <Menu.Item>Components</Menu.Item>
-        </Menu.Root>
       </div>
       <div class="flex gap-2">
         <SearchBar />

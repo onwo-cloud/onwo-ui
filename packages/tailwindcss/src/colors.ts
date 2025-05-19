@@ -46,12 +46,10 @@ export type ColorDefinitionFlattened = {
   [K in ColorCategory]: `color-${K}-${ColorOfCategory<K>}`;
 }[ColorCategory];
 
-export const flattenedColors = Object.entries(baseColors)
-  .map(([category, colors]) =>
-    colors.map((color) => `color-${category}-${color}` as ColorDefinitionFlattened),
-  )
-  .flat();
+export const flattenedColors = Object.entries(baseColors).flatMap(([category, colors]) =>
+  colors.map((color) => `color-${category}-${color}` as ColorDefinitionFlattened),
+);
 
-export const flattenedColorsPLACEHOLDER = Object.entries(baseColors)
-  .map(([_, colors]) => colors)
-  .flat();
+export const flattenedColorsPLACEHOLDER = Object.entries(baseColors).flatMap(
+  ([_, colors]) => colors,
+);
