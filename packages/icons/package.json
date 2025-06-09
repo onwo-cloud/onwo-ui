@@ -1,6 +1,6 @@
 {
   "name": "@onwo/icons",
-  "version": "0.0.5-alpha",
+  "version": "0.0.6-alpha",
   "url": "https://ui.onwo.cloud/",
   "description": "An icon library ported to qwik.js from the moon.io DS",
   "repository": "https://github.com/onwo-cloud/onwo-ui",
