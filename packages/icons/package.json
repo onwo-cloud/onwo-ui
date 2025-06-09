@@ -39,7 +39,7 @@
     "ts-watch": "tsc --emitDeclarationOnly --incremental --preserveWatchOutput --pretty --watch"
   },
   "devDependencies": {
-    "@builder.io/qwik": "1.12",
+    "@builder.io/qwik": "1.14",
     "@onwo/tailwindcss": "link:../tailwindcss",
     "@onwo/primitives": "link:../primitives",
     "@tailwindcss/vite": "^4.1.3",
