@@ -60,7 +60,7 @@
   /* fonts */
   --font-display: 'Satoshi';
   --font-body: 'Satoshi';
-  --font-mono: 'Martian Mono';
+  --font-mono: 'monospace';
 
   /* enable satoshi customs */
   font-feature-settings: "ss02" 1, "ss03" 1, "ss04" 1;

@@ -58,7 +58,7 @@
 //              <div class="flex flex-col gap-1">
 //                <a
 //                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full outline-none focus:shadow-focus hover:bg-scan"
-//                  href="/roadmap"
+//                  href="/docs/roadmap"
 //                >
 //                  <Icons.GenericTrophy />
 //                  Roadmap
@@ -66,7 +66,7 @@
 //
 //                <a
 //                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full outline-none focus:shadow-focus hover:bg-scan"
-//                  href="/getting-started"
+//                  href="/docs/getting-started"
 //                >
 //                  <Icons.OtherRocket />
 //                  Getting Started
@@ -74,7 +74,7 @@
 //
 //                <a
 //                  class="flex p-2 bg-transparent cursor-pointer transition items-center justify-start rounded-onwo-i-sm gap-2 text-onwo-14 w-full outline-none focus:shadow-focus hover:bg-scan"
-//                  href="/core-concepts"
+//                  href="/docs/core-concepts"
 //                >
 //                  <Icons.SoftwarePlate />
 //                  Core concepts

@@ -60,8 +60,8 @@ export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOption
         [
           ['text', 'color'],
           ['bg', 'background-color'],
-          ['border', 'border'],
-          ['ring', 'ring'],
+          ['border', 'border-color'],
+          ['ring', '--tw-ring-color'],
         ].map(([key, cssProperty]) => [
           `.onwo-${key}`,
           {

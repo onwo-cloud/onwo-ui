@@ -5,46 +5,40 @@ type TopBarProps = {
   borderVisible?: boolean;
 };
 
-const Logo = () => (
-  <Link
-    href="/"
-    class="text-2xl tracking-tight flex gap-2 items-center"
-    style={{
-      'font-family': 'League Spartan',
-    }}
-  >
-    <svg
-      preserveAspectRatio="none"
-      id="Subtract"
-      class="pointer-events-none"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M10 0C15.5228 2.66808e-05 20 4.47719 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10V1.74659C1.83175e-05 0.781992 0.781987 0 1.74659 0H10ZM6.68447 2.61766C6.62146 2.33818 6.22317 2.33818 6.16017 2.61766L5.50035 5.54706C5.47754 5.64829 5.39847 5.72736 5.29724 5.75016L2.36784 6.40999C2.08834 6.47297 2.08835 6.87128 2.36784 6.93428L5.29724 7.59424C5.39845 7.61704 5.47753 7.69601 5.50035 7.79721L6.16017 10.7266C6.22314 11.0062 6.6215 11.0062 6.68447 10.7266L7.34429 7.79721C7.36711 7.69602 7.4462 7.61705 7.5474 7.59424L10.4768 6.93428C10.7563 6.8713 10.7563 6.47296 10.4768 6.40999L7.5474 5.75016C7.44618 5.72735 7.36709 5.64828 7.34429 5.54706L6.68447 2.61766Z"
-        fill="#020218"
-      />
-    </svg>
-    <span>ui.onwo</span>
-  </Link>
-);
-
 const SearchBar = () => <></>;
+
+export const TOPBAR_HEIGHT = '65px';
 
 export const TopBar = (props: TopBarProps) => {
   return (
-    <div class={cn(props.borderVisible && 'border-b', 'py-4 px-10')}>
-      <div class="flex justify-between gap-8">
+    <div
+      style={{ height: TOPBAR_HEIGHT }}
+      class={cn(
+        'border-b border-transparent flex items-center justify-between py-4 px-10',
+        props.borderVisible && 'border-line',
+      )}
+    >
+      <div class="flex items-center justify-between gap-8">
         <Logo />
+        <nav aria-label="Main">
+          <ul class="flex gap-6 text-sm">
+            <li>
+              <Link class="px-2 py-2" href="/docs/getting-started">
+                Docs
+              </Link>
+            </li>
+            <li>
+              <Link class="px-2 py-2" href="/components/button">
+                Button
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="flex gap-2">
+
+      <div class="flex items-center gap-2">
         <SearchBar />
-        <div>
+        <div class="flex gap-4">
           <GithubIcon />
           <ThemeIcon />
         </div>
@@ -90,4 +84,33 @@ const ThemeIcon = () => (
       stroke-linejoin="round"
     ></path>
   </svg>
+);
+
+const Logo = () => (
+  <Link
+    href="/"
+    class="text-2xl tracking-tight flex gap-2 items-center"
+    style={{
+      'font-family': 'League Spartan',
+    }}
+  >
+    <svg
+      preserveAspectRatio="none"
+      id="Subtract"
+      class="pointer-events-none"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M10 0C15.5228 2.66808e-05 20 4.47719 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10V1.74659C1.83175e-05 0.781992 0.781987 0 1.74659 0H10ZM6.68447 2.61766C6.62146 2.33818 6.22317 2.33818 6.16017 2.61766L5.50035 5.54706C5.47754 5.64829 5.39847 5.72736 5.29724 5.75016L2.36784 6.40999C2.08834 6.47297 2.08835 6.87128 2.36784 6.93428L5.29724 7.59424C5.39845 7.61704 5.47753 7.69601 5.50035 7.79721L6.16017 10.7266C6.22314 11.0062 6.6215 11.0062 6.68447 10.7266L7.34429 7.79721C7.36711 7.69602 7.4462 7.61705 7.5474 7.59424L10.4768 6.93428C10.7563 6.8713 10.7563 6.47296 10.4768 6.40999L7.5474 5.75016C7.44618 5.72735 7.36709 5.64828 7.34429 5.54706L6.68447 2.61766Z"
+        fill="#020218"
+      />
+    </svg>
+    <span>ui.onwo</span>
+  </Link>
 );

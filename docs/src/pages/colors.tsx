@@ -33,52 +33,52 @@ export const ColorPage = () => (
 
     <section class="mt-12 flex flex-col lg:flex-row gap-6">
       <div class="flex flex-col w-full gap-6">
-        <PNav.Link label="Main colours" id="main-colours">
-          <h2 id="Main-colours" class="text-onwo-24 font-medium">
-            Main colours
+        <PNav.Link label="Main colors" id="main-colors">
+          <h2 id="Main-colors" class="text-onwo-24 font-medium">
+            Main colors
           </h2>
         </PNav.Link>
         <div class="w-full flex flex-col gap-2 text-onwo-16">
-          <ColorSection title="Accent colours">
+          <ColorSection title="Accent colors">
             <Color name="bg-accent" />
           </ColorSection>
 
-          <ColorSection title="Background colours">
+          <ColorSection title="Background colors">
             <Color name="bg-paper" />
             <Color name="bg-parchment" />
             <Color name="bg-papyrus" />
           </ColorSection>
 
-          <ColorSection title="Text and icon colours">
+          <ColorSection title="Text and icon colors">
             <Color name="bg-ink" />
             <Color name="bg-lead" />
             <Color name="bg-graphite" />
             <Color name="bg-contrast" />
           </ColorSection>
 
-          <ColorSection title="Border and line colours">
+          <ColorSection title="Border and line colors">
             <Color name="bg-line" />
           </ColorSection>
 
-          <ColorSection title="Hover and overlay colours">
+          <ColorSection title="Hover and overlay colors">
             <Color name="bg-stare" />
             <Color name="bg-scan" />
             <Color name="bg-gaze" />
           </ColorSection>
 
-          <ColorSection title="Warning colour">
+          <ColorSection title="Warning color">
             <Color name="bg-warn-80" />
             <Color name="bg-warn" />
             <Color name="bg-warn-120" />
           </ColorSection>
 
-          <ColorSection title="Error colour">
+          <ColorSection title="Error color">
             <Color name="bg-error-80" />
             <Color name="bg-error" />
             <Color name="bg-error-120" />
           </ColorSection>
 
-          <ColorSection title="Success colour">
+          <ColorSection title="Success color">
             <Color name="bg-success-80" />
             <Color name="bg-success" />
             <Color name="bg-success-120" />
