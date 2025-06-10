@@ -31,6 +31,8 @@ export const baseConfig = {
       // externalize deps that shouldn't be bundled into the library
       external: [
         /^node:.*/,
+        'date-fns',
+        /^date-fns\/.*/,
         ...excludeAll(dependencies),
         ...excludeAll(peerDependencies),
       ],

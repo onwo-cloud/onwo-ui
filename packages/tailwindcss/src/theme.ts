@@ -77,6 +77,13 @@ export const onwoThemePlugin: PluginWithOptions<OnwoTheme> = plugin.withOptions<
 
       const themeName = `theme-${options.name}`;
 
+      // Add utility classes for the theme
+      api.addUtilities({
+        [`.${themeName}`]: {
+          ...colorMap,
+        },
+      });
+
       // placeholder
       api.addBase({
         [`:root.${themeName}, .${themeName}`]: {

@@ -1,6 +1,6 @@
 {
   "name": "@onwo/primitives",
-  "version": "0.0.6-alpha",
+  "version": "0.0.9-alpha",
   "url": "https://ui.onwo.cloud/",
   "description": "An ui library for qwik.js inspired by moon.io",
   "repository": "https://github.com/onwo-cloud/onwo-ui",
