@@ -2,7 +2,6 @@ import type { CSSProperties, JSXOutput, QwikHTMLElements } from '@builder.io/qwi
 
 export type Classes<T extends string> = Partial<Record<T, string>>;
 
-// eslint-disable-next-line sonarjs/no-useless-intersection
 export type Prettify<T> = { [K in keyof T]: T[K] } & {};
 
 export type Props<T extends (props: unknown) => JSXOutput> = Parameters<T>[0];

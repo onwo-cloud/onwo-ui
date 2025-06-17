@@ -6,7 +6,7 @@
   "repository": "https://github.com/onwo-cloud/onwo-ui",
   "license": "MIT",
   "engines": {
-    "node": "^20.3.0"
+    "node": "^22"
   },
   "private": false,
   "type": "module",

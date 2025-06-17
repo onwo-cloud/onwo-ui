@@ -19,12 +19,11 @@ export const ChecklistSelectAll = component$((props: PropsOf<'div'>) => {
     const newState = !allSelected.value;
     allSelected.value = newState;
     items.value = items.value.map(() => newState);
-    // eslint-disable-next-line qwik/valid-lexical-scope
+
     context.toggleAllSelected();
   });
 
   useTask$(({ track }) => {
-    // eslint-disable-next-line qwik/valid-lexical-scope
     track(() => context.items.value);
   });
 

@@ -44,7 +44,6 @@ export type HComboboxRootImplProps<M extends boolean = boolean> = Omit<
   /** A signal that controls the current open state (controlled). */
   'bind:open'?: Signal<boolean>;
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   'bind:displayValue'?: Signal<TMultiple<M>>;
 
   /**

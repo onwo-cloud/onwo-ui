@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "onwo-ui",
+  "type": "module",
   "workspaces": [
     "docs",
     "packages/tailwindcss",
@@ -10,18 +11,19 @@
   ],
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "@typescript-eslint/eslint-plugin": "^8.26.1",
-    "@typescript-eslint/parser": "^8.26.1",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
     "concurrently": "^9.1.2",
-    "eslint": "^8.56",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-import-resolver-typescript": "^3.8.5",
+    "eslint": "^9.29",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-import-resolver-typescript": "^4.4.3",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-prettier": "^5.5.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-qwik": "^1.14",
     "eslint-plugin-sonarjs": "^3.0.2",
-    "eslint-plugin-unicorn": "56.0.0",
+    "eslint-plugin-unicorn": "59.0.1",
+    "npm-check-updates": "^18.0.1",
     "prettier": "^3.5.3"
   }
 }

@@ -7,18 +7,18 @@ export type NavigationElement = {
   level: number; // default to -1 if not provided
 };
 
-type PageNavigationContext = {
+type PageNavigationContextData = {
   elemPos: number;
   elements: Record<number, NavigationElement>;
 };
 
 export const PageNavigationContext =
-  createContextId<PageNavigationContext>('page-navigation-context');
+  createContextId<PageNavigationContextData>('page-navigation-context');
 
 export type PageNavigationProviderProps = Primitive<'div'>;
 
-export const usePageNavigationProvider = (): PageNavigationContext => {
-  const data: PageNavigationContext = useStore({
+export const usePageNavigationProvider = (): PageNavigationContextData => {
+  const data: PageNavigationContextData = useStore({
     elemPos: 0,
     elements: {},
   });

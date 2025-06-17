@@ -1,6 +1,6 @@
 {
   "name": "@onwo/primitives",
-  "version": "0.0.9-alpha",
+  "version": "0.0.12-alpha",
   "url": "https://ui.onwo.cloud/",
   "description": "An ui library for qwik.js inspired by moon.io",
   "repository": "https://github.com/onwo-cloud/onwo-ui",
@@ -13,19 +13,12 @@
     "ui-library",
     "qwik.js"
   ],
-  "exports": {
-    ".": {
-      "import": "./lib/index.qwik.mjs",
-      "require": "./lib/index.qwik.cjs",
-      "types": "./lib-types/index.d.ts"
-    }
-  },
   "files": [
     "lib",
     "lib-types"
   ],
   "engines": {
-    "node": "^20.3.0"
+    "node": "^22"
   },
   "private": false,
   "type": "module",
@@ -41,28 +34,28 @@
   "devDependencies": {
     "@builder.io/qwik": "^1.14",
     "@onwo/tailwindcss": "link:../tailwindcss",
-    "@tailwindcss/vite": "^4.0.12",
-    "@types/node": "20.14.11",
+    "@tailwindcss/vite": "^4.1.10",
+    "@types/node": "24.0.3",
     "@types/tailwindcss": "^3.1.0",
     "chokidar": "^4.0.3",
-    "np": "^8.0.4",
-    "tailwindcss": "^4.0.12",
-    "typescript": "5.4.5",
+    "np": "^10.2.0",
+    "tailwindcss": "^4.1.10",
+    "typescript": "5.8.3",
     "undici": "*",
-    "vite": "5.3.5",
-    "vite-tsconfig-paths": "^4.2.1"
+    "vite": "6.3.5",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@floating-ui/core": "^1.6.2",
-    "@floating-ui/dom": "^1.6.5",
-    "@oddbird/popover-polyfill": "0.4.3",
-    "@tailwindcss/vite": "^4.0.14",
+    "@floating-ui/core": "^1.7.1",
+    "@floating-ui/dom": "^1.7.1",
+    "@oddbird/popover-polyfill": "0.6.0",
+    "@tailwindcss/vite": "^4.1.10",
     "body-scroll-lock-upgrade": "^1.1.0",
     "clsx": "^2.1.1",
-    "focus-trap": "7.5.4",
-    "tailwind-merge": "^3.0.2"
+    "focus-trap": "7.6.5",
+    "tailwind-merge": "^3.3.1"
   }
 }

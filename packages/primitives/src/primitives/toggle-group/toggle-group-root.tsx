@@ -90,7 +90,6 @@ export type ToggleGroupRootProps = PropsOf<'div'> & ToggleGroupApiProps;
 export const HToggleGroupRoot = component$<ToggleGroupRootProps>((props) => {
   useStyles$(styles);
   const {
-    // eslint-disable-next-line sonarjs/no-unused-vars
     onChange$: _,
     disabled = false,
     orientation = 'horizontal',
@@ -126,7 +125,6 @@ export const HToggleGroupRoot = component$<ToggleGroupRootProps>((props) => {
     const currentPressedItems = allItems.filter((item) => item.isPressed.value === true);
 
     if (currentPressedItems.length > 0) {
-      // eslint-disable-next-line unicorn/no-array-for-each
       currentPressedItems.forEach(async (item) => {
         await rootApiContext.getAndSetTabIndexItem$(item.itemId, 0);
       });
@@ -134,7 +132,7 @@ export const HToggleGroupRoot = component$<ToggleGroupRootProps>((props) => {
       //and we ensure that the rest of items has tabIndex = -1
       allItems
         .filter((item) => item.isPressed.value === false)
-        // eslint-disable-next-line unicorn/no-array-for-each
+
         .forEach(async (item) => {
           await rootApiContext.getAndSetTabIndexItem$(item.itemId, -1);
         });
@@ -153,7 +151,7 @@ export const HToggleGroupRoot = component$<ToggleGroupRootProps>((props) => {
       //and we ensure that the rest of items has tabIndex = -1
       allItems
         .filter((item) => item.itemId !== firstNotDisabledItem.itemId)
-        // eslint-disable-next-line unicorn/no-array-for-each
+
         .forEach(async (item) => {
           await rootApiContext.getAndSetTabIndexItem$(item.itemId, -1);
         });
@@ -194,7 +192,6 @@ export const HToggleGroupRoot = component$<ToggleGroupRootProps>((props) => {
     const currentPressedItems = allItems.filter((item) => item.isPressed.value === true);
 
     if (currentPressedItems.length > 0) {
-      // eslint-disable-next-line unicorn/no-array-for-each
       currentPressedItems.forEach(async (item) => {
         const pressedItem = allItems.find((i) => i.itemId === item.itemId);
         if (!pressedItem) throw 'Item Not Found';
@@ -206,7 +203,7 @@ export const HToggleGroupRoot = component$<ToggleGroupRootProps>((props) => {
       //and we ensure that the rest of items has tabIndex = -1
       allItems
         .filter((item) => item.isPressed.value === false)
-        // eslint-disable-next-line unicorn/no-array-for-each
+
         .forEach(async (item) => {
           const notPressedItem = allItems.find((i) => i.itemId === item.itemId);
           if (!notPressedItem) throw 'Item Not Found';
@@ -245,7 +242,7 @@ export const HToggleGroupRoot = component$<ToggleGroupRootProps>((props) => {
       //and we ensure that the rest of items has tabIndex = -1
       allItems
         .filter((item) => item.itemId !== firstNotDisabledItem.id)
-        // eslint-disable-next-line unicorn/no-array-for-each
+
         .forEach(async (item) => {
           const otherItem = allItems.find((i) => i.itemId === item.itemId);
           if (!otherItem) throw 'Item Not Found';

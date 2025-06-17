@@ -75,7 +75,6 @@ export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOption
       // Generate utility shorthand for colors, e.g. accent-80
       api.matchUtilities(
         {
-          // eslint-disable-next-line sonarjs/no-nested-functions
           [`${key}-${color}`]: (value) => ({
             [`@apply ${key}-${color}`]: {},
             [`--tw-l-${key}-offset`]: value,

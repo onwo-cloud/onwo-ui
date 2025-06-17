@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import type { PluginAPI } from 'tailwindcss/plugin';
 // eslint-disable-next-line import/no-unresolved
 import { styles } from './styles.js';

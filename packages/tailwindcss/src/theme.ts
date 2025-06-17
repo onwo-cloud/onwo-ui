@@ -52,7 +52,7 @@ export const onwoThemePlugin: PluginWithOptions<OnwoTheme> = plugin.withOptions<
       const colorMap = Object.fromEntries(
         colors.flatMap(([color, value]) => {
           const colorOklch: Color = convertToOklch(color, value);
-          // eslint-disable-next-line prefer-const
+
           let [L, C, H] = colorOklch.coords;
 
           if (C < 0.01) {

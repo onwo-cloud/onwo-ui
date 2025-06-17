@@ -112,7 +112,6 @@ export const HToggleGroupItem = component$<ToggleGroupItemProps>((props) => {
     const currentPressedItems = allItems.filter((item) => item.isPressed.value === true);
 
     if (currentPressedItems.length > 0) {
-      // eslint-disable-next-line unicorn/no-array-for-each
       return currentPressedItems.forEach(async (item) => {
         await rootApiContext.getAndSetTabIndexItem$(item.itemId, 0);
       });
@@ -143,7 +142,6 @@ export const HToggleGroupItem = component$<ToggleGroupItemProps>((props) => {
       const currentPressedItems = allItems.filter((item) => item.ariaPressed === 'true');
 
       if (currentPressedItems.length > 0) {
-        // eslint-disable-next-line unicorn/no-array-for-each
         return currentPressedItems.forEach(async (item) => {
           const itemRef = allItems.find((i) => i.id === item.id);
           if (!itemRef) throw 'Item Not Found';

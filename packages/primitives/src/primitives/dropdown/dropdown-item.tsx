@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-
 import type { PropsOf, QRL } from '@builder.io/qwik';
 import { Slot, component$, sync$ } from '@builder.io/qwik';
 

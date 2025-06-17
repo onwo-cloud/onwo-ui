@@ -18,14 +18,12 @@ export const ChecklistItem = component$((props: ChecklistItemProps) => {
   const initialLoadSig = useSignal(true);
 
   useTask$(({ track }) => {
-    // eslint-disable-next-line qwik/valid-lexical-scope
     track(() => context.allSelected.value);
 
     if (initialLoadSig.value) {
       return;
     }
 
-    // eslint-disable-next-line qwik/valid-lexical-scope
     if (context.allSelected.value) {
       isCheckedSig.value = true;
     } else {

@@ -52,7 +52,6 @@ export type SelectProps<M extends boolean = boolean> = Omit<PropsOf<'div'>, 'onC
   /** A signal that controls the current open state (controlled). */
   'bind:open'?: Signal<boolean>;
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   'bind:displayValue'?: Signal<TMultiple<M>>;
 
   /**

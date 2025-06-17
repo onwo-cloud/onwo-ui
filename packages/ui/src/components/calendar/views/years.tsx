@@ -26,7 +26,7 @@ export const CalendarViewYear = component$(
         renderer={(row, col) => {
           const first = startOfYearPeriod(viewDate.value, 10);
           const year = first - 1 + row * 4 + col;
-          const newDate = new Date(viewDate.value.getTime());
+          const newDate = new Date(viewDate.value);
           newDate.setFullYear(year);
 
           const isSelected = selectedDate.value ? isSameYear(selectedDate.value, newDate) : false;

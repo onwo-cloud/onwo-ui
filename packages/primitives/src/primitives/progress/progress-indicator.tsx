@@ -1,4 +1,3 @@
-/* eslint-disable qwik/valid-lexical-scope */
 import type { PropsOf } from '@builder.io/qwik';
 import { component$, useComputed$, useContext } from '@builder.io/qwik';
 import { ProgressContext } from './progress-context';

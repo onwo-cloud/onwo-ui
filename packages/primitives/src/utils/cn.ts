@@ -27,7 +27,6 @@ const twMerge = extendTailwindMerge({
       ],
 
       shadow: [
-        'border',
         'inset',
         'interactive',
         'focus',

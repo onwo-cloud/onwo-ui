@@ -4,12 +4,10 @@ import { useSignal, useTask$, useComputed$ } from '@builder.io/qwik';
 /* This hook merges a consumer passed ref with our internal ref. It allows consumers to pass a reference to the component and get access to the underlying element. */
 
 type CtxOpts = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   context?: any;
   givenContextRef?: Signal;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function useCombinedRef(externalRef: any, ctxOpts?: CtxOpts) {
   // we create a ref in case the consumer does not pass a ref
   const internalRef = useSignal<HTMLElement>();

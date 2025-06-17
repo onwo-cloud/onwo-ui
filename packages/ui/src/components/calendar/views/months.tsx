@@ -26,7 +26,7 @@ export const CalendarViewMonth = component$(
         rows={3}
         cols={4}
         renderer={(row, col) => {
-          const newDate = new Date(viewDate.value.getTime());
+          const newDate = new Date(viewDate.value);
           newDate.setMonth(row * 4 + col);
           const month = getFormattedDate(language, newDate, { month: 'short' });
 

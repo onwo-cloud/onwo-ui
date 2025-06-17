@@ -1,4 +1,3 @@
-/* eslint-disable prefer-object-has-own */
 import { corrupt } from './corrupt';
 
 type NoInfer<T> = [T][T extends any ? 0 : never];
@@ -81,6 +80,7 @@ function match<
   >,
 ): ExtractOutput<Cases, Output>;
 
+// eslint-disable-next-line no-redeclare
 function match<
   Union extends object,
   Tag extends keyof Union,
@@ -96,6 +96,7 @@ function match<
   >,
 ): ExtractOutput<Cases, Output>;
 
+// eslint-disable-next-line no-redeclare
 function match(unionOrObject: string | object, casesOrKeyofUnion: string | object, cases?: object) {
   if (cases !== undefined) {
     return match.tag(unionOrObject as object, casesOrKeyofUnion as never, cases);

@@ -1,11 +1,13 @@
 import type { Component } from '@builder.io/qwik';
 import { Slot, component$, useSignal, useTask$ } from '@builder.io/qwik';
-import { Animated, Modal } from '@onwo/primitives';
+import { Animated, Modal, cn } from '@onwo/primitives';
 import { BackdropOverlay } from '../backdrop-overlay';
 
-type PanelProps = object;
+type PanelProps = {
+  class?: string;
+};
 
-export const Panel: Component<PanelProps> = component$((_: PanelProps) => {
+export const Panel: Component<PanelProps> = component$((props: PanelProps) => {
   const keepMounted = useSignal<boolean>(false);
   const opened = useSignal<boolean>(false);
 
@@ -36,7 +38,10 @@ export const Panel: Component<PanelProps> = component$((_: PanelProps) => {
           onOutEnd$={() => {
             keepMounted.value = false;
           }}
-          class="pointer-events-auto absolute bottom-0 w-full h-fit sm:max-w-lg sm:bottom-[unset] sm:top-1/2 sm:-translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2 border border-line overflow-hidden bg-paper rounded-lg"
+          class={cn(
+            'pointer-events-auto absolute bottom-0 w-full h-fit sm:max-w-lg sm:bottom-[unset] sm:top-1/2 sm:-translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2 border border-line overflow-hidden bg-paper rounded-lg',
+            props.class,
+          )}
         >
           <Slot />
         </Animated>

@@ -1,7 +1,7 @@
 import type { PropsOf, Signal } from '@builder.io/qwik';
 import { Slot, component$, useComputed$, useContextProvider, useTask$ } from '@builder.io/qwik';
 import { useBoundSignal } from '~/imported/bound-signal';
-import { ProgressContext } from './progress-context';
+import { ProgressContext, type ProgressContextData } from './progress-context';
 
 type ProgressProps = {
   min?: number;
@@ -78,7 +78,7 @@ export const ProgressRoot = component$<ProgressProps & PropsOf<'div'>>((props) =
     };
   });
 
-  const context: ProgressContext = {
+  const context: ProgressContextData = {
     dataAttributesSig,
     valueSig,
     maxSig,

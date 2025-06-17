@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-
 import { $, useComputed$, useContext, useSignal, useTask$ } from '@builder.io/qwik';
 import { isServer } from '@builder.io/qwik/build';
 

@@ -19,7 +19,7 @@ export const Panel = component$(
     const context = useModalContext();
     const panelRef = useSignal<HTMLDialogElement>();
     const focus = useFocusTrap(panelRef);
-    // eslint-disable-next-line qwik/use-method-usage
+
     const defaultOpened = useSignal<boolean>(false);
     const opened = propsOpened ?? defaultOpened;
 

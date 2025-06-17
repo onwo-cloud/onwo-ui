@@ -35,10 +35,8 @@ export function processChildren(children: JSXChildren) {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const componentRegistry = new Map<any, ComponentProcessor>();
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function findComponent(component: any, processor: ComponentProcessor) {
   componentRegistry.set(component, processor);
 }

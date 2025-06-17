@@ -14,7 +14,7 @@ const Color = (props: { name: string; class?: string }) => (
     <div
       class={
         `w-full h-40 rounded-onwo-s-sm shadow-flat border border-line ${props.name} ` +
-          props.class ?? ''
+        (props.class ?? '')
       }
     />
     <p>

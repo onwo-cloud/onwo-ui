@@ -7,7 +7,6 @@ type ItemProps = {
   onSelect$?: QRL<() => void>;
 } & QwikIntrinsicElements['a'];
 
-// eslint-disable-next-line qwik/valid-lexical-scope
 export const Item = ({ label, href, onSelect$, children, ...props }: ItemProps) => (
   <li role="none">
     <a
