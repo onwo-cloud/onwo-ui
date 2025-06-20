@@ -4,6 +4,11 @@ import { extendTailwindMerge } from 'tailwind-merge';
 const twMerge = extendTailwindMerge({
   extend: {
     classGroups: {
+      'ring-width': [/^ring-\d+$/],
+      'ring-color': ['ring-transparent', 'ring-black', 'ring-white', /^ring-[a-z0-9-_]+$/],
+      'ring-inset': ['ring-inset'],
+      'ring-opacity': [/^ring-opacity-\d+$/],
+
       animate: [
         'loader',
         'rightslide',
@@ -62,7 +67,7 @@ const twMerge = extendTailwindMerge({
       ],
     },
   },
-});
+} as any);
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

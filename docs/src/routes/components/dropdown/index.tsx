@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Icons } from '@onwo/icons';
+import { GenericCheckAlternativeIcon } from '@onwo/icons';
 import { primitives as P } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
@@ -95,7 +95,7 @@ export default () => (
               return (
                 <P.Dropdown.CheckboxItem key={item} class="dropdown-item">
                   <P.Dropdown.ItemIndicator>
-                    <Icons.GenericCheckAlternative />
+                    <GenericCheckAlternativeIcon />
                   </P.Dropdown.ItemIndicator>
                   {item}
                 </P.Dropdown.CheckboxItem>
@@ -107,7 +107,7 @@ export default () => (
                 return (
                   <P.Dropdown.RadioItem key={item} class="dropdown-item" value={item}>
                     <P.Dropdown.ItemIndicator>
-                      <Icons.GenericCheckAlternative />
+                      <GenericCheckAlternativeIcon />
                     </P.Dropdown.ItemIndicator>
                     {item}
                   </P.Dropdown.RadioItem>

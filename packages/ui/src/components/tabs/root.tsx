@@ -1,9 +1,5 @@
-import { Tabs, cn } from '@onwo/primitives';
+import { Tabs } from '@onwo/primitives';
 
 export type RootProps = Tabs.RootProps;
 
-export const Root = ({ class: className, ...props }: RootProps) => (
-  <Tabs.Root class={cn('w-full', className)} {...props}>
-    {props.children}
-  </Tabs.Root>
-);
+export const Root = ({ ...props }: RootProps) => <Tabs.Root {...props}>{props.children}</Tabs.Root>;

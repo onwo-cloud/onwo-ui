@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Icons } from '@onwo/icons';
+import { GenericSettingsIcon } from '@onwo/icons';
 import type { primitives as P } from '@onwo/ui';
 import { Button } from '@onwo/ui';
 import IconMarginDemo from '~/assets/icon-margin-demo.png?jsx';
@@ -56,28 +56,28 @@ export default () => (
       title="Sizes"
       component={
         <div class="flex gap-4 items-center justify-around">
-          <Button size="xs" start={Icons.GenericSettings}>
+          <Button size="xs" start={GenericSettingsIcon}>
             Size XS
           </Button>
-          <Button size="sm" start={Icons.GenericSettings}>
+          <Button size="sm" start={GenericSettingsIcon}>
             Size SM
           </Button>
-          <Button size="md" start={Icons.GenericSettings}>
+          <Button size="md" start={GenericSettingsIcon}>
             Size MD
           </Button>
-          <Button size="lg" start={Icons.GenericSettings}>
+          <Button size="lg" start={GenericSettingsIcon}>
             Size LG
           </Button>
-          <Button size="xl" start={Icons.GenericSettings}>
+          <Button size="xl" start={GenericSettingsIcon}>
             Size XL
           </Button>
         </div>
       }
-      code={`<Button size="xs" start={Icons.GenericSettings}>Size XS</Button>
-<Button size="sm" start={Icons.GenericSettings}>Size SM</Button>
-<Button size="md" start={Icons.GenericSettings}>Size MD</Button>
-<Button size="lg" start={Icons.GenericSettings}>Size LG</Button>
-<Button size="xl" start={Icons.GenericSettings}>Size XL</Button>`}
+      code={`<Button size="xs" start={GenericSettingsIcon}>Size XS</Button>
+<Button size="sm" start={GenericSettingsIcon}>Size SM</Button>
+<Button size="md" start={GenericSettingsIcon}>Size MD</Button>
+<Button size="lg" start={GenericSettingsIcon}>Size LG</Button>
+<Button size="xl" start={GenericSettingsIcon}>Size XL</Button>`}
     />
 
     <div class="flex gap-6 mt-6 items-center">
@@ -93,16 +93,16 @@ export default () => (
       title="Icon position"
       component={
         <div class="flex gap-4 items-center justify-around">
-          <Button size="md" start={Icons.GenericSettings}>
+          <Button size="md" start={GenericSettingsIcon}>
             Button start
           </Button>
-          <Button size="md" end={Icons.GenericSettings}>
+          <Button size="md" end={GenericSettingsIcon}>
             Button end
           </Button>
         </div>
       }
-      code={`<Button size="md" start={Icons.GenericSettings}>Button start</Button>
-<Button size="md" end={Icons.GenericSettings}>Button end</Button>`}
+      code={`<Button size="md" start={GenericSettingsIcon}>Button start</Button>
+<Button size="md" end={GenericSettingsIcon}>Button end</Button>`}
     />
 
     <Showcase

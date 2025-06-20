@@ -1,6 +1,6 @@
 import { $, component$, useSignal } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Icons } from '@onwo/icons';
+import { OtherSmileIcon } from '@onwo/icons';
 import { Animated } from '@onwo/primitives';
 import { Button } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
@@ -82,7 +82,7 @@ export default component$(() => {
               }}
               class="w-fit"
             >
-              <Icons.OtherSmile size="3rem" />
+              <OtherSmileIcon size="3rem" />
             </Animated>
           </div>
         }
@@ -95,7 +95,7 @@ export default component$(() => {
   }}
   class="w-fit"
 >
-  <Icons.OtherSmile size="3rem" />
+  <OtherSmileIcon size="3rem" />
 </Animated>`}
       />
     </div>

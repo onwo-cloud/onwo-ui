@@ -23,6 +23,7 @@
   "private": false,
   "type": "module",
   "scripts": {
+    "generate-index": "node generate-icon-exports.cjs",
     "build": "ESLINT_MODE=full qwik build",
     "build.types": "tsc --emitDeclarationOnly",
     "build.lib": "vite build --mode lib",

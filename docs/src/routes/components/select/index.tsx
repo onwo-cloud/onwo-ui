@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Icons } from '@onwo/icons';
+import { GenericCheckAlternativeIcon } from '@onwo/icons';
 import { primitives as P } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
@@ -52,7 +52,7 @@ export default () => (
               <P.Select.Item class="select-item" key={user}>
                 <P.Select.ItemLabel>{user}</P.Select.ItemLabel>
                 <P.Select.ItemIndicator>
-                  <Icons.GenericCheckAlternative />
+                  <GenericCheckAlternativeIcon />
                 </P.Select.ItemIndicator>
               </P.Select.Item>
             ))}

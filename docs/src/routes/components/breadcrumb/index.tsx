@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Icons } from '@onwo/icons';
+import { ArrowsChevronRightDoubleIcon, ControlsChevronRightIcon } from '@onwo/icons';
 import { Breadcrumb } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
@@ -66,19 +66,19 @@ export default () => (
       title="Custom separator icon"
       component={
         <div class="flex flex-col gap-4">
-          <Breadcrumb.Root separator={Icons.ControlsChevronRight}>
+          <Breadcrumb.Root separator={ControlsChevronRightIcon}>
             {Breadcrumb.Link.fromList(links)}
           </Breadcrumb.Root>
-          <Breadcrumb.Root separator={Icons.ArrowsChevronRightDouble}>
+          <Breadcrumb.Root separator={ArrowsChevronRightDoubleIcon}>
             {Breadcrumb.Link.fromList(links)}
           </Breadcrumb.Root>
         </div>
       }
-      code={`<Breadcrumb separator={Icons.ControlsChevronRight}>
+      code={`<Breadcrumb separator={ControlsChevronRightIcon}>
   {Breadcrumb.Link.fromList(links)}
 </Breadcrumb>
 
-<Breadcrumb separator={Icons.ArrowsChevronRightDouble}>
+<Breadcrumb separator={ArrowsChevronRightDoubleIcon}>
   {Breadcrumb.Link.fromList(links)}
 </Breadcrumb>`}
     />

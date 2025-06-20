@@ -16,7 +16,7 @@
     "build.preview": "vite build -c ./vite.config.client.ts --ssr src/entry.preview.tsx",
     "build.server": "vite build",
     "build.types": "tsc --emitDeclarationOnly",
-    "dev": "vite -c ./vite.config.dev.ts --mode ssr",
+    "dev": "while true; do vite -c ./vite.config.dev.ts --mode ssr; done",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "lint": "eslint \"src/**/*.ts*\"",
     "lint.fix": "npm run lint -- --fix",
@@ -39,6 +39,7 @@
     "@onwo/icons": "link:../packages/icons",
     "@onwo/tailwindcss": "link:../packages/tailwindcss",
     "@onwo/ui": "link:../packages/ui",
-    "@tailwindcss/typography": "^0.5.16"
+    "@tailwindcss/typography": "^0.5.16",
+    "motion": "^12.18.1"
   }
 }

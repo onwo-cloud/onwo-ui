@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Icons } from '@onwo/icons';
+import { MediaMusicIcon } from '@onwo/icons';
 import { Chip } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
@@ -84,15 +84,15 @@ export default () => (
       component={
         <div class="flex  gap-2 flex-wrap items-center justify-around">
           <Chip variant="stroke">
-            <Icons.MediaMusic />
+            <MediaMusicIcon />
             Left Icon
           </Chip>
           <Chip variant="stroke">
             Right Icon
-            <Icons.MediaMusic />
+            <MediaMusicIcon />
           </Chip>
           <Chip variant="stroke">
-            <Icons.MediaMusic />
+            <MediaMusicIcon />
           </Chip>
         </div>
       }

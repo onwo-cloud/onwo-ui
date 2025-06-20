@@ -1,6 +1,6 @@
 import { $, component$, useSignal, useTask$ } from '@builder.io/qwik';
 import type { JSXChildren, PropFunction, QRL, Signal } from '@builder.io/qwik';
-import { Icons } from '@onwo/icons';
+import { ControlsChevronLeftSmallIcon, ControlsChevronRightSmallIcon } from '@onwo/icons';
 import { cn } from '@onwo/primitives';
 import type { OneObjectOf } from '~/utils/types';
 import {
@@ -194,7 +194,7 @@ export const Root = component$(
               class="mb-2 flex items-center justify-between"
             >
               <HeadNavButton
-                icon={<Icons.ControlsChevronLeftSmall />}
+                icon={<ControlsChevronLeftSmallIcon />}
                 onClick$={$(async () => {
                   viewDate.value = await getViewDatePage$(view.value, viewDate.value, -1);
                 })}
@@ -210,7 +210,7 @@ export const Root = component$(
               </button>
 
               <HeadNavButton
-                icon={<Icons.ControlsChevronRightSmall />}
+                icon={<ControlsChevronRightSmallIcon />}
                 onClick$={$(async () => {
                   viewDate.value = await getViewDatePage$(view.value, viewDate.value, +1);
                 })}
