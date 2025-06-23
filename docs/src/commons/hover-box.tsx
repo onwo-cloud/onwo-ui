@@ -28,8 +28,8 @@ export const HoverBox = component$<HoverBoxProps>(({ activeElement, ...props }) 
           opacity: 1,
         },
         {
-          duration: 0.1,
-          easing: 'backInOut',
+          duration: 0.2,
+          easing: 'easeOut',
         },
       );
 
@@ -44,8 +44,8 @@ export const HoverBox = component$<HoverBoxProps>(({ activeElement, ...props }) 
           height: `${offsetHeight}px`,
         },
         {
-          duration: 0.1,
-          easing: 'backInOut',
+          duration: 0.2,
+          easing: 'easeOut',
         },
       );
       box.style.opacity = '1';
@@ -57,7 +57,7 @@ export const HoverBox = component$<HoverBoxProps>(({ activeElement, ...props }) 
   return (
     <div
       ref={hoverBox}
-      class={cn('absolute bg-ink rounded-full  pointer-events-none', props.class)}
+      class={cn('absolute bg-papyrus rounded-full  pointer-events-none', props.class)}
       style={{
         opacity: 0,
         zIndex: 1,

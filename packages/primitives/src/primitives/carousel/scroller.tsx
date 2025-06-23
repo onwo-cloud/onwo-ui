@@ -11,7 +11,7 @@ import {
 } from '@builder.io/qwik';
 import { useStyles$ } from '@builder.io/qwik';
 import { isServer } from '@builder.io/qwik/build';
-import { useDebouncer } from '~/hooks/use-debouncer';
+import { useDebounced } from '~/hooks/use-debouncer';
 import styles from './carousel.css?inline';
 import { carouselContextId } from './context';
 import { useCarousel } from './use-carousel';
@@ -178,7 +178,7 @@ export const Scroller = component$((props: PropsOf<'div'>) => {
     await setTransition(false);
   });
 
-  const debouncedUpdate = useDebouncer(setTransform, 1);
+  const [debouncedUpdate] = useDebounced(setTransform, 1);
   const handleTouchMove = $(async (e: TouchEvent) => {
     if (isMouseDownSig.value || startPosSig.value === undefined) return;
     if (!context.scrollerRef.value || !boundariesSig.value) return;

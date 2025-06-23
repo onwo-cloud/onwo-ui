@@ -2,6 +2,7 @@ import type { PropsOf } from '@builder.io/qwik';
 import { component$, useSignal } from '@builder.io/qwik';
 import { MediaMusicIcon } from '@onwo/icons';
 import { Accordion, Avatar, Breadcrumb, Button, Calendar, Chip, Masonry, Tabs, cn } from '@onwo/ui';
+import { ClipboardButton } from '~/commons/clipboard-button';
 import { SimpleTabs } from '~/commons/simple-tabs';
 import { TopBarV2 } from '~/commons/top-bar-v2';
 
@@ -28,11 +29,23 @@ export const HomePage = component$(() => {
   return (
     <div class="h-screen">
       <TopBarV2 />
-      <div class="px-10 text-center">
-        <h2 class="text-4xl font-semibold leading-narrow mt-32">UI primitives for qwik.js</h2>
-        <p class="mt-2 text-lg  text-lead mb-16">A growing library of primitives for qwik.js</p>
+      <div class="px-4 md:px-10 text-center">
+        <div class="flex flex-col items-center my-24 md:my-32">
+          <div>
+            <h2 class="text-3xl md:text-5xl font-semibold leading-narrow">
+              UI primitives for qwik.js
+            </h2>
+            <p class="mt-2 md:text-lg  text-lead mb-12">
+              A minimalist library of primitives and hooks to use in your qwik.js project.
+            </p>
+          </div>
+          <code class="bg-parchment flex gap-4 w-fit items-center rounded-lg py-2 px-8 border border-line text-sm">
+            <span>npm install @onwo/ui @onwo/tailwindcss @onwo/icons</span>
+            <ClipboardButton textToCopy="npm install @onwo/ui @onwo/tailwindcss @onwo/icons" />
+          </code>
+        </div>
         <SimpleTabs tabs={['Overview', 'Blog', 'Changelog']} bind:selected={selectedTab} />
-        <div class="mt-12">
+        <div class="mt-8">
           <Masonry.Root columnWidth={500} gap={16}>
             <CustomItem width={200} height={150}>
               <Button size="lg">button</Button>

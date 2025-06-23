@@ -124,7 +124,7 @@ const extendedConfig = {
     'unicorn/no-useless-switch-case': 'off',
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-array-reduce': 'warn',
-    'sonarjs/different-types-comparison': 'warn'
+    'sonarjs/different-types-comparison': 'warn',
   },
 };
 
