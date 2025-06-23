@@ -1,7 +1,7 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { component$, useContext, Slot, useTask$, $, useSignal, useStyles$ } from '@builder.io/qwik';
 import { isServer } from '@builder.io/qwik/build';
-import { useDebouncer } from '~/hooks/use-debouncer';
+import { useDebounced } from '~/hooks/use-debouncer';
 import { HPopoverPanel } from '../popover/popover-panel';
 import { HPopoverRoot } from '../popover/popover-root';
 import { usePopover } from '../popover/use-popover';
@@ -77,7 +77,7 @@ export const HDropdownPopover = component$<PropsOf<typeof HPopoverRoot>>((props)
     initialLoadSig.value = false;
   });
 
-  const resetScrollMove = useDebouncer(
+  const [resetScrollMove$] = useDebounced(
     $(() => {
       context.isMouseOverPopupSig.value = false;
     }),
@@ -105,7 +105,7 @@ export const HDropdownPopover = component$<PropsOf<typeof HPopoverRoot>>((props)
         onMouseMove$={async () => {
           context.isMouseOverPopupSig.value = true;
 
-          await resetScrollMove();
+          await resetScrollMove$();
         }}
         onMouseOut$={() => (context.isMouseOverPopupSig.value = false)}
         onKeyDown$={() => (context.isMouseOverPopupSig.value = true)}

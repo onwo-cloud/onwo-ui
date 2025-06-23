@@ -37,11 +37,11 @@ export const SimpleTabs = component$<SimpleTabsProps>(
                 onSelected$?.(tab);
               }}
               class={cn(
-                'px-4 py-2 border border-line rounded-full text-sm font-medium relative z-10',
+                'px-4 py-1 border border-line rounded-full text-sm font-medium relative z-10',
                 selected.value === tab
-                  ? 'transition-colors duration-200 text-contrast'
+                  ? 'transition-colors duration-200 text-ink'
                   : 'text-graphite hover:text-ink',
-                selected.value === tab && !activeElement.value && 'bg-ink',
+                selected.value === tab && !activeElement.value && 'bg-papyrus',
               )}
             >
               {tab}
