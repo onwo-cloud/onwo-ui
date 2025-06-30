@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { HomePage } from '../pages/home';
+import { HomePage } from '~/pages/home';
 import { buildHead } from '../utils/build-head';
 
 export default () => <HomePage />;

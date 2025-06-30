@@ -6,6 +6,7 @@ pkgs.mkShell {
   nativeBuildInputs = [
     pkgs.just
     pkgs.nodejs_22
+    pkgs.bun
     pkgs.nodePackages.concurrently
     pkgs.nodePackages.typescript-language-server
     pkgs.vscode-langservers-extracted

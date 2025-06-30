@@ -1,5 +1,6 @@
-import type { SeparatorProps } from '@onwo/primitives';
-import { Separator, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import type { SeparatorProps } from '@onwo/primitives/separator';
+import { Separator } from '@onwo/primitives/separator';
 
 export const Root = ({
   class: className,

@@ -1,8 +1,10 @@
-import { Tabs, styledcn } from '@onwo/primitives';
+import { styledcn } from '@onwo/primitives';
+import type { TabProps as PTabProps } from '@onwo/primitives/tabs';
+import { Tab as PTab } from '@onwo/primitives/tabs';
 
-export type TabProps<Name extends string> = Tabs.TabProps<Name>;
+export type TabProps<Name extends string> = PTabProps<Name>;
 
-export const Tab = styledcn(Tabs.Tab)`
+export const Tab = styledcn(PTab)`
       relative flex cursor-pointer items-center justify-center outline-none focus-visible:shadow-focus font-semibold gap-2 rounded-sm data-selected:text-accent text-onwo-14 hover:text-accent
 
       ${/* disabled */ ''}
