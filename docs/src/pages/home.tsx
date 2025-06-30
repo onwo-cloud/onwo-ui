@@ -1,6 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { component$, useSignal } from '@builder.io/qwik';
-import { MediaMusicIcon } from '@onwo/icons';
+import { MusicIcon } from '@onwo/icons';
 import { Accordion, Avatar, Breadcrumb, Button, Calendar, Chip, Masonry, Tabs, cn } from '@onwo/ui';
 import { ClipboardButton } from '~/commons/clipboard-button';
 import { SimpleTabs } from '~/commons/simple-tabs';
@@ -83,15 +83,15 @@ export const HomePage = component$(() => {
             </CustomItem>
             <CustomItem class="flex-row gap-12">
               <Chip variant="stroke">
-                <MediaMusicIcon />
+                <MusicIcon />
                 Left Icon
               </Chip>
               <Chip variant="stroke">
                 Right Icon
-                <MediaMusicIcon />
+                <MusicIcon />
               </Chip>
               <Chip variant="stroke">
-                <MediaMusicIcon />
+                <MusicIcon />
               </Chip>
             </CustomItem>
             <CustomItem>

@@ -107,6 +107,7 @@ const extendedConfig = {
     // Custom overrides
     'sonarjs/no-useless-intersection': 'off',
     'sonarjs/no-nested-functions': 'off',
+    'sonarjs/void-use': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/prefer-ternary': 'off',
     'unicorn/no-anonymous-default-export': 'off',

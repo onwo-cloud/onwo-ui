@@ -1,14 +1,14 @@
-import { component$, useSignal } from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { primitives as P } from '@onwo/ui';
+//import { primitives as P } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
 import { buildHead } from '~/utils/build-head';
 
 export default component$(() => {
-  const selectedPage = useSignal(1);
-  const totalPages = useSignal(10);
+  //const selectedPage = useSignal(1);
+  //const totalPages = useSignal(10);
 
   return (
     <div>
@@ -29,7 +29,8 @@ export default component$(() => {
       <Showcase
         title="Default"
         component={
-          <P.Pagination
+          <></>
+          /*<P.Pagination
             selectedPage={selectedPage.value}
             totalPages={totalPages.value}
             onPageChange$={(page: number) => {
@@ -41,7 +42,7 @@ export default component$(() => {
             dividerClass="pagination-divider"
             prevButtonClass="prevNextButtons"
             nextButtonClass="prevNextButtons"
-          />
+          />*/
         }
         code={``}
       />

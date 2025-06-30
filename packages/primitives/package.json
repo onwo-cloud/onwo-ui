@@ -1,13 +1,10 @@
 {
   "name": "@onwo/primitives",
   "version": "0.0.12-alpha",
-  "url": "https://ui.onwo.cloud/",
+  "url": "https.//primitives/ui.onwo.cloud/",
   "description": "An ui library for qwik.js inspired by moon.io",
-  "repository": "https://github.com/onwo-cloud/onwo-ui",
+  "repository": "https.//primitives/github.com/onwo-cloud/onwo-ui",
   "license": "MIT",
-  "main": "./lib/index.qwik.mjs",
-  "qwik": "./lib/index.qwik.mjs",
-  "types": "./lib-types/index.d.ts",
   "keywords": [
     "tailwindcss",
     "ui-library",
@@ -24,8 +21,9 @@
   "type": "module",
   "scripts": {
     "build": "ESLINT_MODE=full qwik build",
-    "build.types": "tsc --emitDeclarationOnly",
-    "build.lib": "vite build --mode lib",
+    "build.types": "tsc --emitDeclarationOnly --incremental --pretty",
+    "build.lib": "vite build --mode lib -c vite.config.ts",
+    "dev.build": "ESLINT=false qwik build",
     "dev": "vite build --mode lib -c ./vite.config.dev.ts",
     "lint": "eslint \"src/**/*.ts*\"",
     "lint.fix": "npm run lint -- --fix",
@@ -57,5 +55,132 @@
     "clsx": "^2.1.1",
     "focus-trap": "7.6.5",
     "tailwind-merge": "^3.3.1"
+  },
+  "exports": {
+    ".": {
+      "qwik": "./lib/index.qwik.mjs",
+      "import": "./lib/index.qwik.mjs",
+      "types": "./lib-types/index.d.ts"
+    },
+    "./accordion": {
+      "qwik": "./lib/primitives/accordion/index.qwik.mjs",
+      "import": "./lib/primitives/accordion/index.qwik.mjs",
+      "types": "./lib-types/primitives/accordion/index.d.ts"
+    },
+    "./animated": {
+      "qwik": "./lib/primitives/animated/index.qwik.mjs",
+      "import": "./lib/primitives/animated/index.qwik.mjs",
+      "types": "./lib-types/primitives/animated/index.d.ts"
+    },
+    "./button": {
+      "qwik": "./lib/primitives/button/index.qwik.mjs",
+      "import": "./lib/primitives/button/index.qwik.mjs",
+      "types": "./lib-types/primitives/button/index.d.ts"
+    },
+    "./carousel": {
+      "qwik": "./lib/primitives/carousel/index.qwik.mjs",
+      "import": "./lib/primitives/carousel/index.qwik.mjs",
+      "types": "./lib-types/primitives/carousel/index.d.ts"
+    },
+    "./checkbox": {
+      "qwik": "./lib/primitives/checkbox/index.qwik.mjs",
+      "import": "./lib/primitives/checkbox/index.qwik.mjs",
+      "types": "./lib-types/primitives/checkbox/index.d.ts"
+    },
+    "./checklist": {
+      "qwik": "./lib/primitives/checklist/index.qwik.mjs",
+      "import": "./lib/primitives/checklist/index.qwik.mjs",
+      "types": "./lib-types/primitives/checklist/index.d.ts"
+    },
+    "./collapsible": {
+      "qwik": "./lib/primitives/collapsible/index.qwik.mjs",
+      "import": "./lib/primitives/collapsible/index.qwik.mjs",
+      "types": "./lib-types/primitives/collapsible/index.d.ts"
+    },
+    "./combobox": {
+      "qwik": "./lib/primitives/combobox/index.qwik.mjs",
+      "import": "./lib/primitives/combobox/index.qwik.mjs",
+      "types": "./lib-types/primitives/combobox/index.d.ts"
+    },
+    "./dropdown": {
+      "qwik": "./lib/primitives/dropdown/index.qwik.mjs",
+      "import": "./lib/primitives/dropdown/index.qwik.mjs",
+      "types": "./lib-types/primitives/dropdown/index.d.ts"
+    },
+    "./label": {
+      "qwik": "./lib/primitives/label/index.qwik.mjs",
+      "import": "./lib/primitives/label/index.qwik.mjs",
+      "types": "./lib-types/primitives/label/index.d.ts"
+    },
+    "./modal": {
+      "qwik": "./lib/primitives/modal/index.qwik.mjs",
+      "import": "./lib/primitives/modal/index.qwik.mjs",
+      "types": "./lib-types/primitives/modal/index.d.ts"
+    },
+    "./page-navigation": {
+      "qwik": "./lib/primitives/page-navigation/index.qwik.mjs",
+      "import": "./lib/primitives/page-navigation/index.qwik.mjs",
+      "types": "./lib-types/primitives/page-navigation/index.d.ts"
+    },
+    "./pagination": {
+      "qwik": "./lib/primitives/pagination/index.qwik.mjs",
+      "import": "./lib/primitives/pagination/index.qwik.mjs",
+      "types": "./lib-types/primitives/pagination/index.d.ts"
+    },
+    "./polymorphic": {
+      "qwik": "./lib/primitives/polymorphic/index.qwik.mjs",
+      "import": "./lib/primitives/polymorphic/index.qwik.mjs",
+      "types": "./lib-types/primitives/polymorphic/index.d.ts"
+    },
+    "./popover": {
+      "qwik": "./lib/primitives/popover/index.qwik.mjs",
+      "import": "./lib/primitives/popover/index.qwik.mjs",
+      "types": "./lib-types/primitives/popover/index.d.ts"
+    },
+    "./progress": {
+      "qwik": "./lib/primitives/progress/index.qwik.mjs",
+      "import": "./lib/primitives/progress/index.qwik.mjs",
+      "types": "./lib-types/primitives/progress/index.d.ts"
+    },
+    "./select": {
+      "qwik": "./lib/primitives/select/index.qwik.mjs",
+      "import": "./lib/primitives/select/index.qwik.mjs",
+      "types": "./lib-types/primitives/select/index.d.ts"
+    },
+    "./separator": {
+      "qwik": "./lib/primitives/separator/index.qwik.mjs",
+      "import": "./lib/primitives/separator/index.qwik.mjs",
+      "types": "./lib-types/primitives/separator/index.d.ts"
+    },
+    "./svg-icon": {
+      "qwik": "./lib/primitives/svg-icon/index.qwik.mjs",
+      "import": "./lib/primitives/svg-icon/index.qwik.mjs",
+      "types": "./lib-types/primitives/svg-icon/index.d.ts"
+    },
+    "./tabs": {
+      "qwik": "./lib/primitives/tabs/index.qwik.mjs",
+      "import": "./lib/primitives/tabs/index.qwik.mjs",
+      "types": "./lib-types/primitives/tabs/index.d.ts"
+    },
+    "./toaster": {
+      "qwik": "./lib/primitives/toaster/index.qwik.mjs",
+      "import": "./lib/primitives/toaster/index.qwik.mjs",
+      "types": "./lib-types/primitives/toaster/index.d.ts"
+    },
+    "./toggle": {
+      "qwik": "./lib/primitives/toggle/index.qwik.mjs",
+      "import": "./lib/primitives/toggle/index.qwik.mjs",
+      "types": "./lib-types/primitives/toggle/index.d.ts"
+    },
+    "./toggle-group": {
+      "qwik": "./lib/primitives/toggle-group/index.qwik.mjs",
+      "import": "./lib/primitives/toggle-group/index.qwik.mjs",
+      "types": "./lib-types/primitives/toggle-group/index.d.ts"
+    },
+    "./tooltip": {
+      "qwik": "./lib/primitives/tooltip/index.qwik.mjs",
+      "import": "./lib/primitives/tooltip/index.qwik.mjs",
+      "types": "./lib-types/primitives/tooltip/index.d.ts"
+    }
   }
 }

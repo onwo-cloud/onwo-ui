@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { ControlsCloseIcon } from '@onwo/icons';
+import { XIcon } from '@onwo/icons';
 import { Button, Modal } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
@@ -46,7 +46,7 @@ export default () => (
               <Modal.Title class="font-medium">Opened a modal</Modal.Title>
               <Modal.Close>
                 <Button as="div" size="xs" variant="ghost">
-                  <ControlsCloseIcon size="xs" />
+                  <XIcon size="xs" />
                 </Button>
               </Modal.Close>
             </Modal.Header>

@@ -4,6 +4,7 @@ import { qwikCity } from "@builder.io/qwik-city/vite";
 import { staticAdapter } from "@builder.io/qwik-city/adapters/static/vite";
 import tailwindcss from '@tailwindcss/vite'
 import { qwikVite } from "@builder.io/qwik/optimizer";
+import path from 'node:path';
 
 export const baseConfig = {
   plugins: [

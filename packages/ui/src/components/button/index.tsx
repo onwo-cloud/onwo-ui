@@ -1,6 +1,7 @@
 import type { Component, JSX, QwikHTMLElements } from '@builder.io/qwik';
-import type { IconProps, IconSize } from '@onwo/primitives';
-import { Button as BaseButton, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import { Button as PButton } from '@onwo/primitives/button';
+import type { IconProps, IconSize } from '@onwo/primitives/svg-icon';
 import type { OneKeyOf } from '~/utils/types';
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -42,7 +43,7 @@ export const Button = function <T extends keyof QwikHTMLElements = 'button'>({
   end: EndIcon,
   ...props
 }: ButtonProps<T>): JSX.Element {
-  const Elem = (as === 'button' ? BaseButton : as) as unknown as Component;
+  const Elem = (as === 'button' ? PButton : as) as unknown as Component;
 
   return (
     <Elem

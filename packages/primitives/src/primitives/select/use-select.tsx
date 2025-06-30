@@ -1,5 +1,5 @@
 import { useContext, useSignal, $, useComputed$ } from '@builder.io/qwik';
-import SelectContextId from './select-context';
+import { SelectContextId } from './select-context';
 
 /**
  * Helper functions go inside of hooks.

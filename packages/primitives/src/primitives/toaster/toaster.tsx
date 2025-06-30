@@ -1,9 +1,19 @@
-import { component$, $, Slot, useSignal, useStore, useComputed$ } from '@builder.io/qwik';
-import { useDebounced } from '@onwo/primitives';
-import type { ToastPosition, XPosition, YPosition } from './context';
-import { useToasterContextProvider } from './context';
+import type { JSXOutput, QRL } from '@builder.io/qwik';
+import {
+  component$,
+  $,
+  Slot,
+  useSignal,
+  useStore,
+  useComputed$,
+  useResource$,
+  Resource,
+} from '@builder.io/qwik';
+import { useDebounced } from '~/hooks';
+import type { Toast, ToastPosition, XPosition, YPosition } from './context';
+import { ToasterContext } from './context';
 import { useToasterStyles } from './styles';
-import { ToastItem } from './toast-item';
+import type { ToastItemProps } from './toast-item';
 
 export const TOAST_LIFETIME = 3000;
 export const TOAST_WIDTH = 356;
@@ -11,6 +21,7 @@ export const TOAST_GAP = 14;
 export const TOAST_OFFSET = 32;
 
 export interface ToasterProps {
+  render$: QRL<(data: ToastItemProps) => JSXOutput>;
   position?: ToastPosition;
   duration?: number;
   width?: number;
@@ -18,11 +29,22 @@ export interface ToasterProps {
   offset?: number;
 }
 
-export const Toaster = component$<ToasterProps>((props) => {
+type ToastRenderProps = {
+  render$: QRL<(data: ToastItemProps) => JSXOutput>;
+  toast: Toast;
+};
+
+const ToastRender = component$(({ render$, toast }: ToastRenderProps) => {
+  const child = useResource$(() => render$({ toast }));
+  return <Resource value={child} onResolved={(data) => <>{data}</>} />;
+});
+
+export const Toaster = component$<ToasterProps>(({ render$, ...props }) => {
   useToasterStyles();
   const isOpenedToasts = useSignal<boolean>(false);
   const [yPosition, xPosition] = (props.position ?? 'bottom-right').split('-');
-  const contextData = useToasterContextProvider({
+  const contextData = ToasterContext.useProvider({
+    isOpenedToasts,
     toasts: useSignal([]),
     heights: useStore({}),
     options: {
@@ -76,18 +98,8 @@ export const Toaster = component$<ToasterProps>((props) => {
         }}
       >
         <ol>
-          {contextData.toasts.value.map((t) => (
-            <ToastItem
-              key={t.id}
-              isOpenedToast={!!isOpenedToasts.value}
-              toast={{
-                ...t,
-                duration: t.duration ?? props.duration ?? TOAST_LIFETIME,
-              }}
-            >
-              {typeof t.title !== 'string' && <div q:slot="title">{t.title}</div>}
-              {typeof t.description !== 'string' && <div q:slot="description">{t.description}</div>}
-            </ToastItem>
+          {contextData.toasts.value.map((toast) => (
+            <ToastRender key={toast.id} render$={render$} toast={toast} />
           ))}
         </ol>
       </section>

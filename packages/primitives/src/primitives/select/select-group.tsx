@@ -1,7 +1,7 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { Slot, component$, useContext, useContextProvider } from '@builder.io/qwik';
 
-import SelectContextId, { groupContextId } from './select-context';
+import { SelectContextId, groupContextId } from './select-context';
 
 type SelectGroupProps = PropsOf<'div'>;
 

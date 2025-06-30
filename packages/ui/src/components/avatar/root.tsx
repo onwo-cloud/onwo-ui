@@ -1,4 +1,5 @@
-import { SvgIcon, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import { SvgIcon } from '@onwo/primitives/svg-icon';
 import { withAs } from '~/utils/as';
 import type { OneKeyOf } from '~/utils/types';
 

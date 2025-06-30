@@ -1,15 +1,16 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Carousel as C, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import { Root as PRoot } from '@onwo/primitives/carousel';
 
 import { Bullet } from './bullet';
 import { Slide } from './slide';
 import { Step } from './step';
 import { Title } from './title';
 
-type RootProps = PropsOf<typeof C.Root>;
+type RootProps = PropsOf<typeof PRoot>;
 
 export const Root = (props: RootProps) => (
-  <C.Root
+  <PRoot
     slideComponent={Slide}
     bulletComponent={Bullet}
     stepComponent={Step}
@@ -18,5 +19,5 @@ export const Root = (props: RootProps) => (
     class={cn('relative', props.class)}
   >
     {props.children}
-  </C.Root>
+  </PRoot>
 );

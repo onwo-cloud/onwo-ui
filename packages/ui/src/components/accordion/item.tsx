@@ -1,10 +1,10 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Accordion } from '@onwo/primitives';
+import { Item as PItem } from '@onwo/primitives/accordion';
 
-export const Item = (props: PropsOf<typeof Accordion.Item>) => {
+export const Item = (props: PropsOf<typeof PItem>) => {
   return (
-    <Accordion.Item class="border-b border-line" {...props}>
+    <PItem class="border-b border-line" {...props}>
       {props.children}
-    </Accordion.Item>
+    </PItem>
   );
 };

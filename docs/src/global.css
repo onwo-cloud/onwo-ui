@@ -9,8 +9,8 @@
 
 @import "tailwindcss";
 
-@plugin '../../packages/tailwindcss';
-@plugin '../../packages/tailwindcss/dist/theme' {
+@plugin '@onwo/tailwindcss';
+@plugin '@onwo/tailwindcss/dist/theme' {
   name: 'onwo-light';
 
   color-accent-accent: rgb(63, 43, 215);
@@ -35,9 +35,9 @@
   color-status-success: #49b356;
 }
 
-@source "../../packages/ui/src/";
-@source "../../packages/primitives/src/";
-@source "../../packages/icons/src/";
+@source "../../node_modules/@onwo/ui";
+@source "../../node_modules/@onwo/primitives";
+@source "../../node_modules/@onwo/icons";
 
 :root.theme-onwo-light, .theme-onwo-light {
 
@@ -83,10 +83,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.onwo-icon {
-  @apply inline-block align-middle h-[1em] w-[1em];
 }
 
 .main-content {

@@ -1,7 +1,7 @@
 import { $, Slot, component$, sync$, useContext, useSignal, type PropsOf } from '@builder.io/qwik';
 import { useCombinedRef } from '~/hooks/use-combined-refs';
 import { Button } from '../button';
-import SelectContextId from './select-context';
+import { SelectContextId } from './select-context';
 import { useSelect, useTypeahead } from './use-select';
 
 type SelectTriggerProps = PropsOf<'button'>;

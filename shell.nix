@@ -1,11 +1,12 @@
 { pkgs ? import (fetchTarball {
-    url = "https://channels.nixos.org/nixos-24.11/nixexprs.tar.xz";
+    url = "https://channels.nixos.org/nixos-25.05/nixexprs.tar.xz";
   }) {} }:
 
 pkgs.mkShell {
   nativeBuildInputs = [
     pkgs.just
     pkgs.nodejs_22
+    pkgs.bun
     pkgs.nodePackages.concurrently
     pkgs.nodePackages.typescript-language-server
     pkgs.vscode-langservers-extracted
