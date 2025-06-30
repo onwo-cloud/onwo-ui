@@ -1,10 +1,11 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Carousel as C, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import { Pagination } from '@onwo/primitives/carousel';
 
-type PaginationProps = PropsOf<typeof C.Pagination>;
+type CarouselPaginationProps = PropsOf<typeof Pagination>;
 
-export const Pagination = (props: PaginationProps) => (
-  <C.Pagination {...props} class={cn('flex mx-auto w-fit', props.class)}>
+export const CarouselPagination = (props: CarouselPaginationProps) => (
+  <Pagination {...props} class={cn('flex mx-auto w-fit', props.class)}>
     {props.children}
-  </C.Pagination>
+  </Pagination>
 );

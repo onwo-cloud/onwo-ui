@@ -1,6 +1,6 @@
+import type { IconProps } from '@onwo/primitives/svg-icon';
+import { SvgIcon } from '@onwo/primitives/svg-icon';
 import { defaultAttributes } from './default-attributes';
-import type { IconProps } from './svg-icon';
-import { SvgIcon } from './svg-icon';
 
 export type IconNode = { tag: string; attr: any };
 

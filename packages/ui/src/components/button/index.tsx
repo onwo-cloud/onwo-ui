@@ -1,6 +1,7 @@
 import type { Component, JSX, QwikHTMLElements } from '@builder.io/qwik';
-import type { IconProps, IconSize } from '@onwo/primitives';
-import { Button as BaseButton, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import { Button as PButton } from '@onwo/primitives/button';
+import type { IconProps, IconSize } from '@onwo/primitives/svg-icon';
 import type { OneKeyOf } from '~/utils/types';
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -42,7 +43,7 @@ export const Button = function <T extends keyof QwikHTMLElements = 'button'>({
   end: EndIcon,
   ...props
 }: ButtonProps<T>): JSX.Element {
-  const Elem = (as === 'button' ? BaseButton : as) as unknown as Component;
+  const Elem = (as === 'button' ? PButton : as) as unknown as Component;
 
   return (
     <Elem
@@ -52,7 +53,7 @@ export const Button = function <T extends keyof QwikHTMLElements = 'button'>({
       class={cn(
         'relative flex select-none items-center justify-center overflow-hidden whitespace-nowrap font-semibold transition-transform duration-100',
         {
-          'bg-accent hover:contrast-120 hover:brightness-120 text-contrast': variant === 'fill',
+          'bg-accent-600 hover:contrast-120 hover:brightness-120 text-contrast': variant === 'fill',
           'border border-accent text-accent hover:bg-scan': variant === 'outline',
           'hover:bg-scan': variant === 'ghost',
           'gap-1 h-6 ps-1 pe-1 text-onwo-12 rounded-onwo-s-xs': size === 'xs',

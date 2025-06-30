@@ -19,7 +19,7 @@
     "dev": "while true; do vite -c ./vite.config.dev.ts --mode ssr; done",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "lint": "eslint \"src/**/*.ts*\"",
-    "lint.fix": "npm run lint -- --fix",
+    "lint.fix": "pnpm run lint --fix",
     "ts-watch": "tsc --noEmit --incremental --preserveWatchOutput --pretty --watch"
   },
   "devDependencies": {
@@ -36,6 +36,7 @@
     "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {
+    "@onwo/primitives": "link:../packages/primitives",
     "@onwo/icons": "link:../packages/icons",
     "@onwo/tailwindcss": "link:../packages/tailwindcss",
     "@onwo/ui": "link:../packages/ui",

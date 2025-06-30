@@ -1,5 +1,5 @@
 import type { JSXChildren } from '@builder.io/qwik';
-import { Tabs, cn, PageNavigation as PNav } from '@onwo/ui';
+import { PageNavigationLink, Tabs, cn, TabsList, TabsPill, TabsPanels, TabsPanel } from '@onwo/ui';
 
 type ShowcaseProps = {
   title: string;
@@ -10,7 +10,7 @@ type ShowcaseProps = {
 };
 
 export const Showcase = (props: ShowcaseProps) => (
-  <Tabs.Root class="mt-16">
+  <Tabs class="mt-16">
     <div class="flex justify-between w-full">
       <div class="flex gap-2 items-center">
         {props.experimental && (
@@ -19,42 +19,42 @@ export const Showcase = (props: ShowcaseProps) => (
           </div>
         )}
 
-        <PNav.Link label={props.title} id={props.title.toLowerCase().split(' ').join('-')}>
+        <PageNavigationLink label={props.title} id={props.title.toLowerCase().split(' ').join('-')}>
           <h2 class="text-onwo-24 font-semibold">{props.title}</h2>
-        </PNav.Link>
+        </PageNavigationLink>
       </div>
       {!!props.code && (
-        <Tabs.List
+        <TabsList
           size="sm"
           class="flex p-1 bg-parchment rounded-onwo-s-xs gap-1 w-fit justify-left"
         >
-          <Tabs.Pill>
+          <TabsPill>
             <span>Preview</span>
-          </Tabs.Pill>
-          <Tabs.Pill disabled={props.disabled}>
+          </TabsPill>
+          <TabsPill disabled={props.disabled}>
             <span>Code</span>
-          </Tabs.Pill>
-        </Tabs.List>
+          </TabsPill>
+        </TabsList>
       )}
     </div>
-    <Tabs.Panels class="relative flex text-onwo-14 w-full">
+    <TabsPanels class="relative flex text-onwo-14 w-full">
       {props.disabled && (
         <div class=" absolute text-onwo-16 text-[white] z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           work in progress
         </div>
       )}
-      <Tabs.Panel
+      <TabsPanel
         class={cn('bg-parchment p-4 rounded-onwo-s-sm', props.disabled && 'brightness-30')}
       >
         <div class={cn('w-full h-full', props.disabled && 'blur-xs')}>{props.component}</div>
-      </Tabs.Panel>
+      </TabsPanel>
       {!!props.code && (
-        <Tabs.Panel class="theme-onwo-dark p-4 rounded-onwo-s-sm text-ink bg-parchment">
+        <TabsPanel class="theme-onwo-dark p-4 rounded-onwo-s-sm text-ink bg-parchment">
           <pre>
             <code>{props.code}</code>
           </pre>
-        </Tabs.Panel>
+        </TabsPanel>
       )}
-    </Tabs.Panels>
-  </Tabs.Root>
+    </TabsPanels>
+  </Tabs>
 );

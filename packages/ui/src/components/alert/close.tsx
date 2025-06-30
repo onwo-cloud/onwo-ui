@@ -1,9 +1,11 @@
 import type { QwikHTMLElements } from '@builder.io/qwik';
-import { Button, SvgIcon, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import { Button } from '@onwo/primitives/button';
+import { SvgIcon } from '@onwo/primitives/svg-icon';
 
-export type CloseProps = QwikHTMLElements['button'];
+export type AlertCloseProps = QwikHTMLElements['button'];
 
-export const Close = ({ type: buttonType, class: className, ...props }: CloseProps) => (
+export const AlertClose = ({ type: buttonType, class: className, ...props }: AlertCloseProps) => (
   <Button
     type={buttonType ?? 'button'}
     class={cn(

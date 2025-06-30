@@ -1,9 +1,11 @@
-import { Tabs, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import type { PanelsProps } from '@onwo/primitives/tabs';
+import { Panels as PPanels } from '@onwo/primitives/tabs';
 
-export type PanelsProps = Tabs.PanelsProps;
+export type TabsPanelsProps = PanelsProps;
 
-export const Panels = ({ children, class: className, ...props }: PanelsProps) => (
-  <Tabs.Panels class={cn('mt-4', className)} {...props}>
+export const TabsPanels = ({ children, class: className, ...props }: TabsPanelsProps) => (
+  <PPanels class={cn('mt-4', className)} {...props}>
     {children}
-  </Tabs.Panels>
+  </PPanels>
 );

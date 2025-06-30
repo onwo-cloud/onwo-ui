@@ -1,6 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { OtherFrameIcon } from '@onwo/icons';
-import { Alert } from '@onwo/ui';
+import { Alert, AlertClose, AlertMessage, AlertTitle } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -32,9 +31,9 @@ export default () => (
         Default: `import { Alert } from '@onwo/ui';
 
 <Alert>
-  <Alert.Title> ... </Alert.Title>
-  <Alert.Message> ... </Alert.Message>
-  <Alert.Close />
+  <AlertTitle> ... </AlertTitle>
+  <AlertMessage> ... </AlertMessage>
+  <AlertClose />
 </Alert>`,
       }}
     />
@@ -43,21 +42,18 @@ export default () => (
       title="With control"
       component={
         <Alert>
-          <Alert.Title>
-            <OtherFrameIcon size="md" />
-            Alert with title and icon
-          </Alert.Title>
-          <Alert.Message> Alert message </Alert.Message>
-          <Alert.Close />
+          <AlertTitle>Alert with title and icon</AlertTitle>
+          <AlertMessage> Alert message </AlertMessage>
+          <AlertClose />
         </Alert>
       }
       code={`<Alert>
-  <Alert.Title>
+  <AlertTitle>
     <OtherFrameIcon size="md" />
     Alert with title and icon
-  </Alert.Title>
-  <Alert.Message> Alert message </Alert.Message>
-  <Alert.Close onClick$={/* control unmount here */} />
+  </AlertTitle>
+  <AlertMessage> Alert message </AlertMessage>
+  <AlertClose onClick$={/* control unmount here */} />
 </Alert>`}
     />
 
@@ -66,50 +62,41 @@ export default () => (
       component={
         <div class="flex flex-col gap-4">
           <Alert>
-            <Alert.Message>
-              <OtherFrameIcon size="md" class="text-success" />
-              Generic style with coloured icon
-            </Alert.Message>
-            <Alert.Close />
+            <AlertMessage>Generic style with coloured icon</AlertMessage>
+            <AlertClose />
           </Alert>
           <Alert class="bg-transparent outline outline-1 outline-offset-[-1px] outline-success">
-            <Alert.Message>
-              <OtherFrameIcon class="text-success" size="md" />
-              Outline style
-            </Alert.Message>
-            <Alert.Close />
+            <AlertMessage>Outline style</AlertMessage>
+            <AlertClose />
           </Alert>
           <Alert class="bg-success-10">
-            <Alert.Message>
-              <OtherFrameIcon class="text-success" size="md" />
-              Colourful style
-            </Alert.Message>
-            <Alert.Close />
+            <AlertMessage>Colourful style</AlertMessage>
+            <AlertClose />
           </Alert>
         </div>
       }
       code={`<Alert>
-  <Alert.Message>
+  <AlertMessage>
     <OtherFrameIcon size="md" class="text-success" />
     Generic style with coloured icon
-  </Alert.Message>
-  <Alert.Close />
+  </AlertMessage>
+  <AlertClose />
 </Alert>
 
 <Alert class="bg-transparent outline outline-1 outline-offset-[-1px] outline-success">
-  <Alert.Message>
+  <AlertMessage>
     <OtherFrameIcon class="text-success" size="md" />
     Outline style
-  </Alert.Message>
-  <Alert.Close />
+  </AlertMessage>
+  <AlertClose />
 </Alert>
 
 <Alert class="bg-success-10">
-  <Alert.Message>
+  <AlertMessage>
     <OtherFrameIcon class="text-success" size="md" />
     Colourful style
-  </Alert.Message>
-  <Alert.Close />
+  </AlertMessage>
+  <AlertClose />
 </Alert>`}
     />
   </div>

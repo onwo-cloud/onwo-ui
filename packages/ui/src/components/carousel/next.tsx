@@ -1,17 +1,17 @@
-import type { JSXOutput, PropsOf } from '@builder.io/qwik';
-import { ControlsChevronRightIcon } from '@onwo/icons';
-import type { IconProps } from '@onwo/primitives';
-import { Carousel as C } from '@onwo/primitives';
+import type { PropsOf } from '@builder.io/qwik';
+import { ChevronRightIcon } from '@onwo/icons';
+import { Next } from '@onwo/primitives/carousel';
+import type { IconComponent } from '@onwo/primitives/svg-icon';
 
-type NextProps = PropsOf<typeof C.Previous> & {
-  icon?: (props: IconProps) => JSXOutput;
+type CarouselNextProps = PropsOf<typeof Next> & {
+  icon?: IconComponent;
 };
 
-export const Next = ({ icon: Icon = ControlsChevronRightIcon, ...props }: NextProps) => (
-  <C.Next
+export const CarouselNext = ({ icon: Icon = ChevronRightIcon, ...props }: CarouselNextProps) => (
+  <Next
     {...props}
     class="z-10 absolute right-0 translate-x-1/2 top-1/2 -translate-y-1/2 no-underline absolute bg-paper text-ink cursor-pointer font-medium shadow-onwo-sm rounded-onwo-i-sm leading-[0] z-5 w-8 h-8 disabled:cursor-not-allowed disabled:opacity-60 -translate-y-1/2 max-sm:hidden"
   >
     <Icon size="xs" />
-  </C.Next>
+  </Next>
 );

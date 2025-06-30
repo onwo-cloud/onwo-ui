@@ -15,23 +15,23 @@
     "dist/"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --incremental --pretty",
     "dev": "tsc --incremental --preserveWatchOutput --pretty --watch",
     "ts-watch": "yarn dev -- --noEmit",
     "lint": "eslint \"src/**/*.ts*\"",
-    "lint.fix": "npm run lint -- --fix"
+    "lint.fix": "pnpm run lint --fix"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",
     "@types/tailwindcss": "^3.1.0",
-    "tailwindcss": "^4.1.10"
+    "tailwindcss": "^4.1"
   },
   "dependencies": {
     "colorjs.io": "^0.5.2",
     "postcss-selector-parser": "7.1.0"
   },
   "peerDependencies": {
-    "tailwindcss": ">=4 && <5"
+    "tailwindcss": ">=4"
   },
   "engines": {
     "node": "^22"

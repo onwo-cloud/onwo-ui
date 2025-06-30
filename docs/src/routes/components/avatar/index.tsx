@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Avatar } from '@onwo/ui';
+import { Avatar, AvatarStatus } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -18,7 +18,7 @@ export default () => (
     <Anatomy
       variants={{
         Default: `<Avatar>
-  <Avatar.Status />
+  <AvatarStatus />
 </Avatar>`,
       }}
     />
@@ -90,18 +90,18 @@ export default () => (
       component={
         <div class="flex w-full justify-around">
           <Avatar size="xl" imageUrl="/avatar.png">
-            <Avatar.Status class="bg-error" position="top-right" />
+            <AvatarStatus class="bg-error" position="top-right" />
           </Avatar>
           <Avatar size="xl" imageUrl="/avatar.png">
-            <Avatar.Status />
+            <AvatarStatus />
           </Avatar>
         </div>
       }
       code={`<Avatar size="xl" imageUrl="/avatar.png">
-  <Avatar.Status class="bg-error" position="top-right" />
+  <AvatarStatus class="bg-error" position="top-right" />
 </Avatar>
 <Avatar size="xl" imageUrl="/avatar.png">
-  <Avatar.Status />
+  <AvatarStatus />
 </Avatar>`}
     />
   </div>

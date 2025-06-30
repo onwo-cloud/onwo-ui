@@ -1,6 +1,6 @@
-import type { JSXChildren } from '@builder.io/qwik';
-import { Carousel as C } from '@onwo/primitives';
+import type { PropsOf } from '@builder.io/qwik';
+import { Title } from '@onwo/primitives/carousel';
 
-type TitleProps = { children: JSXChildren };
+export type CarouselTitleProps = PropsOf<typeof Title>;
 
-export const Title = (props: TitleProps) => <C.Title {...props}>{props.children}</C.Title>;
+export const CarouselTitle = (props: CarouselTitleProps) => <Title {...props} />;

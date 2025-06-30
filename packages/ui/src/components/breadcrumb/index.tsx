@@ -1,2 +1,2 @@
-export { Link } from './link';
-export { Root } from './root';
+export * from './link';
+export * from './root';

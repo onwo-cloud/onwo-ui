@@ -6,11 +6,15 @@ type X = 'left' | 'right';
 
 type XY = `${Y}-${X}`;
 
-export type StatusProps = Primitive<'div'> & {
+export type AvatarStatusProps = Primitive<'div'> & {
   position?: XY;
 };
 
-export const Status = ({ position = 'bottom-right', class: className, ...props }: StatusProps) => (
+export const AvatarStatus = ({
+  position = 'bottom-right',
+  class: className,
+  ...props
+}: AvatarStatusProps) => (
   <div
     class={cn(
       {

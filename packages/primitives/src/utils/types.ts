@@ -41,3 +41,13 @@ export type OneObjectOf<T extends Record<any, unknown>[]> = Prettify<
     };
   }[number]
 >;
+
+export type OptionalKeys<Type> = Type extends object
+  ? keyof {
+      [Key in keyof Type as Type extends Required<Pick<Type, Key>> ? never : Key]: never;
+    }
+  : never;
+
+export type MarkOptional<Type, Keys extends keyof Type> = Type extends Type
+  ? Prettify<Partial<Type> & Required<Omit<Type, Keys | OptionalKeys<Type>>>>
+  : never;

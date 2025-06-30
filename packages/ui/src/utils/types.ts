@@ -1,6 +1,6 @@
 import type { CSSProperties, JSXOutput, QwikHTMLElements } from '@builder.io/qwik';
 
-export type Classes<T extends string> = Partial<Record<T, string>>;
+//export type Classes<T extends string> = Partial<Record<T, string>>;
 
 export type Prettify<T> = { [K in keyof T]: T[K] } & {};
 

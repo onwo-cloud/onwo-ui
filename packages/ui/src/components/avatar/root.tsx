@@ -1,23 +1,24 @@
-import { SvgIcon, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import { SvgIcon } from '@onwo/primitives/svg-icon';
 import { withAs } from '~/utils/as';
 import type { OneKeyOf } from '~/utils/types';
 
-export type RootSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
-export type RootProps = {
-  size?: RootSize; // default: md
+export type AvatarProps = {
+  size?: AvatarSize; // default: md
 } & OneKeyOf<{
   imageUrl: string;
   name: string;
 }>;
 
-export const Root = withAs('div')<RootProps>(
+export const Avatar = withAs('div')<AvatarProps>(
   ({ As, imageUrl, size = 'md', children, name, class: className, ...props }) => (
     <As
       {...props}
       style={imageUrl ? { backgroundImage: `url("${imageUrl}")` } : {}}
       class={cn(
-        'uppercase relative flex bg-paper text-ink items-center justify-center overflow-hidden font-medium bg-cover',
+        'uppercase relative flex bg-papyrus text-ink items-center justify-center overflow-hidden font-medium bg-cover',
         size === 'xs' && 'rounded-onwo-i-xs text-onwo-10-caption w-6 h-6',
         size === 'sm' && 'rounded-onwo-i-sm text-onwo-12 w-8 h-8',
         size === 'md' && 'rounded-onwo-i-sm text-onwo-14 w-10 h-10',

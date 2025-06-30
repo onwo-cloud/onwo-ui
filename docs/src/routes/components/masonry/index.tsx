@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Masonry } from '@onwo/ui';
+import { Masonry, MasonryImage, MasonryItem } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -74,8 +74,8 @@ export default () => (
         Default: `import { Masonry } from '@onwo/ui';
 
 <Masonry columnWidth={140} gap={16}>
-  <Masonry.Image width={150} height={90} src="/image.jpg" />
-  <Masonry.Item width={150} height={150} />
+  <MasonryImage width={150} height={90} src="/image.jpg" />
+  <MasonryItem width={150} height={150} />
   ...
 </Masonry>
         `,
@@ -85,15 +85,15 @@ export default () => (
     <Showcase
       title="Default"
       component={
-        <Masonry.Root columnWidth={140} gap={16}>
+        <Masonry columnWidth={140} gap={16}>
           {photos.slice(0, 20).map(({ src, width, height }, idx) => (
-            <Masonry.Image key={idx} src={src} width={width} height={height} />
+            <MasonryImage key={idx} src={src} width={width} height={height} />
           ))}
-        </Masonry.Root>
+        </Masonry>
       }
       code={`<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ src, width, height }, idx) => (
-    <Masonry.Image key={idx} src={src} width={width} height={height} />
+    <MasonryImage key={idx} src={src} width={width} height={height} />
   ))}
 </Masonry>`}
     />
@@ -101,15 +101,15 @@ export default () => (
     <Showcase
       title="Images auto sizing"
       component={
-        <Masonry.Root columnWidth={140} gap={16}>
+        <Masonry columnWidth={140} gap={16}>
           {photos.slice(0, 20).map(({ src }, idx) => (
-            <Masonry.Image key={idx} src={src} inferSize />
+            <MasonryImage key={idx} src={src} inferSize />
           ))}
-        </Masonry.Root>
+        </Masonry>
       }
       code={`<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ src }, idx) => (
-    <Masonry.Image key={idx} src={src} inferSize />
+    <MasonryImage key={idx} src={src} inferSize />
   ))}
 </Masonry>`}
     />
@@ -117,29 +117,29 @@ export default () => (
     <Showcase
       title="Boxes"
       component={
-        <Masonry.Root columnWidth={140} gap={16}>
+        <Masonry columnWidth={140} gap={16}>
           {photos.slice(0, 20).map(({ width, height }, idx) => (
-            <Masonry.Item
+            <MasonryItem
               class="flex items-center justify-center"
               key={idx}
               width={width}
               height={height}
             >
               <span>{idx}</span>
-            </Masonry.Item>
+            </MasonryItem>
           ))}
-        </Masonry.Root>
+        </Masonry>
       }
       code={`<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ width, height }, idx) => (
-    <Masonry.Item
+    <MasonryItem
       class="flex items-center justify-center"
       key={idx}
       width={width}
       height={height}
     >
       <span>{idx}</span>
-    </Masonry.Item>
+    </MasonryItem>
 </Masonry>`}
     />
   </div>

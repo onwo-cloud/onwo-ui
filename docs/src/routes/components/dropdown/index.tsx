@@ -1,6 +1,4 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { GenericCheckAlternativeIcon } from '@onwo/icons';
-import { primitives as P } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -75,47 +73,50 @@ export default () => (
     <Showcase
       title="Default"
       component={
-        <P.Dropdown.Root>
-          <P.Dropdown.Trigger class="dropdown-trigger">Git Settings</P.Dropdown.Trigger>
-          <P.Dropdown.Popover class="dropdown-popover" gutter={8}>
-            <P.Dropdown.Group class="dropdown-group">
-              <P.Dropdown.GroupLabel class="dropdown-group-label">Actions</P.Dropdown.GroupLabel>
-              {actions.map((action) => (
-                <P.Dropdown.Item
-                  key={action.label}
-                  class="dropdown-item"
-                  disabled={action.disabled}
-                >
-                  {action.label}
-                </P.Dropdown.Item>
-              ))}
-            </P.Dropdown.Group>
-            <P.Dropdown.Separator />
-            {checkboxItems.map((item) => {
-              return (
-                <P.Dropdown.CheckboxItem key={item} class="dropdown-item">
-                  <P.Dropdown.ItemIndicator>
-                    <GenericCheckAlternativeIcon />
-                  </P.Dropdown.ItemIndicator>
-                  {item}
-                </P.Dropdown.CheckboxItem>
-              );
-            })}
-            <P.Dropdown.Separator />
-            <P.Dropdown.RadioGroup class="dropdown-group" value="main">
-              {radioItems.map((item) => {
+        <></>
+        /*
+          <P.Dropdown.Root>
+            <P.Dropdown.Trigger class="dropdown-trigger">Git Settings</P.Dropdown.Trigger>
+            <P.Dropdown.Popover class="dropdown-popover" gutter={8}>
+              <P.Dropdown.Group class="dropdown-group">
+                <P.Dropdown.GroupLabel class="dropdown-group-label">Actions</P.Dropdown.GroupLabel>
+                {actions.map((action) => (
+                  <P.Dropdown.Item
+                    key={action.label}
+                    class="dropdown-item"
+                    disabled={action.disabled}
+                  >
+                    {action.label}
+                  </P.Dropdown.Item>
+                ))}
+              </P.Dropdown.Group>
+              <P.Dropdown.Separator />
+              {checkboxItems.map((item) => {
                 return (
-                  <P.Dropdown.RadioItem key={item} class="dropdown-item" value={item}>
+                  <P.Dropdown.CheckboxItem key={item} class="dropdown-item">
                     <P.Dropdown.ItemIndicator>
                       <GenericCheckAlternativeIcon />
                     </P.Dropdown.ItemIndicator>
                     {item}
-                  </P.Dropdown.RadioItem>
+                  </P.Dropdown.CheckboxItem>
                 );
               })}
-            </P.Dropdown.RadioGroup>
-          </P.Dropdown.Popover>
-        </P.Dropdown.Root>
+              <P.Dropdown.Separator />
+              <P.Dropdown.RadioGroup class="dropdown-group" value="main">
+                {radioItems.map((item) => {
+                  return (
+                    <P.Dropdown.RadioItem key={item} class="dropdown-item" value={item}>
+                      <P.Dropdown.ItemIndicator>
+                        <GenericCheckAlternativeIcon />
+                      </P.Dropdown.ItemIndicator>
+                      {item}
+                    </P.Dropdown.RadioItem>
+                  );
+                })}
+              </P.Dropdown.RadioGroup>
+            </P.Dropdown.Popover>
+          </P.Dropdown.Root>
+          */
       }
       code={``}
     />

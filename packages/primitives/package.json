@@ -1,13 +1,10 @@
 {
-  "name": "@onwo/primitives",
+  "name": "@onwo/components",
   "version": "0.0.12-alpha",
-  "url": "https://ui.onwo.cloud/",
+  "url": "https.//components/ui.onwo.cloud/",
   "description": "An ui library for qwik.js inspired by moon.io",
-  "repository": "https://github.com/onwo-cloud/onwo-ui",
+  "repository": "https.//components/github.com/onwo-cloud/onwo-ui",
   "license": "MIT",
-  "main": "./lib/index.qwik.mjs",
-  "qwik": "./lib/index.qwik.mjs",
-  "types": "./lib-types/index.d.ts",
   "keywords": [
     "tailwindcss",
     "ui-library",
@@ -24,15 +21,16 @@
   "type": "module",
   "scripts": {
     "build": "ESLINT_MODE=full qwik build",
-    "build.types": "tsc --emitDeclarationOnly",
-    "build.lib": "vite build --mode lib",
+    "build.types": "tsc --emitDeclarationOnly --incremental --pretty",
+    "build.lib": "vite build --mode lib -c vite.config.ts",
+    "dev.build": "ESLINT=false qwik build",
     "dev": "vite build --mode lib -c ./vite.config.dev.ts",
     "lint": "eslint \"src/**/*.ts*\"",
-    "lint.fix": "npm run lint -- --fix",
+    "lint.fix": "pnpm run lint --fix",
     "ts-watch": "tsc --emitDeclarationOnly --preserveWatchOutput --pretty --watch"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.14",
+    "@builder.io/qwik": "^1.16",
     "@onwo/tailwindcss": "link:../tailwindcss",
     "@tailwindcss/vite": "^4.1.10",
     "@types/node": "24.0.3",
@@ -40,7 +38,7 @@
     "chokidar": "^4.0.3",
     "np": "^10.2.0",
     "tailwindcss": "^4.1.10",
-    "typescript": "5.8.3",
+    "typescript": "5.9.2",
     "undici": "*",
     "vite": "6.3.5",
     "vite-tsconfig-paths": "^5.1.4"
@@ -52,10 +50,142 @@
     "@floating-ui/core": "^1.7.1",
     "@floating-ui/dom": "^1.7.1",
     "@oddbird/popover-polyfill": "0.6.0",
-    "@tailwindcss/vite": "^4.1.10",
+    "@tailwindcss/vite": "^4.1",
     "body-scroll-lock-upgrade": "^1.1.0",
     "clsx": "^2.1.1",
     "focus-trap": "7.6.5",
     "tailwind-merge": "^3.3.1"
+  },
+  "exports": {
+    ".": {
+      "qwik": "./lib/index.qwik.mjs",
+      "import": "./lib/index.qwik.mjs",
+      "types": "./lib-types/index.d.ts"
+    },
+    "./accordion": {
+      "qwik": "./lib/components/accordion/index.qwik.mjs",
+      "import": "./lib/components/accordion/index.qwik.mjs",
+      "types": "./lib-types/components/accordion/index.d.ts"
+    },
+    "./animated": {
+      "qwik": "./lib/components/animated/index.qwik.mjs",
+      "import": "./lib/components/animated/index.qwik.mjs",
+      "types": "./lib-types/components/animated/index.d.ts"
+    },
+    "./button": {
+      "qwik": "./lib/components/button/index.qwik.mjs",
+      "import": "./lib/components/button/index.qwik.mjs",
+      "types": "./lib-types/components/button/index.d.ts"
+    },
+    "./carousel": {
+      "qwik": "./lib/components/carousel/index.qwik.mjs",
+      "import": "./lib/components/carousel/index.qwik.mjs",
+      "types": "./lib-types/components/carousel/index.d.ts"
+    },
+    "./checkbox": {
+      "qwik": "./lib/components/checkbox/index.qwik.mjs",
+      "import": "./lib/components/checkbox/index.qwik.mjs",
+      "types": "./lib-types/components/checkbox/index.d.ts"
+    },
+    "./checklist": {
+      "qwik": "./lib/components/checklist/index.qwik.mjs",
+      "import": "./lib/components/checklist/index.qwik.mjs",
+      "types": "./lib-types/components/checklist/index.d.ts"
+    },
+    "./collapsible": {
+      "qwik": "./lib/components/collapsible/index.qwik.mjs",
+      "import": "./lib/components/collapsible/index.qwik.mjs",
+      "types": "./lib-types/components/collapsible/index.d.ts"
+    },
+    "./combobox": {
+      "qwik": "./lib/components/combobox/index.qwik.mjs",
+      "import": "./lib/components/combobox/index.qwik.mjs",
+      "types": "./lib-types/components/combobox/index.d.ts"
+    },
+    "./dropdown": {
+      "qwik": "./lib/components/dropdown/index.qwik.mjs",
+      "import": "./lib/components/dropdown/index.qwik.mjs",
+      "types": "./lib-types/components/dropdown/index.d.ts"
+    },
+    "./label": {
+      "qwik": "./lib/components/label/index.qwik.mjs",
+      "import": "./lib/components/label/index.qwik.mjs",
+      "types": "./lib-types/components/label/index.d.ts"
+    },
+    "./modal": {
+      "qwik": "./lib/components/modal/index.qwik.mjs",
+      "import": "./lib/components/modal/index.qwik.mjs",
+      "types": "./lib-types/components/modal/index.d.ts"
+    },
+    "./page-navigation": {
+      "qwik": "./lib/components/page-navigation/index.qwik.mjs",
+      "import": "./lib/components/page-navigation/index.qwik.mjs",
+      "types": "./lib-types/components/page-navigation/index.d.ts"
+    },
+    "./pagination": {
+      "qwik": "./lib/components/pagination/index.qwik.mjs",
+      "import": "./lib/components/pagination/index.qwik.mjs",
+      "types": "./lib-types/components/pagination/index.d.ts"
+    },
+    "./polymorphic": {
+      "qwik": "./lib/components/polymorphic/index.qwik.mjs",
+      "import": "./lib/components/polymorphic/index.qwik.mjs",
+      "types": "./lib-types/components/polymorphic/index.d.ts"
+    },
+    "./popover": {
+      "qwik": "./lib/components/popover/index.qwik.mjs",
+      "import": "./lib/components/popover/index.qwik.mjs",
+      "types": "./lib-types/components/popover/index.d.ts"
+    },
+    "./progress": {
+      "qwik": "./lib/components/progress/index.qwik.mjs",
+      "import": "./lib/components/progress/index.qwik.mjs",
+      "types": "./lib-types/components/progress/index.d.ts"
+    },
+    "./select": {
+      "qwik": "./lib/components/select/index.qwik.mjs",
+      "import": "./lib/components/select/index.qwik.mjs",
+      "types": "./lib-types/components/select/index.d.ts"
+    },
+    "./separator": {
+      "qwik": "./lib/components/separator/index.qwik.mjs",
+      "import": "./lib/components/separator/index.qwik.mjs",
+      "types": "./lib-types/components/separator/index.d.ts"
+    },
+    "./svg-icon": {
+      "qwik": "./lib/components/svg-icon/index.qwik.mjs",
+      "import": "./lib/components/svg-icon/index.qwik.mjs",
+      "types": "./lib-types/components/svg-icon/index.d.ts"
+    },
+    "./tabs": {
+      "qwik": "./lib/components/tabs/index.qwik.mjs",
+      "import": "./lib/components/tabs/index.qwik.mjs",
+      "types": "./lib-types/components/tabs/index.d.ts"
+    },
+    "./toaster": {
+      "qwik": "./lib/components/toaster/index.qwik.mjs",
+      "import": "./lib/components/toaster/index.qwik.mjs",
+      "types": "./lib-types/components/toaster/index.d.ts"
+    },
+    "./toggle": {
+      "qwik": "./lib/components/toggle/index.qwik.mjs",
+      "import": "./lib/components/toggle/index.qwik.mjs",
+      "types": "./lib-types/components/toggle/index.d.ts"
+    },
+    "./toggle-group": {
+      "qwik": "./lib/components/toggle-group/index.qwik.mjs",
+      "import": "./lib/components/toggle-group/index.qwik.mjs",
+      "types": "./lib-types/components/toggle-group/index.d.ts"
+    },
+    "./tooltip": {
+      "qwik": "./lib/components/tooltip/index.qwik.mjs",
+      "import": "./lib/components/tooltip/index.qwik.mjs",
+      "types": "./lib-types/components/tooltip/index.d.ts"
+    },
+    "./radio": {
+      "qwik": "./lib/components/radio/index.qwik.mjs",
+      "import": "./lib/components/radio/index.qwik.mjs",
+      "types": "./lib-types/components/radio/index.d.ts"
+    }
   }
 }

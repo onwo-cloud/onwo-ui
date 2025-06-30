@@ -1,6 +1,6 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { GenericSettingsIcon } from '@onwo/icons';
-import type { primitives as P } from '@onwo/ui';
+import { SettingsIcon } from '@onwo/icons';
+import type { IconProps } from '@onwo/primitives/svg-icon';
 import { Button } from '@onwo/ui';
 import IconMarginDemo from '~/assets/icon-margin-demo.png?jsx';
 import { Anatomy } from '~/commons/anatomy';
@@ -56,19 +56,19 @@ export default () => (
       title="Sizes"
       component={
         <div class="flex gap-4 items-center justify-around">
-          <Button size="xs" start={GenericSettingsIcon}>
+          <Button size="xs" start={SettingsIcon}>
             Size XS
           </Button>
-          <Button size="sm" start={GenericSettingsIcon}>
+          <Button size="sm" start={SettingsIcon}>
             Size SM
           </Button>
-          <Button size="md" start={GenericSettingsIcon}>
+          <Button size="md" start={SettingsIcon}>
             Size MD
           </Button>
-          <Button size="lg" start={GenericSettingsIcon}>
+          <Button size="lg" start={SettingsIcon}>
             Size LG
           </Button>
-          <Button size="xl" start={GenericSettingsIcon}>
+          <Button size="xl" start={SettingsIcon}>
             Size XL
           </Button>
         </div>
@@ -93,10 +93,10 @@ export default () => (
       title="Icon position"
       component={
         <div class="flex gap-4 items-center justify-around">
-          <Button size="md" start={GenericSettingsIcon}>
+          <Button size="md" start={SettingsIcon}>
             Button start
           </Button>
-          <Button size="md" end={GenericSettingsIcon}>
+          <Button size="md" end={SettingsIcon}>
             Button end
           </Button>
         </div>
@@ -109,7 +109,7 @@ export default () => (
       title="Custom icons"
       component={
         <div class="flex gap-4 items-center justify-around">
-          <Button size="md" variant="outline" end={(_: P.IconProps) => <b>🚀</b>}>
+          <Button size="md" variant="outline" end={(_: IconProps) => <b>🚀</b>}>
             Custom
           </Button>
         </div>

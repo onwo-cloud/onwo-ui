@@ -3,16 +3,6 @@ import qwikPlugin from 'eslint-plugin-qwik';
 import globals from 'globals';
 
 export default [
-  // Ignore patterns (replaces .eslintignore)
-  {
-    ignores: [
-      'packages/primitives/lib/**',
-      'packages/primitives/lib-types/**',
-      'packages/ui/lib/**',
-      'packages/ui/lib-types/**',
-    ],
-  },
-
   // Spread the base configuration
   ...baseConfig,
 

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Palette Builder — Layout</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root { color-scheme: dark; }
+      html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+    </style>
+  </head>
+  <body class="bg-neutral-950 text-neutral-200 antialiased">
+    <main class="max-w-7xl mx-auto p-4 md:p-6 lg:p-8 space-y-4 md:space-y-6">
+      <!-- Canvas / Palette -->
+      <section class="relative rounded-2xl border border-neutral-800 overflow-hidden bg-neutral-900">
+        <div class="grid grid-cols-12 h-[320px] md:h-[380px] lg:h-[420px]">
+          <!-- Column swatches -->
+          <div class="relative bg-black"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-300/90">#000000</span></div>
+          <div class="relative" style="background:#0B1B0C"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-300/90">#0B1B0C</span></div>
+          <div class="relative" style="background:#223418"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-300/90">#223418</span></div>
+          <div class="relative" style="background:#3B5121"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-300/90">#3B5121</span></div>
+          <div class="relative" style="background:#6F6323"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-300/90">#6F6323</span></div>
+          <div class="relative" style="background:#83792A"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-300/90">#83792A</span></div>
+          <div class="relative" style="background:#A8BE30"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-900/80">#A8BE30</span></div>
+          <div class="relative" style="background:#D5A239"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-900/80">#D5A239</span></div>
+          <div class="relative" style="background:#F7BA66"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-900/80">#F7BA66</span></div>
+          <div class="relative" style="background:#FEDCBA"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-900/80">#FEDCBA</span></div>
+          <div class="relative bg-white"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-900/80">#FFFFFF</span></div>
+          <div class="relative bg-white"><span class="absolute bottom-4 left-4 text-xs tracking-wider text-neutral-900/80">#FFFFFF</span></div>
+        </div>
+
+        <!-- Floating Harmony Menu -->
+        <div class="absolute left-8 top-8 md:left-16 md:top-16 w-[320px] md:w-[380px] rounded-xl border border-lime-500/30 bg-neutral-900/95 backdrop-blur shadow-2xl">
+          <div class="p-3 md:p-4 space-y-3">
+            <!-- Row template -->
+            <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-800/70 transition">
+              <div class="h-2 w-28 rounded-full bg-gradient-to-r from-cyan-300 via-teal-300 to-emerald-300"></div>
+              <div class="flex-1">
+                <p class="text-[13px] text-neutral-100 leading-tight">Monochromatic</p>
+                <p class="text-[12px] text-neutral-400 leading-tight">Base Hue is the same for all colors</p>
+              </div>
+              <div class="relative h-9 w-9 rounded-full bg-neutral-800 ring-1 ring-neutral-700">
+                <div class="absolute inset-1 rounded-full bg-gradient-to-tr from-emerald-400 via-teal-300 to-cyan-300"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-800/70 transition">
+              <div class="h-2 w-28 rounded-full bg-gradient-to-r from-lime-400 via-yellow-500 to-amber-500"></div>
+              <div class="flex-1">
+                <p class="text-[13px] text-neutral-100 leading-tight">Analogous</p>
+                <p class="text-[12px] text-neutral-400 leading-tight">Base Hue is offset by Hue Shift</p>
+              </div>
+              <div class="relative h-9 w-9 rounded-full bg-neutral-800 ring-1 ring-neutral-700">
+                <div class="absolute inset-1 rounded-full bg-gradient-to-tr from-yellow-400 via-amber-500 to-lime-400"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-800/70 transition">
+              <div class="h-2 w-28 rounded-full bg-gradient-to-r from-lime-400 via-olive-500 to-fuchsia-500" style="--tw-gradient-stops:#b4e04b,#6a7f2a,#a855f7"></div>
+              <div class="flex-1">
+                <p class="text-[13px] text-neutral-100 leading-tight">Complementary</p>
+                <p class="text-[12px] text-neutral-400 leading-tight">Base Hue is offset by 180°</p>
+              </div>
+              <div class="relative h-9 w-9 rounded-full bg-neutral-800 ring-1 ring-neutral-700">
+                <div class="absolute inset-1 rounded-full bg-gradient-to-tr from-lime-400 to-fuchsia-500"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-800/70 transition">
+              <div class="h-2 w-28 rounded-full bg-gradient-to-r from-lime-400 via-blue-500 to-pink-500"></div>
+              <div class="flex-1">
+                <p class="text-[13px] text-neutral-100 leading-tight">Split Complementary</p>
+                <p class="text-[12px] text-neutral-400 leading-tight">Base Hue is offset by 150° &amp; 210°</p>
+              </div>
+              <div class="relative h-9 w-9 rounded-full bg-neutral-800 ring-1 ring-neutral-700">
+                <div class="absolute inset-1 rounded-full bg-gradient-to-tr from-lime-400 via-blue-500 to-pink-500"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-800/70 transition">
+              <div class="h-2 w-28 rounded-full bg-gradient-to-r from-lime-400 via-rose-500 to-violet-500"></div>
+              <div class="flex-1">
+                <p class="text-[13px] text-neutral-100 leading-tight">Triadic</p>
+                <p class="text-[12px] text-neutral-400 leading-tight">Base Hue is offset by 120° &amp; 240°</p>
+              </div>
+              <div class="relative h-9 w-9 rounded-full bg-neutral-800 ring-1 ring-neutral-700">
+                <div class="absolute inset-1 rounded-full bg-gradient-to-tr from-lime-400 via-rose-500 to-violet-500"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-neutral-800/70 transition">
+              <div class="h-2 w-28 rounded-full bg-gradient-to-r from-lime-400 via-amber-500 to-fuchsia-500"></div>
+              <div class="flex-1">
+                <p class="text-[13px] text-neutral-100 leading-tight">Tetradic</p>
+                <p class="text-[12px] text-neutral-400 leading-tight">Base Hue is offset by 90°, 180° &amp; 270°</p>
+              </div>
+              <div class="relative h-9 w-9 rounded-full bg-neutral-800 ring-1 ring-neutral-700">
+                <div class="absolute inset-1 rounded-full bg-gradient-to-tr from-lime-400 via-amber-500 to-fuchsia-500"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Controls Panel -->
+      <section class="rounded-2xl border border-neutral-800 bg-neutral-925/60 bg-neutral-900">
+        <!-- Toolbar -->
+        <div class="flex items-center justify-between px-4 sm:px-5 md:px-6 py-3 md:py-4 border-b border-neutral-800">
+          <div class="flex items-center gap-3 md:gap-4">
+            <button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-neutral-800 text-neutral-100 hover:bg-neutral-750 hover:bg-neutral-700 transition border border-neutral-700">
+              <!-- lucide: wand-2 -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-neutral-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path d="M15 4V2M15 10v-2M21 8h-2M11 8H9M19.07 4.93l-1.41-1.41M11.34 12.66 4 20l.71.71 7.34-7.34" />
+              </svg>
+              <span class="text-[13px] font-medium">Generate</span>
+            </button>
+            <button class="text-[13px] text-neutral-400 hover:text-neutral-200 transition">Reset</button>
+
+            <div class="hidden sm:flex items-center gap-2 pl-2">
+              <div class="h-8 w-8 grid place-content-center rounded-lg border border-neutral-700 bg-neutral-850 bg-neutral-800">
+                <!-- lucide: chevrons-up-down -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path d="m7 15 5 5 5-5M7 9l5-5 5 5" />
+                </svg>
+              </div>
+              <button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-neutral-700 bg-neutral-800 text-[13px]">
+                <span>OKHSL</span>
+                <!-- lucide: chevron-down -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="ml-1 h-6 w-6 rounded-full grid place-content-center border border-neutral-700 text-neutral-400">?</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border border-neutral-700 bg-neutral-850 bg-neutral-800 text-[13px]">
+              <!-- lucide: heart -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+              <span>Save</span>
+            </button>
+            <button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border border-neutral-700 bg-neutral-50/5 text-[13px]">
+              <!-- lucide: download -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              <span>Export</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="px-4 sm:px-5 md:px-6 pt-3 md:pt-4">
+          <div class="flex items-center gap-6 text-[13px]">
+            <button class="relative text-neutral-100">
+              Shift
+              <span class="absolute -bottom-3 left-0 right-0 h-[2px] bg-neutral-200 rounded-full"></span>
+            </button>
+            <button class="text-neutral-400 hover:text-neutral-200 transition">Edit</button>
+            <button class="text-neutral-400 hover:text-neutral-200 transition">Adjust</button>
+          </div>
+        </div>
+
+        <!-- Sliders / Controls -->
+        <div class="px-4 sm:px-5 md:px-6 pb-5 md:pb-6 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+          <!-- Left column -->
+          <div class="space-y-4 md:space-y-5 pt-4">
+            <div class="flex items-center gap-3">
+              <h2 class="text-[15px] md:text-[16px] font-medium tracking-tight text-neutral-100">Base Color</h2>
+              <div class="ml-1 px-2 py-1 rounded-md border border-neutral-700 bg-neutral-800 text-[12px] text-neutral-200">#000000</div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <button class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-neutral-700 bg-neutral-800 text-[13px]">
+                <span>Analogous</span>
+                <!-- lucide: chevron-down -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="relative h-9 w-9 rounded-full bg-neutral-800 ring-1 ring-neutral-700">
+                <div class="absolute inset-1 rounded-full bg-gradient-to-tr from-yellow-400 via-amber-500 to-lime-400"></div>
+              </div>
+            </div>
+
+            <!-- Visual sliders (static) -->
+            <div class="space-y-5">
+              <!-- Hue -->
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="text-[12px] px-1.5 py-0.5 rounded bg-neutral-800 border border-neutral-700 text-neutral-300">155</span>
+                    <span class="text-[13px] text-neutral-300">Hue</span>
+                  </div>
+                </div>
+                <div class="relative h-3 rounded-full overflow-hidden bg-gradient-to-r from-rose-500 via-yellow-400 via-emerald-400 via-cyan-400 via-blue-500 via-fuchsia-500 to-rose-500 border border-neutral-700">
+                  <div class="absolute left-[42%] top-1/2 -translate-y-1/2 h-5 w-5 rounded-full bg-neutral-900 border border-lime-400 shadow-[0_0_0_3px_rgba(132,204,22,0.25)]"></div>
+                </div>
+                <div class="flex justify-between text-[10px] text-neutral-500 px-1">
+                  <span>0</span><span>90</span><span>180</span><span>270</span><span>360</span>
+                </div>
+              </div>
+
+              <!-- Saturation -->
+              <div class="space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-[12px] px-1.5 py-0.5 rounded bg-neutral-800 border border-neutral-700 text-neutral-300">59</span>
+                  <span class="text-[13px] text-neutral-300">Saturation</span>
+                </div>
+                <div class="relative h-3 rounded-full overflow-hidden bg-gradient-to-r from-neutral-400 via-emerald-400 to-emerald-200 border border-neutral-700">
+                  <div class="absolute left-[62%] top-1/2 -translate-y-1/2 h-5 w-5 rounded-full bg-neutral-900 border border-neutral-400"></div>
+                </div>
+              </div>
+
+              <!-- Lightness -->
+              <div class="space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-[12px] px-1.5 py-0.5 rounded bg-neutral-800 border border-neutral-700 text-neutral-300">0</span>
+                  <span class="text-[13px] text-neutral-300">Lightness</span>
+                </div>
+                <div class="relative h-3 rounded-full overflow-hidden bg-gradient-to-r from-black via-neutral-400 to-white border border-neutral-700">
+                  <div class="absolute left-[2%] top-1/2 -translate-y-1/2 h-5 w-5 rounded-full bg-neutral-900 border border-neutral-500"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column -->
+          <div class="space-y-4 md:space-y-5 pt-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <!-- lucide: waves -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-neutral-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M2 8s2-3 6-3 6 3 10 3 4-3 4-3M2 16s2-3 6-3 6 3 10 3 4-3 4-3"/>
+                </svg>
+                <h3 class="text-[15px] md:text-[16px] font-medium tracking-tight text-neutral-100">Shift</h3>
+              </div>
+              <div class="flex items-center gap-2 text-[12px] text-neutral-300">
+                <span>Precision</span>
+                <!-- Toggle (static) -->
+                <div class="relative w-10 h-5 rounded-full bg-neutral-700 border border-neutral-600">
+                  <div class="absolute left-[18px] top-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-neutral-200"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shift sliders -->
+            <div class="space-y-5">
+              <!-- Hue Shift -->
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] text-neutral-300">Hue Shift</span>
+                  <span class="text-[12px] text-neutral-400">-8</span>
+                </div>
+                <div class="relative h-3 rounded-full overflow-hidden bg-gradient-to-r from-rose-500 via-yellow-400 via-emerald-400 via-cyan-400 via-blue-500 via-fuchsia-500 to-rose-500 border border-neutral-700">
+                  <div class="absolute left-[55%] top-1/2 -translate-y-1/2 h-5 w-5 rounded-full bg-neutral-900 border border-lime-400 shadow-[0_0_0_3px_rgba(132,204,22,0.25)]"></div>
+                </div>
+              </div>
+
+              <!-- Saturation Shift -->
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] text-neutral-300">Saturation Shift</span>
+                  <span class="text-[12px] text-neutral-400">3</span>
+                </div>
+                <div class="relative h-3 rounded-full overflow-hidden bg-gradient-to-r from-neutral-400 via-emerald-400 to-emerald-200 border border-neutral-700">
+                  <div class="absolute left-[40%] top-1/2 -translate-y-1/2 h-5 w-5 rounded-full bg-neutral-900 border border-neutral-400"></div>
+                </div>
+              </div>
+
+              <!-- Lightness Shift -->
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-[13px] text-neutral-300">Lightness Shift</span>
+                  <span class="text-[12px] text-neutral-400">10</span>
+                </div>
+                <div class="relative h-3 rounded-full overflow-hidden bg-gradient-to-r from-black via-neutral-400 to-white border border-neutral-700">
+                  <div class="absolute left-[68%] top-1/2 -translate-y-1/2 h-5 w-5 rounded-full bg-neutral-900 border border-neutral-500"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,1 +1,1 @@
-export { Root as Calendar } from './root';
+export * from './root';

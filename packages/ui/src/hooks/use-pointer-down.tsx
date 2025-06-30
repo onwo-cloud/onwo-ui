@@ -76,6 +76,6 @@ export function usePointerDownOutside(
     };
   });
 
-  // eslint-disable-next-line sonarjs/void-use, sonarjs/no-nested-assignment
+  // eslint-disable-next-line sonarjs/no-nested-assignment
   return $(() => void (isPointerInsideTreeRef.value = true));
 }

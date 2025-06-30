@@ -1,3 +1,1 @@
-import { Modal } from '@onwo/primitives';
-
-export const Root = Modal.Root;
+export { Root as Modal } from '@onwo/primitives/modal';

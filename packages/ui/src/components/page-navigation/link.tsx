@@ -1,3 +1,4 @@
-import { PageNavigation } from '@onwo/primitives';
+import type { PropsOf } from '@builder.io/qwik';
+import { Link } from '@onwo/primitives/page-navigation';
 
-export const Link = PageNavigation.Link;
+export const PageNavigationLink = (props: PropsOf<typeof Link>) => <Link {...props} />;

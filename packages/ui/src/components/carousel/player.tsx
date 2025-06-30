@@ -1,6 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Carousel as C } from '@onwo/primitives';
+import { Player } from '@onwo/primitives/carousel';
 
-type PlayerProps = PropsOf<typeof C.Player>;
+export type CarouselPlayerProps = PropsOf<typeof Player>;
 
-export const Player = (props: PlayerProps) => <C.Player {...props}>{props.children}</C.Player>;
+export const CarouselPlayer = (props: CarouselPlayerProps) => <Player {...props} />;

@@ -1,6 +1,6 @@
-export { List } from './list';
-export { Panel } from './panel';
-export { Panels } from './panels';
-export { Pill } from './pill';
-export { Root } from './root';
-export { Tab } from './tab';
+export * from './list';
+export * from './panel';
+export * from './panels';
+export * from './pill';
+export * from './root';
+export * from './tab';

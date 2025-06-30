@@ -1,4 +1,4 @@
-import { PageNavigation as PNav } from '@onwo/ui';
+import { PageNavigationLink } from '@onwo/ui';
 import { PageHeadSection } from '~/commons/page-head-section';
 
 export const RoadmapPage = () => (
@@ -15,9 +15,9 @@ export const RoadmapPage = () => (
         interfaces. This roadmap will evolve as I progress and incorporate feedback
       </p>
 
-      <PNav.Link as="h2" id="why" label="Why this library">
+      <PageNavigationLink as="h2" id="why" label="Why this library">
         Why this library
-      </PNav.Link>
+      </PageNavigationLink>
       <p>
         I have been using Qwik for a while and I used or explored a few libraries while using it,
         the most proeminent one being <a href="https://qwikui.com/">qwikui</a>. In my projects I
@@ -32,9 +32,9 @@ export const RoadmapPage = () => (
         following the styles from moon.io but also leveraging the works from qwikui, shadcn and by
         extension radix-ui.
       </p>
-      <PNav.Link as="h2" id="current-goals" label="Current goals">
+      <PageNavigationLink as="h2" id="current-goals" label="Current goals">
         Current goals
-      </PNav.Link>
+      </PageNavigationLink>
       <h4>Initial Setup </h4>
       <ul>
         <li>Make the library available for use on npm registry ✅</li>
@@ -54,9 +54,9 @@ export const RoadmapPage = () => (
         <li>Official release 🚀</li>
       </ul>
 
-      <PNav.Link as="h2" id="long-term" label="Long term">
+      <PageNavigationLink as="h2" id="long-term" label="Long term">
         Long term visions
-      </PNav.Link>
+      </PageNavigationLink>
       <ul>
         <li>
           Keep integrating components from diverse ui libraries, shadcn being the prime inspiration
@@ -68,9 +68,9 @@ export const RoadmapPage = () => (
           <a href="https://www.shadcnblocks.com/">shadcnblocks</a>
         </li>
       </ul>
-      <PNav.Link as="h2" id="contribute" label="Contribute">
+      <PageNavigationLink as="h2" id="contribute" label="Contribute">
         How to Contribute
-      </PNav.Link>
+      </PageNavigationLink>
       <p>
         Whether you're fixing a typo in the docs or adding a complex new component any addition is
         welcomed! Let me know if you are looking to take a more active part in the project, there's

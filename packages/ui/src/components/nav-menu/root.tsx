@@ -1,10 +1,10 @@
 import { Slot, component$ } from '@builder.io/qwik';
 
-type RootProps = {
+export type NavMenuProps = {
   label: string;
 };
 
-export const Root = component$(({ label }: RootProps) => {
+export const NavMenu = component$(({ label }: NavMenuProps) => {
   return (
     <nav
       aria-label={label}

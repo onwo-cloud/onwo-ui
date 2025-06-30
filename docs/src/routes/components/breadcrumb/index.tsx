@@ -1,6 +1,6 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { ArrowsChevronRightDoubleIcon, ControlsChevronRightIcon } from '@onwo/icons';
-import { Breadcrumb } from '@onwo/ui';
+import { ArrowRightIcon } from '@onwo/icons';
+import { Breadcrumb, BreadcrumbLink } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -29,36 +29,36 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: `<Breadcrumb.Root>
-  <Breadcrumb.Link to="/" label="Home" />
-  <Breadcrumb.Link to="/hello" label="Hello" />
-  <Breadcrumb.Link to="/hello/world" label="World" />
-</Breadcrumb.Root>`,
+        Default: `<Breadcrumb>
+  <BreadcrumbLink to="/" label="Home" />
+  <BreadcrumbLink to="/hello" label="Hello" />
+  <BreadcrumbLink to="/hello/world" label="World" />
+</Breadcrumb>`,
         'From List': `const links = [
   { to: '/', label: 'Home' },
   { to: '/hello', label: 'Hello' },
   { to: '/world', label: 'World' }
 ] as const;
 
-<Breadcrumb.Root>
-  {Breadcrumb.Link.fromList(links)}
-</Breadcrumb.Root>`,
+<Breadcrumb>
+  {BreadcrumbLink.fromList(links)}
+</Breadcrumb>`,
       }}
     />
 
     <Showcase
       title="Default"
       component={
-        <Breadcrumb.Root>
-          <Breadcrumb.Link to="#/" label="Home" />
-          <Breadcrumb.Link to="#/hello" label="Hello" />
-          <Breadcrumb.Link to="#/hello/world" label="World" />
-        </Breadcrumb.Root>
+        <Breadcrumb>
+          <BreadcrumbLink to="#/" label="Home" />
+          <BreadcrumbLink to="#/hello" label="Hello" />
+          <BreadcrumbLink to="#/hello/world" label="World" />
+        </Breadcrumb>
       }
       code={`<Breadcrumb>
-  <Breadcrumb.Link to="/" label="Home" />
-  <Breadcrumb.Link to="/hello" label="Hello" />
-  <Breadcrumb.Link to="/hello/world" label="World" />
+  <BreadcrumbLink to="/" label="Home" />
+  <BreadcrumbLink to="/hello" label="Hello" />
+  <BreadcrumbLink to="/hello/world" label="World" />
 </Breadcrumb>`}
     />
 
@@ -66,21 +66,13 @@ export default () => (
       title="Custom separator icon"
       component={
         <div class="flex flex-col gap-4">
-          <Breadcrumb.Root separator={ControlsChevronRightIcon}>
-            {Breadcrumb.Link.fromList(links)}
-          </Breadcrumb.Root>
-          <Breadcrumb.Root separator={ArrowsChevronRightDoubleIcon}>
-            {Breadcrumb.Link.fromList(links)}
-          </Breadcrumb.Root>
+          <Breadcrumb separator={ArrowRightIcon}>{BreadcrumbLink.fromList(links)}</Breadcrumb>
         </div>
       }
-      code={`<Breadcrumb separator={ControlsChevronRightIcon}>
-  {Breadcrumb.Link.fromList(links)}
+      code={`<Breadcrumb separator={ArrowRightIcon}>
+  {BreadcrumbLink.fromList(links)}
 </Breadcrumb>
-
-<Breadcrumb separator={ArrowsChevronRightDoubleIcon}>
-  {Breadcrumb.Link.fromList(links)}
-</Breadcrumb>`}
+`}
     />
   </div>
 );

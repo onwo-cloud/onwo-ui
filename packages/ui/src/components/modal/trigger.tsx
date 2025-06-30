@@ -1,3 +1,1 @@
-import { Modal } from '@onwo/primitives';
-
-export const Trigger = Modal.Trigger;
+export { Trigger as ModalTrigger } from '@onwo/primitives/modal';

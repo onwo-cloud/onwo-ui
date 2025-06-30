@@ -1,4 +1,4 @@
-import { PageNavigation as PNav } from '@onwo/ui';
+import { PageNavigationLink } from '@onwo/ui';
 import { PageHeadSection } from '~/commons/page-head-section';
 
 export const TypographyPage = () => (
@@ -28,9 +28,9 @@ export const TypographyPage = () => (
               id="text_1-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <PNav.Link label="Text" id="text">
+              <PageNavigationLink label="Text" id="text">
                 <h2 class="text-onwo-24 font-semibold order-1">Text</h2>
-              </PNav.Link>
+              </PageNavigationLink>
 
               <div
                 class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
@@ -71,9 +71,9 @@ export const TypographyPage = () => (
               id="text_2-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <PNav.Link label="Heading" id="heading">
+              <PageNavigationLink label="Heading" id="heading">
                 <h2 class="text-onwo-24 font-semibold order-1">Heading</h2>
-              </PNav.Link>
+              </PageNavigationLink>
 
               <div
                 class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
@@ -114,9 +114,9 @@ export const TypographyPage = () => (
               id="text_3-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <PNav.Link label="Caption" id="caption">
+              <PageNavigationLink label="Caption" id="caption">
                 <h2 class="text-onwo-24 font-semibold order-1">Caption</h2>
-              </PNav.Link>
+              </PageNavigationLink>
 
               <div
                 class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
@@ -146,9 +146,9 @@ export const TypographyPage = () => (
               id="text_4-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <PNav.Link label="Custom colours" id="custom-colours">
+              <PageNavigationLink label="Custom colours" id="custom-colours">
                 <h2 class="text-onwo-24 font-semibold order-1">Custom Colours</h2>
-              </PNav.Link>
+              </PageNavigationLink>
 
               <div
                 class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"

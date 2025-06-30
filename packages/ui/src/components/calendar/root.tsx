@@ -1,6 +1,6 @@
 import { $, component$, useSignal, useTask$ } from '@builder.io/qwik';
 import type { JSXChildren, PropFunction, QRL, Signal } from '@builder.io/qwik';
-import { ControlsChevronLeftSmallIcon, ControlsChevronRightSmallIcon } from '@onwo/icons';
+import { ChevronLeftIcon, ChevronRightIcon } from '@onwo/icons';
 import { cn } from '@onwo/primitives';
 import type { OneObjectOf } from '~/utils/types';
 import {
@@ -18,7 +18,7 @@ import { CalendarViewDecade } from './views/decades';
 import { CalendarViewMonth } from './views/months';
 import { CalendarViewYear } from './views/years';
 
-type RootProps = {
+export type CalendarProps = {
   ref?: Signal<HTMLDivElement | undefined>;
   class?: string;
 } & GenericRootProps;
@@ -48,7 +48,7 @@ type GenericRootProps = {
   ]
 >;
 
-export const Root = component$(
+export const Calendar = component$(
   ({
     ref,
     showClearButton,
@@ -62,7 +62,7 @@ export const Root = component$(
     onSelected$,
     mode,
     ...props
-  }: RootProps) => {
+  }: CalendarProps) => {
     const value = props['bind:value'];
     const viewDefaultDate = getFirstDateInRange(
       props['bind:value'].value ?? new Date(),
@@ -194,7 +194,7 @@ export const Root = component$(
               class="mb-2 flex items-center justify-between"
             >
               <HeadNavButton
-                icon={<ControlsChevronLeftSmallIcon />}
+                icon={<ChevronLeftIcon />}
                 onClick$={$(async () => {
                   viewDate.value = await getViewDatePage$(view.value, viewDate.value, -1);
                 })}
@@ -210,7 +210,7 @@ export const Root = component$(
               </button>
 
               <HeadNavButton
-                icon={<ControlsChevronRightSmallIcon />}
+                icon={<ChevronRightIcon />}
                 onClick$={$(async () => {
                   viewDate.value = await getViewDatePage$(view.value, viewDate.value, +1);
                 })}

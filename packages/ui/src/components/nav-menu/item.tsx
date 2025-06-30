@@ -1,13 +1,13 @@
 import type { QRL, QwikIntrinsicElements } from '@builder.io/qwik';
 import { $ } from '@builder.io/qwik';
 
-type ItemProps = {
+export type NavMenuItemProps = {
   label: string;
   href?: string;
   onSelect$?: QRL<() => void>;
 } & QwikIntrinsicElements['a'];
 
-export const Item = ({ label, href, onSelect$, children, ...props }: ItemProps) => (
+export const NavMenuItem = ({ label, href, onSelect$, children, ...props }: NavMenuItemProps) => (
   <li role="none">
     <a
       role="menuitem"

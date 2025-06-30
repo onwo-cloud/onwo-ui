@@ -1,8 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Carousel as C } from '@onwo/primitives';
+import { Scroller } from '@onwo/primitives/carousel';
 
-type ScrollerProps = PropsOf<typeof C.Scroller>;
+export type CarouselScrollerProps = PropsOf<typeof Scroller>;
 
-export const Scroller = (props: ScrollerProps) => (
-  <C.Scroller {...props}>{props.children}</C.Scroller>
-);
+export const CarouselScroller = (props: CarouselScrollerProps) => <Scroller {...props} />;

@@ -1,6 +1,16 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { ControlsCloseIcon } from '@onwo/icons';
-import { Button, Modal } from '@onwo/ui';
+import { XIcon } from '@onwo/icons';
+import {
+  Button,
+  Modal,
+  ModalClose,
+  ModalDescription,
+  ModalFooter,
+  ModalHeader,
+  ModalPanel,
+  ModalTitle,
+  ModalTrigger,
+} from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -18,56 +28,56 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: `<Modal.Root>
-  <Modal.Trigger class="modal-trigger">Open Modal</Modal.Trigger>
-  <Modal.nel class="modal-panel">
-    <Modal.Title>Edit ofile</Modal.Title>
-    <Modal.Description>
+        Default: `<Modal>
+  <ModalTrigger class="modal-trigger">Open Modal</ModalTrigger>
+  <ModalPanel class="modal-panel">
+    <ModalTitle>Edit ofile</ModalTitle>
+    <ModalDescription>
       You can update your profile here. Hit the save button when finished.
-    </Modal.Description>
+    </ModalDescription>
     <footer>
-      <Modal.Close class="modal-close">Cancel</Modal.Close>
-      <Modal.Close class="modal-close">Save Changes</Modal.Close>
+      <ModalClose class="modal-close">Cancel</ModalClose>
+      <ModalClose class="modal-close">Save Changes</ModalClose>
     </footer>
-  </Modal.nel>
-</Modal.Root>`,
+  </ModalPanel>
+</Modal>`,
       }}
     />
 
     <Showcase
       title="Default"
       component={
-        <Modal.Root>
-          <Modal.Trigger class="block mx-auto">
+        <Modal>
+          <ModalTrigger class="block mx-auto">
             <Button as="div">Open Modal</Button>
-          </Modal.Trigger>
-          <Modal.Panel>
-            <Modal.Header class="flex justify-between">
-              <Modal.Title class="font-medium">Opened a modal</Modal.Title>
-              <Modal.Close>
+          </ModalTrigger>
+          <ModalPanel>
+            <ModalHeader class="flex justify-between">
+              <ModalTitle class="font-medium">Opened a modal</ModalTitle>
+              <ModalClose>
                 <Button as="div" size="xs" variant="ghost">
-                  <ControlsCloseIcon size="xs" />
+                  <XIcon size="xs" />
                 </Button>
-              </Modal.Close>
-            </Modal.Header>
-            <Modal.Description>
+              </ModalClose>
+            </ModalHeader>
+            <ModalDescription>
               You can try typing in this input on mobile to check repositioning.
               <input class="border border-line" name="text-input" />
-            </Modal.Description>
-            <Modal.Footer class="flex gap-4 justify-between">
-              <Modal.Close>
+            </ModalDescription>
+            <ModalFooter class="flex gap-4 justify-between">
+              <ModalClose>
                 <Button as="div" size="sm" variant="ghost">
                   Cancel
                 </Button>
-              </Modal.Close>
-              <Modal.Close>
+              </ModalClose>
+              <ModalClose>
                 <Button as="div" size="sm">
                   Save changes
                 </Button>
-              </Modal.Close>
-            </Modal.Footer>
-          </Modal.Panel>
-        </Modal.Root>
+              </ModalClose>
+            </ModalFooter>
+          </ModalPanel>
+        </Modal>
       }
       code={``}
     />

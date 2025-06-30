@@ -4,6 +4,7 @@
 # *
 
 # And delete this:
+.env
 .direnv/
 docs/dist/
 docs/lib-types/
@@ -25,60 +26,64 @@ packages/ui/lib/
 packages/ui/node_modules/
 packages/ui/tsconfig.tsbuildinfo
 **/vite.config.dev.ts.timestamp*
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v4/
+
 
 # Root
-!.eslintrc.cjs
-!.github/
-!.gitignore
-!.prettierrc.cjs
-!examples/
-!Justfile
-!misc/
-!package.json
-!README.md
-!shell.nix
-!tsconfig.base.json
-!yarn.lock
-
-# Docs
-!docs/public/
-!docs/src/
-!docs/.eslintignore
-!docs/.eslintrc.cjs
-!docs/package.json
-!docs/q-insights.ts
-!docs/README.md
-!docs/tsconfig.json
-!docs/vite.config.client.ts
-!docs/vite.config.dev.ts
-!docs/vite.config.ts
-
-# Icons
-!packages/icons/src/
-!packages/icons/.eslintignore
-!packages/icons/.eslintrc.cjs
-!packages/icons/.gitignore
-!packages/icons/package.json
-!packages/icons/tsconfig.json
-!packages/icons/vite.config.dev.ts
-!packages/icons/vite.config.ts
-
-# Primitives
-!packages/primitives/src/
-!packages/primitives/.eslintignore
-!packages/primitives/.eslintrc.cjs
-!packages/primitives/.gitignore
-!packages/primitives/package.json
-!packages/primitives/tsconfig.json
-!packages/primitives/vite.config.dev.ts
-!packages/primitives/vite.config.ts
-
-# UI
-!packages/ui/src/
-!packages/ui/.eslintignore
-!packages/ui/.eslintrc.cjs
-!packages/ui/.gitignore
-!packages/ui/package.json
-!packages/ui/tsconfig.json
-!packages/ui/vite.config.dev.ts
-!packages/ui/vite.config.ts
+#!.eslintrc.cjs
+#!.github/
+#!.gitignore
+#!.prettierrc.cjs
+#!examples/
+#!Justfile
+#!misc/
+#!package.json
+#!README.md
+#!shell.nix
+#!tsconfig.base.json
+#!yarn.lock
+#
+## Docs
+#!docs/public/
+#!docs/src/
+#!docs/.eslintignore
+#!docs/.eslintrc.cjs
+#!docs/package.json
+#!docs/q-insights.ts
+#!docs/README.md
+#!docs/tsconfig.json
+#!docs/vite.config.client.ts
+#!docs/vite.config.dev.ts
+#!docs/vite.config.ts
+#
+## Icons
+#!packages/icons/src/
+#!packages/icons/.eslintignore
+#!packages/icons/.eslintrc.cjs
+#!packages/icons/.gitignore
+#!packages/icons/package.json
+#!packages/icons/tsconfig.json
+#!packages/icons/vite.config.dev.ts
+#!packages/icons/vite.config.ts
+#
+## Primitives
+#!packages/primitives/src/
+#!packages/primitives/.eslintignore
+#!packages/primitives/.eslintrc.cjs
+#!packages/primitives/.gitignore
+#!packages/primitives/package.json
+#!packages/primitives/tsconfig.json
+#!packages/primitives/vite.config.dev.ts
+#!packages/primitives/vite.config.ts
+#
+## UI
+#!packages/ui/src/
+#!packages/ui/.eslintignore
+#!packages/ui/.eslintrc.cjs
+#!packages/ui/.gitignore
+#!packages/ui/package.json
+#!packages/ui/tsconfig.json
+#!packages/ui/vite.config.dev.ts
+#!packages/ui/vite.config.ts
