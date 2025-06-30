@@ -1,13 +1,23 @@
-import type { IconProps } from '@onwo/primitives';
-import { SvgIcon } from '@onwo/primitives';
+import type { IconNode } from '../create-icon';
+import { createIcon } from '../create-icon';
 
-export default (props: IconProps) => (
-  <SvgIcon data--icon-name="chart-line" {...props} viewBox="0 0 32 32">
-    <path
-      d="M6.5 23H25.5M7.23077 15.6316L12.3462 10.4737L17.4615 15.6316L24.7692 9"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-  </SvgIcon>
-);
+// prettier-ignore
+export const __iconNode: IconNode[] = [
+  {
+    "tag": "path",
+    "attr": {
+      "d": "M3 3v16a2 2 0 0 0 2 2h16"
+    }
+  },
+  {
+    "tag": "path",
+    "attr": {
+      "d": "m19 9-5 5-4-4-3 3"
+    }
+  }
+];
+
+/**
+ * @preview ![img](data:image/svg+xml;base64,PHN2ZwogIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICB3aWR0aD0iMjQiCiAgaGVpZ2h0PSIyNCIKICB2aWV3Qm94PSIwIDAgMjQgMjQiCiAgZmlsbD0ibm9uZSIKICBzdHJva2U9ImN1cnJlbnRDb2xvciIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8cGF0aCBkPSJNMyAzdjE2YTIgMiAwIDAgMCAyIDJoMTYiIC8+CiAgPHBhdGggZD0ibTE5IDktNSA1LTQtNC0zIDMiIC8+Cjwvc3ZnPgo=) - https://lucide.dev/icons/chart-line
+ */
+export const ChartLineIcon = createIcon('chart-line', __iconNode);
