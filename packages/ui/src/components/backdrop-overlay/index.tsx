@@ -1,6 +1,7 @@
 import type { Signal } from '@builder.io/qwik';
 import { $ } from '@builder.io/qwik';
-import { Animated, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import { Animated } from '@onwo/primitives/animated';
 import { withAs } from '~/utils/as';
 
 type BackdropOverlayProps = {

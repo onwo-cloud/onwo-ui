@@ -1,5 +1,7 @@
 import type { QwikHTMLElements } from '@builder.io/qwik';
-import { Button, SvgIcon, cn } from '@onwo/primitives';
+import { cn } from '@onwo/primitives';
+import { Button } from '@onwo/primitives/button';
+import { SvgIcon } from '@onwo/primitives/svg-icon';
 
 export type CloseProps = QwikHTMLElements['button'];
 

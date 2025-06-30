@@ -7,11 +7,11 @@ import {
   useTask$,
 } from '@builder.io/qwik';
 import {
-  ControlsCloseSmallIcon,
-  GenericCheckRoundedIcon,
-  NotificationsErrorIcon,
-  NotificationsQuestionMarkIcon,
-  SoftwareBugIcon,
+  CircleAlertIcon,
+  CircleCheckIcon,
+  CircleQuestionMarkIcon,
+  TriangleAlertIcon,
+  XIcon,
 } from '@onwo/icons';
 import type { Toast, ToastType } from './context';
 import { useToasterContext } from './context';
@@ -97,7 +97,7 @@ export const ToastItem = component$<ToastItemProps>(({ isOpenedToast, toast }) =
         class="absolute top-2 right-2 text-graphite w-[20px] h-[20px] flex items-center justify-center rounded-sm hover:bg-parchment"
         onClick$={dismiss$}
       >
-        <ControlsCloseSmallIcon size="sm" />
+        <XIcon size="sm" />
       </button>
     </li>
   );
@@ -110,10 +110,10 @@ type ToastIconByTypeProps = {
 const ToastIconByType = (props: ToastIconByTypeProps) => {
   return (
     <div class="w-[24px]">
-      {props.toastType === 'success' && <GenericCheckRoundedIcon class="text-success-80" />}
-      {props.toastType === 'error' && <NotificationsErrorIcon class="text-error-80" />}
-      {props.toastType === 'info' && <NotificationsQuestionMarkIcon class="text-[blue]" />}
-      {props.toastType === 'warning' && <SoftwareBugIcon class="text-warn" />}
+      {props.toastType === 'success' && <CircleCheckIcon class="text-success-80" />}
+      {props.toastType === 'error' && <CircleAlertIcon class="text-error-80" />}
+      {props.toastType === 'info' && <CircleQuestionMarkIcon class="text-[blue]" />}
+      {props.toastType === 'warning' && <TriangleAlertIcon class="text-warn" />}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import type { JSXChildren, JSXOutput } from '@builder.io/qwik';
-import { ArrowsRightIcon } from '@onwo/icons';
-import type { IconProps } from '@onwo/primitives';
+import { ChevronRightIcon } from '@onwo/icons';
 import { cn } from '@onwo/primitives';
+import type { IconProps } from '@onwo/primitives/svg-icon';
 import { withAs } from '~/utils/as';
 
 type RootProps = {
@@ -10,7 +10,7 @@ type RootProps = {
 };
 
 export const Root = withAs('nav')<RootProps>(({ As, class: className, ...props }) => {
-  const Sep = props.separator ?? ArrowsRightIcon;
+  const Sep = props.separator ?? ChevronRightIcon;
 
   return (
     <As {...props} aria-label="Breadcrumb" class={cn(className)}>
