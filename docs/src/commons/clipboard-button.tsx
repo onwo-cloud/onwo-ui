@@ -1,5 +1,5 @@
 import { $, component$ } from '@builder.io/qwik';
-import { FilesClipboardTextIcon } from '@onwo/icons';
+import { ClipboardIcon } from '@onwo/icons';
 import { Button } from '@onwo/ui';
 import { useToastCreate } from './toaster';
 
@@ -15,7 +15,7 @@ export const ClipboardButton = component$(({ textToCopy }: { textToCopy: string 
         success('Copied to clipboard', {});
       })}
     >
-      <FilesClipboardTextIcon size="lg" />
+      <ClipboardIcon size="lg" />
     </Button>
   );
 });

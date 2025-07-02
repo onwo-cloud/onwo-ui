@@ -1,9 +1,9 @@
 import { component$, $, Slot, useSignal, useStore, useComputed$ } from '@builder.io/qwik';
+import { useDebounced } from '~/hooks';
 import type { ToastPosition, XPosition, YPosition } from './context';
 import { useToasterContextProvider } from './context';
 import { useToasterStyles } from './styles';
 import { ToastItem } from './toast-item';
-import { useDebounced } from '~/hooks';
 
 export const TOAST_LIFETIME = 3000;
 export const TOAST_WIDTH = 356;

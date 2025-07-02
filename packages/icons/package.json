@@ -33,12 +33,16 @@
     "ts-watch": "tsc --emitDeclarationOnly --incremental --preserveWatchOutput --pretty --watch"
   },
   "devDependencies": {
+    "@onwo/primitives": "link:../primitives",
     "@builder.io/qwik": "1.14",
     "@tailwindcss/vite": "^4.1.10",
     "@types/node": "24.0.3",
     "typescript": "5.8.3",
     "vite": "6.3.5",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+  "peerDependencies": {
+    "@onwo/primitives": "*"
   },
   "publishConfig": {
     "access": "public"

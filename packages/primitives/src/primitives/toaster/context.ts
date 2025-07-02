@@ -7,7 +7,7 @@ export type ToastPosition = `${YPosition}-${XPosition}`;
 
 export type ToastType = 'normal' | 'success' | 'info' | 'warning' | 'error' | 'promise';
 
-type ToastId = number;
+export type ToastId = number;
 
 export interface Toast {
   id: ToastId;

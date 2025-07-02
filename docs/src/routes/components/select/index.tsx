@@ -1,12 +1,10 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { GenericCheckAlternativeIcon } from '@onwo/icons';
-import { primitives as P } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
 import { buildHead } from '~/utils/build-head';
 
-const users = ['Tim', 'Ryan', 'Jim', 'Jessie', 'Abby'];
+//const users = ['Tim', 'Ryan', 'Jim', 'Jessie', 'Abby'];
 
 export default () => (
   <div>
@@ -42,22 +40,25 @@ export default () => (
     <Showcase
       title="Default"
       component={
-        <P.Select.Root class="select">
-          <P.Select.Label>Logged in users</P.Select.Label>
-          <P.Select.Trigger class="select-trigger">
-            <P.Select.DisplayValue placeholder="Select an option" />
-          </P.Select.Trigger>
-          <P.Select.Popover class="select-popover">
-            {users.map((user) => (
-              <P.Select.Item class="select-item" key={user}>
-                <P.Select.ItemLabel>{user}</P.Select.ItemLabel>
-                <P.Select.ItemIndicator>
-                  <GenericCheckAlternativeIcon />
-                </P.Select.ItemIndicator>
-              </P.Select.Item>
-            ))}
-          </P.Select.Popover>
-        </P.Select.Root>
+        <></>
+        /*
+          <P.Select.Root class="select">
+            <P.Select.Label>Logged in users</P.Select.Label>
+            <P.Select.Trigger class="select-trigger">
+              <P.Select.DisplayValue placeholder="Select an option" />
+            </P.Select.Trigger>
+            <P.Select.Popover class="select-popover">
+              {users.map((user) => (
+                <P.Select.Item class="select-item" key={user}>
+                  <P.Select.ItemLabel>{user}</P.Select.ItemLabel>
+                  <P.Select.ItemIndicator>
+                    <GenericCheckAlternativeIcon />
+                  </P.Select.ItemIndicator>
+                </P.Select.Item>
+              ))}
+            </P.Select.Popover>
+          </P.Select.Root>
+          */
       }
       code={``}
     />

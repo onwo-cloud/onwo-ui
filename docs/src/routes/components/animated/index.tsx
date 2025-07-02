@@ -1,7 +1,7 @@
 import { $, component$, useSignal } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { OtherSmileIcon } from '@onwo/icons';
-import { Animated } from '@onwo/primitives';
+import { SmileIcon } from '@onwo/icons';
+import { Animated } from '@onwo/primitives/animated';
 import { Button } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
@@ -82,7 +82,7 @@ export default component$(() => {
               }}
               class="w-fit"
             >
-              <OtherSmileIcon size="3rem" />
+              <SmileIcon size="3rem" />
             </Animated>
           </div>
         }

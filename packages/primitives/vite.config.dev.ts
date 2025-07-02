@@ -1,10 +1,5 @@
 import { Logger, defineConfig } from "vite";
 import { baseConfig } from "./vite.config";
-import { hackwatcher } from '../../misc/hackwatcher';
-
-// This will update the index.ts utime every time the tailwind plugin
-// is updated.
-hackwatcher(['../tailwindcss/dist', '../tailwindcss/themes'], './src/index.ts', 800);
 
 const customLogger: Logger = {
   info(msg, _options) {
