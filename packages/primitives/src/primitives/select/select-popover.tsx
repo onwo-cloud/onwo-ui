@@ -5,11 +5,10 @@ import { useCombinedRef } from '~/hooks/use-combined-refs';
 import { HPopoverPanel } from '../popover/popover-panel';
 import { HPopoverRoot } from '../popover/popover-root';
 import { usePopover } from '../popover/use-popover';
-
-import selectContextId from './select-context';
+import { SelectContextId } from './select-context';
 
 export const HSelectPopover = component$<PropsOf<typeof HPopoverRoot>>((props) => {
-  const context = useContext(selectContextId);
+  const context = useContext(SelectContextId);
   const { showPopover, hidePopover } = usePopover(context.localId);
   const contextRefOpts = { context, givenContextRef: context.popoverRef };
   const panelRef = useCombinedRef(props.ref, contextRefOpts);

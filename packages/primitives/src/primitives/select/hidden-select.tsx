@@ -2,7 +2,7 @@ import type { PropsOf } from '@builder.io/qwik';
 import { component$, useContext, useSignal } from '@builder.io/qwik';
 import { VisuallyHidden } from '~/imported/visually-hidden';
 import { HiddenSelectOption } from './hidden-select-option';
-import SelectContextId from './select-context';
+import { SelectContextId } from './select-context';
 
 export type AriaHiddenSelectProps = {
   /**

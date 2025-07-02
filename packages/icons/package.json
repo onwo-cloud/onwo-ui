@@ -25,7 +25,7 @@
   "scripts": {
     "generate-icons": "bun generate-icons.ts && yarn lint.fix",
     "build": "ESLINT_MODE=full qwik build",
-    "build.types": "tsc --emitDeclarationOnly",
+    "build.types": "tsc --emitDeclarationOnly --incremental --pretty",
     "build.lib": "vite build --mode lib",
     "dev": "vite build --mode lib -c ./vite.config.dev.ts",
     "lint": "eslint \"src/**/*.ts*\"",

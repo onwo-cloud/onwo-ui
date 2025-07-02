@@ -9,7 +9,7 @@ import {
   useComputed$,
 } from '@builder.io/qwik';
 import { useCombinedRef } from '~/hooks/use-combined-refs';
-import SelectContextId, { type SelectContext } from './select-context';
+import { SelectContextId, type SelectContext } from './select-context';
 import { useSelect } from './use-select';
 
 export type TItemsMap = Map<number, { value: string; displayValue: string; disabled: boolean }>;

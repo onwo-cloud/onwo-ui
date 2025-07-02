@@ -14,7 +14,7 @@ import {
 import { isServer } from '@builder.io/qwik/build';
 import { useCombinedRef } from '~/hooks/use-combined-refs';
 import type { SelectItemContext } from './select-context';
-import SelectContextId, { selectItemContextId } from './select-context';
+import { SelectContextId, selectItemContextId } from './select-context';
 import { useSelect } from './use-select';
 
 export type SelectItemProps = PropsOf<'div'> & {

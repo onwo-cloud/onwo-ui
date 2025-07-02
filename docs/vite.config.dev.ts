@@ -1,15 +1,5 @@
 import { Logger, defineConfig } from "vite";
-import { hackwatcher } from '../misc/hackwatcher';
 import { baseConfig } from "./vite.config";
-
-hackwatcher([
-  '../packages/primitives/lib',
-  '../packages/primitives/lib-types',
-  '../packages/icons/lib',
-  '../packages/icons/lib-types',
-  '../packages/ui/lib',
-  '../packages/ui/lib-types'
-], ['./src/routes/layout.tsx'], 2000);
 
 const customLogger: Logger = {
   info(msg, _options) {

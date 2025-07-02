@@ -14,3 +14,5 @@ export { Calendar } from './calendar';
 export * as PageNavigation from './page-navigation';
 export * as Modal from './modal';
 export * as NavMenu from './nav-menu';
+
+export { Toaster, useToastCreate, useToastDismiss, useToastUpdate } from './toaster';

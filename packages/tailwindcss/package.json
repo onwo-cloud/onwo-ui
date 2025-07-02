@@ -15,7 +15,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --incremental --pretty",
     "dev": "tsc --incremental --preserveWatchOutput --pretty --watch",
     "ts-watch": "yarn dev -- --noEmit",
     "lint": "eslint \"src/**/*.ts*\"",

@@ -21,8 +21,9 @@
   "type": "module",
   "scripts": {
     "build": "ESLINT_MODE=full qwik build",
-    "build.types": "tsc --emitDeclarationOnly",
-    "build.lib": "vite build --mode lib",
+    "build.types": "tsc --emitDeclarationOnly --incremental --pretty",
+    "build.lib": "vite build --mode lib -c vite.config.ts",
+    "dev.build": "ESLINT=false qwik build",
     "dev": "vite build --mode lib -c ./vite.config.dev.ts",
     "lint": "eslint \"src/**/*.ts*\"",
     "lint.fix": "npm run lint -- --fix",

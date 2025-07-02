@@ -1,6 +1,6 @@
 import { component$, useContext, type PropsOf, useComputed$, Slot } from '@builder.io/qwik';
 
-import SelectContextId from './select-context';
+import { SelectContextId } from './select-context';
 
 type SelectValueProps = PropsOf<'span'> & {
   /**

@@ -49,15 +49,4 @@ install:
 build: install build-tailwind-plugin build-primitives build-icons build-ui build-docs
 
 dev:
-  concurrently \
-    --names '    tw,  prim,tsprim,    ui,  tsui,  icon,tsicon,  docs,tsdocs' \
-    --prefix-colors 'yellow.bold,cyan.bold,cyan.bold,yellow.bold,yellow.bold,green.bold,green.bold,red.bold' \
-    "yarn --cwd=packages/tailwindcss   dev" \
-    "yarn --cwd=packages/primitives    dev" \
-    "yarn --cwd=packages/primitives    ts-watch" \
-    "yarn --cwd=packages/ui            dev" \
-    "yarn --cwd=packages/ui            ts-watch" \
-    "yarn --cwd=packages/icons         dev" \
-    "yarn --cwd=packages/icons         ts-watch" \
-    "yarn --cwd=docs                   dev" \
-    "yarn --cwd=docs                   ts-watch"
+  bun run ./watcher.ts

@@ -1,7 +1,7 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { Slot, component$, useContext, $, sync$ } from '@builder.io/qwik';
 import { useCombinedRef } from '~/hooks/use-combined-refs';
-import SelectContextId from './select-context';
+import { SelectContextId } from './select-context';
 
 export const HSelectLabel = component$((props: PropsOf<'div'>) => {
   const context = useContext(SelectContextId);

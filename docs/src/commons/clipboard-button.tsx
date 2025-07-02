@@ -1,7 +1,6 @@
 import { $, component$ } from '@builder.io/qwik';
 import { ClipboardIcon } from '@onwo/icons';
-import { Button } from '@onwo/ui';
-import { useToastCreate } from './toaster';
+import { Button, useToastCreate } from '@onwo/ui';
 
 export const ClipboardButton = component$(({ textToCopy }: { textToCopy: string }) => {
   const { success } = useToastCreate();
@@ -11,8 +10,13 @@ export const ClipboardButton = component$(({ textToCopy }: { textToCopy: string 
       variant="ghost"
       class="rounded-md w-8 h-8"
       onClick$={$(async () => {
-        await navigator.clipboard.writeText(textToCopy);
-        success('Copied to clipboard', {});
+        try {
+          await navigator.clipboard.writeText(textToCopy);
+          console.log('in here');
+          success('Copied to clipboard');
+        } catch (error) {
+          console.error(error);
+        }
       })}
     >
       <ClipboardIcon size="lg" />

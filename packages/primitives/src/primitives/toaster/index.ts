@@ -1,13 +1,19 @@
-export { useToastCreate } from './helpers';
-export { useToastDismiss } from './helpers';
-export { useToastUpdate } from './helpers';
-export { Toaster } from './toaster';
+export {
+  type ToastOptions,
+  useToastCreateCustom,
+  useToastDismiss,
+  useToastUpdate,
+} from './helpers';
+
+export { TOAST_LIFETIME, TOAST_WIDTH, TOAST_GAP, TOAST_OFFSET, Toaster } from './toaster';
+export { ToastClose } from './toast-close';
+export { ToastItem } from './toast-item';
+export type { ToastItemProps } from './toast-item';
+
 export type { ToasterProps } from './toaster';
 
 export type {
   Toast,
-  ToastId,
-  ToastType,
   ToastPosition,
   YPosition,
   XPosition,
@@ -15,4 +21,4 @@ export type {
   ToasterContextDataOption,
 } from './context';
 
-export { useToasterContext, useToasterContextProvider } from './context';
+export { ToasterContext } from './context';

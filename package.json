@@ -13,6 +13,7 @@
     "@types/eslint": "^9.6.1",
     "@typescript-eslint/eslint-plugin": "^8.34.1",
     "@typescript-eslint/parser": "^8.34.1",
+    "bun-types": "^1.2.17",
     "concurrently": "^9.1.2",
     "eslint": "^9.29",
     "eslint-config-prettier": "^10.1.5",
@@ -24,6 +25,7 @@
     "eslint-plugin-sonarjs": "^3.0.2",
     "eslint-plugin-unicorn": "59.0.1",
     "npm-check-updates": "^18.0.1",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "shell-quote": "^1.8.3"
   }
 }

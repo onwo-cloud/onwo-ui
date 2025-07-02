@@ -1,7 +1,7 @@
 import type { PropsOf, Signal } from '@builder.io/qwik';
 import { component$, useContext, useSignal, useTask$ } from '@builder.io/qwik';
 import { isServer } from '@builder.io/qwik/build';
-import SelectContextId from './select-context';
+import { SelectContextId } from './select-context';
 
 type HiddenSelectOptionProps = {
   value: string;

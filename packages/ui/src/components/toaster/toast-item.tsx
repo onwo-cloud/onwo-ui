@@ -5,27 +5,26 @@ import {
   TriangleAlertIcon,
   XIcon,
 } from '@onwo/icons';
+import type { Toast } from '@onwo/primitives/toaster';
+import { ToastItem as PToastItem, ToastClose } from '@onwo/primitives/toaster';
+import type { ToastData, ToastType } from './helpers';
 
-interface ToastItemProps {
-  isOpenedToast: boolean;
-  toast: Toast;
+export interface ToastItemProps {
+  toast: Toast & ToastData;
 }
 
-export const ToastItem = ({ isOpenedToast, toast }) => {
+export const ToastItem = ({ toast }: ToastItemProps) => {
   return (
-    <>
+    <PToastItem key={toast.id} toast={toast}>
       <ToastIconByType toastType={toast.type} />
       <div>
         <h4 class="font-semibold mt-[1px]">{toast.title}</h4>
         {toast.description && <p>{toast.description}</p>}
       </div>
-      <ToastClose
-        class="absolute top-2 right-2 text-graphite w-[20px] h-[20px] flex items-center justify-center rounded-sm hover:bg-parchment"
-        onClick$={dismiss$}
-      >
+      <ToastClose>
         <XIcon size="sm" />
       </ToastClose>
-    </>
+    </PToastItem>
   );
 };
 
@@ -43,4 +42,3 @@ const ToastIconByType = (props: ToastIconByTypeProps) => {
     </div>
   );
 };
-

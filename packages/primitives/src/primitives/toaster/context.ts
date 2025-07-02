@@ -1,23 +1,17 @@
-import type { Signal } from '@builder.io/qwik';
-import { createContextId, useContext, useContextProvider } from '@builder.io/qwik';
+import type { QRL, Signal } from '@builder.io/qwik';
+import { initContext } from '~/utils/context-utils';
 
 export type YPosition = 'top' | 'bottom';
 export type XPosition = 'left' | 'right' | 'center';
 export type ToastPosition = `${YPosition}-${XPosition}`;
 
-export type ToastType = 'normal' | 'success' | 'info' | 'warning' | 'error' | 'promise';
+type ToastId = number;
 
-export type ToastId = number;
-
-export interface Toast {
+export type Toast = {
   id: ToastId;
-  type: ToastType;
-  title: string;
-  description?: string;
   duration: number;
-}
+};
 
-// Partial Toast for creation/updates
 export type ToasterContextDataOption = {
   position: { y: YPosition; x: XPosition };
   duration: number;
@@ -27,15 +21,16 @@ export type ToasterContextDataOption = {
 };
 
 export type ToasterContextData = {
+  isOpenedToasts: Signal<boolean>;
   toasts: Signal<Toast[]>;
   heights: Record<ToastId, number> /* id -> toast height */;
   options: ToasterContextDataOption;
 };
 
-const toasterContextId = createContextId<ToasterContextData>('toaster-context');
+export const ToasterContext = initContext<ToasterContextData>('toaster-context');
 
-export const useToasterContext = () => useContext(toasterContextId);
-export const useToasterContextProvider = (data: ToasterContextData) => {
-  useContextProvider(toasterContextId, data);
-  return data;
+type ToastItemContextData = {
+  dismiss$: QRL<() => void>;
 };
+
+export const ToastItemContext = initContext<ToastItemContextData>('toaster-item-context');

@@ -3,9 +3,7 @@ import { type Signal } from '@builder.io/qwik';
 import { createContextId } from '@builder.io/qwik';
 import type { TItemsMap } from './select-root';
 
-const SelectContextId = createContextId<SelectContext>('Select');
-
-export default SelectContextId;
+export const SelectContextId = createContextId<SelectContext>('Select');
 
 export type SelectContext = {
   // refs

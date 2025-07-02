@@ -1,8 +1,8 @@
 import { component$, useVisibleTask$ } from '@builder.io/qwik';
 import { QwikCityProvider, RouterOutlet } from '@builder.io/qwik-city';
 import './global.css';
+import { Toaster } from '@onwo/ui';
 import { RouterHead } from './commons/router-head';
-import { Toaster } from './commons/toaster';
 
 const Heuristics = component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task

@@ -1,53 +1,36 @@
 import { $ } from '@builder.io/qwik';
-import type { Toast } from './context';
-import { useToasterContext } from './context';
+import { ToasterContext, type Toast } from './context';
 import { TOAST_LIFETIME } from './toaster';
 
-type ToastOptions = Partial<Omit<Toast, 'id'>>;
+export type ToastOptions<T extends Record<string, unknown>> = Partial<Omit<Toast, 'id'>> & T;
 
-export const useToastCreate = () => {
-  const toasterCtx = useToasterContext();
+export const useToastCreateCustom = <T extends Record<string, unknown>>() => {
+  const toasterCtx = ToasterContext.use();
 
-  const custom = $((title: string, options: ToastOptions = {}) => {
+  return $((options: ToastOptions<T>) => {
     // eslint-disable-next-line sonarjs/pseudo-random
     const id = Date.now() + Math.random();
     const newToast: Toast = {
       id,
-      title,
-      type: 'normal',
       duration: TOAST_LIFETIME,
-      ...options,
+      ...(options as any),
     };
     const toasts = toasterCtx.toasts;
     toasts.value = [...toasts.value, newToast];
     return id;
   });
-
-  return {
-    custom,
-    success: $((title: string, options?: ToastOptions) =>
-      custom(title, { ...options, type: 'success' }),
-    ),
-    info: $((title: string, options?: ToastOptions) => custom(title, { ...options, type: 'info' })),
-    warning: $((title: string, options?: ToastOptions) =>
-      custom(title, { ...options, type: 'warning' }),
-    ),
-    error: $((title: string, options?: ToastOptions) =>
-      custom(title, { ...options, type: 'error' }),
-    ),
-  };
 };
 
 export const useToastDismiss = () => {
-  const toasterCtx = useToasterContext();
+  const toasterCtx = ToasterContext.use();
   return $((id: number) => {
     toasterCtx.toasts.value = toasterCtx.toasts.value.filter((t) => t.id !== id);
   });
 };
 
-export const useToastUpdate = () => {
-  const toasterCtx = useToasterContext();
-  return $((id: number, options: ToastOptions) => {
+export const useToastUpdate = <T extends Record<string, unknown>>() => {
+  const toasterCtx = ToasterContext.use();
+  return $((id: number, options: Partial<ToastOptions<T>>) => {
     toasterCtx.toasts.value = toasterCtx.toasts.value.map((t) =>
       t.id === id ? { ...t, ...options } : t,
     );
