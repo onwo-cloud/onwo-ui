@@ -1,0 +1,55 @@
+map-tokens: 2048
+map-refresh: auto
+dark-mode: true
+pretty: true
+watch-files: true
+stream: true
+vim: true
+git: true
+gitignore: false
+auto-commits: true
+dirty-commits: true
+attribute-commit-message-committer: true
+editor: nvim
+aiderignore: .aiderignore
+auto-lint: false
+auto-test: false
+env-file: .env
+suggest-shell-commands: false
+fancy-input: true
+
+# Read-only files for context
+read:
+  - "README.md"
+  - "Justfile"
+  - "tsconfig.base.json"
+  - "package.json"
+  - "eslint.config.js"
+  - "docs/package.json"
+  - "docs/README.md"
+  - "docs/tsconfig.json"
+  - "docs/eslint.config.js"
+
+  - "packages/tailwindcss/README.md"
+  - "packages/tailwindcss/eslint.config.js"
+  - "packages/tailwindcss/tsconfig.json"
+  - "packages/tailwindcss/package.json"
+
+  - "packages/primitives/README.md"
+  - "packages/primitives/eslint.config.js"
+  - "packages/primitives/tsconfig.json"
+  - "packages/primitives/package.json"
+
+  - "packages/ui/README.md"
+  - "packages/ui/eslint.config.js"
+  - "packages/ui/tsconfig.json"
+  - "packages/ui/package.json"
+
+  - "packages/icons/README.md"
+  - "packages/icons/eslint.config.js"
+  - "packages/icons/tsconfig.json"
+  - "packages/icons/package.json"
+
+# Terminal settings
+encoding: utf-8
+line-endings: platform

@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - unrs-resolver
+packages:
+  - 'packages/*'
+  - 'docs'

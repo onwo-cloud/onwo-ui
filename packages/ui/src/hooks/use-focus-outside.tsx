@@ -23,9 +23,9 @@ export function useFocusOutside(
   );
 
   return {
-    // eslint-disable-next-line sonarjs/no-nested-assignment, sonarjs/void-use
+    // eslint-disable-next-line sonarjs/no-nested-assignment
     onFocus$: $(() => void (isFocusInsideTreeRef.value = true)),
-    // eslint-disable-next-line sonarjs/no-nested-assignment, sonarjs/void-use
+    // eslint-disable-next-line sonarjs/no-nested-assignment
     onBlur$: $(() => void (isFocusInsideTreeRef.value = false)),
   };
 }

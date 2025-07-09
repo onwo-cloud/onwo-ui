@@ -1,10 +1,10 @@
-import type { JSXOutput, PropsOf } from '@builder.io/qwik';
+import type { PropsOf } from '@builder.io/qwik';
 import { ChevronRightIcon } from '@onwo/icons';
 import { Next as PNext } from '@onwo/primitives/carousel';
-import type { IconProps } from '@onwo/primitives/svg-icon';
+import type { IconComponent } from '@onwo/primitives/svg-icon';
 
 type NextProps = PropsOf<typeof PNext> & {
-  icon?: (props: IconProps) => JSXOutput;
+  icon?: IconComponent;
 };
 
 export const Next = ({ icon: Icon = ChevronRightIcon, ...props }: NextProps) => (

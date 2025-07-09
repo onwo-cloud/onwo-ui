@@ -1,5 +1,5 @@
-import type { Component } from '@builder.io/qwik';
-import { component$ } from '@builder.io/qwik';
+import type { PropsOf } from '@builder.io/qwik';
+import { $, component$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
 import {
   ClipboardIcon,
@@ -7,156 +7,123 @@ import {
   InfoIcon,
   PanelsTopLeftIcon,
   RocketIcon,
-  SearchIcon,
   SwatchBookIcon,
-  TerminalIcon,
+  XIcon
 } from '@onwo/icons';
-import type { IconProps } from '@onwo/primitives/svg-icon';
+import { styledcn } from '@onwo/primitives';
+import type { IconComponent } from '@onwo/primitives/svg-icon';
 import { cn } from '@onwo/ui';
+import { Button, Modal } from '@onwo/ui';
 import { Logo } from './logo';
+import { SearchBar } from './searchbar';
+import {
+  accordionSection,
+  alertSection,
+  buttonSection,
+  animatedSection,
+  avatarSection,
+  backdropOverlaySection,
+  bottomSheetSection,
+  breadcrumbSection,
+  calendarSection,
+  carouselSection,
+  chipSection,
+  drawerSection,
+  dropdownSection,
+  formSection,
+  masonrySection,
+  menuItemSection,
+  modalSection,
+  navigationMenuSection,
+  pageNavigationSection,
+  paginationSection,
+  popoverSection,
+  progressSection,
+  searchSection,
+  selectSection,
+  snackbarSection,
+  spinnerSection,
+  switchSection,
+  tableSection,
+  tabsSection,
+  tagSection,
+  tooltipSection,
+} from './sections';
 
-/* Line 2 */
+import type { BoxedComp, Section } from './sections';
+import { TerminalAnimatedIcon } from './terminal-icon-animated';
+import { ThemeDropdown } from './theme-dropdown';
 
-const DottedSeparator = () => (
-  //border: 1px dashed #D9D9D9;
-  <div class="w-full border-t border-dashed border-line" />
+const DottedSeparator = styledcn('div')`w-full border-t border-dashed border-line`;
+
+export const BORDER_CLASSES = ' ring-[1.2px] ring-[#d6d6d6] rounded-[0.6rem]';
+
+type CardButtonProps = {
+  icon: IconComponent;
+} & Omit<PropsOf<'div'>, 'class'>;
+
+const CardButton = ({ icon: Icon, ...props }: CardButtonProps) => (
+  <div
+    class={cn(BORDER_CLASSES, 'p-1.5 rounded-full cursor-pointer hover:bg-parchment')}
+    {...props}
+  >
+    <Icon size="xs" />
+  </div>
 );
 
-const BORDER_CLASSES = ' ring-[1.2px] ring-[#d6d6d6] rounded-[0.6rem]';
-import { component$, useSignal, useTask$, $ } from '@builder.io/qwik';
-import { LuSearch, LuX } from '@qwikest/icons/lucide';
-
-const BORDER_CLASSES = ' ring-[1.2px] ring-[#d6d6d6] rounded-[0.6rem]';
-
-interface SearchBarProps {
-  placeholder?: string;
-  showIcon?: boolean;
-  onSearch?: (value: string) => void;
-  onClear?: () => void;
-  class?: string;
-  disabled?: boolean;
-  autoFocus?: boolean;
-  [key: string]: any;
-}
-
-export default component$<SearchBarProps>(({
-  placeholder = "Search anything",
-  showIcon = true,
-  onSearch,
-  onClear,
-  class: className = "",
-  disabled = false,
-  autoFocus = false,
-  ...props
-}) => {
-  const value = useSignal('');
-  const isFocused = useSignal(false);
-  const inputRef = useSignal<HTMLInputElement>();
-
-  const handleInputChange = $((e: Event) => {
-    const target = e.target as HTMLInputElement;
-    const newValue = target.value;
-    value.value = newValue;
-    onSearch?.(newValue);
-  });
-
-  const handleClear = $(() => {
-    value.value = '';
-    onClear?.();
-    inputRef.value?.focus();
-  });
-
-  const handleKeyDown = $((e: KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      if (value.value) {
-        handleClear();
-      } else {
-        inputRef.value?.blur();
-      }
-    }
-  });
-
-  useTask$(({ track }) => {
-    track(() => autoFocus);
-    if (autoFocus && inputRef.value) {
-      inputRef.value.focus();
-    }
-  });
-
-  return (
-    <div
-      class={`flex items-center gap-2 relative w-80 pl-4 pr-4 py-2 transition-all duration-200 focus-within:ring-[#3b82f6] focus-within:ring-2 hover:ring-[#a3a3a3] ${BORDER_CLASSES} ${disabled ? 'opacity-60 cursor-not-allowed' : ''} ${className}`}
-      role="search"
-      aria-label="Search"
-    >
-      {showIcon && (
-        <SearchIcon
-          size="sm"
-          class="pointer-events-none flex-shrink-0"
-          aria-hidden="true"
-        />
-      )}
-
-      <input
-        ref={inputRef}
-        type="text"
-        value={value.value}
-        onInput$={handleInputChange}
-        onKeyDown$={handleKeyDown}
-        onFocus$={() => isFocused.value = true}
-        onBlur$={() => isFocused.value = false}
-        placeholder={placeholder}
-        disabled={disabled}
-        class="flex-1 bg-transparent border-none outline-none placeholder-gray-500 text-gray-900 disabled:cursor-not-allowed"
-        aria-label={placeholder}
-        aria-describedby="search-instructions"
-        {...props}
-      />
-
-      {value.value && (
-        <button
-          onClick$={handleClear}
-          class="p-1 hover:bg-gray-100 rounded-full transition-colors duration-150 flex-shrink-0"
-          aria-label="Clear search"
-          type="button"
-        >
-          <LuX class="w-[14px] h-[14px] text-gray-500" />
-        </button>
-      )}
-
-      <div id="search-instructions" class="sr-only">
-        Press Escape to clear search or close
-      </div>
-    </div>
-  );
-});
-
-const ThemeDropdown = () => (
-  <select class={'border px-3 py-2 ' + BORDER_CLASSES}>
-    <option>Choose theme</option>
-  </select>
-);
-
-const ComponentCard = ({ title = 'Default' }) => (
-  <div class="border border-gray-300 rounded p-4 bg-white h-50">
-    <div class="flex justify-between items-center mb-2">
+// Example usage with theme options
+const ComponentCard = ({ title, height, display: Display }: BoxedComp) => (
+  <div
+    class={cn('relative rounded py-2 bg-white h-60', BORDER_CLASSES)}
+    style={{ height: `calc(var(--spacing) * ${height ?? 60})` }}
+  >
+    <div class="absolute px-4 w-full flex justify-between items-center mb-2 mt-1">
       <span class="text-sm font-medium">{title}</span>
       <div class="flex gap-2">
-        <div class="border border-gray-300 rounded-full">
-          <CodeIcon />
-        </div>
-        <div class="border border-gray-300 rounded-full">
-          <ClipboardIcon />
-        </div>
+        <Modal.Root>
+          <Modal.Trigger class="block mx-auto">
+            <CardButton icon={CodeIcon} />
+          </Modal.Trigger>
+          <Modal.Panel>
+            <Modal.Header class="flex justify-between">
+              <Modal.Title class="font-medium">Opened a modal</Modal.Title>
+              <Modal.Close>
+                <Button as="div" size="xs" variant="ghost">
+                  <XIcon size="xs" />
+                </Button>
+              </Modal.Close>
+            </Modal.Header>
+            <Modal.Description>
+              You can try typing in this input on mobile to check repositioning.
+              <input class="border border-line" name="text-input" />
+            </Modal.Description>
+            <Modal.Footer class="flex gap-4 justify-between">
+              <Modal.Close>
+                <Button as="div" size="sm" variant="ghost">
+                  Cancel
+                </Button>
+              </Modal.Close>
+              <Modal.Close>
+                <Button as="div" size="sm">
+                  Save changes
+                </Button>
+              </Modal.Close>
+            </Modal.Footer>
+          </Modal.Panel>
+        </Modal.Root>
+        <CardButton icon={ClipboardIcon} />
       </div>
     </div>
-    <div class="mt-12 border border-gray-300 rounded px-4 py-2 text-center bg-gray-50">Button</div>
+
+    <div class="flex pt-4 items-center justify-center h-full">
+      <Display />
+    </div>
   </div>
 );
 
 type SidebarItemProps = {
   href: string;
-  icon?: Component<IconProps>;
+  icon?: IconComponent;
   label: string;
   selected?: boolean;
 };
@@ -220,7 +187,7 @@ const SidebarComponents = () => (
 );
 
 const Sidebar = () => (
-  <div class="space-y-7 w-92 pt-7 bg-white border-r border-gray-200">
+  <div class="space-y-7 w-92 pt-7 bg-white">
     <Link
       href="/"
       class="mx-8 text-2xl tracking-tight flex gap-2 items-center"
@@ -235,56 +202,113 @@ const Sidebar = () => (
   </div>
 );
 
-const MainHeader = () => (
-  <div class="mb-6">
+const MainHeader = ({ class: className, ...props }: PropsOf<'div'>) => (
+  <div class={cn('h-[40px]', className)} {...props}>
     <div class="flex gap-4 items-center mb-4">
       <SearchBar />
-      <ThemeDropdown />
+      <ThemeDropdown
+        options={[
+          { value: 'light', label: 'Light Theme' },
+          { value: 'dark', label: 'Dark Theme' },
+          { value: 'auto', label: 'Auto Theme' },
+          { value: 'high-contrast', label: 'High Contrast' },
+        ]}
+        placeholder="Select theme"
+        onChange$={$((value) => console.log('Theme changed to:', value))}
+        class="custom-dropdown"
+      />
     </div>
-    <p class="text-gray-600">Found 24 results</p>
   </div>
 );
 
-const ComponentGrid = () => (
+type ComponentGridProps = {
+  components: BoxedComp[];
+};
+
+const ComponentGrid = (props: ComponentGridProps) => (
   <div class="grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
-    {Array.from({ length: 6 }, (_, i) => (
-      <div key={i}>
-        <ComponentCard />
+    {props.components.map((section, idx) => (
+      <div key={idx}>
+        <ComponentCard {...section} />
       </div>
     ))}
   </div>
 );
 
-const MainContent = () => (
-  <div class="flex-1 p-6">
-    <MainHeader />
-    <div class="flex flex-col mt-4 gap-8">
-      {Array.from({ length: 6 }, (_, idx) => (
-        <div key={idx}>
-          <DottedSeparator />
-          <div class="flex justify-between items-center my-4">
-            <div class="flex text-sm items-center gap-2">
-              <h4 class=" font-bold">Button</h4>
-              <p>Multi-variants button element</p>
-              <InfoIcon size="sm" />
-            </div>
-            <div data-placement="end">
-              <button class="bg-gray-50 px-4 py-1 rounded-lg flex gap-2 items-center hover:underline">
-                <span>See API</span>
-                <TerminalIcon />
-              </button>
-            </div>
-          </div>
-          <ComponentGrid />
+type SectionContentProps = {
+  section: Section;
+};
+
+const SectionContent = ({ section }: SectionContentProps) => (
+  <>
+    <div class="px-6 first:mt-2">
+      <div class="flex justify-between items-center mb-4">
+        <div class="flex text-sm items-center gap-3">
+          <h4 class=" font-bold">{section.title}</h4>
+          <p>{section.description}</p>
         </div>
-      ))}
+        <div data-placement="end">
+          <Link
+            href={section.link}
+            rel="noopener"
+            target="_blank"
+            class="group/term-icon bg-gray-50 px-4 py-1 rounded-lg flex gap-2 items-center hover:bg-gray-100 cursor-pointer"
+          >
+            <span>See API</span>
+            <TerminalAnimatedIcon />
+          </Link>
+        </div>
+      </div>
+      <ComponentGrid components={section.components} />
+    </div>
+    <DottedSeparator class="px-6" />
+  </>
+);
+
+const MainContent = () => (
+  <div class="flex-1">
+    <div class="flex pt-6 flex-col relative gap-6 h-full">
+      <MainHeader class="shrink-0 mx-6" />
+      <div class="relative flex gap-12 flex-col max-h-full overflow-y-auto">
+        <SectionContent section={accordionSection} />
+        <SectionContent section={alertSection} />
+        <SectionContent section={animatedSection} />
+        <SectionContent section={buttonSection} />
+        <SectionContent section={avatarSection} />
+        <SectionContent section={backdropOverlaySection} />
+        <SectionContent section={bottomSheetSection} />
+        <SectionContent section={breadcrumbSection} />
+        <SectionContent section={calendarSection} />
+        <SectionContent section={carouselSection} />
+        <SectionContent section={chipSection} />
+        <SectionContent section={drawerSection} />
+        <SectionContent section={dropdownSection} />
+        <SectionContent section={formSection} />
+        <SectionContent section={masonrySection} />
+        <SectionContent section={menuItemSection} />
+        <SectionContent section={modalSection} />
+        <SectionContent section={navigationMenuSection} />
+        <SectionContent section={pageNavigationSection} />
+        <SectionContent section={paginationSection} />
+        <SectionContent section={popoverSection} />
+        <SectionContent section={progressSection} />
+        <SectionContent section={searchSection} />
+        <SectionContent section={selectSection} />
+        <SectionContent section={snackbarSection} />
+        <SectionContent section={spinnerSection} />
+        <SectionContent section={switchSection} />
+        <SectionContent section={tableSection} />
+        <SectionContent section={tabsSection} />
+        <SectionContent section={tagSection} />
+        <SectionContent section={tooltipSection} />
+      </div>
     </div>
   </div>
 );
 
 export const HomePageV2 = component$(() => {
   return (
-    <div class="flex h-screen">
+    <div class="flex h-screen lg:gap-8">
       <Sidebar />
       <MainContent />
     </div>

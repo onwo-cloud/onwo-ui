@@ -1,3 +1,4 @@
+import type { Component, JSXOutput } from '@builder.io/qwik';
 import type { ClassList, JSXChildren, QwikIntrinsicElements } from '@builder.io/qwik';
 
 export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | `${number}rem`;
@@ -24,6 +25,8 @@ const getIconSizePx = (size: IconSize) => {
     }
   }
 };
+
+export type IconComponent = ((props: IconProps) => JSXOutput) | Component<IconProps>;
 
 export type IconProps = {
   size?: IconSize;

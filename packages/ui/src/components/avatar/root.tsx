@@ -18,7 +18,7 @@ export const Root = withAs('div')<RootProps>(
       {...props}
       style={imageUrl ? { backgroundImage: `url("${imageUrl}")` } : {}}
       class={cn(
-        'uppercase relative flex bg-paper text-ink items-center justify-center overflow-hidden font-medium bg-cover',
+        'uppercase relative flex bg-papyrus text-ink items-center justify-center overflow-hidden font-medium bg-cover',
         size === 'xs' && 'rounded-onwo-i-xs text-onwo-10-caption w-6 h-6',
         size === 'sm' && 'rounded-onwo-i-sm text-onwo-12 w-8 h-8',
         size === 'md' && 'rounded-onwo-i-sm text-onwo-14 w-10 h-10',

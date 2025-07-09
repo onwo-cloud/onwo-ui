@@ -29,3 +29,7 @@ This project follows "progressive enhancement" principles:
 2. Ensure accessibility first  
 3. Build extensibility into every component  
 4. Grow through real-world use cases  
+
+## License
+
+MIT © [onwo-ui](https://github.com/onwo-cloud/onwo-ui)

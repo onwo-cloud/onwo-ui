@@ -1,53 +1,21 @@
-# Qwik Library ⚡️
+# Onwo UI Documentation
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik on GitHub](https://github.com/QwikDev/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
-- [Partytown](https://partytown.builder.io/)
-- [Mitosis](https://github.com/BuilderIO/mitosis)
-- [Builder.io](https://www.builder.io/)
+This is the documentation website for **Onwo UI**, a modern component library built for Qwik applications.
 
----
+## Documentation Website
 
-## Project Structure
+This documentation site is built with Qwik and serves as the complete reference for:
 
-Inside your project, you'll see the following directories and files:
-
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── index.ts
-```
-
-- `src/components`: Recommended directory for components.
-
-- `index.ts`: The entry point of your component library, make sure all the public components are exported from this file.
+- **Component Library**: Browse and explore all available UI components
+- **API Documentation**: Detailed props, events, and usage examples
+- **Design System**: Color schemes, typography, spacing, and design tokens
+- **Getting Started**: Installation guides and quick start tutorials
+- **Examples**: Real-world usage patterns and code snippets
 
 ## Development
 
-Development mode uses [Vite's development server](https://vitejs.dev/). For Qwik during development, the `dev` command will also server-side render (SSR) the output. The client-side development modules are loaded by the browser.
+The documentation website is built using:
 
-```
-yarn dev
-```
-
-> Note: during dev mode, Vite will request many JS files, which does not represent a Qwik production build.
-
-## Production
-
-The production build should generate the production build of your component library in (./lib) and the typescript type definitions in (./lib-types).
-
-```
-yarn build
-```
-
-## Static Site Generator (Node.js)
-
-```shell
-yarn build.server
-```
+- **Qwik** - The core framework
+- **Tailwind CSS** - For styling and theming
+- **TypeScript** - For type safety and better developer experience

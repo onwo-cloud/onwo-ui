@@ -10,7 +10,7 @@ const PACKAGES: Record<string, Package> = {
   tailwindcss: {
     name: 'tailwindcss',
     priority: 1,
-    build: [{ command: 'yarn --non-interactive run build' }],
+    build: [{ command: 'pnpm run build' }],
     cwd: './packages/tailwindcss/',
     dependencies: ['primitives', 'icons', 'ui'],
     watchPaths: ['./src/', './tailwind.config.ts', './package.json'],
@@ -19,10 +19,7 @@ const PACKAGES: Record<string, Package> = {
   primitives: {
     name: 'primitives',
     priority: 2,
-    build: [
-      { command: 'yarn --non-interactive run build.lib' },
-      { command: 'yarn --non-interactive run build.types', stdout: true },
-    ],
+    build: [{ command: 'pnpm run build.lib' }, { command: 'pnpm run build.types', stdout: true }],
     cwd: './packages/primitives/',
     dependencies: ['icons', 'ui'],
     watchPaths: ['./src/', './vite.config.*', './package.json'],
@@ -30,10 +27,7 @@ const PACKAGES: Record<string, Package> = {
   icons: {
     name: 'icons',
     priority: 3,
-    build: [
-      { command: 'yarn --non-interactive run build.lib' },
-      { command: 'yarn --non-interactive run build.types', stdout: true },
-    ],
+    build: [{ command: 'pnpm run build.lib' }, { command: 'pnpm run build.types', stdout: true }],
     cwd: './packages/icons/',
     dependencies: ['ui'],
     watchPaths: ['./src/', './vite.config.*', './package.json'],
@@ -41,10 +35,7 @@ const PACKAGES: Record<string, Package> = {
   ui: {
     name: 'ui',
     priority: 4,
-    build: [
-      { command: 'yarn --non-interactive run build.lib' },
-      { command: 'yarn --non-interactive run build.types', stdout: true },
-    ],
+    build: [{ command: 'pnpm run build.lib' }, { command: 'pnpm run build.types', stdout: true }],
     cwd: './packages/ui/',
     dependencies: ['docs'],
     watchPaths: ['./src/', './vite.config.*', './package.json'],
@@ -152,7 +143,7 @@ class UnixSocketStreamManager {
     });
 
     this.server.on('error', (error) => {
-        log.error('[Unix socket server error]', error);
+      log.error('[Unix socket server error]', error);
     });
   }
 
@@ -168,7 +159,7 @@ class UnixSocketStreamManager {
   async start(): Promise<void> {
     try {
       // Clean up existing socket file
-      await unlink(this.socketPath).catch(() => {});
+      await unlink(this.socketPath).catch(() => { });
 
       return new Promise((resolve, reject) => {
         this.server.listen(this.socketPath, () => {
@@ -228,7 +219,7 @@ class UnixSocketStreamManager {
     return new Promise((resolve) => {
       this.server.close(() => {
         // Clean up socket file
-        unlink(this.socketPath).catch(() => {});
+        unlink(this.socketPath).catch(() => { });
         resolve();
       });
     });
@@ -736,7 +727,7 @@ async function main() {
   });
 
   // Keep the process alive indefinitely for watchers.
-  await new Promise(() => {});
+  await new Promise(() => { });
 }
 
 await main();

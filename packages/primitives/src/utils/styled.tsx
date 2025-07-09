@@ -9,7 +9,7 @@ type Interpolation<P> = InterpolationValue | InterpolationFunction<P>;
 type Class = QwikHTMLElements['div']['class'];
 
 const styledcn_ =
-  <C extends Component<{ class?: Class }>>(Comp: C) =>
+  <C extends Component<{ class?: Class }>>(Comp: C | string) =>
   <P extends PropsOf<typeof Comp>>(
     strings: TemplateStringsArray,
     ...interpolations: Array<Interpolation<P>>

@@ -50,3 +50,6 @@ build: install build-tailwind-plugin build-primitives build-icons build-ui build
 
 dev:
   bun run ./watcher.ts
+
+aider-watch:
+  aider --watch-files --watch
