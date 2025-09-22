@@ -2,9 +2,9 @@ import type { PropsOf } from '@builder.io/qwik';
 import { cn } from '@onwo/primitives';
 import { Bullet as PBullet } from '@onwo/primitives/carousel';
 
-type BulletProps = PropsOf<typeof PBullet>;
+export type CarouselBulletProps = PropsOf<typeof PBullet>;
 
-export const Bullet = (props: BulletProps) => (
+export const CarouselBullet = (props: CarouselBulletProps) => (
   <PBullet
     {...props}
     class={cn(

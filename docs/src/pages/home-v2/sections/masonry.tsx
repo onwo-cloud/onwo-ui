@@ -1,4 +1,4 @@
-import { Masonry } from '@onwo/ui';
+import { Masonry, MasonryImage, MasonryItem } from '@onwo/ui';
 import type { BoxedComp, Section } from '.';
 
 const photos = [
@@ -58,15 +58,15 @@ const photos = [
 const defaultMasonry: BoxedComp = {
   title: 'Default',
   display: () => (
-    <Masonry.Root columnWidth={140} gap={16}>
+    <Masonry columnWidth={140} gap={16}>
       {photos.slice(0, 20).map(({ src, width, height }, idx) => (
-        <Masonry.Image key={idx} src={src} width={width} height={height} />
+        <MasonryImage key={idx} src={src} width={width} height={height} />
       ))}
-    </Masonry.Root>
+    </Masonry>
   ),
   code: `<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ src, width, height }, idx) => (
-    <Masonry.Image key={idx} src={src} width={width} height={height} />
+    <MasonryImage key={idx} src={src} width={width} height={height} />
   ))}
 </Masonry>`,
 };
@@ -74,15 +74,15 @@ const defaultMasonry: BoxedComp = {
 const imagesAutoSizingMasonry: BoxedComp = {
   title: 'Images auto sizing',
   display: () => (
-    <Masonry.Root columnWidth={140} gap={16}>
+    <Masonry columnWidth={140} gap={16}>
       {photos.slice(0, 20).map(({ src }, idx) => (
-        <Masonry.Image key={idx} src={src} inferSize />
+        <MasonryImage key={idx} src={src} inferSize />
       ))}
-    </Masonry.Root>
+    </Masonry>
   ),
   code: `<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ src }, idx) => (
-    <Masonry.Image key={idx} src={src} inferSize />
+    <MasonryImage key={idx} src={src} inferSize />
   ))}
 </Masonry>`,
 };
@@ -90,29 +90,29 @@ const imagesAutoSizingMasonry: BoxedComp = {
 const boxesMasonry: BoxedComp = {
   title: 'Boxes',
   display: () => (
-    <Masonry.Root columnWidth={140} gap={16}>
+    <Masonry columnWidth={140} gap={16}>
       {photos.slice(0, 20).map(({ width, height }, idx) => (
-        <Masonry.Item
+        <MasonryItem
           class="flex items-center justify-center"
           key={idx}
           width={width}
           height={height}
         >
           <span>{idx}</span>
-        </Masonry.Item>
+        </MasonryItem>
       ))}
-    </Masonry.Root>
+    </Masonry>
   ),
   code: `<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ width, height }, idx) => (
-    <Masonry.Item
+    <MasonryItem
       class="flex items-center justify-center"
       key={idx}
       width={width}
       height={height}
     >
       <span>{idx}</span>
-    </Masonry.Item>
+    </MasonryItem>
 </Masonry>`,
 };
 

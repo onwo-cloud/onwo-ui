@@ -1,3 +1,3 @@
-export { Image } from './image';
-export { Item } from './item';
-export { Root } from './root';
+export * from './image';
+export * from './item';
+export * from './root';

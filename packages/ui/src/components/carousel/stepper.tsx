@@ -1,11 +1,11 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { cn } from '@onwo/primitives';
-import { Stepper as PStepper } from '@onwo/primitives/carousel';
+import { Stepper } from '@onwo/primitives/carousel';
 
-type StepperProps = PropsOf<typeof PStepper>;
+type CarouselStepperProps = PropsOf<typeof Stepper>;
 
-export const Stepper = (props: StepperProps) => (
-  <PStepper {...props} class={cn('relative flex justify-around w-full mx-auto', props.class)}>
+export const CarouselStepper = (props: CarouselStepperProps) => (
+  <Stepper {...props} class={cn('relative flex justify-around w-full mx-auto', props.class)}>
     {props.children}
-  </PStepper>
+  </Stepper>
 );

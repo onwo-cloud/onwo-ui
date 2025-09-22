@@ -33,14 +33,14 @@ export const style = `
 }
 `;
 
-type RootProps = {
+type MasonryProps = {
   // column size in pixels
   columnWidth?: number;
   // column size in pixels
   gap?: number;
 };
 
-export const Root = component$((props: Primitive<'div'> & RootProps) => {
+export const Masonry = component$((props: Primitive<'div'> & MasonryProps) => {
   useStyles$(style);
 
   return (

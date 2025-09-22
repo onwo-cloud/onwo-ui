@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Accordion } from '@onwo/ui';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -24,16 +24,16 @@ export default () => (
       variants={{
         Default: `import { Accordion } from '@onwo/ui';
 
-<Accordion.Root>
-  <Accordion.Item>
-    <Accordion.Trigger>...</Accordion.Trigger>
-    <Accordion.Content>...</Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item>
-    <Accordion.Trigger>...</Accordion.Trigger>
-    <Accordion.Content>...</Accordion.Content>
-  </Accordion.Item>
-</Accordion.Root>
+<Accordion>
+  <AccordionItem>
+    <AccordionTrigger>...</AccordionTrigger>
+    <AccordionContent>...</AccordionContent>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionTrigger>...</AccordionTrigger>
+    <AccordionContent>...</AccordionContent>
+  </AccordionItem>
+</Accordion>
 `,
       }}
     />
@@ -41,83 +41,83 @@ export default () => (
     <Showcase
       title="Default"
       component={
-        <Accordion.Root class="w-full">
-          <Accordion.Item>
-            <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-            <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
-          </Accordion.Item>
-          <Accordion.Item>
-            <Accordion.Trigger>Is it styled?</Accordion.Trigger>
-            <Accordion.Content>
+        <Accordion class="w-full">
+          <AccordionItem>
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionTrigger>Is it styled?</AccordionTrigger>
+            <AccordionContent>
               Yes. It comes with default styles that matches the other components&apos; aesthetic.
-            </Accordion.Content>
-          </Accordion.Item>
-          <Accordion.Item>
-            <Accordion.Trigger>Is it animated?</Accordion.Trigger>
-            <Accordion.Content>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionTrigger>Is it animated?</AccordionTrigger>
+            <AccordionContent>
               Yes. It's animated by default, but you can disable it if you prefer.
-            </Accordion.Content>
-          </Accordion.Item>
-        </Accordion.Root>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       }
-      code={`<Accordion.Root class="w-full">
-  <Accordion.Item>
-    <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-    <Accordion.Content> ... </Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item>
-    <Accordion.Trigger>Is it styled?</Accordion.Trigger>
-    <Accordion.Content> ... </Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item>
-    <Accordion.Trigger>Is it animated?</Accordion.Trigger>
-    <Accordion.Content> ... </Accordion.Content>
-  </Accordion.Item>
-</Accordion.Root>`}
+      code={`<Accordion class="w-full">
+  <AccordionItem>
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent> ... </AccordionContent>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionTrigger>Is it styled?</AccordionTrigger>
+    <AccordionContent> ... </AccordionContent>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionTrigger>Is it animated?</AccordionTrigger>
+    <AccordionContent> ... </AccordionContent>
+  </AccordionItem>
+</Accordion>`}
     />
 
     <Showcase
       title="Single open"
       component={
-        <Accordion.Root singleOpen class="w-full">
-          <Accordion.Item>
-            <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-            <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
-          </Accordion.Item>
-          <Accordion.Item defaultOpen>
-            <Accordion.Trigger>Is it styled?</Accordion.Trigger>
-            <Accordion.Content>
+        <Accordion singleOpen class="w-full">
+          <AccordionItem>
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+          </AccordionItem>
+          <AccordionItem defaultOpen>
+            <AccordionTrigger>Is it styled?</AccordionTrigger>
+            <AccordionContent>
               Yes. It comes with default styles that matches the other components&apos; aesthetic.
-            </Accordion.Content>
-          </Accordion.Item>
-          <Accordion.Item>
-            <Accordion.Trigger>Is it animated?</Accordion.Trigger>
-            <Accordion.Content>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionTrigger>Is it animated?</AccordionTrigger>
+            <AccordionContent>
               Yes. It's animated by default, but you can disable it if you prefer.
-            </Accordion.Content>
-          </Accordion.Item>
-        </Accordion.Root>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       }
-      code={`<Accordion.Root singleOpen class="w-full">
-  <Accordion.Item>
-    <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-    <Accordion.Content> ... </Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item defaultOpen>
-    <Accordion.Trigger>Is it styled?</Accordion.Trigger>
-    <Accordion.Content> ... </Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item>
-    <Accordion.Trigger>Is it animated?</Accordion.Trigger>
-    <Accordion.Content> ... </Accordion.Content>
-  </Accordion.Item>
-</Accordion.Root>`}
+      code={`<Accordion singleOpen class="w-full">
+  <AccordionItem>
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent> ... </AccordionContent>
+  </AccordionItem>
+  <AccordionItem defaultOpen>
+    <AccordionTrigger>Is it styled?</AccordionTrigger>
+    <AccordionContent> ... </AccordionContent>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionTrigger>Is it animated?</AccordionTrigger>
+    <AccordionContent> ... </AccordionContent>
+  </AccordionItem>
+</Accordion>`}
     />
   </div>
 );
 
 export const head: DocumentHead = buildHead({
-  title: 'Accordion. - Onwo UI',
+  title: 'Accordion - Onwo UI',
   description:
     'Customizable accordion components using tailwind css and qwik.js for fast, responsive, and user-friendly interfaces. Explore our UI library for more components.',
 });

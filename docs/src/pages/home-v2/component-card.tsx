@@ -1,7 +1,7 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { ClipboardIcon, CodeIcon } from '@onwo/icons';
 import type { IconComponent } from '@onwo/primitives/svg-icon';
-import { cn, Modal } from '@onwo/ui';
+import { Modal, ModalTrigger, cn } from '@onwo/ui';
 import { CodeModalPanel } from './code-modal-panel';
 
 import type { BoxedComp } from './sections';
@@ -28,12 +28,12 @@ export const ComponentCard = ({ title, height, display: Display }: BoxedComp) =>
     <div class="absolute px-4 w-full flex justify-between items-center mb-2 mt-1">
       <span class="text-sm font-medium">{title}</span>
       <div class="flex gap-2">
-        <Modal.Root>
-          <Modal.Trigger class="block mx-auto">
+        <Modal>
+          <ModalTrigger class="block mx-auto">
             <CardButton icon={CodeIcon} />
-          </Modal.Trigger>
+          </ModalTrigger>
           <CodeModalPanel code="int main(int ac, char **av) {}" />
-        </Modal.Root>
+        </Modal>
         <CardButton icon={ClipboardIcon} />
       </div>
     </div>

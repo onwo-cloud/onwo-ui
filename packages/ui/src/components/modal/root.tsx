@@ -1,1 +1,1 @@
-export { Root } from '@onwo/primitives/modal';
+export { Root as Modal } from '@onwo/primitives/modal';

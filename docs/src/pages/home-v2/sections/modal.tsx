@@ -1,74 +1,84 @@
 import { XIcon } from '@onwo/icons';
-import { Button, Modal } from '@onwo/ui';
+import {
+  Button,
+  Modal,
+  ModalClose,
+  ModalDescription,
+  ModalFooter,
+  ModalHeader,
+  ModalPanel,
+  ModalTitle,
+  ModalTrigger,
+} from '@onwo/ui';
 import type { BoxedComp, Section } from '.';
 
 const defaultModal: BoxedComp = {
   title: 'Default',
   display: () => (
-    <Modal.Root>
-      <Modal.Trigger class="block mx-auto">
+    <Modal>
+      <ModalTrigger class="block mx-auto">
         <Button as="div">Open Modal</Button>
-      </Modal.Trigger>
-      <Modal.Panel>
-        <Modal.Header class="flex justify-between">
-          <Modal.Title class="font-medium">Opened a modal</Modal.Title>
-          <Modal.Close>
+      </ModalTrigger>
+      <ModalPanel>
+        <ModalHeader class="flex justify-between">
+          <ModalTitle class="font-medium">Opened a modal</ModalTitle>
+          <ModalClose>
             <Button as="div" size="xs" variant="ghost">
               <XIcon size="xs" />
             </Button>
-          </Modal.Close>
-        </Modal.Header>
-        <Modal.Description>
+          </ModalClose>
+        </ModalHeader>
+        <ModalDescription>
           You can try typing in this input on mobile to check repositioning.
           <input class="border border-line" name="text-input" />
-        </Modal.Description>
-        <Modal.Footer class="flex gap-4 justify-between">
-          <Modal.Close>
+        </ModalDescription>
+        <ModalFooter class="flex gap-4 justify-between">
+          <ModalClose>
             <Button as="div" size="sm" variant="ghost">
               Cancel
             </Button>
-          </Modal.Close>
-          <Modal.Close>
+          </ModalClose>
+          <ModalClose>
             <Button as="div" size="sm">
               Save changes
             </Button>
-          </Modal.Close>
-        </Modal.Footer>
-      </Modal.Panel>
-    </Modal.Root>
+          </ModalClose>
+        </ModalFooter>
+      </ModalPanel>
+    </Modal>
   ),
   code: `
-<Modal.Root>
-  <Modal.Trigger>
+<Modal>
+  <ModalTrigger>
     <Button>Open Modal</Button>
-  </Modal.Trigger>
-  <Modal.Panel>
-    <Modal.Header class="flex justify-between">
-      <Modal.Title class="font-medium">Opened a modal</Modal.Title>
-      <Modal.Close>
+  </ModalTrigger>
+  <ModalPanel>
+    <ModalHeader class="flex justify-between">
+      <ModalTitle class="font-medium">Opened a modal</ModalTitle>
+      <ModalClose>
         <Button size="xs" variant="ghost">
           <XIcon size="xs" />
         </Button>
-      </Modal.Close>
-    </Modal.Header>
-    <Modal.Description>
+      </ModalClose>
+    </ModalHeader>
+    <ModalDescription>
       You can try typing in this input on mobile to check repositioning.
       <input class="border border-line" name="text-input" />
-    </Modal.Description>
-    <Modal.Footer class="flex gap-4 justify-between">
-      <Modal.Close>
+    </ModalDescription>
+    <ModalFooter class="flex gap-4 justify-between">
+      <ModalClose>
         <Button size="sm" variant="ghost">
           Cancel
         </Button>
-      </Modal.Close>
-      <Modal.Close>
+      </ModalClose>
+      <ModalClose>
         <Button size="sm">
           Save changes
         </Button>
-      </Modal.Close>
-    </Modal.Footer>
-  </Modal.Panel>
-</Modal.Root>
+      </ModalClose>
+    </ModalFooter>
+  </ModalPanel>
+</Modal>
 `,
 };
 

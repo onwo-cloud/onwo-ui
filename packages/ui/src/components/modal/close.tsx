@@ -1,1 +1,1 @@
-export { Close } from '@onwo/primitives/modal';
+export { Close as ModalClose } from '@onwo/primitives/modal';

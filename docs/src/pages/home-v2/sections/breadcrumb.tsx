@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from '@onwo/icons';
-import { Breadcrumb } from '@onwo/ui';
+import { Breadcrumb, BreadcrumbLink } from '@onwo/ui';
 import type { BoxedComp, Section } from '.';
 
 const links = [
@@ -11,16 +11,16 @@ const links = [
 const defaultBreadcrumb: BoxedComp = {
   title: 'Default',
   display: () => (
-    <Breadcrumb.Root>
-      <Breadcrumb.Link to="#/" label="Home" />
-      <Breadcrumb.Link to="#/hello" label="Hello" />
-      <Breadcrumb.Link to="#/hello/world" label="World" />
-    </Breadcrumb.Root>
+    <Breadcrumb>
+      <BreadcrumbLink to="#/" label="Home" />
+      <BreadcrumbLink to="#/hello" label="Hello" />
+      <BreadcrumbLink to="#/hello/world" label="World" />
+    </Breadcrumb>
   ),
   code: `<Breadcrumb>
-  <Breadcrumb.Link to="/" label="Home" />
-  <Breadcrumb.Link to="/hello" label="Hello" />
-  <Breadcrumb.Link to="/hello/world" label="World" />
+  <BreadcrumbLink to="/" label="Home" />
+  <BreadcrumbLink to="/hello" label="Hello" />
+  <BreadcrumbLink to="/hello/world" label="World" />
 </Breadcrumb>`,
 };
 
@@ -28,13 +28,11 @@ const customSeparatorBreadcrumb: BoxedComp = {
   title: 'Custom separator icon',
   display: () => (
     <div class="flex flex-col gap-4">
-      <Breadcrumb.Root separator={ArrowRightIcon}>
-        {Breadcrumb.Link.fromList(links)}
-      </Breadcrumb.Root>
+      <Breadcrumb separator={ArrowRightIcon}>{BreadcrumbLink.fromList(links)}</Breadcrumb>
     </div>
   ),
   code: `<Breadcrumb separator={ArrowRightIcon}>
-  {Breadcrumb.Link.fromList(links)}
+  {BreadcrumbLink.fromList(links)}
 </Breadcrumb>`,
 };
 

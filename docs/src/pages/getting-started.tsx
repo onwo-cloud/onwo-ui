@@ -1,4 +1,4 @@
-import { PageNavigation as PNav } from '@onwo/ui';
+import { PageNavigationLink } from '@onwo/ui';
 import { PageHeadSection } from '~/commons/page-head-section';
 
 export const GettingStartedPage = () => (
@@ -30,9 +30,9 @@ export const GettingStartedPage = () => (
 
         <section>
           <div>
-            <PNav.Link as="h2" label="Prerequisites" id="prerequisites">
+            <PageNavigationLink as="h2" label="Prerequisites" id="prerequisites">
               Prerequisites
-            </PNav.Link>
+            </PageNavigationLink>
             <div>
               <p>To start using onwo-ui, you will need:</p>
               <ul>
@@ -53,9 +53,9 @@ export const GettingStartedPage = () => (
 
         <section>
           <div>
-            <PNav.Link as="h2" label="Setup with qwik" id="qwik-setup">
+            <PageNavigationLink as="h2" label="Setup with qwik" id="qwik-setup">
               Setup with qwik
-            </PNav.Link>
+            </PageNavigationLink>
 
             <div>
               <p>Add onwo-ui dependencies to your project</p>

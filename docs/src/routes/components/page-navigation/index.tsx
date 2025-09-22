@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { PageNavigation as PNav } from '@onwo/ui';
+import { PageNavigationAppendix, PageNavigationLink, PageNavigationProvider } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -28,16 +28,16 @@ export default () => (
 
     <Anatomy
       variants={{
-        Default: `import { PageNavigation as PNav } from '@onwo/ui';
+        Default: `import { PageNavigationProvider, PageNavigationLink, PageNavigationAppendix } from '@onwo/ui';
 
-<PNav.Provider>
+<PageNavigationProvider>
   <div>
-    <PNav.Link label="Link 1">Link 1</PNav.Link>
-    <PNav.Link label="Link 2">Sublink 1</PNav.Link>
-    <PNav.Link label="Link 3">Link 3</PNav.Link>
+    <PageNavigationLink label="Link 1">Link 1</PageNavigationLink>
+    <PageNavigationLink label="Link 2">Sublink 1</PageNavigationLink>
+    <PageNavigationLink label="Link 3">Link 3</PageNavigationLink>
   </div>
-  <PNav.Appendix sticky />
-</PNav.Provider>`,
+  <PageNavigationAppendix sticky />
+</PageNavigationProvider>`,
         'Computed JSX': `<>
   <div>
     <a id="link-1" href="#link-1">Link 1</a>
@@ -56,67 +56,67 @@ export default () => (
     <Showcase
       title="Default"
       component={
-        <PNav.Provider>
+        <PageNavigationProvider>
           <div class="p-1 flex bg-paper w-fit gap-4 mb-4">
-            <PNav.Link id="link-1" label="Link 1">
+            <PageNavigationLink id="link-1" label="Link 1">
               Link 1
-            </PNav.Link>
-            <PNav.Link id="link-2" label="Link 2">
+            </PageNavigationLink>
+            <PageNavigationLink id="link-2" label="Link 2">
               Link 2
-            </PNav.Link>
-            <PNav.Link id="link-3" label="Link 3">
+            </PageNavigationLink>
+            <PageNavigationLink id="link-3" label="Link 3">
               Link 3
-            </PNav.Link>
+            </PageNavigationLink>
           </div>
-          <PNav.Appendix />
-        </PNav.Provider>
+          <PageNavigationAppendix />
+        </PageNavigationProvider>
       }
-      code={`import { PageNavigation as PNav } from '@onwo/ui';
+      code={`import { PageNavigationProvider, PageNavigationLink, PageNavigationAppendix } from '@onwo/ui';
 
-<PNav.Provider>
+<PageNavigationProvider>
   <div class="p-1 flex bg-paper w-fit gap-4 mb-4">
-    <PNav.Link id="link-1" label="Link 1">Link 1</PNav.Link>
-    <PNav.Link id="link-2" label="Link 2">Link 2</PNav.Link>
-    <PNav.Link id="link-3" label="Link 3">Link 3</PNav.Link>
+    <PageNavigationLink id="link-1" label="Link 1">Link 1</PageNavigationLink>
+    <PageNavigationLink id="link-2" label="Link 2">Link 2</PageNavigationLink>
+    <PageNavigationLink id="link-3" label="Link 3">Link 3</PageNavigationLink>
   </div>
-  <PNav.Appendix />
-</PNav.Provider>`}
+  <PageNavigationAppendix />
+</PageNavigationProvider>`}
     />
 
     <Showcase
       title="Custom anchors"
       component={
-        <PNav.Provider class="grid grid-cols-[1fr_auto] gap-8">
+        <PageNavigationProvider class="grid grid-cols-[1fr_auto] gap-8">
           <div class="onwo-format">
-            <PNav.Link level={1} as="h2" id="hlink-2" label="H2">
+            <PageNavigationLink level={1} as="h2" id="hlink-2" label="H2">
               Title 1
-            </PNav.Link>
-            <PNav.Link level={2} as="h3" id="hlink-3" label="H3">
+            </PageNavigationLink>
+            <PageNavigationLink level={2} as="h3" id="hlink-3" label="H3">
               Title 2
-            </PNav.Link>
-            <PNav.Link level={3} as="h4" id="hlink-4" label="H4">
+            </PageNavigationLink>
+            <PageNavigationLink level={3} as="h4" id="hlink-4" label="H4">
               Title 3
-            </PNav.Link>
+            </PageNavigationLink>
           </div>
-          <PNav.Appendix maxLevelShown={2} />
-        </PNav.Provider>
+          <PageNavigationAppendix maxLevelShown={2} />
+        </PageNavigationProvider>
       }
-      code={`import { PageNavigation as PNav } from '@onwo/ui';
+      code={`import { PageNavigationProvider, PageNavigationLink, PageNavigationAppendix } from '@onwo/ui';
 
-<PNav.Provider class="grid grid-cols-[1fr_auto] gap-8">
+<PageNavigationProvider class="grid grid-cols-[1fr_auto] gap-8">
   <div class="onwo-format">
-    <PNav.Link as="h2" id="hlink-2" label="H2">
+    <PageNavigationLink as="h2" id="hlink-2" label="H2">
       Title 1
-    </PNav.Link>
-    <PNav.Link as="h3" level={2} id="hlink-3" label="H3">
+    </PageNavigationLink>
+    <PageNavigationLink as="h3" level={2} id="hlink-3" label="H3">
       Title 2
-    </PNav.Link>
-    <PNav.Link as="h4" level={3} id="hlink-4" label="H4">
+    </PageNavigationLink>
+    <PageNavigationLink as="h4" level={3} id="hlink-4" label="H4">
       Title 3
-    </PNav.Link>
+    </PageNavigationLink>
   </div>
-  <PNav.Appendix maxLevelShown={2} />
-</PNav.Provider>`}
+  <PageNavigationAppendix maxLevelShown={2} />
+</PageNavigationProvider>`}
     />
     <p class="mt-6">
       Set the `elem` prop to create heading-level navigation elements without nesting, adjust link

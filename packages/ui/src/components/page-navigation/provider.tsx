@@ -1,6 +1,6 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Provider as PProvider } from '@onwo/primitives/page-navigation';
+import { Provider } from '@onwo/primitives/page-navigation';
 
-export const Provider = (props: PropsOf<typeof PProvider>) => (
-  <PProvider {...props}>{props.children}</PProvider>
+export const PageNavigationProvider = (props: PropsOf<typeof Provider>) => (
+  <Provider {...props}>{props.children}</Provider>
 );

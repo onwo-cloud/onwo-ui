@@ -43,5 +43,6 @@ export { section as spinnerSection } from './spinner';
 export { section as switchSection } from './switch';
 export { section as tableSection } from './table';
 export { section as tabsSection } from './tabs';
+export { section as radioSection } from './radio';
 export { section as tagSection } from './tag';
 export { section as tooltipSection } from './tooltip';

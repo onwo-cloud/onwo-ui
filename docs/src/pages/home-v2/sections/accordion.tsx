@@ -1,5 +1,5 @@
 import { styledcn } from '@onwo/primitives';
-import { Accordion } from '@onwo/ui';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@onwo/ui';
 import type { BoxedComp, Section } from '.';
 
 const ContainerAccordion = styledcn.tag('div')`px-16 w-full`;
@@ -9,42 +9,42 @@ const defaultAccordion: BoxedComp = {
   height: 82,
   display: () => (
     <ContainerAccordion>
-      <Accordion.Root class="w-full">
-        <Accordion.Item>
-          <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-          <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item>
-          <Accordion.Trigger>Is it styled?</Accordion.Trigger>
-          <Accordion.Content>
+      <Accordion class="w-full">
+        <AccordionItem>
+          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionTrigger>Is it styled?</AccordionTrigger>
+          <AccordionContent>
             Yes. It comes with default styles that matches the other components&apos; aesthetic.
-          </Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item>
-          <Accordion.Trigger>Is it animated?</Accordion.Trigger>
-          <Accordion.Content>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionTrigger>Is it animated?</AccordionTrigger>
+          <AccordionContent>
             Yes. It's animated by default, but you can disable it if you prefer.
-          </Accordion.Content>
-        </Accordion.Item>
-      </Accordion.Root>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </ContainerAccordion>
   ),
   code: `import { Accordion } from '@onwo/ui';
 
-<Accordion.Root class="w-full">
-  <Accordion.Item>
-    <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-    <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item>
-    <Accordion.Trigger>Is it styled?</Accordion.Trigger>
-    <Accordion.Content>Yes. It comes with default styles that matches the other components' aesthetic.</Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item>
-    <Accordion.Trigger>Is it animated?</Accordion.Trigger>
-    <Accordion.Content>Yes. It's animated by default, but you can disable it if you prefer.</Accordion.Content>
-  </Accordion.Item>
-</Accordion.Root>`,
+<Accordion class="w-full">
+  <AccordionItem>
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionTrigger>Is it styled?</AccordionTrigger>
+    <AccordionContent>Yes. It comes with default styles that matches the other components' aesthetic.</AccordionContent>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionTrigger>Is it animated?</AccordionTrigger>
+    <AccordionContent>Yes. It's animated by default, but you can disable it if you prefer.</AccordionContent>
+  </AccordionItem>
+</Accordion>`,
 };
 
 const singleOpenAccordion: BoxedComp = {
@@ -52,42 +52,42 @@ const singleOpenAccordion: BoxedComp = {
   height: 82,
   display: () => (
     <ContainerAccordion>
-      <Accordion.Root singleOpen class="w-full">
-        <Accordion.Item>
-          <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-          <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item defaultOpen>
-          <Accordion.Trigger>Is it styled?</Accordion.Trigger>
-          <Accordion.Content>
+      <Accordion singleOpen class="w-full">
+        <AccordionItem>
+          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+        </AccordionItem>
+        <AccordionItem defaultOpen>
+          <AccordionTrigger>Is it styled?</AccordionTrigger>
+          <AccordionContent>
             Yes. It comes with default styles that matches the other components&apos; aesthetic.
-          </Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item>
-          <Accordion.Trigger>Is it animated?</Accordion.Trigger>
-          <Accordion.Content>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionTrigger>Is it animated?</AccordionTrigger>
+          <AccordionContent>
             Yes. It's animated by default, but you can disable it if you prefer.
-          </Accordion.Content>
-        </Accordion.Item>
-      </Accordion.Root>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </ContainerAccordion>
   ),
   code: `import { Accordion } from '@onwo/ui';
 
-<Accordion.Root singleOpen class="w-full">
-  <Accordion.Item>
-    <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-    <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item defaultOpen>
-    <Accordion.Trigger>Is it styled?</Accordion.Trigger>
-    <Accordion.Content>Yes. It comes with default styles that matches the other components' aesthetic.</Accordion.Content>
-  </Accordion.Item>
-  <Accordion.Item>
-    <Accordion.Trigger>Is it animated?</Accordion.Trigger>
-    <Accordion.Content>Yes. It's animated by default, but you can disable it if you prefer.</Accordion.Content>
-  </Accordion.Item>
-</Accordion.Root>`,
+<Accordion singleOpen class="w-full">
+  <AccordionItem>
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+  </AccordionItem>
+  <AccordionItem defaultOpen>
+    <AccordionTrigger>Is it styled?</AccordionTrigger>
+    <AccordionContent>Yes. It comes with default styles that matches the other components' aesthetic.</AccordionContent>
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionTrigger>Is it animated?</AccordionTrigger>
+    <AccordionContent>Yes. It's animated by default, but you can disable it if you prefer.</AccordionContent>
+  </AccordionItem>
+</Accordion>`,
 };
 
 export const section: Section = {

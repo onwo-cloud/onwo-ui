@@ -1,5 +1,5 @@
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Tabs } from '@onwo/ui';
+import { Tabs, TabsList, TabsPanel, TabsPanels, TabsPill, TabsTab } from '@onwo/ui';
 import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
 import { Showcase } from '~/commons/showcase';
@@ -29,144 +29,144 @@ export default () => (
       variants={{
         Default: `import { Tabs } from '@onwo/ui';
 
-<Tabs.Root>
-  <Tabs.List>
-    <Tabs.Tab>...</Tabs.Tab>
-    <Tabs.Tab>...</Tabs.Tab>
-    <Tabs.Tab>...</Tabs.Tab>
-  </Tabs.List>
-  <Tabs.Panels>
-    <Tabs.Panel>...</Tabs.Panel>
-    <Tabs.Panel>...</Tabs.Panel>
-    <Tabs.Panel>...</Tabs.Panel>
-  </Tabs.Panels>
-</Tabs.Root>`,
+<Tabs>
+  <TabsList>
+    <TabsTab>...</TabsTab>
+    <TabsTab>...</TabsTab>
+    <TabsTab>...</TabsTab>
+  </TabsList>
+  <TabsPanels>
+    <TabsPanel>...</TabsPanel>
+    <TabsPanel>...</TabsPanel>
+    <TabsPanel>...</TabsPanel>
+  </TabsPanels>
+</Tabs>`,
       }}
     />
 
     <Showcase
       title="Default"
       component={
-        <Tabs.Root>
-          <Tabs.List>
-            <Tabs.Tab>First tab</Tabs.Tab>
-            <Tabs.Tab>Second tab</Tabs.Tab>
-            <Tabs.Tab>Third tab</Tabs.Tab>
-          </Tabs.List>
-          <Tabs.Panels>
-            <Tabs.Panel>Hello</Tabs.Panel>
-            <Tabs.Panel>Hi</Tabs.Panel>
-            <Tabs.Panel>Bonjour</Tabs.Panel>
-          </Tabs.Panels>
-        </Tabs.Root>
+        <Tabs>
+          <TabsList>
+            <TabsTab>First tab</TabsTab>
+            <TabsTab>Second tab</TabsTab>
+            <TabsTab>Third tab</TabsTab>
+          </TabsList>
+          <TabsPanels>
+            <TabsPanel>Hello</TabsPanel>
+            <TabsPanel>Hi</TabsPanel>
+            <TabsPanel>Bonjour</TabsPanel>
+          </TabsPanels>
+        </Tabs>
       }
-      code={`<Tabs.Root>
-  <Tabs.List>
-    <Tabs.Tab>First tab</Tabs.Tab>
-    <Tabs.Tab>Second tab</Tabs.Tab>
-    <Tabs.Tab>Third tab</Tabs.Tab>
-  </Tabs.List>
-  <Tabs.Panels>
-    <Tabs.Panel>Hello</Tabs.Panel>
-    <Tabs.Panel>Hi</Tabs.Panel>
-    <Tabs.Panel>Bonjour</Tabs.Panel>
-  </Tabs.Panels>
-</Tabs.Root>`}
+      code={`<Tabs>
+  <TabsList>
+    <TabsTab>First tab</TabsTab>
+    <TabsTab>Second tab</TabsTab>
+    <TabsTab>Third tab</TabsTab>
+  </TabsList>
+  <TabsPanels>
+    <TabsPanel>Hello</TabsPanel>
+    <TabsPanel>Hi</TabsPanel>
+    <TabsPanel>Bonjour</TabsPanel>
+  </TabsPanels>
+</Tabs>`}
     />
 
     <Showcase
       title="With pills"
       component={
-        <Tabs.Root>
-          <Tabs.List>
-            <Tabs.Pill>First tab</Tabs.Pill>
-            <Tabs.Pill>Second tab</Tabs.Pill>
-            <Tabs.Pill>Third tab</Tabs.Pill>
-          </Tabs.List>
-          <Tabs.Panels>
-            <Tabs.Panel>Hello</Tabs.Panel>
-            <Tabs.Panel>Hi</Tabs.Panel>
-            <Tabs.Panel>Bonjour</Tabs.Panel>
-          </Tabs.Panels>
-        </Tabs.Root>
+        <Tabs>
+          <TabsList>
+            <TabsPill>First tab</TabsPill>
+            <TabsPill>Second tab</TabsPill>
+            <TabsPill>Third tab</TabsPill>
+          </TabsList>
+          <TabsPanels>
+            <TabsPanel>Hello</TabsPanel>
+            <TabsPanel>Hi</TabsPanel>
+            <TabsPanel>Bonjour</TabsPanel>
+          </TabsPanels>
+        </Tabs>
       }
-      code={`<Tabs.Root>
-  <Tabs.List>
-    <Tabs.Pill>First tab</Tabs.Pill>
-    <Tabs.Pill>Second tab</Tabs.Pill>
-    <Tabs.Pill>Third tab</Tabs.Pill>
-  </Tabs.List>
-  <Tabs.Panels>
-    <Tabs.Panel>Hello</Tabs.Panel>
-    <Tabs.Panel>Hi</Tabs.Panel>
-    <Tabs.Panel>Bonjour</Tabs.Panel>
-  </Tabs.Panels>
-</Tabs.Root>`}
+      code={`<Tabs>
+  <TabsList>
+    <TabsPill>First tab</TabsPill>
+    <TabsPill>Second tab</TabsPill>
+    <TabsPill>Third tab</TabsPill>
+  </TabsList>
+  <TabsPanels>
+    <TabsPanel>Hello</TabsPanel>
+    <TabsPanel>Hi</TabsPanel>
+    <TabsPanel>Bonjour</TabsPanel>
+  </TabsPanels>
+</Tabs>`}
     />
 
     <Showcase
       title="Sizes"
       component={
         <div class="grid grid-cols-2 gap-4">
-          <Tabs.Root>
-            <Tabs.List size="sm">
-              <Tabs.Pill>Pill-sm</Tabs.Pill>
-              <Tabs.Pill>Pill-sm</Tabs.Pill>
-              <Tabs.Pill>Pill-sm</Tabs.Pill>
-            </Tabs.List>
-          </Tabs.Root>
-          <Tabs.Root>
-            <Tabs.List>
-              <Tabs.Pill>Pill-md</Tabs.Pill>
-              <Tabs.Pill>Pill-md</Tabs.Pill>
-              <Tabs.Pill>Pill-md</Tabs.Pill>
-            </Tabs.List>
-          </Tabs.Root>
-          <Tabs.Root>
-            <Tabs.List size="sm">
-              <Tabs.Tab>Tab-sm</Tabs.Tab>
-              <Tabs.Tab>Tab-sm</Tabs.Tab>
-              <Tabs.Tab>Tab-sm</Tabs.Tab>
-            </Tabs.List>
-          </Tabs.Root>
-          <Tabs.Root>
-            <Tabs.List>
-              <Tabs.Tab>Tab-md</Tabs.Tab>
-              <Tabs.Tab>Tab-md</Tabs.Tab>
-              <Tabs.Tab>Tab-md</Tabs.Tab>
-            </Tabs.List>
-          </Tabs.Root>
+          <Tabs>
+            <TabsList size="sm">
+              <TabsPill>Pill-sm</TabsPill>
+              <TabsPill>Pill-sm</TabsPill>
+              <TabsPill>Pill-sm</TabsPill>
+            </TabsList>
+          </Tabs>
+          <Tabs>
+            <TabsList>
+              <TabsPill>Pill-md</TabsPill>
+              <TabsPill>Pill-md</TabsPill>
+              <TabsPill>Pill-md</TabsPill>
+            </TabsList>
+          </Tabs>
+          <Tabs>
+            <TabsList size="sm">
+              <TabsTab>Tab-sm</TabsTab>
+              <TabsTab>Tab-sm</TabsTab>
+              <TabsTab>Tab-sm</TabsTab>
+            </TabsList>
+          </Tabs>
+          <Tabs>
+            <TabsList>
+              <TabsTab>Tab-md</TabsTab>
+              <TabsTab>Tab-md</TabsTab>
+              <TabsTab>Tab-md</TabsTab>
+            </TabsList>
+          </Tabs>
         </div>
       }
       code={`<div class="grid grid-cols-2 gap-4">
-  <Tabs.Root>
-    <Tabs.List size="sm">
-      <Tabs.Pill>Pill-sm</Tabs.Pill>
-      <Tabs.Pill>Pill-sm</Tabs.Pill>
-      <Tabs.Pill>Pill-sm</Tabs.Pill>
-    </Tabs.List>
-  </Tabs.Root>
-  <Tabs.Root>
-    <Tabs.List>
-      <Tabs.Pill>Pill-md</Tabs.Pill>
-      <Tabs.Pill>Pill-md</Tabs.Pill>
-      <Tabs.Pill>Pill-md</Tabs.Pill>
-    </Tabs.List>
-  </Tabs.Root>
-  <Tabs.Root>
-    <Tabs.List size="sm">
-      <Tabs.Tab>Tab-sm</Tabs.Tab>
-      <Tabs.Tab>Tab-sm</Tabs.Tab>
-      <Tabs.Tab>Tab-sm</Tabs.Tab>
-    </Tabs.List>
-  </Tabs.Root>
-  <Tabs.Root>
-    <Tabs.List>
-      <Tabs.Tab>Tab-md</Tabs.Tab>
-      <Tabs.Tab>Tab-md</Tabs.Tab>
-      <Tabs.Tab>Tab-md</Tabs.Tab>
-    </Tabs.List>
-  </Tabs.Root>
+  <Tabs>
+    <TabsList size="sm">
+      <TabsPill>Pill-sm</TabsPill>
+      <TabsPill>Pill-sm</TabsPill>
+      <TabsPill>Pill-sm</TabsPill>
+    </TabsList>
+  </Tabs>
+  <Tabs>
+    <TabsList>
+      <TabsPill>Pill-md</TabsPill>
+      <TabsPill>Pill-md</TabsPill>
+      <TabsPill>Pill-md</TabsPill>
+    </TabsList>
+  </Tabs>
+  <Tabs>
+    <TabsList size="sm">
+      <TabsTab>Tab-sm</TabsTab>
+      <TabsTab>Tab-sm</TabsTab>
+      <TabsTab>Tab-sm</TabsTab>
+    </TabsList>
+  </Tabs>
+  <Tabs>
+    <TabsList>
+      <TabsTab>Tab-md</TabsTab>
+      <TabsTab>Tab-md</TabsTab>
+      <TabsTab>Tab-md</TabsTab>
+    </TabsList>
+  </Tabs>
 </div>`}
     />
 
@@ -174,49 +174,49 @@ export default () => (
       title="Custom styling"
       component={
         <div class="flex flex-col gap-4">
-          <Tabs.Root>
-            <Tabs.List>
-              <Tabs.Tab class="after:bg-success hover:text-success data-selected:text-success">
+          <Tabs>
+            <TabsList>
+              <TabsTab class="after:bg-success hover:text-success data-selected:text-success">
                 Green tab
-              </Tabs.Tab>
-              <Tabs.Tab disabled>Disabled tab</Tabs.Tab>
-              <Tabs.Tab class="after:bg-success hover:text-success data-selected:text-success">
+              </TabsTab>
+              <TabsTab disabled>Disabled tab</TabsTab>
+              <TabsTab class="after:bg-success hover:text-success data-selected:text-success">
                 Green tab
-              </Tabs.Tab>
-            </Tabs.List>
-          </Tabs.Root>
-          <Tabs.Root>
-            <Tabs.List>
-              <Tabs.Pill class="hover:bg-success/30 data-selected:bg-success/30">
+              </TabsTab>
+            </TabsList>
+          </Tabs>
+          <Tabs>
+            <TabsList>
+              <TabsPill class="hover:bg-success/30 data-selected:bg-success/30">
                 Green pill
-              </Tabs.Pill>
-              <Tabs.Pill disabled>Disabled pill</Tabs.Pill>
-              <Tabs.Pill class="hover:bg-success/30 data-selected:bg-success/30">
+              </TabsPill>
+              <TabsPill disabled>Disabled pill</TabsPill>
+              <TabsPill class="hover:bg-success/30 data-selected:bg-success/30">
                 Green tab pill
-              </Tabs.Pill>
-            </Tabs.List>
-          </Tabs.Root>
+              </TabsPill>
+            </TabsList>
+          </Tabs>
         </div>
       }
       code={`<div class="flex flex-col gap-4">
-  <Tabs.Root>
-    <Tabs.List>
-      <Tabs.Tab class="after:bg-success hover:text-success data-selected:text-success">
+  <Tabs>
+    <TabsList>
+      <TabsTab class="after:bg-success hover:text-success data-selected:text-success">
         Green tab
-      </Tabs.Tab>
-      <Tabs.Tab disabled>Disabled tab</Tabs.Tab>
-      <Tabs.Tab class="after:bg-success hover:text-success data-selected:text-success">
+      </TabsTab>
+      <TabsTab disabled>Disabled tab</TabsTab>
+      <TabsTab class="after:bg-success hover:text-success data-selected:text-success">
         Green tab
-      </Tabs.Tab>
-    </Tabs.List>
-  </Tabs.Root>
-  <Tabs.Root>
-    <Tabs.List>
-      <Tabs.Pill class="hover:bg-success/30 data-selected:bg-success/30">Green pill</Tabs.Pill>
-      <Tabs.Pill disabled>Disabled pill</Tabs.Pill>
-      <Tabs.Pill class="hover:bg-success/30 data-selected:bg-success/30">Green tab pill</Tabs.Pill>
-    </Tabs.List>
-  </Tabs.Root>
+      </TabsTab>
+    </TabsList>
+  </Tabs>
+  <Tabs>
+    <TabsList>
+      <TabsPill class="hover:bg-success/30 data-selected:bg-success/30">Green pill</TabsPill>
+      <TabsPill disabled>Disabled pill</TabsPill>
+      <TabsPill class="hover:bg-success/30 data-selected:bg-success/30">Green tab pill</TabsPill>
+    </TabsList>
+  </Tabs>
 </div>`}
     />
 

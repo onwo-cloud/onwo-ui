@@ -1,11 +1,11 @@
 set dotenv-load := true
 
 workspace CMD:
-    yarn --cwd=packages/tailwindcss {{CMD}} || true
-    yarn --cwd=packages/primitives  {{CMD}} || true
-    yarn --cwd=packages/ui          {{CMD}} || true
-    yarn --cwd=packages/icons       {{CMD}} || true
-    yarn --cwd=docs                 {{CMD}} || true
+    pnpm run --dir=packages/tailwindcss {{CMD}} || true
+    pnpm run --dir=packages/primitives  {{CMD}} || true
+    pnpm run --dir=packages/ui          {{CMD}} || true
+    pnpm run --dir=packages/icons       {{CMD}} || true
+    pnpm run --dir=docs                 {{CMD}} || true
 
 lint:
   #!/usr/bin/env bash
@@ -20,30 +20,30 @@ lint-fix:
 build-tailwind-plugin:
   #!/usr/bin/env bash
   export ESLINT_MODE=full
-  yarn --cwd=packages/tailwindcss build
+  pnpm run --dir=packages/tailwindcss build
 
 build-primitives:
   #!/usr/bin/env bash
   export ESLINT_MODE=full
-  yarn --cwd=packages/primitives build
+  pnpm run --dir=packages/primitives build
 
 build-ui:
   #!/usr/bin/env bash
   export ESLINT_MODE=full
-  yarn --cwd=packages/ui build
+  pnpm run --dir=packages/ui build
 
 build-icons:
   #!/usr/bin/env bash
   export ESLINT_MODE=full
-  yarn --cwd=packages/icons build
+  pnpm run --dir=packages/icons build
 
 build-docs:
   #!/usr/bin/env bash
   export ESLINT_MODE=full
-  yarn --cwd=docs build
+  pnpm run --dir=docs build
 
 install:
-  yarn install
+  pnpm install
 
 # build performed in order
 build: install build-tailwind-plugin build-primitives build-icons build-ui build-docs

@@ -10,11 +10,16 @@
 @import "tailwindcss";
 
 @plugin '@onwo/tailwindcss';
+
 @plugin '@onwo/tailwindcss/dist/theme' {
   name: 'onwo-light';
 
-  color-accent-accent: rgb(63, 43, 215);
+  generator-tailwind: 0 98.4 90 0, 723.1 61.5 63.4 -5.5, 1000 27.7 90 0;
 
+  palette-accent: 280;
+}
+
+/*
   color-border-line: rgb(230, 229, 244);
 
   color-bg-paper: rgb(255, 255, 255);
@@ -33,30 +38,14 @@
   color-status-warn: #ffb319;
   color-status-error: #ff4e64;
   color-status-success: #49b356;
-}
+*/
 
 @source "../../node_modules/@onwo/ui";
 @source "../../node_modules/@onwo/primitives";
 @source "../../node_modules/@onwo/icons";
 
-:root.theme-onwo-light, .theme-onwo-light {
-
-  /* border-radius */
-  --radius-i-xs: 0.25rem;
-  --radius-i-sm: 0.5rem;
-  --radius-i-md: 0.75rem;
-  --radius-s-xs: 0.25rem;
-  --radius-s-sm: 0.5rem;
-  --radius-s-md: 0.75rem;
-  --radius-s-lg: 1rem;
-
-  /* border-width */
-  --border-width: 0.0625rem;
-  --border-i-width: 0.125rem;
-
-  /* opacity */
-  --opacity-onwo: 0.6;
-
+:root.theme-onwo-light,
+.theme-onwo-light {
   /* fonts */
   --font-display: 'Satoshi';
   --font-body: 'Satoshi';

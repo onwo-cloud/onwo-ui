@@ -1,230 +1,47 @@
-import type { QRL } from '@builder.io/qwik';
-import { component$, useSignal, $, useTask$, Slot } from '@builder.io/qwik';
+import type { Signal } from '@builder.io/qwik';
+import { component$, useSignal } from '@builder.io/qwik';
 import { ChevronDownIcon, SwatchBookIcon } from '@onwo/icons';
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuPanel, Tabs, TabsTab } from '@onwo/ui';
 import { BORDER_CLASSES } from '.';
 
-type ThemeDropdownProps = {
-  options?: { value: string; label: string }[];
-  placeholder?: string;
-  onChange$?: QRL<(value: string) => void>;
-  onFocus$?: QRL<() => void>;
-  onBlur$?: QRL<() => void>;
-  class?: string;
-  disabled?: boolean;
-  value?: string;
-  defaultValue?: string;
-  showIcon?: boolean;
-  autoFocus?: boolean;
+type DropdownButtonProps = {
+  isOpen: Signal<boolean>;
 };
 
-export const ThemeDropdown = component$<ThemeDropdownProps>(
-  ({
-    options = [],
-    onChange$,
-    onFocus$,
-    onBlur$,
-    placeholder,
-    class: className = '',
-    disabled = false,
-    value,
-    defaultValue,
-    showIcon = true,
-    autoFocus = false,
-  }) => {
-    const selectedValue = useSignal(value || defaultValue || '');
-    const selectedLabel = useSignal<string | null>(null);
-    const isOpen = useSignal(false);
-    const isFocused = useSignal(false);
-    const dropdownRef = useSignal<HTMLDivElement>();
-    const buttonRef = useSignal<HTMLButtonElement>();
-    const focusedIndex = useSignal(-1);
-
-    // Update selected label when value changes
-    useTask$(({ track }) => {
-      track(() => selectedValue.value);
-      const option = options.find((opt) => opt.value === selectedValue.value);
-      selectedLabel.value = option?.label ?? null;
-    });
-
-    // Auto focus if needed
-    useTask$(({ track }) => {
-      track(() => autoFocus);
-      if (autoFocus && buttonRef.value) {
-        buttonRef.value.focus();
-      }
-    });
-
-    const handleToggle = $(() => {
-      if (disabled) return;
-      isOpen.value = !isOpen.value;
-      focusedIndex.value = -1;
-
-      if (isOpen.value) {
-        onFocus$?.();
-        isFocused.value = true;
-      } else {
-        onBlur$?.();
-        isFocused.value = false;
-      }
-    });
-
-    const handleOptionSelect = $((option: { value: string; label: string }) => {
-      selectedValue.value = option.value;
-      selectedLabel.value = option.label;
-      isOpen.value = false;
-      isFocused.value = false;
-      onChange$?.(option.value);
-      onBlur$?.();
-      buttonRef.value?.focus();
-    });
-
-    const handleKeyDown = $((e: KeyboardEvent) => {
-      if (disabled) return;
-
-      switch (e.key) {
-        case 'Escape': {
-          if (isOpen.value) {
-            isOpen.value = false;
-            isFocused.value = false;
-            onBlur$?.();
-            buttonRef.value?.focus();
-          }
-          break;
-        }
-        case 'Enter':
-        case ' ': {
-          e.preventDefault();
-          if (!isOpen.value) {
-            isOpen.value = true;
-            isFocused.value = true;
-            onFocus$?.();
-            focusedIndex.value = -1;
-          } else if (focusedIndex.value >= 0) {
-            const option = options[focusedIndex.value];
-            if (option) {
-              handleOptionSelect(option);
-            }
-          }
-          break;
-        }
-        case 'ArrowDown': {
-          e.preventDefault();
-          if (isOpen.value) {
-            focusedIndex.value = Math.min(focusedIndex.value + 1, options.length - 1);
-          } else {
-            isOpen.value = true;
-            isFocused.value = true;
-            onFocus$?.();
-            focusedIndex.value = 0;
-          }
-          break;
-        }
-        case 'ArrowUp': {
-          e.preventDefault();
-          if (isOpen.value) {
-            focusedIndex.value = Math.max(focusedIndex.value - 1, 0);
-          }
-          break;
-        }
-        case 'Home': {
-          if (isOpen.value) {
-            e.preventDefault();
-            focusedIndex.value = 0;
-          }
-          break;
-        }
-        case 'End': {
-          if (isOpen.value) {
-            e.preventDefault();
-            focusedIndex.value = options.length - 1;
-          }
-          break;
-        }
-      }
-    });
-
-    const handleClickOutside = $((e: Event) => {
-      if (dropdownRef.value && !dropdownRef.value.contains(e.target as Node)) {
-        isOpen.value = false;
-        isFocused.value = false;
-        onBlur$?.();
-      }
-    });
-
-    // Close dropdown when clicking outside
-    useTask$(({ track, cleanup }) => {
-      track(() => isOpen.value);
-      if (isOpen.value) {
-        const handler = (e: Event) => handleClickOutside(e);
-        document.addEventListener('click', handler);
-        cleanup(() => document.removeEventListener('click', handler));
-      }
-    });
-
-    return (
-      <div
-        ref={dropdownRef}
-        class={`relative w-80 ${disabled ? 'opacity-60 cursor-not-allowed' : ''}`}
-        role="combobox"
-        aria-expanded={isOpen.value}
-        aria-haspopup="listbox"
-        aria-label="Theme selector"
-      >
-        <button
-          ref={buttonRef}
-          type="button"
-          onClick$={handleToggle}
-          onKeyDown$={handleKeyDown}
-          disabled={disabled}
-          class={`flex items-center justify-between w-full px-4 py-2 text-left bg-transparent border-none outline-none text-gray-900 disabled:cursor-not-allowed focus:ring-[#3b82f6] focus:ring-2 hover:ring-[#a3a3a3] focus:hover:ring-[#3b82f6] ${BORDER_CLASSES} ${className}`}
-          aria-label={selectedLabel.value || 'Choose theme'}
-          aria-describedby="dropdown-instructions"
-        >
-          <span class={`flex-1 ${selectedLabel.value ? '' : 'text-gray-500'}`}>
-            <div class="flex items-center gap-2">
-              <SwatchBookIcon size="sm" />
-              <span>{selectedLabel.value ?? placeholder ?? 'Select theme'}</span>
-            </div>
-          </span>
-          {showIcon && (
-            <ChevronDownIcon
-              size="sm"
-              class={`transition-transform duration-200 ${isOpen.value ? 'rotate-180' : ''}`}
-            />
-          )}
-        </button>
-
-        {isOpen.value && (
-          <div
-            class="absolute top-full left-0 right-0 z-50 mt-1 bg-white border border-gray-200 rounded-md shadow-lg max-h-60 overflow-auto"
-            role="listbox"
-            aria-label="Theme options"
-          >
-            {options.map((option, index) => (
-              <div
-                key={option.value}
-                role="option"
-                aria-selected={selectedValue.value === option.value}
-                class={`px-4 py-2 cursor-pointer transition-colors duration-150 ${
-                  selectedValue.value === option.value
-                    ? 'bg-blue-50 text-blue-700'
-                    : focusedIndex.value === index
-                      ? 'bg-gray-100 text-gray-900'
-                      : 'text-gray-900 hover:bg-gray-50'
-                }`}
-                onClick$={() => handleOptionSelect(option)}
-                onMouseEnter$={() => (focusedIndex.value = index)}
-              >
-                {option.label}
-              </div>
-            ))}
-          </div>
-        )}
-
-        <div id="dropdown-instructions" class="sr-only">
-          Use arrow keys to navigate, Enter or Space to select, Escape to close
+const ThemeDropdownButton = ({ isOpen }: DropdownButtonProps) => {
+  return (
+    <div
+      class={`flex items-center justify-between w-full px-4 py-2 text-left bg-transparent border-none outline-none text-gray-900 disabled:cursor-not-allowed focus:ring-[#3b82f6] focus:ring-2 hover:ring-[#a3a3a3] focus:hover:ring-[#3b82f6] ${BORDER_CLASSES}`}
+      aria-label="Choose theme"
+      aria-describedby="dropdown-instructions"
+    >
+      <span class="flex-1 text-gray-500">
+        <div class="flex items-center gap-2">
+          <SwatchBookIcon size="sm" />
+          <span>Select theme</span>
         </div>
-      </div>
-    );
-  },
-);
+      </span>
+      <ChevronDownIcon
+        size="sm"
+        class={`transition-transform duration-200 ${isOpen.value ? 'rotate-180' : ''}`}
+      />
+    </div>
+  );
+};
+
+export const ThemeDropdown = component$(() => {
+  const isOpen = useSignal(false);
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <ThemeDropdownButton isOpen={isOpen} />
+      </DropdownMenuTrigger>
+      <DropdownMenuPanel>
+        <Tabs>
+          <TabsTab>Hey</TabsTab>
+        </Tabs>
+      </DropdownMenuPanel>
+    </DropdownMenu>
+  );
+});

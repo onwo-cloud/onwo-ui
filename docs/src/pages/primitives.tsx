@@ -1,4 +1,4 @@
-import { PageNavigation as PNav } from '@onwo/ui';
+import { PageNavigationLink } from '@onwo/ui';
 import { PageHeadSection } from '~/commons/page-head-section';
 
 export const PrimitivesPage = () => (
@@ -16,9 +16,9 @@ export const PrimitivesPage = () => (
         components.
       </p>
 
-      <PNav.Link as="h2" id="goals" label="Why the separation">
+      <PageNavigationLink as="h2" id="goals" label="Why the separation">
         Why the separation?
-      </PNav.Link>
+      </PageNavigationLink>
       <p>
         This is not exactly a new pattern, it became the standard for ui library design and we get a
         lot from it, here is a quick breakdown:

@@ -1,9 +1,9 @@
-type LinkProps = {
+export type BreadcrumbLinkProps = {
   to: string;
   label: string;
 };
 
-const Link = (props: LinkProps) => (
+const BreadcrumbLink = (props: BreadcrumbLinkProps) => (
   <li class="text-onwo-14 last:text-ink">
     <span class="transition-colors duration-200">
       <a class="outline-none focus:underline" href={props.to}>
@@ -13,11 +13,11 @@ const Link = (props: LinkProps) => (
   </li>
 );
 
-const fromList = <L extends LinkProps>(arr: readonly L[]) =>
-  arr.map((props, idx) => <Link key={idx} {...props} />);
+const fromList = <L extends BreadcrumbLinkProps>(arr: readonly L[]) =>
+  arr.map((props, idx) => <BreadcrumbLink key={idx} {...props} />);
 
-const LinkAssigned = Object.assign(Link, {
+const BreadcrumbLinkAssigned = Object.assign(BreadcrumbLink, {
   fromList,
 });
 
-export { LinkAssigned as Link };
+export { BreadcrumbLinkAssigned as BreadcrumbLink };

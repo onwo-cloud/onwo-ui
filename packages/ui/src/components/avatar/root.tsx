@@ -3,16 +3,16 @@ import { SvgIcon } from '@onwo/primitives/svg-icon';
 import { withAs } from '~/utils/as';
 import type { OneKeyOf } from '~/utils/types';
 
-export type RootSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
-export type RootProps = {
-  size?: RootSize; // default: md
+export type AvatarProps = {
+  size?: AvatarSize; // default: md
 } & OneKeyOf<{
   imageUrl: string;
   name: string;
 }>;
 
-export const Root = withAs('div')<RootProps>(
+export const Avatar = withAs('div')<AvatarProps>(
   ({ As, imageUrl, size = 'md', children, name, class: className, ...props }) => (
     <As
       {...props}

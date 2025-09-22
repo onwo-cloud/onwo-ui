@@ -1,1 +1,1 @@
-export { Trigger } from '@onwo/primitives/modal';
+export { Trigger as ModalTrigger } from '@onwo/primitives/modal';

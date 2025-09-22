@@ -18,7 +18,7 @@ import { CalendarViewDecade } from './views/decades';
 import { CalendarViewMonth } from './views/months';
 import { CalendarViewYear } from './views/years';
 
-type RootProps = {
+export type CalendarProps = {
   ref?: Signal<HTMLDivElement | undefined>;
   class?: string;
 } & GenericRootProps;
@@ -48,7 +48,7 @@ type GenericRootProps = {
   ]
 >;
 
-export const Root = component$(
+export const Calendar = component$(
   ({
     ref,
     showClearButton,
@@ -62,7 +62,7 @@ export const Root = component$(
     onSelected$,
     mode,
     ...props
-  }: RootProps) => {
+  }: CalendarProps) => {
     const value = props['bind:value'];
     const viewDefaultDate = getFirstDateInRange(
       props['bind:value'].value ?? new Date(),

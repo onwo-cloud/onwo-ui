@@ -1,6 +1,6 @@
-import type { RootProps as PRootProps } from '@onwo/primitives/tabs';
-import { Root as PRoot } from '@onwo/primitives/tabs';
+import type { RootProps } from '@onwo/primitives/tabs';
+import { Root } from '@onwo/primitives/tabs';
 
-export type RootProps = PRootProps;
+export type TabsProps = RootProps;
 
-export const Root = ({ ...props }: RootProps) => <PRoot {...props}>{props.children}</PRoot>;
+export const Tabs = ({ ...props }: RootProps) => <Root {...props}>{props.children}</Root>;

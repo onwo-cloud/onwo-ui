@@ -2,11 +2,11 @@ import type { JSXChildren } from '@builder.io/qwik';
 import { cn } from '@onwo/primitives';
 import { withAs } from '~/utils/as';
 
-export type RootProps = {
+export type AlertProps = {
   children?: JSXChildren;
 };
 
-export const Root = withAs('div')<RootProps>(({ As, class: className, ...props }) => (
+export const Alert = withAs('div')<AlertProps>(({ As, class: className, ...props }) => (
   <As
     {...props}
     class={cn(

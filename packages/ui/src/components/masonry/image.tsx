@@ -2,7 +2,7 @@ import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { composeRefs } from '~/utils/compose-refs';
 import type { OneObjectOf, Primitive } from '~/utils/types';
 
-type ImageProps = {
+type MasonryImageProps = {
   src: string;
 } & OneObjectOf<
   [
@@ -16,8 +16,8 @@ type ImageProps = {
   ]
 >;
 
-export const Image = component$(
-  ({ width, height, inferSize, src, ...props }: Primitive<'div'> & ImageProps) => {
+export const MasonryImage = component$(
+  ({ width, height, inferSize, src, ...props }: Primitive<'div'> & MasonryImageProps) => {
     const ref = useSignal<HTMLDivElement>();
     const imageRef = useSignal<HTMLImageElement>();
 

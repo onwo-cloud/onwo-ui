@@ -1,10 +1,10 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Step as PStep } from '@onwo/primitives/carousel';
+import { Step } from '@onwo/primitives/carousel';
 
-type StepProps = PropsOf<typeof PStep>;
+type CarouselStepProps = PropsOf<typeof Step>;
 
-export const Step = (props: StepProps) => (
-  <PStep
+export const CarouselStep = (props: CarouselStepProps) => (
+  <Step
     {...props}
     class="flex flex-col justify-center items-center rounded-full text-line data-active:text-success"
   >
@@ -15,5 +15,5 @@ export const Step = (props: StepProps) => (
     <span class="flex text-start text-ink items-start flex-col gap-2 min-w-0 min-h-fit ">
       {props.children}
     </span>
-  </PStep>
+  </Step>
 );

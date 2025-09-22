@@ -1,4 +1,14 @@
-import { Carousel } from '@onwo/ui';
+import {
+  Carousel,
+  CarouselBullet,
+  CarouselNext,
+  CarouselPagination,
+  CarouselPrevious,
+  CarouselScroller,
+  CarouselSlide,
+  CarouselStep,
+  CarouselStepper,
+} from '@onwo/ui';
 import type { BoxedComp, Section } from '.';
 
 const colors = [
@@ -10,167 +20,167 @@ const colors = [
 const defaultCarousel: BoxedComp = {
   title: 'Default',
   display: () => (
-    <Carousel.Root gap={30} slidesPerView={3} move={3}>
-      <Carousel.Previous />
-      <Carousel.Next />
-      <Carousel.Scroller>
+    <Carousel gap={30} slidesPerView={3} move={3}>
+      <CarouselPrevious />
+      <CarouselNext />
+      <CarouselScroller>
         {Array.from({ length: 10 }).map((_, label) => (
-          <Carousel.Slide key={label} class="h-48">
+          <CarouselSlide key={label} class="h-48">
             {label}
-          </Carousel.Slide>
+          </CarouselSlide>
         ))}
-      </Carousel.Scroller>
-    </Carousel.Root>
+      </CarouselScroller>
+    </Carousel>
   ),
-  code: `<Carousel.Root gap={30} slidesPerView={3} move={3}>
-  <Carousel.Previous />
-  <Carousel.Next />
-  <Carousel.Scroller>
+  code: `<Carousel gap={30} slidesPerView={3} move={3}>
+  <CarouselPrevious />
+  <CarouselNext />
+  <CarouselScroller>
     {Array.from({ length: 10 }).map((_, label) => (
-      <Carousel.Slide key={label} class="h-48">
+      <CarouselSlide key={label} class="h-48">
         {label}
-      </Carousel.Slide>
+      </CarouselSlide>
     ))}
-  </Carousel.Scroller>
-</Carousel.Root>`,
+  </CarouselScroller>
+</Carousel>`,
 };
 
 const verticalCarousel: BoxedComp = {
   title: 'Vertical',
   display: () => (
-    <Carousel.Root gap={30} orientation="vertical" maxSlideHeight={160}>
-      <Carousel.Previous />
-      <Carousel.Next />
-      <Carousel.Scroller>
+    <Carousel gap={30} orientation="vertical" maxSlideHeight={160}>
+      <CarouselPrevious />
+      <CarouselNext />
+      <CarouselScroller>
         {Array.from({ length: 10 }).map((_, label) => (
-          <Carousel.Slide key={label} class="p-16">
+          <CarouselSlide key={label} class="p-16">
             {label}
-          </Carousel.Slide>
+          </CarouselSlide>
         ))}
-      </Carousel.Scroller>
-    </Carousel.Root>
+      </CarouselScroller>
+    </Carousel>
   ),
-  code: `<Carousel.Root gap={30} orientation="vertical" maxSlideHeight={160}>
-  <Carousel.Previous />
-  <Carousel.Next />
-  <Carousel.Scroller>
+  code: `<Carousel gap={30} orientation="vertical" maxSlideHeight={160}>
+  <CarouselPrevious />
+  <CarouselNext />
+  <CarouselScroller>
     {Array.from({ length: 10 }).map((_, label) => (
-      <Carousel.Slide key={label} class="p-16">
+      <CarouselSlide key={label} class="p-16">
         {label}
-      </Carousel.Slide>
+      </CarouselSlide>
     ))}
-  </Carousel.Scroller>
-</Carousel.Root>`,
+  </CarouselScroller>
+</Carousel>`,
 };
 
 const fadeAnimationCarousel: BoxedComp = {
   title: 'Fade animation',
   display: () => (
-    <Carousel.Root class="h-48" gap={0}>
-      <Carousel.Previous />
-      <Carousel.Next />
+    <Carousel class="h-48" gap={0}>
+      <CarouselPrevious />
+      <CarouselNext />
       <div>
         {colors.map((color, idx) => (
-          <Carousel.Slide
+          <CarouselSlide
             forceVisible
             key={color}
             style={{ backgroundImage: color }}
             class="absolute! h-full w-full top-0 transition-opacity duration-1000 opacity-0 data-active:z-[3] data-active:opacity-100"
           >
             {idx}
-          </Carousel.Slide>
+          </CarouselSlide>
         ))}
       </div>
-    </Carousel.Root>
+    </Carousel>
   ),
-  code: `<Carousel.Root class="h-48" gap={0}>
-  <Carousel.Previous />
-  <Carousel.Next />
+  code: `<Carousel class="h-48" gap={0}>
+  <CarouselPrevious />
+  <CarouselNext />
   <div>
     {colors.map((color, idx) => (
-      <Carousel.Slide
+      <CarouselSlide
         forceVisible
         key={color}
         style={{ backgroundImage: color }}
         class="absolute! h-full w-full top-0 transition-opacity duration-1000 opacity-0 data-active:z-[3] data-active:opacity-100"
       >
         {idx}
-      </Carousel.Slide>
+      </CarouselSlide>
     ))}
   </div>
-</Carousel.Root>`,
+</Carousel>`,
 };
 
 const paginationCarousel: BoxedComp = {
   title: 'Pagination',
   display: () => (
-    <Carousel.Root gap={30}>
-      <Carousel.Scroller>
+    <Carousel gap={30}>
+      <CarouselScroller>
         {Array.from({ length: 5 }).map((_, label) => (
-          <Carousel.Slide key={label} class="h-48">
+          <CarouselSlide key={label} class="h-48">
             Slide {label}
-          </Carousel.Slide>
+          </CarouselSlide>
         ))}
-      </Carousel.Scroller>
-      <Carousel.Pagination class="mt-2">
+      </CarouselScroller>
+      <CarouselPagination class="mt-2">
         {Array.from({ length: 5 }).map((_, idx) => (
-          <Carousel.Bullet key={idx}>{idx}</Carousel.Bullet>
+          <CarouselBullet key={idx}>{idx}</CarouselBullet>
         ))}
-      </Carousel.Pagination>
-    </Carousel.Root>
+      </CarouselPagination>
+    </Carousel>
   ),
-  code: `<Carousel.Root gap={30}>
-  <Carousel.Scroller>
+  code: `<Carousel gap={30}>
+  <CarouselScroller>
     {Array.from({ length: 5 }).map((_, label) => (
-      <Carousel.Slide key={label} class="h-48">
+      <CarouselSlide key={label} class="h-48">
         Slide {label}
-      </Carousel.Slide>
+      </CarouselSlide>
     ))}
-  </Carousel.Scroller>
-  <Carousel.Pagination class="mt-2">
+  </CarouselScroller>
+  <CarouselPagination class="mt-2">
     {Array.from({ length: 5 }).map((_, idx) => (
-      <Carousel.Bullet key={idx}>
+      <CarouselBullet key={idx}>
         {idx}
-      </Carousel.Bullet>
+      </CarouselBullet>
     ))}
-  </Carousel.Pagination>
-</Carousel.Root>`,
+  </CarouselPagination>
+</Carousel>`,
 };
 
 const stepperCarousel: BoxedComp = {
   title: 'Stepper',
   display: () => (
-    <Carousel.Root gap={30}>
-      <Carousel.Stepper class="mb-4">
+    <Carousel gap={30}>
+      <CarouselStepper class="mb-4">
         {Array.from({ length: 3 }).map((_, index) => (
-          <Carousel.Step key={index}>Header {index + 1}</Carousel.Step>
+          <CarouselStep key={index}>Header {index + 1}</CarouselStep>
         ))}
-      </Carousel.Stepper>
-      <Carousel.Scroller>
+      </CarouselStepper>
+      <CarouselScroller>
         {Array.from({ length: 3 }).map((_, index) => (
-          <Carousel.Slide class="h-48" key={index}>
+          <CarouselSlide class="h-48" key={index}>
             Content {index + 1}
-          </Carousel.Slide>
+          </CarouselSlide>
         ))}
-      </Carousel.Scroller>
-    </Carousel.Root>
+      </CarouselScroller>
+    </Carousel>
   ),
-  code: `<Carousel.Root gap={30}>
-  <Carousel.Stepper class="mb-4">
+  code: `<Carousel gap={30}>
+  <CarouselStepper class="mb-4">
     {Array.from({ length: 3 }).map((_, index) => (
-      <Carousel.Step key={index}>
+      <CarouselStep key={index}>
         Header {index + 1}
-      </Carousel.Step>
+      </CarouselStep>
     ))}
-  </Carousel.Stepper>
-  <Carousel.Scroller>
+  </CarouselStepper>
+  <CarouselScroller>
     {Array.from({ length: 3 }).map((_, index) => (
-      <Carousel.Slide class="h-48" key={index}>
+      <CarouselSlide class="h-48" key={index}>
         Content {index + 1}
-      </Carousel.Slide>
+      </CarouselSlide>
     ))}
-  </Carousel.Scroller>
-</Carousel.Root>`,
+  </CarouselScroller>
+</Carousel>`,
 };
 
 export const section: Section = {

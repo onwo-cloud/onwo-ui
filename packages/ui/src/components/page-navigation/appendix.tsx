@@ -2,9 +2,9 @@ import type { ClassList } from '@builder.io/qwik';
 import { $ } from '@builder.io/qwik';
 import { cn } from '@onwo/primitives';
 import type { NavigationElement } from '@onwo/primitives/page-navigation';
-import { Appendix as PAppendix } from '@onwo/primitives/page-navigation';
+import { Appendix } from '@onwo/primitives/page-navigation';
 
-type AppendixProps = {
+type PageNavigationAppendixProps = {
   class?: ClassList;
   contentClass?: ClassList;
   // When set will only display links above the specified level.
@@ -12,8 +12,8 @@ type AppendixProps = {
   sticky?: boolean;
 };
 
-export const Appendix = (props: AppendixProps) => (
-  <PAppendix
+export const PageNavigationAppendix = (props: PageNavigationAppendixProps) => (
+  <Appendix
     maxLevelShown={props.maxLevelShown}
     class={cn('h-full', props.class)}
     render$={$((elements: NavigationElement[]) => (

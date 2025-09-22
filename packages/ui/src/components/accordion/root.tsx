@@ -1,8 +1,8 @@
-import { Root as PRoot } from '@onwo/primitives/accordion';
+import { Root } from '@onwo/primitives/accordion';
 import type { Primitive } from '~/utils/types';
 
-export type RootProps = Primitive<'div'> & {
+export type AccordionProps = Primitive<'div'> & {
   singleOpen?: boolean;
 };
 
-export const Root = (props: RootProps) => <PRoot {...props}>{props.children}</PRoot>;
+export const Accordion = (props: AccordionProps) => <Root {...props}>{props.children}</Root>;

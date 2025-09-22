@@ -1,22 +1,22 @@
-import { Alert } from '@onwo/ui';
+import { Alert, AlertClose, AlertMessage, AlertTitle } from '@onwo/ui';
 import type { BoxedComp, Section } from '.';
 
 const withControlAlert: BoxedComp = {
   title: 'With control',
   display: () => (
     <Alert>
-      <Alert.Title>Alert with title and icon</Alert.Title>
-      <Alert.Message> Alert message </Alert.Message>
-      <Alert.Close />
+      <AlertTitle>Alert with title and icon</AlertTitle>
+      <AlertMessage> Alert message </AlertMessage>
+      <AlertClose />
     </Alert>
   ),
   code: `<Alert>
-  <Alert.Title>
+  <AlertTitle>
     <OtherFrameIcon size="md" />
     Alert with title and icon
-  </Alert.Title>
-  <Alert.Message> Alert message </Alert.Message>
-  <Alert.Close onClick$={/* control unmount here */} />
+  </AlertTitle>
+  <AlertMessage> Alert message </AlertMessage>
+  <AlertClose onClick$={/* control unmount here */} />
 </Alert>`,
 };
 
@@ -25,39 +25,39 @@ const customizationAlert: BoxedComp = {
   display: () => (
     <div class="flex flex-col gap-4">
       <Alert>
-        <Alert.Message>Generic style with coloured icon</Alert.Message>
-        <Alert.Close />
+        <AlertMessage>Generic style with coloured icon</AlertMessage>
+        <AlertClose />
       </Alert>
       <Alert class="bg-transparent outline outline-1 outline-offset-[-1px] outline-success">
-        <Alert.Message>Outline style</Alert.Message>
-        <Alert.Close />
+        <AlertMessage>Outline style</AlertMessage>
+        <AlertClose />
       </Alert>
       <Alert class="bg-success-10">
-        <Alert.Message>Colourful style</Alert.Message>
-        <Alert.Close />
+        <AlertMessage>Colourful style</AlertMessage>
+        <AlertClose />
       </Alert>
     </div>
   ),
   code: `<Alert>
-  <Alert.Message>
+  <AlertMessage>
     <OtherFrameIcon size="md" class="text-success" />
     Generic style with coloured icon
-  </Alert.Message>
-  <Alert.Close />
+  </AlertMessage>
+  <AlertClose />
 </Alert>
 <Alert class="bg-transparent outline outline-1 outline-offset-[-1px] outline-success">
-  <Alert.Message>
+  <AlertMessage>
     <OtherFrameIcon class="text-success" size="md" />
     Outline style
-  </Alert.Message>
-  <Alert.Close />
+  </AlertMessage>
+  <AlertClose />
 </Alert>
 <Alert class="bg-success-10">
-  <Alert.Message>
+  <AlertMessage>
     <OtherFrameIcon class="text-success" size="md" />
     Colourful style
-  </Alert.Message>
-  <Alert.Close />
+  </AlertMessage>
+  <AlertClose />
 </Alert>`,
 };
 

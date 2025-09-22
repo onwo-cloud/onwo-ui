@@ -1,0 +1,116 @@
+import type { PropsOf } from '@builder.io/qwik';
+import { component$, useContext, Slot, useTask$, $, useSignal, useStyles$ } from '@builder.io/qwik';
+import { isServer } from '@builder.io/qwik/build';
+import { useDebounced } from '~/hooks/use-debouncer';
+import { HPopoverPanel } from '../popover/popover-panel';
+import { HPopoverRoot } from '../popover/popover-root';
+import { usePopover } from '../popover/use-popover';
+
+import { dropdownContextId } from './dropdown-context';
+import styles from './dropdown.css?inline';
+
+export const HDropdownPopover = component$<PropsOf<typeof HPopoverRoot>>(
+  ({ floating, hover, ...props }) => {
+    useStyles$(styles);
+    const context = useContext(dropdownContextId);
+    const { showPopover, hidePopover } = usePopover(context.localId);
+    const initialLoadSig = useSignal<boolean>(true);
+
+    useTask$(async ({ track }) => {
+      track(() => context.isOpenSig.value);
+
+      if (isServer) return;
+
+      if (!initialLoadSig.value) {
+        if (context.isOpenSig.value) {
+          await showPopover();
+        } else {
+          await hidePopover();
+        }
+      }
+    });
+
+    const menuId = `${context.localId}-panel`;
+
+    const isOutside = $((rect: DOMRect, x: number, y: number) => {
+      return x < rect.left || x > rect.right || y < rect.top || y > rect.bottom;
+    });
+
+    const handleDismiss$ = $(async (e: PointerEvent) => {
+      if (!context.isOpenSig.value) {
+        return;
+      }
+
+      if (!context.panelRef.value || !context.triggerRef.value) {
+        return;
+      }
+
+      const menuRect = context.panelRef.value.getBoundingClientRect();
+      const triggerRect = context.triggerRef.value.getBoundingClientRect();
+      const { clientX, clientY } = e;
+
+      const isOutsideMenu = await isOutside(menuRect, clientX, clientY);
+      const isOutsideTrigger = await isOutside(triggerRect, clientX, clientY);
+
+      if (isOutsideMenu && isOutsideTrigger) {
+        context.isOpenSig.value = false;
+      }
+    });
+
+    // Dismiss code should only matter when the menu is open
+    useTask$(({ track, cleanup }) => {
+      track(() => context.isOpenSig.value);
+
+      if (isServer) return;
+
+      if (context.isOpenSig.value) {
+        globalThis.addEventListener('pointerdown', handleDismiss$);
+      }
+
+      cleanup(() => {
+        globalThis.removeEventListener('pointerdown', handleDismiss$);
+      });
+    });
+
+    useTask$(() => {
+      initialLoadSig.value = false;
+    });
+
+    const [resetScrollMove$] = useDebounced(
+      $(() => {
+        context.isMouseOverPopupSig.value = false;
+      }),
+      650,
+    );
+
+    return (
+      <HPopoverRoot
+        floating={floating}
+        hover={hover}
+        bind:anchor={props['bind:anchor'] ?? context.triggerRef}
+        bind:panel={context.panelRef}
+        mode="manual"
+        id={context.localId}
+        style={{ display: 'contents' }}
+      >
+        <HPopoverPanel
+          id={menuId}
+          data-open={context.isOpenSig.value ? '' : undefined}
+          data-closed={context.isOpenSig.value ? undefined : ''}
+          role="menu"
+          aria-expanded={context.isOpenSig.value ? 'true' : 'false'}
+          onMouseMove$={async () => {
+            context.isMouseOverPopupSig.value = true;
+
+            await resetScrollMove$();
+          }}
+          onMouseOut$={() => (context.isMouseOverPopupSig.value = false)}
+          onKeyDown$={() => (context.isMouseOverPopupSig.value = true)}
+          {...props}
+        >
+          <Slot />
+        </HPopoverPanel>
+      </HPopoverRoot>
+    );
+  },
+);

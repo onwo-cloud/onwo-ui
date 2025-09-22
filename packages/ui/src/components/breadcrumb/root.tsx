@@ -4,12 +4,12 @@ import { cn } from '@onwo/primitives';
 import type { IconProps } from '@onwo/primitives/svg-icon';
 import { withAs } from '~/utils/as';
 
-type RootProps = {
+export type BreadcrumbProps = {
   children: JSXChildren[];
   separator?: (props: IconProps) => JSXOutput;
 };
 
-export const Root = withAs('nav')<RootProps>(({ As, class: className, ...props }) => {
+export const Breadcrumb = withAs('nav')<BreadcrumbProps>(({ As, class: className, ...props }) => {
   const Sep = props.separator ?? ChevronRightIcon;
 
   return (

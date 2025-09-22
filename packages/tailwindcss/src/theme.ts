@@ -1,9 +1,7 @@
 /* eslint-disable import/no-unresolved */
-import Color from 'colorjs.io';
 import type { PluginAPI } from 'tailwindcss/plugin';
 import plugin from 'tailwindcss/plugin';
 import type { ColorDefinitionFlattened } from './colors.js';
-import { flattenedColors } from './colors.js';
 import type { PluginWithOptions } from './index.js';
 
 type OnwoTheme = {
@@ -12,84 +10,103 @@ type OnwoTheme = {
   dark?: boolean; // TODO
 } & Record<ColorDefinitionFlattened, string>;
 
+// --- CONSTANTS AND HELPERS ---
+
 const abort = (s: string) => {
-  throw `onwo-theme-plugin: ${s}`;
+  throw new Error(`onwo-theme-plugin: ${s}`);
 };
 
-const warn = (s: string) => {
-  console.warn(`\u001B[33m⚠️ Warning: onwo-theme-plugin: ${s}\u001B[0m`);
-};
+const SHADES = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
 
-const convertToOklch = (name: string, value: string) => {
-  try {
-    return new Color(value).to('oklch');
-  } catch {
-    warn(`${name} couldnt be parsed \`${value}\``);
-    return new Color('rgb(255, 255, 255)').to('oklch');
-  }
+// Added a map to generate a real color scale instead of a single color
+const LIGHTNESS_MAP: Record<(typeof SHADES)[number], number> = {
+  50: 0.98,
+  100: 0.95,
+  200: 0.89,
+  300: 0.82,
+  400: 0.73,
+  500: 0.65,
+  600: 0.56,
+  700: 0.47,
+  800: 0.38,
+  900: 0.29,
+  950: 0.21,
 };
 
 const decimalRound = (precision: number) => (s: number) =>
   // eslint-disable-next-line sonarjs/slow-regex
   s.toFixed(precision).replace(/\.?0+$/, '');
 
+// Helper to avoid duplicating logic for parsing options
+const getPalettes = (options: OnwoTheme) => {
+  const { name, precision = 5, dark: _dark, ...rest } = options;
+
+  const palettes = Object.entries(rest)
+    .filter(([key]) => key.startsWith('palette-'))
+    // This removes 'palette-' at the start of the variable
+    .map(([k, v]) => [k.split('-').slice(1).join('-'), v] as const);
+
+  return { palettes, name, precision };
+};
+
+// --- PLUGIN DEFINITION ---
+
 export const onwoThemePlugin: PluginWithOptions<OnwoTheme> = plugin.withOptions<OnwoTheme>(
+  // 1. The first argument returns the plugin handler for CSS generation
   (options) => {
     return (api: PluginAPI) => {
       if (!options) return abort('loaded without a theme');
-      const { name, precision = 5, dark: _dark, ...baseColors } = options;
       if (!options.name) return abort('theme requires a `name` property');
 
-      // We verify that all colors are present
-      const colors: [ColorDefinitionFlattened, string][] = flattenedColors.map((requiredColor) => {
-        if (requiredColor in baseColors) {
-          return [requiredColor, baseColors[requiredColor]];
-        }
-        warn(`color '${requiredColor}' is missing in theme`);
-        return [requiredColor, 'rgb(255, 255, 255)'];
+      const { palettes, name, precision } = getPalettes(options);
+      const round = decimalRound(precision);
+
+      const colorMap = palettes.flatMap(([color, hue]) => {
+        const C = 0.29; // A reasonable default chroma
+        const H = round(((Number(hue) % 360) + 360) % 360);
+
+        return SHADES.map((shade) => {
+          const L = LIGHTNESS_MAP[shade];
+          return [`--color-${color}-${shade}`, `oklch(${L} ${C} ${H})`] as const;
+        });
       });
 
-      const colorMap = Object.fromEntries(
-        colors.flatMap(([color, value]) => {
-          const colorOklch: Color = convertToOklch(color, value);
-
-          let [L, C, H] = colorOklch.coords;
-
-          if (C < 0.01) {
-            C = 0;
-            H = 0;
-          }
-          H = ((H % 360) + 360) % 360;
-
-          // This removes 'color' at the start of the variable
-          const colorName = color.split('-').slice(2).join('-'); // TODO
-
-          const round = decimalRound(precision);
-
-          return [
-            [`--tw-a--${colorName}`, round(colorOklch.alpha)],
-            [`--tw-l--${colorName}`, round(L)],
-            [`--tw-c--${colorName}`, round(C)],
-            [`--tw-h--${colorName}`, round(H)],
-          ];
-        }),
-      );
-
-      const themeName = `theme-${options.name}`;
+      const themeName = `theme-${name}`;
+      const colorObj = Object.fromEntries(colorMap);
 
       // Add utility classes for the theme
+      // Note: This is less common. Usually addBase is sufficient.
       api.addUtilities({
-        [`.${themeName}`]: {
-          ...colorMap,
-        },
+        [`.${themeName}`]: colorObj,
       });
 
-      // placeholder
+      // The standard way to set theme variables
       api.addBase({
-        [`:root.${themeName}, .${themeName}`]: {
-          ...colorMap,
-        },
+        [`:root.${themeName}, .${themeName}`]: colorObj,
       });
+
+      // This function should NOT return anything
+    };
+  },
+  // 2. The second argument returns the configuration object for theme extension
+  (options?: OnwoTheme) => {
+    if (!options) return abort('loaded without a theme');
+    const { palettes } = getPalettes(options);
+
+    // This is where the theme extension happens
+    return {
+      theme: {
+        extend: {
+          colors: Object.fromEntries(
+            palettes.map(([color]) => [
+              color,
+              Object.fromEntries(
+                SHADES.map((shade) => [String(shade), `var(--color-${color}-${shade})`]),
+              ),
+            ]),
+          ),
+        },
+      },
     };
   },
 );

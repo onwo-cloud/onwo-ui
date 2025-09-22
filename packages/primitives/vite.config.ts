@@ -20,7 +20,6 @@ function generateEntriesFromExports(exports: Record<string, any>): Record<string
 
       // Convert lib path back to src path
       // "./lib/index.qwik.mjs" -> "index"
-      // "./lib/primitives/accordion/index.qwik.mjs" -> "primitives/accordion/index"
       const libPath = qwikPath.replace('./lib/', '').replace('.qwik.mjs', '');
 
       // Generate the source file path

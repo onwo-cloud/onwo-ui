@@ -1,6 +1,6 @@
 import type { QRL } from '@builder.io/qwik';
 import { ChevronRightIcon } from '@onwo/icons';
-import { Breadcrumb } from '@onwo/ui';
+import { Breadcrumb, BreadcrumbLink } from '@onwo/ui';
 
 type PageHeadSectionProps = {
   title: string;
@@ -11,9 +11,9 @@ type PageHeadSectionProps = {
 export const PageHeadSection = (props: PageHeadSectionProps) => (
   <main class="onwo-no-format">
     <div class="pb-8 hidden lg:block">
-      <Breadcrumb.Root separator={ChevronRightIcon}>
-        {Breadcrumb.Link.fromList([{ to: '/', label: 'Home' }, ...props.breadcrumbs])}
-      </Breadcrumb.Root>
+      <Breadcrumb separator={ChevronRightIcon}>
+        {BreadcrumbLink.fromList([{ to: '/', label: 'Home' }, ...props.breadcrumbs])}
+      </Breadcrumb>
     </div>
 
     <div class="flex flex-col gap-2 flex-1 relative outline-none mb-8">

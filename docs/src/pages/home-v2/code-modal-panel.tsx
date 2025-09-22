@@ -1,7 +1,7 @@
 import { XIcon } from '@onwo/icons';
 import { styledcn } from '@onwo/primitives';
 import { Description as PDescription } from '@onwo/primitives/modal';
-import { Button, Modal } from '@onwo/ui';
+import { Button, ModalClose, ModalFooter, ModalPanel, ModalTitle } from '@onwo/ui';
 
 export const CodePanelHeader = styledcn.tag('header')`p-4 bg-parchment border-b border-line`;
 
@@ -12,27 +12,27 @@ export type CodePanelProps = {
 };
 
 export const CodeModalPanel = (props: CodePanelProps) => (
-  <Modal.Panel>
+  <ModalPanel>
     <CodePanelHeader class="flex justify-between">
-      <Modal.Title class="font-medium">Opened a modal</Modal.Title>
-      <Modal.Close>
+      <ModalTitle class="font-medium">Opened a modal</ModalTitle>
+      <ModalClose>
         <Button as="div" size="xs" variant="ghost">
           <XIcon size="xs" />
         </Button>
-      </Modal.Close>
+      </ModalClose>
     </CodePanelHeader>
     <CodePanelContent>{props.code}</CodePanelContent>
-    <Modal.Footer class="flex gap-4 justify-between">
-      <Modal.Close>
+    <ModalFooter class="flex gap-4 justify-between">
+      <ModalClose>
         <Button as="div" size="sm" variant="ghost">
           Cancel
         </Button>
-      </Modal.Close>
-      <Modal.Close>
+      </ModalClose>
+      <ModalClose>
         <Button as="div" size="sm">
           Save changes
         </Button>
-      </Modal.Close>
-    </Modal.Footer>
-  </Modal.Panel>
+      </ModalClose>
+    </ModalFooter>
+  </ModalPanel>
 );

@@ -1,13 +1,31 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { component$, useSignal } from '@builder.io/qwik';
 import { MusicIcon } from '@onwo/icons';
-import { Accordion, Avatar, Breadcrumb, Button, Calendar, Chip, Masonry, Tabs, cn } from '@onwo/ui';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+  Avatar,
+  Breadcrumb,
+  BreadcrumbLink,
+  Button,
+  Calendar,
+  Chip,
+  Masonry,
+  MasonryItem,
+  Tabs,
+  TabsList,
+  TabsPill,
+  TabsTab,
+  cn,
+} from '@onwo/ui';
 import { ClipboardButton } from '~/commons/clipboard-button';
 import { SimpleTabs } from '~/commons/simple-tabs';
 import { TopBarV2 } from '~/commons/top-bar-v2';
 
-const CustomItem = ({ class: cls, children, ...props }: PropsOf<typeof Masonry.Item>) => (
-  <Masonry.Item
+const CustomItem = ({ class: cls, children, ...props }: PropsOf<typeof MasonryItem>) => (
+  <MasonryItem
     class={cn(
       'bg-parchment border-0 rounded-md flex flex-col gap-4 items-center justify-center',
       cls,
@@ -15,7 +33,7 @@ const CustomItem = ({ class: cls, children, ...props }: PropsOf<typeof Masonry.I
     {...props}
   >
     {children}
-  </Masonry.Item>
+  </MasonryItem>
 );
 
 const CalendarStandalone = component$(() => {
@@ -46,35 +64,35 @@ export const HomePage = component$(() => {
         </div>
         <SimpleTabs tabs={['Overview', 'Blog', 'Changelog']} bind:selected={selectedTab} />
         <div class="mt-8">
-          <Masonry.Root columnWidth={500} gap={16}>
+          <Masonry columnWidth={500} gap={16}>
             <CustomItem width={200} height={150}>
               <Button size="lg">button</Button>
             </CustomItem>
             <CustomItem width={200} height={150}>
-              <Tabs.Root>
-                <Tabs.List>
-                  <Tabs.Tab>First tab</Tabs.Tab>
-                  <Tabs.Tab>Second tab</Tabs.Tab>
-                  <Tabs.Tab>Third tab</Tabs.Tab>
-                </Tabs.List>
-              </Tabs.Root>
-              <Tabs.Root>
-                <Tabs.List class="mt-4">
-                  <Tabs.Pill>First tab</Tabs.Pill>
-                  <Tabs.Pill>Second tab</Tabs.Pill>
-                  <Tabs.Pill>Third tab</Tabs.Pill>
-                </Tabs.List>
-              </Tabs.Root>
+              <Tabs>
+                <TabsList>
+                  <TabsTab>First tab</TabsTab>
+                  <TabsTab>Second tab</TabsTab>
+                  <TabsTab>Third tab</TabsTab>
+                </TabsList>
+              </Tabs>
+              <Tabs>
+                <TabsList class="mt-4">
+                  <TabsPill>First tab</TabsPill>
+                  <TabsPill>Second tab</TabsPill>
+                  <TabsPill>Third tab</TabsPill>
+                </TabsList>
+              </Tabs>
             </CustomItem>
             <CustomItem width={200} height={250}>
               <CalendarStandalone />
             </CustomItem>
             <CustomItem width={200} height={90}>
-              <Breadcrumb.Root>
-                <Breadcrumb.Link to="/" label="Home" />
-                <Breadcrumb.Link to="/hello" label="Hello" />
-                <Breadcrumb.Link to="/hello/world" label="World" />
-              </Breadcrumb.Root>
+              <Breadcrumb>
+                <BreadcrumbLink to="/" label="Home" />
+                <BreadcrumbLink to="/hello" label="Hello" />
+                <BreadcrumbLink to="/hello/world" label="World" />
+              </Breadcrumb>
             </CustomItem>
             <CustomItem class="flex-row gap-12">
               <Avatar />
@@ -95,22 +113,22 @@ export const HomePage = component$(() => {
               </Chip>
             </CustomItem>
             <CustomItem>
-              <Accordion.Root singleOpen class="w-fit md:w-[400px]">
-                <Accordion.Item>
-                  <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-                  <Accordion.Content> ... </Accordion.Content>
-                </Accordion.Item>
-                <Accordion.Item defaultOpen>
-                  <Accordion.Trigger>Is it styled?</Accordion.Trigger>
-                  <Accordion.Content> ... </Accordion.Content>
-                </Accordion.Item>
-                <Accordion.Item>
-                  <Accordion.Trigger>Is it animated?</Accordion.Trigger>
-                  <Accordion.Content> ... </Accordion.Content>
-                </Accordion.Item>
-              </Accordion.Root>
+              <Accordion singleOpen class="w-fit md:w-[400px]">
+                <AccordionItem>
+                  <AccordionTrigger>Is it accessible?</AccordionTrigger>
+                  <AccordionContent> ... </AccordionContent>
+                </AccordionItem>
+                <AccordionItem defaultOpen>
+                  <AccordionTrigger>Is it styled?</AccordionTrigger>
+                  <AccordionContent> ... </AccordionContent>
+                </AccordionItem>
+                <AccordionItem>
+                  <AccordionTrigger>Is it animated?</AccordionTrigger>
+                  <AccordionContent> ... </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </CustomItem>
-          </Masonry.Root>
+          </Masonry>
         </div>
       </div>
     </div>

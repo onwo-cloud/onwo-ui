@@ -1,4 +1,4 @@
 import { styledcn } from '@onwo/primitives';
-import { Title as PTitle } from '@onwo/primitives/modal';
+import { Title } from '@onwo/primitives/modal';
 
-export const Title: typeof PTitle = styledcn(PTitle)`text-onwo-16 font-semibold`;
+export const ModalTitle: typeof Title = styledcn(Title)`text-onwo-16 font-semibold`;

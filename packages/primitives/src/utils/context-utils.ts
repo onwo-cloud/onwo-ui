@@ -9,5 +9,5 @@ export const initContext = <T>(name: string) => {
     return data;
   };
 
-  return { use, useProvider };
+  return { use, useProvider, contextId } as const;
 };

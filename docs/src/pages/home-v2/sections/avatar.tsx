@@ -1,4 +1,4 @@
-import { Avatar } from '@onwo/ui';
+import { Avatar, AvatarStatus } from '@onwo/ui';
 import type { BoxedComp, Section } from '.';
 
 const defaultAvatar: BoxedComp = {
@@ -54,20 +54,20 @@ const statusAvatar: BoxedComp = {
   display: () => (
     <div class="flex w-full justify-around">
       <Avatar size="xl" imageUrl="/avatar.png">
-        <Avatar.Status class="bg-error" position="top-right" />
+        <AvatarStatus class="bg-error" position="top-right" />
       </Avatar>
       <Avatar size="xl" imageUrl="/avatar.png">
-        <Avatar.Status />
+        <AvatarStatus />
       </Avatar>
     </div>
   ),
   code: `import { Avatar } from '@onwo/ui';
 
 <Avatar size="xl" imageUrl="/avatar.png">
-  <Avatar.Status class="bg-error" position="top-right" />
+  <AvatarStatus class="bg-error" position="top-right" />
 </Avatar>
 <Avatar size="xl" imageUrl="/avatar.png">
-  <Avatar.Status />
+  <AvatarStatus />
 </Avatar>`,
 };
 

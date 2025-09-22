@@ -1,13 +1,13 @@
 import { type JSXChildren, type QwikIntrinsicElements } from '@builder.io/qwik';
 
-type GroupProps = QwikIntrinsicElements['li'] & {
+export type NavMenuGroupProps = QwikIntrinsicElements['li'] & {
   label: string;
   href?: string;
   onSelect$?: () => void;
   children: JSXChildren;
 };
 
-export const Group = ({ label, onSelect$, children, ...props }: GroupProps) => (
+export const NavMenuGroup = ({ label, onSelect$, children, ...props }: NavMenuGroupProps) => (
   <li {...props}>
     <button
       id="radix-:re:-trigger-radix-:rf:"

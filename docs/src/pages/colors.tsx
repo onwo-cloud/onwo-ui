@@ -1,5 +1,5 @@
 import type { JSXChildren } from '@builder.io/qwik';
-import { PageNavigation as PNav } from '@onwo/ui';
+import { PageNavigationLink } from '@onwo/ui';
 import { PageHeadSection } from '~/commons/page-head-section';
 
 const ColorSection = (props: { title: string; children: JSXChildren }) => (
@@ -33,14 +33,14 @@ export const ColorPage = () => (
 
     <section class="mt-12 flex flex-col lg:flex-row gap-6">
       <div class="flex flex-col w-full gap-6">
-        <PNav.Link label="Main colors" id="main-colors">
+        <PageNavigationLink label="Main colors" id="main-colors">
           <h2 id="Main-colors" class="text-onwo-24 font-medium">
             Main colors
           </h2>
-        </PNav.Link>
+        </PageNavigationLink>
         <div class="w-full flex flex-col gap-2 text-onwo-16">
           <ColorSection title="Accent colors">
-            <Color name="bg-accent" />
+            <Color name="bg-accent-800" />
           </ColorSection>
 
           <ColorSection title="Background colors">
