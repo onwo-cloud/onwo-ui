@@ -1,19 +1,11 @@
 import type { PropsOf } from '@builder.io/qwik';
 import { $, component$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
-import {
-  ClipboardIcon,
-  CodeIcon,
-  InfoIcon,
-  PanelsTopLeftIcon,
-  RocketIcon,
-  SwatchBookIcon,
-  XIcon
-} from '@onwo/icons';
+import { InfoIcon, PanelsTopLeftIcon, RocketIcon, SwatchBookIcon } from '@onwo/icons';
 import { styledcn } from '@onwo/primitives';
 import type { IconComponent } from '@onwo/primitives/svg-icon';
 import { cn } from '@onwo/ui';
-import { Button, Modal } from '@onwo/ui';
+import { ComponentCard } from './component-card';
 import { Logo } from './logo';
 import { SearchBar } from './searchbar';
 import {
@@ -57,69 +49,6 @@ import { ThemeDropdown } from './theme-dropdown';
 const DottedSeparator = styledcn('div')`w-full border-t border-dashed border-line`;
 
 export const BORDER_CLASSES = ' ring-[1.2px] ring-[#d6d6d6] rounded-[0.6rem]';
-
-type CardButtonProps = {
-  icon: IconComponent;
-} & Omit<PropsOf<'div'>, 'class'>;
-
-const CardButton = ({ icon: Icon, ...props }: CardButtonProps) => (
-  <div
-    class={cn(BORDER_CLASSES, 'p-1.5 rounded-full cursor-pointer hover:bg-parchment')}
-    {...props}
-  >
-    <Icon size="xs" />
-  </div>
-);
-
-// Example usage with theme options
-const ComponentCard = ({ title, height, display: Display }: BoxedComp) => (
-  <div
-    class={cn('relative rounded py-2 bg-white h-60', BORDER_CLASSES)}
-    style={{ height: `calc(var(--spacing) * ${height ?? 60})` }}
-  >
-    <div class="absolute px-4 w-full flex justify-between items-center mb-2 mt-1">
-      <span class="text-sm font-medium">{title}</span>
-      <div class="flex gap-2">
-        <Modal.Root>
-          <Modal.Trigger class="block mx-auto">
-            <CardButton icon={CodeIcon} />
-          </Modal.Trigger>
-          <Modal.Panel>
-            <Modal.Header class="flex justify-between">
-              <Modal.Title class="font-medium">Opened a modal</Modal.Title>
-              <Modal.Close>
-                <Button as="div" size="xs" variant="ghost">
-                  <XIcon size="xs" />
-                </Button>
-              </Modal.Close>
-            </Modal.Header>
-            <Modal.Description>
-              You can try typing in this input on mobile to check repositioning.
-              <input class="border border-line" name="text-input" />
-            </Modal.Description>
-            <Modal.Footer class="flex gap-4 justify-between">
-              <Modal.Close>
-                <Button as="div" size="sm" variant="ghost">
-                  Cancel
-                </Button>
-              </Modal.Close>
-              <Modal.Close>
-                <Button as="div" size="sm">
-                  Save changes
-                </Button>
-              </Modal.Close>
-            </Modal.Footer>
-          </Modal.Panel>
-        </Modal.Root>
-        <CardButton icon={ClipboardIcon} />
-      </div>
-    </div>
-
-    <div class="flex pt-4 items-center justify-center h-full">
-      <Display />
-    </div>
-  </div>
-);
 
 type SidebarItemProps = {
   href: string;
