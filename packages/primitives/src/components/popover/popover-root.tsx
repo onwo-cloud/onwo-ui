@@ -1,8 +1,8 @@
 import type { PropsOf, Signal } from '@builder.io/qwik';
-import { Slot, component$, useContextProvider, useId, useSignal } from '@builder.io/qwik';
+import { Slot, component$, useId, useSignal } from '@builder.io/qwik';
 import type { DeepPartial } from '~/types/utils';
-import type { FloatingOptions, PopoverContext } from './popover-context';
-import { popoverContextId } from './popover-context';
+import type { FloatingOptions, PopoverContextData } from './popover-context';
+import { PopoverContext } from './popover-context';
 
 export type PopoverRootProps = {
   mode?: 'manual' | 'auto';
@@ -76,7 +76,7 @@ export const HPopoverRoot = component$((props: PopoverProps) => {
   const floating =
     floatingP === true ? ({} as DeepPartial<FloatingOptions>) : floatingP || undefined;
 
-  const context: PopoverContext = {
+  const context: PopoverContextData = {
     anchorRef,
     compId,
     floating: floating && {
@@ -107,7 +107,7 @@ export const HPopoverRoot = component$((props: PopoverProps) => {
     mode: mode ?? 'auto',
   };
 
-  useContextProvider(popoverContextId, context);
+  PopoverContext.useProvider(context);
 
   return (
     <div ref={rootRef} id={rootId} {...rest}>

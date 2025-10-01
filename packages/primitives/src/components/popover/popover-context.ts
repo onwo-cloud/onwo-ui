@@ -1,9 +1,7 @@
 import type { Signal } from '@builder.io/qwik';
-import { createContextId } from '@builder.io/qwik';
 import type { AutoUpdateOptions } from '@floating-ui/dom';
+import { initContext } from '~/utils/context-utils';
 import type { TPlacement } from './popover-root';
-
-export const popoverContextId = createContextId<PopoverContext>('qui-popover');
 
 export type FloatingOptions = {
   placement: TPlacement;
@@ -19,7 +17,7 @@ export type FloatingOptions = {
   transform?: string;
 };
 
-export type PopoverContext = {
+export type PopoverContextData = {
   // core state
   compId: string;
   isOpenSig: Signal<boolean>;
@@ -36,3 +34,5 @@ export type PopoverContext = {
 
   // floating props
 };
+
+export const PopoverContext = initContext<PopoverContextData>('popover');

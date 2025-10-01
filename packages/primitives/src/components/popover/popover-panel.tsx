@@ -1,11 +1,11 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { component$, Slot, useContext } from '@builder.io/qwik';
+import { component$, Slot } from '@builder.io/qwik';
 import { FloatingPopover } from './floating';
-import { popoverContextId } from './popover-context';
+import { PopoverContext } from './popover-context';
 import { HPopoverPanelImpl } from './popover-panel-impl';
 
 export const HPopoverPanel = component$((props: PropsOf<'div'>) => {
-  const context = useContext(popoverContextId);
+  const context = PopoverContext.use();
 
   if (context.floating) {
     return (

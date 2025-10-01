@@ -1,5 +1,5 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Slot, component$, useContext, useTask$ } from '@builder.io/qwik';
+import { Slot, component$, useTask$ } from '@builder.io/qwik';
 
 import { isServer } from '@builder.io/qwik/build';
 import {
@@ -13,7 +13,7 @@ import {
 } from '@floating-ui/dom';
 import type { Placement, ReferenceElement } from '@floating-ui/dom';
 import type { FloatingOptions } from './popover-context';
-import { popoverContextId } from './popover-context';
+import { PopoverContext } from './popover-context';
 import { HPopoverPanelImpl } from './popover-panel-impl';
 
 type FloatingPopoverProps = {
@@ -21,7 +21,7 @@ type FloatingPopoverProps = {
 } & PropsOf<'div'>;
 
 export const FloatingPopover = component$(({ floating, ...props }: FloatingPopoverProps) => {
-  const context = useContext(popoverContextId);
+  const context = PopoverContext.use();
 
   // sets floating UI config
   useTask$(async ({ track, cleanup }) => {

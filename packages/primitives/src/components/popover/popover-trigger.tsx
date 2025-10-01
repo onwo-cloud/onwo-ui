@@ -1,7 +1,7 @@
 import type { PropsOf } from '@builder.io/qwik';
-import { Slot, component$, $, useContext } from '@builder.io/qwik';
+import { Slot, component$, $ } from '@builder.io/qwik';
 import { Button } from '../button';
-import { popoverContextId } from './popover-context';
+import { PopoverContext } from './popover-context';
 import { usePopover } from './use-popover';
 
 type PopoverTriggerProps = {
@@ -10,7 +10,7 @@ type PopoverTriggerProps = {
 } & PropsOf<'button'>;
 
 export const HPopoverTrigger = component$<PopoverTriggerProps>((props: PopoverTriggerProps) => {
-  const context = useContext(popoverContextId);
+  const context = PopoverContext.use();
 
   const triggerId = `${context.compId}-trigger`;
   const panelId = `${context.compId}-panel`;

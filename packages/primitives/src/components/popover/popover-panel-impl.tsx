@@ -13,7 +13,7 @@ import {
 
 import { isServer } from '@builder.io/qwik/build';
 import { useCombinedRef } from '~/hooks/use-combined-refs';
-import { popoverContextId } from './popover-context';
+import { PopoverContext } from './popover-context';
 import popoverStyles from './popover.css?inline';
 
 // We don't need a provider, that way we connect all context to the root
@@ -34,7 +34,7 @@ export const EnsuredContext = component$(() => {
 });
 
 export const HPopoverPanelImpl = component$((props: PropsOf<'div'>) => {
-  const context = useContext(popoverContextId);
+  const context = PopoverContext.use();
   const panelId = `${context.compId}-panel`;
   const contextRefOpts = { context, givenContextRef: context.panelRef };
   const panelRef = useCombinedRef(props.ref, contextRefOpts);
