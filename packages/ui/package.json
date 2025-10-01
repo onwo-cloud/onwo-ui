@@ -29,7 +29,7 @@
     "dev": "vite build --mode lib -c ./vite.config.dev.ts",
     "dev.build": "ESLINT=false qwik build",
     "lint": "eslint \"src/**/*.ts*\"",
-    "lint.fix": "pnpm run lint --fix",
+    "lint.fix": "eslint \"src/**/*.ts*\" --fix",
     "ts-watch": "tsc --emitDeclarationOnly --incremental --preserveWatchOutput --pretty --watch"
   },
   "devDependencies": {

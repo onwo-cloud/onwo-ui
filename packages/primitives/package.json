@@ -26,7 +26,7 @@
     "dev.build": "ESLINT=false qwik build",
     "dev": "vite build --mode lib -c ./vite.config.dev.ts",
     "lint": "eslint \"src/**/*.ts*\"",
-    "lint.fix": "pnpm run lint --fix",
+    "lint.fix": "eslint \"src/**/*.ts*\" --fix",
     "ts-watch": "tsc --emitDeclarationOnly --preserveWatchOutput --pretty --watch"
   },
   "devDependencies": {

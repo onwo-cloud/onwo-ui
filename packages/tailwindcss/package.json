@@ -19,7 +19,7 @@
     "dev": "tsc --incremental --preserveWatchOutput --pretty --watch",
     "ts-watch": "yarn dev -- --noEmit",
     "lint": "eslint \"src/**/*.ts*\"",
-    "lint.fix": "pnpm run lint --fix"
+    "lint.fix": "eslint \"src/**/*.ts*\" --fix"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",
