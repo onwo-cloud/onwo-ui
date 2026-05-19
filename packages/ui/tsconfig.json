@@ -1,0 +1,28 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["es2022", "DOM"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "@builder.io/qwik",
+    "declaration": true,
+    "declarationDir": "lib-types",
+    "declarationMap": true,
+    "outDir": "./lib",
+    "moduleResolution": "Bundler",
+    "incremental": true,
+    "types": ["vite/client"],
+    "paths": {
+      "~ui/*": ["./src/*"],
+      "~primitives/*": ["../primitives/src/*"],
+      "~icons/*": ["../icons/src/*"],
+      "@onwo/primitives": ["../primitives/src/"],
+      "@onwo/primitives/*": ["../primitives/src/@kit/*"],
+      "@onwo/icons": ["../icons/src/"],
+      "@onwo/icons/*": ["../icons/src/@kit/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["./lib", "./lib-types"]
+}

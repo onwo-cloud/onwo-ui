@@ -1,0 +1,42 @@
+{
+  "name": "@onwo/tailwindcss",
+  "version": "0.0.12-alpha",
+  "private": false,
+  "browserslist": [
+    "baseline widely available"
+  ],
+  "keywords": [
+    "plugin",
+    "tailwindcss"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/onwo-cloud/onwo-ui",
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc --incremental --pretty",
+    "dev": "tsc --incremental --preserveWatchOutput --pretty --watch",
+    "ts-watch": "tsc --incremental --preserveWatchOutput --pretty --watch --noEmit",
+    "lint": "oxlint",
+    "lint.fix": "oxlint --fix",
+    "lint.watch": "oxlint --watch"
+  },
+  "dependencies": {
+    "colorjs.io": "^0.5.2",
+    "postcss-selector-parser": "7.1.0"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=4"
+  },
+  "engines": {
+    "node": "^22"
+  },
+  "url": "https://ui.onwo.cloud/"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@onwo/ui-docs",
+  "description": "Documentation website for onwo-ui",
+  "version": "0.0.9-alpha",
+  "browserslist": [
+    "baseline widely available",
+    ">0.3%"
+  ],
+  "private": false,
+  "license": "MIT",
+  "repository": "https://github.com/onwo-cloud/onwo-ui",
+  "type": "module",
+  "scripts": {
+    "build": "qwik build",
+    "build.client": "vite build -c ./vite.config.client.ts",
+    "build.preview": "vite build -c ./vite.config.client.ts --ssr src/entry.preview.tsx",
+    "build.server": "vite build",
+    "build.types": "tsc --emitDeclarationOnly",
+    "dev": "vite -c ./vite.config.dev.ts --mode ssr",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "lint": "oxlint",
+    "lint.fix": "oxlint --fix",
+    "lint.watch": "oxlint --watch",
+    "ts-watch": "tsc --noEmit --incremental --preserveWatchOutput --pretty --watch"
+  },
+  "dependencies": {
+    "@builder.io/qwik-city": "^1.19.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "colorjs.io": "^0.5.2",
+    "effect": "^3.21.2",
+    "motion": "^12.38.0"
+  },
+  "devDependencies": {
+    "@onwo/tailwindcss": "workspace:*"
+  },
+  "engines": {
+    "node": "^22"
+  },
+  "url": "https://ui.onwo.cloud/"
+}

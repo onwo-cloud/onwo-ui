@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "target": "ES2020",
+    "module": "NodeNext",
+    "lib": ["es2020"],
+    "declaration": true,
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "outDir": "./dist"
+  },
+  "include": ["src"],
+  "files": ["src/index.ts", "src/theme.ts"]
+}

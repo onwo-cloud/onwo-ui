@@ -1,0 +1,96 @@
+@import 'tailwindcss';
+
+@source "../../packages/ui/src";
+@source "../../packages/icons/src";
+
+@theme {
+  --font-body: var(--ow-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-mono: var(--ow-mono), ui-monospace, Consolas, monospace;
+  --font-display: var(--ow-display), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+  --color-shade-0: oklch(0.995 0.00 0);
+  --color-shade-50: oklch(0.97 0.00 0);
+  --color-shade-100: oklch(0.95 0.00 0);
+  --color-shade-200: oklch(0.90 0.00 0);
+  --color-shade-300: oklch(0.87 0.00 0);
+  --color-shade-400: oklch(0.72 0.00 0);
+  --color-shade-500: oklch(0.56 0.00 0);
+  --color-shade-500: oklch(0.56 0.00 0);
+  --color-shade-600: oklch(0.44 0.00 0);
+  --color-shade-700: oklch(0.37 0.00 0);
+  --color-shade-800: oklch(0.27 0.00 0);
+  --color-shade-900: oklch(0.20 0.00 0);
+  --color-shade-950: oklch(0.14 0.00 0);
+
+  /* Background */
+  --color-canvas: var(--color-shade-0);
+  --color-canvas-secondary: var(--color-shade-100);
+  --color-canvas-secondary-hover: var(--color-shade-200);
+  --color-canvas-hover: var(--color-shade-200);
+  --color-canvas-accent: #e04024;
+
+  --color-accent: #1920e3;
+  --color-accent-red: #e04024;
+
+  /* Background contrast */
+  --color-canvas-contrast: var(--color-shade-900);
+  --color-canvas-contrast-hover: var(--color-shade-800);
+  --color-canvas-contrast-secondary: var(--color-shade-800);
+  --color-canvas-contrast-secondary-hover: var(--color-shade-700);
+
+  /* Border */
+  --color-separator: color-mix(in oklab, var(--color-ink) 14%, transparent);
+  --color-separator-secondary: color-mix(in oklab, var(--color-ink) 8%, transparent);
+  /*--color-border: lab(90.952% 0 -.0000119209);*/
+
+  /* Text */
+  --color-ink: var(--color-shade-950);
+  --color-ink-secondary: var(--color-shade-600);
+  --color-ink-tertiary: var(--color-shade-500);
+  --color-ink-accent: white;
+
+  /* Text contrast */
+  --color-ink-contrast: white;
+  --color-ink-contrast-secondary: white;
+  --color-ink-contrast-tertiary: var(--color-shade-50);
+
+  --color-red-50: oklch(0.971 0.013 17.38);
+  --color-red-100: oklch(0.936 0.032 17.717);
+  --color-red-200: oklch(0.885 0.062 18.334);
+
+  --text-xs: 0.6875rem; /* 12px -> 11px */
+  --text-sm: 0.8125rem; /* 14px -> 13px */
+  --text-base: 0.9375rem; /* 16px -> 15px */
+
+  --shadow-color: #0000000f;
+  --shadow-1: 0 0 0 1px var(--shadow-color);
+  --shadow-2: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color);
+  
+  /*
+    //.shadow-surface-1,.shadow-surface-2 {
+    //    box-shadow: var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);
+    //}
+    */
+
+
+
+
+
+  --shadow-3: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color);
+  --shadow-4: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color);
+  --shadow-5: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color);
+  --shadow-6: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color);
+  --shadow-7: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color), 0 48px 48px -24px var(--shadow-color);
+  --shadow-8: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color), 0 48px 48px -24px var(--shadow-color), 0 96px 96px -48px var(--shadow-color);
+}
+
+@layer base {
+  body {
+    @apply text-base bg-canvas;
+  }
+
+  .border-style-card {
+    border-color: var(--color-separator-secondary);
+    box-shadow: 0 1px 2px #0000000a;
+  }
+}

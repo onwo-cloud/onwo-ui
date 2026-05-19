@@ -1,0 +1,238 @@
+{
+  "name": "@onwo/ui",
+  "description": "An ui library for qwik.js inspired by moon.io",
+  "version": "0.0.12-alpha",
+  "private": false,
+  "browserslist": [
+    "baseline widely available"
+  ],
+  "keywords": [
+    "qwik.js",
+    "tailwindcss",
+    "ui-library"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/onwo-cloud/onwo-ui",
+  "files": [
+    "lib",
+    "lib-types"
+  ],
+  "type": "module",
+  "main": "./lib/index.qwik.mjs",
+  "types": "./lib-types/index.d.ts",
+  "exports": {
+    ".": {
+      "qwik": "./lib/index.qwik.mjs",
+      "import": "./lib/index.qwik.mjs",
+      "types": "./lib-types/index.d.ts"
+    },
+    "./accordion": {
+      "qwik": "./lib/@kit/accordion/index.qwik.mjs",
+      "import": "./lib/@kit/accordion/index.qwik.mjs",
+      "types": "./lib-types/@kit/accordion/index.d.ts"
+    },
+    "./alert": {
+      "qwik": "./lib/@kit/alert/index.qwik.mjs",
+      "import": "./lib/@kit/alert/index.qwik.mjs",
+      "types": "./lib-types/@kit/alert/index.d.ts"
+    },
+    "./avatar": {
+      "qwik": "./lib/@kit/avatar/index.qwik.mjs",
+      "import": "./lib/@kit/avatar/index.qwik.mjs",
+      "types": "./lib-types/@kit/avatar/index.d.ts"
+    },
+    "./backdrop-overlay": {
+      "qwik": "./lib/@kit/backdrop-overlay/index.qwik.mjs",
+      "import": "./lib/@kit/backdrop-overlay/index.qwik.mjs",
+      "types": "./lib-types/@kit/backdrop-overlay/index.d.ts"
+    },
+    "./badge": {
+      "qwik": "./lib/@kit/badge/index.qwik.mjs",
+      "import": "./lib/@kit/badge/index.qwik.mjs",
+      "types": "./lib-types/@kit/badge/index.d.ts"
+    },
+    "./breadcrumb": {
+      "qwik": "./lib/@kit/breadcrumb/index.qwik.mjs",
+      "import": "./lib/@kit/breadcrumb/index.qwik.mjs",
+      "types": "./lib-types/@kit/breadcrumb/index.d.ts"
+    },
+    "./button": {
+      "qwik": "./lib/@kit/button/index.qwik.mjs",
+      "import": "./lib/@kit/button/index.qwik.mjs",
+      "types": "./lib-types/@kit/button/index.d.ts"
+    },
+    "./calendar": {
+      "qwik": "./lib/@kit/calendar/index.qwik.mjs",
+      "import": "./lib/@kit/calendar/index.qwik.mjs",
+      "types": "./lib-types/@kit/calendar/index.d.ts"
+    },
+    "./card": {
+      "qwik": "./lib/@kit/card/index.qwik.mjs",
+      "import": "./lib/@kit/card/index.qwik.mjs",
+      "types": "./lib-types/@kit/card/index.d.ts"
+    },
+    "./carousel": {
+      "qwik": "./lib/@kit/carousel/index.qwik.mjs",
+      "import": "./lib/@kit/carousel/index.qwik.mjs",
+      "types": "./lib-types/@kit/carousel/index.d.ts"
+    },
+    "./checkbox": {
+      "qwik": "./lib/@kit/checkbox/index.qwik.mjs",
+      "import": "./lib/@kit/checkbox/index.qwik.mjs",
+      "types": "./lib-types/@kit/checkbox/index.d.ts"
+    },
+    "./chip": {
+      "qwik": "./lib/@kit/chip/index.qwik.mjs",
+      "import": "./lib/@kit/chip/index.qwik.mjs",
+      "types": "./lib-types/@kit/chip/index.d.ts"
+    },
+    "./collapsible": {
+      "qwik": "./lib/@kit/collapsible/index.qwik.mjs",
+      "import": "./lib/@kit/collapsible/index.qwik.mjs",
+      "types": "./lib-types/@kit/collapsible/index.d.ts"
+    },
+    "./combobox": {
+      "qwik": "./lib/@kit/combobox/index.qwik.mjs",
+      "import": "./lib/@kit/combobox/index.qwik.mjs",
+      "types": "./lib-types/@kit/combobox/index.d.ts"
+    },
+    "./menu": {
+      "qwik": "./lib/@kit/menu/index.qwik.mjs",
+      "import": "./lib/@kit/menu/index.qwik.mjs",
+      "types": "./lib-types/@kit/menu/index.d.ts"
+    },
+    "./input": {
+      "qwik": "./lib/@kit/input/index.qwik.mjs",
+      "import": "./lib/@kit/input/index.qwik.mjs",
+      "types": "./lib-types/@kit/input/index.d.ts"
+    },
+    "./label": {
+      "qwik": "./lib/@kit/label/index.qwik.mjs",
+      "import": "./lib/@kit/label/index.qwik.mjs",
+      "types": "./lib-types/@kit/label/index.d.ts"
+    },
+    "./masonry": {
+      "qwik": "./lib/@kit/masonry/index.qwik.mjs",
+      "import": "./lib/@kit/masonry/index.qwik.mjs",
+      "types": "./lib-types/@kit/masonry/index.d.ts"
+    },
+    "./modal": {
+      "qwik": "./lib/@kit/modal/index.qwik.mjs",
+      "import": "./lib/@kit/modal/index.qwik.mjs",
+      "types": "./lib-types/@kit/modal/index.d.ts"
+    },
+    "./nav-menu": {
+      "qwik": "./lib/@kit/nav-menu/index.qwik.mjs",
+      "import": "./lib/@kit/nav-menu/index.qwik.mjs",
+      "types": "./lib-types/@kit/nav-menu/index.d.ts"
+    },
+    "./page-navigation": {
+      "qwik": "./lib/@kit/page-navigation/index.qwik.mjs",
+      "import": "./lib/@kit/page-navigation/index.qwik.mjs",
+      "types": "./lib-types/@kit/page-navigation/index.d.ts"
+    },
+    "./popover": {
+      "qwik": "./lib/@kit/popover/index.qwik.mjs",
+      "import": "./lib/@kit/popover/index.qwik.mjs",
+      "types": "./lib-types/@kit/popover/index.d.ts"
+    },
+    "./progress": {
+      "qwik": "./lib/@kit/progress/index.qwik.mjs",
+      "import": "./lib/@kit/progress/index.qwik.mjs",
+      "types": "./lib-types/@kit/progress/index.d.ts"
+    },
+    "./radio": {
+      "qwik": "./lib/@kit/radio/index.qwik.mjs",
+      "import": "./lib/@kit/radio/index.qwik.mjs",
+      "types": "./lib-types/@kit/radio/index.d.ts"
+    },
+    "./radio-group": {
+      "qwik": "./lib/@kit/radio-group/index.qwik.mjs",
+      "import": "./lib/@kit/radio-group/index.qwik.mjs",
+      "types": "./lib-types/@kit/radio-group/index.d.ts"
+    },
+    "./select": {
+      "qwik": "./lib/@kit/select/index.qwik.mjs",
+      "import": "./lib/@kit/select/index.qwik.mjs",
+      "types": "./lib-types/@kit/select/index.d.ts"
+    },
+    "./separator": {
+      "qwik": "./lib/@kit/separator/index.qwik.mjs",
+      "import": "./lib/@kit/separator/index.qwik.mjs",
+      "types": "./lib-types/@kit/separator/index.d.ts"
+    },
+    "./sidebar": {
+      "qwik": "./lib/@kit/sidebar/index.qwik.mjs",
+      "import": "./lib/@kit/sidebar/index.qwik.mjs",
+      "types": "./lib-types/@kit/sidebar/index.d.ts"
+    },
+    "./skeleton": {
+      "qwik": "./lib/@kit/skeleton/index.qwik.mjs",
+      "import": "./lib/@kit/skeleton/index.qwik.mjs",
+      "types": "./lib-types/@kit/skeleton/index.d.ts"
+    },
+    "./spinner": {
+      "qwik": "./lib/@kit/spinner/index.qwik.mjs",
+      "import": "./lib/@kit/spinner/index.qwik.mjs",
+      "types": "./lib-types/@kit/spinner/index.d.ts"
+    },
+    "./tabs": {
+      "qwik": "./lib/@kit/tabs/index.qwik.mjs",
+      "import": "./lib/@kit/tabs/index.qwik.mjs",
+      "types": "./lib-types/@kit/tabs/index.d.ts"
+    },
+    "./textarea": {
+      "qwik": "./lib/@kit/textarea/index.qwik.mjs",
+      "import": "./lib/@kit/textarea/index.qwik.mjs",
+      "types": "./lib-types/@kit/textarea/index.d.ts"
+    },
+    "./toaster": {
+      "qwik": "./lib/@kit/toaster/index.qwik.mjs",
+      "import": "./lib/@kit/toaster/index.qwik.mjs",
+      "types": "./lib-types/@kit/toaster/index.d.ts"
+    },
+    "./toggle": {
+      "qwik": "./lib/@kit/toggle/index.qwik.mjs",
+      "import": "./lib/@kit/toggle/index.qwik.mjs",
+      "types": "./lib-types/@kit/toggle/index.d.ts"
+    },
+    "./toggle-group": {
+      "qwik": "./lib/@kit/toggle-group/index.qwik.mjs",
+      "import": "./lib/@kit/toggle-group/index.qwik.mjs",
+      "types": "./lib-types/@kit/toggle-group/index.d.ts"
+    },
+    "./tooltip": {
+      "qwik": "./lib/@kit/tooltip/index.qwik.mjs",
+      "import": "./lib/@kit/tooltip/index.qwik.mjs",
+      "types": "./lib-types/@kit/tooltip/index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build.prepare": "../../scripts/generate-exports.nu ./src/@kit",
+    "build": "pnpm run build.prepare && pnpm run build.qwik",
+    "build.qwik": "qwik build",
+    "build.types": "tsc --emitDeclarationOnly --incremental --pretty",
+    "build.lib": "vite build --mode lib",
+    "dev": "vite build --mode lib -c ./vite.config.dev.ts",
+    "lint": "oxlint",
+    "lint.fix": "oxlint --fix",
+    "lint.watch": "oxlint --watch",
+    "ts-watch": "tsc --emitDeclarationOnly --incremental --preserveWatchOutput --pretty --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.4"
+  },
+  "devDependencies": {
+    "@onwo/icons": "workspace:*",
+    "@onwo/primitives": "workspace:*",
+    "@onwo/tailwindcss": "workspace:*"
+  },
+  "engines": {
+    "node": "^22"
+  },
+  "qwik": "./lib/index.qwik.mjs",
+  "url": "https://ui.onwo.cloud/"
+}

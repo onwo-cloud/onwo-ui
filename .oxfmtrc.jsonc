@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "semi": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "experimentalSortImports": {
+    "order": "asc",
+    "ignoreCase": true,
+    "groups": ["builtin", "external", "internal", "parent", "sibling", "index"]
+  },
+  "experimentalSortPackageJson": true,
+}

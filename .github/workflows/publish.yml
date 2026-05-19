@@ -1,0 +1,84 @@
+name: Publish to NPM Registry
+
+env:
+  ESLINT_MODE: full
+
+on:
+  push:
+    branches: ['main']
+    paths:
+      - 'packages/**/package.json'
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: 'publish'
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ./node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Check for changes
+        id: check-changes
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            changed:
+              - 'packages/**/package.json'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build & publish tailwindcss package
+        working-directory: ./packages/tailwindcss
+        run: |
+          yarn build
+          yarn publish --access public || true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build & publish primitives package
+        working-directory: ./packages/primitives
+        run: |
+          yarn build
+          yarn publish --access public || true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build & publish icon package
+        working-directory: ./packages/icons
+        run: |
+          yarn build
+          yarn publish --access public || true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build & publish ui package
+        working-directory: ./packages/ui
+        run: |
+          yarn build
+          yarn publish --access public || true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

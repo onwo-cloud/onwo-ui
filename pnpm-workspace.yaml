@@ -1,0 +1,13 @@
+packages:
+  - packages/*
+  - docs
+
+ignoredBuiltDependencies:
+  - esbuild
+  - sharp
+
+minimumReleaseAge: 5760
+
+onlyBuiltDependencies:
+  - unrs-resolver
+  - '@tailwindcss/oxide'

@@ -1,0 +1,183 @@
+{
+  "name": "@onwo/primitives",
+  "description": "An ui library for qwik.js",
+  "version": "0.0.12-alpha",
+  "private": false,
+  "browserslist": [
+    "baseline widely available"
+  ],
+  "keywords": [
+    "qwik.js",
+    "tailwindcss",
+    "ui-library"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/onwo-cloud/onwo-ui",
+  "files": [
+    "lib",
+    "lib-types"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "qwik": "./lib/index.qwik.mjs",
+      "import": "./lib/index.qwik.mjs",
+      "types": "./lib-types/index.d.ts"
+    },
+    "./floating": {
+      "qwik": "./lib/@kit/floating/index.qwik.mjs",
+      "import": "./lib/@kit/floating/index.qwik.mjs",
+      "types": "./lib-types/@kit/floating/index.d.ts"
+    },
+    "./accordion": {
+      "qwik": "./lib/@kit/accordion/index.qwik.mjs",
+      "import": "./lib/@kit/accordion/index.qwik.mjs",
+      "types": "./lib-types/@kit/accordion/index.d.ts"
+    },
+    "./animated": {
+      "qwik": "./lib/@kit/animated/index.qwik.mjs",
+      "import": "./lib/@kit/animated/index.qwik.mjs",
+      "types": "./lib-types/@kit/animated/index.d.ts"
+    },
+    "./carousel": {
+      "qwik": "./lib/@kit/carousel/index.qwik.mjs",
+      "import": "./lib/@kit/carousel/index.qwik.mjs",
+      "types": "./lib-types/@kit/carousel/index.d.ts"
+    },
+    "./checkbox": {
+      "qwik": "./lib/@kit/checkbox/index.qwik.mjs",
+      "import": "./lib/@kit/checkbox/index.qwik.mjs",
+      "types": "./lib-types/@kit/checkbox/index.d.ts"
+    },
+    "./checklist": {
+      "qwik": "./lib/@kit/checklist/index.qwik.mjs",
+      "import": "./lib/@kit/checklist/index.qwik.mjs",
+      "types": "./lib-types/@kit/checklist/index.d.ts"
+    },
+    "./collapsible": {
+      "qwik": "./lib/@kit/collapsible/index.qwik.mjs",
+      "import": "./lib/@kit/collapsible/index.qwik.mjs",
+      "types": "./lib-types/@kit/collapsible/index.d.ts"
+    },
+    "./combobox": {
+      "qwik": "./lib/@kit/combobox/index.qwik.mjs",
+      "import": "./lib/@kit/combobox/index.qwik.mjs",
+      "types": "./lib-types/@kit/combobox/index.d.ts"
+    },
+    "./label": {
+      "qwik": "./lib/@kit/label/index.qwik.mjs",
+      "import": "./lib/@kit/label/index.qwik.mjs",
+      "types": "./lib-types/@kit/label/index.d.ts"
+    },
+    "./menu": {
+      "qwik": "./lib/@kit/menu/index.qwik.mjs",
+      "import": "./lib/@kit/menu/index.qwik.mjs",
+      "types": "./lib-types/@kit/menu/index.d.ts"
+    },
+    "./modal": {
+      "qwik": "./lib/@kit/modal/index.qwik.mjs",
+      "import": "./lib/@kit/modal/index.qwik.mjs",
+      "types": "./lib-types/@kit/modal/index.d.ts"
+    },
+    "./page-navigation": {
+      "qwik": "./lib/@kit/page-navigation/index.qwik.mjs",
+      "import": "./lib/@kit/page-navigation/index.qwik.mjs",
+      "types": "./lib-types/@kit/page-navigation/index.d.ts"
+    },
+    "./pagination": {
+      "qwik": "./lib/@kit/pagination/index.qwik.mjs",
+      "import": "./lib/@kit/pagination/index.qwik.mjs",
+      "types": "./lib-types/@kit/pagination/index.d.ts"
+    },
+    "./polymorphic": {
+      "qwik": "./lib/@kit/polymorphic/index.qwik.mjs",
+      "import": "./lib/@kit/polymorphic/index.qwik.mjs",
+      "types": "./lib-types/@kit/polymorphic/index.d.ts"
+    },
+    "./popover": {
+      "qwik": "./lib/@kit/popover/index.qwik.mjs",
+      "import": "./lib/@kit/popover/index.qwik.mjs",
+      "types": "./lib-types/@kit/popover/index.d.ts"
+    },
+    "./progress": {
+      "qwik": "./lib/@kit/progress/index.qwik.mjs",
+      "import": "./lib/@kit/progress/index.qwik.mjs",
+      "types": "./lib-types/@kit/progress/index.d.ts"
+    },
+    "./radio": {
+      "qwik": "./lib/@kit/radio/index.qwik.mjs",
+      "import": "./lib/@kit/radio/index.qwik.mjs",
+      "types": "./lib-types/@kit/radio/index.d.ts"
+    },
+    "./select": {
+      "qwik": "./lib/@kit/select/index.qwik.mjs",
+      "import": "./lib/@kit/select/index.qwik.mjs",
+      "types": "./lib-types/@kit/select/index.d.ts"
+    },
+    "./separator": {
+      "qwik": "./lib/@kit/separator/index.qwik.mjs",
+      "import": "./lib/@kit/separator/index.qwik.mjs",
+      "types": "./lib-types/@kit/separator/index.d.ts"
+    },
+    "./svg-icon": {
+      "qwik": "./lib/@kit/svg-icon/index.qwik.mjs",
+      "import": "./lib/@kit/svg-icon/index.qwik.mjs",
+      "types": "./lib-types/@kit/svg-icon/index.d.ts"
+    },
+    "./tabs": {
+      "qwik": "./lib/@kit/tabs/index.qwik.mjs",
+      "import": "./lib/@kit/tabs/index.qwik.mjs",
+      "types": "./lib-types/@kit/tabs/index.d.ts"
+    },
+    "./toaster": {
+      "qwik": "./lib/@kit/toaster/index.qwik.mjs",
+      "import": "./lib/@kit/toaster/index.qwik.mjs",
+      "types": "./lib-types/@kit/toaster/index.d.ts"
+    },
+    "./toggle": {
+      "qwik": "./lib/@kit/toggle/index.qwik.mjs",
+      "import": "./lib/@kit/toggle/index.qwik.mjs",
+      "types": "./lib-types/@kit/toggle/index.d.ts"
+    },
+    "./toggle-group": {
+      "qwik": "./lib/@kit/toggle-group/index.qwik.mjs",
+      "import": "./lib/@kit/toggle-group/index.qwik.mjs",
+      "types": "./lib-types/@kit/toggle-group/index.d.ts"
+    },
+    "./tooltip": {
+      "qwik": "./lib/@kit/tooltip/index.qwik.mjs",
+      "import": "./lib/@kit/tooltip/index.qwik.mjs",
+      "types": "./lib-types/@kit/tooltip/index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build.prepare": "../../scripts/generate-exports.nu ./src/@kit",
+    "build": "pnpm run build.prepare && pnpm run build.qwik",
+    "build.qwik": "qwik build",
+    "build.types": "tsc --emitDeclarationOnly --incremental --pretty",
+    "build.lib": "vite build --mode lib -c vite.config.ts",
+    "dev": "vite build --mode lib -c ./vite.config.dev.ts",
+    "lint": "oxlint",
+    "lint.fix": "oxlint --fix",
+    "lint.watch": "oxlint --watch",
+    "ts-watch": "tsc --emitDeclarationOnly --preserveWatchOutput --pretty --watch"
+  },
+  "dependencies": {
+    "@floating-ui/core": "^1.7.5",
+    "@floating-ui/dom": "^1.7.6",
+    "@oddbird/popover-polyfill": "0.6.0",
+    "@tailwindcss/vite": "^4.2.4",
+    "body-scroll-lock-upgrade": "^1.1.0",
+    "focus-trap": "7.6.5"
+  },
+  "devDependencies": {
+    "@onwo/tailwindcss": "workspace:*"
+  },
+  "engines": {
+    "node": "^22"
+  },
+  "url": "https//ui.onwo.cloud/"
+}
