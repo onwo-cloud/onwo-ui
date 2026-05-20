@@ -1,10 +1,14 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["typescript", "unicorn", "promise"],
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "promise"
+  ],
   "categories": {
     "correctness": "error",
     "perf": "warn",
-    "style": "off",
+    "style": "off"
   },
   "rules": {
     "no-unused-vars": "off",
@@ -17,8 +21,8 @@
         "caughtErrorsIgnorePattern": "^_",
         "destructuredArrayIgnorePattern": "^_",
         "varsIgnorePattern": "^_",
-        "ignoreRestSiblings": true,
-      },
+        "ignoreRestSiblings": true
+      }
     ],
     "typescript/ban-ts-comment": "off",
     "typescript/no-explicit-any": "off",
@@ -28,9 +32,8 @@
     "unicorn/consistent-function-scoping": "off",
     "unicorn/prefer-ternary": "off",
     "unicorn/no-anonymous-default-export": "off",
-    "unicorn/prevent-abbreviations": "off",
     "unicorn/no-null": "off",
     "unicorn/no-useless-switch-case": "off",
-    "unicorn/no-array-for-each": "off",
-  },
+    "unicorn/no-array-for-each": "off"
+  }
 }

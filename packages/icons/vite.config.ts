@@ -1,7 +1,8 @@
 import { qwikVite } from '@builder.io/qwik/optimizer';
 import onwoTailwindPlugin from '@onwo/tailwindcss';
 import tailwindcss from '@tailwindcss/vite';
-import { UserConfig, defineConfig } from 'vite';
+import type { UserConfig} from 'vite';
+import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 import pkg from './package.json';

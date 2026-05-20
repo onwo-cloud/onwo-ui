@@ -1,4 +1,5 @@
-import { Logger, defineConfig } from 'vite';
+import type { Logger} from 'vite';
+import { defineConfig } from 'vite';
 
 import { baseConfig } from './vite.config';
 
