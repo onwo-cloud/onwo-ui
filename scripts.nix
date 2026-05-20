@@ -25,7 +25,7 @@
     {
       cmd = "dev";
       desc = "Fire up the dev watcher";
-      exec = "bun run ./scripts/dev-watcher.ts";
+      exec = "pnpm --filter ./docs dev";
     }
   ];
 }

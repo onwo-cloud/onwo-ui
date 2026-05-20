@@ -26,7 +26,7 @@ export const MenuPopup = ({ children, ...rest }: MenuPopupProps) => (
       class: 'overflow-visible',
     }}
     panelProps={{
-      class: 'bg-canvas p-1 min-w-32 w-40 ring-1 ring-separator-secondary shadow-3 rounded-md',
+      class: 'bg-canvas p-1 min-w-32 w-40 shadow-3 rounded-md',
     }}
   >
     {children}
