@@ -24,7 +24,7 @@
     "access": "public"
   },
   "scripts": {
-    "generate-icons": "bun generate-icons.ts && pnpm run lint.fix",
+    "generate-icons": "bun ./scripts/generate-icons.ts && pnpm run lint.fix",
     "build": "qwik build",
     "build.types": "tsc --emitDeclarationOnly --incremental --pretty",
     "build.lib": "vite build --mode lib",

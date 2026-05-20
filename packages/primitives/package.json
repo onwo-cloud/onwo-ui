@@ -24,11 +24,6 @@
       "import": "./lib/index.qwik.mjs",
       "types": "./lib-types/index.d.ts"
     },
-    "./floating": {
-      "qwik": "./lib/@kit/floating/index.qwik.mjs",
-      "import": "./lib/@kit/floating/index.qwik.mjs",
-      "types": "./lib-types/@kit/floating/index.d.ts"
-    },
     "./accordion": {
       "qwik": "./lib/@kit/accordion/index.qwik.mjs",
       "import": "./lib/@kit/accordion/index.qwik.mjs",
@@ -63,6 +58,11 @@
       "qwik": "./lib/@kit/combobox/index.qwik.mjs",
       "import": "./lib/@kit/combobox/index.qwik.mjs",
       "types": "./lib-types/@kit/combobox/index.d.ts"
+    },
+    "./floating": {
+      "qwik": "./lib/@kit/floating/index.qwik.mjs",
+      "import": "./lib/@kit/floating/index.qwik.mjs",
+      "types": "./lib-types/@kit/floating/index.d.ts"
     },
     "./label": {
       "qwik": "./lib/@kit/label/index.qwik.mjs",

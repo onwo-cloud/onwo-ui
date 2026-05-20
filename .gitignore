@@ -1,28 +1,30 @@
 # !!!!!!! Tailwind v4 gitignore parsing is currently broken, see:
 # https://github.com/tailwindlabs/tailwindcss/issues/15452
 # Uncomment this star when fixed:
-.env
+.devenv/
 .direnv/
+.env
 docs/dist/
 docs/lib-types/
 docs/node_modules/
 docs/server/
 docs/tsconfig.tsbuildinfo
 node_modules/
-packages/tailwindcss/dist/
 packages/icons/lib-types/
 packages/icons/lib/
 packages/icons/node_modules/
+packages/icons/packages/
 packages/primitives/lib-types/
 packages/primitives/lib/
 packages/primitives/node_modules/
 packages/primitives/tsconfig.tsbuildinfo
+packages/tailwindcss/dist/
+packages/tailwindcss/node_modules/
 packages/ui/lib-types/
 packages/ui/lib/
 packages/ui/node_modules/
 packages/ui/tsconfig.tsbuildinfo
 **/vite.config.dev.ts.timestamp*
-
 #*
 #
 ## Root
