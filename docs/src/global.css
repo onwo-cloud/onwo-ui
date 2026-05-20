@@ -62,7 +62,7 @@
   --text-sm: 0.8125rem; /* 14px -> 13px */
   --text-base: 0.9375rem; /* 16px -> 15px */
 
-  --shadow-color: #0000000f;
+  --shadow-color: #00000015;
   --shadow-1: 0 0 0 1px var(--shadow-color);
   --shadow-2: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color);
   

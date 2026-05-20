@@ -84,13 +84,13 @@ const Searchbar = ({ class: className, ...props }: PropsOf<'div'>) => {
   return (
     <div
       class={[
-        'group inline-flex gap-3 rounded-full py-2 items-center bg-[white] shadow-2 tracking-tight pl-4 pr-6 cursor-pointer text-sm',
+        'group inline-flex gap-3 rounded-full py-2 items-center bg-[white] shadow-3 tracking-tight pl-3 pr-20 cursor-pointer text-sm',
         className,
       ]}
       {...props}
     >
       <Icon name="search" />
-      <span class="text-ink-secondary group-hover:text-ink">Find a component</span>
+      <span class="text-ink-secondary group-hover:text-ink">Search a component</span>
     </div>
   );
 };
