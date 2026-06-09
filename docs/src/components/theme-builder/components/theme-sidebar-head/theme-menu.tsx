@@ -7,14 +7,15 @@ import type { ThemeManager } from '../../hooks/use-theme-manager';
 import { CreateThemeModalProvider } from '../../modals/create-theme-modal';
 import { SaveThemeModalProvider } from '../../modals/save-theme-modal';
 
-type ThemeMenuProps = {
-  manager: ThemeManager;
-};
-
 import { component$ } from '@builder.io/qwik';
 import { MenuPopup, MenuRoot, MenuTrigger } from '~primitives/@kit/menu';
 
 import { ThemeMenuRoot } from './ThemeMenuRoot';
+
+type ThemeMenuProps = {
+  manager: ThemeManager;
+  class?: string;
+};
 
 export const ThemeMenu = component$((props: ThemeMenuProps) => {
   const {
@@ -42,7 +43,7 @@ export const ThemeMenu = component$((props: ThemeMenuProps) => {
   });
 
   return (
-    <div>
+    <div class={props.class}>
       <ThemeMenuRoot>
         <MenuTrigger class="flex cursor-default items-center text-left focus:outline-none">
           <div class="flex items-center gap-2 overflow-hidden pr-2">
@@ -52,16 +53,16 @@ export const ThemeMenu = component$((props: ThemeMenuProps) => {
           <div
             class={[
               'p-1 rounded-md cursor-pointer transition-colors',
-              'outline-ink/50 text-ink-primary hover:outline',
+              'outline-ink/50 text-ink hover:outline',
             ]}
           >
-            <Icon name="chevrons-up-down" size="xs" />
+            <Icon i="chevrons-up-down" size="xs" />
           </div>
         </MenuTrigger>
       </ThemeMenuRoot>
 
       {/* Trigger Button */}
-      <Icon name="panel-right" size="xs" />
+      <Icon i="panel-right" size="xs" />
 
       <div class="absolute top-full left-0 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden py-1 animate-in fade-in zoom-in-95 duration-100 origin-top z-20">
         {/* Theme List
@@ -80,7 +81,7 @@ export const ThemeMenu = component$((props: ThemeMenuProps) => {
                 }`}
             >
               <span class="truncate">{theme.name}</span>
-              {isActive && <Icon name="check"  class="w-4 h-4 text-gray-900"  />}
+              {isActive && <Icon i="check"  class="w-4 h-4 text-gray-900"  />}
             </button>
           );
         })}
@@ -104,7 +105,7 @@ export const ThemeMenu = component$((props: ThemeMenuProps) => {
               class="w-full justify-start h-8 px-2 font-normal text-gray-600 hover:text-gray-900"
               q:slot="trigger"
             >
-              <Icon name="plus"  class="w-3.5 h-3.5 mr-2 text-gray-400"  /> Create New
+              <Icon i="plus"  class="w-3.5 h-3.5 mr-2 text-gray-400"  /> Create New
             </Button>
           </ModalTrigger>
         </CreateThemeModalProvider>
@@ -118,7 +119,7 @@ export const ThemeMenu = component$((props: ThemeMenuProps) => {
               class="w-full justify-start h-8 px-2 font-normal text-gray-600 hover:text-gray-900"
               q:slot="trigger"
             >
-              <Icon name="save"  class="w-3.5 h-3.5 mr-2 text-gray-400"  /> Export Current
+              <Icon i="save"  class="w-3.5 h-3.5 mr-2 text-gray-400"  /> Export Current
             </Button>
           </ModalTrigger>
         </SaveThemeModalProvider>
@@ -131,7 +132,7 @@ export const ThemeMenu = component$((props: ThemeMenuProps) => {
           }}
           class="w-full justify-start h-8 px-2 font-normal text-red-600 hover:text-red-700 hover:bg-red-50"
         >
-          <Icon name="trash"  class="w-3.5 h-3.5 mr-2"  /> Delete Current Theme
+          <Icon i="trash"  class="w-3.5 h-3.5 mr-2"  /> Delete Current Theme
         </Button>
       </div>
  */}

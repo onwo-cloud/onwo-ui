@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik';
 import type { NoSerialize } from '@builder.io/qwik';
 
-import { ControlPointControls } from '../hooks/use-control-points';
+import type { ControlPointControls } from '../hooks/use-control-points';
 
 import type { CoordinateMapper } from './coordinate-mapper';
 import { DraggablePoint } from './draggable-point';

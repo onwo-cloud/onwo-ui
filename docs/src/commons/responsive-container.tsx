@@ -1,4 +1,5 @@
-import { component$, useSignal, useVisibleTask$, QRL, JSX, Signal } from '@builder.io/qwik';
+import type { QRL, JSX, Signal } from '@builder.io/qwik';
+import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 
 interface ResponsiveContainerProps {
   children$: QRL<

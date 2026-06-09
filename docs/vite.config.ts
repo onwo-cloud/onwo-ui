@@ -17,6 +17,7 @@ export default defineConfig(() => {
     build: {
       ssr: true,
       rollupOptions: {
+        external: ['@onwo/iconset-lucide', '@onwo/iconset-mdi'],
         input: ['@qwik-city-plan'],
       },
     },

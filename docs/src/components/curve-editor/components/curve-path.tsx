@@ -1,8 +1,8 @@
 import { component$, useComputed$ } from '@builder.io/qwik';
-import { NoSerialize } from '@builder.io/qwik';
+import type { NoSerialize } from '@builder.io/qwik';
 
 import { CurveEditorContext } from '../curve-editor-context';
-import { ControlPointControls } from '../hooks/use-control-points';
+import type { ControlPointControls } from '../hooks/use-control-points';
 
 import type { CoordinateMapper } from './coordinate-mapper';
 

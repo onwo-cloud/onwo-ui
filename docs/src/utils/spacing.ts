@@ -1,4 +1,4 @@
-import { Opaque } from "~primitives/index";
+import type { Opaque } from "~primitives/index";
 
 export type ThemeSpacing = Opaque<number, 'spacing'>;
 

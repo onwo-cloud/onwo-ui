@@ -30,8 +30,8 @@ export const IconsPage = () => (
       variants={{
         Default: `import { Icon } from '~/utils/icon'
 
-<Icon name="arrows-left"   />
-<Icon name="files-copy"  size="lg" class="text-success fill-success/20"  />`,
+<Icon i="arrows-left"   />
+<Icon i="files-copy"  size="lg" class="text-success fill-success/20"  />`,
       }}
     />
 
@@ -39,12 +39,12 @@ export const IconsPage = () => (
       title="Different sizes and styling"
       component={
         <div class="flex justify-between w-full items-center">
-          <Icon name="copy"  size="sm" class="text-error"  />
-          <Icon name="copy"  size="md" class="text-lead"  />
-          <Icon name="copy"  size="lg" class="text-success fill-success/20"  />
-          <Icon name="copy"  size="lg" class="text-accent"  />
-          <Icon name="copy"  size="xl" class="text-sand"  />
-          <Icon name="copy"  size="xl" class="text-neutron"  />
+          <Icon i="copy"  size="sm" class="text-error"  />
+          <Icon i="copy"  size="md" class="text-lead"  />
+          <Icon i="copy"  size="lg" class="text-success fill-success/20"  />
+          <Icon i="copy"  size="lg" class="text-accent"  />
+          <Icon i="copy"  size="xl" class="text-sand"  />
+          <Icon i="copy"  size="xl" class="text-neutron"  />
         </div>
       }
       code={`<AllIcons.FilesCopyIcon size="sm" class="text-error" />

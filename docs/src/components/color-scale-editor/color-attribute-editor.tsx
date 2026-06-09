@@ -1,6 +1,8 @@
-import { QRL, component$, useSignal, $, Signal } from '@builder.io/qwik';
+import type { Signal } from '@builder.io/qwik';
+import { QRL, component$, useSignal, $ } from '@builder.io/qwik';
 
-import { ControlPoint, CurveEditor, SwatchData } from '../curve-editor';
+import type { ControlPoint, SwatchData } from '../curve-editor';
+import { CurveEditor } from '../curve-editor';
 
 import { ColorSwatchBackground } from './color-swatch-background';
 import { JoystickSlider } from './joystick-slider';

@@ -1,4 +1,4 @@
-import { SwatchData } from '.';
+import type { SwatchData } from '.';
 
 type ColorSwatchBackgroundProps = {
   swatch: SwatchData[];

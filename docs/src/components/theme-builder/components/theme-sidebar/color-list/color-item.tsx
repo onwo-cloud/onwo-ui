@@ -1,7 +1,7 @@
 import { component$, useComputed$, type PropFunction, useSignal, $ } from '@builder.io/qwik';
 import { Icon } from '~/utils/icon'
 import { SwatchContext } from '../../../context/swatch-context';
-import { Palette } from '../../../types';
+import type { Palette } from '../../../types';
 
 import { ColorNameInput } from './color-name-input';
 import { GradientCircle } from './gradient-circle';
@@ -76,7 +76,7 @@ export const ColorListItem = component$((props: ColorListItemProps) => {
             class="p-1 rounded transition-text text-transparent group-hover:text-[blue] group-focus-within:text-[blue] focus:text-[blue] hover:text-black hover:bg-[black]/10"
             aria-label={`Rename color ${props.palette.name}`}
           >
-            <Icon name="text-cursor-input"  size="xs"  />
+            <Icon i="text-cursor-input"  size="xs"  />
           </button>
 
           <button
@@ -87,7 +87,7 @@ export const ColorListItem = component$((props: ColorListItemProps) => {
             class="p-1 rounded transition-text text-transparent group-hover:text-[blue] group-focus-within:text-[blue] focus:text-[blue] hover:text-red-500 hover:bg-red-500/10"
             aria-label={`Remove color ${props.palette.name}`}
           >
-            <Icon name="trash"  size="xs"  />
+            <Icon i="trash"  size="xs"  />
           </button>
         </>
       )}

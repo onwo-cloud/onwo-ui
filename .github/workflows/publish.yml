@@ -36,7 +36,7 @@ jobs:
         with:
           path: |
             ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
@@ -49,36 +49,36 @@ jobs:
               - 'packages/**/package.json'
 
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Build & publish tailwindcss package
         working-directory: ./packages/tailwindcss
         run: |
-          yarn build
-          yarn publish --access public || true
+          pnpm build
+          pnpm publish --access public || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Build & publish primitives package
         working-directory: ./packages/primitives
         run: |
-          yarn build
-          yarn publish --access public || true
+          pnpm build
+          pnpm publish --access public || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Build & publish icon package
         working-directory: ./packages/icons
         run: |
-          yarn build
-          yarn publish --access public || true
+          pnpm build
+          pnpm publish --access public || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Build & publish ui package
         working-directory: ./packages/ui
         run: |
-          yarn build
-          yarn publish --access public || true
+          pnpm build
+          pnpm publish --access public || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

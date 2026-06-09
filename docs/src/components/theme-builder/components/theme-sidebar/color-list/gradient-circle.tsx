@@ -1,5 +1,6 @@
-import { ClassList, component$ } from '@builder.io/qwik';
-import { SwatchData } from '~/components/curve-editor';
+import type { ClassList} from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
+import type { SwatchData } from '~/components/curve-editor';
 
 interface GradientCircleProps {
   swatches: SwatchData[];

@@ -1,120 +1,76 @@
+
 import {
   component$,
   Slot,
-  useContextProvider,
-  useId,
   useSignal,
+  useId,
+  useContextProvider,
   $,
+  sync$,
+  useVisibleTask$,
   type Signal,
-  type PropsOf,
-  type QRL,
-  useTask$,
+  type PropsOf
 } from '@builder.io/qwik';
-import { isBrowser } from '@builder.io/qwik/build';
+import { CollapsibleContext } from './collapsible-context';
 
-import { type CollapsibleContext, collapsibleContextId } from './collapsible-context';
-import { useCollapsible } from './use-collapsible';
+export interface CollapsibleProps extends PropsOf<'div'> {
+  isExpanded?: Signal<boolean>;
+}
 
-export type CollapsibleProps = PropsOf<'div'> & {
-  id?: string;
-  open?: boolean;
-  'bind:open'?: Signal<boolean>;
-  onChange$?: QRL<(open: boolean) => void>;
-  /** @deprecated use `onChange$` instead */
-  onOpenChange$?: QRL<(open: boolean) => void>;
-  disabled?: boolean;
-  triggerRef?: Signal<HTMLButtonElement>;
-  collapsible?: boolean;
-  accordionItem?: boolean;
-};
+// Synchronously stops the browser from doing anything with the Escape key
+export const collapsibleKeyDownSync = sync$((e: KeyboardEvent) => {
+  if (e.key === 'Escape') {
+    e.preventDefault();
+  }
+});
 
-export const HCollapsible = component$((props: CollapsibleProps) => {
-  const {
-    disabled,
-    onOpenChange$,
-    onChange$,
-    'bind:open': givenIsOpenSig,
-    id,
-    triggerRef: givenTriggerRef,
-    collapsible = true,
-    open,
-    accordionItem,
-    ...rest
-  } = props;
+export const Collapsible = component$<CollapsibleProps>(({
+  isExpanded: externalExpanded,
+  ...props
+}) => {
+  const internalExpanded = useSignal(false);
+  const isExpanded = externalExpanded || internalExpanded;
+  const contentId = `${useId()}-collapsible-content`;
+  const rootRef = useSignal<HTMLElement>();
 
-  const defaultOpenSig = useSignal<boolean>(open ?? false);
-  const isOpenSig = givenIsOpenSig ?? defaultOpenSig;
+  useContextProvider(CollapsibleContext, { isExpanded, contentId });
 
-  const defaultTriggerRef = useSignal<HTMLButtonElement>();
-  const triggerRef = givenTriggerRef ?? defaultTriggerRef;
-  const contentRef = useSignal<HTMLElement>();
-
-  const contentHeightSig = useSignal<number | null>(null);
-
-  const { getHiddenHeight } = useCollapsible();
-
-  const localId = useId();
-  const itemId = id ?? localId;
-
-  useTask$(function onOpenChangeTask({ track }) {
-    track(() => isOpenSig.value);
-
-    if (isBrowser) {
-      // syntactic sugar
-      onOpenChange$?.(isOpenSig.value);
-      onChange$?.(isOpenSig.value);
+  const handleFocusOut = $((e: FocusEvent) => {
+    const target = e.relatedTarget as Node | null;
+    if (rootRef.value && !rootRef.value.contains(target)) {
+      isExpanded.value = false;
     }
   });
 
-  const getContentDimensions$ = $(async () => {
-    if (!contentRef.value) {
-      throw new Error(
-        'Qwik UI: There is no reference to the collapsible content element. Make sure to wrap the content in a <CollapsibleContent> component.',
-      );
+  const handleKeyDown = $((e: KeyboardEvent) => {
+    if (e.key === 'Escape' && isExpanded.value) {
+      isExpanded.value = false;
+      const trigger = rootRef.value?.querySelector('button[aria-controls]') as HTMLElement;
+      trigger?.focus();
     }
+  });
 
-    if (contentHeightSig.value === null) {
-      contentHeightSig.value = await getHiddenHeight(contentRef.value);
-    }
+  useVisibleTask$(({ cleanup, track }) => {
+    const expanded = track(() => isExpanded.value);
+    if (!expanded) return;
 
-    if (contentHeightSig.value !== 0) {
-      contentRef.value.style.setProperty(
-        '--qwikui-collapsible-content-height',
-        `${contentHeightSig.value}px`,
-      );
-
-      // support previous accordion animations
-      if (accordionItem) {
-        contentRef.value.style.setProperty(
-          '--qwikui-accordion-content-height',
-          `${contentHeightSig.value}px`,
-        );
+    const handleClickOutside = (e: MouseEvent) => {
+      if (rootRef.value && !rootRef.value.contains(e.target as Node)) {
+        isExpanded.value = false;
       }
-    }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    cleanup(() => document.removeEventListener('click', handleClickOutside));
   });
-
-  const context: CollapsibleContext = {
-    isOpenSig,
-    itemId,
-    triggerRef,
-    contentRef,
-    contentHeightSig,
-    getContentDimensions$,
-    disabled,
-    collapsible,
-  };
-
-  useContextProvider(collapsibleContextId, context);
 
   return (
     <div
-      id={itemId}
-      data-collapsible
-      data-disabled={context.disabled ? '' : undefined}
-      data-open={context.isOpenSig.value ? '' : undefined}
-      data-closed={context.isOpenSig.value ? undefined : ''}
-      aria-live="polite"
-      {...rest}
+      ref={rootRef}
+      onFocusOut$={handleFocusOut}
+      onKeyDown$={[collapsibleKeyDownSync, handleKeyDown]}
+      data-state={isExpanded.value ? 'open' : 'closed'}
+      {...props}
     >
       <Slot />
     </div>

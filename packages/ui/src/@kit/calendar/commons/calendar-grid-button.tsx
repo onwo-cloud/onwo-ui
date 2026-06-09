@@ -15,13 +15,11 @@ type CalendarGridButtonProps = {
 
 export const CalendarGridButton = (props: CalendarGridButtonProps) => (
   <td
-    class={[
-      'relative p-0 rounded-md text-center text-sm hover:bg-scan h-8 w-full',
-      props.dim ? 'text-lead': '',
-      props.highlight ? 'bg-line': '',
-      props.isSelected ?'bg-accent hover:bg-accent text-forced-a': '',
-      props.isFocused ? 'ring-1 ring-stare': '',
-    ]}
+    onClick$={() => {
+      if (props.isDisabled) return;
+      props.onSelected$();
+    }}
+    class={['relative rounded-lg text-center text-sm cursor-pointer h-10 py-0.5 w-full']}
     tabIndex={-1}
   >
     <button
@@ -29,19 +27,22 @@ export const CalendarGridButton = (props: CalendarGridButtonProps) => (
       name="day"
       onKeyDown$={(event) => props.onKeyDown$?.(event)}
       class={[
-        'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm disabled:pointer-events-none disabled:opacity-50 h-full w-full p-0 font-normal',
-
-        props.isDisabled ? 'text-lead': '',
+        'inline-flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap rounded-md text-sm disabled:pointer-events-none disabled:opacity-50 h-full w-full p-0 font-normal-light rounded-lg',
+        props.dim ? 'text-ink-tertiary' : '',
+        props.isSelected
+          ? 'bg-canvas-contrast text-ink-contrast text-forced-a'
+          : 'hover:bg-canvas-hover',
+        props.isFocused ? 'ring ring-separator ring-inset' : '',
+        !props.isSelected && props.isDisabled ? 'text-ink-tertiary' : '',
       ]}
       role="gridmint"
       tabIndex={-1}
       type="button"
-      onClick$={() => {
-        if (props.isDisabled) return;
-        props.onSelected$();
-      }}
     >
       {props.label}
+      {props.highlight && (
+        <div class="absolute pointer-events-none w-1 h-1 bg-current-color/30 rounded-full bottom-1.5 left-1/2 -translate-x-1/2" />
+      )}
     </button>
   </td>
 );

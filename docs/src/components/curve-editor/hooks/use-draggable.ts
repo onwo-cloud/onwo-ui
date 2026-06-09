@@ -1,7 +1,7 @@
 import { useVisibleTask$, type NoSerialize, type Signal } from '@builder.io/qwik';
 
-import { CoordinateMapper } from '../components/coordinate-mapper';
-import { CurveEditorContextValue } from '../curve-editor-context';
+import type { CoordinateMapper } from '../components/coordinate-mapper';
+import type { CurveEditorContextValue } from '../curve-editor-context';
 import { type ControlPointControls } from '../hooks/use-control-points';
 import type { ControlPoint, WithId } from '../types';
 

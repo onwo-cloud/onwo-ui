@@ -6,29 +6,30 @@ import type {
   QwikIntrinsicElements,
 } from '@builder.io/qwik';
 
-export type BaseIconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | `${number}rem`;
+export const getIconSize = (
+  size: string
+): string => {
+  const isCssValue = /^[0-9.]+(px|rem|em|vh|vw|ch|ex|%)$/.test(size) ||
+    /^(calc|var|clamp)\(/.test(size);
 
-const getIconSize = (size: BaseIconSize) => {
-  switch (size) {
-    case 'xs':
-    case 'sm':
-    case 'lg':
-    case 'xl': {
-      return `var(--text-${size})`;
-    }
-    case 'md': {
-      return `var(--text-base)`;
-    }
-    default: {
-      return size;
-    }
+  if (isCssValue) {
+    return size;
   }
+
+  const isToken = /^[a-zA-Z0-9-]+$/.test(size);
+
+  if (isToken) {
+    // We still set size as a default fallback in case non-token are picked up.
+    return `var(--icon-${size}, ${size})`;
+  }
+
+  return size;
 };
 
 export type BaseIconComponent = ((props: BaseIconProps) => JSXOutput) | Component<BaseIconProps>;
 
 export type BaseIconProps = {
-  size?: BaseIconSize;
+  size?: string;
   class?: ClassList;
 };
 
@@ -38,12 +39,6 @@ export type SvgIconProps = {
 } & BaseIconProps &
   Omit<QwikIntrinsicElements['svg'], 'viewBox'>;
 
-/*
- * Generic SVG element, can be use to build higher level icons.
- *
- * -- Display a blue info icon of size 18x18:
- * <InfoIcon size="lg" class="text-blue-400" />
- */
 export const SvgIcon = ({
   size,
   children,

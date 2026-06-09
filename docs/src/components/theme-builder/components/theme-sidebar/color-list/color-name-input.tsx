@@ -48,7 +48,7 @@ export const ColorNameInput = component$((props: ColorNameInputProps) => {
         class="p-1 rounded text-green-600 hover:bg-green-600/10"
         aria-label="Save name"
       >
-        <Icon name="check"  size="xs"  />
+        <Icon i="check"  size="xs"  />
       </button>
 
       {/* Abort Button */}
@@ -60,7 +60,7 @@ export const ColorNameInput = component$((props: ColorNameInputProps) => {
         class="p-1 rounded text-red-500 hover:bg-red-500/10"
         aria-label="Cancel edit"
       >
-        <Icon name="x" size="xs" />
+        <Icon i="x" size="xs" />
       </button>
     </div>
   );

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Horizontal scroll — edge distortion</title>
+<style>
+  :root{
+    --ink:#111111;
+    --paper:#ffffff;
+    --muted:#6b6b6b;
+  }
+  *{box-sizing:border-box;}
+  html, body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    width:100vw;
+    overflow:hidden;         /* no page scroll — everything happens inside #viewport */
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  }
+
+  header{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:10;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:26px 40px 0 40px;
+    pointer-events:none;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:0.5px;}
+  .logo .dot{width:14px;height:14px;border-radius:50%;background:var(--ink);display:inline-block;}
+  .meta{display:flex;gap:100px;font-size:12.5px;line-height:1.55;color:var(--ink);text-align:right;}
+  .meta .col b{display:block;font-size:14px;margin-bottom:6px;}
+  .meta .col.desc{max-width:220px;color:var(--muted);text-align:left;}
+
+  #viewport{
+    position:fixed;
+    inset:0;
+    z-index:1;
+    touch-action:none;       /* we handle drag/scroll ourselves */
+  }
+  #viewport canvas{
+    display:block;
+    width:100%;
+    height:100%;
+  }
+
+  .hint{
+    position:fixed;
+    left:40px;
+    bottom:22px;
+    font-size:11px;
+    color:var(--muted);
+    z-index:10;
+    letter-spacing:0.3px;
+  }
+
+  .progress{
+    position:fixed;
+    right:40px;
+    bottom:22px;
+    z-index:10;
+    width:160px;
+    height:2px;
+    background:rgba(0,0,0,0.12);
+  }
+  .progress i{
+    display:block;
+    height:100%;
+    width:0%;
+    background:var(--ink);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="dot"></span>SYSTEM</div>
+  <div class="meta">
+    <div class="col">
+      <b>Patch</b>
+      Product design<br>
+      Industrial design<br>
+      Branding
+    </div>
+  </div>
+</header>
+
+<div id="viewport"></div>
+
+<div class="hint">drag / scroll — content bends at the screen edges with velocity</div>
+<div class="progress"><i id="progressBar"></i></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  const viewport = document.getElementById('viewport');
+  const progressBar = document.getElementById('progressBar');
+
+  let W = window.innerWidth, H = window.innerHeight;
+
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(W, H);
+  viewport.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  // orthographic camera matched 1:1 to pixels, origin center-screen
+  const camera = new THREE.OrthographicCamera(-W/2, W/2, H/2, -H/2, -1000, 1000);
+  camera.position.z = 10;
+
+  const world = new THREE.Group();
+  scene.add(world);
+
+  // ---------------------------------------------------------------
+  // Build panel textures procedurally (title cards, icon, phone mocks)
+  // ---------------------------------------------------------------
+  function makeCanvas(draw, w = 640, h = 640){
+    const c = document.createElement('canvas');
+    c.width = w; c.height = h;
+    const ctx = c.getContext('2d');
+    draw(ctx, w, h);
+    return c;
+  }
+
+  function roundedRect(ctx, x, y, w, h, r){
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+
+  const panelDefs = [
+    // intro text panel
+    { w: 520, h: 620, draw: (ctx,w,h) => {
+        ctx.fillStyle = "#0f5132";
+        ctx.font = "600 30px -apple-system, Helvetica Neue, Arial, sans-serif";
+        ctx.textBaseline = "top";
+        const lines = [
+          "The Patch app is",
+          "designed to be as",
+          "invisible as possible.",
+          "Tap your phone to",
+          "lock your apps.",
+          "Tap again to unlock."
+        ];
+        lines.forEach((l,i) => ctx.fillText(l, 0, i*42));
+      }
+    },
+    // yellow icon panel
+    { w: 620, h: 620, draw: (ctx,w,h) => {
+        ctx.fillStyle = "#f2f2f2";
+        ctx.fillRect(0,0,w,h);
+        ctx.fillStyle = "#f0b429";
+        roundedRect(ctx, w*0.18, h*0.18, w*0.64, h*0.64, 70);
+        ctx.fill();
+        ctx.fillStyle = "#ffffff";
+        const cx = w*0.5, cy = h*0.5, r = w*0.17;
+        for (let i=0;i<8;i++){
+          const a = (i/8)*Math.PI*2;
+          ctx.beginPath();
+          ctx.arc(cx + Math.cos(a)*r*1.05, cy + Math.sin(a)*r*1.05, r*0.62, 0, Math.PI*2);
+          ctx.fill();
+        }
+        ctx.beginPath();
+        ctx.arc(cx, cy, r*1.05, 0, Math.PI*2);
+        ctx.fill();
+      }
+    },
+    // phone mock 1 (grey - patched briefly)
+    { w: 420, h: 640, draw: (ctx,w,h) => {
+        ctx.fillStyle = "#e8e8e8";
+        roundedRect(ctx, 0,0,w,h,42); ctx.fill();
+        ctx.fillStyle = "#111";
+        roundedRect(ctx, 14,14,w-28,h-28,32); ctx.stroke();
+        ctx.strokeStyle = "#111"; ctx.lineWidth = 4;
+        roundedRect(ctx, 14,14,w-28,h-28,32); ctx.stroke();
+        ctx.fillStyle = "#111";
+        ctx.font = "500 18px -apple-system, Arial";
+        ctx.textAlign = "center";
+        ctx.fillText("Today you have patched for", w/2, h*0.34);
+        ctx.font = "700 40px -apple-system, Arial";
+        ctx.fillText("1h 44m 29s", w/2, h*0.34 + 44);
+        ctx.textAlign = "left";
+      }
+    },
+    // phone mock 2 (red - patching longer)
+    { w: 420, h: 640, draw: (ctx,w,h) => {
+        ctx.fillStyle = "#ffffff";
+        roundedRect(ctx, 0,0,w,h,42); ctx.fill();
+        ctx.strokeStyle = "#111"; ctx.lineWidth = 4;
+        roundedRect(ctx, 14,14,w-28,h-28,32); ctx.stroke();
+        ctx.fillStyle = "#111";
+        ctx.font = "500 18px -apple-system, Arial";
+        ctx.textAlign = "center";
+        ctx.fillText("Patching you for", w/2, h*0.30);
+        ctx.font = "700 40px -apple-system, Arial";
+        ctx.fillText("4h 29m 03s", w/2, h*0.30 + 44);
+
+        const cx = w/2, cy = h*0.56, r = w*0.16;
+        const grad = ctx.createRadialGradient(cx,cy,r*0.2,cx,cy,r*1.8);
+        grad.addColorStop(0,"rgba(209,55,46,0.45)");
+        grad.addColorStop(1,"rgba(209,55,46,0)");
+        ctx.fillStyle = grad;
+        ctx.beginPath(); ctx.arc(cx,cy,r*1.8,0,Math.PI*2); ctx.fill();
+
+        ctx.fillStyle = "#d1372e";
+        for (let i=0;i<8;i++){
+          const a = (i/8)*Math.PI*2;
+          ctx.beginPath();
+          ctx.arc(cx + Math.cos(a)*r*1.05, cy + Math.sin(a)*r*1.05, r*0.62, 0, Math.PI*2);
+          ctx.fill();
+        }
+        ctx.beginPath(); ctx.arc(cx,cy,r*1.05,0,Math.PI*2); ctx.fill();
+
+        ctx.fillStyle = "#fff";
+        ctx.font = "italic 600 20px Georgia";
+        ctx.fillText("patch", cx, cy - 12);
+        ctx.textAlign = "left";
+      }
+    },
+    // closing text panel
+    { w: 480, h: 620, draw: (ctx,w,h) => {
+        ctx.fillStyle = "#111";
+        ctx.font = "600 34px -apple-system, Helvetica Neue, Arial, sans-serif";
+        ctx.textBaseline = "top";
+        ctx.fillText("You do", 0, h*0.4);
+        ctx.fillText("you.", 0, h*0.4 + 44);
+      }
+    }
+  ];
+
+  const GAP = 90;
+  const panels = [];
+  let cursorX = 0;
+
+  const SEG = 24; // subdivisions per panel for the bend shader
+
+  panelDefs.forEach(def => {
+    const cnv = makeCanvas(def.draw, def.w, def.h);
+    const tex = new THREE.CanvasTexture(cnv);
+    tex.needsUpdate = true;
+
+    const geo = new THREE.PlaneGeometry(def.w, def.h, SEG, SEG);
+    const mat = new THREE.ShaderMaterial({
+      uniforms: {
+        uTexture: { value: tex },
+        uGroupX: { value: 0 },     // world.position.x, passed in each frame
+        uViewportW: { value: W },
+        uZonePx: { value: W * 0.06 }  // 6vw warp zone on each edge, always on
+      },
+      transparent: true,
+      vertexShader: `
+        uniform float uGroupX;
+        uniform float uViewportW;
+        uniform float uZonePx;
+        varying vec2 vUv;
+        varying float vEdge;
+
+        void main() {
+          vUv = uv;
+
+          // this vertex's actual, current screen-space x (fixed to the
+          // viewport, not to the content) — this is what makes the warp
+          // zone stationary while content scrolls through it
+          float screenX = position.x + modelMatrix[3][0] + uGroupX;
+          float half = uViewportW * 0.5;
+
+          // 0 outside the 6vw margins, ramping to 1 right at the screen edge
+          float leftT  = clamp(((-half + uZonePx) - screenX) / uZonePx, 0.0, 1.0);
+          float rightT = clamp((screenX - (half - uZonePx)) / uZonePx, 0.0, 1.0);
+          float edgeFactor = max(leftT, rightT);
+          float dir = sign(screenX);
+
+          float bend = pow(edgeFactor, 2.0);
+
+          vec3 pos = position;
+          // curl away from the viewer and pull inward, like the panel is
+          // wrapping around a cylinder right at the screen's edge
+          pos.z -= bend * 130.0;
+          pos.x -= dir * bend * 55.0;
+          pos.y *= 1.0 - bend * 0.18;
+
+          vEdge = edgeFactor;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+        }
+      `,
+      fragmentShader: `
+        uniform sampler2D uTexture;
+        varying vec2 vUv;
+        varying float vEdge;
+        void main() {
+          vec4 tex = texture2D(uTexture, vec2(vUv.x, 1.0 - vUv.y));
+          // subtle falloff so the bent edge reads as receding into depth
+          tex.rgb *= 1.0 - vEdge * 0.35;
+          tex.a *= 1.0 - vEdge * 0.15;
+          gl_FragColor = tex;
+        }
+      `
+    });
+
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.position.set(cursorX + def.w/2, 0, 0);
+    world.add(mesh);
+    panels.push({ mesh, mat, w: def.w });
+
+    cursorX += def.w + GAP;
+  });
+
+  const totalWidth = cursorX - GAP;
+
+  function layout(){
+    W = window.innerWidth; H = window.innerHeight;
+    camera.left = -W/2; camera.right = W/2;
+    camera.top = H/2; camera.bottom = -H/2;
+    camera.updateProjectionMatrix();
+    renderer.setSize(W, H);
+    panels.forEach(p => {
+      p.mat.uniforms.uViewportW.value = W;
+      p.mat.uniforms.uZonePx.value = W * 0.06;
+    });
+  }
+  layout();
+  window.addEventListener('resize', layout);
+
+  // ---------------------------------------------------------------
+  // Horizontal scroll control — wheel + drag, all captured on #viewport
+  // ---------------------------------------------------------------
+  let targetX = 0;   // where we want to be (world offset, positive = scrolled right)
+  let currentX = 0;  // actual position — tracks targetX directly, no elastic bounce
+
+  const maxX = Math.max(0, totalWidth - W + 200);
+
+  function clampTarget(){
+    targetX = Math.max(0, Math.min(maxX, targetX));
+  }
+
+  viewport.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+    targetX += delta;
+    clampTarget();
+  }, { passive: false });
+
+  let dragging = false;
+  let dragStartX = 0;
+  let dragStartTarget = 0;
+
+  viewport.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    dragStartX = e.clientX;
+    dragStartTarget = targetX;
+    viewport.setPointerCapture(e.pointerId);
+  });
+  viewport.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    const delta = dragStartX - e.clientX;
+    targetX = dragStartTarget + delta;
+    clampTarget();
+  });
+  viewport.addEventListener('pointerup', () => dragging = false);
+  viewport.addEventListener('pointercancel', () => dragging = false);
+
+  function animate(){
+    requestAnimationFrame(animate);
+
+    // light smoothing just to de-jitter trackpad input — not elastic,
+    // content tracks the scroll position directly and the warp zones
+    // are always active regardless of speed
+    currentX += (targetX - currentX) * 0.4;
+
+    world.position.x = -currentX;
+
+    panels.forEach(p => {
+      p.mat.uniforms.uGroupX.value = world.position.x;
+    });
+
+    progressBar.style.width = (maxX > 0 ? (currentX / maxX) * 100 : 0) + "%";
+
+    renderer.render(scene, camera);
+  }
+  animate();
+})();
+</script>
+
+</body>
+</html>

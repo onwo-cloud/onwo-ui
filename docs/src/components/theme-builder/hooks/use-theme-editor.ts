@@ -1,4 +1,5 @@
-import { $, QRL, Signal, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import type { QRL, Signal} from '@builder.io/qwik';
+import { $, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 
 import { M, Obj, Arr, pipe } from '~/utils/effect';
 

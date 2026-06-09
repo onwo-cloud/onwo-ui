@@ -3,7 +3,7 @@ import { $, component$, useSignal, useTask$ } from '@builder.io/qwik';
 
 import { useOnChange } from '~/hooks/use-on-change';
 
-import { ScaleData } from '../theme-builder/types';
+import type { ScaleData } from '../theme-builder/types';
 
 import { AttributeHeader } from './attribute-header';
 import { ColorAttributeEditor } from './color-attribute-editor';

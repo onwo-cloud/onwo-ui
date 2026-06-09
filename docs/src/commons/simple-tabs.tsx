@@ -1,10 +1,11 @@
+import type {
+  ClassList} from '@builder.io/qwik';
 import {
   component$,
   type Signal,
   type PropFunction,
   useComputed$,
-  useStore,
-  ClassList,
+  useStore
 } from '@builder.io/qwik';
 
 import { HoverBox } from './hover-box';

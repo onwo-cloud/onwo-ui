@@ -1,7 +1,7 @@
 {
   "name": "@onwo/icons",
   "description": "An icon library ported to qwik.js from the moon.io DS",
-  "version": "1.16.0",
+  "version": "0.0.13-rc.0",
   "private": false,
   "browserslist": [
     "baseline widely available"
@@ -24,7 +24,6 @@
     "access": "public"
   },
   "scripts": {
-    "generate-icons": "bun ./scripts/generate-icons.ts && pnpm run lint.fix",
     "build": "qwik build",
     "build.types": "tsc --emitDeclarationOnly --incremental --pretty",
     "build.lib": "vite build --mode lib",

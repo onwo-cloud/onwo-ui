@@ -13,7 +13,7 @@ export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOption
   (_option) => (api: PluginAPI) => {
     api.addBase({
       'html, body': {
-        '@apply font-body': {},
+        '@apply font-sans': {},
         'text-size-adjust': 'none', // Prevent automatic zooming of fonts on some mobile devices.
         'text-rendering': 'optimizeLegibility',
         '-webkit-font-smoothing': 'antialiased', // Consistent font display behavior on OSX.
@@ -27,7 +27,7 @@ export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOption
         fontFamily: {
           display:
             'var(--font-display), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
-          body: 'var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+          body: 'var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
           mono: 'var(--font-mono), monospace',
         },
       },

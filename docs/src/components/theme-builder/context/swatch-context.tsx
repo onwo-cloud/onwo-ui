@@ -4,7 +4,7 @@ import { initContext } from '~primitives/utils/context-utils';
 
 import { Obj } from '~/utils/effect';
 
-import { ScaleData, Theme } from '../types';
+import type { ScaleData, Theme } from '../types';
 
 /**
  * --- TYPES ---

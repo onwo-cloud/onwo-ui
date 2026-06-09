@@ -1,4 +1,5 @@
-import { M, pipe, Nbr, Err, Str, Tuple, Obj, Arr } from '~/utils/effect';
+import type { Err} from '~/utils/effect';
+import { M, pipe, Nbr, Str, Tuple, Obj, Arr } from '~/utils/effect';
 
 import type { ControlPoint, ScaleData, Palette, Theme } from '../types';
 

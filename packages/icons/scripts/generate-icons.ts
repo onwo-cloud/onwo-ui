@@ -1,25 +1,101 @@
-import { Effect, Console, Data } from 'effect';
+import { Effect, Data, pipe } from 'effect';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import { tmpdir } from 'os';
 import { join } from 'path';
 import fs from 'fs/promises';
 
+// ── CLI Polish Formatting Helpers ──────────────────────────────────────────
+export const c = {
+  red: (s: string) => `\x1b[31m${s}\x1b[0m`,
+  green: (s: string) => `\x1b[32m${s}\x1b[0m`,
+  yellow: (s: string) => `\x1b[33m${s}\x1b[0m`,
+  blue: (s: string) => `\x1b[34m${s}\x1b[0m`,
+  magenta: (s: string) => `\x1b[35m${s}\x1b[0m`,
+  bold: (s: string) => `\x1b[1m${s}\x1b[0m`,
+  reset: '\x1b[0m',
+  dim: (s: string) => `\x1b[2m${s}\x1b[0m`,
+  cyan: (s: string) => `\x1b[36m${s}\x1b[0m`,
+  gray: (s: string) => `\x1b[90m${s}\x1b[0m`,
+};
+
+export const log = {
+  c,
+  step: (msg: string) => console.info(`\n${pipe(msg, c.bold, c.blue)}`),
+  ok: (msg: string) => console.log(`  ${c.green('✓')} ${msg}`),
+  warn: (msg: string) => console.warn(`  ${c.yellow('⚠')} ${msg}`),
+  error: (msg: string) => console.error(`\n${c.red(`✗ ${msg}`)}`),
+};
+
+// --- ARGUMENT PARSING ---
+const args = process.argv.slice(2);
+const isAll = args.includes('--all');
+const setsArg = args.find((arg) => arg.startsWith('--sets='));
+
+if (!isAll && !setsArg) {
+  log.warn('No target specified. Please provide --all to generate all iconsets, or --sets=lucide,mdi to build specific ones. Skipping build.');
+  process.exit(0);
+}
+
+const ALLOWED_SETS: string[] = setsArg && !isAll
+  ? setsArg.split('=')[1].split(',').map((s) => s.trim()).filter(Boolean)
+  : [];
+
+if (!isAll && ALLOWED_SETS.length === 0) {
+  log.error('Invalid --sets argument. Please provide a comma-separated list of icon sets (e.g., --sets=lucide,mdi).');
+  process.exit(1);
+}
+
 const execAsync = promisify(exec);
 
 // --- CONFIGURATION ---
 const ICONIFY_REPO = 'https://github.com/iconify/icon-sets.git';
 const PACKAGES_DIR = join(process.cwd(), 'packages');
-const ALLOWED_SETS: string[] = []; // empty array = all libraries
+const CACHE_DIR = join(tmpdir(), 'iconify-repo-cache');
 
 class ProcessError extends Data.TaggedError("ProcessError")<{ readonly message: string; readonly cause?: unknown }> {}
 
-// --- EFFECT PIPELINE ---
-const cloneRepo = (target: string) =>
-  Effect.tryPromise({
-    try: () => execAsync(`git clone --depth 1 ${ICONIFY_REPO} ${target}`),
-    catch: (e) => new ProcessError({ message: 'Failed to clone iconify', cause: e })
-  }).pipe(Effect.tap(() => Console.log('📦 Successfully cloned Iconify repository.')));
+// --- CACHING & CLONING ---
+const setupRepo = Effect.gen(function* (_) {
+  const exists = yield* _(
+    Effect.tryPromise({
+      try: () => fs.access(CACHE_DIR).then(() => true).catch(() => false),
+      catch: () => false,
+    })
+  );
+
+  if (exists) {
+    yield* _(Effect.sync(() => log.ok('Found cached repository. Attempting update via git pull...')));
+    const pullResult = yield* _(
+      Effect.tryPromise({
+        try: () => execAsync('git pull', { cwd: CACHE_DIR }),
+        catch: (e) => e,
+      })
+    );
+
+    if (pullResult instanceof Error) {
+      yield* _(Effect.sync(() => log.warn('Cache update failed or repository was modified. Re-cloning...')));
+      yield* _(Effect.tryPromise(() => fs.rm(CACHE_DIR, { recursive: true, force: true })));
+      yield* _(
+        Effect.tryPromise({
+          try: () => execAsync(`git clone --depth 1 ${ICONIFY_REPO} ${CACHE_DIR}`),
+          catch: (e) => new ProcessError({ message: 'Failed to clone iconify repo', cause: e }),
+        })
+      );
+    } else {
+      yield* _(Effect.sync(() => log.ok('Cached repository successfully updated.')));
+    }
+  } else {
+    yield* _(Effect.sync(() => log.ok('Cache not found. Cloning repository...')));
+    yield* _(
+      Effect.tryPromise({
+        try: () => execAsync(`git clone --depth 1 ${ICONIFY_REPO} ${CACHE_DIR}`),
+        catch: (e) => new ProcessError({ message: 'Failed to clone iconify repo', cause: e }),
+      })
+    );
+  }
+  return CACHE_DIR;
+});
 
 const listIconSetsJson = (jsonDir: string) =>
   Effect.tryPromise({
@@ -27,8 +103,11 @@ const listIconSetsJson = (jsonDir: string) =>
     catch: (e) => new ProcessError({ message: 'Failed to read json directory', cause: e })
   }).pipe(
     Effect.map((files) =>
-      files.filter((f) => f.endsWith('.json') && !['collections.json', 'info.json'].includes(f) && 
-      (ALLOWED_SETS.length === 0 || ALLOWED_SETS.includes(f.replace('.json', ''))))
+      files.filter((f) => 
+        f.endsWith('.json') && 
+        !['collections.json', 'info.json'].includes(f) && 
+        (isAll || ALLOWED_SETS.includes(f.replace('.json', '')))
+      )
     )
   );
 
@@ -53,9 +132,14 @@ const processIconSet = (jsonDir: string, file: string, baseOutDir: string, versi
     const data = JSON.parse(content);
     
     const packageDir = join(baseOutDir, `iconset-${prefix}`);
-    const iconsDir = join(packageDir, 'src', 'icons');
+    const libDir = join(packageDir, 'lib');
+    const libIconsDir = join(libDir, 'icons');
+    const typesDir = join(packageDir, 'lib-types');
+    const typesIconsDir = join(typesDir, 'icons');
 
-    yield* _(Effect.tryPromise(() => fs.mkdir(iconsDir, { recursive: true })));
+    // Create output directories
+    yield* _(Effect.tryPromise(() => fs.mkdir(libIconsDir, { recursive: true })));
+    yield* _(Effect.tryPromise(() => fs.mkdir(typesIconsDir, { recursive: true })));
 
     const globalWidth = data.width || 24;
     const globalHeight = data.height || 24;
@@ -73,7 +157,7 @@ const processIconSet = (jsonDir: string, file: string, baseOutDir: string, versi
       if (parentData) allIcons.set(name, { ...parentData, ...(aliasData as any), name });
     }
 
-    // Process & write the icons concurrently
+    // Process & write pre-built ESM/CJS and .d.ts files for icons
     yield* _(Effect.forEach(allIcons.values(), (iconData: any) => {
         const left = iconData.left || 0;
         const top = iconData.top || 0;
@@ -91,64 +175,163 @@ const processIconSet = (jsonDir: string, file: string, baseOutDir: string, versi
           body = `<g transform="${transform.trim()}">${body}</g>`;
         }
 
-        const tsContent = `export default{body:\`${body}\`,viewBox:'${left} ${top} ${width} ${height}'};`;
-        return Effect.tryPromise(() => fs.writeFile(join(iconsDir, `${iconData.name}.ts`), tsContent, 'utf8'));
+        const escapedBody = body.replace(/`/g, '\\`');
+
+        const mjsContent = `export default{body:\`${escapedBody}\`,viewBox:'${left} ${top} ${width} ${height}'};`;
+        const cjsContent = `"use strict";\nObject.defineProperty(exports, "__esModule", { value: true });\nconst _default = { body: \`${escapedBody}\`, viewBox: '${left} ${top} ${width} ${height}' };\nexports.default = _default;\n`;
+        const dtsContent = `declare const _default:{body:string;viewBox:string};\nexport default _default;\n`;
+
+        const writeMjs = fs.writeFile(join(libIconsDir, `${iconData.name}.qwik.mjs`), mjsContent, 'utf8');
+        const writeCjs = fs.writeFile(join(libIconsDir, `${iconData.name}.qwik.cjs`), cjsContent, 'utf8');
+        const writeDts = fs.writeFile(join(typesIconsDir, `${iconData.name}.d.ts`), dtsContent, 'utf8');
+
+        return Effect.tryPromise(() => Promise.all([writeMjs, writeCjs, writeDts]));
       }, { concurrency: 200 }
     ));
 
     const iconSetName = `${toPascalCase(prefix)}IconSet`;
     const iconNamesType = `${toPascalCase(prefix)}IconName`;
-    const namesUnion = Array.from(allIcons.keys()).map((name) => `  | '${name}'`).join('\n');
+    
+    const iconNames = Array.from(allIcons.keys());
+    const namesUnion = iconNames.map((name) => `  | '${name}'`).join('\n');
+    const keysArrayString = JSON.stringify(iconNames);
 
-    const indexContent = `export type ${iconNamesType} =
-${namesUnion};
+    // Generate lib/index.qwik.mjs using a transparent Proxy loader
+    const indexMjsContent = `const keys = ${keysArrayString};
+const keysSet = new Set(keys);
 
 export const ${iconSetName} = {
-  prefix: '${prefix}' as const,
-  loaders: import.meta.glob('./icons/*.ts'),
+  prefix: '${prefix}',
+  name: '${prefix}',
+  loaders: new Proxy({}, {
+    get: (target, prop) => {
+      if (typeof prop === 'string' && keysSet.has(prop)) {
+        return () => import(/* @vite-ignore */ \`./icons/\${prop}.qwik.mjs\`).then(m => m.default);
+      }
+      return undefined;
+    },
+    has: (target, prop) => keysSet.has(prop),
+    ownKeys: () => keys,
+    getOwnPropertyDescriptor: (target, prop) => {
+      if (typeof prop === 'string' && keysSet.has(prop)) {
+        return {
+          enumerable: true,
+          configurable: true,
+          writable: true,
+          value: () => import(/* @vite-ignore */ \`./icons/\${prop}.qwik.mjs\`).then(m => m.default)
+        };
+      }
+      return undefined;
+    }
+  })
 };
 `;
-    yield* _(Effect.tryPromise(() => fs.writeFile(join(packageDir, 'src', 'index.ts'), indexContent, 'utf8')));
 
-    // Scaffolding package.json
+    // Generate lib/index.qwik.cjs using a transparent Proxy loader
+    const indexCjsContent = `"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+
+const keys = ${keysArrayString};
+const keysSet = new Set(keys);
+
+exports.${iconSetName} = {
+  prefix: '${prefix}',
+  name: '${prefix}',
+  loaders: new Proxy({}, {
+    get: (target, prop) => {
+      if (typeof prop === 'string' && keysSet.has(prop)) {
+        return () => import(\`./icons/\${prop}.qwik.mjs\`).then(m => m.default);
+      }
+      return undefined;
+    },
+    has: (target, prop) => keysSet.has(prop),
+    ownKeys: () => keys,
+    getOwnPropertyDescriptor: (target, prop) => {
+      if (typeof prop === 'string' && keysSet.has(prop)) {
+        return {
+          enumerable: true,
+          configurable: true,
+          writable: true,
+          value: () => import(\`./icons/\${prop}.qwik.mjs\`).then(m => m.default)
+        };
+      }
+      return undefined;
+    }
+  })
+};
+`;
+
+    // Generate lib-types/index.d.ts with matching __names property for types
+    const indexDtsContent = `export type ${iconNamesType} =
+${namesUnion};
+
+export interface IconData {
+  body: string;
+  viewBox: string;
+}
+
+export const ${iconSetName}: {
+  __names: ${iconNamesType};
+  prefix: '${prefix}';
+  name: '${prefix}';
+  loaders: Record<${iconNamesType}, () => Promise<IconData>>;
+};
+`;
+
+    yield* _(Effect.tryPromise(() => fs.writeFile(join(libDir, 'index.qwik.mjs'), indexMjsContent, 'utf8')));
+    yield* _(Effect.tryPromise(() => fs.writeFile(join(libDir, 'index.qwik.cjs'), indexCjsContent, 'utf8')));
+    yield* _(Effect.tryPromise(() => fs.writeFile(join(typesDir, 'index.d.ts'), indexDtsContent, 'utf8')));
+
+    // Scaffolding package.json with Qwik requirements
     const pkgJson = {
       name: `@onwo/iconset-${prefix}`,
       version,
-      main: "src/index.ts",
-      type: "module"
+      main: "./lib/index.qwik.mjs",
+      qwik: "./lib/index.qwik.mjs",
+      types: "./lib-types/index.d.ts",
+      type: "module",
+      exports: {
+        ".": {
+          "types": "./lib-types/index.d.ts",
+          "import": "./lib/index.qwik.mjs",
+          "require": "./lib/index.qwik.cjs"
+        }
+      },
+      files: [
+        "lib",
+        "lib-types"
+      ],
+      sideEffects: false
     };
+
     yield* _(Effect.tryPromise(() => fs.writeFile(join(packageDir, 'package.json'), JSON.stringify(pkgJson, null, 2), 'utf8')));
 
-    yield* _(Console.log(`✅ Generated @onwo/iconset-${prefix} (${allIcons.size} icons)`));
-  }).pipe(Effect.catchAll((e) => Console.error(`❌ Failed processing ${file}:`, e)));
+    yield* _(Effect.sync(() => log.ok(`Generated pre-built Qwik library @onwo/iconset-${prefix} (${allIcons.size} icons)`)));
+  }).pipe(Effect.catchAll((e) => Effect.sync(() => log.error(`Failed processing ${file}: ${e}`))));
 
 // --- ORCHESTRATOR ---
 const program = Effect.scoped(
   Effect.gen(function* (_) {
-    yield* _(Console.log('🚀 Starting Multi-Library Icon Generation...'));
+    yield* _(Effect.sync(() => log.step('Starting Multi-Library Icon Generation...')));
     yield* _(Effect.tryPromise(() => fs.mkdir(PACKAGES_DIR, { recursive: true })));
 
-    const tempDir = yield* _(
-      Effect.acquireRelease(
-        Effect.tryPromise(() => fs.mkdtemp(join(tmpdir(), 'iconify-'))),
-        (dir) => Effect.tryPromise(() => fs.rm(dir, { recursive: true, force: true })).pipe(
-            Effect.tap(() => Console.log('🧹 Cleaned up temporary repository clones.')),
-            Effect.catchAll(() => Effect.succeed(undefined))
-          )
-      )
-    );
-
-    yield* _(cloneRepo(tempDir));
+    const tempDir = yield* _(setupRepo);
     const jsonDir = join(tempDir, 'json');
     const files = yield* _(listIconSetsJson(jsonDir));
+
+    if (files.length === 0) {
+      yield* _(Effect.sync(() => log.warn('No matching icon sets found to generate. Check your --sets argument.')));
+      return;
+    }
+
     const newVersion = yield* _(bumpVersion);
 
-    yield* _(Console.log(`📂 Found ${files.length} icon sets to process.`));
+    yield* _(Effect.sync(() => log.ok(`Found ${files.length} icon sets to process.`)));
 
     yield* _(Effect.forEach(files, (file) => processIconSet(jsonDir, file, PACKAGES_DIR, newVersion), { concurrency: 10 }));
 
-    yield* _(Console.log('🎉 All icon sets generated successfully!'));
+    yield* _(Effect.sync(() => log.step('All icon sets generated successfully!')));
   })
 );
 
-Effect.runPromise(program).catch(console.error);
+Effect.runPromise(program).catch((e) => log.error(String(e)));

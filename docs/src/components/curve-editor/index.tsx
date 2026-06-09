@@ -1,4 +1,5 @@
-import { component$, Signal } from '@builder.io/qwik';
+import type { Signal } from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 
 import { ResponsiveCanvas } from '~/commons/responsive-canvas/index';
 
@@ -6,7 +7,8 @@ import { CurveEditorCanvas } from './components/curve-editor-canvas';
 import { CurveEditorContext } from './curve-editor-context';
 import { type ControlPointControls, useControlPoints } from './hooks/use-control-points';
 import { useCurveEditorStore } from './hooks/use-curve-editor-store';
-import { Theme, defaultTheme } from './theme';
+import type { Theme} from './theme';
+import { defaultTheme } from './theme';
 import type { ControlPoint } from './types';
 
 export * from './types';

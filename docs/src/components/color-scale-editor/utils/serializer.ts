@@ -1,4 +1,4 @@
-import { ControlPoint, WithId } from '~/components/curve-editor';
+import type { ControlPoint, WithId } from '~/components/curve-editor';
 
 const PRECISION = 5;
 

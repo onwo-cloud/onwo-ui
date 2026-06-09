@@ -10,7 +10,7 @@ export const itemCommonStyling = [
 
 export type MenuRootProps = { children?: any };
 export const MenuRoot = ({ children }: MenuRootProps) => (
-  <P.MenuRoot class="text-sm">{children}</P.MenuRoot>
+  <P.MenuRoot>{children}</P.MenuRoot>
 );
 
 export type MenuTriggerProps = { children?: JSXChildren; disabled?: boolean; class: string };
@@ -26,7 +26,7 @@ export const MenuPopup = ({ children, ...rest }: MenuPopupProps) => (
       class: 'overflow-visible',
     }}
     panelProps={{
-      class: 'bg-canvas p-1 min-w-32 w-40 shadow-3 rounded-md',
+      class: 'bg-canvas p-1 min-w-32 w-40 ring ring-inset ring-separator-secondary shadow-5 rounded-lg',
     }}
   >
     {children}
@@ -90,7 +90,7 @@ export const MenuRadioItem = ({ children, ...rest }: MenuRadioItemProps) => (
 
 export type MenuLabelProps = { children?: any; inset?: boolean };
 export const MenuLabel = ({ children }: MenuLabelProps) => (
-  <div class={['text-ink-secondary font-medium text-xs', itemCommonPadding]}>{children}</div>
+  <div class={['text-ink tracking-wider text-sm', itemCommonPadding]}>{children}</div>
 );
 
 export const MenuSeparator = () => (

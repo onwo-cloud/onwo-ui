@@ -1,6 +1,6 @@
 import type { IntrinsicElements, PropsOf, QRL } from '@builder.io/qwik';
 
-import { OnEvents } from './types';
+import type { OnEvents } from './types';
 
 /**
  * An edge-case utility utility type that removes raw functions from a type union.

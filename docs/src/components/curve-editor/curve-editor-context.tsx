@@ -1,9 +1,9 @@
-import { QRL } from '@builder.io/qwik';
+import type { QRL } from '@builder.io/qwik';
 import { initContext } from '@onwo/primitives';
 
-import { ControlPointControls } from './hooks/use-control-points';
-import { CurveEditorStore } from './hooks/use-curve-editor-store';
-import { Theme } from './theme';
+import type { ControlPointControls } from './hooks/use-control-points';
+import type { CurveEditorStore } from './hooks/use-curve-editor-store';
+import type { Theme } from './theme';
 
 export type CurveEditorContextValue = {
   theme: Theme;

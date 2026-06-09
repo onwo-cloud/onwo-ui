@@ -1,4 +1,5 @@
-import { component$, useSignal, $, QRL, useOnDocument, useTask$ } from '@builder.io/qwik';
+import type { QRL} from '@builder.io/qwik';
+import { component$, useSignal, $, useOnDocument, useTask$ } from '@builder.io/qwik';
 
 export type JoystickSliderProps = {
   orientation?: 'horizontal' | 'vertical';

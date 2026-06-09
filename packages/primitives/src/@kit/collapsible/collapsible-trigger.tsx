@@ -1,32 +1,50 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { $, Slot, component$, useContext, useOnWindow } from '@builder.io/qwik';
-import { collapsibleContextId } from './collapsible-context';
 
-export const HCollapsibleTrigger = component$<PropsOf<'button'>>(({ onClick$, ...props }) => {
-  const context = useContext(collapsibleContextId);
-  const contentId = `${context.itemId}-content`;
-  const triggerId = `${context.itemId}-trigger`;
+import {
+  component$,
+  Slot,
+  useContext,
+  $,
+  sync$,
+  type PropsOf
+} from '@builder.io/qwik';
+import { CollapsibleContext } from './collapsible-context';
 
-  const handleClick$ = $(async () => {
-    if (context.isOpenSig.value && context.collapsible === false) return;
-    context.isOpenSig.value = !context.isOpenSig.value;
+// Synchronously prevents ArrowDown from scrolling the whole page
+export const triggerKeyDownSync = sync$((e: KeyboardEvent) => {
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+  }
+});
+
+export const CollapsibleTrigger = component$<PropsOf<'button'>>((props) => {
+  const ctx = useContext(CollapsibleContext);
+
+  const handleClick = $(() => {
+    ctx.isExpanded.value = !ctx.isExpanded.value;
   });
 
-  useOnWindow('resize', context.getContentDimensions$);
+  const handleKeyDown = $((e: KeyboardEvent) => {
+    if (e.key === 'ArrowDown') {
+      if (!ctx.isExpanded.value) {
+        ctx.isExpanded.value = true;
+      }
+      requestAnimationFrame(() => {
+        const list = document.getElementById(ctx.contentId);
+        const firstItem = list?.querySelector('[data-list-item]') as HTMLElement;
+        firstItem?.focus();
+      });
+    }
+  });
 
   return (
     <button
+      type="button"
+      onClick$={handleClick}
+      onKeyDown$={[triggerKeyDownSync, handleKeyDown]}
+      aria-expanded={ctx.isExpanded.value}
+      aria-controls={ctx.contentId}
+      data-state={ctx.isExpanded.value ? 'open' : 'closed'}
       {...props}
-      id={triggerId}
-      ref={context.triggerRef}
-      disabled={context.disabled}
-      data-disabled={context.disabled ? '' : undefined}
-      aria-disabled={context.disabled ? 'true' : 'false'}
-      data-open={context.isOpenSig.value ? '' : undefined}
-      data-closed={context.isOpenSig.value ? undefined : ''}
-      aria-expanded={context.isOpenSig.value}
-      aria-controls={contentId}
-      onClick$={[handleClick$, onClick$]}
     >
       <Slot />
     </button>

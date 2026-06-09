@@ -1,9 +1,10 @@
-import { component$, useSignal, useVisibleTask$, Slot, Signal } from '@builder.io/qwik';
+import type { Signal } from '@builder.io/qwik';
+import { component$, useSignal, useVisibleTask$, Slot } from '@builder.io/qwik';
 
 import { DimensionsContext, type DimensionData } from './dimensions-context';
 
 // The component no longer needs any props.
-interface ResponsiveCanvasProps {}
+interface ResponsiveCanvasProps { }
 
 export const ResponsiveCanvas = component$<ResponsiveCanvasProps>(() => {
   const containerRef = useSignal<HTMLDivElement>();

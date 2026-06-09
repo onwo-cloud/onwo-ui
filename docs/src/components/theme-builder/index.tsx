@@ -1,4 +1,5 @@
-import { ClassList, component$, useComputed$ } from '@builder.io/qwik';
+import type { ClassList} from '@builder.io/qwik';
+import { component$, useComputed$ } from '@builder.io/qwik';
 import { useSwatchProvider } from './context/swatch-context';
 import { useThemeEditor } from './hooks/use-theme-editor';
 import { useThemeManager } from './hooks/use-theme-manager';

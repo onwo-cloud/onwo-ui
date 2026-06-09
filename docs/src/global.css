@@ -1,21 +1,25 @@
 @import 'tailwindcss';
 
+@import './styles/geist.css';
+
 @source "../../packages/ui/src";
 @source "../../packages/icons/src";
 
 @theme {
-  --font-body: var(--ow-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --font-mono: var(--ow-mono), ui-monospace, Consolas, monospace;
-  --font-display: var(--ow-display), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-geist-sans);
 
+
+  --color-current-color: currentColor;
   --color-shade-0: oklch(0.995 0.00 0);
-  --color-shade-50: oklch(0.97 0.00 0);
-  --color-shade-100: oklch(0.95 0.00 0);
-  --color-shade-200: oklch(0.90 0.00 0);
-  --color-shade-300: oklch(0.87 0.00 0);
-  --color-shade-400: oklch(0.72 0.00 0);
-  --color-shade-500: oklch(0.56 0.00 0);
-  --color-shade-500: oklch(0.56 0.00 0);
+  --color-shade-50: oklch(0.9725 0.00 0);
+  --color-shade-100: oklch(0.965 0.00 0);
+  --color-shade-150: oklch(0.945 0.00 0);
+  --color-shade-200: oklch(0.93 0.00 0);
+  --color-shade-300: oklch(0.9 0.00 0);
+  --color-shade-400: oklch(0.8 0.00 0);
+  --color-shade-500: oklch(0.58 0.00 0);
   --color-shade-600: oklch(0.44 0.00 0);
   --color-shade-700: oklch(0.37 0.00 0);
   --color-shade-800: oklch(0.27 0.00 0);
@@ -24,30 +28,41 @@
 
   /* Background */
   --color-canvas: var(--color-shade-0);
-  --color-canvas-secondary: var(--color-shade-100);
-  --color-canvas-secondary-hover: var(--color-shade-200);
-  --color-canvas-hover: var(--color-shade-200);
+  --color-canvas-secondary: var(--color-shade-50);
+  --color-canvas-tertiary: var(--color-shade-200);
+  --color-canvas-secondary-hover: var(--color-shade-100);
+  --color-canvas-input: var(--color-shade-100);
+  --color-canvas-input-hover: var(--color-shade-200);
+  --color-canvas-hover: var(--color-shade-150);
   --color-canvas-accent: #e04024;
 
   --color-accent: #1920e3;
   --color-accent-red: #e04024;
 
   /* Background contrast */
-  --color-canvas-contrast: var(--color-shade-900);
-  --color-canvas-contrast-hover: var(--color-shade-800);
-  --color-canvas-contrast-secondary: var(--color-shade-800);
-  --color-canvas-contrast-secondary-hover: var(--color-shade-700);
+  --color-canvas-contrast: var(--color-shade-800);
+  --color-canvas-contrast-hover: var(--color-shade-700);
+  --color-canvas-contrast-secondary: var(--color-shade-700);
+  --color-canvas-contrast-secondary-hover: var(--color-shade-600);
 
   /* Border */
   --color-separator: color-mix(in oklab, var(--color-ink) 14%, transparent);
   --color-separator-secondary: color-mix(in oklab, var(--color-ink) 8%, transparent);
+  --color-separator-box: color-mix(in oklab, var(--color-ink) 4%, transparent);
   /*--color-border: lab(90.952% 0 -.0000119209);*/
+
+  /* Scrollbar */
+  --color-scroll-line: var(--color-shade-300);
+  --color-scroll-thumb-dragging: var(--color-shade-600);
+  --color-scroll-thumb-expanded: var(--color-shade-500);
+  --color-scroll-thumb-folded: var(--color-shade-400);
 
   /* Text */
   --color-ink: var(--color-shade-950);
   --color-ink-secondary: var(--color-shade-600);
   --color-ink-tertiary: var(--color-shade-500);
   --color-ink-accent: white;
+  --color-ink-placeholder: var(--color-shade-500);
 
   /* Text contrast */
   --color-ink-contrast: white;
@@ -58,39 +73,219 @@
   --color-red-100: oklch(0.936 0.032 17.717);
   --color-red-200: oklch(0.885 0.062 18.334);
 
-  --text-xs: 0.6875rem; /* 12px -> 11px */
-  --text-sm: 0.8125rem; /* 14px -> 13px */
-  --text-base: 0.9375rem; /* 16px -> 15px */
 
-  --shadow-color: #00000015;
-  --shadow-1: 0 0 0 1px var(--shadow-color);
-  --shadow-2: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color);
-  
+  --tracking-tightest: -0.05em;
+  --tracking-tighter: -0.025em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.01em;
+  --tracking-wider: 0.025em;
+  --tracking-widest: 0.05em;
+
+  --shadow-color: #00000004;
+
+  --text-macro: 11px;
   /*
     //.shadow-surface-1,.shadow-surface-2 {
     //    box-shadow: var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);
     //}
     */
 
+  --shadow-1: 0 0 0 1px var(--shadow-color);
+  --shadow-2: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color);
+  --shadow-3: 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color);
+  --shadow-4: 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color);
+  --shadow-5: 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color);
+  --shadow-6: 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color);
+  --shadow-7: 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color), 0 48px 48px -24px var(--shadow-color);
+  --shadow-8: 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color), 0 48px 48px -24px var(--shadow-color), 0 96px 96px -48px var(--shadow-color);
+
+  /* 
+   * 1. DURATIONS
+   * Matches your Framer Motion exact timings 
+   */
+
+  /* Enter Durations */
+  --duration-fast: 80ms;       /* 0.08s */
+  --duration-moderate: 160ms;  /* 0.16s */
+  --duration-slow: 240ms;      /* 0.24s */
+  --duration-slower: 300ms;      /* 0.24s */
+
+  /* Exit Durations (One tier quicker, as requested) */
+  --duration-fast-exit: 60ms;      /* 0.06s */
+  --duration-moderate-exit: 120ms; /* 0.12s */
+  --duration-slow-exit: 160ms;     /* 0.16s */
+  --duration-slower-exit: 240ms;     /* 0.16s */
 
 
+  /* 
+   * 2. EASINGS (Spring Approximations)
+   * CSS approximations of your Framer Motion bounce values 
+   */
 
+  /* bounce: 0 -> Critically damped, no bounce */
+  --ease-spring-fast: cubic-bezier(0.15, 0.85, 0.3, 1);
 
-  --shadow-3: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color);
-  --shadow-4: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color);
-  --shadow-5: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color);
-  --shadow-6: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color);
-  --shadow-7: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color), 0 48px 48px -24px var(--shadow-color);
-  --shadow-8: 0 0 0 1px var(--shadow-color), 0 1px 1px -.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color), 0 48px 48px -24px var(--shadow-color), 0 96px 96px -48px var(--shadow-color);
+  /* bounce: 0.08 -> Slight overshoot/pop */
+  --ease-spring-moderate: cubic-bezier(0.34, 1.25, 0.64, 1);
+
+  /* bounce: 0.12 -> Larger overshoot/pop */
+  --ease-spring-slow: cubic-bezier(0.34, 1.45, 0.64, 1);
+
+  /* bounce: 0.12 -> Larger overshoot/pop */
+  --ease-spring-slower: cubic-bezier(0.34, 1.45, 0.64, 1);
+
+  /* Exit -> Plain tween, no bounce for a crisp dismissal */
+  --ease-spring-exit: cubic-bezier(0.4, 0, 1, 1);
+}
+
+:root {
+  --icon-xs: var(--text-xs);
+  --icon-sm: var(--text-sm);
+  --icon-md: var(--text-base);
+  --icon-lg: var(--text-lg);
+  --icon-xl: var(--text-xl);
+  --icon-2xl: var(--text-2xl);
+  --icon-3xl: var(--text-3xl);
+  --icon-4xl: var(--text-4xl);
+  --icon-5xl: var(--text-5xl);
+  --icon-6xl: var(--text-6xl);
+  --icon-7xl: var(--text-7xl);
+  --icon-8xl: var(--text-8xl);
+  --icon-9xl: var(--text-9xl);
+}
+
+body {
+ /* Prevent automatic zooming of fonts on some mobile devices. */
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+
+  font-smooth: always;
+  font-synthesis: none;
+  text-wrap: pretty;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer base {
   body {
     @apply text-base bg-canvas;
   }
+}
 
-  .border-style-card {
-    border-color: var(--color-separator-secondary);
-    box-shadow: 0 1px 2px #0000000a;
-  }
+@utility type-heading-section {
+  @apply font-display text-3xl;
+}
+
+@utility type-heading-hero { @apply font-display text-5xl leading-[1.1] }
+
+@utility type-body { @apply text-base tracking-tight text-pretty }
+@utility type-body-sm { @apply text-sm tracking-tight text-pretty }
+
+@utility border-style-card {
+  border-color: var(--color-separator-secondary);
+  box-shadow: 0 1px 2px #0000000a;
+}
+
+/***** FVS *****/
+@utility font-fvs {
+  --fvs-wght: 400;
+  --fvs-spacing: 0em;
+  font-variation-settings: "wght" var(--fvs-wght);
+  /* important is needed to overwrite tracking-* classes */
+  letter-spacing: calc(var(--fvs-spacing) + var(--tw-tracking)) !important;
+  transition-property: font-variation-settings, letter-spacing;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+
+@utility fvs-medium { --fvs-wght: 500; }
+@utility fvs-semibold { --fvs-wght: 600; }
+@utility fvs-bold { --fvs-wght: 700; }
+
+
+@utility font-normal-dense {
+  --tw-font-weight: 460;
+  font-weight: var(--tw-font-weight);
+}
+
+@utility font-normal-light {
+  --tw-font-weight: 360;
+  font-weight: var(--tw-font-weight);
+}
+
+/***** Transitions *****/
+@utility spring-fast {
+  --tw-duration: var(--duration-fast);
+  --tw-ease: var(--ease-spring-fast);
+  transition-duration: var(--tw-duration);
+  transition-timing-function: var(--tw-ease);
+  animation-duration: var(--tw-duration);
+  animation-timing-function: var(--tw-ease);
+}
+
+@utility spring-moderate {
+  --tw-duration: var(--duration-moderate);
+  --tw-ease: var(--ease-spring-moderate);
+  transition-duration: var(--tw-duration);
+  transition-timing-function: var(--tw-ease);
+  animation-duration: var(--tw-duration);
+  animation-timing-function: var(--tw-ease);
+}
+
+@utility spring-slow {
+  --tw-duration: var(--duration-slow);
+  --tw-ease: var(--ease-spring-slow);
+  transition-duration: var(--tw-duration);
+  transition-timing-function: var(--tw-ease);
+  animation-duration: var(--tw-duration);
+  animation-timing-function: var(--tw-ease);
+}
+
+@utility spring-slower {
+  --tw-duration: var(--duration-slower);
+  --tw-ease: var(--ease-spring-slower);
+  transition-duration: var(--tw-duration);
+  transition-timing-function: var(--tw-ease);
+  animation-duration: var(--tw-duration);
+  animation-timing-function: var(--tw-ease);
+}
+
+/* --- EXIT TWEENS --- */
+
+@utility spring-fast-exit {
+  --tw-duration: var(--duration-fast-exit);
+  --tw-ease: var(--ease-spring-exit);
+  transition-duration: var(--tw-duration);
+  transition-timing-function: var(--tw-ease);
+  animation-duration: var(--tw-duration);
+  animation-timing-function: var(--tw-ease);
+}
+
+@utility spring-moderate-exit {
+  --tw-duration: var(--duration-moderate-exit);
+  --tw-ease: var(--ease-spring-exit);
+  transition-duration: var(--tw-duration);
+  transition-timing-function: var(--tw-ease);
+  animation-duration: var(--tw-duration);
+  animation-timing-function: var(--tw-ease);
+}
+
+@utility spring-slow-exit {
+  --tw-duration: var(--duration-slow-exit);
+  --tw-ease: var(--ease-spring-exit);
+  transition-duration: var(--tw-duration);
+  transition-timing-function: var(--tw-ease);
+  animation-duration: var(--tw-duration);
+  animation-timing-function: var(--tw-ease);
+}
+
+@utility spring-slower-exit {
+  --tw-duration: var(--duration-slower-exit);
+  --tw-ease: var(--ease-spring-exit);
+  transition-duration: var(--tw-duration);
+  transition-timing-function: var(--tw-ease);
+  animation-duration: var(--tw-duration);
+  animation-timing-function: var(--tw-ease);
 }

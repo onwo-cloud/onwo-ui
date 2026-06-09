@@ -5,6 +5,7 @@ import { Toaster } from '@onwo/ui/toaster';
 import { RouterHead } from './commons/router-head';
 import './global.css';
 import { UIProvider } from './utils/icon';
+import { PageNavigationProvider } from '~ui/@kit/page-navigation';
 
 const Heuristics = component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -31,11 +32,13 @@ export default () => {
         <RouterHead />
       </head>
       <body class="theme-onwo-light">
-        <Toaster position="bottom-right">
-          <UIProvider>
-            <RouterOutlet />
-          </UIProvider>
-        </Toaster>
+        <PageNavigationProvider class="h-screen flex flex-col">
+          <Toaster position="bottom-right">
+            <UIProvider>
+              <RouterOutlet />
+            </UIProvider>
+          </Toaster>
+        </PageNavigationProvider>
       </body>
     </QwikCityProvider>
   );

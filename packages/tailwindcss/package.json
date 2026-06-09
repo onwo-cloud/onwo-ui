@@ -1,6 +1,6 @@
 {
   "name": "@onwo/tailwindcss",
-  "version": "0.0.12-alpha",
+  "version": "0.0.13-rc.0",
   "private": false,
   "browserslist": [
     "baseline widely available"

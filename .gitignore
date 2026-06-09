@@ -1,6 +1,7 @@
 # !!!!!!! Tailwind v4 gitignore parsing is currently broken, see:
 # https://github.com/tailwindlabs/tailwindcss/issues/15452
 # Uncomment this star when fixed:
+
 .devenv/
 .direnv/
 .env
@@ -25,6 +26,7 @@ packages/ui/lib/
 packages/ui/node_modules/
 packages/ui/tsconfig.tsbuildinfo
 **/vite.config.dev.ts.timestamp*
+
 #*
 #
 ## Root

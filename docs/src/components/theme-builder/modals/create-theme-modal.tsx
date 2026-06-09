@@ -63,7 +63,7 @@ export const CreateThemeModalProvider = component$((props: CreateThemeModalProvi
                   <SelectItem key={theme.name}>
                     <SelectItemLabel>{theme.name}</SelectItemLabel>
                     <SelectItemIndicator>
-                      <Icon name="check"   />
+                      <Icon i="check"   />
                     </SelectItemIndicator>
                   </SelectItem>
                 ))}

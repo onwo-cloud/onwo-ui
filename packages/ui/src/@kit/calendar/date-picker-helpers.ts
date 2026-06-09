@@ -102,7 +102,7 @@ export const getWeekDays = (lang: string, weekStart: WeekStart): WeekDay[] => {
 
   for (let i = 0; i < 7; i++) {
     const weekday = {
-      short: shortfmt.format(addDays(date, i)).slice(0, 2),
+      short: shortfmt.format(addDays(date, i)).slice(0, 2).toUpperCase(),
       long: longfmt.format(addDays(date, i)),
     };
     weekdays.push(weekday);

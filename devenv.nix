@@ -1,11 +1,18 @@
 { pkgs, ... }:
 let
+  # Jist doc at: https://github.com/emilien-jegou/jist
+  jistSrc = builtins.fetchTarball {
+    url = "https://github.com/emilien-jegou/jist/archive/refs/tags/v0.0.2.tar.gz";
+    sha256 = "1j0jpqwv1smrx95pl210rm8ylykfr964b46w2pvdnpdi9s46lvmy";
+  };
+  jist = import "${jistSrc}/lib/make-cli.nix" { inherit pkgs; };
+
   make = import ./nix/make-cli.nix { inherit pkgs; };
-  ow-cli = make.mkCli (import ./scripts.nix);
+  dev-cli = jist.cli (import ./make.nix);
 in {
-  # Add our custom CLI to the environment packages
+
   packages = [
-    ow-cli
+    dev-cli
     pkgs.bun
     pkgs.nodejs_22
   ];
@@ -16,8 +23,7 @@ in {
     pnpm.enable = true;
   };
 
-  # Print the help menu when the shell starts
-  enterShell = "ow";
+  enterShell = "dev";
 
   dotenv.enable = true;
 }

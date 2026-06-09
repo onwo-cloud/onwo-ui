@@ -11,10 +11,7 @@ type ThemeSidebarHeadProps = {
 export const ThemeSidebarHead = component$((props: ThemeSidebarHeadProps) => {
   return (
     <div class={["flex items-center border-b border-gray-100 relative z-20", spacing.px(SIDEBAR_UNIVERSAL_MARGIN)]} style={{ height: SIDEBAR_HEAD_HEIGHT }}>
-
-      <div class="group w-full flex items-center justify-between text-left focus:outline-none">
-        <ThemeMenu manager={props.manager} />
-      </div>
+      <ThemeMenu class="group w-full flex items-center justify-between text-left focus:outline-none" manager={props.manager} />
     </div>
   );
 });

@@ -1,4 +1,5 @@
-import { component$, useSignal, useTask$, noSerialize, NoSerialize } from '@builder.io/qwik';
+import type { NoSerialize } from '@builder.io/qwik';
+import { component$, useSignal, useTask$, noSerialize } from '@builder.io/qwik';
 
 import { DimensionsContext } from '~/commons/responsive-canvas/dimensions-context';
 
@@ -6,7 +7,8 @@ import { CurveEditorContext } from '../curve-editor-context';
 import { useDraggable } from '../hooks/use-draggable';
 
 import { ControlPoints } from './control-points';
-import { CoordinateMapper, Dimensions } from './coordinate-mapper';
+import type { Dimensions } from './coordinate-mapper';
+import { CoordinateMapper } from './coordinate-mapper';
 import { CurvePath } from './curve-path';
 
 const MARGIN = 40;

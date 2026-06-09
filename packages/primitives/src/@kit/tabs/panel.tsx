@@ -11,17 +11,21 @@ export type PanelProps<TabName extends string> = Primitive<'div'> & {
 export const Panel = component$(
   <N extends string>({ class: className, for: forTab, ...props }: PanelProps<N>) => {
     const context = useTabsContext();
-
     const tabName = useComputed$(() => forTab ?? String(++context.panelIndex));
+    const isActive = useComputed$(() => tabName.value === context.selected.value);
 
     return (
       <div
-        id={'panel' + tabName.value}
+        // 1. Exact match to the Tab `aria-controls`
+        id={`${context.name}-panel-${tabName.value}`}
+        // 2. Exact match to the Tab `id`
+        aria-labelledby={`${context.name}-tab-${tabName.value}`}
         class={['order-4 w-full outline-none focus-visible:shadow-focus', className]}
         role="tabpanel"
         tabIndex={0}
-        data-active={tabName.value === context.selected.value}
-        aria-labelledby={tabName.value}
+        data-active={isActive.value}
+        // 3. Hide unselected panels natively from screen readers and visual layout
+        hidden={!isActive.value}
         {...props}
       >
         <Slot />

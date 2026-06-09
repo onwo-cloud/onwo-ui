@@ -1,8 +1,8 @@
 import { useStore, $ } from '@builder.io/qwik';
 
-import { CurveEditorContextValue } from '../curve-editor-context';
+import type { CurveEditorContextValue } from '../curve-editor-context';
 
-import { ControlPointControls } from './use-control-points';
+import type { ControlPointControls } from './use-control-points';
 
 // Define the types for clarity and reuse
 export type ElementRef = {

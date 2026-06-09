@@ -1,4 +1,4 @@
-import { Signal } from '@builder.io/qwik';
+import type { Signal } from '@builder.io/qwik';
 import { initContext } from '~primitives/utils/context-utils';
 
 export interface DimensionData {

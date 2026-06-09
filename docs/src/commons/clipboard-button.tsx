@@ -20,7 +20,7 @@ export const ClipboardButton = component$(({ textToCopy }: { textToCopy: string 
         }
       })}
     >
-      <Icon name="clipboard"  size="lg"  />
+      <Icon i="clipboard"  size="lg"  />
     </Button>
   );
 });

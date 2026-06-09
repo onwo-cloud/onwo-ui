@@ -1,4 +1,4 @@
-import { ScaleData } from '../types';
+import type { ScaleData } from '../types';
 
 export const getColorPreview = (scale: ScaleData) => {
   const midIndex = 5;

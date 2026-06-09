@@ -11,7 +11,7 @@ import {
 } from '@onwo/ui/modal';
 
 import { presetThemes } from '../data/theme-data';
-import { ScaleData } from '../types';
+import type { ScaleData } from '../types';
 
 type LoadThemeModalProviderProps = {
   savedThemes: { name: string; colors: { [key: string]: ScaleData } }[];

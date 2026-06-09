@@ -1,4 +1,4 @@
-import { ClassList } from '@builder.io/qwik';
+import type { ClassList } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { buildHead } from '~/utils/build-head';
 

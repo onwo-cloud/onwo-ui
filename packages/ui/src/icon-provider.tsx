@@ -8,6 +8,7 @@ export type UiIcons =
   | 'chevron-left'
   | 'chevron-right'
   | 'chevron-down'
+  | 'chevron-up'
   | 'check'
   | 'x'
   | 'circle-check'

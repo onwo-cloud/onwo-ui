@@ -1,6 +1,6 @@
 import { component$, useSignal, $, useComputed$, type PropFunction } from '@builder.io/qwik';
-import { ThemeManager } from './hooks/use-theme-manager';
-import { ThemeEditor } from './hooks/use-theme-editor';
+import type { ThemeManager } from './hooks/use-theme-manager';
+import type { ThemeEditor } from './hooks/use-theme-editor';
 
 // --- Reusable Sub-Components ---
 

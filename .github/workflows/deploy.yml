@@ -22,50 +22,35 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+
+    # Make devenv the default shell for all run steps in this job
+    defaults:
+      run:
+        shell: devenv shell bash -- -e {0}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Install Nix & devenv
+        uses: cachix/install-nix-action@v31
+
+      - uses: cachix/cachix-action@v16
         with:
-          node-version: 22
+          name: devenv
+
+      - name: Install devenv
+        shell: bash
+        run: nix profile add nixpkgs#devenv
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        working-directory: .
-        run: yarn install
-
-      - name: Build tailwindcss plugin
-        working-directory: ./packages/tailwindcss
-        run: yarn build
-
-      - name: Build primitives library
-        working-directory: ./packages/primitives
-        run: yarn build
-
-      - name: Build icons library
-        working-directory: ./packages/icons
-        run: yarn build
-
-      - name: Build ui library
-        working-directory: ./packages/ui
-        run: yarn build
+      - name: Generate icons
+        run: dev init
 
       - name: Build documentation website
-        working-directory: ./docs
-        run: yarn build
+        run: dev build.docs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

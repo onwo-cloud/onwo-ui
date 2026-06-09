@@ -23,5 +23,5 @@
       "@onwo/icons": ["../packages/icons/src"]
     }
   },
-  "include": ["src",  "../packages/icons/packages/iconset-lucide/src", "../packages/icons/src", "../packages/ui/src", "../packages/primitives/src"]
+  "include": ["src", "../packages/icons/src", "../packages/ui/src", "../packages/primitives/src"]
 }

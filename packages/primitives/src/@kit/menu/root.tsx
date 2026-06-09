@@ -37,11 +37,7 @@ export const MenuRoot = component$((props: PropsOf<'div'>) => {
   MenuContext.useProvider(contextValue);
 
   return (
-    <div
-      ref={containerRef}
-      style={{ width: '100%', position: 'relative', display: 'inline-block' }}
-      {...props}
-    >
+    <div ref={containerRef} {...props}>
       <Slot />
     </div>
   );

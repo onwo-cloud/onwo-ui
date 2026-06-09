@@ -51,7 +51,7 @@ export const ColorList = component$((props: ColorListProps) => {
             variant="ghost"
             class="w-full flex items-center justify-center gap-2 text-sm text-gray-500 hover:text-gray-900 border border-dashed border-gray-300 hover:border-gray-400 h-9"
           >
-            Add palette <Icon name="plus" class="w-3 h-3" />
+            Add palette <Icon i="plus" class="w-3 h-3" />
           </Button>
         </div>
       </div>

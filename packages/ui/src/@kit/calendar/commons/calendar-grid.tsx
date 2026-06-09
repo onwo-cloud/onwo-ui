@@ -17,13 +17,13 @@ export const CalendarGrid = ({ onKeyDown$, ...props }: CalendarGridProps) => (
     aria-labelledby="calendar"
   >
     {props.headerCategories && (
-      <thead class="text-lead">
-        <tr class="flex">
+      <thead class="text-ink-tertiary">
+        <tr class="flex justify-around mb-3">
           {props.headerCategories.map((item, index) => (
             <th
               key={index}
               scope="col"
-              class="text-muted-foreground rounded-md w-8 font-normal text-[0.8rem]"
+              class="rounded-md w-9 select-none font-medium text-macro tracking-widest"
               aria-label={item['aria-label']}
             >
               {item.display}
@@ -33,10 +33,10 @@ export const CalendarGrid = ({ onKeyDown$, ...props }: CalendarGridProps) => (
       </thead>
     )}
 
-    <tbody class="" role="rowgroup">
+    <tbody role="rowgroup">
       {Array.from({ length: props.rows }, (_, row) => {
         return (
-          <tr key={row} class="flex w-full mt-2">
+          <tr key={row} class="flex select-none font-normal-light w-full">
             {Array.from({ length: props.cols }, (_, col) => {
               return props.renderer(row, col);
             })}
