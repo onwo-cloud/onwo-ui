@@ -1,5 +1,5 @@
 {
-  name = "ow";
+  name = "dev";
   desc = "Onwo Development Environment";
   scripts = [
     {

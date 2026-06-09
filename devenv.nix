@@ -1,11 +1,11 @@
 { pkgs, ... }:
 let
   make = import ./nix/make-cli.nix { inherit pkgs; };
-  ow-cli = make.mkCli (import ./scripts.nix);
+  dev-cli = make.mkCli (import ./make.nix);
 in {
   # Add our custom CLI to the environment packages
   packages = [
-    ow-cli
+    dev-cli
     pkgs.bun
     pkgs.nodejs_22
   ];
@@ -17,7 +17,7 @@ in {
   };
 
   # Print the help menu when the shell starts
-  enterShell = "ow";
+  enterShell = "dev";
 
   dotenv.enable = true;
 }
