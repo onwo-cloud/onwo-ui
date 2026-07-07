@@ -1,4 +1,4 @@
-import { Signal, QRL, JSXChildren } from '@builder.io/qwik';
+import { Signal, QRL, JSXChildren } from '@qwik.dev/core';
 import * as P from '@onwo/primitives/menu';
 import { UiIcon } from '~ui/icon-provider';
 

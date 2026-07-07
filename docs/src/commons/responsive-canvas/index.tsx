@@ -1,5 +1,5 @@
-import type { Signal } from '@builder.io/qwik';
-import { component$, useSignal, useVisibleTask$, Slot } from '@builder.io/qwik';
+import type { Signal } from '@qwik.dev/core';
+import { component$, useSignal, useVisibleTask$, Slot } from '@qwik.dev/core';
 
 import { DimensionsContext, type DimensionData } from './dimensions-context';
 

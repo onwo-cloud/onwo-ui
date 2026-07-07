@@ -1,4 +1,4 @@
-import type { Signal } from '@builder.io/qwik';
+import type { Signal } from '@qwik.dev/core';
 
 type Ref<EL extends Element = Element> = Signal<Element | undefined> | RefFnInterface<EL>;
 

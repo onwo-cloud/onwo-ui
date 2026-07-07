@@ -1,6 +1,6 @@
-import { useStyles$ } from '@builder.io/qwik';
+import { useStyles$ } from '@qwik.dev/core';
 
-export const useToasterStyles = () =>
+export const useToasterStyles = (): void => {
   useStyles$(`
   [data-onwo-toaster] {
     position: fixed;
@@ -84,3 +84,4 @@ export const useToasterStyles = () =>
     height: var(--base-height);
   }
 `);
+};

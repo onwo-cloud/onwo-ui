@@ -1,4 +1,4 @@
-import { useComputed$ } from "@builder.io/qwik";
+import { useComputed$ } from "@qwik.dev/core";
 
 // 1. The custom hook
 export const useFormattedDate = (timestamp: number) => useComputed$(() => {

@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { component$, useContext, useSignal } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { component$, useContext, useSignal } from '@qwik.dev/core';
 import { VisuallyHidden } from '~primitives/imported/visually-hidden';
 
 import { comboboxContextId } from './combobox-context';

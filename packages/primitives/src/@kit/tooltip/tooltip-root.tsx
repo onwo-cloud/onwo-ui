@@ -1,5 +1,5 @@
-import type { PropsOf, QRL, Signal } from '@builder.io/qwik';
-import { Slot, component$, useContextProvider, useId, useSignal, $ } from '@builder.io/qwik';
+import type { PropsOf, QRL, Signal } from '@qwik.dev/core';
+import { Slot, component$, useContextProvider, useId, useSignal, $ } from '@qwik.dev/core';
 
 import type { TPlacement } from '../popover/popover-root';
 import { HPopoverRoot } from '../popover/popover-root';

@@ -1,4 +1,4 @@
-import type { IntrinsicElements, PropsOf, QRL } from '@builder.io/qwik';
+import type { PropsOf, QwikIntrinsicElements } from '@qwik.dev/core';
 
 import type { OnEvents } from './types';
 
@@ -12,19 +12,19 @@ import type { OnEvents } from './types';
  */
 type OnlyQRL<T> = T extends (...args: any[]) => any
   ? '__brand__QRL__' extends keyof T
-    ? T // It's a function with the QRL brand, so keep it.
-    : never // It's a raw function, so exclude it.
+  ? T // It's a function with the QRL brand, so keep it.
+  : never // It's a raw function, so exclude it.
   : T; // It's not a function (e.g., array, null, undefined), so keep it.
 
 type MapOnlyQRL<T> = { [K in keyof T]: OnlyQRL<T[K]> };
 
-type CompEvents<C extends keyof IntrinsicElements> = Partial<MapOnlyQRL<OnEvents<PropsOf<C>>>>;
+type CompEvents<C extends keyof QwikIntrinsicElements> = Partial<MapOnlyQRL<OnEvents<PropsOf<C>>>>;
 
 /**
  * Merges two sets of component event handlers.
  * If an event exists in both sets, the handlers are combined into an array.
  */
-export const mergeOnEvents = <C extends keyof IntrinsicElements>(
+export const mergeOnEvents = <C extends keyof QwikIntrinsicElements>(
   left: CompEvents<C>,
   right: CompEvents<C>,
 ): CompEvents<C> => {

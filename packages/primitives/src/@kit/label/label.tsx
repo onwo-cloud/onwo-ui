@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { Slot, component$, sync$, $ } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { Slot, component$, sync$, $ } from '@qwik.dev/core';
 
 export type LabelProps = PropsOf<'label'>;
 

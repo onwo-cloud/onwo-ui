@@ -1,4 +1,4 @@
-import { QRL, Signal, useComputed$, useId, useSignal, useTask$ } from '@builder.io/qwik';
+import { QRL, Signal, useComputed$, useId, useSignal, useTask$ } from '@qwik.dev/core';
 import { initContext } from '~primitives/index';
 
 export type MenuContextData = {

@@ -1,4 +1,4 @@
-import { $, component$, type PropsOf } from '@builder.io/qwik';
+import { $, component$, type PropsOf } from '@qwik.dev/core';
 import { useToastCreate } from '@onwo/ui/toaster';
 import type { BaseIconComponent } from '~primitives/@kit/svg-icon';
 

@@ -1,5 +1,5 @@
-import type { ClassList, JSXOutput, QRL } from '@builder.io/qwik';
-import { component$, useComputed$, useContext } from '@builder.io/qwik';
+import type { ClassList, JSXOutput, QRL } from '@qwik.dev/core';
+import { component$, useComputed$, useContext } from '@qwik.dev/core';
 
 import type { NavigationElement } from './provider';
 import { PageNavigationContext } from './provider';

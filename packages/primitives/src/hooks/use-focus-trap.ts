@@ -1,5 +1,5 @@
-import type { Signal } from '@builder.io/qwik';
-import { $, useSignal } from '@builder.io/qwik';
+import type { Signal } from '@qwik.dev/core';
+import { $, useSignal } from '@qwik.dev/core';
 import type { FocusTrap } from 'focus-trap';
 import { createFocusTrap } from 'focus-trap';
 

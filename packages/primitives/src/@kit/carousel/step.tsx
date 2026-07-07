@@ -1,5 +1,5 @@
-import type { QwikIntrinsicElements } from '@builder.io/qwik';
-import { component$, Slot, useComputed$, useContext, $ } from '@builder.io/qwik';
+import type { QwikIntrinsicElements } from '@qwik.dev/core';
+import { component$, Slot, useComputed$, useContext, $ } from '@qwik.dev/core';
 import { carouselContextId } from './context';
 
 type AllowedElements = 'button' | 'a' | 'div' | 'span';

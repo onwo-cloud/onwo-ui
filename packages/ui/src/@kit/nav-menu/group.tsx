@@ -1,4 +1,4 @@
-import { type JSXChildren, type QwikIntrinsicElements } from '@builder.io/qwik';
+import { type JSXChildren, type QwikIntrinsicElements } from '@qwik.dev/core';
 
 export type NavMenuGroupProps = QwikIntrinsicElements['li'] & {
   label: string;

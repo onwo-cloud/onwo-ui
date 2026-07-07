@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { component$, Slot } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { component$, Slot } from '@qwik.dev/core';
 
 export const Stepper = component$((props: PropsOf<'div'>) => {
   return (

@@ -1,5 +1,5 @@
-import type { QRL, Signal } from '@builder.io/qwik';
-import { useSignal, $ } from '@builder.io/qwik';
+import type { QRL, Signal } from '@qwik.dev/core';
+import { useSignal, $ } from '@qwik.dev/core';
 
 export const useDebounced = (
   fn: QRL<(args: any) => unknown>,

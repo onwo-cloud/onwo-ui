@@ -1,4 +1,4 @@
-import { Slot, component$, useId, useSignal } from '@builder.io/qwik';
+import { Slot, component$, useId, useSignal } from '@qwik.dev/core';
 import type { Primitive } from '~primitives/utils/as';
 import type { DisplayStyles } from '~primitives/utils/display-styles';
 import { withDisplayStyle } from '~primitives/utils/display-styles';

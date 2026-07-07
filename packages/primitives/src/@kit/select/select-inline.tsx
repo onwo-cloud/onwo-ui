@@ -1,4 +1,4 @@
-import type { Component, JSXNode } from '@builder.io/qwik';
+import type { Component, JSXNode } from '@qwik.dev/core';
 
 import { HSelectErrorMessage as InternalSelectErrorMessage } from './select-error-message';
 import { HSelectItem as InternalSelectItem } from './select-item';

@@ -1,10 +1,12 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { Slot, component$, $ } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { Button as ButtonPrimitive } from '../button';
+import { Slot, component$, $ } from '@qwik.dev/core';
+
 import { useModalContext } from './context';
 
-export type TriggerProps = PropsOf<'button'>;
+export type TriggerProps = PropsOf<'div'>;
 
-export const Trigger = component$((props: PropsOf<'button'>) => {
+export const Trigger = component$((props: PropsOf<'div'>) => {
   const context = useModalContext();
 
   const handleClick$ = $(() => {
@@ -13,7 +15,8 @@ export const Trigger = component$((props: PropsOf<'button'>) => {
   });
 
   return (
-    <button
+    <ButtonPrimitive
+      as="div"
       aria-haspopup="dialog"
       aria-expanded={context.control.opened.value}
       data-open={context.control.opened.value ? '' : undefined}
@@ -22,6 +25,6 @@ export const Trigger = component$((props: PropsOf<'button'>) => {
       {...props}
     >
       <Slot />
-    </button>
+    </ButtonPrimitive>
   );
 });

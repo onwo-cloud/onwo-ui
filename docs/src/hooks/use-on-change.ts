@@ -1,5 +1,5 @@
-import type { QRL} from '@builder.io/qwik';
-import { type Signal, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import type { QRL} from '@qwik.dev/core';
+import { type Signal, useSignal, useVisibleTask$ } from '@qwik.dev/core';
 
 // Helper types to unwrap Signal<T> to T
 type Unwrapped<T> = T extends Signal<infer U> ? U : never;

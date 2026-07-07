@@ -1,4 +1,4 @@
-import { Slot, component$, useContext } from '@builder.io/qwik';
+import { Slot, component$, useContext } from '@qwik.dev/core';
 
 import { Panel as PopoverPanel, type HPopoverPanelProps } from '../popover/popover-panel';
 
@@ -16,7 +16,7 @@ export const Panel = component$((props: PanelProps) => {
     <PopoverPanel
       {...props}
       role="tooltip"
-      onToggle$={(e) => context.onOpenChange$(e.newState)}
+      onToggle$={(e) => context.onOpenChange$(e.newState as 'open' | 'closed')}
       id={context.localId}
     >
       <Slot />

@@ -1,4 +1,4 @@
-import type { Component, PropsOf, QwikHTMLElements } from '@builder.io/qwik';
+import type { Component, PropsOf, QwikHTMLElements } from '@qwik.dev/core';
 
 // Define types for the possible interpolation values
 type InterpolationFunction<P> = (props: P) => string | number | boolean | null | undefined;

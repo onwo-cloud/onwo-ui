@@ -1,4 +1,4 @@
-import { component$, Slot } from '@builder.io/qwik';
+import { component$, Slot } from '@qwik.dev/core';
 import type { HToggleGroupItemProps, HToggleGroupProps } from '@onwo/primitives/toggle-group';
 import { HToggleGroup, HToggleGroupItem } from '@onwo/primitives/toggle-group';
 

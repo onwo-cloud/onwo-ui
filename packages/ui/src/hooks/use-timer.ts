@@ -1,4 +1,4 @@
-import { $, useSignal, useTask$, type QRL } from '@builder.io/qwik';
+import { $, useSignal, useTask$, type QRL } from '@qwik.dev/core';
 
 export interface UseTimerReturn {
   /** Whether the timeout is currently active */

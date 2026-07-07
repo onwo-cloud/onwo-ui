@@ -1,5 +1,5 @@
-import type { Signal } from '@builder.io/qwik';
-import { useContext, $ } from '@builder.io/qwik';
+import type { Signal } from '@qwik.dev/core';
+import { useContext, $ } from '@qwik.dev/core';
 
 import { comboboxContextId } from './combobox-context';
 

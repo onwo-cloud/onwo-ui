@@ -1,8 +1,10 @@
+import { component$ } from '@qwik.dev/core';
+
 import type { BoxedComp, Section } from '.';
 
 const defaultBottomSheet: BoxedComp = {
   title: 'Default',
-  display: () => <div />,
+  display: component$(() => <div />),
   code: ``,
 };
 

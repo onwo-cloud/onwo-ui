@@ -1,11 +1,11 @@
-import type { Signal } from '@builder.io/qwik';
+import type { Signal } from '@qwik.dev/core';
 import {
   Slot,
   component$,
   createContextId,
   useContext,
   useContextProvider,
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 import type { Primitive } from '~primitives/utils/as';
 
 type AccordionContext = {

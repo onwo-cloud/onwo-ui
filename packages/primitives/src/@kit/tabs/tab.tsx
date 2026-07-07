@@ -1,5 +1,5 @@
-import type { QRL, QwikHTMLElements } from '@builder.io/qwik';
-import { Slot, component$, useComputed$ } from '@builder.io/qwik';
+import type { QRL, QwikHTMLElements } from '@qwik.dev/core';
+import { Slot, component$, useComputed$ } from '@qwik.dev/core';
 import type { ValidName } from '~primitives/types/case-control';
 import { useTabsContext } from './use-tabs-context';
 

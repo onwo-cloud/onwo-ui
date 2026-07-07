@@ -6,7 +6,7 @@
     {
       cmd = "init";
       desc = "Init project (2GB disk)";
-      deps = [ "init:deps" ];
+      deps = [ "init.deps" ];
       dir = "./packages/icons";
       exec = [
         "bun ./scripts/generate-icons.ts --sets=lucide,mdi"
@@ -26,9 +26,15 @@
       exec = "pnpm -w run lint:fix";
     }
     {
+      cmd = "build.icons";
+      desc = "Build the documentation";
+      dir = "./packages/icons";
+      exec = "pnpm build";
+    }
+    {
       cmd = "build.docs";
       desc = "Build the documentation";
-      deps = [ "init:deps" ];
+      deps = [ "init.deps" "build.icons" ];
       dir = "./docs";
       exec = "pnpm build";
     }
@@ -36,13 +42,13 @@
     {
       cmd = "build";
       desc = "Assemble the empire (Build all)";
-      deps = [ "init:deps" ];
+      deps = [ "init.deps" ];
       exec = [
         "pnpm -r --filter ./packages/tailwindcss --filter ./packages/primitives --filter ./packages/icons --filter ./packages/ui --filter ./docs build"
       ];
     }
     {
-      cmd = "init:deps";
+      cmd = "init.deps";
       desc = "Init project deps";
       visible = false;
       exec = "pnpm install";

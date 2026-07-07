@@ -1,4 +1,4 @@
-import { $, component$, PropsOf, Slot, useComputed$, useTask$ } from '@builder.io/qwik';
+import { $, component$, PropsOf, Slot, useComputed$, useTask$ } from '@qwik.dev/core';
 
 
 import { useMenuAndRegisterItem } from '../../dropdown-context';

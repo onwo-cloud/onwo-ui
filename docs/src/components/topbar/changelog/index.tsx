@@ -7,24 +7,20 @@ import {
   createContextId,
   useContextProvider,
   useContext,
+  useId,
   type Signal,
-} from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
-import { Icon } from '~/utils/icon';
-
-import {
-  Scrollarea,
-  ScrollareaCues,
-  ScrollareaViewport,
-  ScrollareaBar
-} from './scrollarea';
-import { List, ListItem, ListContext } from './list';
-import { ChangelogTrigger } from './trigger';
+  useOnWindow,
+  $,
+} from '@qwik.dev/core';
+import { Link } from '@qwik.dev/router';
 import { Collapsible, CollapsibleContent } from '~primitives/@kit/collapsible';
 
-// ==========================================
-// 1. Shared Layout Context & Config
-// ==========================================
+import { Icon } from '~/utils/icon';
+
+import { List, ListItem, ListContext } from './list';
+import { Scrollarea, ScrollareaCues, ScrollareaViewport, ScrollareaBar } from './scrollarea';
+import { ChangelogTrigger } from './trigger';
+
 export interface ChangelogConfig {
   itemHeight: string;
   width: string;
@@ -39,6 +35,7 @@ export interface ChangelogConfig {
 interface ChangelogContextState {
   isExpanded: Signal<boolean>;
   scrollRef: Signal<HTMLElement | undefined>;
+  scrollId: string;
   showScrollarea: Signal<boolean>;
   config: ChangelogConfig;
   latestItem: Omit<ChangelogItemProps, 'index'>;
@@ -46,44 +43,37 @@ interface ChangelogContextState {
 
 export const ChangelogContext = createContextId<ChangelogContextState>('changelog.context');
 
-// ==========================================
-// 2. Root Container
-// ==========================================
-export interface ChangelogRootProps extends Partial<ChangelogConfig> { }
+export interface ChangelogRootProps { }
 
-export const ChangelogRoot = component$((props: ChangelogRootProps) => {
+export const ChangelogRoot = component$(() => {
   const ctx = useContext(ChangelogContext);
 
-  useVisibleTask$(({ cleanup, track }) => {
-    const expanded = track(() => ctx.isExpanded.value);
-    if (!expanded) return;
-
-    const handleScrollOutside = (e: Event) => {
-      const scrollEl = ctx.scrollRef.value;
-      if (scrollEl && e.target instanceof HTMLElement && scrollEl.contains(e.target)) {
-        return;
-      }
+  useOnWindow(
+    'scroll',
+    $((e) => {
+      if (ctx.isExpanded.value === false) return;
+      const target = e.target as HTMLElement | null;
+      if (!target || !target.closest || target.closest(`#${ctx.scrollId}`)) return;
       ctx.isExpanded.value = false;
-    };
-
-    window.addEventListener('scroll', handleScrollOutside, { capture: true, passive: true });
-    cleanup(() => window.removeEventListener('scroll', handleScrollOutside, { capture: true }));
-  });
+    }),
+  );
 
   useVisibleTask$(({ track, cleanup }) => {
     const expanded = track(() => ctx.isExpanded.value);
     if (expanded) {
       const handleWheel = (e: WheelEvent) => {
-        const path = e.composedPath();
-        if (ctx.scrollRef.value && path.includes(ctx.scrollRef.value)) {
+        const target = e.target as HTMLElement | null;
+        if (target && target.closest(`#${ctx.scrollId}`)) {
           const el = ctx.scrollRef.value;
-          const isScrollingUp = e.deltaY < 0;
-          const isScrollingDown = e.deltaY > 0;
-          const isAtTop = el.scrollTop <= 0;
-          const isAtBottom = Math.ceil(el.scrollTop + el.clientHeight) >= el.scrollHeight - 1;
+          if (el) {
+            const isScrollingUp = e.deltaY < 0;
+            const isScrollingDown = e.deltaY > 0;
+            const isAtTop = el.scrollTop <= 0;
+            const isAtBottom = Math.ceil(el.scrollTop + el.clientHeight) >= el.scrollHeight - 1;
 
-          if ((isScrollingUp && isAtTop) || (isScrollingDown && isAtBottom)) {
-            e.preventDefault();
+            if ((isScrollingUp && isAtTop) || (isScrollingDown && isAtBottom)) {
+              e.preventDefault();
+            }
           }
         } else {
           e.preventDefault();
@@ -124,7 +114,9 @@ export const ChangelogRoot = component$((props: ChangelogRootProps) => {
           }
         };
         frameId = requestAnimationFrame(animate);
-        cleanup(() => { if (frameId) cancelAnimationFrame(frameId); });
+        cleanup(() => {
+          if (frameId) cancelAnimationFrame(frameId);
+        });
       }
     }
   });
@@ -169,10 +161,6 @@ export const ChangelogRoot = component$((props: ChangelogRootProps) => {
   );
 });
 
-
-// ==========================================
-// 3. Decoupling Adapter: ChangelogScrollArea
-// ==========================================
 export interface ChangelogScrollAreaProps {
   smoothScroll?: boolean;
 }
@@ -189,21 +177,22 @@ export const ChangelogScrollArea = component$<ChangelogScrollAreaProps>((props) 
       <ScrollareaCues
         maxHeight={44}
         class={[
-          "transition-opacity duration-[160ms] ease-in-out",
-          isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+          'transition-opacity duration-[160ms] ease-in-out',
+          isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none',
         ]}
-        topClass={[isVisible ? "translate-y-0" : "-translate-y-4"]}
-        bottomClass={[isVisible ? "translate-y-0" : "translate-y-4"]}
+        topClass={[isVisible ? 'translate-y-0' : '-translate-y-4']}
+        bottomClass={[isVisible ? 'translate-y-0' : 'translate-y-4']}
       />
 
       <ScrollareaViewport
+        id={ctx.scrollId}
         elementRef={ctx.scrollRef}
         class={[
-          "transition-[max-height]",
-          ctx.isExpanded.value ? 'spring-moderate' : 'spring-moderate-exit'
+          'transition-[max-height]',
+          ctx.isExpanded.value ? 'spring-moderate' : 'spring-moderate-exit',
         ]}
         style={{
-          maxHeight: ctx.isExpanded.value ? ctx.config.expandedMaxHeight : '0px'
+          maxHeight: ctx.isExpanded.value ? ctx.config.expandedMaxHeight : '0px',
         }}
       >
         <Slot />
@@ -213,17 +202,13 @@ export const ChangelogScrollArea = component$<ChangelogScrollAreaProps>((props) 
         smoothScroll
         orientation="vertical"
         class={[
-          "w-[13px] right-0 top-[4px] bottom-[4px] transition-opacity duration-[160ms] ease-in-out",
-          isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+          'w-[13px] right-0 top-[4px] bottom-[4px] transition-opacity duration-[160ms] ease-in-out',
+          isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none',
         ]}
       />
     </Scrollarea>
   );
 });
-
-// ==========================================
-// 4. Animation Wrapper
-// ==========================================
 
 export const AnimatedReveal = component$((props: { index: number }) => {
   const ctx = useContext(ChangelogContext);
@@ -243,9 +228,6 @@ export const AnimatedReveal = component$((props: { index: number }) => {
   );
 });
 
-// ==========================================
-// 5. Changelog Presentational Item
-// ==========================================
 export type ChangelogItemProps = {
   index: number;
   title: string;
@@ -290,15 +272,15 @@ export const ChangelogItem = component$((props: ChangelogItemProps) => {
 // ==========================================
 // Final Orchestrated Component
 // ==========================================
-export interface ChangelogProps extends ChangelogRootProps {
+export interface ChangelogProps extends Partial<ChangelogConfig> {
   items?: Omit<ChangelogItemProps, 'index'>[];
 }
-
 export const Changelog = component$((props: ChangelogProps) => {
   const isExpanded = useSignal(false);
   const scrollRef = useSignal<HTMLElement>();
   const showScrollarea = useSignal(false);
   const activeIndex = useSignal(0);
+  const scrollId = `${useId()}-changelog-scroll`;
 
   const config: ChangelogConfig = {
     itemHeight: props.itemHeight ?? '44px',
@@ -327,19 +309,19 @@ export const Changelog = component$((props: ChangelogProps) => {
   useContextProvider(ChangelogContext, {
     isExpanded,
     scrollRef,
+    scrollId,
     showScrollarea,
     config,
-    latestItem: items[0], // Extract latest info for Trigger to use
+    latestItem: items[0],
   });
 
-  // Ensure internal focus index is wiped cleanly back to zero when it closes
   useTask$(({ track }) => {
     track(() => isExpanded.value);
     if (!isExpanded.value) activeIndex.value = 0;
   });
 
   return (
-    <ChangelogRoot {...props}>
+    <ChangelogRoot>
       <ChangelogTrigger />
 
       <CollapsibleContent class="flex flex-col min-h-0">

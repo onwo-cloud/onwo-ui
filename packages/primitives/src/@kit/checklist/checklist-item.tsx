@@ -1,4 +1,4 @@
-import { component$, type PropsOf, Slot, useContext, useSignal, useTask$ } from '@builder.io/qwik';
+import { component$, type PropsOf, Slot, useContext, useSignal, useTask$ } from '@qwik.dev/core';
 
 import { CheckboxRoot } from '../checkbox/checkbox-root';
 

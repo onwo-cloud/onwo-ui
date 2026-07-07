@@ -12,10 +12,11 @@ import {
 } from '@onwo/ui/modal';
 
 import type { BoxedComp, Section } from '.';
+import { component$ } from '@qwik.dev/core';
 
 const defaultModal: BoxedComp = {
   title: 'Default',
-  display: () => (
+  display: component$(() => (
     <Modal>
       <ModalTrigger class="block mx-auto">
         <Button as="div">Open Modal</Button>
@@ -47,7 +48,7 @@ const defaultModal: BoxedComp = {
         </ModalFooter>
       </ModalPanel>
     </Modal>
-  ),
+  )),
   code: `
 <Modal>
   <ModalTrigger>

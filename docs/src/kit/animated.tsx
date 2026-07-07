@@ -1,4 +1,4 @@
-import { $, component$, useSignal } from '@builder.io/qwik';
+import { $, component$, useSignal } from '@qwik.dev/core';
 import { Animated } from '@onwo/primitives/animated';
 import { Button } from '@onwo/ui/button';
 
@@ -20,7 +20,7 @@ const simpleAnimated: BoxedComp = {
           {visibleBox.value ? 'Unmount' : 'mount'}
         </Button>
         <Animated
-          bind:visible={visibleBox}
+          visible={visibleBox}
           in={{ timing: 'ease-in', opacity: 0, slide: { x: '-5rem' } }}
           out={{ timing: 'ease-in', opacity: 0, slide: { x: '5rem' } }}
           class="w-fit"
@@ -57,7 +57,7 @@ const simpleAnimated: BoxedComp = {
 
 const infiniteAnimated: BoxedComp = {
   title: 'Infinite',
-  display: () => (
+  display: component$(() => (
     <div class="flex justify-center">
       <Animated
         in={{
@@ -73,7 +73,7 @@ const infiniteAnimated: BoxedComp = {
         <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full shadow-lg" />
       </Animated>
     </div>
-  ),
+  )),
   code: `<Animated
   in={{
     timingFunction: 'linear',

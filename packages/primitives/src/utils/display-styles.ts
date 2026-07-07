@@ -1,4 +1,4 @@
-import type { ClassList, CSSProperties } from '@builder.io/qwik';
+import type { ClassList, CSSProperties } from '@qwik.dev/core';
 
 import type { Opaque } from './types';
 

@@ -1,4 +1,4 @@
-import { $, useOnDocument, useSignal, type QRL } from '@builder.io/qwik';
+import { $, useOnDocument, useSignal, type QRL } from '@qwik.dev/core';
 
 export type FocusOutsideEvent = CustomEvent<{ originalEvent: FocusEvent }>;
 

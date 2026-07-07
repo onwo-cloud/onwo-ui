@@ -1,4 +1,4 @@
-import type { QwikHTMLElements } from '@builder.io/qwik';
+import type { QwikHTMLElements } from '@qwik.dev/core';
 import { SvgIcon } from '@onwo/primitives/svg-icon';
 
 export type AlertCloseProps = QwikHTMLElements['button'];

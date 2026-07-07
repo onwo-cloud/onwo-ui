@@ -1,10 +1,11 @@
 import { Radio, RadioOption } from '@onwo/ui/radio';
 
 import type { BoxedComp, Section } from '.';
+import { component$ } from '@qwik.dev/core';
 
 const defaultRadio: BoxedComp = {
   title: 'Default',
-  display: () => (
+  display: component$(() => (
     <div>
       <Radio name="n1">
         <RadioOption value="v1">Option 1</RadioOption>
@@ -12,7 +13,7 @@ const defaultRadio: BoxedComp = {
         <RadioOption value="v3">Option 3</RadioOption>
       </Radio>
     </div>
-  ),
+  )),
   code: ``,
 };
 

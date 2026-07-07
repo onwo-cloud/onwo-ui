@@ -1,4 +1,4 @@
-import type { JSXOutput, QRL } from '@builder.io/qwik';
+import type { JSXOutput, QRL } from '@qwik.dev/core';
 import {
   component$,
   $,
@@ -6,9 +6,8 @@ import {
   useSignal,
   useStore,
   useComputed$,
-  useResource$,
-  Resource,
-} from '@builder.io/qwik';
+  useAsync$,
+} from '@qwik.dev/core';
 import { useDebounced } from '~primitives/hooks';
 
 import type { Toast, ToastPosition, XPosition, YPosition } from './context';
@@ -36,8 +35,18 @@ type ToastRenderProps = {
 };
 
 const ToastRender = component$(({ render$, toast }: ToastRenderProps) => {
-  const child = useResource$(() => render$({ toast }));
-  return <Resource value={child} onResolved={(data) => <>{data}</>} />;
+  const toastItem = useAsync$(() => render$({ toast }));
+  let content;
+
+  if (toastItem.loading) {
+    content = <p>Loading...</p>;
+  } else if (toastItem.error) {
+    content = <div>Error: {toastItem.error.message}</div>;
+  } else {
+    content = <>{toastItem.value}</>;
+  }
+
+  return <>{content}</>;
 });
 
 export const Toaster = component$<ToasterProps>(({ render$, ...props }) => {

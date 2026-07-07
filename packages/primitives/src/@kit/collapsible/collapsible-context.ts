@@ -1,5 +1,5 @@
 
-import { createContextId, type Signal } from '@builder.io/qwik';
+import { createContextId, type Signal } from '@qwik.dev/core';
 
 export interface CollapsibleContextState {
   isExpanded: Signal<boolean>;

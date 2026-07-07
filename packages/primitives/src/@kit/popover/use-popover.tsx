@@ -1,4 +1,4 @@
-import { $, useSignal } from '@builder.io/qwik';
+import { $, useSignal } from '@qwik.dev/core';
 
 export function usePopover(customId?: string) {
   const programmaticRef = useSignal<HTMLElement | null>(null);

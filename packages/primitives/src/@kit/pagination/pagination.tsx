@@ -1,4 +1,4 @@
-import { component$, Slot } from '@builder.io/qwik';
+import { component$, Slot } from '@qwik.dev/core';
 import type { PaginationProps } from './types/pagination-api';
 import { usePagination } from './use-pagination';
 

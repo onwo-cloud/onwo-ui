@@ -1,9 +1,0 @@
-*
-
-!public
-!src
-!package.json
-!qwik.env.d.ts
-!tsconfig.json
-!vite.config.ts
-!yarn.lock

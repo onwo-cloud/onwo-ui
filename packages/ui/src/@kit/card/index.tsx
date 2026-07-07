@@ -1,4 +1,4 @@
-import { type PropsOf } from '@builder.io/qwik';
+import { type PropsOf } from '@qwik.dev/core';
 
 export const CardRoot = ({ class: className, children, ...props }: PropsOf<'div'>) => (
   <div

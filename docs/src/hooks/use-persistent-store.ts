@@ -1,12 +1,28 @@
-import { $, type QRL } from '@builder.io/qwik';
-import { z } from '@builder.io/qwik-city';
-import { isServer } from '@builder.io/qwik/build';
+import { $, type QRL } from '@qwik.dev/core';
+import { z } from '@qwik.dev/router';
+import { isServer } from '@qwik.dev/core/build';
 
-import { Err, M, pipe } from '~/utils/effect';
+export class PlatformError extends Error {
+  constructor(public details: { message: string }) {
+    super(details.message);
+    this.name = 'PlatformError';
+  }
+}
 
-export class PlatformError extends Err.Builder<{ message: string }> {}
-export class IndexedDBError extends Err.Builder<{ message: string; cause?: unknown }> {}
-export class ValidationError extends Err.Builder<{ message: string; errors: string }> {}
+export class IndexedDBError extends Error {
+  constructor(public details: { message: string; cause?: unknown }) {
+    super(details.message);
+    this.name = 'IndexedDBError';
+    this.cause = details.cause;
+  }
+}
+
+export class ValidationError extends Error {
+  constructor(public details: { message: string; errors: string }) {
+    super(details.message);
+    this.name = 'ValidationError';
+  }
+}
 
 interface StoreConfig {
   dbName: string;
@@ -15,25 +31,26 @@ interface StoreConfig {
   keyPath?: string;
 }
 
-type EffectExit<T> = M.MicroExit<T>;
-
 interface PersistentStore<T> {
-  saveItem$: QRL<(item: T) => Promise<EffectExit<T | undefined>>>;
-  getAllItems$: QRL<() => Promise<EffectExit<T[]>>>;
-  getItem$: QRL<(key: string | number) => Promise<EffectExit<T | undefined>>>;
-  deleteItem$: QRL<(key: string | number) => Promise<EffectExit<undefined>>>;
+  saveItem$: QRL<(item: T) => Promise<T | undefined>>;
+  getAllItems$: QRL<() => Promise<T[]>>;
+  getItem$: QRL<(key: string | number) => Promise<T | undefined>>;
+  deleteItem$: QRL<(key: string | number) => Promise<undefined>>;
 }
 
-const wrapRequest = <T>(request: IDBRequest, errorMsg: string) =>
-  M.async<T, IndexedDBError>((resume) => {
+const wrapRequest = <T>(request: IDBRequest, errorMsg: string): Promise<T> => {
+  return new Promise((resolve, reject) => {
     request.onerror = () =>
-      resume(M.fail(new IndexedDBError({ message: errorMsg, cause: request.error })));
-    request.onsuccess = () => resume(M.succeed(request.result as T));
+      reject(new IndexedDBError({ message: errorMsg, cause: request.error }));
+    request.onsuccess = () => resolve(request.result as T);
   });
+};
 
-const openDB = (config: StoreConfig) =>
-  M.async<IDBDatabase, IndexedDBError | PlatformError>((resume) => {
-    if (isServer) return resume(M.fail(new PlatformError({ message: 'Server-side IDB access' })));
+const openDB = (config: StoreConfig): Promise<IDBDatabase> => {
+  return new Promise((resolve, reject) => {
+    if (isServer) {
+      return reject(new PlatformError({ message: 'Server-side IDB access' }));
+    }
     const request = indexedDB.open(config.dbName, config.version || 1);
     request.onupgradeneeded = (e) => {
       const db = (e.target as IDBOpenDBRequest).result;
@@ -41,77 +58,69 @@ const openDB = (config: StoreConfig) =>
         db.createObjectStore(config.storeName, { keyPath: config.keyPath || 'id' });
     };
     request.onerror = () =>
-      resume(M.fail(new IndexedDBError({ message: 'DB Open Failed', cause: request.error })));
-    request.onsuccess = () => resume(M.succeed(request.result));
+      reject(new IndexedDBError({ message: 'DB Open Failed', cause: request.error }));
+    request.onsuccess = () => resolve(request.result);
   });
+};
 
-const runTransaction = <R>(
+const runTransaction = async <R>(
   config: StoreConfig,
   mode: IDBTransactionMode,
   operation: (store: IDBObjectStore) => IDBRequest,
-) =>
-  openDB(config).pipe(
-    M.andThen((db) => {
-      const tx = db.transaction([config.storeName], mode);
-      const store = tx.objectStore(config.storeName);
-      const req = wrapRequest<R>(operation(store), `${mode} transaction failed`);
-      tx.oncomplete = () => db.close();
-      tx.onerror = () => db.close();
-      return req;
-    }),
-  );
+): Promise<R> => {
+  const db = await openDB(config);
+  const tx = db.transaction([config.storeName], mode);
+  const store = tx.objectStore(config.storeName);
 
-const validateAndRecover = <TIn, TOut>(
+  const reqPromise = wrapRequest<R>(operation(store), `${mode} transaction failed`);
+
+  tx.oncomplete = () => db.close();
+  tx.onerror = () => db.close();
+
+  return reqPromise;
+};
+
+const validateAndRecover = async <TIn, TOut>(
   config: StoreConfig,
-  effect: M.Micro<TIn, any>,
+  operationPromise: Promise<TIn>,
   validator: (data: TIn) => Promise<z.SafeParseReturnType<any, any>>,
   fallback: TOut,
-): M.Micro<TOut, never> =>
-  effect.pipe(
-    M.andThen((data): M.Micro<TOut, ValidationError> => {
-      // Allow null/undefined to pass through as-is (converted to TOut)
-      // or rely on fallback if downstream logic strictly needs TOut.
-      if (data === undefined || data === null) return M.succeed(data as unknown as TOut);
+): Promise<TOut> => {
+  try {
+    const data = await operationPromise;
 
-      return M.async((resume) => {
-        validator(data)
-          .then((result) => {
-            if (!result.success) {
-              // Flatten errors from ValidatorErrorType
-              const errorMsg = Object.entries(result.error.issues || {}).map(
-                  ([f, e]) => `${f}: ${JSON.stringify(e)}`,
-                ).join(', ');
+    // Allow null/undefined to pass through as-is (converted to TOut)
+    // or rely on fallback if downstream logic strictly needs TOut.
+    if (data === undefined || data === null) return data as unknown as TOut;
 
-              resume(
-                M.fail(
-                  new ValidationError({
-                    message: 'Schema mismatch',
-                    errors: errorMsg,
-                  }),
-                ),
-              );
-            } else {
-              resume(M.succeed(result.data as TOut));
-            }
-          })
-          .catch((e) =>
-            resume(
-              M.fail(new ValidationError({ message: 'Validation failed', errors: String(e) })),
-            ),
-          );
+    const result = await validator(data);
+    if (!result.success) {
+      // Flatten errors from ValidatorErrorType
+      const errorMsg = Object.entries(result.error.issues || {})
+        .map(([f, e]) => `${f}: ${JSON.stringify(e)}`)
+        .join(', ');
+
+      throw new ValidationError({
+        message: 'Schema mismatch',
+        errors: errorMsg,
       });
-    }),
-    M.catchAll((err: any) => {
-      if (err._tag === 'ValidationError') {
-        console.warn(`Malformed data in ${config.storeName}: ${err.errors}. Clearing...`);
-        return runTransaction<void>(config, 'readwrite', (s) => s.clear()).pipe(
-          M.andThen(() => M.succeed(fallback)),
-          M.catchAll(() => M.succeed(fallback)),
-        );
+    }
+
+    return result.data as TOut;
+  } catch (err: any) {
+    if (err instanceof ValidationError || err?.name === 'ValidationError') {
+      const errorDetails = err.details?.errors || err.message;
+      console.warn(`Malformed data in ${config.storeName}: ${errorDetails}. Clearing...`);
+      try {
+        await runTransaction<void>(config, 'readwrite', (s) => s.clear());
+      } catch (e) {
+        // Ignore failure to clear
       }
-      return M.succeed(fallback);
-    }),
-  );
+    }
+    // Return fallback for ValidationError or any other errors
+    return fallback;
+  }
+};
 
 /**
  * @param schema - Must be passed as a QRL (e.g. $(myZodSchema))
@@ -143,50 +152,38 @@ export const createPersistentStore = <S extends z.ZodTypeAny>(
   return (): PersistentStore<T> => {
     return {
       saveItem$: $((item: T) =>
-        pipe(
-          validateAndRecover(
-            config,
-            // put returns the key, we map back to the item for validation
-            runTransaction<any>(config, 'readwrite', (s) => s.put(item)).pipe(M.map(() => item)),
-            validateItem,
-            undefined as T | undefined,
-          ),
-          M.runPromiseExit,
-        ),
-      ) as QRL<(item: T) => Promise<EffectExit<T | undefined>>>,
+        validateAndRecover(
+          config,
+          // put returns the key, we map back to the item for validation
+          runTransaction<any>(config, 'readwrite', (s) => s.put(item)).then(() => item),
+          validateItem,
+          undefined as T | undefined,
+        )
+      ) as QRL<(item: T) => Promise<T | undefined>>,
 
       getAllItems$: $(() =>
-        pipe(
-          validateAndRecover(
-            config,
-            runTransaction<unknown[]>(config, 'readonly', (s) => s.getAll()),
-            validateArray, // <--- Using the array validator here
-            [] as T[],
-          ),
-          M.runPromiseExit,
-        ),
-      ) as QRL<() => Promise<EffectExit<T[]>>>,
+        validateAndRecover(
+          config,
+          runTransaction<unknown[]>(config, 'readonly', (s) => s.getAll()),
+          validateArray, // <--- Using the array validator here
+          [] as T[],
+        )
+      ) as QRL<() => Promise<T[]>>,
 
       getItem$: $((key: string | number) =>
-        pipe(
-          validateAndRecover(
-            config,
-            runTransaction<unknown>(config, 'readonly', (s) => s.get(key)),
-            validateItem,
-            undefined as T | undefined,
-          ),
-          M.runPromiseExit,
-        ),
-      ) as QRL<(key: string | number) => Promise<EffectExit<T | undefined>>>,
+        validateAndRecover(
+          config,
+          runTransaction<unknown>(config, 'readonly', (s) => s.get(key)),
+          validateItem,
+          undefined as T | undefined,
+        )
+      ) as QRL<(key: string | number) => Promise<T | undefined>>,
 
       deleteItem$: $((key: string | number) =>
-        pipe(
-          runTransaction<void>(config, 'readwrite', (s) => s.delete(key)).pipe(
-            M.catchAll(() => M.succeed(undefined)),
-          ),
-          M.runPromiseExit,
-        ),
-      ) as QRL<(key: string | number) => Promise<EffectExit<undefined>>>,
+        runTransaction<void>(config, 'readwrite', (s) => s.delete(key))
+          .then(() => undefined)
+          .catch(() => undefined)
+      ) as QRL<(key: string | number) => Promise<undefined>>,
     };
   };
 };

@@ -1,4 +1,4 @@
-import type { CSSProperties, JSXChildren } from '@builder.io/qwik';
+import type { CSSProperties, JSXChildren } from '@qwik.dev/core';
 import type { AsProps } from '@onwo/primitives';
 import { withAs } from '@onwo/primitives';
 

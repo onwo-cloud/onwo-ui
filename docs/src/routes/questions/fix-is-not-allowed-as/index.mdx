@@ -1,0 +1,107 @@
+---
+data:
+  title: 'How to fix "HTML rules do not allow" tag nesting errors in Qwik v2'
+  description: 'A comprehensive guide to understanding Qwik v2 strict SSR tag nesting validation, the browser DOM parser behavior, and building resilient polymorphic elements.'
+  tag: 'Bug Fix'
+  version: 'Qwik v2'
+  readTime: '4 min read'
+---
+
+import { ExternalLinkInline } from '~/commons/external-link';
+
+While building components, you might try to nest block-level elements or other interactive components inside elements with strict content definitions (like `<button>`, `<p>`, or `<table>` tags). 
+
+At its simplest, the nesting conflict looks like this:
+
+```html
+<button>
+  <div>Hello</div>
+</button>
+```
+
+During Server-Side Rendering (SSR) or production compilation, Qwik halts execution and throws a validation error:
+
+```bash
+Error: Code(Q12): SsrError(tag): HTML rules do not allow '<q:template>' at this location.
+  (The HTML parser will try to recover by auto-closing or inserting additional tags which will confuse Qwik when it resumes.)
+  Offending tag: <q:template>
+  Existing tag context:
+    <button> -> <div> is not allowed as a child of button content.
+```
+
+This error is not limited to `<button>` elements. It can occur with paragraph elements (`<p>`), tables (`<table>`), picture containers, and head layouts whenever nesting rules are violated.
+
+## Why the Renderer Enforces Nesting Rules
+
+Qwik requires the server-side rendered HTML to match the HTML generated on the client-side. When invalid HTML is about to be generated, Qwik cannot infer how the browser will render the malformed HTML structure.
+
+For example, if a block-level `<div>` is inserted inside a `<p>` or a `<button>`, the browser automatically closes the outer tag early and pushes the offending tags outside of the parent.
+
+If the browser's parser silently moves boundary elements, the virtual DOM map becomes desynchronized. This desynchronization breaks event listener bindings, state resumption, and reactive updates on the client.
+
+Qwik could have either chosen to:
+- Emit a warning and hope for the best down the line.
+- Throw an exception early and prevent rendering.
+
+Because warnings may silently break on certain browsers rather than others, Qwik took the choice to hard-stop if the HTML tree is invalid.
+
+### On Dynamic Elements
+
+Since dynamic elements are black boxes that could contain any tag, they are also treated as invalid children in restricted parent elements. When Qwik places a boundary marker (like `<q:template>`) around a dynamic component nested inside a strict element like `<button>`, it triggers the validation exception because the compiler cannot guarantee safe HTML output.
+
+## How to fix this issue
+
+If you need to nest block-level elements inside an interactive component, you can resolve the nesting error by changing the underlying container to a non-restrictive element with `role="button"`:
+
+```html
+<div role="button" tabindex="0">
+  <div>Hello</div>
+</div>
+```
+
+This configuration satisfies the HTML parser, preserving Qwik's slot boundaries intact and maintaining full accessibility.
+
+### How does onwo.ui primitives fix this?
+
+We use the same logical approach as `base-ui` for the `Button` component, utilizing component polymorphism. This approach preserves the expected behavioral features of a button but attaches them to a custom HTML tag, such as a `div`.
+
+```tsx
+import { Button } from '@onwo/ui';
+// or alternatively
+// import { Button } from '@onwo/primitives';
+
+<Button as="div">
+  <div>hello</div>
+</Button>
+```
+
+This structure renders as follows in the browser DOM, preserving keyboard actions (Enter/Space bar triggers) and standard mouse interactions.
+
+```html
+<div role="button" tabindex="0" data-disabled="false">
+  <div>hello</div>
+</div>
+```
+
+It is strongly recommended to use the primitives button element instead of trying a custom `<div role="button">` implementation to preserve accessibility.
+
+
+## Documentation
+
+### Qwik v2 HTML Nesting Validation Matrix
+
+The table below lists the nesting constraints enforced by Qwik's compiler and server rendering engine:
+
+| Parent Context | Allowed Child Elements | Forbidden Elements (Examples) |
+| :--- | :--- | :--- |
+| **Document** (`<html>`) | `<head>`, `<body>` | All other tags |
+| **Header** (`<head>`) | `<title>`, `<script>`, `<noscript>`, `<style>`, `<meta>`, `<link>`, `<base>`, `<template>` | `<div>`, `<span>`, `<p>`, `<button>`, `<a>` |
+| **Void / Empty Elements** (e.g., `<col>`, `<img>`, `<meta>`) | None (Self-closing / void elements) | Any child node |
+| **Paragraph / Preformatted** (`<p>`, `<pre>`) | Phrasing content (e.g., `<span>`, `<strong>`, `<a>`, `<img>`, `<svg>`, `<video>`) | Block elements (e.g., `<div>`, `<ul>`, `<ol>`, `<p>`, `<h1>`-`<h6>`, `<section>`, `<table>`) |
+| **Table** (`<table>`) | `<caption>`, `<colgroup>`, `<tbody>`, `<thead>`, `<tfoot>`, `<script>` | `<tr>`, `<td>`, `<th>`, `<div>`, `<p>` |
+| **Table Body / Head** (`<tbody>`, `<thead>`, `<tfoot>`) | `<tr>`, `<script>` | `<td>`, `<th>`, `<div>`, `<p>` |
+| **Table Row** (`<tr>`) | `<td>`, `<th>`, `<script>` | `<tr>`, `<div>`, `<p>` |
+| **Table Column Group** (`<colgroup>`) | `<col>`, `<script>` | Any element other than `<col>` or `<script>` |
+| **Picture** (`<picture>`) | `<source>`, `<img>`, `<script>` | `<div>`, `<span>`, `<p>` |
+| **Button** (`<button>`) | Phrasing content, `<picture>` (No interactive components) | Interactive elements (`<button>`, `<input>`, `<textarea>`, `<select>`, `<a>`) and block elements (`<div>`, `<p>`) |
+

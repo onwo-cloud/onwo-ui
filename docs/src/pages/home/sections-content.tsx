@@ -1,4 +1,4 @@
-import { Link } from '@builder.io/qwik-city';
+import { Link } from '@qwik.dev/router';
 import { SECTIONS_MAP, type Section } from '../../kit';
 
 const sections: Section[] = Object.values(SECTIONS_MAP);

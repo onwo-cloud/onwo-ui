@@ -1,4 +1,4 @@
-import { $, component$, Slot, useSignal, useTask$ } from '@builder.io/qwik';
+import { $, component$, Slot, useSignal, useTask$ } from '@qwik.dev/core';
 
 import { MenuContext, MenuContextData } from '../../dropdown-context';
 

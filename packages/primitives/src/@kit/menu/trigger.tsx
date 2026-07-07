@@ -1,12 +1,15 @@
-import { component$, PropsOf, Slot } from '@builder.io/qwik';
+import { component$, PropsOf, Slot } from '@qwik.dev/core';
+
+import { Button } from '../button';
 
 import { MenuContext } from './dropdown-context';
 
-export const MenuTrigger = component$((props: PropsOf<'button'>) => {
+export const MenuTrigger = component$((props: PropsOf<'div'>) => {
   const ctx = MenuContext.use();
 
   return (
-    <button
+    <Button
+      as="div"
       aria-haspopup="menu"
       aria-expanded={ctx.isOpen.value}
       ref={ctx.triggerRef}
@@ -23,6 +26,6 @@ export const MenuTrigger = component$((props: PropsOf<'button'>) => {
       {...props}
     >
       <Slot />
-    </button>
+    </Button>
   );
 });

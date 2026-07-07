@@ -1,5 +1,5 @@
-import type { QwikIntrinsicElements, PropsOf, Signal } from '@builder.io/qwik';
-import { component$, Slot, $, useContextProvider, sync$ } from '@builder.io/qwik';
+import type { QwikIntrinsicElements, PropsOf, Signal } from '@qwik.dev/core';
+import { component$, Slot, $, useContextProvider, sync$ } from '@qwik.dev/core';
 import { useBoundSignal } from '~primitives/imported/bound-signal';
 
 import { CheckboxContext } from './checkbox-context';

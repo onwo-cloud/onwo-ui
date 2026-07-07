@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { component$, useComputed$, useContext } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { component$, useComputed$, useContext } from '@qwik.dev/core';
 
 import { ProgressContext } from './progress-context';
 

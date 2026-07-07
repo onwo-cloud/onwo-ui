@@ -1,8 +1,4 @@
-import { Icon } from '~/utils/icon'
-
-import { Anatomy } from '~/commons/anatomy';
 import { PageHeadSection } from '~/commons/page-head-section';
-import { Showcase } from '~/commons/showcase';
 
 export const IconsPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
@@ -26,33 +22,5 @@ export const IconsPage = () => (
       </pre>
     </div>
 
-    <Anatomy
-      variants={{
-        Default: `import { Icon } from '~/utils/icon'
-
-<Icon i="arrows-left"   />
-<Icon i="files-copy"  size="lg" class="text-success fill-success/20"  />`,
-      }}
-    />
-
-    <Showcase
-      title="Different sizes and styling"
-      component={
-        <div class="flex justify-between w-full items-center">
-          <Icon i="copy"  size="sm" class="text-error"  />
-          <Icon i="copy"  size="md" class="text-lead"  />
-          <Icon i="copy"  size="lg" class="text-success fill-success/20"  />
-          <Icon i="copy"  size="lg" class="text-accent"  />
-          <Icon i="copy"  size="xl" class="text-sand"  />
-          <Icon i="copy"  size="xl" class="text-neutron"  />
-        </div>
-      }
-      code={`<AllIcons.FilesCopyIcon size="sm" class="text-error" />
-<AllIcons.FilesCopyIcon size="md" class="text-lead" />
-<AllIcons.FilesCopyIcon size="lg" class="text-success fill-success/20" />
-<AllIcons.FilesCopyIcon size="lg" class="text-accent" />
-<AllIcons.FilesCopyIcon size="xl" class="text-sand" />
-<AllIcons.FilesCopyIcon size="xl" class="text-neutron" />`}
-    />
   </div>
 );

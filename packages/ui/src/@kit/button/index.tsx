@@ -1,6 +1,6 @@
-import type { Component, JSX, QwikHTMLElements } from '@builder.io/qwik';
+import type { Component, JSX, QwikHTMLElements } from '@qwik.dev/core';
 import type { BaseIconProps } from '@onwo/primitives/svg-icon';
-import type { OneKeyOf } from '~ui/utils/types';
+import { Button as ButtonPrimitive } from '@onwo/primitives/button';
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
@@ -9,7 +9,9 @@ export type ButtonProps<T extends keyof QwikHTMLElements> = QwikHTMLElements[T] 
   variant?: 'default' | 'contrast' | 'outline' | 'ghost';
   size?: ButtonSize; // default: md
   disabled?: boolean;
-} & Partial<OneKeyOf<{ start: Component<BaseIconProps>; end: Component<BaseIconProps> }>>;
+  start?: Component<BaseIconProps>;
+  end?: Component<BaseIconProps>
+};
 
 const desiredIconSize = (buttonSize: ButtonSize) => {
   switch (buttonSize) {
@@ -22,7 +24,7 @@ const desiredIconSize = (buttonSize: ButtonSize) => {
 };
 
 export const Button = function <T extends keyof QwikHTMLElements = 'button'>({
-  as = 'button' as T,
+  as: asComp = 'button' as T,
   variant = 'default',
   size = 'md',
   class: className,
@@ -31,12 +33,14 @@ export const Button = function <T extends keyof QwikHTMLElements = 'button'>({
   end: EndIcon,
   ...props
 }: ButtonProps<T>): JSX.Element {
-  const As = as as unknown as Component;
+  if ((StartIcon || EndIcon) && asComp === 'button') {
+    // start and end icon could be <q:template> which is an
+    // invalid button children.
+    asComp = 'div' as T;
+  }
   return (
-    <As
-      style={{
-        boxShadow: '0px -2px 0 0px rgba(128, 128, 163, 0.05) inset',
-      }}
+    <ButtonPrimitive
+      as={asComp}
       class={[
         'relative flex select-none items-center justify-center overflow-hidden whitespace-nowrap transition-transform duration-100',
         variant === 'default' ? 'bg-canvas-secondary hover:bg-canvas-secondary-hover ' : '',
@@ -52,11 +56,11 @@ export const Button = function <T extends keyof QwikHTMLElements = 'button'>({
         props.disabled ? 'opacity-50 cursor-not-allowed' : '',
         className,
       ]}
-      {...props}
+      {...props as any}
     >
       {StartIcon && <StartIcon size={desiredIconSize(size)} />}
       {children}
       {EndIcon && <EndIcon size={desiredIconSize(size)} />}
-    </As>
+    </ButtonPrimitive>
   );
 };

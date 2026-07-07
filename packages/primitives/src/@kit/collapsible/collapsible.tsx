@@ -1,4 +1,3 @@
-
 import {
   component$,
   Slot,
@@ -7,10 +6,11 @@ import {
   useContextProvider,
   $,
   sync$,
-  useVisibleTask$,
   type Signal,
-  type PropsOf
-} from '@builder.io/qwik';
+  type PropsOf,
+  useOnDocument,
+} from '@qwik.dev/core';
+
 import { CollapsibleContext } from './collapsible-context';
 
 export interface CollapsibleProps extends PropsOf<'div'> {
@@ -24,55 +24,54 @@ export const collapsibleKeyDownSync = sync$((e: KeyboardEvent) => {
   }
 });
 
-export const Collapsible = component$<CollapsibleProps>(({
-  isExpanded: externalExpanded,
-  ...props
-}) => {
-  const internalExpanded = useSignal(false);
-  const isExpanded = externalExpanded || internalExpanded;
-  const contentId = `${useId()}-collapsible-content`;
-  const rootRef = useSignal<HTMLElement>();
+export const Collapsible = component$<CollapsibleProps>(
+  ({ isExpanded: externalExpanded, ...props }) => {
+    const internalExpanded = useSignal(false);
+    const isExpanded = externalExpanded || internalExpanded;
 
-  useContextProvider(CollapsibleContext, { isExpanded, contentId });
+    const uniqueId = useId();
+    const rootId = `${uniqueId}-collapsible-root`;
+    const contentId = `${uniqueId}-collapsible-content`;
+    const rootRef = useSignal<HTMLElement>();
 
-  const handleFocusOut = $((e: FocusEvent) => {
-    const target = e.relatedTarget as Node | null;
-    if (rootRef.value && !rootRef.value.contains(target)) {
-      isExpanded.value = false;
-    }
-  });
+    useContextProvider(CollapsibleContext, { isExpanded, contentId });
 
-  const handleKeyDown = $((e: KeyboardEvent) => {
-    if (e.key === 'Escape' && isExpanded.value) {
-      isExpanded.value = false;
-      const trigger = rootRef.value?.querySelector('button[aria-controls]') as HTMLElement;
-      trigger?.focus();
-    }
-  });
-
-  useVisibleTask$(({ cleanup, track }) => {
-    const expanded = track(() => isExpanded.value);
-    if (!expanded) return;
-
-    const handleClickOutside = (e: MouseEvent) => {
-      if (rootRef.value && !rootRef.value.contains(e.target as Node)) {
+    const handleFocusOut = $((e: FocusEvent) => {
+      const target = e.relatedTarget as HTMLElement | null;
+      if (target && !target.closest(`#${rootId}`)) {
         isExpanded.value = false;
       }
-    };
+    });
 
-    document.addEventListener('click', handleClickOutside);
-    cleanup(() => document.removeEventListener('click', handleClickOutside));
-  });
+    const handleKeyDown = $((e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isExpanded.value) {
+        isExpanded.value = false;
+        const trigger = rootRef.value?.querySelector('button[aria-controls]') as HTMLElement;
+        trigger?.focus();
+      }
+    });
 
-  return (
-    <div
-      ref={rootRef}
-      onFocusOut$={handleFocusOut}
-      onKeyDown$={[collapsibleKeyDownSync, handleKeyDown]}
-      data-state={isExpanded.value ? 'open' : 'closed'}
-      {...props}
-    >
-      <Slot />
-    </div>
-  );
-});
+    useOnDocument(
+      'click',
+      $((e: MouseEvent) => {
+        const target = e.target as HTMLElement | null;
+        if (target && !target.closest(`#${rootId}`)) {
+          isExpanded.value = false;
+        }
+      }),
+    );
+
+    return (
+      <div
+        ref={rootRef}
+        id={rootId}
+        onFocusOut$={handleFocusOut}
+        onKeyDown$={[collapsibleKeyDownSync, handleKeyDown]}
+        data-state={isExpanded.value ? 'open' : 'closed'}
+        {...props}
+      >
+        <Slot />
+      </div>
+    );
+  },
+);

@@ -1,0 +1,112 @@
+@reference "../../global.css";
+
+[data-color-mode='light'] {
+  --code-bg: var(--color-canvas-secondary, #fafafb);
+  --code-border: var(--color-separator, #e4e4e7);
+  --code-text: var(--color-ink, #18181b);
+  
+  --comment: #71717a;
+  --string: #0f766e;
+  --operator: #27272a;
+  --keyword: #7c3aed;
+  --function: #2563eb;
+  --constant: #ea580c;
+}
+
+[data-color-mode='dark'] {
+  --code-bg: var(--color-canvas-secondary, #18181b);
+  --code-border: var(--color-separator, #27272a);
+  --code-text: var(--color-ink, #f4f4f5);
+
+  --comment: #a1a1aa;
+  --string: #2dd4bf;
+  --operator: #f4f4f5;
+  --keyword: #a78bfa;
+  --function: #60a5fa;
+  --constant: #fb923c;
+}
+
+/* Base block styling containing border-ring structures */
+.prism-code-block code[class*='language-'],
+.prism-code-block pre {
+  @apply font-mono text-[14px] leading-[150%];
+  border-radius: 12px;
+  color: var(--code-text);
+  background-color: var(--code-bg);
+  border: 1px solid var(--code-border);
+  box-shadow: inset 0 0 0 1px rgba(5, 5, 5, 0.03);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+
+.prism-code-block pre {
+  @apply p-4 my-4;
+  overflow: auto;
+}
+
+.prism-code-block pre > code[class*='language-'] {
+  font-size: 14px;
+}
+
+/* Inline code blocks */
+.prism-code-block :not(pre) > code[class*='language-'] {
+  @apply px-1 py-0.5 rounded-md border text-[13px];
+  background: var(--code-bg);
+  border-color: var(--code-border);
+}
+
+/* Prism tokens colors matches standard design aesthetic */
+.prism-code-block .token.comment,
+.prism-code-block .token.prolog,
+.prism-code-block .token.doctype,
+.prism-code-block .token.cdata {
+  color: var(--comment);
+}
+
+.prism-code-block .token.string,
+.prism-code-block .token.attr-value {
+  color: var(--string);
+}
+
+.prism-code-block .token.punctuation,
+.prism-code-block .token.operator {
+  color: var(--operator);
+}
+
+.prism-code-block .token.entity,
+.prism-code-block .token.url,
+.prism-code-block .token.symbol,
+.prism-code-block .token.number,
+.prism-code-block .token.boolean,
+.prism-code-block .token.variable,
+.prism-code-block .token.constant,
+.prism-code-block .token.property,
+.prism-code-block .token.regex,
+.prism-code-block .token.inserted {
+  color: var(--constant);
+}
+
+.prism-code-block .token.atrule,
+.prism-code-block .token.keyword,
+.prism-code-block .token.attr-name {
+  color: var(--keyword);
+}
+
+.prism-code-block .token.function {
+  color: var(--function);
+}
+
+.prism-code-block .token.important,
+.prism-code-block .token.bold {
+  font-weight: 500;
+}
+
+.prism-code-block .token.italic {
+  font-style: italic;
+}

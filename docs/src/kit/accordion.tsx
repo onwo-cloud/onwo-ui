@@ -2,13 +2,14 @@ import { styledcn } from '@onwo/primitives';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@onwo/ui/accordion';
 
 import type { BoxedComp, Section } from '.';
+import { component$ } from '@qwik.dev/core';
 
 const ContainerAccordion = styledcn.tag('div')`px-16 w-full`;
 
 const defaultAccordion: BoxedComp = {
   title: 'Default',
   colSpan: 2,
-  display: () => (
+  display: component$(() => (
     <ContainerAccordion>
       <Accordion class="w-full">
         <AccordionItem>
@@ -29,7 +30,7 @@ const defaultAccordion: BoxedComp = {
         </AccordionItem>
       </Accordion>
     </ContainerAccordion>
-  ),
+  )),
   code: `import { Accordion } from '@onwo/ui';
 
 <Accordion class="w-full">
@@ -50,7 +51,7 @@ const defaultAccordion: BoxedComp = {
 
 const singleOpenAccordion: BoxedComp = {
   title: 'Single open',
-  display: () => (
+  display: component$(() => (
     <ContainerAccordion>
       <Accordion singleOpen class="w-full">
         <AccordionItem>
@@ -71,7 +72,7 @@ const singleOpenAccordion: BoxedComp = {
         </AccordionItem>
       </Accordion>
     </ContainerAccordion>
-  ),
+  )),
   code: `import { Accordion } from '@onwo/ui';
 
 <Accordion singleOpen class="w-full">

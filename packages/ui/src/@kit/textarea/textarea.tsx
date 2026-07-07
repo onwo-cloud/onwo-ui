@@ -1,4 +1,4 @@
-import { $, component$, type PropsOf } from '@builder.io/qwik';
+import { $, component$, type PropsOf } from '@qwik.dev/core';
 
 type TextareaProps = PropsOf<'textarea'> & {
   error?: string;

@@ -1,6 +1,6 @@
-import type { PropsOf, Signal } from '@builder.io/qwik';
-import { Slot, component$, sync$, useContext, $, useSignal, useTask$, useOnDocument } from '@builder.io/qwik';
-import { isServer } from '@builder.io/qwik/build';
+import type { PropsOf, Signal } from '@qwik.dev/core';
+import { Slot, component$, sync$, useContext, $, useSignal, useTask$, useOnDocument } from '@qwik.dev/core';
+import { isServer } from '@qwik.dev/core/build';
 import { usePopover } from '../popover/use-popover';
 import type { TriggerDataState } from './tooltip-context';
 import { TooltipContextId } from './tooltip-context';

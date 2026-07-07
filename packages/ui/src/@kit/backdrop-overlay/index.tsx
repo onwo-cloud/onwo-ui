@@ -1,17 +1,17 @@
-import type { Signal } from '@builder.io/qwik';
-import { $ } from '@builder.io/qwik';
 import type { AsProps } from '@onwo/primitives';
 import { withAs } from '@onwo/primitives';
 import { Animated } from '@onwo/primitives/animated';
+import type { Signal } from '@qwik.dev/core';
+import { $ } from '@qwik.dev/core';
 
 type BackdropOverlayPropsInner = {
-  'bind:open': Signal<boolean>;
+  visible: Signal<boolean>;
 };
 
 export const BackdropOverlay = withAs('div')<BackdropOverlayPropsInner>(
-  ({ As, 'bind:open': open, class: className, onClick$, ...props }) => (
+  ({ As, visible, class: className, onClick$, ...props }) => (
     <Animated
-      bind:visible={open}
+      visible={visible}
       in={{ timing: 'ease-in', durationMs: 100, opacity: 0 }}
       out={{ timing: 'ease-in', durationMs: 100, opacity: 0 }}
       as={As as unknown as keyof HTMLElementTagNameMap}
@@ -19,7 +19,7 @@ export const BackdropOverlay = withAs('div')<BackdropOverlayPropsInner>(
       class={['fixed inset-0 z-50 opacity-100 bg-black/50', className]}
       data-aria-hidden="true"
       aria-hidden="true"
-      onClick$={[onClick$, $(() => (open.value = false))]}
+      onClick$={[onClick$, $(() => (visible.value = false))]}
       {...props}
     />
   ),

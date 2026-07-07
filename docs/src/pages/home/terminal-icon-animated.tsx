@@ -1,5 +1,5 @@
-import type { PropsOf} from '@builder.io/qwik';
-import { component$, useStyles$ } from '@builder.io/qwik';
+import type { PropsOf} from '@qwik.dev/core';
+import { component$, useStyles$ } from '@qwik.dev/core';
 
 export const TerminalAnimatedIcon = component$(({ class: className, ...props }: PropsOf<'svg'>) => {
   useStyles$(`

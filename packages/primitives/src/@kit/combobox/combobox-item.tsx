@@ -1,4 +1,4 @@
-import type { PropsOf } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
 import {
   Slot,
   component$,
@@ -8,8 +8,8 @@ import {
   useComputed$,
   useContextProvider,
   useSignal,
-} from '@builder.io/qwik';
-import { isServer } from '@builder.io/qwik/build';
+} from '@qwik.dev/core';
+import { isServer } from '@qwik.dev/core/build';
 import { useCombinedRef } from '~primitives/hooks/use-combined-refs';
 
 import type { ComboboxItemContext } from './combobox-context';

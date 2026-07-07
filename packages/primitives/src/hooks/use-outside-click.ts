@@ -1,4 +1,4 @@
-import { $, QRL, Signal, useOnDocument } from "@builder.io/qwik";
+import { $, QRL, Signal, useOnDocument } from "@qwik.dev/core";
 
 export const useOutsideClick = (
   ref: Signal<HTMLElement | undefined>,

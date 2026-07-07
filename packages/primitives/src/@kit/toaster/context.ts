@@ -1,5 +1,5 @@
-import type { QRL, Signal } from '@builder.io/qwik';
-import { initContext } from '~primitives/utils/context-utils';
+import type { QRL, Signal } from '@qwik.dev/core';
+import { initContext } from '~primitives/';
 
 export type YPosition = 'top' | 'bottom';
 export type XPosition = 'left' | 'right' | 'center';

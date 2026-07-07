@@ -1,4 +1,4 @@
-import { $, component$, PropsOf, Slot } from '@builder.io/qwik';
+import { $, component$, PropsOf, Slot } from '@qwik.dev/core';
 import { PropsOfElem } from '~primitives/types/props';
 
 import { MenuContext } from '../dropdown-context';

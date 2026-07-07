@@ -1,6 +1,6 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { component$, useContext, Slot, $, useId, useSignal, useTask$ } from '@builder.io/qwik';
-import { isBrowser, isServer } from '@builder.io/qwik/build';
+import type { PropsOf } from '@qwik.dev/core';
+import { component$, useContext, Slot, $, useId, useSignal, useTask$ } from '@qwik.dev/core';
+import { isBrowser, isServer } from '@qwik.dev/core/build';
 import type { KeyCode } from '~primitives/imported';
 
 import { Toggle } from '../toggle';

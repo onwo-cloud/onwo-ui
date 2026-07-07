@@ -1,4 +1,4 @@
-import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { component$, useSignal, useVisibleTask$ } from '@qwik.dev/core';
 import { composeRefs } from '~ui/utils/compose-refs';
 import type { OneObjectOf, Primitive } from '~ui/utils/types';
 

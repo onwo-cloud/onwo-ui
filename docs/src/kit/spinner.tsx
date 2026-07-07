@@ -1,20 +1,21 @@
 import { Spinner } from '@onwo/ui/spinner';
 
 import type { BoxedComp, Section } from '.';
+import { component$ } from '@qwik.dev/core';
 
 const defaultSpinner: BoxedComp = {
   title: 'Default',
-  display: () => (
+  display: component$(() => (
     <div class="flex justify-center">
       <Spinner />
     </div>
-  ),
+  )),
   code: `<Spinner />`,
 };
 
 const spinnerSizes: BoxedComp = {
   title: 'Sizes',
-  display: () => (
+  display: component$(() => (
     <div class="flex gap-2 flex-wrap items-center justify-around">
       <Spinner size="xs" />
       <Spinner size="sm" />
@@ -23,7 +24,7 @@ const spinnerSizes: BoxedComp = {
       <Spinner size="xl" />
       <Spinner size={48} />
     </div>
-  ),
+  )),
   code: `import { Spinner } from '@onwo/ui';
 
 <Spinner size="xs" />
@@ -36,14 +37,14 @@ const spinnerSizes: BoxedComp = {
 
 const spinnerColors: BoxedComp = {
   title: 'Colors',
-  display: () => (
+  display: component$(() => (
     <div class="flex gap-2 flex-wrap items-center justify-around">
       <Spinner class="text-success" />
       <Spinner class="text-warn" />
       <Spinner class="text-scarab" />
       <Spinner class="text-neutron" />
     </div>
-  ),
+  )),
   code: `import { Button } from '@onwo/ui';
 
 <Spinner class="text-success" />

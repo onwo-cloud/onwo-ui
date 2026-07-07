@@ -1,5 +1,5 @@
-import { component$, type Component, type JSXChildren } from '@builder.io/qwik';
 import type { BaseIconProps } from '@onwo/primitives/svg-icon';
+import { component$, Slot, type Component, type JSXChildren } from '@qwik.dev/core';
 
 import { createRegistry, useRegistry } from './registry';
 
@@ -19,8 +19,7 @@ export type UiIcons =
 export type IconMap = Record<UiIcons, Component<BaseIconProps>>;
 
 export function createUiProvider(iconMap: IconMap) {
-  const Provider = createRegistry<IconMap>(iconMap);
-  return ({ children }: { children: JSXChildren }) => <Provider>{children}</Provider>;
+  return createRegistry<IconMap>(iconMap);
 }
 
 export interface UiIconComponent extends Component<BaseIconProps & { name: UiIcons }> {

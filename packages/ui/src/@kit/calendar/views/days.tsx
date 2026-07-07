@@ -1,8 +1,10 @@
-import { $, component$, useSignal, useTask$ } from '@builder.io/qwik';
-import type { QRL, Signal } from '@builder.io/qwik';
+import type { QRL, Signal } from '@qwik.dev/core';
+import { $, component$, useSignal, useTask$ } from '@qwik.dev/core';
 
+import { isSameDay } from '~ui/utils/date';
 import { CalendarGrid } from '../commons/calendar-grid';
 import { CalendarGridButton } from '../commons/calendar-grid-button';
+import type { Views, WeekStart } from '../date-picker-helpers';
 import {
   addDays,
   getFirstDayOfTheMonth,
@@ -10,8 +12,6 @@ import {
   getWeekDays,
   isDateInRange,
 } from '../date-picker-helpers';
-import type { Views, WeekStart } from '../date-picker-helpers';
-import { isSameDay } from '~ui/utils/date';
 
 type Props = {
   language: string;
@@ -57,7 +57,6 @@ export const CalendarViewDays = component$(
           focusedDate.value = res;
           focusPressed.value = true;
           viewDate.value = focusedDate.value;
-
           break;
         }
         case 'ArrowUp': {
@@ -65,7 +64,6 @@ export const CalendarViewDays = component$(
           focusedDate.value = res;
           focusPressed.value = true;
           viewDate.value = focusedDate.value;
-
           break;
         }
         case 'ArrowLeft': {
@@ -73,7 +71,6 @@ export const CalendarViewDays = component$(
           focusedDate.value = res;
           focusPressed.value = true;
           viewDate.value = focusedDate.value;
-
           break;
         }
         case 'ArrowRight': {
@@ -81,57 +78,60 @@ export const CalendarViewDays = component$(
           focusedDate.value = res;
           focusPressed.value = true;
           viewDate.value = focusedDate.value;
-
           break;
         }
         case 'Enter': {
           changeSelectedDate$(focusedDate.value);
-
           break;
         }
-        // No default
       }
     });
 
     return (
       <CalendarGrid
         headerCategories={weekDays.map((day) => ({ 'aria-label': day.long, display: day.short }))}
-        rows={6}
-        cols={7}
         onKeyDown$={$((event: KeyboardEvent) => {
           keyPress$(event.key);
         })}
-        renderer={(row, col) => {
-          const currentDate = addDays(startDate, row * 7 + col);
-          const day = getFormattedDate(language, currentDate, { day: 'numeric' });
+      >
+        {Array.from({ length: 6 }, (_, row) => (
+          <tr key={row} class="flex select-none font-normal-light w-full">
+            {Array.from({ length: 7 }, (_, col) => {
+              const currentDate = addDays(startDate, row * 7 + col);
+              const day = getFormattedDate(language, currentDate, { day: 'numeric' });
 
-          const isSelected = selectedDate.value
-            ? isSameDay(selectedDate.value, currentDate)
-            : false;
+              const isSelected = selectedDate.value
+                ? isSameDay(selectedDate.value, currentDate)
+                : false;
 
-          const isDisabled = !isDateInRange(currentDate, minDate, maxDate);
-          return (
-            <CalendarGridButton
-              name="day"
-              highlight={isSameDay(today, currentDate)}
-              dim={currentDate.getMonth() !== viewDate.value.getMonth()}
-              key={`${row}-${col}`}
-              isDisabled={isDisabled}
-              isSelected={isSelected}
-              isFocused={focusPressed.value === true && isSameDay(focusedDate.value, currentDate)}
-              onSelected$={$(() => {
-                const currentSelected = selectedDate.value;
-                if (currentSelected !== undefined) {
-                  currentDate.setHours(currentSelected.getHours());
-                  currentDate.setMinutes(currentSelected.getMinutes());
-                }
-                changeSelectedDate$(currentDate);
-              })}
-              label={day}
-            />
-          );
-        }}
-      />
+              const isDisabled = !isDateInRange(currentDate, minDate, maxDate);
+
+              return (
+                <CalendarGridButton
+                  key={`${row}-${col}`}
+                  name="day"
+                  highlight={isSameDay(today, currentDate)}
+                  dim={currentDate.getMonth() !== viewDate.value.getMonth()}
+                  isDisabled={isDisabled}
+                  isSelected={isSelected}
+                  isFocused={
+                    focusPressed.value === true && isSameDay(focusedDate.value, currentDate)
+                  }
+                  onSelected$={$(() => {
+                    const currentSelected = selectedDate.value;
+                    if (currentSelected !== undefined) {
+                      currentDate.setHours(currentSelected.getHours());
+                      currentDate.setMinutes(currentSelected.getMinutes());
+                    }
+                    changeSelectedDate$(currentDate);
+                  })}
+                  label={day}
+                />
+              );
+            })}
+          </tr>
+        ))}
+      </CalendarGrid>
     );
   },
 );

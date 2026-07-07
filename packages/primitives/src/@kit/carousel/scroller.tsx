@@ -8,9 +8,9 @@ import {
   Slot,
   useSignal,
   sync$,
-} from '@builder.io/qwik';
-import { useStyles$ } from '@builder.io/qwik';
-import { isServer } from '@builder.io/qwik/build';
+} from '@qwik.dev/core';
+import { useStyles$ } from '@qwik.dev/core';
+import { isServer } from '@qwik.dev/core/build';
 import { useDebounced } from '~primitives/hooks/use-debouncer';
 
 import styles from './carousel.css?inline';

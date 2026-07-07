@@ -1,5 +1,5 @@
-import type { Signal } from '@builder.io/qwik';
-import { $, useId, useSignal } from '@builder.io/qwik';
+import type { Signal } from '@qwik.dev/core';
+import { $, useId, useSignal } from '@qwik.dev/core';
 import { useBoundSignal } from '~primitives/imported/bound-signal';
 
 import type { Item, ItemId } from './toggle-group-context';

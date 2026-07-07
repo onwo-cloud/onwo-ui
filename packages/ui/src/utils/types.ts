@@ -1,4 +1,4 @@
-import type { CSSProperties, JSXOutput, QwikHTMLElements } from '@builder.io/qwik';
+import type { CSSProperties, JSXOutput, QwikHTMLElements } from '@qwik.dev/core';
 
 //export type Classes<T extends string> = Partial<Record<T, string>>;
 

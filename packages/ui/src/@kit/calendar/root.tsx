@@ -1,6 +1,7 @@
-import { $, component$, useSignal, useTask$ } from '@builder.io/qwik';
-import type { CSSProperties, JSXChildren, PropFunction, QRL, Signal } from '@builder.io/qwik';
+import { $, component$, useSignal, useTask$ } from '@qwik.dev/core';
+import type { CSSProperties, JSXChildren, QRL, Signal } from '@qwik.dev/core';
 import { UiIcon } from '~ui/icon-provider';
+import { Button as ButtonPrimitive } from '@onwo/primitives/button';
 
 import {
   addMonths,
@@ -201,13 +202,13 @@ export const Calendar = component$(
           <div>
             <div
               tabIndex={1}
-              onKeyDown$={$(async (event) => {
+              onKeyDown$={(event) => {
                 if (event.key === 'ArrowLeft') {
                   triggerAction$(-1);
                 } else if (event.key === 'ArrowRight') {
                   triggerAction$(1);
                 }
-              })}
+              }}
               aria-label="month"
               class="mb-2 mx-1 flex items-center justify-between z-10 relative"
             >
@@ -216,11 +217,11 @@ export const Calendar = component$(
                 onClick$={$(() => triggerAction$(-1))}
               />
 
-              <button
-                type="button"
+              <ButtonPrimitive
+                as="div"
                 tabIndex={-1}
                 class="rounded-full text-sm font-fvs hover:fvs-medium hover:text-ink hover:bg-canvas-hover relative z-20 pointer-events-auto overflow-hidden"
-                onClick$={async () => (view.value = await getNextView$())}
+                onClick$={$(async () => (view.value = await getNextView$()))}
               >
                 {/* The mask is applied here on a separate text container to protect the button's background hover */}
                 <div
@@ -240,7 +241,7 @@ export const Calendar = component$(
                     {getHeaderTitleForDate(nextViewDate.value)}
                   </span>
                 </div>
-              </button>
+              </ButtonPrimitive>
 
               <HeadNavButton
                 icon={<UiIcon name="chevron-right" />}
@@ -266,16 +267,16 @@ export const Calendar = component$(
 
 type HeadNavButtonProps = {
   icon: JSXChildren;
-  onClick$: PropFunction<() => void>;
+  onClick$: QRL<() => void>;
 };
 
 export const HeadNavButton = (props: HeadNavButtonProps) => (
-  <button
-    type="button"
+  <ButtonPrimitive
+    as="div"
     tabIndex={-1}
     class="touch-manipulation rounded-full text-ink-tertiary flex items-center justify-center w-8 h-8 transition-colors hover:text-ink cursor-pointer hover:bg-canvas-hover relative z-20 pointer-events-auto"
     onClick$={props.onClick$}
   >
     {props.icon}
-  </button>
+  </ButtonPrimitive>
 );

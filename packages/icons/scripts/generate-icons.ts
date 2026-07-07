@@ -53,10 +53,10 @@ const ICONIFY_REPO = 'https://github.com/iconify/icon-sets.git';
 const PACKAGES_DIR = join(process.cwd(), 'packages');
 const CACHE_DIR = join(tmpdir(), 'iconify-repo-cache');
 
-class ProcessError extends Data.TaggedError("ProcessError")<{ readonly message: string; readonly cause?: unknown }> {}
+class ProcessError extends Data.TaggedError("ProcessError")<{ readonly message: string; readonly cause?: unknown }> { }
 
 // --- CACHING & CLONING ---
-const setupRepo = Effect.gen(function* (_) {
+const setupRepo = Effect.gen(function*(_) {
   const exists = yield* _(
     Effect.tryPromise({
       try: () => fs.access(CACHE_DIR).then(() => true).catch(() => false),
@@ -103,20 +103,20 @@ const listIconSetsJson = (jsonDir: string) =>
     catch: (e) => new ProcessError({ message: 'Failed to read json directory', cause: e })
   }).pipe(
     Effect.map((files) =>
-      files.filter((f) => 
-        f.endsWith('.json') && 
-        !['collections.json', 'info.json'].includes(f) && 
+      files.filter((f) =>
+        f.endsWith('.json') &&
+        !['collections.json', 'info.json'].includes(f) &&
         (isAll || ALLOWED_SETS.includes(f.replace('.json', '')))
       )
     )
   );
 
-const bumpVersion = Effect.gen(function* (_) {
+const bumpVersion = Effect.gen(function*(_) {
   const versionPath = './version.json';
   const content = yield* _(Effect.tryPromise({ try: () => fs.readFile(versionPath, 'utf8'), catch: () => '{"version": "1.14.0"}' }));
   const json = JSON.parse(content);
   const parts = json.version.split('.');
-  parts[2] = (parseInt(parts[2], 10) + 1).toString(); 
+  parts[2] = (parseInt(parts[2], 10) + 1).toString();
   json.version = parts.join('.');
   yield* _(Effect.tryPromise(() => fs.writeFile(versionPath, JSON.stringify(json, null, 2) + '\n', 'utf8')));
   return json.version;
@@ -126,11 +126,11 @@ const toPascalCase = (str: string): string => str.replace(/(^\w|-\w)/g, (match) 
 
 // --- CORE GENERATION ---
 const processIconSet = (jsonDir: string, file: string, baseOutDir: string, version: string) =>
-  Effect.gen(function* (_) {
+  Effect.gen(function*(_) {
     const prefix = file.replace('.json', '');
     const content = yield* _(Effect.tryPromise(() => fs.readFile(join(jsonDir, file), 'utf8')));
     const data = JSON.parse(content);
-    
+
     const packageDir = join(baseOutDir, `iconset-${prefix}`);
     const libDir = join(packageDir, 'lib');
     const libIconsDir = join(libDir, 'icons');
@@ -159,75 +159,60 @@ const processIconSet = (jsonDir: string, file: string, baseOutDir: string, versi
 
     // Process & write pre-built ESM/CJS and .d.ts files for icons
     yield* _(Effect.forEach(allIcons.values(), (iconData: any) => {
-        const left = iconData.left || 0;
-        const top = iconData.top || 0;
-        const width = iconData.width || globalWidth;
-        const height = iconData.height || globalHeight;
-        let body = iconData.body;
+      const left = iconData.left || 0;
+      const top = iconData.top || 0;
+      const width = iconData.width || globalWidth;
+      const height = iconData.height || globalHeight;
+      let body = iconData.body;
 
-        if (iconData.hFlip || iconData.vFlip || iconData.rotate) {
-          let transform = '';
-          const cx = left + width / 2;
-          const cy = top + height / 2;
-          if (iconData.hFlip) transform += ` translate(${width + 2 * left}, 0) scale(-1, 1)`;
-          if (iconData.vFlip) transform += ` translate(0, ${height + 2 * top}) scale(1, -1)`;
-          if (iconData.rotate) transform += ` rotate(${iconData.rotate * 90} ${cx} ${cy})`;
-          body = `<g transform="${transform.trim()}">${body}</g>`;
-        }
+      if (iconData.hFlip || iconData.vFlip || iconData.rotate) {
+        let transform = '';
+        const cx = left + width / 2;
+        const cy = top + height / 2;
+        if (iconData.hFlip) transform += ` translate(${width + 2 * left}, 0) scale(-1, 1)`;
+        if (iconData.vFlip) transform += ` translate(0, ${height + 2 * top}) scale(1, -1)`;
+        if (iconData.rotate) transform += ` rotate(${iconData.rotate * 90} ${cx} ${cy})`;
+        body = `<g transform="${transform.trim()}">${body}</g>`;
+      }
 
-        const escapedBody = body.replace(/`/g, '\\`');
+      const escapedBody = body.replace(/`/g, '\\`');
 
-        const mjsContent = `export default{body:\`${escapedBody}\`,viewBox:'${left} ${top} ${width} ${height}'};`;
-        const cjsContent = `"use strict";\nObject.defineProperty(exports, "__esModule", { value: true });\nconst _default = { body: \`${escapedBody}\`, viewBox: '${left} ${top} ${width} ${height}' };\nexports.default = _default;\n`;
-        const dtsContent = `declare const _default:{body:string;viewBox:string};\nexport default _default;\n`;
+      const mjsContent = `export default{body:\`${escapedBody}\`,viewBox:'${left} ${top} ${width} ${height}'};`;
+      const cjsContent = `"use strict";\nObject.defineProperty(exports, "__esModule", { value: true });\nconst _default = { body: \`${escapedBody}\`, viewBox: '${left} ${top} ${width} ${height}' };\nexports.default = _default;\n`;
+      const dtsContent = `declare const _default:{body:string;viewBox:string};\nexport default _default;\n`;
 
-        const writeMjs = fs.writeFile(join(libIconsDir, `${iconData.name}.qwik.mjs`), mjsContent, 'utf8');
-        const writeCjs = fs.writeFile(join(libIconsDir, `${iconData.name}.qwik.cjs`), cjsContent, 'utf8');
-        const writeDts = fs.writeFile(join(typesIconsDir, `${iconData.name}.d.ts`), dtsContent, 'utf8');
+      // Write as standard .mjs and .cjs so the Qwik AST Optimizer ignores these files!
+      const writeMjs = fs.writeFile(join(libIconsDir, `${iconData.name}.mjs`), mjsContent, 'utf8');
+      const writeCjs = fs.writeFile(join(libIconsDir, `${iconData.name}.cjs`), cjsContent, 'utf8');
+      const writeDts = fs.writeFile(join(typesIconsDir, `${iconData.name}.d.ts`), dtsContent, 'utf8');
 
-        return Effect.tryPromise(() => Promise.all([writeMjs, writeCjs, writeDts]));
-      }, { concurrency: 200 }
+      return Effect.tryPromise(() => Promise.all([writeMjs, writeCjs, writeDts]));
+    }, { concurrency: 200 }
     ));
 
     const iconSetName = `${toPascalCase(prefix)}IconSet`;
     const iconNamesType = `${toPascalCase(prefix)}IconName`;
-    
+
     const iconNames = Array.from(allIcons.keys());
     const namesUnion = iconNames.map((name) => `  | '${name}'`).join('\n');
     const keysArrayString = JSON.stringify(iconNames);
 
-    // Generate lib/index.qwik.mjs using a transparent Proxy loader
-    const indexMjsContent = `const keys = ${keysArrayString};
-const keysSet = new Set(keys);
+    // Generate lib/index.qwik.mjs using import.meta.glob (Processed by Vite/Qwik naturally)
+    const indexMjsContent = `const modules = import.meta.glob('./icons/*.mjs', { import: 'default' });
 
 export const ${iconSetName} = {
   prefix: '${prefix}',
   name: '${prefix}',
-  loaders: new Proxy({}, {
-    get: (target, prop) => {
-      if (typeof prop === 'string' && keysSet.has(prop)) {
-        return () => import(/* @vite-ignore */ \`./icons/\${prop}.qwik.mjs\`).then(m => m.default);
-      }
-      return undefined;
-    },
-    has: (target, prop) => keysSet.has(prop),
-    ownKeys: () => keys,
-    getOwnPropertyDescriptor: (target, prop) => {
-      if (typeof prop === 'string' && keysSet.has(prop)) {
-        return {
-          enumerable: true,
-          configurable: true,
-          writable: true,
-          value: () => import(/* @vite-ignore */ \`./icons/\${prop}.qwik.mjs\`).then(m => m.default)
-        };
-      }
-      return undefined;
-    }
-  })
+  loaders: Object.fromEntries(
+    Object.entries(modules).map(([path, load]) => [
+      path.slice(8, -4), // removes './icons/' and '.mjs'
+      load
+    ])
+  )
 };
 `;
 
-    // Generate lib/index.qwik.cjs using a transparent Proxy loader
+    // Generate lib/index.qwik.cjs using dynamic import fallback for Node SSR environments
     const indexCjsContent = `"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -238,21 +223,21 @@ exports.${iconSetName} = {
   prefix: '${prefix}',
   name: '${prefix}',
   loaders: new Proxy({}, {
-    get: (target, prop) => {
+    get: (_, prop) => {
       if (typeof prop === 'string' && keysSet.has(prop)) {
-        return () => import(\`./icons/\${prop}.qwik.mjs\`).then(m => m.default);
+        return () => import(\`./icons/\${prop}.mjs\`).then(m => m.default);
       }
       return undefined;
     },
-    has: (target, prop) => keysSet.has(prop),
+    has: (_, prop) => keysSet.has(prop),
     ownKeys: () => keys,
-    getOwnPropertyDescriptor: (target, prop) => {
+    getOwnPropertyDescriptor: (_, prop) => {
       if (typeof prop === 'string' && keysSet.has(prop)) {
         return {
           enumerable: true,
           configurable: true,
           writable: true,
-          value: () => import(\`./icons/\${prop}.qwik.mjs\`).then(m => m.default)
+          value: () => import(\`./icons/\${prop}.mjs\`).then(m => m.default)
         };
       }
       return undefined;
@@ -295,7 +280,9 @@ export const ${iconSetName}: {
           "types": "./lib-types/index.d.ts",
           "import": "./lib/index.qwik.mjs",
           "require": "./lib/index.qwik.cjs"
-        }
+        },
+        "./lib/icons/*.mjs": "./lib/icons/*.mjs",
+        "./lib/icons/*.cjs": "./lib/icons/*.cjs"
       },
       files: [
         "lib",
@@ -311,7 +298,7 @@ export const ${iconSetName}: {
 
 // --- ORCHESTRATOR ---
 const program = Effect.scoped(
-  Effect.gen(function* (_) {
+  Effect.gen(function*(_) {
     yield* _(Effect.sync(() => log.step('Starting Multi-Library Icon Generation...')));
     yield* _(Effect.tryPromise(() => fs.mkdir(PACKAGES_DIR, { recursive: true })));
 

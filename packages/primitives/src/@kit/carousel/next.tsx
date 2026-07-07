@@ -1,4 +1,4 @@
-import type { PropsOf } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
 import {
   Slot,
   component$,
@@ -7,7 +7,7 @@ import {
   useSignal,
   $,
   useComputed$,
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 import { carouselContextId } from './context';
 import { useCarousel } from './use-carousel';
 

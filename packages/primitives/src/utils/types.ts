@@ -1,4 +1,4 @@
-import type { JSXOutput } from '@builder.io/qwik';
+import type { JSXOutput } from '@qwik.dev/core';
 
 export type Prettify<T> = { [K in keyof T]: T[K] } & {};
 

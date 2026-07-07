@@ -1,16 +1,17 @@
 import { Alert, AlertClose, AlertMessage, AlertTitle } from '@onwo/ui/alert';
 
 import type { BoxedComp, Section } from '.';
+import { component$ } from '@qwik.dev/core';
 
 const withControlAlert: BoxedComp = {
   title: 'With control',
-  display: () => (
+  display: component$(() => (
     <Alert>
       <AlertTitle>Alert with title and icon</AlertTitle>
       <AlertMessage> Alert message </AlertMessage>
       <AlertClose />
     </Alert>
-  ),
+  )),
   code: `<Alert>
   <AlertTitle>
     <Icon i="other-frame"  size="md"  />
@@ -23,7 +24,7 @@ const withControlAlert: BoxedComp = {
 
 const customizationAlert: BoxedComp = {
   title: 'Customization',
-  display: () => (
+  display: component$(() => (
     <div class="flex flex-col gap-4">
       <Alert>
         <AlertMessage>Generic style with coloured icon</AlertMessage>
@@ -38,7 +39,7 @@ const customizationAlert: BoxedComp = {
         <AlertClose />
       </Alert>
     </div>
-  ),
+  )),
   code: `<Alert>
   <AlertMessage>
     <Icon i="other-frame"  size="md" class="text-success"  />

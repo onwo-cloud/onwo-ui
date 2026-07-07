@@ -1,6 +1,6 @@
-import type { PropsOf, QRL, Signal } from '@builder.io/qwik';
-import { component$, useContextProvider, Slot, useTask$, $, useStyles$ } from '@builder.io/qwik';
-import { isBrowser, isServer } from '@builder.io/qwik/build';
+import type { PropsOf, QRL, Signal } from '@qwik.dev/core';
+import { component$, useContextProvider, Slot, useTask$, $, useStyles$ } from '@qwik.dev/core';
+import { isBrowser, isServer } from '@qwik.dev/core/build';
 
 import {
   toggleGroupRootApiContextId,

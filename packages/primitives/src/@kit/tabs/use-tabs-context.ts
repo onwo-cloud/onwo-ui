@@ -1,11 +1,11 @@
-import type { Signal } from '@builder.io/qwik';
+import type { Signal } from '@qwik.dev/core';
 import {
   createContextId,
   useContext,
   useContextProvider,
   useId,
   useSignal,
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 
 type TabContext = {
   name: string;

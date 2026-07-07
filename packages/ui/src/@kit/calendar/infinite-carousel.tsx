@@ -1,5 +1,5 @@
-import { component$, useTask$, useVisibleTask$ } from '@builder.io/qwik';
-import type { CSSProperties, JSXOutput, QRL, Signal } from '@builder.io/qwik';
+import { component$, useTask$, useVisibleTask$ } from '@qwik.dev/core';
+import type { CSSProperties, JSXOutput, QRL, Signal } from '@qwik.dev/core';
 import { useFlick } from './use-flick';
 
 export type InfiniteCarouselProps = {

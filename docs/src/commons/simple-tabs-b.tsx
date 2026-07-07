@@ -1,17 +1,18 @@
+import type {
+  QRL} from '@qwik.dev/core';
 import {
   component$,
   type Signal,
-  type PropFunction,
   useComputed$,
-  useStore,
-} from '@builder.io/qwik';
+  useStore
+} from '@qwik.dev/core';
 
 import { HoverBox } from './hover-box';
 
 export interface SimpleTabsProps {
   tabs: string[];
   'bind:selected': Signal<string>;
-  onSelected$?: PropFunction<(tab: string) => void>;
+  onSelected$?: QRL<(tab: string) => void>;
   class?: string;
 }
 

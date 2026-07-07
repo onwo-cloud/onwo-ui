@@ -1,0 +1,8 @@
+.blog-code-rounding {
+  --code-blog-rounding: 0.25rem;
+}
+
+.blog-code-container>pre {
+  @apply inset-ring inset-ring-[white]/5;
+  height: 100%;
+}

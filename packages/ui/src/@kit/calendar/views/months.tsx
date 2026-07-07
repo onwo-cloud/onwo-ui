@@ -1,11 +1,11 @@
-import { $, component$ } from '@builder.io/qwik';
-import type { QRL, Signal } from '@builder.io/qwik';
+import type { QRL, Signal } from '@qwik.dev/core';
+import { $, component$ } from '@qwik.dev/core';
 import { isSameMonth } from '~ui/utils/date';
 
 import { CalendarGrid } from '../commons/calendar-grid';
 import { CalendarGridButton } from '../commons/calendar-grid-button';
-import { getFormattedDate, isDateInRange, Views } from '../date-picker-helpers';
 import type { WeekStart } from '../date-picker-helpers';
+import { getFormattedDate, isDateInRange, Views } from '../date-picker-helpers';
 
 type Props = {
   language: string;
@@ -23,33 +23,37 @@ export const CalendarViewMonth = component$(
     const today = new Date();
 
     return (
-      <CalendarGrid
-        rows={3}
-        cols={4}
-        renderer={(row, col) => {
-          const newDate = new Date(viewDate.value);
-          newDate.setMonth(row * 4 + col);
-          const month = getFormattedDate(language, newDate, { month: 'short' });
+      <CalendarGrid>
+        {Array.from({ length: 3 }, (_, row) => (
+          <tr key={row} class="flex select-none font-normal-light w-full">
+            {Array.from({ length: 4 }, (_, col) => {
+              const newDate = new Date(viewDate.value);
+              newDate.setMonth(row * 4 + col);
+              const month = getFormattedDate(language, newDate, { month: 'short' });
 
-          const isSelected = selectedDate.value ? isSameMonth(selectedDate.value, newDate) : false;
-          const isDisabled = !isDateInRange(newDate, minDate, maxDate);
+              const isSelected = selectedDate.value
+                ? isSameMonth(selectedDate.value, newDate)
+                : false;
+              const isDisabled = !isDateInRange(newDate, minDate, maxDate);
 
-          return (
-            <CalendarGridButton
-              name="month"
-              highlight={isSameMonth(today, newDate)}
-              key={`${row}-${col}`}
-              isDisabled={isDisabled}
-              isSelected={isSelected}
-              onSelected$={$(() => {
-                viewDate.value = newDate;
-                view.value = Views.Days;
-              })}
-              label={month}
-            />
-          );
-        }}
-      />
+              return (
+                <CalendarGridButton
+                  key={`${row}-${col}`}
+                  name="month"
+                  highlight={isSameMonth(today, newDate)}
+                  isDisabled={isDisabled}
+                  isSelected={isSelected}
+                  onSelected$={$(() => {
+                    viewDate.value = newDate;
+                    view.value = Views.Days;
+                  })}
+                  label={month}
+                />
+              );
+            })}
+          </tr>
+        ))}
+      </CalendarGrid>
     );
   },
 );

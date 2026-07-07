@@ -1,5 +1,5 @@
-import type { Signal } from '@builder.io/qwik';
-import { $, Slot, component$, useSignal, useTask$ } from '@builder.io/qwik';
+import type { Signal } from '@qwik.dev/core';
+import { $, Slot, component$, useSignal, useTask$ } from '@qwik.dev/core';
 import { useEscapeKeydown } from '~primitives/hooks/use-escape-keydown';
 import { useFocusTrap } from '~primitives/hooks/use-focus-trap';
 import type { Primitive } from '~primitives/utils/as';

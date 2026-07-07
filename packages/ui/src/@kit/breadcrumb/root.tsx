@@ -1,4 +1,4 @@
-import type { JSXChildren, JSXOutput } from '@builder.io/qwik';
+import type { JSXChildren, JSXOutput } from '@qwik.dev/core';
 import { UiIcon } from '~ui/icon-provider';
 import { withAs } from '@onwo/primitives';
 import type { BaseIconComponent, BaseIconProps } from '@onwo/primitives/svg-icon';

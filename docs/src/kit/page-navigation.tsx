@@ -5,10 +5,11 @@ import {
 } from '@onwo/ui/page-navigation';
 
 import type { BoxedComp, Section } from '.';
+import { component$ } from '@qwik.dev/core';
 
 const defaultPageNavigation: BoxedComp = {
   title: 'Default',
-  display: () => (
+  display: component$(() => (
     <PageNavigationProvider>
       <div class="p-1 flex bg-paper w-fit gap-4 mb-4">
         <PageNavigationLink id="link-1" label="Link 1">
@@ -23,7 +24,7 @@ const defaultPageNavigation: BoxedComp = {
       </div>
       <PageNavigationAppendix />
     </PageNavigationProvider>
-  ),
+  )),
   code: `import { PageNavigationProvider, PageNavigationLink, PageNavigationAppendix } from '@onwo/ui';
 
 <PageNavigationProvider>
@@ -38,7 +39,7 @@ const defaultPageNavigation: BoxedComp = {
 
 const customAnchors: BoxedComp = {
   title: 'Custom anchors',
-  display: () => (
+  display: component$(() => (
     <PageNavigationProvider class="grid grid-cols-[1fr_auto] gap-8">
       <div class="onwo-format">
         <PageNavigationLink level={1} as="h2" id="hlink-2" label="H2">
@@ -53,7 +54,7 @@ const customAnchors: BoxedComp = {
       </div>
       <PageNavigationAppendix maxLevelShown={2} />
     </PageNavigationProvider>
-  ),
+  )),
   code: `import { PageNavigationProvider, PageNavigationLink, PageNavigationAppendix } from '@onwo/ui';
 
 <PageNavigationProvider class="grid grid-cols-[1fr_auto] gap-8">

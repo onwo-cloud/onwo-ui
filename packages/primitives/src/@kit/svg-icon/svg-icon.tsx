@@ -4,7 +4,7 @@ import type {
   ClassList,
   JSXChildren,
   QwikIntrinsicElements,
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 
 export const getIconSize = (
   size: string

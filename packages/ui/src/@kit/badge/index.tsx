@@ -1,4 +1,4 @@
-import type { PropsOf } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
 
 type BadgeProps = PropsOf<'div'> & {
   look?: 'primary' | 'secondary' | 'alert' | 'outline';

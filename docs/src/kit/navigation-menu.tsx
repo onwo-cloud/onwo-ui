@@ -1,8 +1,9 @@
+import { component$ } from '@qwik.dev/core';
 import type { BoxedComp, Section } from '.';
 
 const defaultNavigationMenu: BoxedComp = {
   title: 'Default',
-  display: () => (
+  display: component$(() => (
     <nav
       class="flex h-10 items-center space-x-1 border bg-background p-1 rounded-none border-b border-none px-2 lg:px-4"
       tabIndex={0}
@@ -80,7 +81,7 @@ const defaultNavigationMenu: BoxedComp = {
         Account
       </button>
     </nav>
-  ),
+  )),
   code: `
 <nav class="flex h-10 items-center space-x-1 rounded-md border bg-background p-1">
   <button class="flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none">

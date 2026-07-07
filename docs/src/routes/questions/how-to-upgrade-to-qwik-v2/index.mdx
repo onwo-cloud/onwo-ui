@@ -1,0 +1,85 @@
+---
+data:
+  title: "How to upgrade to Qwik v2?"
+  description: 'A rundown of the breaking changes in Qwik v2: the package rename to @qwik.dev, the new getClientManifest() SSR API, and the QwikCity to QwikRouter rename.'
+  tag: 'Core Concepts'
+  version: 'Qwik v2'
+  readTime: '3 min read'
+---
+Qwik v2 doesn't change how you write components, but it does change **where things come from**. Theses patches cover most upgrades.
+
+## New package name
+`@qwik.dev/core` → `@qwik.dev/core`, `@qwik.dev/core-city` → `@qwik.dev/router`. Applies to every import from the old scope, plus `jsxImportSource` in `tsconfig.json`.
+```diff
+- import { $, useSignal } from '@qwik.dev/core';
++ import { $, useSignal } from '@qwik.dev/core';
+```
+
+`tsconfig.json`:
+```diff
+- "jsxImportSource": "@qwik.dev/core",
++ "jsxImportSource": "@qwik.dev/core",
+```
+
+---
+## QwikCity → QwikRouter
+
+`vite.config.ts`:
+```diff
+- import { qwikCity } from '@qwik.dev/core-city/vite';
+- import { qwikVite } from '@qwik.dev/core/optimizer';
++ import { qwikRouter } from '@qwik.dev/router/vite';
++ import { qwikVite } from '@qwik.dev/core/optimizer';
+
+export default defineConfig(() => {
+  return {
+    plugins: [
+-     qwikCity({}),
++     qwikRouter({}),
+      qwikVite(),
+      // ...
+    ],
+    // ...
+  };
+});
+
+```
+
+---
+## getClientManifest() replaces the static manifest import
+
+`entry.ssr.tsx`:
+```diff
+- // eslint-disable-next-line import/no-unresolved
+- import { manifest } from '@qwik-client-manifest';
++ import { getClientManifest } from '@qwik.dev/core';
+
+  renderToStream(<Root />, {
+-   manifest,
++   manifest: getClientManifest(),
+    ...options,
+  });
+```
+
+The virtual module `@qwik-client-manifest` is deprecated in v2, so the `eslint-disable` comment can go with it.
+
+## useQwikRouter() replaces QwikCityProvider
+`root.tsx`:
+```diff
+- import { QwikCityProvider, RouterOutlet } from '@qwik.dev/core-city';
++ import { component$ } from '@qwik.dev/core';
++ import { RouterOutlet, useQwikRouter } from '@qwik.dev/router';
+
+- export default () => {
++ export default component$(() => {
++   useQwikRouter();
++
+    return (
+-     <QwikCityProvider>
+        // ...
+-     </QwikCityProvider>
+    );
+
+```
+The wrapping `<QwikCityProvider>` component is gone; router setup is now a hook call at the top of the component body, and the root export must be wrapped in `component$` to use it.
+

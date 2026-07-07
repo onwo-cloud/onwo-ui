@@ -1,4 +1,4 @@
-import { $ } from '@builder.io/qwik';
+import { $ } from '@qwik.dev/core';
 import type { ToastOptions } from '@onwo/primitives/toaster';
 import { useToastCreateCustom } from '@onwo/primitives/toaster';
 

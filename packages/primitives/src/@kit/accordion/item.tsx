@@ -7,7 +7,7 @@ import {
   useId,
   useSignal,
   useTask$,
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 import type { Primitive } from '~primitives/utils/as';
 
 import { useAccordionRootContext } from './root';

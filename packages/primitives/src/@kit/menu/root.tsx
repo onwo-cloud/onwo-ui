@@ -1,4 +1,4 @@
-import { $, component$, PropsOf, Slot, useSignal } from '@builder.io/qwik';
+import { $, component$, PropsOf, Slot, useSignal } from '@qwik.dev/core';
 import { useOutsideClick } from '~primitives/hooks/use-outside-click';
 
 import { MenuContext, MenuContextData } from './dropdown-context';

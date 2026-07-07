@@ -1,8 +1,32 @@
 import { MenuTrigger } from '~ui/@kit/menu';
-
-import { ThemeMenuRoot } from '~/components/theme-builder/components/theme-sidebar-head/ThemeMenuRoot';
-import { Icon } from '~/utils/icon';
 import { Changelog } from './changelog';
+import { component$, Slot } from '@qwik.dev/core';
+import type { PropsOf } from '@qwik.dev/core';
+import {
+  MenuRoot,
+  MenuPopup,
+  MenuItem,
+  MenuLabel,
+} from '~ui/@kit/menu';
+
+import { Icon } from '~/utils/icon';
+
+const ThemeMenuRoot = component$((props: PropsOf<'div'>) => (
+  <MenuRoot {...props}>
+    <Slot />
+    <MenuPopup side="bottom" sideOffset={8}>
+      <MenuLabel>Theme</MenuLabel>
+      <div role="group">
+        <MenuItem class="group gap-2">
+          <Icon i="sun" class="text-ink-tertiary group-hover:text-ink" /> Light
+        </MenuItem>
+        <MenuItem class="group gap-2">
+          <Icon i="moon" class="text-ink-tertiary group-hover:text-ink" /> Dark
+        </MenuItem>
+      </div>
+    </MenuPopup>
+  </MenuRoot>
+));
 
 const ThemeDropdown = () => (
   <ThemeMenuRoot>

@@ -1,5 +1,5 @@
-import type { QRL } from '@builder.io/qwik';
-import { useSignal, $ } from '@builder.io/qwik';
+import type { QRL } from '@qwik.dev/core';
+import { useSignal, $ } from '@qwik.dev/core';
 
 export const useDebouncer = (fn: QRL<(args: any) => void>, delay: number) => {
   const timeoutId = useSignal<number>();

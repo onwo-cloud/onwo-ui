@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { Slot, component$, useContextProvider, useId } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { Slot, component$, useContextProvider, useId } from '@qwik.dev/core';
 
 import type { ModalContext, ModalControls } from './context';
 import { modalContextId, useModalControl } from './context';

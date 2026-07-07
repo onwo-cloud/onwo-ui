@@ -1,4 +1,4 @@
-import type { JSXChildren } from '@builder.io/qwik';
+import type { JSXChildren } from '@qwik.dev/core';
 import { PageNavigationLink } from '@onwo/ui/page-navigation';
 import { Tabs, TabsList, TabsPill, TabsPanels, TabsPanel } from '@onwo/ui/tabs';
 

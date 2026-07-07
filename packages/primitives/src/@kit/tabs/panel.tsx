@@ -1,4 +1,4 @@
-import { Slot, component$, useComputed$ } from '@builder.io/qwik';
+import { Slot, component$, useComputed$ } from '@qwik.dev/core';
 import type { ValidName } from '~primitives/types/case-control';
 import type { Primitive } from '~primitives/utils/as';
 

@@ -1,4 +1,4 @@
-import type { PropsOf } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
 import { Item } from '@onwo/primitives/accordion';
 
 export const AccordionItem = (props: PropsOf<typeof Item>) => {

@@ -1,6 +1,6 @@
 /* eslint-disable qwik/use-method-usage */
-import type { CSSProperties, QRL, Signal } from '@builder.io/qwik';
-import { Slot, component$, useComputed$, useSignal, useStyles$, useTask$ } from '@builder.io/qwik';
+import type { CSSProperties, QRL, Signal } from '@qwik.dev/core';
+import { Slot, component$, useComputed$, useSignal, useStyles$, useTask$ } from '@qwik.dev/core';
 import type { AsProps } from '~primitives/utils/as';
 import { withAs } from '~primitives/utils/as';
 
@@ -116,7 +116,7 @@ const getAnimationStyle = (animType: 'in' | 'out', animation: Animation) => {
 };
 
 type AnimatedPropsInner = {
-  ['bind:visible']?: Signal<boolean>;
+  visible?: Signal<boolean>;
   in?: Animation;
   out?: Animation;
   onOutEnd$?: QRL<() => void>;
@@ -126,7 +126,7 @@ export const Animated = component$(
   withAs('div')<AnimatedPropsInner>(
     ({
       As,
-      'bind:visible': visible,
+      visible,
       style,
       in: inAnimation,
       out: outAnimation,
@@ -165,13 +165,13 @@ export const Animated = component$(
       });
 
       return (
-        <>
+        <div>
           {mounted.value && (
             <As style={styles.value} {...props}>
               <Slot />
             </As>
           )}
-        </>
+        </div>
       );
     },
   ),

@@ -6,9 +6,9 @@
 @source "../../packages/icons/src";
 
 @theme {
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-autospawn);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-geist-sans);
+  --font-display: var(--font-autospawn);
 
 
   --color-current-color: currentColor;
@@ -74,17 +74,66 @@
   --color-red-200: oklch(0.885 0.062 18.334);
 
 
-  --tracking-tightest: -0.05em;
-  --tracking-tighter: -0.025em;
+  --tracking-tightest: -0.02em;
+  --tracking-tighter: -0.015em;
   --tracking-tight: -0.01em;
   --tracking-normal: 0em;
   --tracking-wide: 0.01em;
-  --tracking-wider: 0.025em;
-  --tracking-widest: 0.05em;
+  --tracking-wider: 0.015em;
+  --tracking-widest: 0.02em;
 
   --shadow-color: #00000004;
 
   --text-macro: 11px;
+  /* 12px / 16px lh */
+  --text-xs: 0.75rem; 
+  --text-xs--line-height: 1rem; 
+
+  /* 13px / 22px lh (Code blocks) */
+  --text-sm-code: 0.8125rem; 
+  --text-sm-code--line-height: 1.375rem; 
+
+  /* 14px / 21px lh / 0.14px ls (Navigation, Footer Links) */
+  --text-sm: 0.875rem; 
+  --text-sm--line-height: 1.3125rem; 
+
+  /* 15px / 22px lh / 0.15px ls / 500 weight (Tags, Categories) */
+  --text-md-tag: 0.9375rem; 
+  --text-md-tag--line-height: 1.375rem; 
+  --text-md-tag--font-weight: 500; 
+
+  /* 16px / 24px lh / 0.16px ls (General UI Body) */
+  --text-base: 1rem; 
+  --text-base--line-height: 1.75rem; 
+
+  /* 17px / 30px lh (Long-form Reading / SynthID Article) */
+  --text-article: 1.0625rem; 
+  --text-article--line-height: 1.875rem; 
+
+  /* 18px / 28.8px lh (Large UI Paragraphs) */
+  --text-lg: 1.125rem; 
+  --text-lg--line-height: 1.875rem; 
+
+  /* 18px / 26px lh / 0.18px ls / 500 weight (Article Subheadings) */
+  --text-lg-heading: 1.125rem; 
+  --text-lg-heading--line-height: 1.625rem; 
+  --text-lg-heading--font-weight: 500; 
+
+  /* 20px / 27px lh (Card Titles, Blog Post Titles) */
+  --text-xl: 1.25rem; 
+  --text-xl--line-height: 1.6875rem; 
+  --text-xl--letter-spacing: var(--tracking-tight);
+
+  /* 36px / 42px lh (Section Headings) */
+  --text-4xl: 2.25rem; 
+  --text-4xl--line-height: 2.625rem; 
+  --text-4xl--letter-spacing: var(--tracking-tighter);
+
+  /* 48px / 52px lh / -0.96px ls (Hero Headings) */
+  --text-5xl: 3rem; 
+  --text-5xl--line-height: 3.25rem; 
+  --text-5xl--letter-spacing: var(--tracking-tighter);
+
   /*
     //.shadow-surface-1,.shadow-surface-2 {
     //    box-shadow: var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);
@@ -180,8 +229,8 @@ body {
 
 @utility type-heading-hero { @apply font-display text-5xl leading-[1.1] }
 
-@utility type-body { @apply text-base tracking-tight text-pretty }
-@utility type-body-sm { @apply text-sm tracking-tight text-pretty }
+@utility type-body { @apply text-base text-pretty }
+@utility type-body-sm { @apply text-sm text-pretty }
 
 @utility border-style-card {
   border-color: var(--color-separator-secondary);

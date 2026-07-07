@@ -1,5 +1,5 @@
-import type { QRL } from '@builder.io/qwik';
-import { component$, useSignal, $, useTask$ } from '@builder.io/qwik';
+import type { QRL } from '@qwik.dev/core';
+import { component$, useSignal, $, useTask$ } from '@qwik.dev/core';
 import { Icon } from '~/utils/icon'
 
 interface SearchBarProps {

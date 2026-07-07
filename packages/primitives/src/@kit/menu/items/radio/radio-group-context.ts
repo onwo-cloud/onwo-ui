@@ -1,4 +1,4 @@
-import { QRL, Signal } from '@builder.io/qwik';
+import { QRL, Signal } from '@qwik.dev/core';
 import { initContext } from '~primitives/index';
 
 export type RadioGroupContextData = {

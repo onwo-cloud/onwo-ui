@@ -1,0 +1,55 @@
+---
+data:
+  title: 'Why does my onClick$ prop throw a serialization error in Qwik?'
+  description: 'Learn why plain function props break in Qwik component$, how to fix it with the QRL<> type, and why native elements like div do not need this typing.'
+  tag: 'Core Concepts'
+  version: 'Qwik v2'
+  readTime: '3 min read'
+---
+
+In React, an event prop is just a function: `onClick: () => void`. If you type a custom `component$` prop this way and pass an inline arrow function to it, Qwik will throw a **serialization error** at runtime instead of a compile error.
+```tsx
+
+interface MyComponentProps {
+  onClick: () => void; // ❌ FAILS: plain function, not a QRL
+}
+
+export const MyComponent = component$((props: MyComponentProps) => {
+  return <button onClick$={props.onClick}>Click me</button>;
+});
+
+// ❌ FAILS: serialization issue detected here
+<MyComponent onClick$={() => console.log('clicked')} />
+```
+
+TypeScript won't catch this. `() => void` is a perfectly valid function type, so it compiles fine. The problem only shows up when Qwik tries to serialize the closure across a resumability boundary *at runtime*.
+
+---
+
+## The Solution
+Suffix the prop name with `$` and type it as `QRL<...>`. This does two things: it tells Qwik's optimizer to extract the inline function into its own lazy-loadable chunk, and it tells TypeScript to expect a `QRL` reference rather than a raw closure.
+```tsx
+import { component$, type QRL } from '@qwik.dev/core';
+interface MyComponentProps {
+  onClick$: QRL<() => void>; // ✅ CORRECT: serializable QRL
+}
+export const MyComponent = component$((props: MyComponentProps) => {
+  return <button onClick$={props.onClick$}>Click me</button>;
+});
+
+// ✅ CORRECT: properly enforce serialization via '$'
+<MyComponent onClick$={$(() => console.log('clicked'))} />
+```
+
+---
+
+## Why native elements don't need this typing
+You've probably noticed `onClick$` works directly on a `<div>` or `<button>` with no extra typing on your part:
+
+```tsx
+<div onClick$={() => console.log('clicked')} />
+```
+
+This isn't special behavior for native elements — the `$`-suffix transform is the same optimizer convention everywhere. What's different is that Qwik's core JSX namespace already ships `QRL`-typed `$` props for every intrinsic event (`onClick$`, `onInput$`, etc.), so TypeScript accepts them out of the box.
+
+When you author your own `component$`, there's no built-in interface for your custom props. You have to declare the `QRL<>` typing yourself — skip it, and you lose both the type safety and the naming convention the optimizer relies on to extract the function correctly.

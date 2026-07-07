@@ -6,7 +6,7 @@ import {
   useComputed$,
   useTask$,
   Slot,
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 
 import type { Toast } from './context';
 import { ToastItemContext, ToasterContext } from './context';

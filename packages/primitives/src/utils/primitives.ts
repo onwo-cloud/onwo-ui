@@ -1,5 +1,5 @@
-import type { QRLEventHandlerMulti, QRL } from '@builder.io/qwik';
-import { $ } from '@builder.io/qwik';
+import type { QRLEventHandlerMulti, QRL } from '@qwik.dev/core';
+import { $ } from '@qwik.dev/core';
 
 type EventFn<E extends Event> =
   | QRL<(event: E, elem: Element) => void>

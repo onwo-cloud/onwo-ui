@@ -1,4 +1,4 @@
-import type { QRL } from '@builder.io/qwik';
+import type { QRL } from '@qwik.dev/core';
 import { Icon } from '~/utils/icon'
 import { Breadcrumb, BreadcrumbLink } from '@onwo/ui/breadcrumb';
 

@@ -1,6 +1,6 @@
-import type { PropsOf, Signal } from '@builder.io/qwik';
-import { component$, useContext, useSignal, useTask$ } from '@builder.io/qwik';
-import { isServer } from '@builder.io/qwik/build';
+import type { PropsOf, Signal } from '@qwik.dev/core';
+import { component$, useContext, useSignal, useTask$ } from '@qwik.dev/core';
+import { isServer } from '@qwik.dev/core/build';
 
 import SelectContextId from './select-context';
 

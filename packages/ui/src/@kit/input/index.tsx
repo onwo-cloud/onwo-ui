@@ -1,4 +1,4 @@
-import type { PropsOf } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
 
 function Input({ class: className, type, ...props }: PropsOf<'input'>) {
   return (

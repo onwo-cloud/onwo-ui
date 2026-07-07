@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { Slot, component$, useContext } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { Slot, component$, useContext } from '@qwik.dev/core';
 
 import { comboboxItemContextId } from './combobox-context';
 

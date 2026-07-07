@@ -1,4 +1,4 @@
-import { $, useOnWindow, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { $, useOnWindow, useSignal, useVisibleTask$ } from '@qwik.dev/core';
 
 // Custom hook for window width tracking
 export const useWindowWidth = () => {

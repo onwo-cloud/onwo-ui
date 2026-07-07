@@ -1,4 +1,4 @@
-import type { JSXChildren } from '@builder.io/qwik';
+import type { JSXChildren } from '@qwik.dev/core';
 import { PageNavigationAppendix, PageNavigationProvider } from '@onwo/ui/page-navigation';
 
 import { TopBar } from './top-bar';

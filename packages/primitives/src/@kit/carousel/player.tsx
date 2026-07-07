@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { component$, Slot, useContext, $ } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { component$, Slot, useContext, $ } from '@qwik.dev/core';
 import { carouselContextId } from './context';
 
 export const Player = component$((props: PropsOf<'button'>) => {

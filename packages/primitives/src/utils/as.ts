@@ -5,7 +5,7 @@ import type {
   JSXOutput,
   QwikHTMLElements,
   QwikIntrinsicElements,
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 
 export type Primitive<T extends keyof QwikHTMLElements> = Omit<QwikHTMLElements[T], 'style'> & {
   style?: CSSProperties;

@@ -1,4 +1,4 @@
-import { component$, useComputed$, useStyles$ } from '@builder.io/qwik';
+import { component$, useComputed$, useStyles$ } from '@qwik.dev/core';
 import { withAs } from '@onwo/primitives';
 
 type SpinnerSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | number;

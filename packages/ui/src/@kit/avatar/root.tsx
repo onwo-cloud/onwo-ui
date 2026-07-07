@@ -1,4 +1,4 @@
-import type { PropsOf } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
 import { SvgIcon } from '@onwo/primitives/svg-icon';
 import { withAs } from '~primitives/index';
 import type { OneKeyOf } from '~ui/utils/types';

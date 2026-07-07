@@ -1,3 +1,5 @@
+import { type PropsOf, CSSProperties } from "@qwik.dev/core";
+
 export type StringLiteral<Type> = Type extends string
   ? string extends Type
     ? never
@@ -21,3 +23,10 @@ export type Opaque<Type, Token extends string> =
 export type OnEvents<T> = {
   [K in keyof T as K extends `on${string}$` ? K : never]: T[K];
 };
+
+
+// export declare type PropsOf<COMP> = COMP extends string ? COMP extends keyof QwikIntrinsicElements ? QwikIntrinsicElements[COMP] : QwikIntrinsicElements['span'] : NonNullable<COMP> extends never ? never : COMP extends FunctionComponent<infer PROPS> ? PROPS extends Record<any, infer V> ? IsAny<V> extends true ? never : ObjectProps<PROPS> : COMP extends Component<infer OrigProps> ? ObjectProps<OrigProps> : PROPS : never;
+
+export type OwPropsOf<COMP> = "style" extends keyof PropsOf<COMP>
+  ? Omit<PropsOf<COMP>, "style"> & { style?: CSSProperties }
+  : PropsOf<COMP>;

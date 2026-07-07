@@ -16,7 +16,18 @@
   font-feature-settings: "ss01", "ss04", "ss06", "ss09";
 }
 
+@font-face {
+  font-family: "SatoshiLoc";
+  src: local("Satoshi");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  font-feature-settings: "ss03";
+}
+
+
 :root {
   --font-geist-mono: "Geist Mono", ui-monospace, monospace;
   --font-geist-sans: "Geist Sans", system-ui, sans-serif;
+  --font-autospawn: "SatoshiLoc", arial;
 }

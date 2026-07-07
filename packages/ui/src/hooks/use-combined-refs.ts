@@ -1,5 +1,5 @@
-import type { Signal } from '@builder.io/qwik';
-import { useSignal, useTask$, useComputed$ } from '@builder.io/qwik';
+import type { Signal } from '@qwik.dev/core';
+import { useSignal, useTask$, useComputed$ } from '@qwik.dev/core';
 
 /* This hook merges a consumer passed ref with our internal ref. It allows consumers to pass a reference to the component and get access to the underlying element. */
 

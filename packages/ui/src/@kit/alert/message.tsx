@@ -1,4 +1,4 @@
-import type { JSXChildren } from '@builder.io/qwik';
+import type { JSXChildren } from '@qwik.dev/core';
 import { withAs } from '@onwo/primitives';
 
 export type AlertMessageProps = {

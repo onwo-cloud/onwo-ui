@@ -6,7 +6,7 @@
     "lib": ["es2022", "DOM"],
     "jsx": "react-jsx",
     "rootDir": "./src",
-    "jsxImportSource": "@builder.io/qwik",
+    "jsxImportSource": "@qwik.dev/core",
     "declaration": true,
     "declarationDir": "lib-types",
     "declarationMap": true,
@@ -15,7 +15,8 @@
     "types": ["vite/client"],
     "outDir": "./lib",
     "paths": {
-      "~primitives/*": ["./src/*"]
+      "~primitives/*": ["./src/*"],
+      "~primitives/": ["./src/"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],

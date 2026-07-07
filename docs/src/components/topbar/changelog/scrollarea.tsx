@@ -7,13 +7,10 @@ import {
   Slot,
   type Signal,
   type PropsOf
-} from "@builder.io/qwik";
+} from "@qwik.dev/core";
 import { initContext } from '~primitives/utils/context-utils';
 import { Icon } from '~/utils/icon';
 
-// ==========================================
-// 1. Smooth Scroll Hook
-// ==========================================
 export interface SmoothScrollOptions {
   lerpFactor?: number;
   minStep?: number;
@@ -111,9 +108,6 @@ export function useSmoothScroll(
   });
 }
 
-// ==========================================
-// 2. Scrollarea Context
-// ==========================================
 export type ScrollareaData = {
   viewportRef: Signal<HTMLElement | undefined>;
   isAtTop: Signal<boolean>;
@@ -126,9 +120,6 @@ export type ScrollareaData = {
 
 export const ScrollareaContext = initContext<ScrollareaData>('scrollbar-data');
 
-// ==========================================
-// 3. Scrollarea Root
-// ==========================================
 export interface ScrollareaProps extends PropsOf<'div'> {
   as?: any;
   smoothScroll?: boolean;

@@ -34,6 +34,11 @@
       "import": "./lib/@kit/animated/index.qwik.mjs",
       "types": "./lib-types/@kit/animated/index.d.ts"
     },
+    "./button": {
+      "qwik": "./lib/@kit/button/index.qwik.mjs",
+      "import": "./lib/@kit/button/index.qwik.mjs",
+      "types": "./lib-types/@kit/button/index.d.ts"
+    },
     "./carousel": {
       "qwik": "./lib/@kit/carousel/index.qwik.mjs",
       "import": "./lib/@kit/carousel/index.qwik.mjs",
@@ -157,13 +162,13 @@
     "build.prepare": "../../scripts/generate-exports.nu ./src/@kit",
     "build": "pnpm run build.prepare && pnpm run build.qwik",
     "build.qwik": "qwik build",
-    "build.types": "tsc --emitDeclarationOnly --incremental --pretty",
+    "build.types": "tsgo --emitDeclarationOnly --incremental --pretty",
     "build.lib": "vite build --mode lib -c vite.config.ts",
     "dev": "vite build --mode lib -c ./vite.config.dev.ts",
     "lint": "oxlint",
     "lint.fix": "oxlint --fix",
     "lint.watch": "oxlint --watch",
-    "ts-watch": "tsc --emitDeclarationOnly --preserveWatchOutput --pretty --watch"
+    "ts-watch": "tsgo --emitDeclarationOnly --preserveWatchOutput --pretty --watch"
   },
   "dependencies": {
     "@floating-ui/core": "^1.7.5",

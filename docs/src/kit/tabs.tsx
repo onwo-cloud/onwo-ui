@@ -1,22 +1,24 @@
+import { component$ } from '@qwik.dev/core';
 import { Tabs, TabsList, TabsPanel, TabsPanels, TabsTab } from '~ui/@kit/tabs';
+
 import type { BoxedComp, Section } from '.';
 
 const defaultTabs: BoxedComp = {
   title: 'Default',
-  display: () => (
-        <Tabs>
-          <TabsList>
-            <TabsTab>First tab</TabsTab>
-            <TabsTab>Second tab</TabsTab>
-            <TabsTab>Third tab</TabsTab>
-          </TabsList>
-          <TabsPanels>
-            <TabsPanel>Hello</TabsPanel>
-            <TabsPanel>Hi</TabsPanel>
-            <TabsPanel>Bonjour</TabsPanel>
-          </TabsPanels>
-        </Tabs>
-  ),
+  display: component$(() => (
+    <Tabs>
+      <TabsList>
+        <TabsTab>First tab</TabsTab>
+        <TabsTab>Second tab</TabsTab>
+        <TabsTab>Third tab</TabsTab>
+      </TabsList>
+      <TabsPanels>
+        <TabsPanel>Hello</TabsPanel>
+        <TabsPanel>Hi</TabsPanel>
+        <TabsPanel>Bonjour</TabsPanel>
+      </TabsPanels>
+    </Tabs>
+  )),
   code: `
  import { Tabs, TabsList, TabsPanel, TabsPanels, TabsTab } from '@onwo/ui/tabs';
 
@@ -42,4 +44,3 @@ export const section: Section = {
   default: defaultTabs,
   others: [],
 };
-

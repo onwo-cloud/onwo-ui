@@ -1,0 +1,98 @@
+---
+data:
+  title: 'Why does props.children not work in my Qwik component?'
+  description: 'Learn why props.children fails in Qwik, how to fix it using the <Slot /> component, and how Qwik handles content projection differently from React.'
+  tag: 'Core Concepts'
+  version: 'Qwik v2'
+  readTime: '3 min read'
+---
+
+In React, passing UI content to a wrapper component using `props.children` is standard practice. If you apply this exact pattern to a Qwik `component$`, it will fail. 
+
+Conversely, if you try to use Qwik's `<Slot />` inside an inline component, that will fail too.
+
+```tsx
+import { component$, Slot, type PropsOf } from '@qwik.dev/core';
+
+// ❌ FAILS: You cannot pass children as props to a component$
+export const Card = component$((props) => {
+  return (
+    <div class="card">
+      {props.children} 
+    </div>
+  );
+});
+
+// ❌ FAILS: You cannot use <Slot /> inside a standard inline component
+export const InlineCard = (props: PropsOf<'div'>) => {
+  return (
+    <div class="card">
+      <Slot />
+    </div>
+  );
+};
+```
+
+When you run the first example, Qwik halts execution and throws a **serialization error** because it cannot serialize a JSX node. 
+
+---
+
+## The Solution
+
+To fix this, you must apply the correct projection method based on the type of component you are building. 
+
+Use `<Slot />` for resumable components (`component$`). Use `props.children` for standard inline components.
+
+```tsx
+import { component$, Slot, type PropsOf } from '@qwik.dev/core';
+
+// ✅ CORRECT: Use <Slot /> for component$
+export const Card = component$(() => {
+  return (
+    <div class="card">
+      <Slot /> 
+    </div>
+  );
+});
+
+// ✅ CORRECT: Use props.children for inline components
+export const InlineCard = (props: PropsOf<'div'>) => {
+  return (
+    <div class="card">
+      {props.children} 
+    </div>
+  );
+};
+```
+
+--- 
+
+## Advanced Usage: Named Slots
+
+When you need to distribute multiple elements to specific areas of a `component$` (e.g., a header and a footer), do not pass JSX as custom props. Use **Named Slots**.
+
+```tsx
+import { component$, Slot } from '@qwik.dev/core';
+
+export const Layout = component$(() => {
+  return (
+    <div class="layout">
+      <header>
+        <Slot name="header" />
+      </header>
+      <main>
+        <Slot /> {/* Default slot catches everything else */}
+      </main>
+    </div>
+  );
+});
+
+export const App = component$(() => {
+  return (
+    <Layout>
+      <h1 q:slot="header">I belong in the header</h1>
+      <p>I belong in the main content area.</p>
+    </Layout>
+  );
+});
+```

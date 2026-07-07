@@ -1,11 +1,11 @@
-import { $, component$ } from '@builder.io/qwik';
-import type { QRL, Signal } from '@builder.io/qwik';
+import type { QRL, Signal } from '@qwik.dev/core';
+import { $, component$ } from '@qwik.dev/core';
 
+import { isSameYear } from '~ui/utils/date';
 import { CalendarGrid } from '../commons/calendar-grid';
 import { CalendarGridButton } from '../commons/calendar-grid-button';
-import { isDateInRange, startOfYearPeriod, Views } from '../date-picker-helpers';
 import type { WeekStart } from '../date-picker-helpers';
-import { isSameYear } from '~ui/utils/date';
+import { isDateInRange, startOfYearPeriod, Views } from '../date-picker-helpers';
 
 type Props = {
   language: string;
@@ -20,35 +20,41 @@ type Props = {
 
 export const CalendarViewYear = component$(
   ({ selectedDate, minDate, maxDate, viewDate, view }: Props) => {
+    const first = startOfYearPeriod(viewDate.value, 10);
+    const currentYear = new Date().getFullYear();
+
     return (
-      <CalendarGrid
-        rows={3}
-        cols={4}
-        renderer={(row, col) => {
-          const first = startOfYearPeriod(viewDate.value, 10);
-          const year = first - 1 + row * 4 + col;
-          const newDate = new Date(viewDate.value);
-          newDate.setFullYear(year);
+      <CalendarGrid>
+        {Array.from({ length: 3 }, (_, row) => (
+          <tr key={row} class="flex select-none font-normal-light w-full">
+            {Array.from({ length: 4 }, (_, col) => {
+              const year = first - 1 + row * 4 + col;
+              const newDate = new Date(viewDate.value);
+              newDate.setFullYear(year);
 
-          const isSelected = selectedDate.value ? isSameYear(selectedDate.value, newDate) : false;
-          const isDisabled = !isDateInRange(newDate, minDate, maxDate);
+              const isSelected = selectedDate.value
+                ? isSameYear(selectedDate.value, newDate)
+                : false;
+              const isDisabled = !isDateInRange(newDate, minDate, maxDate);
 
-          return (
-            <CalendarGridButton
-              name="year"
-              highlight={new Date().getFullYear() == year}
-              key={`${row}-${col}`}
-              isSelected={isSelected}
-              isDisabled={isDisabled}
-              onSelected$={$(() => {
-                viewDate.value = newDate;
-                view.value = Views.Months;
-              })}
-              label={String(year)}
-            />
-          );
-        }}
-      />
+              return (
+                <CalendarGridButton
+                  key={`${row}-${col}`}
+                  name="year"
+                  highlight={currentYear === year}
+                  isSelected={isSelected}
+                  isDisabled={isDisabled}
+                  onSelected$={$(() => {
+                    viewDate.value = newDate;
+                    view.value = Views.Months;
+                  })}
+                  label={String(year)}
+                />
+              );
+            })}
+          </tr>
+        ))}
+      </CalendarGrid>
     );
   },
 );

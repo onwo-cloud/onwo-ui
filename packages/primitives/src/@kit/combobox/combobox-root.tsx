@@ -1,4 +1,4 @@
-import type { PropsOf, QRL, Signal } from '@builder.io/qwik';
+import type { PropsOf, QRL, Signal } from '@qwik.dev/core';
 import {
   Slot,
   component$,
@@ -8,7 +8,7 @@ import {
   useSignal,
   useStyles$,
   useTask$,
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 import { useCombinedRef } from '~primitives/hooks/use-combined-refs';
 import { useBoundSignal } from '~primitives/imported/bound-signal';
 

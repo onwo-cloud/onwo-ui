@@ -1,4 +1,4 @@
-import type { DocumentMeta } from '@builder.io/qwik-city';
+import type { DocumentMeta } from '@qwik.dev/router';
 
 type BuildHead = {
   title: string;

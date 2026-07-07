@@ -1,8 +1,9 @@
+import { component$ } from '@qwik.dev/core';
 import type { BoxedComp, Section } from '.';
 
 const defaultDropdown: BoxedComp = {
   title: 'Default',
-  display: () => <></>,
+  display: component$(() => <div></div>),
   code: ``,
 };
 

@@ -1,4 +1,4 @@
-import { component$, useSignal, useVisibleTask$, type Signal } from '@builder.io/qwik';
+import { component$, useSignal, useVisibleTask$, type Signal } from '@qwik.dev/core';
 import { animate } from 'motion';
 
 export interface HoverBoxProps {

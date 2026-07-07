@@ -1,5 +1,5 @@
-import type { ClassList } from '@builder.io/qwik';
-import { $ } from '@builder.io/qwik';
+import type { ClassList } from '@qwik.dev/core';
+import { $ } from '@qwik.dev/core';
 import type { NavigationElement } from '@onwo/primitives/page-navigation';
 import { Appendix } from '@onwo/primitives/page-navigation';
 

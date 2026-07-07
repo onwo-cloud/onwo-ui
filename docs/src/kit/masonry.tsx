@@ -1,6 +1,7 @@
 import { Masonry, MasonryImage, MasonryItem } from '@onwo/ui/masonry';
 
 import type { BoxedComp, Section } from '.';
+import { component$ } from '@qwik.dev/core';
 
 const photos = [
   { width: 300, height: 450, src: '/photos/photo-98fd-300x450.jpg' },
@@ -58,13 +59,13 @@ const photos = [
 
 const defaultMasonry: BoxedComp = {
   title: 'Default',
-  display: () => (
+  display: component$(() => (
     <Masonry columnWidth={140} gap={16}>
       {photos.slice(0, 20).map(({ src, width, height }, idx) => (
         <MasonryImage key={idx} src={src} width={width} height={height} />
       ))}
     </Masonry>
-  ),
+  )),
   code: `<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ src, width, height }, idx) => (
     <MasonryImage key={idx} src={src} width={width} height={height} />
@@ -74,13 +75,13 @@ const defaultMasonry: BoxedComp = {
 
 const imagesAutoSizingMasonry: BoxedComp = {
   title: 'Images auto sizing',
-  display: () => (
+  display: component$(() => (
     <Masonry columnWidth={140} gap={16}>
       {photos.slice(0, 20).map(({ src }, idx) => (
         <MasonryImage key={idx} src={src} inferSize />
       ))}
     </Masonry>
-  ),
+  )),
   code: `<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ src }, idx) => (
     <MasonryImage key={idx} src={src} inferSize />
@@ -90,7 +91,7 @@ const imagesAutoSizingMasonry: BoxedComp = {
 
 const boxesMasonry: BoxedComp = {
   title: 'Boxes',
-  display: () => (
+  display: component$(() => (
     <Masonry columnWidth={140} gap={16}>
       {photos.slice(0, 20).map(({ width, height }, idx) => (
         <MasonryItem
@@ -103,7 +104,7 @@ const boxesMasonry: BoxedComp = {
         </MasonryItem>
       ))}
     </Masonry>
-  ),
+  )),
   code: `<Masonry columnWidth={140} gap={16}>
   {photos.slice(0, 20).map(({ width, height }, idx) => (
     <MasonryItem

@@ -1,4 +1,4 @@
-import { Slot, component$, useStyles$ } from '@builder.io/qwik';
+import { Slot, component$, useStyles$ } from '@qwik.dev/core';
 import type { Primitive } from '@onwo/primitives';
 
 export const style = `

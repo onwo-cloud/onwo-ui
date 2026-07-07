@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { Slot, component$, useStylesScoped$ } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { Slot, component$, useStylesScoped$ } from '@qwik.dev/core';
 
 export const VisuallyHidden = component$((props: PropsOf<'span'>) => {
   /* Visually hide text while keeping it accessible */

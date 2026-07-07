@@ -1,4 +1,4 @@
-import { $, type JSXChildren } from '@builder.io/qwik';
+import { $, type JSXChildren } from '@qwik.dev/core';
 import type { ToasterProps as PToasterProps } from '@onwo/primitives/toaster';
 import { Toaster as PToaster } from '@onwo/primitives/toaster';
 

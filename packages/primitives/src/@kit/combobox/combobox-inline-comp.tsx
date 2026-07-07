@@ -1,4 +1,4 @@
-import type { Component, JSXChildren } from '@builder.io/qwik';
+import type { Component, JSXChildren } from '@qwik.dev/core';
 import { findComponent, processChildren } from '~primitives/imported/inline-component';
 
 import { HComboboxEmpty as InternalComboboxEmpty } from './combobox-empty';

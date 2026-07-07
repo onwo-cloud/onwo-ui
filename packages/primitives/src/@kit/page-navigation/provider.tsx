@@ -1,4 +1,4 @@
-import { Slot, component$, createContextId, useContextProvider, useStore } from '@builder.io/qwik';
+import { Slot, component$, createContextId, useContextProvider, useStore } from '@qwik.dev/core';
 import type { Primitive } from '~primitives/utils/as';
 
 export type NavigationElement = {

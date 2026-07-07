@@ -1,4 +1,4 @@
-import { Slot, component$ } from '@builder.io/qwik';
+import { Slot, component$ } from '@qwik.dev/core';
 import type { Primitive } from '~primitives/utils/as';
 
 import { RadioContext } from './use-radio-context';

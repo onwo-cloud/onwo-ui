@@ -1,4 +1,4 @@
-import { component$, Slot } from '@builder.io/qwik';
+import { component$, Slot } from '@qwik.dev/core';
 import { PillControls, PillButton } from './pill-controls';
 import { CodeBlock } from './code-block';
 import { LayoutIcon, RefreshIcon, ExternalLinkIcon, CodeIcon } from './showcase-icons';

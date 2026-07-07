@@ -1,4 +1,6 @@
-import type { PropFunction, QRL } from '@builder.io/qwik';
+import type { QRL } from '@qwik.dev/core';
+import { $ } from '@qwik.dev/core';
+import { Button as ButtonPrimitive } from '@onwo/primitives/button';
 
 type CalendarGridButtonProps = {
   class?: string;
@@ -10,7 +12,7 @@ type CalendarGridButtonProps = {
   isFocused?: boolean;
   onKeyDown$?: QRL<(event: KeyboardEvent) => void>;
   label: string;
-  onSelected$: PropFunction<() => void>;
+  onSelected$: QRL<() => void>;
 };
 
 export const CalendarGridButton = (props: CalendarGridButtonProps) => (
@@ -22,12 +24,13 @@ export const CalendarGridButton = (props: CalendarGridButtonProps) => (
     class={['relative rounded-lg text-center text-sm cursor-pointer h-10 py-0.5 w-full']}
     tabIndex={-1}
   >
-    <button
+    <ButtonPrimitive
+      as="div"
       disabled={props.isDisabled}
       name="day"
-      onKeyDown$={(event) => props.onKeyDown$?.(event)}
+      onKeyDown$={$((event) => props.onKeyDown$?.(event))}
       class={[
-        'inline-flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap rounded-md text-sm disabled:pointer-events-none disabled:opacity-50 h-full w-full p-0 font-normal-light rounded-lg',
+        'flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap rounded-md text-sm disabled:pointer-events-none disabled:opacity-50 h-full w-full p-0 font-normal-light rounded-lg',
         props.dim ? 'text-ink-tertiary' : '',
         props.isSelected
           ? 'bg-canvas-contrast text-ink-contrast text-forced-a'
@@ -37,12 +40,11 @@ export const CalendarGridButton = (props: CalendarGridButtonProps) => (
       ]}
       role="gridmint"
       tabIndex={-1}
-      type="button"
     >
       {props.label}
       {props.highlight && (
         <div class="absolute pointer-events-none w-1 h-1 bg-current-color/30 rounded-full bottom-1.5 left-1/2 -translate-x-1/2" />
       )}
-    </button>
+    </ButtonPrimitive>
   </td>
 );

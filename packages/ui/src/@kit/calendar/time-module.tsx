@@ -1,5 +1,5 @@
-import { $, component$, useComputed$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
-import type { QRL } from '@builder.io/qwik';
+import { $, component$, useComputed$, useSignal, useVisibleTask$ } from '@qwik.dev/core';
+import type { QRL } from '@qwik.dev/core';
 
 import { Views } from './date-picker-helpers';
 
@@ -150,7 +150,7 @@ export const TimeSlider = component$((props: TimeSliderProps) => {
           data-option-index={idx}
           tabIndex={-1}
           class={[
-            'cursor-pointer inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-scan h-8 w-8 shrink-0 aspect-square',
+            'cursor-pointer flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-scan h-8 w-8 shrink-0 aspect-square',
             props.selected === opt ? 'bg-accent text-forced-a' : '',
           ]}
           onClick$={() => {

@@ -1,4 +1,4 @@
-import type { PropsOf, Signal, QRL } from '@builder.io/qwik';
+import type { PropsOf, Signal, QRL } from '@qwik.dev/core';
 import {
   Slot,
   component$,
@@ -7,7 +7,7 @@ import {
   useTask$,
   useId,
   useComputed$,
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 import { useCombinedRef } from '~primitives/hooks/use-combined-refs';
 
 import SelectContextId, { type SelectContext } from './select-context';

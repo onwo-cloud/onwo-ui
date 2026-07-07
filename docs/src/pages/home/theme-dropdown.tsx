@@ -1,12 +1,12 @@
-import type { Signal } from '@builder.io/qwik';
-import { component$, useSignal } from '@builder.io/qwik';
+import type { Signal } from '@qwik.dev/core';
+import { component$ } from '@qwik.dev/core';
 import { Icon } from '~/utils/icon'
 
 type DropdownButtonProps = {
   isOpen: Signal<boolean>;
 };
 
-const ThemeDropdownButton = ({ isOpen }: DropdownButtonProps) => {
+const _ThemeDropdownButton = ({ isOpen }: DropdownButtonProps) => {
   return (
     <div
       class={`flex items-center justify-between w-full px-4 py-2 text-left bg-transparent border-none outline-none text-blue-900 disabled:cursor-not-allowed focus:ring-[blue] focus:ring-2 hover:ring-[blue] focus:hover:ring-[blue] ring-1 rounded-lg`}
@@ -28,7 +28,7 @@ const ThemeDropdownButton = ({ isOpen }: DropdownButtonProps) => {
 };
 
 export const ThemeDropdown = component$(() => {
-  const isOpen = useSignal(false);
+  
 
   return <></>;
 });

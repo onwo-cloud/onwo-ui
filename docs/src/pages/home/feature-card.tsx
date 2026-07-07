@@ -1,4 +1,4 @@
-import type { JSXChildren } from "@builder.io/qwik";
+import type { JSXChildren } from "@qwik.dev/core";
 
 export interface FeatureCardProps {
   title: string;

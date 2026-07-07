@@ -1,4 +1,4 @@
-import { component$, useSignal, type PropsOf } from '@builder.io/qwik';
+import { component$, useSignal, type PropsOf } from '@qwik.dev/core';
 import { Icon } from '~/utils/icon';
 import { SectionsContent } from './sections-content';
 import { FeatureCard } from './feature-card';

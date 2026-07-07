@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { Slot, component$, useContext, useContextProvider } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { Slot, component$, useContext, useContextProvider } from '@qwik.dev/core';
 
 import SelectContextId, { groupContextId } from './select-context';
 

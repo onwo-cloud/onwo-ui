@@ -10,7 +10,6 @@ export const Icon = dynamicIcon()
   .provide(MdiIconSet, { prefix: 'mdi' })
   .build();
 
-
 export const UIProvider = createUiProvider({
   'chevron-left': Icon.named('chevron-left'),
   'chevron-right': Icon.named('chevron-right'),

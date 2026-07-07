@@ -1,6 +1,6 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { component$, useContext, Slot, useTask$, $, useSignal } from '@builder.io/qwik';
-import { isServer } from '@builder.io/qwik/build';
+import type { PropsOf } from '@qwik.dev/core';
+import { component$, useContext, Slot, useTask$, $, useSignal } from '@qwik.dev/core';
+import { isServer } from '@qwik.dev/core/build';
 import { useCombinedRef } from '~primitives/hooks/use-combined-refs';
 
 import { Panel } from '../popover/popover-panel';

@@ -1,4 +1,4 @@
-import { ClassList, component$ } from '@builder.io/qwik';
+import { ClassList, component$ } from '@qwik.dev/core';
 
 export type TooltipArrowProps = {
   width?: number;

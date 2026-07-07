@@ -1,8 +1,8 @@
-import type { Component, JSXOutput } from '@builder.io/qwik';
+import type { Component, JSXOutput } from '@qwik.dev/core';
 
 export type BoxedComp = {
   title: string;
-  display: (() => JSXOutput) | Component;
+  display: Component;
   rowSpan?: number;
   colSpan?: number;
   code: string;
@@ -12,6 +12,7 @@ export type Section = {
   link: string;
   title: string;
   description: string;
+  aside?: (() => JSXOutput) | Component;
   default: BoxedComp;
   others: BoxedComp[];
 };
@@ -22,10 +23,9 @@ import { section as animatedSection } from './animated';
 import { section as avatarSection } from './avatar';
 import { section as backdropOverlaySection } from './backdrop-overlay';
 import { section as bottomSheetSection } from './bottom-sheet';
-import { section as breadcrumbSection } from './breadcrumb';
+//import { section as breadcrumbSection } from './breadcrumb';
 import { section as buttonSection } from './button';
 import { section as calendarSection } from './calendar';
-import { section as carouselSection } from './carousel';
 import { section as chipSection } from './chip';
 import { section as drawerSection } from './drawer';
 import { section as dropdownSection } from './dropdown';
@@ -55,18 +55,21 @@ export const SECTIONS_MAP = {
   alert: alertSection,
   animated: animatedSection,
   avatar: avatarSection,
+
   'backdrop-overlay': backdropOverlaySection,
   'bottom-sheet': bottomSheetSection,
-  breadcrumb: breadcrumbSection,
+
+  //breadcrumb: breadcrumbSection, // BROKEN
   button: buttonSection,
   calendar: calendarSection,
-  carousel: carouselSection,
+
   chip: chipSection,
   drawer: drawerSection,
   dropdown: dropdownSection,
   form: formSection,
   masonry: masonrySection,
   'menu-item': menuItemSection,
+
   modal: modalSection,
   'navigation-menu': navigationMenuSection,
   'page-navigation': pageNavigationSection,

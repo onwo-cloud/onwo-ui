@@ -1,4 +1,4 @@
-import { CSSProperties, QwikIntrinsicElements } from '@builder.io/qwik';
+import { CSSProperties, QwikIntrinsicElements } from '@qwik.dev/core';
 
 export type PropsOfElem<K extends keyof QwikIntrinsicElements> = Omit<
   QwikIntrinsicElements[K],

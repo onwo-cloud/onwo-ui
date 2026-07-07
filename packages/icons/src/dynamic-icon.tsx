@@ -1,10 +1,4 @@
-import {
-  component$,
-  Resource,
-  type Component,
-  useTask$,
-  useSignal,
-} from '@builder.io/qwik';
+import { component$, useSignal, useTask$, type Component } from '@qwik.dev/core';
 import type { SvgIconProps } from '@onwo/primitives/svg-icon';
 import { SvgIcon } from '@onwo/primitives/svg-icon';
 
@@ -64,6 +58,9 @@ interface RegistryEntry {
 
 const _registry: RegistryEntry[] = [];
 
+// Module-level cache to speed up SSG. (Not serialized to client, but that's okay!)
+const _iconCache: Record<string, IconData> = {};
+
 export function registerIconSet(entry: RegistryEntry) {
   _registry.push(entry);
 }
@@ -71,14 +68,8 @@ export function registerIconSet(entry: RegistryEntry) {
 // Simple Levenshtein distance algorithm to find similar string matches
 function getLevenshteinDistance(a: string, b: string): number {
   const matrix: number[][] = [];
-
-  for (let i = 0; i <= b.length; i++) {
-    matrix[i] = [i];
-  }
-
-  for (let j = 0; j <= a.length; j++) {
-    matrix[0][j] = j;
-  }
+  for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+  for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
 
   for (let i = 1; i <= b.length; i++) {
     for (let j = 1; j <= a.length; j++) {
@@ -86,29 +77,19 @@ function getLevenshteinDistance(a: string, b: string): number {
         matrix[i][j] = matrix[i - 1][j - 1];
       } else {
         matrix[i][j] = Math.min(
-          matrix[i - 1][j - 1] + 1, // substitution
-          matrix[i][j - 1] + 1, // insertion
-          matrix[i - 1][j] + 1, // deletion
+          matrix[i - 1][j - 1] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j] + 1,
         );
       }
     }
   }
-
   return matrix[b.length][a.length];
 }
 
-// Helper to find nearest matching strings within a threshold
-function findNearestMatches(
-  target: string,
-  candidates: string[],
-  maxSuggestions = 8,
-  threshold = 3,
-): string[] {
+function findNearestMatches(target: string, candidates: string[], maxSuggestions = 8, threshold = 3): string[] {
   return candidates
-    .map((candidate) => ({
-      candidate,
-      distance: getLevenshteinDistance(target, candidate),
-    }))
+    .map((candidate) => ({ candidate, distance: getLevenshteinDistance(target, candidate) }))
     .filter((item) => item.distance <= threshold)
     .sort((a, b) => a.distance - b.distance)
     .slice(0, maxSuggestions)
@@ -117,15 +98,18 @@ function findNearestMatches(
 
 export const DynamicIconInternal = component$<PublicIconProps & { i: string }>(
   ({ i: iconName, ...rest }) => {
-    const iconResource = useSignal<IconData | undefined>();
+    // Qwik will serialize this signal automatically from SSG to the Client
+    const iconData = useSignal<IconData | null>(null);
+
     useTask$(async ({ track }) => {
-      track(() => iconName);
+      // Track the prop. If it doesn't change on the client, this task skips execution entirely!
+      const trackedName = track(() => iconName);
 
       let targetPrefix: string | undefined;
-      let targetName = iconName;
+      let targetName = trackedName;
 
-      if (iconName.includes(':')) {
-        const parts = iconName.split(':');
+      if (trackedName.includes(':')) {
+        const parts = trackedName.split(':');
         targetPrefix = parts[0];
         targetName = parts.slice(1).join(':');
       }
@@ -135,57 +119,54 @@ export const DynamicIconInternal = component$<PublicIconProps & { i: string }>(
         : _registry.find((e) => e.isDefault);
 
       if (!registry) {
-        console.warn(`[DynamicIcon] No provider registered for: "${iconName}"`);
+        console.warn(`[DynamicIcon] No provider registered for: "${trackedName}"`);
         return;
       }
 
+      const cacheKey = `${registry.prefix}:${targetName}`;
+
+      // 1. Check SSG / Client memory cache first
+      if (_iconCache[cacheKey]) {
+        iconData.value = _iconCache[cacheKey];
+        return;
+      }
+
+      // 2. Fetch via dynamic loader
       const loader = registry.loaders[targetName];
       if (!loader) {
         const availableNames = Object.keys(registry.loaders);
-        // Configured to search for up to 8 matches within a distance threshold of 3
         const suggestions = findNearestMatches(targetName, availableNames, 4, 3);
-
-        // Re-apply prefix if one was used in the query
-        const formattedSuggestions = targetPrefix
-          ? suggestions.map((s) => `${targetPrefix}:${s}`)
-          : suggestions;
-
-        const suggestionText =
-          formattedSuggestions.length > 0
-            ? ` Did you mean: ${formattedSuggestions.map((s) => `"${s}"`).join(', ')}?`
-            : '';
-
-        console.warn(
-          `[DynamicIcon] Icon "${iconName}" not found in "${registry.name}" registry.${suggestionText}`,
-        );
+        const formattedSuggestions = targetPrefix ? suggestions.map((s) => `${targetPrefix}:${s}`) : suggestions;
+        const suggestionText = formattedSuggestions.length > 0 ? ` Did you mean: ${formattedSuggestions.map((s) => `"${s}"`).join(', ')}?` : '';
+        console.warn(`[DynamicIcon] Icon "${trackedName}" not found in "${registry.name}" registry.${suggestionText}`);
         return;
       }
 
-      iconResource.value = (await loader()) as IconData;
+      try {
+        const res: any = await loader();
+        const data = res?.default ? res.default : res;
+
+        _iconCache[cacheKey] = data; // Cache in memory for subsequent renders
+        iconData.value = data;       // Set signal so Qwik serializes it to the client
+      } catch (err) {
+        console.error(`[DynamicIcon] Failed to load icon: ${trackedName}`, err);
+      }
     });
 
+    // Render fallback while loading (or if not found)
+    if (!iconData.value) {
+      return <SvgIcon viewBox="0 0 24 24" {...(rest as any)} />;
+    }
+
+    // Renders instantly on the client because iconData.value is populated from serialized state
     return (
-      <Resource
-        value={iconResource}
-        onPending={() => <SvgIcon viewBox="0 0 24 24" {...(rest as any)} />}
-        onRejected={(err) => {
-          console.error(err);
-          return <SvgIcon viewBox="0 0 24 24" {...(rest as any)} />;
-        }}
-        onResolved={(data) =>
-          data ? (
-            <SvgIcon
-              viewBox={data.viewBox}
-              dangerouslySetInnerHTML={data.body}
-              {...(rest as any)}
-            />
-          ) : (
-            <></>
-          )
-        }
+      <SvgIcon
+        viewBox={iconData.value.viewBox}
+        dangerouslySetInnerHTML={iconData.value.body}
+        {...(rest as any)}
       />
     );
-  },
+  }
 );
 
 const IconWithNamed = Object.assign(DynamicIconInternal, {
@@ -193,9 +174,7 @@ const IconWithNamed = Object.assign(DynamicIconInternal, {
     component$((props: PublicIconProps) => <DynamicIconInternal i={iconName} {...props} />),
 });
 
-export function dynamicIcon<
-  AccumulatedNames extends string = never,
->(): DynamicIconBuilder<AccumulatedNames> {
+export function dynamicIcon<AccumulatedNames extends string = never>(): DynamicIconBuilder<AccumulatedNames> {
   const builder = {
     provide(set: IconSetProvider<any, any>, options?: any) {
       _registry.push({

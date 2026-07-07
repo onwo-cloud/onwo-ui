@@ -1,4 +1,4 @@
-import type { JSXChildren } from '@builder.io/qwik';
+import type { JSXChildren } from '@qwik.dev/core';
 import { PageNavigationLink } from '@onwo/ui/page-navigation';
 
 import { PageHeadSection } from '~/commons/page-head-section';

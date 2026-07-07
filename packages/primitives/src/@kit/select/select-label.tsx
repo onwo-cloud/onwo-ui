@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { Slot, component$, useContext, $, sync$ } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { Slot, component$, useContext, $, sync$ } from '@qwik.dev/core';
 import { useCombinedRef } from '~primitives/hooks/use-combined-refs';
 
 import SelectContextId from './select-context';

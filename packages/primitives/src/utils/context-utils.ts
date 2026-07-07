@@ -1,4 +1,4 @@
-import { createContextId, useContext, useContextProvider } from '@builder.io/qwik';
+import { createContextId, useContext, useContextProvider } from '@qwik.dev/core';
 
 export const initContext = <T>(name: string) => {
   const contextId = createContextId<T>('onwo.' + name);

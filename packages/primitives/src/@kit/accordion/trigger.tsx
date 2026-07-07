@@ -1,5 +1,5 @@
-import type { QwikHTMLElements } from '@builder.io/qwik';
-import { Slot, component$ } from '@builder.io/qwik';
+import type { QwikHTMLElements } from '@qwik.dev/core';
+import { Slot, component$ } from '@qwik.dev/core';
 import { useAccordionItemContext } from './item';
 import { useAccordionRootContext } from './root';
 

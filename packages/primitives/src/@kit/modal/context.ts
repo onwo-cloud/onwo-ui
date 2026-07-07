@@ -1,5 +1,5 @@
-import type { QRL, Signal } from '@builder.io/qwik';
-import { $, createContextId, useContext, useSignal } from '@builder.io/qwik';
+import type { QRL, Signal } from '@qwik.dev/core';
+import { $, createContextId, useContext, useSignal } from '@qwik.dev/core';
 
 export const modalContextId = createContextId<ModalContext>('modal-context');
 

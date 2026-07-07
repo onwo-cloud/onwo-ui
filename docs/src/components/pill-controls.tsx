@@ -1,4 +1,4 @@
-import { component$, Slot } from '@builder.io/qwik';
+import { component$, Slot } from '@qwik.dev/core';
 
 // Generic Pill Container
 export const PillControls = component$(() => {

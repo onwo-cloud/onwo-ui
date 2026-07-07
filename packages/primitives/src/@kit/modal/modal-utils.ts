@@ -1,4 +1,4 @@
-import { $ } from '@builder.io/qwik';
+import { $ } from '@qwik.dev/core';
 import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock-upgrade';
 
 export type WidthState = {

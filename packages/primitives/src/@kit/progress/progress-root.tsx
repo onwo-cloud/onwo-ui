@@ -1,5 +1,5 @@
-import type { PropsOf, Signal } from '@builder.io/qwik';
-import { Slot, component$, useComputed$, useContextProvider, useTask$ } from '@builder.io/qwik';
+import type { PropsOf, Signal } from '@qwik.dev/core';
+import { Slot, component$, useComputed$, useContextProvider, useTask$ } from '@qwik.dev/core';
 import { useBoundSignal } from '~primitives/imported/bound-signal';
 
 import { ProgressContext, type ProgressContextData } from './progress-context';

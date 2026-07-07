@@ -1,4 +1,4 @@
-import { useComputed$ } from '@builder.io/qwik';
+import { useComputed$ } from '@qwik.dev/core';
 
 import { useWindowWidth } from './use-window-width';
 

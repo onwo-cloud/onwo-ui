@@ -1,10 +1,18 @@
-import { Link, useLocation } from '@builder.io/qwik-city';
+import { component$, type PropsOf } from '@qwik.dev/core';
+import { Link, useLocation } from '@qwik.dev/router';
 import type { BaseIconComponent } from '~primitives/@kit/svg-icon';
+
+import { type Section, SECTIONS_MAP } from '~/kit';
 import { Icon } from '~/utils/icon';
+
+import {
+  Scrollarea,
+  ScrollareaBar,
+  ScrollareaCues,
+  ScrollareaViewport,
+} from '../topbar/changelog/scrollarea';
+
 import { Logo, LogoText } from './logo';
-import { component$, type PropsOf } from '@builder.io/qwik';
-import { Scrollarea, ScrollareaBar, ScrollareaCues, ScrollareaViewport } from '../topbar/changelog/scrollarea';
-import { Section, SECTIONS_MAP } from '~/kit';
 
 type SidebarItemProps = {
   href: string;
@@ -30,12 +38,7 @@ const SidebarItem = ({ icon: LocIcon, href, label, selected }: SidebarItemProps)
 const SidebarNav = () => (
   <nav class="space-y-2 mx-3">
     <SidebarItem href="/get-started" icon={Icon.named('rocket')} label="Get started" />
-    <SidebarItem
-      href="/how-it-works"
-      selected
-      icon={Icon.named('info')}
-      label="How it works"
-    />
+    <SidebarItem href="/how-it-works" selected icon={Icon.named('info')} label="How it works" />
     <SidebarItem href="/theming" icon={Icon.named('swatch-book')} label="Theming" />
     <SidebarItem href="/templates" icon={Icon.named('panels-top-left')} label="Templates" />
   </nav>
@@ -87,12 +90,7 @@ const SidebarComponents = component$(() => {
           const selected = currentPath.includes(`/components/${kebabName}`);
 
           return (
-            <SidebarNestedItem
-              key={sec.title}
-              href={href}
-              label={sec.title}
-              selected={selected}
-            />
+            <SidebarNestedItem key={sec.title} href={href} label={sec.title} selected={selected} />
           );
         })}
       </div>
@@ -102,31 +100,21 @@ const SidebarComponents = component$(() => {
 
 type SidebarProps = PropsOf<'div'>;
 
-export const Sidebar = ({ class: className, ...props }: SidebarProps) => (
-  <div class={["space-y-6 w-56 pt-6 h-screen", className]} {...props}>
+export const Sidebar = component$(({ class: className, ...props }: SidebarProps) => (
+  <div class={['space-y-6 w-56 pt-6 h-screen', className]} {...props}>
     <Link href="/" class="ml-6 flex gap-[6px] items-center">
       <Logo class="-translate-x-[1px]" />
       <LogoText />
-      <span class="-translate-y-[1px] text-xs bg-canvas-secondary px-2 rounded-full">
-        Beta
-      </span>
+      <span class="-translate-y-[1px] text-xs bg-canvas-secondary px-2 rounded-full">Beta</span>
     </Link>
 
     <SidebarNav />
 
-    <Scrollarea
-      class="w-full relative min-h-0 h-full mb-12"
-    >
-      <ScrollareaCues
-        maxHeight={44}
-        class={[
-          "transition-opacity duration-[160ms] ease-in-out",
-        ]}
-      />
+    <Scrollarea class="w-full relative min-h-0 h-full mb-12">
+      <ScrollareaCues maxHeight={44} class={['transition-opacity duration-[160ms] ease-in-out']} />
 
       <ScrollareaViewport class="h-full">
         <SidebarComponents />
-
       </ScrollareaViewport>
 
       <ScrollareaBar
@@ -134,10 +122,9 @@ export const Sidebar = ({ class: className, ...props }: SidebarProps) => (
         orientation="vertical"
         hoverDistance={80}
         class={[
-          "not-data-[near]:opacity-0 w-[13px] right-0 top-0 bottom-0 transition-opacity duration-[160ms] ease-in-out",
+          'not-data-[near]:opacity-0 w-[13px] right-0 top-0 bottom-0 transition-opacity duration-[160ms] ease-in-out',
         ]}
       />
     </Scrollarea>
-
   </div>
-);
+));

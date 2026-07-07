@@ -1,5 +1,5 @@
-import type { PropsOf, Signal } from '@builder.io/qwik';
-import { Slot, component$, useId, useSignal } from '@builder.io/qwik';
+import type { PropsOf, Signal } from '@qwik.dev/core';
+import { Slot, component$, useId, useSignal } from '@qwik.dev/core';
 import type { DeepPartial } from '~primitives/types/utils';
 import type { Placement } from '@floating-ui/dom';
 

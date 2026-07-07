@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$ } from '@qwik.dev/core';
 import type { HProgressProps } from '@onwo/primitives/progress';
 import { Root, Indicator } from '@onwo/primitives/progress';
 

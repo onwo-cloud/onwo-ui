@@ -1,4 +1,4 @@
-import { $ } from '@builder.io/qwik';
+import { $ } from '@qwik.dev/core';
 
 import { ToasterContext, type Toast } from './context';
 import { TOAST_LIFETIME } from './toaster';

@@ -1,4 +1,4 @@
-import { $, useSignal, useTask$ } from '@builder.io/qwik';
+import { $, useSignal, useTask$ } from '@qwik.dev/core';
 
 import type { CarouselContext } from './context';
 

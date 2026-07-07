@@ -1,5 +1,5 @@
 /* eslint-disable qwik/use-method-usage */
-import { Slot, component$, useComputed$ } from '@builder.io/qwik';
+import { Slot, component$, useComputed$ } from '@qwik.dev/core';
 import type { AsProps } from '~primitives/utils/as';
 import { withAs } from '~primitives/utils/as';
 

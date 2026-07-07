@@ -1,4 +1,4 @@
-import { $, component$ } from '@builder.io/qwik';
+import { $, component$ } from '@qwik.dev/core';
 import { Icon } from '~/utils/icon'
 import { Button } from '@onwo/ui/button';
 import { useToastCreate } from '@onwo/ui/toaster';

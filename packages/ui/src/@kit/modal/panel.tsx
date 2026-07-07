@@ -1,4 +1,4 @@
-import { Slot, component$, useSignal, useTask$ } from '@builder.io/qwik';
+import { Slot, component$, useSignal, useTask$ } from '@qwik.dev/core';
 import { Animated } from '@onwo/primitives/animated';
 import { Panel as PPanel } from '@onwo/primitives/modal';
 
@@ -33,7 +33,7 @@ export const ModalPanel = component$((props: ModalPanelProps) => {
         bind:override={keepMounted}
       >
         <Animated
-          bind:visible={opened}
+          visible={opened}
           in={{ durationMs: 100, timing: 'ease-in', opacity: 0, slide: { y: '1rem' } }}
           out={{ durationMs: 100, timing: 'ease-in', opacity: 0, slide: { y: '1rem' } }}
           onOutEnd$={() => {
@@ -47,7 +47,7 @@ export const ModalPanel = component$((props: ModalPanelProps) => {
           <Slot />
         </Animated>
       </PPanel>
-      <BackdropOverlay bind:open={opened} />
+      <BackdropOverlay visible={opened} />
     </>
   );
 });

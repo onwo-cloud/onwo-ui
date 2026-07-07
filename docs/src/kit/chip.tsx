@@ -2,45 +2,46 @@ import { Icon } from '~/utils/icon'
 import { Chip } from '@onwo/ui/chip';
 
 import type { BoxedComp, Section } from '.';
+import { component$ } from '@qwik.dev/core';
 
 const defaultChip: BoxedComp = {
   title: 'Default',
-  display: () => (
+  display: component$(() => (
     <div class="flex justify-center">
       <Chip>Default</Chip>
     </div>
-  ),
+  )),
   code: `<Chip>Default</Chip>`,
 };
 
 const sizesChip: BoxedComp = {
   title: 'Sizes',
-  display: () => (
+  display: component$(() => (
     <div class="flex items-center justify-around">
       <Chip size="sm">Small</Chip>
       <Chip>Medium</Chip>
     </div>
-  ),
+  )),
   code: `<Chip size="small">Small</Chip>
 <Chip>Medium</Chip>`,
 };
 
 const variantsChip: BoxedComp = {
   title: 'Variants',
-  display: () => (
+  display: component$(() => (
     <div class="flex gap-2 flex-wrap items-center justify-around">
       <Chip variant="ghost">Ghost variant</Chip>
       <Chip variant="stroke">Stroke variant</Chip>
       <Chip>Default variant</Chip>
     </div>
-  ),
+  )),
   code: `<Chip variant="ghost">Ghost variant</Chip>
 <Chip>Default variant</Chip>`,
 };
 
 const statusChip: BoxedComp = {
   title: 'Status',
-  display: () => (
+  display: component$(() => (
     <div class="flex gap-2 flex-wrap items-center justify-around">
       <Chip active>Active</Chip>
       <Chip variant="stroke" active>
@@ -51,7 +52,7 @@ const statusChip: BoxedComp = {
         Disabled
       </Chip>
     </div>
-  ),
+  )),
   code: `<Chip active>Active</Chip>
 <Chip variant="stroke" active>Active</Chip>
 <Chip disabled>Disabled</Chip>
@@ -60,7 +61,7 @@ const statusChip: BoxedComp = {
 
 const withIconsChip: BoxedComp = {
   title: 'With icons',
-  display: () => (
+  display: component$(() => (
     <div class="flex  gap-2 flex-wrap items-center justify-around">
       <Chip variant="stroke">
         <Icon i="music"   />
@@ -74,7 +75,7 @@ const withIconsChip: BoxedComp = {
         <Icon i="music"   />
       </Chip>
     </div>
-  ),
+  )),
   code: `<Chip variant="stroke">
   <Icon i="music"   />
   Left Icon

@@ -1,5 +1,5 @@
-import type { QRL } from '@builder.io/qwik';
-import { $, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import type { QRL } from '@qwik.dev/core';
+import { $, useSignal, useVisibleTask$ } from '@qwik.dev/core';
 
 import { handleAndDispatchCustomEvent } from './use-focus-outside';
 

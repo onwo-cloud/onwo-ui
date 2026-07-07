@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/prefer-export-from */
-import { type PropsOf, Slot, component$ } from '@builder.io/qwik';
+import { type PropsOf, Slot, component$ } from '@qwik.dev/core';
 import { UiIcon } from '~ui/icon-provider';
 import {
   HSelectRoot,

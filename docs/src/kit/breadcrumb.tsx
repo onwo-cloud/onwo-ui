@@ -2,6 +2,7 @@ import { Icon } from '~/utils/icon'
 import { Breadcrumb, BreadcrumbLink } from '@onwo/ui/breadcrumb';
 
 import type { BoxedComp, Section } from '.';
+import { component$ } from '@qwik.dev/core';
 
 const links = [
   { to: '/', label: 'Home' },
@@ -11,13 +12,13 @@ const links = [
 
 const defaultBreadcrumb: BoxedComp = {
   title: 'Default',
-  display: () => (
+  display: component$(() => (
     <Breadcrumb>
       <BreadcrumbLink to="#/" label="Home" />
       <BreadcrumbLink to="#/hello" label="Hello" />
       <BreadcrumbLink to="#/hello/world" label="World" />
     </Breadcrumb>
-  ),
+  )),
   code: `<Breadcrumb>
   <BreadcrumbLink to="/" label="Home" />
   <BreadcrumbLink to="/hello" label="Hello" />
@@ -27,11 +28,11 @@ const defaultBreadcrumb: BoxedComp = {
 
 const customSeparatorBreadcrumb: BoxedComp = {
   title: 'Custom separator icon',
-  display: () => (
+  display: component$(() => (
     <div class="flex flex-col gap-4">
       <Breadcrumb separator={Icon.named('arrow-right')}>{BreadcrumbLink.fromList(links)}</Breadcrumb>
     </div>
-  ),
+  )),
   code: `<Breadcrumb separator={ArrowRightIcon}>
   {BreadcrumbLink.fromList(links)}
 </Breadcrumb>`,

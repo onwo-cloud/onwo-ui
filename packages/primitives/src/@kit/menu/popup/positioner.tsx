@@ -1,4 +1,4 @@
-import { component$, Slot } from '@builder.io/qwik';
+import { component$, Slot } from '@qwik.dev/core';
 import { Placement } from '@floating-ui/dom';
 import { PropsOfElem } from '~primitives/types/props';
 

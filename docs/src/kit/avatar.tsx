@@ -1,20 +1,21 @@
 import { Avatar, AvatarStatus } from '@onwo/ui/avatar';
 
 import type { BoxedComp, Section } from '.';
+import { component$ } from '@qwik.dev/core';
 
 const defaultAvatar: BoxedComp = {
   title: 'Default',
-  display: () => (
+  display: component$(() => (
     <div class="flex w-full justify-center">
       <Avatar />
     </div>
-  ),
+  )),
   code: `<Avatar />`,
 };
 
 const variantsAvatar: BoxedComp = {
   title: 'Variants',
-  display: () => (
+  display: component$(() => (
     <div class="flex w-full justify-around">
       <div class="flex flex-col gap-4 items-center justify-around">
         <Avatar />
@@ -29,7 +30,7 @@ const variantsAvatar: BoxedComp = {
         <span class="text-sm">image</span>
       </div>
     </div>
-  ),
+  )),
   code: `import { Avatar } from '@onwo/ui';
 
 <Avatar />
@@ -39,12 +40,12 @@ const variantsAvatar: BoxedComp = {
 
 const sizesAvatar: BoxedComp = {
   title: 'Sizes (xs-2xl)',
-  display: () => (
+  display: component$(() => (
     <div class="flex flex-col gap-4 items-center justify-around">
       <Avatar name="sm" size="sm" />
       <Avatar name="lg" size="lg" />
     </div>
-  ),
+  )),
   code: `import { Avatar } from '@onwo/ui';
 
 <Avatar name="sm" size="sm" />`,
@@ -52,7 +53,7 @@ const sizesAvatar: BoxedComp = {
 
 const statusAvatar: BoxedComp = {
   title: 'Status',
-  display: () => (
+  display: component$(() => (
     <div class="flex w-full justify-around">
       <Avatar size="xl" imageUrl="/avatar.png">
         <AvatarStatus class="bg-error" position="top-right" />
@@ -61,7 +62,7 @@ const statusAvatar: BoxedComp = {
         <AvatarStatus />
       </Avatar>
     </div>
-  ),
+  )),
   code: `import { Avatar } from '@onwo/ui';
 
 <Avatar size="xl" imageUrl="/avatar.png">

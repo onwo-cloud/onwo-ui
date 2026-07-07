@@ -1,5 +1,5 @@
-import type { PropsOf } from '@builder.io/qwik';
-import { component$, useContext, Slot, useTask$, useStyles$ } from '@builder.io/qwik';
+import type { PropsOf } from '@qwik.dev/core';
+import { component$, useContext, Slot, useTask$, useStyles$ } from '@qwik.dev/core';
 
 import { CheckboxContext } from './checkbox-context';
 

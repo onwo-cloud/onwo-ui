@@ -1,5 +1,5 @@
-import type { QRL, QwikIntrinsicElements } from '@builder.io/qwik';
-import { $ } from '@builder.io/qwik';
+import type { QRL, QwikIntrinsicElements } from '@qwik.dev/core';
+import { $ } from '@qwik.dev/core';
 
 export type NavMenuItemProps = {
   label: string;

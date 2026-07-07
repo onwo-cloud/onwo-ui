@@ -1,4 +1,4 @@
-import { Slot, component$ } from '@builder.io/qwik';
+import { Slot, component$ } from '@qwik.dev/core';
 import type { PanelProps, RootProps } from '@onwo/primitives/tooltip';
 import { Root, Trigger, Panel } from '@onwo/primitives/tooltip';
 

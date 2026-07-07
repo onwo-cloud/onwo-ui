@@ -1,4 +1,4 @@
-import { $, component$, PropsOf, QRL, Signal, Slot, useSignal } from "@builder.io/qwik";
+import { $, component$, PropsOf, QRL, Signal, Slot, useSignal } from "@qwik.dev/core";
 import { RadioGroupContext, RadioGroupContextData } from "./radio-group-context";
 
 type RadioGroupProps = PropsOf<'div'> & {

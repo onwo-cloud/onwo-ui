@@ -1,4 +1,4 @@
-import type { DocumentHead } from '@builder.io/qwik-city';
+import type { DocumentHead } from '@qwik.dev/router';
 
 import { buildHead } from '../utils/build-head';
 import { Sidebar } from '~/components/sidebar';

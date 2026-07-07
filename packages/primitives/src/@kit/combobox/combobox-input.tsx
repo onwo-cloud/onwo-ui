@@ -1,4 +1,4 @@
-import type { PropsOf, QRL } from '@builder.io/qwik';
+import type { PropsOf, QRL } from '@qwik.dev/core';
 import {
   component$,
   useContext,
@@ -7,7 +7,7 @@ import {
   useComputed$,
   useTask$,
   useSignal,
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 import { useCombinedRef } from '~primitives/hooks/use-combined-refs';
 
 import { comboboxContextId } from './combobox-context';

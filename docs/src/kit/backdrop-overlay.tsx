@@ -1,4 +1,4 @@
-import { $, component$, useSignal } from '@builder.io/qwik';
+import { $, component$, useSignal } from '@qwik.dev/core';
 import { BackdropOverlay } from '@onwo/ui/backdrop-overlay';
 import { Button } from '@onwo/ui/button';
 
@@ -10,14 +10,14 @@ const defaultBackdropOverlay: BoxedComp = {
     const visible = useSignal<boolean>(false);
     return (
       <div class="relative flex justify-center">
-        <BackdropOverlay bind:open={visible} />
+        <BackdropOverlay visible={visible} />
         <Button onClick$={$(() => (visible.value = true))}>Show overlay</Button>
       </div>
     );
   }),
   code: `const opened = useSignal<boolean>(false);
 <Button onClick$={$(() => (visible.value = true))}>Show overlay</Button>
-<BackdropOverlay bind:open={opened} />`,
+<BackdropOverlay visible={opened} />`,
 };
 
 export const section: Section = {

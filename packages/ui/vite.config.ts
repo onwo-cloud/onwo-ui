@@ -1,8 +1,8 @@
-import { qwikVite } from '@builder.io/qwik/optimizer';
-import onwoTailwindPlugin from '@onwo/tailwindcss';
+import { qwikVite } from '@qwik.dev/core/optimizer';
 import tailwindcss from '@tailwindcss/vite';
-import { UserConfig, defineConfig } from 'vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
+import { type UserConfig, defineConfig } from 'vite';
+
+import { tsconfigPaths } from '../../share/resolve-path';
 
 import pkg from './package.json';
 
@@ -12,10 +12,6 @@ const excludeAll = (obj) => Object.keys(obj).map(makeRegex);
 
 export const baseConfig = {
   build: {
-    // NB: May need this:
-    //watch: {
-    //  include: ['../tailwindcss/**/*'],
-    //},
     sourcemap: false,
     target: 'es2020',
     lib: {
@@ -28,7 +24,6 @@ export const baseConfig = {
         preserveModules: true,
         preserveModulesRoot: 'src',
       },
-      // externalize deps that shouldn't be bundled into the library
       external: [
         /^node:.*/,
         'date-fns',
@@ -40,10 +35,10 @@ export const baseConfig = {
   },
   plugins: [
     qwikVite(),
-    tsconfigPaths(),
     tailwindcss({
-      plugins: [onwoTailwindPlugin],
+      //plugins: [onwoTailwindPlugin],
     }),
+    tsconfigPaths(),
   ],
 } satisfies UserConfig;
 

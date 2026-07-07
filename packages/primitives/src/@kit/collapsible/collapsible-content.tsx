@@ -4,7 +4,7 @@ import {
   Slot,
   useContext,
   type PropsOf
-} from '@builder.io/qwik';
+} from '@qwik.dev/core';
 import { CollapsibleContext } from './collapsible-context';
 
 export const CollapsibleContent = component$<PropsOf<'div'>>((props) => {

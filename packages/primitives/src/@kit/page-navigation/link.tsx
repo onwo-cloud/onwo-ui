@@ -1,4 +1,4 @@
-import { Slot, component$, useContext, useTask$ } from '@builder.io/qwik';
+import { Slot, component$, useContext, useTask$ } from '@qwik.dev/core';
 import type { AsProps } from '~primitives/utils/as';
 import { withAs } from '~primitives/utils/as';
 
