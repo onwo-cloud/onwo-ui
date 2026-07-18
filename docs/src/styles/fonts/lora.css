@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/Lora[wght].woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Lora Fallback: Georgia";
+  src: local('Georgia');
+  ascent-override: 95.8281%;
+  descent-override: 26.1003%;
+  size-adjust: 104.9796%;
+}
+@font-face {
+  font-family: "Lora Fallback: Times New Roman";
+  src: local('Times New Roman'), local('TimesNewRomanPSMT'), local('Liberation Serif');
+  ascent-override: 87.3264%;
+  descent-override: 23.7847%;
+  line-gap-override: 0%;
+  size-adjust: 115.2%;
+}
+
+:root {
+  --font-lora: Lora, "Lora Fallback: Georgia", "Lora Fallback: Times New Roman", Georgia, "Times New Roman", Georgia, "Times New Roman", serif;
+}

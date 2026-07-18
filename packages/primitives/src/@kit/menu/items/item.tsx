@@ -1,8 +1,9 @@
-import { $, component$, PropsOf, Slot, useTask$ } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
+import { $, component$, Slot, useTask$ } from '@qwik.dev/core';
 
 import { useMenuAndRegisterItem } from '../dropdown-context';
 
-type ItemProps = PropsOf<'div'> & { disabled?: boolean };
+type ItemProps = OwPropsOf<'div'> & { disabled?: boolean };
 
 export const MenuItem = component$(({ disabled = false, ...props }: ItemProps) => {
   const { ctx, itemRef, id, isActive } = useMenuAndRegisterItem();

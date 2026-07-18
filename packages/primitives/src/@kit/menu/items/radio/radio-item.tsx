@@ -1,10 +1,11 @@
-import { $, component$, PropsOf, Slot, useComputed$, useTask$ } from '@qwik.dev/core';
+import { $, component$, Slot, useComputed$, useTask$ } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 
 
 import { useMenuAndRegisterItem } from '../../dropdown-context';
 import { RadioGroupContext } from './radio-group-context';
 
-type MenuRadioItemProps = PropsOf<'div'> & {
+type MenuRadioItemProps = OwPropsOf<'div'> & {
   value: string;
   disabled?: boolean;
 };

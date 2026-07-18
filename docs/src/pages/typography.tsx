@@ -1,14 +1,5 @@
-import { PageNavigationLink } from '@onwo/ui/page-navigation';
-
-import { PageHeadSection } from '~/commons/page-head-section';
-
 export const TypographyPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
-    <PageHeadSection
-      title="Typography"
-      description="Auto formatting and cohesive fonts accross your website"
-      breadcrumbs={[{ label: 'Typography', to: '/typography' }]}
-    />
 
     <div class="onwo-format">
       <p>Typography includes text, headings, and captions.</p>
@@ -29,9 +20,7 @@ export const TypographyPage = () => (
               id="text_1-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <PageNavigationLink label="Text" id="text">
-                <h2 class="text-onwo-24 font-semibold order-1">Text</h2>
-              </PageNavigationLink>
+              <h2 class="text-onwo-24 font-semibold order-1">Text</h2>
 
               <div
                 class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
@@ -72,9 +61,7 @@ export const TypographyPage = () => (
               id="text_2-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <PageNavigationLink label="Heading" id="heading">
-                <h2 class="text-onwo-24 font-semibold order-1">Heading</h2>
-              </PageNavigationLink>
+              <h2 class="text-onwo-24 font-semibold order-1">Heading</h2>
 
               <div
                 class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
@@ -115,9 +102,7 @@ export const TypographyPage = () => (
               id="text_3-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <PageNavigationLink label="Caption" id="caption">
-                <h2 class="text-onwo-24 font-semibold order-1">Caption</h2>
-              </PageNavigationLink>
+              <h2 class="text-onwo-24 font-semibold order-1">Caption</h2>
 
               <div
                 class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"
@@ -147,9 +132,7 @@ export const TypographyPage = () => (
               id="text_4-example-and-code"
               class="flex items-center justify-between flex-wrap gap-6 w-full"
             >
-              <PageNavigationLink label="Custom colours" id="custom-colours">
-                <h2 class="text-onwo-24 font-semibold order-1">Custom Colors</h2>
-              </PageNavigationLink>
+              <h2 class="text-onwo-24 font-semibold order-1">Custom Colors</h2>
 
               <div
                 class="flex p-1 bg-parchment items-center rounded-onwo-s-md gap-1 order-2 w-fit justify-left"

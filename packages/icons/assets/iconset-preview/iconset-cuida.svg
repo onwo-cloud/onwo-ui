@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: bed-outiline -->
+  <text x="2" y="46.50" class="label">bed-outiline</text>
+  <g transform="translate(15.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g class="bed-outiline"><g fill="currentColor" fill-rule="evenodd" class="Vector" clip-rule="evenodd"><path d="M6 14a2 2 0 0 0-2 2v4a1 1 0 1 1-2 0v-4a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v4a1 1 0 1 1-2 0v-4a2 2 0 0 0-2-2z"/><path d="M2 19a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1M6.5 7.75c-.69 0-1.25.56-1.25 1.25v4a.75.75 0 0 1-1.5 0V9A2.75 2.75 0 0 1 6.5 6.25h11A2.75 2.75 0 0 1 20.25 9v4a.75.75 0 0 1-1.5 0V9c0-.69-.56-1.25-1.25-1.25z"/><path d="M5.75 12A2.25 2.25 0 0 1 8 9.75h2.1A2.25 2.25 0 0 1 12.35 12v1h-1.5v-1a.75.75 0 0 0-.75-.75H8a.75.75 0 0 0-.75.75v1.5h-1.5z"/><path d="M11.25 12a2.25 2.25 0 0 1 2.25-2.25h2A2.25 2.25 0 0 1 17.75 12v1h-1.5v-1a.75.75 0 0 0-.75-.75h-2a.75.75 0 0 0-.75.75v1h-1.5z"/></g></g>
+  </g>
+  <!-- Cell: checkbox-checked-outlined -->
+  <text x="50" y="46.50" class="label">checkbox-check…</text>
+  <g transform="translate(63.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g class="checkbox-checked-outlined"><g fill="currentColor" fill-rule="evenodd" class="Vector" clip-rule="evenodd"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/><path d="M17.096 8.282a1 1 0 0 1 .022 1.414l-5.643 5.822a1.24 1.24 0 0 1-1.78 0L7.281 13.03a1 1 0 1 1 1.436-1.392l1.867 1.926l5.097-5.259a1 1 0 0 1 1.414-.022Z"/></g></g>
+  </g>
+  <!-- Cell: checkbox-unchecked-outlined -->
+  <text x="98" y="46.50" class="label">checkbox-unche…</text>
+  <g transform="translate(111.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: pin-fill -->
+  <text x="146" y="46.50" class="label">pin-fill</text>
+  <g transform="translate(159.00, 15.75) scale(0.7500, 0.7200) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M11 21.715v-3.858a1 1 0 1 1 2 0v3.858l-.005.101a1 1 0 0 1-1.99 0z"/><path fill="currentColor" d="m15.713 7.47l.437-1.53a1.746 1.746 0 0 0-1.679-2.226H10.23A2.32 2.32 0 0 0 7.955 6.49Q8 6.715 8 6.945v3.879c0 .899-.315 1.77-.89 2.46l-.874 1.048a1.758 1.758 0 0 0 1.35 2.883h8.972a1.307 1.307 0 0 0 1.087-2.032l-.98-1.471a4.9 4.9 0 0 1-.797-2.187l-.283-2.541a3.9 3.9 0 0 1 .127-1.513Z"/><path fill="currentColor" d="M7.182 11.357v-3.85c0-.335-.118-.71-.335-1.168a5.5 5.5 0 0 1-.31-.804c-.265-.899.08-1.68.663-2.168c.536-.449 1.255-.653 1.924-.653h3.513l.101.005a1 1 0 0 1 0 1.99l-.101.005H9.124c-.303 0-.537.099-.64.186a.2.2 0 0 0-.037.036q0 .01.007.034c.05.17.12.344.198.51c.262.55.53 1.247.53 2.027v3.85c0 1.03-.442 1.971-1.109 2.667a13 13 0 0 0-1.169 1.39c-.114.16-.133.27-.135.322a.25.25 0 0 0 .052.159c.089.126.352.32.83.32h4.986l.101.004a1 1 0 0 1 0 1.99l-.101.005H7.65c-.986 0-1.929-.402-2.467-1.17c-.58-.826-.556-1.887.094-2.795c.356-.495.8-1.035 1.352-1.61c.358-.373.552-.833.552-1.282Z"/><path fill="currentColor" d="M16.818 11.357v-3.85c0-.335.117-.71.335-1.168c.116-.242.226-.515.31-.804c.265-.899-.08-1.68-.663-2.168c-.536-.449-1.255-.653-1.924-.653h-3.513l-.101.005a1 1 0 0 0 0 1.99l.101.005h3.513c.303 0 .537.099.64.186q.028.024.037.036q0 .01-.007.034c-.05.17-.12.344-.198.51c-.262.55-.53 1.247-.53 2.027v3.85c0 1.03.442 1.971 1.109 2.667c.49.511.873.978 1.169 1.39c.114.16.133.27.134.322a.25.25 0 0 1-.051.159c-.089.126-.352.32-.83.32h-4.986l-.101.004a1 1 0 0 0 0 1.99l.101.005h4.986c.986 0 1.929-.402 2.467-1.17c.58-.826.556-1.887-.094-2.795a15 15 0 0 0-1.352-1.61c-.358-.373-.552-.833-.552-1.282"/>
+  </g>
+  <!-- Cell: sort-ascending-duotone -->
+  <text x="194" y="46.50" class="label">sort-ascending…</text>
+  <g transform="translate(207.00, 15.75) scale(0.7500, 0.7200) translate(0, 0)" color="#17181C">
+    <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M7.5 2.286a1 1 0 0 0-1 1v12a1 1 0 1 0 2 0v-12a1 1 0 0 0-1-1"/><path d="M8.207 2.579a1 1 0 0 0-1.414 0l-3.5 3.5a1 1 0 1 0 1.414 1.414L7.5 4.7l2.793 2.793a1 1 0 1 0 1.414-1.414z"/><path fill-opacity=".3" d="M16.5 22.286a1 1 0 0 0 1-1v-12a1 1 0 1 0-2 0v12a1 1 0 0 0 1 1"/><path fill-opacity=".3" d="M15.793 21.993a1 1 0 0 0 1.414 0l3.5-3.5a1 1 0 0 0-1.414-1.414L16.5 19.872l-2.793-2.793a1 1 0 0 0-1.414 1.414z"/></g>
+  </g>
+  <!-- Cell: sort-descending-duotone -->
+  <text x="242" y="46.50" class="label">sort-descendin…</text>
+  <g transform="translate(255.00, 15.75) scale(0.7500, 0.7200) translate(0, 0)" color="#17181C">
+    <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><g fill-opacity=".3"><path d="M7.5 2.286a1 1 0 0 0-1 1v12a1 1 0 1 0 2 0v-12a1 1 0 0 0-1-1"/><path d="M8.207 2.579a1 1 0 0 0-1.414 0l-3.5 3.5a1 1 0 0 0 1.414 1.414L7.5 4.7l2.793 2.793a1 1 0 1 0 1.414-1.414z"/></g><path d="M16.5 22.286a1 1 0 0 0 1-1v-12a1 1 0 1 0-2 0v12a1 1 0 0 0 1 1"/><path d="M15.793 21.993a1 1 0 0 0 1.414 0l3.5-3.5a1 1 0 0 0-1.414-1.414L16.5 19.872l-2.793-2.793a1 1 0 0 0-1.414 1.414z"/></g>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-cuida</text>
+  <text x="348" y="139.738" class="overlay-title">cuida icons</text>
+  <text x="351" y="190.744" class="overlay-meta">Apache-2.0 · 6 icons</text>
+</svg>

@@ -1,79 +1,64 @@
-import type { Signal } from '@qwik.dev/core';
-import { $, Slot, component$, useSignal, useTask$ } from '@qwik.dev/core';
+import type { QRL, Signal } from '@qwik.dev/core';
+import { $, Slot, component$, useTask$ } from '@qwik.dev/core';
 import { useEscapeKeydown } from '~primitives/hooks/use-escape-keydown';
 import { useFocusTrap } from '~primitives/hooks/use-focus-trap';
-import type { Primitive } from '~primitives/utils/as';
+import type { OwPropsOf } from '~primitives/utils/as';
 
 import { useModalContext } from './context';
 import { closeModal, showModal } from './modal-utils';
 
-export type PanelProps = Omit<Primitive<'dialog'>, 'open'> & {
-  'bind:opened'?: Signal<boolean>;
+export type PanelProps = Omit<OwPropsOf<'dialog'>, 'open'> & {
   // Can be used to keep the panel opened
   'bind:override'?: Signal<boolean>;
+  onShow$?: QRL<(el: HTMLDialogElement) => void>;
 };
 
 export const Panel = component$(
-  ({ 'bind:override': override, 'bind:opened': propsOpened, ...props }: PanelProps) => {
+  ({ 'bind:override': override, onShow$, ...props }: PanelProps) => {
     const context = useModalContext();
-    const panelRef = useSignal<HTMLDialogElement>();
+    const panelRef = context.control.panelRef;
     const focus = useFocusTrap(panelRef);
-
-    const defaultOpened = useSignal<boolean>(false);
-    const opened = propsOpened ?? defaultOpened;
+    const opened = context.control.opened;
 
     useTask$(() => {
       context.control.opened = opened;
     });
 
-    // manage modal toggling
+    // Manage modal show/hide and focus trap
     useTask$(async ({ track, cleanup }) => {
       const isOpen = track(() => override?.value ?? opened.value);
 
       if (!panelRef.value) return;
       if (isOpen) {
-        // HACK: keep modal scroll position in place with iOS
-        const storedRequestAnimationFrame = globalThis.requestAnimationFrame;
-        globalThis.requestAnimationFrame = () => 42;
-
         await showModal(panelRef.value);
-        globalThis.requestAnimationFrame = storedRequestAnimationFrame;
+
+        // Execute onShow$ synchronously before the browser paints frame 0
+        if (onShow$) {
+          await onShow$(panelRef.value);
+        }
+
+        cleanup(async () => {
+          focus.deactivate();
+        });
         focus.activate();
       } else {
-        await closeModal(panelRef.value);
+        if (panelRef.value.open) {
+          await closeModal(panelRef.value);
+        }
       }
-
-      cleanup(async () => {
-        focus.deactivate();
-      });
     });
 
     const closeOnBackdropClick$ = $(async (e: MouseEvent) => {
-      // We do not want to close elements that dangle outside of the modal
       if (!(e.target instanceof HTMLDialogElement)) return;
-      opened.value = false;
+      context.control.hide$();
     });
-
-    /*
-  // const handleKeyDownSync$ = sync$((e: KeyboardEvent) => {
-  //   const keys = [' ', 'Enter'];
-  //   if (e.target instanceof HTMLDialogElement && keys.includes(e.key)) {
-  //     e.preventDefault();
-  //   }
-  //   if (e.key === 'Escape') {
-  //     e.preventDefault();
-  //   }
-  // });
-  */
 
     useEscapeKeydown(
       $((e) => {
-        opened.value = false;
+        context.control.hide$();
         e.stopPropagation();
       }),
     );
-
-    //const focusOutside = useFocusOutside();
 
     return (
       <dialog
@@ -86,18 +71,23 @@ export const Panel = component$(
         role="dialog"
         ref={panelRef}
         class={[
-          'bg-transparent max-w-none max-w-none border-none backdrop:bg-transparent',
+          'bg-transparent max-w-none border-none outline-none',
           props.class,
         ]}
         onKeyDown$={[props.onKeyDown$]}
-        //onFocus$={[focusOutside.onFocus$, props.onFocus$]}
-        //onBlur$={[focusOutside.onBlur$, props.onBlur$]}
+        onCancel$={[
+          $(() => {
+            context.control.hide$();
+          }),
+          props.onCancel$,
+        ]}
+        preventdefault:cancel
         onClick$={async (e) => {
           e.stopPropagation();
           await closeOnBackdropClick$(e);
         }}
       >
-        <Slot />
+        {opened.value && <Slot />}
       </dialog>
     );
   },

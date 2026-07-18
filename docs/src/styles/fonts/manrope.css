@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Variable.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Manrope ExtraLight Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 100.1112%;
+  descent-override: 28.1739%;
+  size-adjust: 106.4816%;
+}
+@font-face {
+  font-family: "Manrope ExtraLight Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 107.153%;
+  descent-override: 30.1556%;
+  line-gap-override: 0%;
+  size-adjust: 99.4839%;
+}
+@font-face {
+  font-family: "Manrope ExtraLight Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 113.931%;
+  descent-override: 32.0631%;
+  size-adjust: 93.5654%;
+}
+
+:root {
+  --font-manrope: "Manrope ExtraLight", "Manrope ExtraLight Fallback: -apple-system", "Manrope ExtraLight Fallback: Arial", "Manrope ExtraLight Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

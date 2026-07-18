@@ -1,8 +1,9 @@
-import type { PropsOf, QRL, Signal } from '@qwik.dev/core';
+import type { QRL, Signal } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 import { $, component$, Slot, sync$, useTask$ } from '@qwik.dev/core';
-import { useBoundSignal } from '~primitives/imported/bound-signal2';
+import { useBoundSignal } from '~primitives/hooks/use-bound-signal';
 
-export type ToggleProps = PropsOf<'button'> & {
+export type ToggleProps = OwPropsOf<'button'> & {
   /**
    * When true, prevents the user from interacting with the toggle group and all its items.
    */

@@ -1,14 +1,5 @@
-import { PageNavigationLink } from '@onwo/ui/page-navigation';
-
-import { PageHeadSection } from '~/commons/page-head-section';
-
 export const RoadmapPage = () => (
   <div>
-    <PageHeadSection
-      title="Roadmap"
-      description="Upcoming change to the onwo ui library."
-      breadcrumbs={[{ label: 'Roadmap', to: '/roadmap' }]}
-    />
     <div class="onwo-format">
       <p class="max-w-5xl">
         This document describe the planned journey of this library, as a new project, I am starting
@@ -16,9 +7,7 @@ export const RoadmapPage = () => (
         interfaces. This roadmap will evolve as I progress and incorporate feedback
       </p>
 
-      <PageNavigationLink as="h2" id="why" label="Why this library">
-        Why this library
-      </PageNavigationLink>
+      <h2 id="why"> Why this library </h2>
       <p>
         I have been using Qwik for a while and I used or explored a few libraries while using it,
         the most proeminent one being <a href="https://qwikui.com/">qwikui</a>. In my projects I
@@ -33,9 +22,9 @@ export const RoadmapPage = () => (
         following the styles from moon.io but also leveraging the works from qwikui, shadcn and by
         extension radix-ui.
       </p>
-      <PageNavigationLink as="h2" id="current-goals" label="Current goals">
+      <h2 id="current-goals">
         Current goals
-      </PageNavigationLink>
+      </h2>
       <h4>Initial Setup </h4>
       <ul>
         <li>Make the library available for use on npm registry ✅</li>
@@ -55,9 +44,9 @@ export const RoadmapPage = () => (
         <li>Official release 🚀</li>
       </ul>
 
-      <PageNavigationLink as="h2" id="long-term" label="Long term">
+      <h2 id="long-term">
         Long term visions
-      </PageNavigationLink>
+      </h2>
       <ul>
         <li>
           Keep integrating components from diverse ui libraries, shadcn being the prime inspiration
@@ -69,9 +58,7 @@ export const RoadmapPage = () => (
           <a href="https://www.shadcnblocks.com/">shadcnblocks</a>
         </li>
       </ul>
-      <PageNavigationLink as="h2" id="contribute" label="Contribute">
-        How to Contribute
-      </PageNavigationLink>
+      <h2 id="contribute"> How to Contribute </h2>
       <p>
         Whether you're fixing a typo in the docs or adding a complex new component any addition is
         welcomed! Let me know if you are looking to take a more active part in the project, there's

@@ -1,7 +1,4 @@
 import type { JSXChildren } from '@qwik.dev/core';
-import { PageNavigationLink } from '@onwo/ui/page-navigation';
-
-import { PageHeadSection } from '~/commons/page-head-section';
 
 const ColorSection = (props: { title: string; children: JSXChildren }) => (
   <div>
@@ -26,19 +23,11 @@ const Color = (props: { name: string; class?: string }) => (
 
 export const ColorPage = () => (
   <div>
-    <PageHeadSection
-      title="Colors"
-      description="A theme-agnostic color system design across all products"
-      breadcrumbs={[{ label: 'Colors', to: '/colors' }]}
-    />
-
     <section class="mt-12 flex flex-col lg:flex-row gap-6">
       <div class="flex flex-col w-full gap-6">
-        <PageNavigationLink label="Main colors" id="main-colors">
-          <h2 id="Main-colors" class="text-onwo-24 font-medium">
-            Main colors
-          </h2>
-        </PageNavigationLink>
+        <h2 id="Main-colors" class="text-onwo-24 font-medium">
+          Main colors
+        </h2>
         <div class="w-full flex flex-col gap-2 text-onwo-16">
           <ColorSection title="Accent colors">
             <Color name="bg-accent-800" />

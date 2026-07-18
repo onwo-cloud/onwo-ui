@@ -7,18 +7,17 @@ import {
   useTask$,
   Slot,
 } from '@qwik.dev/core';
-
 import type { Toast } from './context';
 import { ToastItemContext, ToasterContext } from './context';
 import { useTimer } from './use-timer';
-
 import { useToastDismiss } from './index';
+import { withAs } from '~primitives/utils/as';
 
 export interface ToastItemProps {
   toast: Toast;
 }
 
-export const ToastItem = component$(({ toast }: ToastItemProps) => {
+export const ToastItem = withAs('li')<ToastItemProps>(component$(({ As, toast, ...props }: ToastItemProps) => {
   const toasterCtx = ToasterContext.use();
   const absRef = useSignal<HTMLLIElement>();
   const toastDismiss = useToastDismiss();
@@ -75,18 +74,18 @@ export const ToastItem = component$(({ toast }: ToastItemProps) => {
   });
 
   return (
-    <li
+    <As
       ref={absRef}
       data-onwo-toast
       data-mounted={mounted.value}
       data-removed={removed.value}
-      class="bg-paper border border-line flex items-start text-sm py-3 px-4 rounded-md shadow-sm w-full gap-1"
       style={{
         '--base-y': yPlacement.value + 'px',
         '--index': `${toastIndex.value}`,
       }}
+      {...props}
     >
       <Slot />
-    </li>
+    </As>
   );
-});
+}));

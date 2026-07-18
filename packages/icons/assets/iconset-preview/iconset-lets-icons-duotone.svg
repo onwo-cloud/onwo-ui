@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: 3d-box -->
+  <text x="2" y="46.50" class="label">3d-box</text>
+  <g transform="translate(15.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="currentColor" fill-opacity=".25" d="M12 13v8l-7-5V8l7-5l7 5z"/><path stroke="currentColor" stroke-linejoin="round" stroke-width="1.2" d="M12 21v-8m0 8l-6.162-4.402c-.411-.293-.616-.44-.727-.655S5 15.475 5 14.971V8m7 13l6.163-4.402c.41-.293.615-.44.726-.655s.111-.468.111-.972V8m-7 5L5 8m7 5l7-5M5 8l5.838-4.17c.56-.4.842-.601 1.162-.601s.601.2 1.162.601L19 8"/></g>
+  </g>
+  <!-- Cell: add -->
+  <text x="50" y="46.50" class="label">add</text>
+  <g transform="translate(63.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".25"/><path stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="1.2" d="M12 8v8m4-4H8"/></g>
+  </g>
+  <!-- Cell: add-ring -->
+  <text x="98" y="46.50" class="label">add-ring</text>
+  <g transform="translate(111.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".25"/><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M12 15V9m3 3H9"/></g>
+  </g>
+  <!-- Cell: add-round -->
+  <text x="146" y="46.50" class="label">add-round</text>
+  <g transform="translate(159.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity=".25"/><path stroke="currentColor" stroke-linecap="round" stroke-width="1.2" d="M12 8v8m4-4H8"/></g>
+  </g>
+  <!-- Cell: add-square -->
+  <text x="194" y="46.50" class="label">add-square</text>
+  <g transform="translate(207.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="currentColor" fill-opacity=".25" d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z"/><path stroke="currentColor" stroke-linejoin="round" d="M12 8v8m4-4H8"/></g>
+  </g>
+  <!-- Cell: alarm -->
+  <text x="242" y="46.50" class="label">alarm</text>
+  <g transform="translate(255.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="currentColor" fill-opacity=".25" stroke="currentColor" stroke-width="1.2"><path d="M9.15 7.831a2.976 2.976 0 1 1 5.7 0l-1.563 5.211c-.07.234-.105.351-.159.447a1 1 0 0 1-.654.487C12.366 14 12.244 14 12 14s-.366 0-.474-.024a1 1 0 0 1-.654-.487c-.054-.096-.09-.213-.16-.447z"/><circle cx="12" cy="19" r="2"/></g>
+  </g>
+  <!-- Cell: alarmclock -->
+  <text x="290" y="46.50" class="label">alarmclock</text>
+  <g transform="translate(303.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><circle cx="12" cy="13" r="8" fill="currentColor" fill-opacity=".25"/><path stroke="currentColor" stroke-linecap="round" d="m5.5 4.5l-2 2m15-2l2 2M12 8v4.924q0 .076.042.139L14 16"/></g>
+  </g>
+  <!-- Cell: arhive-alt-big -->
+  <text x="338" y="46.50" class="label">arhive-alt-big</text>
+  <g transform="translate(351.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="currentColor" fill-opacity=".25" d="M5.5 12.5h.558c.696 0 1.044 0 1.306.189c.262.188.372.518.592 1.178l.088.265c.22.66.33.99.592 1.18c.262.188.61.188 1.306.188h4.117c.695 0 1.043 0 1.305-.189c.262-.188.372-.518.592-1.178l.088-.265c.22-.66.33-.99.592-1.18c.262-.188.61-.188 1.306-.188h.558c.943 0 1.414 0 1.707.293s.293.764.293 1.707c0 1.886 0 2.828-.586 3.414s-1.528.586-3.414.586h-9c-1.886 0-2.828 0-3.414-.586S3.5 16.386 3.5 14.5c0-.943 0-1.414.293-1.707S4.557 12.5 5.5 12.5"/><path fill="currentColor" fill-opacity=".25" d="M6.156 7.844c.312-.312.467-.467.65-.579a1.8 1.8 0 0 1 .52-.215C7.532 7 7.752 7 8.192 7h7.614c.44 0 .66 0 .868.05a1.8 1.8 0 0 1 .52.215c.182.112.337.267.648.579l2.314 2.312c.31.312.466.467.578.65q.148.242.215.52c.05.207.05.427.05.867v3.927c0 1.008 0 1.512-.196 1.897a1.8 1.8 0 0 1-.787.787c-.385.196-.889.196-1.897.196H5.88c-1.008 0-1.512 0-1.897-.196a1.8 1.8 0 0 1-.787-.787C3 17.632 3 17.128 3 16.12v-3.927c0-.44 0-.66.05-.868a1.8 1.8 0 0 1 .215-.52c.112-.182.267-.337.579-.649z"/><path stroke="currentColor" d="M20.5 12.5h-2.558c-.696 0-1.044 0-1.306.189c-.262.188-.372.518-.592 1.178l-.088.265c-.22.66-.33.99-.592 1.18c-.262.188-.61.188-1.306.188H9.943c-.696 0-1.044 0-1.306-.189c-.262-.188-.372-.518-.592-1.178l-.088-.265c-.22-.66-.33-.99-.592-1.18c-.262-.188-.61-.188-1.306-.188H3.5"/><path fill="currentColor" d="M3 17v-4.85a.15.15 0 0 1 .15-.15h3.408a2 2 0 0 1 1.898 1.367l.088.265A2 2 0 0 0 10.441 15h3.117a2 2 0 0 0 1.898-1.367l.088-.265A2 2 0 0 1 17.442 12h3.408a.15.15 0 0 1 .15.15V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2"/></g>
+  </g>
+  <!-- Cell: arhive-alt-small -->
+  <text x="386" y="46.50" class="label">arhive-alt-sma…</text>
+  <g transform="translate(399.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-opacity=".25" d="M6.156 7.844c.312-.312.467-.467.65-.579a1.8 1.8 0 0 1 .52-.215C7.532 7 7.752 7 8.192 7h7.614c.44 0 .66 0 .868.05a1.8 1.8 0 0 1 .52.215c.182.112.337.267.648.579l3.087 3.086a.3.3 0 0 1 .048.054a.2.2 0 0 1 .018.043a.3.3 0 0 1 .004.072v3.021c0 1.008 0 1.512-.196 1.897a1.8 1.8 0 0 1-.787.787c-.385.196-.889.196-1.897.196H5.88c-1.008 0-1.512 0-1.897-.196a1.8 1.8 0 0 1-.787-.787C3 15.632 3 15.128 3 14.12V11.1c0-.037 0-.056.004-.073a.2.2 0 0 1 .018-.043a.3.3 0 0 1 .048-.054z"/><path fill="currentColor" d="M3 15v-3.75a.25.25 0 0 1 .25-.25h3.308a2 2 0 0 1 1.898 1.367l.088.265A2 2 0 0 0 10.441 14h3.117a2 2 0 0 0 1.898-1.367l.088-.265A2 2 0 0 1 17.442 11h3.308a.25.25 0 0 1 .25.25V15a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2"/>
+  </g>
+  <!-- Cell: arhive -->
+  <text x="434" y="46.50" class="label">arhive</text>
+  <g transform="translate(447.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-opacity=".25" d="M3 10c0-2.828 0-4.243.879-5.121C4.757 4 6.172 4 9 4h6c2.828 0 4.243 0 5.121.879C21 5.757 21 7.172 21 10s0 4.243-.879 5.121C19.243 16 17.828 16 15 16H9c-2.828 0-4.243 0-5.121-.879C3 14.243 3 12.828 3 10"/><path fill="currentColor" fill-rule="evenodd" d="M5.567 12h-.711c-.804 0-1.205 0-1.479.217q-.088.072-.16.16C3 12.651 3 13.052 3 13.856V15c0 2.828 0 4.243.879 5.121C4.757 21 6.172 21 9 21h6c2.828 0 4.243 0 5.121-.879C21 19.243 21 17.828 21 15v-1.144c0-.804 0-1.205-.218-1.479q-.07-.088-.16-.16C20.35 12 19.949 12 19.145 12h-.71c-.7 0-1.049 0-1.343.093a2 2 0 0 0-1.178.998c-.14.276-.198.62-.313 1.309c-.029.172-.043.258-.078.327a.5.5 0 0 1-.295.25c-.073.023-.16.023-.335.023H9.108c-.174 0-.262 0-.335-.023a.5.5 0 0 1-.295-.25c-.035-.069-.05-.155-.078-.327c-.115-.689-.172-1.033-.313-1.309a2 2 0 0 0-1.178-.998C6.615 12 6.265 12 5.567 12M9.5 17a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arhive-fill -->
+  <text x="2" y="96.00" class="label">arhive-fill</text>
+  <g transform="translate(15.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-opacity=".25" d="M4 9.3c0-.141 0-.212.044-.256S4.159 9 4.3 9h15.4c.141 0 .212 0 .256.044S20 9.159 20 9.3V15c0 1.886 0 2.828-.586 3.414S17.886 19 16 19H8c-1.886 0-2.828 0-3.414-.586S4 16.886 4 15zM2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1"/><rect width="6" height="1" x="9" y="12" fill="currentColor" rx=".5"/>
+  </g>
+  <!-- Cell: arhive-load -->
+  <text x="50" y="96.00" class="label">arhive-load</text>
+  <g transform="translate(63.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="currentColor" fill-opacity=".25" d="M3 12c0-2.828 0-4.243.879-5.121C4.757 6 6.172 6 9 6h6c2.828 0 4.243 0 5.121.879C21 7.757 21 9.172 21 12v3c0 2.828 0 4.243-.879 5.121C19.243 21 17.828 21 15 21H9c-2.828 0-4.243 0-5.121-.879C3 19.243 3 17.828 3 15z"/><path fill="currentColor" d="M4.75 14h.817c.698 0 1.048 0 1.342.093a2 2 0 0 1 1.178.998c.14.276.198.62.313 1.309c.029.172.043.258.078.327a.5.5 0 0 0 .295.25c.073.023.16.023.335.023h5.784c.174 0 .262 0 .335-.023a.5.5 0 0 0 .295-.25c.035-.069.05-.155.078-.327c.115-.689.172-1.033.313-1.309a2 2 0 0 1 1.178-.998c.294-.093.644-.093 1.342-.093h.817c.702 0 1.053 0 1.306.168a1 1 0 0 1 .275.276c.169.253.169.604.169 1.306c0 2.107 0 3.16-.506 3.917a3 3 0 0 1-.827.827C18.91 21 17.857 21 15.75 21h-7.5c-2.107 0-3.16 0-3.917-.506a3 3 0 0 1-.827-.827C3 18.91 3 17.857 3 15.75c0-.702 0-1.053.169-1.306a1 1 0 0 1 .275-.276C3.697 14 4.048 14 4.75 14"/><path stroke="currentColor" stroke-linecap="round" d="M9.5 10.5L12 13m0 0l2.5-2.5M12 13V3"/></g>
+  </g>
+  <!-- Cell: bag-alt -->
+  <text x="98" y="96.00" class="label">bag-alt</text>
+  <g transform="translate(111.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="currentColor" fill-opacity=".25" d="M3.956 14.784c.498-3.237.747-4.856 1.871-5.82S8.588 8 11.863 8h.274c3.275 0 4.912 0 6.036.964s1.373 2.583 1.87 5.82l.602 3.912c.165 1.07.248 1.606-.052 1.955c-.299.349-.84.349-1.924.349H5.33c-1.083 0-1.625 0-1.924-.349c-.3-.349-.217-.884-.053-1.955z"/><path stroke="currentColor" stroke-linecap="round" d="M8.5 11V7.5a3.5 3.5 0 1 1 7 0V11"/></g>
+  </g>
+  <!-- Cell: bag -->
+  <text x="146" y="96.00" class="label">bag</text>
+  <g transform="translate(159.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="currentColor" fill-opacity=".25" d="M4.858 9.847c.067-.876.101-1.314.389-1.58C5.534 8 5.973 8 6.852 8h10.296c.879 0 1.318 0 1.605.266c.288.267.322.705.389 1.58l.244 3.178c.264 3.42.395 5.13-.462 6.317a4 4 0 0 1-.66.713C17.143 21 15.43 21 12 21s-5.145 0-6.263-.946q-.374-.317-.661-.713c-.857-1.188-.725-2.898-.462-6.317z"/><path stroke="currentColor" d="M8.5 8V6.5a3.5 3.5 0 1 1 7 0V8"/><path fill="currentColor" d="M8 11.5a.5.5 0 0 0 1 0zm1 0V10H8v1.5zm6 0a.5.5 0 0 0 1 0zm1 0V10h-1v1.5z"/></g>
+  </g>
+  <!-- Cell: basket-alt -->
+  <text x="194" y="96.00" class="label">basket-alt</text>
+  <g transform="translate(207.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="currentColor" fill-opacity=".25" d="M20 10H4a1 1 0 0 1 0-2h16a1 1 0 1 1 0 2M6.802 18.22l-.604-5.44A2 2 0 0 0 4.21 11h15.58a2 2 0 0 0-1.988 1.78l-.604 5.44A2 2 0 0 1 15.21 20H8.79a2 2 0 0 1-1.988-1.78"/><path stroke="currentColor" stroke-linecap="round" d="m8.5 3.5l-2 3m9-3l2 3m-7 10l-1-3m4 3l1-3"/></g>
+  </g>
+  <!-- Cell: basket -->
+  <text x="242" y="96.00" class="label">basket</text>
+  <g transform="translate(255.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="currentColor" fill-opacity=".25" d="M4.413 10.609C3.69 10.127 4.03 9 4.9 9h14.2c.869 0 1.21 1.127.487 1.609a1.76 1.76 0 0 0-.74 1.08l-1.15 5.179c-.335 1.501-.502 2.252-1.05 2.692s-1.317.44-2.856.44H10.21c-1.539 0-2.308 0-2.856-.44c-.549-.44-.715-1.19-1.05-2.692l-1.15-5.18a1.76 1.76 0 0 0-.74-1.08"/><path stroke="currentColor" stroke-linecap="round" d="M12 7V5m3 11.5l.5-3m-3.5 3v-3m-3 3l-.5-3"/></g>
+  </g>
+  <!-- Cell: battery-full -->
+  <text x="290" y="96.00" class="label">battery-full</text>
+  <g transform="translate(303.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <rect width="10" height="15" x="7" y="6" fill="currentColor" fill-opacity=".25" rx="1.5"/><rect width="8" height="13" x="8" y="7" fill="currentColor" rx="1"/><rect width="6" height="2" x="9" y="3" fill="currentColor" fill-opacity=".25" rx="1"/>
+  </g>
+  <!-- Cell: battery-low -->
+  <text x="338" y="96.00" class="label">battery-low</text>
+  <g transform="translate(351.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <rect width="10" height="15" x="7" y="6" fill="currentColor" fill-opacity=".25" rx="1.5"/><rect width="8" height="5" x="8" y="15" fill="currentColor" rx="1"/><rect width="6" height="2" x="9" y="3" fill="currentColor" fill-opacity=".25" rx="1"/>
+  </g>
+  <!-- Cell: blank-alt -->
+  <text x="386" y="96.00" class="label">blank-alt</text>
+  <g transform="translate(399.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-opacity=".25" d="M5 19a2 2 0 0 0 2 2h4.75a.25.25 0 0 0 .25-.25V16a2 2 0 0 1 2-2h4.75a.25.25 0 0 0 .25-.25V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path fill="currentColor" d="M13 16v4.396c0 .223.27.335.427.177l5.146-5.146a.25.25 0 0 0-.177-.427H14a1 1 0 0 0-1 1"/>
+  </g>
+  <!-- Cell: blank -->
+  <text x="434" y="96.00" class="label">blank</text>
+  <g transform="translate(447.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-opacity=".25" d="M2 19a2 2 0 0 0 2 2h10.75a.25.25 0 0 0 .25-.25V16a2 2 0 0 1 2-2h4.75a.25.25 0 0 0 .25-.25V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path fill="currentColor" d="M16 16v4.396c0 .223.27.335.427.177l5.146-5.146a.25.25 0 0 0-.177-.427H17a1 1 0 0 0-1 1"/>
+  </g>
+  <!-- Cell: book-check -->
+  <text x="2" y="145.50" class="label">book-check</text>
+  <g transform="translate(15.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><rect width="16" height="18" x="4" y="3" fill="currentColor" fill-opacity=".25" rx="2"/><path fill="currentColor" d="M4 19a2 2 0 0 1 2-2h11c.932 0 1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083C20 15.398 20 14.932 20 14v3c0 1.886 0 2.828-.586 3.414S17.886 21 16 21H6a2 2 0 0 1-2-2"/><path stroke="currentColor" stroke-width="1.2" d="m9.5 10.5l1.894 1.894a.15.15 0 0 0 .212 0L15.5 8.5"/></g>
+  </g>
+  <!-- Cell: book -->
+  <text x="50" y="145.50" class="label">book</text>
+  <g transform="translate(63.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><rect width="16" height="18" x="4" y="3" fill="currentColor" fill-opacity=".25" rx="2"/><path stroke="currentColor" stroke-linecap="round" d="M8.5 6.5h7m-7 3h4m-4 3h6"/><path fill="currentColor" d="M4 19a2 2 0 0 1 2-2h11c.932 0 1.398 0 1.765-.152a2 2 0 0 0 1.083-1.083C20 15.398 20 14.932 20 14v3c0 1.886 0 2.828-.586 3.414S17.886 21 16 21H6a2 2 0 0 1-2-2"/></g>
+  </g>
+  <!-- Cell: book-open-alt -->
+  <text x="98" y="145.50" class="label">book-open-alt</text>
+  <g transform="translate(111.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <mask id="SVGIhjvteUC" width="9" height="15" x="3" y="4" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#222" d="M12 19V6s-1-2-4.5-2S3 6 3 6v13s1-2 4.5-2s4.5 2 4.5 2"/></mask><g fill="none"><path fill="currentColor" fill-opacity=".25" d="M12 19V6s-1-2-4.5-2S3 6 3 6v13s1-2 4.5-2s4.5 2 4.5 2"/><g mask="url(#SVGIhjvteUC)"><path fill="currentColor" d="M5 4.15A.15.15 0 0 1 5.15 4h2.7a.15.15 0 0 1 .15.15v4.246a.25.25 0 0 1-.427.177l-.896-.896a.25.25 0 0 0-.354 0l-.896.896A.25.25 0 0 1 5 8.396z"/></g><path fill="currentColor" d="M13 19V6s.889-2 4-2s4 2 4 2v13s-.889-2-4-2s-4 2-4 2"/></g>
+  </g>
+  <!-- Cell: book-open -->
+  <text x="146" y="145.50" class="label">book-open</text>
+  <g transform="translate(159.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-opacity=".25" d="M5 17h4a3 3 0 0 1 3 3V10c0-2.828 0-4.243-.879-5.121C10.243 4 8.828 4 6 4H5c-.943 0-1.414 0-1.707.293S3 5.057 3 6v9c0 .943 0 1.414.293 1.707S4.057 17 5 17"/><path fill="currentColor" d="M19 17h-3a3 3 0 0 0-3 3V10c0-2.828 0-4.243.879-5.121C14.757 4 16.172 4 19 4c.943 0 1.414 0 1.707.293S21 5.057 21 6v9c0 .943 0 1.414-.293 1.707S19.943 17 19 17M5 4.15A.15.15 0 0 1 5.15 4h2.7a.15.15 0 0 1 .15.15v4.246a.25.25 0 0 1-.427.177l-.896-.896a.25.25 0 0 0-.354 0l-.896.896A.25.25 0 0 1 5 8.396z"/>
+  </g>
+  <!-- Cell: bookmark -->
+  <text x="194" y="145.50" class="label">bookmark</text>
+  <g transform="translate(207.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-opacity=".25" stroke="currentColor" d="M4 9c0-2.828 0-4.243.879-5.121C5.757 3 7.172 3 10 3h4c2.828 0 4.243 0 5.121.879C20 4.757 20 6.172 20 9v6.828c0 2.683 0 4.024-.844 4.435c-.845.41-1.9-.419-4.01-2.076l-.675-.531c-1.186-.932-1.78-1.398-2.471-1.398s-1.285.466-2.471 1.398l-.676.53c-2.11 1.658-3.164 2.487-4.009 2.077C4 19.853 4 18.51 4 15.828z"/>
+  </g>
+  <!-- Cell: box-alt -->
+  <text x="242" y="145.50" class="label">box-alt</text>
+  <g transform="translate(255.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <defs><mask id="SVGNwzqUXRl"><g fill="none" stroke-width="1.2"><path stroke="#fff" d="M4 7.657c0-.818 0-1.226.152-1.594c.152-.367.442-.657 1.02-1.235l.656-.656c.578-.578.868-.868 1.235-1.02S7.84 3 8.657 3h6.686c.818 0 1.226 0 1.594.152c.367.152.656.442 1.235 1.02l.656.656c.579.578.867.868 1.02 1.235c.152.368.152.776.152 1.594V17c0 1.886 0 2.828-.586 3.414S17.886 21 16 21H8c-1.886 0-2.828 0-3.414-.586S4 18.886 4 17z"/><path stroke="#fff" stroke-linecap="round" d="M4 7h16"/><path stroke="silver" stroke-linecap="round" stroke-opacity=".25" d="M9 11a3 3 0 0 0 6 0"/></g></mask></defs><path fill="currentColor" d="M0 0h24v24H0z" mask="url(#SVGNwzqUXRl)"/>
+  </g>
+  <!-- Cell: box-alt-fill -->
+  <text x="290" y="145.50" class="label">box-alt-fill</text>
+  <g transform="translate(303.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="currentColor" fill-opacity=".25" d="M4 9.3c0-.141 0-.212.044-.256S4.159 9 4.3 9h15.4c.141 0 .212 0 .256.044S20 9.159 20 9.3V16c0 1.886 0 2.828-.586 3.414S17.886 20 16 20H8c-1.886 0-2.828 0-3.414-.586S4 17.886 4 16zM4.724 8c-.308 0-.462 0-.5-.093c-.039-.092.07-.201.288-.42l1.316-1.315c.578-.578.868-.868 1.235-1.02S7.84 5 8.657 5h6.686c.818 0 1.226 0 1.594.152c.367.152.656.442 1.235 1.02l1.316 1.316c.218.218.327.327.288.42c-.038.092-.192.092-.5.092z"/><path stroke="currentColor" stroke-linecap="round" d="M9.5 12.5a2.5 2.5 0 0 0 5 0"/></g>
+  </g>
+  <!-- Cell: box -->
+  <text x="2" y="195.00" class="label">box</text>
+  <g transform="translate(15.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <defs><mask id="SVGA4ymMhAI"><g fill="none"><path stroke="#fff" stroke-width="1.2" d="M4 9.657c0-.818 0-1.226.152-1.594c.152-.367.442-.657 1.02-1.235l.656-.656c.578-.578.868-.868 1.235-1.02S7.84 5 8.657 5h6.686c.818 0 1.226 0 1.594.152c.367.152.656.442 1.235 1.02l.656.656c.579.578.867.868 1.02 1.235c.152.368.152.776.152 1.594V16c0 1.886 0 2.828-.586 3.414S17.886 20 16 20H8c-1.886 0-2.828 0-3.414-.586S4 17.886 4 16z"/><path stroke="silver" stroke-linecap="round" stroke-opacity=".25" d="M14.833 10H9.166c-.235 0-.353 0-.426.073s-.074.191-.074.427v3.167c0 .765 0 1.147.1 1.352a1 1 0 0 0 1.231.51c.215-.075.486-.345 1.027-.886c.25-.25.375-.376.508-.446a1 1 0 0 1 .935 0c.133.07.259.196.51.446c.54.54.81.811 1.026.887a1 1 0 0 0 1.231-.51c.1-.206.1-.588.1-1.353V10.5c0-.236 0-.354-.074-.427c-.073-.073-.191-.073-.427-.073Z"/><path stroke="#fff" stroke-width="1.2" d="M4 10h16v6c0 1.886 0 2.828-.586 3.414S17.886 20 16 20H8c-1.886 0-2.828 0-3.414-.586S4 17.886 4 16z"/></g></mask></defs><path fill="currentColor" d="M0 0h24v24H0z" mask="url(#SVGA4ymMhAI)"/>
+  </g>
+  <!-- Cell: box-fill -->
+  <text x="50" y="195.00" class="label">box-fill</text>
+  <g transform="translate(63.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-opacity=".25" d="M4 9.3c0-.141 0-.212.044-.256S4.159 9 4.3 9h15.4c.141 0 .212 0 .256.044S20 9.159 20 9.3V16c0 1.886 0 2.828-.586 3.414S17.886 20 16 20H8c-1.886 0-2.828 0-3.414-.586S4 17.886 4 16zM4.724 8c-.308 0-.462 0-.5-.093c-.039-.092.07-.201.288-.42l1.316-1.315c.578-.578.868-.868 1.235-1.02S7.84 5 8.657 5h6.686c.818 0 1.226 0 1.594.152c.367.152.656.442 1.235 1.02l1.316 1.316c.218.218.327.327.288.42c-.038.092-.192.092-.5.092z"/><path fill="currentColor" d="M9 9.15A.15.15 0 0 1 9.15 9h5.7a.15.15 0 0 1 .15.15v4.916a.5.5 0 0 1-.777.416l-1.668-1.112a1 1 0 0 0-1.11 0l-1.668 1.112A.5.5 0 0 1 9 14.066z"/>
+  </g>
+  <!-- Cell: box-open -->
+  <text x="98" y="195.00" class="label">box-open</text>
+  <g transform="translate(111.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <defs><mask id="SVG6l7MOe2v"><g fill="none" stroke-width="1.2"><path stroke="silver" stroke-linecap="round" stroke-opacity=".25" d="M9 7L6.139 5.092a.25.25 0 0 0-.278 0L3.254 6.831a.25.25 0 0 0-.038.385l2.577 2.577a.7.7 0 0 1 .207.5c0 .39.317.707.707.707h10.586c.39 0 .707-.317.707-.707a.7.7 0 0 1 .207-.5l2.577-2.577a.25.25 0 0 0-.038-.385L18.14 5.092a.25.25 0 0 0-.278 0L15 7"/><path stroke="#fff" d="m6 10l1.828-1.828c.578-.578.868-.868 1.235-1.02S9.84 7 10.657 7h2.686c.818 0 1.226 0 1.594.152s.657.442 1.235 1.02L18 10v6c0 1.886 0 2.828-.586 3.414S15.886 20 14 20h-4c-1.886 0-2.828 0-3.414-.586S6 17.886 6 16z"/></g></mask></defs><path fill="currentColor" d="M0 0h24v24H0z" mask="url(#SVG6l7MOe2v)"/>
+  </g>
+  <!-- Cell: box-open-fill -->
+  <text x="146" y="195.00" class="label">box-open-fill</text>
+  <g transform="translate(159.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M5 12h14v4c0 1.886 0 2.828-.586 3.414S16.886 20 15 20H9c-1.886 0-2.828 0-3.414-.586S5 17.886 5 16z"/><path fill="currentColor" fill-opacity=".25" fill-rule="evenodd" d="M2.815 7.815L5 10v1h14v-1l2.185-2.185a1 1 0 0 0-.107-1.507l-2.512-1.883a1 1 0 0 0-1.155-.033L15 6H9L6.589 4.392a1 1 0 0 0-1.155.032L2.922 6.309a1 1 0 0 0-.107 1.507M8.6 7.2h6.8l1.95 2.6H6.65z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: broken-heart -->
+  <text x="194" y="195.00" class="label">broken-heart</text>
+  <g transform="translate(207.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path fill-opacity=".25" d="M10.476 5.894L8.5 9l4 3.5l-1 2.5l3.5-3l-3-3.5L14 6l-.57-.712a4.916 4.916 0 0 1 6.123.368a5.527 5.527 0 0 1 .093 8.122l-7.092 6.699c-.198.187-.297.28-.41.314a.5.5 0 0 1-.288 0c-.113-.034-.212-.127-.41-.314L4.08 13.52a5.18 5.18 0 0 1 .088-7.612l.307-.278c1.781-1.606 4.46-1.403 6.001.264"/><path d="M9.736 5.992c-1.58-1.047-3.839-.822-5.13.842l-.309.398a4.703 4.703 0 0 0 .496 6.312l6.953 6.53c.127.12.196.184.25.226l.004.003l.005-.003a4 4 0 0 0 .25-.225l6.952-6.531a4.703 4.703 0 0 0 .496-6.312l-.31-.398c-1.36-1.753-3.794-1.91-5.377-.662l-.619-.786c1.992-1.569 5.066-1.383 6.786.835l.31.398a5.703 5.703 0 0 1-.601 7.654l-6.953 6.53l-.014.014c-.108.1-.213.2-.31.275a1 1 0 0 1-.422.203a1 1 0 0 1-.386 0a1 1 0 0 1-.422-.203a5 5 0 0 1-.31-.275l-.014-.013l-6.953-6.531a5.703 5.703 0 0 1-.6-7.654l.308-.398c1.77-2.281 4.97-2.413 6.955-.697l.361.313l-.296.375L9.8 7.525c-.337.428-.556.707-.688.933c-.125.214-.125.304-.115.36s.042.138.235.294c.203.164.507.348.974.628l1.253.752l.029.017c.397.239.738.443.988.644c.267.214.492.471.574.836c.082.364-.011.692-.161 1c-.14.288-.36.62-.618 1.005l-.019.028l-.836 1.255l-.832-.555l.837-1.254c.28-.422.462-.696.568-.915c.1-.206.097-.292.085-.345c-.012-.054-.045-.132-.224-.275c-.19-.153-.471-.323-.906-.584l-1.252-.751l-.03-.018c-.429-.257-.795-.477-1.06-.69c-.281-.229-.517-.504-.588-.893c-.072-.389.051-.73.234-1.043c.172-.294.436-.629.745-1.02l.022-.028z"/></g>
+  </g>
+  <!-- Cell: bug -->
+  <text x="242" y="195.00" class="label">bug</text>
+  <g transform="translate(255.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.2"><path fill="currentColor" fill-opacity=".25" d="M7 14.333c0-1.246 0-1.869.268-2.333A2 2 0 0 1 8 11.268C8.464 11 9.087 11 10.333 11h3.334c1.246 0 1.869 0 2.333.268a2 2 0 0 1 .732.732c.268.464.268 1.087.268 2.333V16c0 .93 0 1.394-.077 1.78a4 4 0 0 1-3.143 3.143C13.394 21 12.93 21 12 21s-1.394 0-1.78-.077a4 4 0 0 1-3.143-3.143C7 17.394 7 16.93 7 16zM9 9c0-.932 0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C10.602 6 11.068 6 12 6s1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C15 7.602 15 8.068 15 9v2H9z"/><path d="M12 11v4m3-12l-2 3M9 3l2 3M7 16H2m20 0h-5m3-7v1a3 3 0 0 1-3 3m3 9a3 3 0 0 0-3-3M4 9v1a3 3 0 0 0 3 3m-3 9a3 3 0 0 1 3-3"/></g>
+  </g>
+  <!-- Cell: calendar-add -->
+  <text x="290" y="195.00" class="label">calendar-add</text>
+  <g transform="translate(303.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="currentColor" fill-opacity=".25" fill-rule="evenodd" d="M7 4.432c0-.155 0-.233-.05-.278c-.052-.045-.128-.035-.28-.015c-1.12.143-1.902.436-2.498 1.033C3 6.343 3 8.229 3 12s0 5.657 1.172 6.828S7.229 20 11 20h2c3.771 0 5.657 0 6.828-1.172S21 15.771 21 12s0-5.657-1.172-6.828c-.596-.597-1.378-.89-2.499-1.033c-.151-.02-.227-.03-.278.015S17 4.277 17 4.432V6.5a1.5 1.5 0 0 1-3 0V4.3c0-.141 0-.212-.044-.255S13.842 4 13.701 4H10.3c-.142 0-.212 0-.256.045C10 4.088 10 4.159 10 4.3v2.2a1.5 1.5 0 1 1-3 0z" clip-rule="evenodd"/><path stroke="currentColor" stroke-linecap="round" d="M8.5 2.5v4m7-4v4"/><path stroke="currentColor" stroke-linecap="square" stroke-width="1.2" d="M12 16v-6m3 3H9"/></g>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-lets-icons-duotone</text>
+  <text x="348" y="139.738" class="overlay-title">lets icons duotone</text>
+  <text x="351" y="190.744" class="overlay-meta">duotone · CC-BY-4.0 · 223 icons</text>
+</svg>

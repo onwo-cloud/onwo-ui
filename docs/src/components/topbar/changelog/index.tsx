@@ -18,7 +18,7 @@ import { Collapsible, CollapsibleContent } from '~primitives/@kit/collapsible';
 import { Icon } from '~/utils/icon';
 
 import { List, ListItem, ListContext } from './list';
-import { Scrollarea, ScrollareaCues, ScrollareaViewport, ScrollareaBar } from './scrollarea';
+import { Scrollarea, ScrollareaCues, ScrollareaViewport, ScrollareaBar } from '~ui/@kit/scrollarea';
 import { ChangelogTrigger } from './trigger';
 
 export interface ChangelogConfig {
@@ -256,7 +256,7 @@ export const ChangelogItem = component$((props: ChangelogItemProps) => {
         {props.title}
       </p>
       {props.newBadge && (
-        <span class="ml-2 px-2 rounded-md py-1 bg-canvas-contrast group-hover/item:bg-canvas-contrast-hover text-macro text-ink-contrast tracking-tight font-semibold">
+        <span class="ml-2 px-2 rounded-md py-1 bg-shade-1000 group-hover/item:bg-shade-1000-hover text-macro text-shade-0 tracking-tight font-semibold">
           NEW
         </span>
       )}

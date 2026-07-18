@@ -1,6 +1,7 @@
-import { type PropsOf, Slot, component$ } from '@qwik.dev/core';
+import { Slot, component$ } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 
-const Root = component$<PropsOf<'div'>>(({ ...props }) => {
+const Root = component$<OwPropsOf<'div'>>(({ ...props }) => {
   return (
     <div class={['grid gap-2', props.class]} {...props}>
       <Slot />
@@ -8,7 +9,7 @@ const Root = component$<PropsOf<'div'>>(({ ...props }) => {
   );
 });
 
-const Item = component$<PropsOf<'input'>>(({ ...props }) => {
+const Item = component$<OwPropsOf<'input'>>(({ ...props }) => {
   return (
     <input
       type="radio"

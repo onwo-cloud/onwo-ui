@@ -1,8 +1,8 @@
-import type { Primitive } from '~primitives/utils/as';
+import type { OwPropsOf } from '~primitives/utils/as';
 
-export type ListProps = Primitive<'div'>;
+export type TabsListProps = OwPropsOf<'div'>;
 
-export const List = (props: ListProps) => (
+export const TabsList = (props: TabsListProps) => (
   <div aria-orientation="horizontal" role="tablist" {...props}>
     {props.children}
   </div>

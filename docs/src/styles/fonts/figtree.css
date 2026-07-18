@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("/fonts/Figtree-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Figtree Light Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 89.1168%;
+  descent-override: 23.4518%;
+  size-adjust: 106.6016%;
+}
+@font-face {
+  font-family: "Figtree Light Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 95.3853%;
+  descent-override: 25.1014%;
+  line-gap-override: 0%;
+  size-adjust: 99.5961%;
+}
+@font-face {
+  font-family: "Figtree Light Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 101.4189%;
+  descent-override: 26.6892%;
+  size-adjust: 93.6709%;
+}
+
+:root {
+  --font-figtree: "Figtree Light", "Figtree Light Fallback: -apple-system", "Figtree Light Fallback: Arial", "Figtree Light Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

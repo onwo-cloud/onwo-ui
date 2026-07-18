@@ -1,9 +1,9 @@
 import { Slot, component$ } from '@qwik.dev/core';
-import type { Primitive } from '~primitives/utils/as';
+import type { OwPropsOf } from '~primitives/utils/as';
 
 import { useModalContext } from './context';
 
-export type ModalTitleProps = Primitive<'h2'>;
+export type ModalTitleProps = OwPropsOf<'h2'>;
 
 export const Title = component$((props: ModalTitleProps) => {
   const context = useModalContext();

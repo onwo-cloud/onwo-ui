@@ -1,26 +1,18 @@
-import type { PropsOf } from '@qwik.dev/core';
-import { Slot, component$, useContextProvider, useId } from '@qwik.dev/core';
+import { Slot, component$, useId, useContextProvider } from '@qwik.dev/core';
+import { modalContextId, ModalControls, useModalControl } from './context';
 
-import type { ModalContext, ModalControls } from './context';
-import { modalContextId, useModalControl } from './context';
+type RootProps = {
+  controls?: ModalControls;
+}
 
-export type ModalRootProps = {
-  control?: ModalControls;
-} & PropsOf<'div'>;
+export const Root = component$((props: RootProps) => {
+  const id = useId();
+  const control = props.controls ?? useModalControl();
 
-export const Root = component$((props: ModalRootProps) => {
-  const localId = useId();
+  useContextProvider(modalContextId, {
+    id,
+    control,
+  });
 
-  const context: ModalContext = {
-    id: localId,
-    control: props.control ?? useModalControl(),
-  };
-
-  useContextProvider(modalContextId, context);
-
-  return (
-    <div {...props}>
-      <Slot />
-    </div>
-  );
+  return <Slot />;
 });

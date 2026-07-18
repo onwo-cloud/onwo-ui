@@ -44,7 +44,11 @@ const simpleAnimated: BoxedComp = {
       </div>
     );
   }),
-  code: `const visibleBox = useSignal<boolean>(true);
+  code: $(() => `import { useSignal } from '@qwik.dev/core';
+import { Animated } from '@onwo/primitives/animated';
+
+const visibleBox = useSignal<boolean>(true);
+
 <Animated
   bind:visible={visibleBox}
   in={{ timing: 'ease-in', opacity: 0, slide: { x: '-5rem' } }}
@@ -52,7 +56,7 @@ const simpleAnimated: BoxedComp = {
   class="w-fit"
 >
   <div class="bg-[blue] w-32 h-32" />
-</Animated>`,
+</Animated>`),
 };
 
 const infiniteAnimated: BoxedComp = {
@@ -74,7 +78,9 @@ const infiniteAnimated: BoxedComp = {
       </Animated>
     </div>
   )),
-  code: `<Animated
+  code: $(() => `import { Animated } from '@onwo/primitives/animated';
+
+<Animated
   in={{
     timingFunction: 'linear',
     iterationCount: 'infinite',
@@ -83,8 +89,8 @@ const infiniteAnimated: BoxedComp = {
   }}
   class="w-fit"
 >
-  <Icon i="other-smile"  size="3rem"  />
-</Animated>`,
+  <Icon i="other-smile" size="3rem" />
+</Animated>`),
 };
 
 export const section: Section = {

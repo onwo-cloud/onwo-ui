@@ -1,7 +1,6 @@
 import { MenuTrigger } from '~ui/@kit/menu';
 import { Changelog } from './changelog';
 import { component$, Slot } from '@qwik.dev/core';
-import type { PropsOf } from '@qwik.dev/core';
 import {
   MenuRoot,
   MenuPopup,
@@ -10,8 +9,9 @@ import {
 } from '~ui/@kit/menu';
 
 import { Icon } from '~/utils/icon';
+import { OwPropsOf } from '~primitives/index';
 
-const ThemeMenuRoot = component$((props: PropsOf<'div'>) => (
+const ThemeMenuRoot = component$((props: OwPropsOf<'div'>) => (
   <MenuRoot {...props}>
     <Slot />
     <MenuPopup side="bottom" sideOffset={8}>
@@ -39,7 +39,7 @@ const ThemeDropdown = () => (
 );
 
 const GithubLink = () => (
-  <button class="group rounded-full flex gap-1 items-center px-4 py-2 cursor-pointer text-ink-contrast bg-canvas-contrast hover:bg-canvas-contrast-hover">
+  <button class="group rounded-full flex gap-1 items-center px-4 py-2 cursor-pointer text-shade-0 bg-shade-1000 hover:bg-shade-1000-hover">
     <Icon size="md" i="github" />
     <span> 489 </span>
   </button>

@@ -1,8 +1,8 @@
-import { component$, Slot, $, type PropsOf, type QwikHTMLElements, JSXOutput } from '@qwik.dev/core';
-import { useButton } from './use-button';
+import { component$, Slot, $, type QwikHTMLElements, JSXOutput } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
+import { composeProps } from '~primitives/index';
 
-
-export type ButtonProps<T extends keyof QwikHTMLElements = 'button'> = Omit<PropsOf<T>, 'as' | 'disabled' | 'name'> & {
+export type ButtonProps<T extends keyof QwikHTMLElements = 'button'> = Omit<OwPropsOf<T>, 'as' | 'disabled' | 'name'> & {
   /**
    * The element or component to render.
    * @default 'button'
@@ -26,38 +26,46 @@ export type ButtonProps<T extends keyof QwikHTMLElements = 'button'> = Omit<Prop
 
 export const Button = component$(function <T extends keyof QwikHTMLElements = 'button'>(props: ButtonProps<T>): JSXOutput {
   const {
-    as: CompRaw,
+    as: Comp = 'button',
     disabled = false,
     focusableWhenDisabled = false,
+    type: buttonType = 'button',
+    tabIndex,
     ...restProps
-  } = props;
+  } = props as ButtonProps<'button'>;
 
-  // Casting the tag to any prevents TypeScript from generating an enormous union type limit exception 
-  const Comp = (CompRaw || 'button') as any;
+  const isNative = Comp === 'button';
 
-  const { buttonProps, stateAttributes, isNative } = useButton({
-    Comp,
-    disabled,
-    focusableWhenDisabled,
-  });
+  const buttonProps: Record<string, any> = {};
 
-  // Handle keyboard events for non-native button elements (e.g., role="button")
+  if (isNative) {
+    buttonProps.type = buttonType;
+    if (disabled && !focusableWhenDisabled) {
+      buttonProps.disabled = true;
+    }
+  } else {
+    buttonProps.role = 'button';
+    // Use the user-provided tabIndex if not disabled, otherwise enforce -1 unless focusable
+    buttonProps.tabIndex = disabled && !focusableWhenDisabled ? -1 : (tabIndex ?? 0);
+    if (disabled) {
+      buttonProps.ariaDisabled = 'true';
+    }
+  }
+
   const handleKeyDown$ = $((event: KeyboardEvent) => {
     if (isNative || disabled) {
       return;
     }
     if (event.key === ' ' || event.key === 'Enter') {
       event.preventDefault();
-      (event.currentTarget as HTMLElement).click();
+      (event.currentTarget as any)?.click();
     }
   });
 
   return (
     <Comp
-      {...buttonProps as any}
-      {...(restProps as any)}
-      {...stateAttributes as any}
-      onKeyDown$={[handleKeyDown$, props.onKeyDown$]}
+      {...composeProps(restProps, buttonProps, { onKeyDown$: handleKeyDown$ })}
+      data-disabled={disabled}
     >
       <Slot />
     </Comp>

@@ -1,25 +1,45 @@
+import { component$, $ } from '@qwik.dev/core';
 import { Alert, AlertClose, AlertMessage, AlertTitle } from '@onwo/ui/alert';
 
-import type { BoxedComp, Section } from '.';
-import { component$ } from '@qwik.dev/core';
+import type { BoxedComp, ControlSchema, Section } from '.';
 
-const withControlAlert: BoxedComp = {
-  title: 'With control',
-  display: component$(() => (
+const alertControls = {
+  title: {
+    type: 'text',
+    label: 'Title',
+    default: 'Alert Title',
+  },
+  message: {
+    type: 'text',
+    label: 'Message',
+    default: 'Alert message content goes here.',
+  },
+  showClose: {
+    type: 'boolean',
+    label: 'Show Close Button',
+    default: true,
+  },
+} as const satisfies ControlSchema;
+
+const withControlAlert: BoxedComp<typeof alertControls> = {
+  title: 'Default Playground',
+  controls: alertControls,
+  display: component$(({ controls }) => (
     <Alert>
-      <AlertTitle>Alert with title and icon</AlertTitle>
-      <AlertMessage> Alert message </AlertMessage>
-      <AlertClose />
+      {controls.title && <AlertTitle>{controls.title}</AlertTitle>}
+      <AlertMessage>{controls.message}</AlertMessage>
+      {controls.showClose && <AlertClose />}
     </Alert>
   )),
-  code: `<Alert>
-  <AlertTitle>
-    <Icon i="other-frame"  size="md"  />
-    Alert with title and icon
-  </AlertTitle>
-  <AlertMessage> Alert message </AlertMessage>
-  <AlertClose onClick$={/* control unmount here */} />
-</Alert>`,
+  code: $((values) => {
+    const titleBlock = values.title ? `\n  <AlertTitle>${values.title}</AlertTitle>` : '';
+    const closeBlock = values.showClose ? '\n  <AlertClose />' : '';
+    return `import { Alert, AlertClose, AlertMessage, AlertTitle } from '@onwo/ui/alert';
+
+<Alert>${titleBlock}
+  <AlertMessage>${values.message}</AlertMessage>${closeBlock}
+</Alert>`;
+  }),
 };
 
 const customizationAlert: BoxedComp = {
@@ -40,27 +60,31 @@ const customizationAlert: BoxedComp = {
       </Alert>
     </div>
   )),
-  code: `<Alert>
+  code: $(() => `import { Alert, AlertClose, AlertMessage } from '@onwo/ui/alert';
+
+<Alert>
   <AlertMessage>
-    <Icon i="other-frame"  size="md" class="text-success"  />
+    <Icon i="other-frame" size="md" class="text-success" />
     Generic style with coloured icon
   </AlertMessage>
   <AlertClose />
 </Alert>
+
 <Alert class="bg-transparent outline outline-1 outline-offset-[-1px] outline-success">
   <AlertMessage>
-    <Icon i="other-frame"  class="text-success" size="md"  />
+    <Icon i="other-frame" class="text-success" size="md" />
     Outline style
   </AlertMessage>
   <AlertClose />
 </Alert>
+
 <Alert class="bg-success-10">
   <AlertMessage>
-    <Icon i="other-frame"  class="text-success" size="md"  />
+    <Icon i="other-frame" class="text-success" size="md" />
     Colourful style
   </AlertMessage>
   <AlertClose />
-</Alert>`,
+</Alert>`),
 };
 
 export const section: Section = {

@@ -1,19 +1,20 @@
-import type { PropsOf } from '@qwik.dev/core';
 import { Slot, component$, $ } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 import { useModalContext } from './context';
+import { Button } from '../button';
 
-export type CloseProps = PropsOf<'button'>;
+export type CloseProps = OwPropsOf<'div'>;
 
 export const Close = component$((props: CloseProps) => {
   const context = useModalContext();
 
   const handleClick$ = $(() => {
-    context.control.opened.value = false;
+    context.control.hide$();
   });
 
   return (
-    <button onClick$={[handleClick$, props.onClick$]} {...props}>
+    <Button as="div" onClick$={[handleClick$, props.onClick$]} {...props}>
       <Slot />
-    </button>
+    </Button>
   );
 });

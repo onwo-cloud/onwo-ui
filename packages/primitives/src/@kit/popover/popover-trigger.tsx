@@ -1,39 +1,85 @@
-import type { PropsOf } from '@qwik.dev/core';
 import { Slot, component$, $ } from '@qwik.dev/core';
-import { PopoverContext } from './popover-context';
-import { usePopover } from './use-popover';
+import type { OwPropsOf } from '~primitives/index';
+import { Button as ButtonPrimitive } from '../button';
+import { usePopoverContext } from './context';
 
-export type HPopoverTriggerProps = PropsOf<'button'>;
+export type PopoverTriggerProps = OwPropsOf<'div'> & {
+  hover?: boolean;
+};
 
-export const HPopoverTrigger = component$<HPopoverTriggerProps>((props: HPopoverTriggerProps) => {
-  const context = PopoverContext.use();
+export const PopoverTrigger = component$((props: PopoverTriggerProps) => {
+  const context = usePopoverContext();
+  const {
+    hover,
+    onClick$,
+    onMouseEnter$,
+    onMouseLeave$,
+    onFocus$,
+    onBlur$,
+    class: className,
+    ...restProps
+  } = props;
 
-  const triggerId = `${context.compId}-trigger`;
-  const panelId = `${context.compId}-panel`;
+  const handleClick$ = hover ? onClick$ : [context.control.toggle$, onClick$];
 
-  const { showPopover, hidePopover } = usePopover(context.compId);
+  const handleMouseEnter$ = hover
+    ? [$((_: MouseEvent) => context.control.show$()), onMouseEnter$]
+    : onMouseEnter$;
 
-  const handlePointerOver$ = $(async () => {
-    if (!context.hover) return;
-    await showPopover();
-  });
+  const handleMouseLeave$ = hover
+    ? [
+        $((e: MouseEvent) => {
+          const relatedTarget = e.relatedTarget as HTMLElement | null;
+          if (
+            relatedTarget &&
+            context.control.panelRef.value?.contains(relatedTarget)
+          ) {
+            return;
+          }
+          context.control.hide$();
+        }),
+        onMouseLeave$,
+      ]
+    : onMouseLeave$;
 
-  const handlePointerOut$ = $(async () => {
-    if (!context.hover) return;
-    await hidePopover();
-  });
+  const handleFocus$ = hover
+    ? [$((_: FocusEvent) => context.control.show$()), onFocus$]
+    : onFocus$;
+
+  const handleBlur$ = hover
+    ? [
+        $((e: FocusEvent) => {
+          const relatedTarget = e.relatedTarget as HTMLElement | null;
+          if (
+            relatedTarget &&
+            context.control.panelRef.value?.contains(relatedTarget)
+          ) {
+            return;
+          }
+          context.control.hide$();
+        }),
+        onBlur$,
+      ]
+    : onBlur$;
 
   return (
-    <button
-      {...props}
-      ref={context.triggerRef}
-      id={triggerId}
-      popovertarget={panelId}
-      onPointerOver$={[handlePointerOver$, props.onPointerOver$]}
-      onPointerOut$={[handlePointerOut$, props.onPointerOut$]}
-      popoverTargetAction={context.hover ? 'show' : undefined}
+    <ButtonPrimitive
+      as="div"
+      {...restProps}
+      class={['inline-block w-fit', className]}
+      ref={context.control.triggerRef}
+      data-popover-trigger=""
+      aria-haspopup="dialog"
+      aria-expanded={context.control.opened.value}
+      data-open={context.control.opened.value ? '' : undefined}
+      data-closed={context.control.opened.value ? undefined : ''}
+      onClick$={handleClick$}
+      onMouseEnter$={handleMouseEnter$}
+      onMouseLeave$={handleMouseLeave$}
+      onFocus$={handleFocus$}
+      onBlur$={handleBlur$}
     >
       <Slot />
-    </button>
+    </ButtonPrimitive>
   );
 });

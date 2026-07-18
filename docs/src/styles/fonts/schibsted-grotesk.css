@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Schibsted Grotesk";
+  src: url("/fonts/SchibstedGrotesk[wght].woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Schibsted Grotesk Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 87.3174%;
+  descent-override: 23.0518%;
+  size-adjust: 111.8406%;
+}
+@font-face {
+  font-family: "Schibsted Grotesk Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 93.4593%;
+  descent-override: 24.6733%;
+  line-gap-override: 0%;
+  size-adjust: 104.4907%;
+}
+@font-face {
+  font-family: "Schibsted Grotesk Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 99.3711%;
+  descent-override: 26.234%;
+  size-adjust: 98.2743%;
+}
+
+:root {
+  --font-schibsted-grotesk: "Schibsted Grotesk", "Schibsted Grotesk Fallback: -apple-system", "Schibsted Grotesk Fallback: Arial", "Schibsted Grotesk Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

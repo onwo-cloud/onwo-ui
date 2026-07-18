@@ -1,5 +1,6 @@
 import type { PluginAPI } from 'tailwindcss/plugin';
 import plugin from 'tailwindcss/plugin';
+
 export * as themes from './themes/index.js';
 
 type OnwoPluginOption = object;
@@ -11,9 +12,22 @@ export type PluginWithOptions<T> = {
 
 export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOptions<OnwoPluginOption>(
   (_option) => (api: PluginAPI) => {
+    // 1. Add the custom dark mode variant watching `--theme: dark`
+    api.addVariant('dark', '@container style(--theme: dark)');
+
+    // 2. Add root CSS variables and base styles
     api.addBase({
+      ':root': {
+        '--radius-xs': 'calc(var(--theme-rounding-mul, 1) * 0.125rem)',
+        '--radius-sm': 'calc(var(--theme-rounding-mul, 1) * 0.25rem)',
+        '--radius-md': 'calc(var(--theme-rounding-mul, 1) * 0.375rem)',
+        '--radius-lg': 'calc(var(--theme-rounding-mul, 1) * 0.5rem)',
+        '--radius-xl': 'calc(var(--theme-rounding-mul, 1) * 0.75rem)',
+        '--radius-2xl': 'calc(var(--theme-rounding-mul, 1) * 1rem)',
+        '--radius-3xl': 'calc(var(--theme-rounding-mul, 1) * 1.5rem)',
+        '--radius-4xl': 'calc(var(--theme-rounding-mul, 1) * 2rem)',
+      },
       'html, body': {
-        '@apply font-sans': {},
         'text-size-adjust': 'none', // Prevent automatic zooming of fonts on some mobile devices.
         'text-rendering': 'optimizeLegibility',
         '-webkit-font-smoothing': 'antialiased', // Consistent font display behavior on OSX.
@@ -24,11 +38,15 @@ export const onwoPlugin: PluginWithOptions<OnwoPluginOption> = plugin.withOption
   () => ({
     theme: {
       extend: {
-        fontFamily: {
-          display:
-            'var(--font-display), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
-          body: 'var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
-          mono: 'var(--font-mono), monospace',
+        borderRadius: {
+          xs: 'var(--radius-xs)',
+          sm: 'var(--radius-sm)',
+          md: 'var(--radius-md)',
+          lg: 'var(--radius-lg)',
+          xl: 'var(--radius-xl)',
+          '2xl': 'var(--radius-2xl)',
+          '3xl': 'var(--radius-3xl)',
+          '4xl': 'var(--radius-4xl)',
         },
       },
     },

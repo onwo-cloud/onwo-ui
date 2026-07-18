@@ -1,4 +1,5 @@
-import { Icon } from '~/utils/icon'
+import { component$, $ } from '@qwik.dev/core';
+import { Icon } from '~/utils/icon';
 import { Button } from '@onwo/ui/button';
 import {
   Modal,
@@ -12,7 +13,6 @@ import {
 } from '@onwo/ui/modal';
 
 import type { BoxedComp, Section } from '.';
-import { component$ } from '@qwik.dev/core';
 
 const defaultModal: BoxedComp = {
   title: 'Default',
@@ -49,7 +49,18 @@ const defaultModal: BoxedComp = {
       </ModalPanel>
     </Modal>
   )),
-  code: `
+  code: $(() => `import { Button } from '@onwo/ui/button';
+import {
+  Modal,
+  ModalClose,
+  ModalDescription,
+  ModalFooter,
+  ModalHeader,
+  ModalPanel,
+  ModalTitle,
+  ModalTrigger,
+} from '@onwo/ui/modal';
+
 <Modal>
   <ModalTrigger>
     <Button>Open Modal</Button>
@@ -80,8 +91,7 @@ const defaultModal: BoxedComp = {
       </ModalClose>
     </ModalFooter>
   </ModalPanel>
-</Modal>
-`,
+</Modal>`),
 };
 
 export const section: Section = {

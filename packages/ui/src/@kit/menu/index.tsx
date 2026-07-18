@@ -1,6 +1,8 @@
-import { Signal, QRL, JSXChildren } from '@qwik.dev/core';
+import { Signal, QRL } from '@qwik.dev/core';
 import * as P from '@onwo/primitives/menu';
-import { UiIcon } from '~ui/icon-provider';
+import { UiIcon } from '~ui/commons/icon-provider';
+import { OwPropsOf } from '~primitives/index';
+import { Scrollarea, ScrollareaBar, ScrollareaCues, ScrollareaViewport } from '../scrollarea';
 
 export const itemCommonPadding = 'w-full py-1 px-1.5';
 export const itemCommonStyling = [
@@ -8,60 +10,47 @@ export const itemCommonStyling = [
   'flex items-center cursor-hand select-none rounded-lg data-[is-active]:hover:bg-canvas-hover data-[is-opened]:bg-canvas-hover',
 ];
 
-export type MenuRootProps = { children?: any };
-export const MenuRoot = ({ children }: MenuRootProps) => (
+export const MenuRoot = ({ children }: OwPropsOf<typeof P.MenuRoot>) => (
   <P.MenuRoot>{children}</P.MenuRoot>
 );
 
-export type MenuTriggerProps = { children?: JSXChildren; disabled?: boolean; class: string };
-export const MenuTrigger = ({ children, ...rest }: MenuTriggerProps) => (
-  <P.MenuTrigger {...rest}>{children}</P.MenuTrigger>
+export const MenuTrigger = ({ children, ...props }: OwPropsOf<typeof P.MenuTrigger>) => (
+  <P.MenuTrigger {...props}>{children}</P.MenuTrigger>
 );
 
-export type MenuPopupProps = P.PositionProps & { children?: any };
-export const MenuPopup = ({ children, ...rest }: MenuPopupProps) => (
+export const MenuPopup = ({ class: className, children, ...rest }: OwPropsOf<typeof P.MenuPopup>) => (
   <P.MenuPopup
+    class={[
+      'bg-canvas-secondary text-ink ring-separator-secondary shadow-5 min-w-32 w-40 rounded-lg p-1 ring ring-inset overflow-visible',
+      className,
+    ]}
     {...rest}
-    popoverProps={{
-      class: 'overflow-visible',
-    }}
-    panelProps={{
-      class: 'bg-canvas p-1 min-w-32 w-40 ring ring-inset ring-separator-secondary shadow-5 rounded-lg',
-    }}
   >
-    {children}
+    {/* Replaced 'h-full' with 'max-h-[inherit]' */}
+    <Scrollarea class="w-full max-h-[inherit] relative min-h-0">
+      <ScrollareaCues maxHeight={44} />
+      {/* Added 'max-h-[inherit]' so overflow-y-auto triggers at max height */}
+      <ScrollareaViewport class="flex flex-col gap-4 w-full max-h-[inherit] pr-1">
+        {children}
+      </ScrollareaViewport>
+      <ScrollareaBar orientation="vertical" class="w-[13px] right-0 top-[4px] bottom-[4px]" />
+    </Scrollarea>
   </P.MenuPopup>
 );
 
-export type MenuItemProps = {
-  children?: any;
-  disabled?: boolean;
-  inset?: boolean;
-  variant?: 'default' | 'destructive';
-  onClick$?: QRL<() => void>;
-  class: string;
-};
 export const MenuItem = ({
-  inset,
-  variant,
   children,
   class: className,
   ...rest
-}: MenuItemProps) => (
+}: OwPropsOf<typeof P.MenuItem>) => (
   <P.MenuItem {...rest} class={[itemCommonStyling, className]}>
     {children}
   </P.MenuItem>
 );
 
-export type MenuCheckboxItemProps = {
-  children?: any;
-  disabled?: boolean;
-  'bind:checked'?: Signal<boolean>;
-  onCheckedChange$?: QRL<(checked: boolean) => void>;
-};
-export const MenuCheckboxItem = ({ children, ...rest }: MenuCheckboxItemProps) => (
-  <P.MenuCheckboxItem {...rest} class={['flex gap-1', itemCommonStyling]}>
-    <UiIcon name="check" size="xs" />
+export const MenuCheckboxItem = ({ children, ...props }: OwPropsOf<typeof P.MenuCheckboxItem>) => (
+  <P.MenuCheckboxItem {...props} class={['flex gap-1', itemCommonStyling]}>
+    <UiIcon i="check" size="xs" />
     {children}
   </P.MenuCheckboxItem>
 );
@@ -83,41 +72,32 @@ export type MenuRadioItemProps = {
 };
 export const MenuRadioItem = ({ children, ...rest }: MenuRadioItemProps) => (
   <P.MenuRadioItem class={['flex gap-1', itemCommonStyling]} {...rest}>
-    <UiIcon name="check" size="xs" />
+    <UiIcon i="check" size="xs" />
     {children}
   </P.MenuRadioItem>
 );
 
-export type MenuLabelProps = { children?: any; inset?: boolean };
-export const MenuLabel = ({ children }: MenuLabelProps) => (
-  <div class={['text-ink tracking-wider text-sm', itemCommonPadding]}>{children}</div>
+export const MenuLabel = ({ children, class: className, ...props }: OwPropsOf<'div'>) => (
+  <div class={['text-ink tracking-wider text-sm', itemCommonPadding, className]} {...props}>{children}</div>
 );
 
 export const MenuSeparator = () => (
   <div role="separator" aria-orientation="horizontal" class="h-px bg-separator-secondary my-1 -mx-1" />
 );
 
-export type MenuShortcutProps = { children?: any };
-export const MenuShortcut = ({ children }: MenuShortcutProps) => <span>{children}</span>;
+export const MenuShortcut = ({ children, ...props }: OwPropsOf<'span'>) => <span {...props}>{children}</span>;
 
-export type MenuSubRootProps = { children?: any };
-export const MenuSubRoot = ({ children }: MenuSubRootProps) => (
-  <P.MenuSubRoot>{children}</P.MenuSubRoot>
+export const MenuSubRoot = ({ children, ...props }: OwPropsOf<typeof P.MenuSubRoot>) => (
+  <P.MenuSubRoot {...props}>{children}</P.MenuSubRoot>
 );
 
-export type MenuSubTriggerProps = {
-  children?: any;
-  disabled?: boolean;
-  inset?: boolean;
-};
-export const MenuSubTrigger = ({ inset, children, ...rest }: MenuSubTriggerProps) => (
-  <P.MenuSubTrigger class={['justify-between', itemCommonStyling]} {...rest}>
+export const MenuSubTrigger = ({ children, class: className, ...props }: OwPropsOf<typeof P.MenuSubTrigger>) => (
+  <P.MenuSubTrigger class={['justify-between', itemCommonStyling, className]} {...props}>
     {children}
-    <UiIcon name="chevron-right" size="xs" />
+    <UiIcon i="chevron-right" size="xs" />
   </P.MenuSubTrigger>
 );
 
-export type MenuSubContentProps = P.PositionProps & { children?: any };
-export const MenuSubContent = ({ children, ...rest }: MenuSubContentProps) => (
+export const MenuSubContent = ({ children, ...rest }: OwPropsOf<typeof P.MenuPopup>) => (
   <P.MenuPopup {...rest}>{children}</P.MenuPopup>
 );

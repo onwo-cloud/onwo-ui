@@ -20,8 +20,8 @@ export const TerminalAnimatedIcon = component$(({ class: className, ...props }: 
         transform: none;
       }
 
-      svg.text-black .terminal-shaft,
-      svg.text-black .terminal-chevron {
+      svg.text-shade-1000 .terminal-shaft,
+      svg.text-shade-1000 .terminal-chevron {
         stroke-linecap: round;
         stroke-linejoin: round;
       }

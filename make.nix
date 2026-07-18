@@ -9,7 +9,7 @@
       deps = [ "init.deps" ];
       dir = "./packages/icons";
       exec = [
-        "bun ./scripts/generate-icons.ts --sets=lucide,mdi"
+        "bun ./scripts/generate-icons.ts --sets=hugeicons,mdi,solar,mage,lets-icons,flowbite,mynaui,stash,iconamoon,proicons,cuida,lsicon,material-symbols,gravity-ui,tdesign,circum,streamline,lucide,iconoir,mingcute,radix-icons,line-md,heroicons,ph,tabler,icon-park,fluent,ri,system-uicons,teenyicons,carbon"
         "pnpm run lint.fix"
       ];
     }
@@ -65,6 +65,13 @@
       dir = "./docs";
       exec = "pnpm ts-watch";
     }
+
+    {
+      cmd = "test.e2e";
+      desc = "Run e2e tests";
+      exec = "playwright test --config=./playwright.config.ts";
+    }
+
     {
       cmd = "release:prepare";
       desc = "Install dependencies in release folder";

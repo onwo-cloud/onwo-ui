@@ -1,8 +1,9 @@
-import { $, component$, PropsOf, Slot, useComputed$, useId, useTask$ } from '@qwik.dev/core';
+import { $, component$, Slot, useComputed$, useId, useTask$ } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 
 import { MenuContext } from '../../dropdown-context';
 
-export const MenuSubTrigger = component$((props: PropsOf<'div'>) => {
+export const MenuSubTrigger = component$((props: OwPropsOf<'div'>) => {
   const ctx = MenuContext.use();
   const id = useId();
 

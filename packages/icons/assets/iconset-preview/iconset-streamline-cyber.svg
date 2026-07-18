@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: 3d-glasses -->
+  <text x="2" y="46.50" class="label">3d-glasses</text>
+  <g transform="translate(15.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m22.5 10.5l-5.75-5H14.5m-14 5l5.75-5H8.5m-8 5l2 9H8l3.5-3.5l3.5 3.5h5.5l2-9m-22 0h22"/><path d="M3.25 12.5h7.25V14L7 17.5H4.5zm16.5 0H12.5V14l3.5 3.5h2.5z"/></g>
+  </g>
+  <!-- Cell: 3d-sync -->
+  <text x="50" y="46.50" class="label">3d-sync</text>
+  <g transform="translate(63.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M15 15.5h-2.5v-6H15l1 3zm-9.5 0H10l.5-1.5l-1-1.5l1-1.5l-.5-1.5H5.5m1 3h3"/><path d="m2.5 6.5l9-5l9 4.5v7.5"/><path d="m22.5 11.5l-2 2l-2-2m2 7l-9 5l-9-4.5v-7.5"/><path d="m.5 13.5l2-2l2 2"/></g>
+  </g>
+  <!-- Cell: account -->
+  <text x="98" y="46.50" class="label">account</text>
+  <g transform="translate(111.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.5 23.5v-3h4v-5h3l-3-6v-3l-8-5l-9 5V16l4 3.5v4"/>
+  </g>
+  <!-- Cell: account-group-1 -->
+  <text x="146" y="46.50" class="label">account-group-1</text>
+  <g transform="translate(159.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m20.5 17l-3 1.5l-3-1.5v-3.5l3-1.5l3 1.5z"/><path d="m14.5 13.5l2.5 1h3.5m2 9V21l-5-1.5l-5 1.5v2.5m5-2v2m-9-6.5l-3 1.5l-3-1.5v-3.5l3-1.5l3 1.5z"/><path d="m2.5 13.5l2.5 1h3.5m2 9V21l-5-1.5l-5 1.5v2.5m5-2v2m9-18l-3 1.5l-3-1.5V2l3-1.5l3 1.5z"/><path d="M8.5 2L11 3.5h3.5m-8 7v-1l5-1.5l5 1.5v1m-5-.5v1.5"/></g>
+  </g>
+  <!-- Cell: account-hexagon -->
+  <text x="194" y="46.50" class="label">account-hexagon</text>
+  <g transform="translate(207.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m21.5 18l-10 5.5l-10-5.5V7l10-5.5l10 5.5z"/><path d="m14.5 11l-3 1.5l-3-1.5V7.5l3-1.5l3 1.5z"/><path d="m8.5 7.5l2.5 1h3.5m2 9V15l-5-1.5l-5 1.5v2.5m5-2v2"/></g>
+  </g>
+  <!-- Cell: account-lock -->
+  <text x="242" y="46.50" class="label">account-lock</text>
+  <g transform="translate(255.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M14.5 23.5v-3h4v-5h3l-3-6v-3l-8-5l-9 5V16l4 3.5v4"/><path d="M14.5 9.5h-8v6h8zm-7 0V8l3-1.5l3 1.5v1.5m-3 4v-2"/></g>
+  </g>
+  <!-- Cell: account-target -->
+  <text x="290" y="46.50" class="label">account-target</text>
+  <g transform="translate(303.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M11.5 19.5v4m0-22v4m11 7h-4m-14 0h-4m2-5l9-5l9 5v10l-9 5l-9-5z"/><path d="m14.5 13.5l-3 1.5l-3-1.5V10l3-1.5l3 1.5z"/><path d="m8.5 10l2.5 1.5h3.5m2 8.173V17.5l-5-1.5l-5 1.5v2.173"/></g>
+  </g>
+  <!-- Cell: add-double -->
+  <text x="338" y="46.50" class="label">add-double</text>
+  <g transform="translate(351.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M14.5 7.5v10m5-5h-10M6.5 8l8-4.5l8 4.5v9l-8 4.5l-8-4.5z"/><path d="M8.5 21.5L.5 17V8l8-4.5"/></g>
+  </g>
+  <!-- Cell: add-hexagon-1 -->
+  <text x="386" y="46.50" class="label">add-hexagon-1</text>
+  <g transform="translate(399.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M11.5 6.5v12m6-6h-12m16 5.5l-10 5.5l-10-5.5V7l10-5.5l10 5.5z"/>
+  </g>
+  <!-- Cell: add-hexagon-2 -->
+  <text x="434" y="46.50" class="label">add-hexagon-2</text>
+  <g transform="translate(447.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M17.5 10.5h-4v-4h-4v4h-4v4h4v4h4v-4h4z"/><path d="m21.5 18l-10 5.5l-10-5.5V7l10-5.5l10 5.5z"/></g>
+  </g>
+  <!-- Cell: adjust-brightness -->
+  <text x="2" y="96.00" class="label">adjust-brightn…</text>
+  <g transform="translate(15.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M11.5 1.5v3m0 16v3m-11-11h3m16 0h3M3.722 20.278l2.121-2.121M17.157 6.843l2.121-2.121m-15.556 0l2.121 2.121m11.314 11.314l2.121 2.121M6.5 9.65l5-2.65l5 2.65v5.7l-5 2.65l-5-2.65z"/>
+  </g>
+  <!-- Cell: airplane -->
+  <text x="50" y="96.00" class="label">airplane</text>
+  <g transform="translate(63.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M5.747 18.239L7.132 22.5l2.142-2.101l-.374-2.495l6.312-5.594L18.428 22l1.072-1.674V7.5l3-3.109V1.5h-3l-3 3H3.884L2.165 5.559l9.512 3.215l-5.605 6.301l-2.455-.333L1.5 16.843z"/>
+  </g>
+  <!-- Cell: airplane-arrival -->
+  <text x="98" y="96.00" class="label">airplane-arriv…</text>
+  <g transform="translate(111.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M.5 23.5h1m21 0h1m-20 0h17m-1.583-9.181L3.842 8.436L2.734 5.914L.5 5v5.5l6.17 2.886L.5 16.789l4 1l7.12-2.282L17.5 17.5l2.5-.568z"/><path d="M12.399 11.767L9.055 6.995L6.226 5.581l2.505 4.742"/></g>
+  </g>
+  <!-- Cell: airplane-departure -->
+  <text x="146" y="96.00" class="label">airplane-depar…</text>
+  <g transform="translate(159.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m20.887.75l-14.82 6.5l-2.567-1l-3 1l4.5 4l6.567-2.5l-2.067 7l4-2l3.067-7L22 4.5l1.5-2.668z"/><path d="M14.567 3.522L8.761 2.5l-3 1l5.198 1.604M.5 23.5h1m21 0h1m-20 0h17"/></g>
+  </g>
+  <!-- Cell: airplane-departure-cancel -->
+  <text x="194" y="96.00" class="label">airplane-depar…</text>
+  <g transform="translate(207.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m22.5 20.75l-4 2.25l-4-2.25v-4.5l4-2.25l4 2.25zm0-4.5l-8 4.5M20.887.5L6.067 7L3.5 6l-3 1L5 11l6.567-2.5l-2.067 7l4-2l3.067-7L22 4.25l1.5-2.668z"/><path d="M14.567 3.272L8.761 2.25l-3 1l5.198 1.604"/></g>
+  </g>
+  <!-- Cell: alarm -->
+  <text x="242" y="96.00" class="label">alarm</text>
+  <g transform="translate(255.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M11.5 1.5V4m-2-2.5h4m-2 7V13l2.5 1.5"/><path d="m3.5 9l8-5l8 5v8l-8 5l-8-5zm3-7l-4-.5L.5 4v3L8 3.5zm10 0l4-.5l2 2.5v3L15 3.5zM7.81 19.69L4 23.5m11.19-3.81L19 23.5"/></g>
+  </g>
+  <!-- Cell: alarm-snooze -->
+  <text x="290" y="96.00" class="label">alarm-snooze</text>
+  <g transform="translate(303.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M11.5 5V3.5m6 5.5v8.5l3 3h-18l3-3V9l6-4zm-8 11.5v2l2 1l2-1v-2m-13-18h4l-4 5h4m13-6h3l-3 4h3m0 5h2l-2 3h2"/>
+  </g>
+  <!-- Cell: ambulance -->
+  <text x="338" y="96.00" class="label">ambulance</text>
+  <g transform="translate(351.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M2.5 21.5h-2v-8l5.5-6h15.5l2 14h-3m-14 0h10m-16-8h8m4-8l-2-1l-2 1v2h4z"/><path d="M16.5 14.5v2h-3v-2h-2v-3h2v-2h3v2h2v3zm-8-7v14m-4-6h2m4-13v-2M7.5 3L6 1.5m-1.5 4h2m7-2.5L15 1.5m1.5 4h-2m-8 16.75l-2 1.25l-2-1.25v-2l2-1.25l2 1.25zm14 0l-2 1.25l-2-1.25v-2l2-1.25l2 1.25z"/></g>
+  </g>
+  <!-- Cell: android -->
+  <text x="386" y="96.00" class="label">android</text>
+  <g transform="translate(399.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M11.5 7.5h7l-1.5-4l-5.5-2l-5.5 2l-1.5 4zm-2-2v-1m4 1v-1m5 5h-14v11h14zm-16 0v7m18-7v7M7.843 2.843L5.5.5m9.657 2.343L17.5.5m-9 20v3m6-3v3"/>
+  </g>
+  <!-- Cell: apple-2 -->
+  <text x="434" y="96.00" class="label">apple-2</text>
+  <g transform="translate(447.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="m19.5 20.5l-4.5 3l-3.5-2l-3.5 2l-4.5-3l-2-10l6-3.5l4 2.5l4-2.5l6 3.5zM11.5 6l3.975-1.161L17.5.5l-4.339 2.025zm0 .5v-5"/>
+  </g>
+  <!-- Cell: arrange-letter -->
+  <text x="2" y="145.50" class="label">arrange-letter</text>
+  <g transform="translate(15.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M5.5 4.5v15m-3-3l3 3l3-3m7-1v-1h6l-6 9h6v-1m-6-11v-8l3-3l3 3v8m-6-5h6"/>
+  </g>
+  <!-- Cell: at-sign -->
+  <text x="50" y="145.50" class="label">at-sign</text>
+  <g transform="translate(63.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M15.5 23.5H7L.5 17V8L7 1.5h9L20.5 6v9L17 18.5H8.5l-2-2v-3l8-2v7"/><path d="M6.5 7.5h6l2 2v2"/></g>
+  </g>
+  <!-- Cell: atom-1 -->
+  <text x="98" y="145.50" class="label">atom-1</text>
+  <g transform="translate(111.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m13.5 13l-2 1.25l-2-1.25v-2l2-1.25l2 1.25z"/><path d="M14 3L11.5.5L9 3L6.5 9.5v5L9 21l2.5 2.5L14 21l2.5-6.5v-5z"/><path d="m6.5 14.5l5 3l6.573 1.584l3.643-1.409l-.972-3.399L16.5 9.5l-5-3l-6.574-1.584l-3.642 1.409l.971 3.399z"/><path d="m16.5 14.5l-5 3l-6.574 1.584l-3.642-1.409l.971-3.399L6.5 9.5l5-3l6.573-1.584l3.643 1.409l-.972 3.399z"/></g>
+  </g>
+  <!-- Cell: baby-face -->
+  <text x="146" y="145.50" class="label">baby-face</text>
+  <g transform="translate(159.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path stroke-miterlimit="10" d="m19.5 17.25l-8 5.25l-8-5.25V6.75l8-5.25l8 5.25zm-11-6.75v1m6-1v1"/><path stroke-miterlimit="10" d="m11.5 6.5l1-1l2 1.5l-3 2.5l-3-2.5l3-3V1.5M3.5 9l-2-.5V13l2 2m16-6l2-.5V13l-2 2m-5 3l-3 2l-3-2v-3l3-2l3 2z"/><path d="m11.495 16l.505.504l-.505.505m0-1.009l-.504.504l.504.505"/></g>
+  </g>
+  <!-- Cell: baby-milk-bottle -->
+  <text x="194" y="145.50" class="label">baby-milk-bott…</text>
+  <g transform="translate(207.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m19 14l-9-9l4.5-1.5l6 6zm-6.656-9.769l7.425 7.425"/><path d="m19 14l-7 4l-2 4.5l-2.5 1l-7-7l1-2.5L6 12l4-7m10.5 4.5l2-2l-1-2l1-1.5V1.5H20l-1.5 1l-2-1l-2 2m0 9l-1-1m-1 3l-1-1m-1 3l-1-1"/></g>
+  </g>
+  <!-- Cell: baby-stroller-1 -->
+  <text x="242" y="145.50" class="label">baby-stroller-1</text>
+  <g transform="translate(255.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M23.5 4.5h-3l-5 16H4.75L.5 14v-2.5l1.5-7l9.5-3l-3 10m-8 0h17.812M5.5 20.5v2l1.5 1l1.5-1v-2m3 0v2l1.5 1l1.5-1v-2"/>
+  </g>
+  <!-- Cell: bacteria -->
+  <text x="290" y="145.50" class="label">bacteria</text>
+  <g transform="translate(303.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m16 5.5l4.5 7l-4.5 7H8l-4.5-7l4.5-7zm4.5 7h3m-23 0h3m12.5-7l2.5-3M8 5.5l-2.5-3m10.5 17l2.5 3M8 19.5l-2.5 3"/><path d="m11.5 16.5l-1.5 1l-1.5-1V15l1.5-1l1.5 1zm4-4.5L13 13.5L10.5 12V9L13 7.5L15.5 9z"/></g>
+  </g>
+  <!-- Cell: badge-1 -->
+  <text x="2" y="195.00" class="label">badge-1</text>
+  <g transform="translate(15.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m8.5 14.5l-2 8.5l5.5-3.5l5.5 3.5l-2-8.5m-3.5-7L10.5 9l1.5 1.5L13.498 9l-1.5-1.5z"/><path d="M17.5 11.278L20 9l-2.5-2.278V3.5h-3.222L12 1L9.722 3.5H6.5v3.222L4 9l2.5 2.278V14.5h3.222L12 17l2.278-2.5H17.5z"/><path d="M8.5 7L12 5l3.5 2v4L12 13l-3.5-2z"/></g>
+  </g>
+  <!-- Cell: badge-favorite-heart-2 -->
+  <text x="50" y="195.00" class="label">badge-favorite…</text>
+  <g transform="translate(63.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m11.5 14.5l4-4l-2-2.5l-2 1.5l-2-1.5l-2 2.5zm-1.562 3.125L7.5 23.5l-2.5-3H.5l5-4m7.562 1.125L15.5 23.5l2.5-3h4.5l-5-4"/><path d="M9 16.5H5.5V13l-3-2.5l3-2.5V4.5h3l3-3l3 3h3v3l3 3l-3 2.5v3.5H14l-2.5 3z"/></g>
+  </g>
+  <!-- Cell: badge-star-2 -->
+  <text x="98" y="195.00" class="label">badge-star-2</text>
+  <g transform="translate(111.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m11.505 5l.995 2.5H15l-1.944 1.778l.777 2.722l-2.333-1.748L9.167 12l.777-2.722L8 7.5h2.5zm5.866 15.112l-5.87-1.612l-5.873 1.612"/><path d="M18.454 17.766L22.5 19.5l-2.667 1.167L21 23.5L16.5 22l3-6.5l-8-2l-8 2l3 6.5L2 23.5l1.167-2.833L.5 19.5l4.051-1.722"/><path d="M5.5 15.004V13.5l-3-3l3-3v-3h3l3-3l3.5 3h2.5v3l3 3l-3 3v1.517"/></g>
+  </g>
+  <!-- Cell: bank-1 -->
+  <text x="146" y="195.00" class="label">bank-1</text>
+  <g transform="translate(159.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M20.5 9.5h-17v10h17zm3 14H.5m21-2h-19l1-2h17zm-16-12v10m5-10v10m-2-10v10m5-10v10m2-10v10m3-10v10m2.5-12l-2.5-5l-6.5-2l-6.5 2l-2.5 5zm1.5 0h-21l1 2h19zm-21 14h21m-19-4h2m3 0h2m3 0h2m3 0h2"/>
+  </g>
+  <!-- Cell: bank-note-1 -->
+  <text x="194" y="195.00" class="label">bank-note-1</text>
+  <g transform="translate(207.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="m21.5 15.5l-14 4l-2 2l-5-10l2-2l14-4l2-2l5 10z"/><path d="m12.764 10.09l-1.906.604l-.175 1.105l.779.802l1.907-.605l.779.803l-.175 1.104l-1.906.604m-.256-4.115l-.302-.953m1.813 5.719l-.302-.953M7.5 19.5l-2.108-4.217M4.5 13.5l-.5-1m16 0l-.5-1m-.892-1.783L16.5 5.5"/></g>
+  </g>
+  <!-- Cell: bank-note-2 -->
+  <text x="242" y="195.00" class="label">bank-note-2</text>
+  <g transform="translate(255.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M22.5 5.5H.5v13h22zm-22 4l4.123-3.994M22.5 9.5l-4.129-4M.5 14.5l4.129 4m17.871-4l-4.129 4"/><path d="M13.5 9.5H10L9 11l1 1.5h3l1 1.5l-1 1.5H9.5m2-6v-1m0 8v-1"/></g>
+  </g>
+  <!-- Cell: bank-notes-1 -->
+  <text x="290" y="195.00" class="label">bank-notes-1</text>
+  <g transform="translate(303.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M.5 8L4 4.5M.5 12L4 15.5m14.5-11H.5v11h18zm0 3.5L15 4.5m3.5 7.5L15 15.5"/><path d="M20.5 6.5v11h-18"/><path d="M22.5 8.5v11h-18m7-11H8.25l-.75 1l.75 1h2.5l.75 1l-.75 1H7.5m2-4v-1m0 6v-1"/></g>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-streamline-cyber</text>
+  <text x="348" y="139.738" class="overlay-title">cyber free icons</text>
+  <text x="351" y="190.744" class="overlay-meta">CC-BY-4.0 · 500 icons</text>
+</svg>

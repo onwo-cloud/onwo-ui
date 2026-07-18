@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("/fonts/HankenGrotesk[wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Hanken Grotesk Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 92.5564%;
+  descent-override: 28.0446%;
+  size-adjust: 108.0422%;
+}
+@font-face {
+  font-family: "Hanken Grotesk Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 99.0668%;
+  descent-override: 30.0173%;
+  line-gap-override: 0%;
+  size-adjust: 100.9419%;
+}
+@font-face {
+  font-family: "Hanken Grotesk Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 105.3333%;
+  descent-override: 31.916%;
+  size-adjust: 94.9367%;
+}
+
+:root {
+  --font-hanken-grotesk: "Hanken Grotesk", "Hanken Grotesk Fallback: -apple-system", "Hanken Grotesk Fallback: Arial", "Hanken Grotesk Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

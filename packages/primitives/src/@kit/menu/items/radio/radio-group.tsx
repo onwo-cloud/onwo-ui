@@ -1,7 +1,8 @@
-import { $, component$, PropsOf, QRL, Signal, Slot, useSignal } from "@qwik.dev/core";
+import { $, component$, QRL, Signal, Slot, useSignal } from "@qwik.dev/core";
+import { OwPropsOf } from '~primitives/index';
 import { RadioGroupContext, RadioGroupContextData } from "./radio-group-context";
 
-type RadioGroupProps = PropsOf<'div'> & {
+type RadioGroupProps = OwPropsOf<'div'> & {
   ['bind:value']?: Signal<string>;
   onValueChange$?: QRL<(value: string) => void>;
 };

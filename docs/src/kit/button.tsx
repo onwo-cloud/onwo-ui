@@ -1,114 +1,174 @@
+import { component$, $ } from '@qwik.dev/core';
 import { Button } from '@onwo/ui/button';
-import { component$ } from '@qwik.dev/core';
-import { Link } from '@qwik.dev/router';
-import type { BaseIconProps } from '~primitives/@kit/svg-icon';
+import type { BoxedComp, Section, ControlSchema } from './index';
 
-import { Icon } from '~/utils/icon';
+// 1. Define interactive control schema
+const buttonControls = {
+  variant: {
+    type: 'segmented',
+    label: 'Variant',
+    default: 'primary',
+    options: [
+      { label: 'Primary', value: 'primary' },
+      { label: 'Secondary', value: 'secondary' },
+      { label: 'Outline', value: 'outline' },
+      { label: 'Ghost', value: 'ghost' },
+      { label: 'Destructive', value: 'destructive' },
+    ],
+  },
+  size: {
+    type: 'segmented',
+    label: 'Size',
+    default: 'md',
+    options: [
+      { label: 'XS', value: 'xs' },
+      { label: 'SM', value: 'sm' },
+      { label: 'MD', value: 'md' },
+      { label: 'LG', value: 'lg' },
+      { label: 'XL', value: 'xl' },
+    ],
+  },
+  label: {
+    type: 'text',
+    label: 'Button Text',
+    default: 'Click Me',
+  },
+  disabled: {
+    type: 'boolean',
+    label: 'Disabled',
+    default: false,
+  },
+  isLoading: {
+    type: 'boolean',
+    label: 'Loading State',
+    default: false,
+  },
+} as const satisfies ControlSchema;
 
-import type { BoxedComp, Section } from '.';
+// 2. Default Boxed Component with dynamic code generation
+const buttonDefault: BoxedComp<typeof buttonControls> = {
+  title: 'Default Component Playground',
+  description: 'Interactive sandbox to test button props and variants.',
+  controls: buttonControls,
 
-const buttonDefault: BoxedComp = {
-  title: 'Default',
-  display: component$(() => (
-    <div class="flex justify-center">
-      <Button> Default </Button>
+  // Display receives interactive controls store in real-time
+  display: component$(({ controls, logger }) => (
+    <div class="flex justify-center items-center p-8 w-full">
+      <Button
+        variant={controls.variant}
+        onClick$={$(() => {
+          logger.log$('Clicked!');
+        })}
+        size={controls.size}
+        disabled={controls.disabled}
+        isLoading={controls.isLoading}
+      >
+        {controls.label}
+      </Button>
     </div>
   )),
-  code: `
-import { Button } from '@onwo/ui';
 
-<Button> Button </Button>
-`,
+  // Dynamic code generator takes control values and outputs clean JSX
+  code: $((values) => {
+    const props = [
+      values.variant !== 'primary' ? `variant="${values.variant}"` : '',
+      values.size !== 'md' ? `size="${values.size}"` : '',
+      values.disabled ? 'disabled' : '',
+      values.isLoading ? 'isLoading' : '',
+    ]
+      .filter(Boolean)
+      .join(' ');
+
+    const formattedProps = props ? ` ${props}` : '';
+    return `import { Button } from '@onwo/ui/button';\n\n<Button${formattedProps}> ${values.label} </Button>`;
+  }),
 };
 
+// Static preview boxes
 const buttonVariants: BoxedComp = {
   title: 'Variants',
-  display: component$(() => (
-    <div class="flex flex-col gap-4 items-center justify-around">
-      <Button> Default </Button>
-      <Button variant="outline"> Outline </Button>
-      <Button variant="ghost"> Ghost </Button>
+  display: component$(({ logger }) => (
+    <div class="flex flex-wrap gap-3 items-center justify-center p-4">
+      <Button
+        variant="primary"
+        onClick$={$(() => {
+          logger.log$('Primary clicked!');
+        })}
+      >
+        Primary
+      </Button>
+      <Button
+        variant="secondary"
+        onClick$={$(() => {
+          logger.log$('Secondary clicked!');
+        })}
+      >
+        Secondary
+      </Button>
+      <Button
+        variant="outline"
+        onClick$={$(() => {
+          logger.log$('Outline clicked!');
+        })}
+      >
+        Outline
+      </Button>
+      <Button
+        variant="ghost"
+        onClick$={$(() => {
+          logger.log$('Ghost clicked!');
+        })}
+      >
+        Ghost
+      </Button>
+      <Button
+        variant="destructive"
+        onClick$={$(() => {
+          logger.log$('Destructive clicked!');
+        })}
+      >
+        Destructive
+      </Button>
     </div>
   )),
-  code: `import { Button } from '@onwo/ui';
+  code: $(() => `import { Button } from '@onwo/ui/button';
 
-<Button> Default </Button>
+<Button variant="primary"> Primary </Button>
+<Button variant="secondary"> Secondary </Button>
 <Button variant="outline"> Outline </Button>
 <Button variant="ghost"> Ghost </Button>
-`,
+<Button variant="destructive"> Destructive </Button>`),
 };
 
 const buttonSizes: BoxedComp = {
-  title: 'Sizes (xs-xl)',
+  title: 'Sizes',
   display: component$(() => (
-    <div class="flex flex-col gap-4 items-center justify-around">
-      <Button size="sm" start={Icon.named('settings')}>
-        Size SM
-      </Button>
-      <Button size="lg" start={Icon.named('settings')}>
-        Size LG
-      </Button>
+    <div class="flex flex-wrap gap-3 items-center justify-center p-4">
+      <Button size="xs"> Size XS </Button>
+      <Button size="sm"> Size SM </Button>
+      <Button size="md"> Size MD </Button>
+      <Button size="lg"> Size LG </Button>
+      <Button size="xl"> Size XL </Button>
     </div>
   )),
-  code: `import { Button } from '@onwo/ui';
+  code: $(() => `import { Button } from '@onwo/ui/button';
 
-<Button size="xs" start={GenericIcon.named('settings')}>Size XS</Button>
-<Button size="sm" start={GenericIcon.named('settings')}>Size SM</Button>
-<Button size="md" start={GenericIcon.named('settings')}>Size MD</Button>
-<Button size="lg" start={GenericIcon.named('settings')}>Size LG</Button>
-<Button size="xl" start={GenericIcon.named('settings')}>Size XL</Button>
-`,
-};
-
-const buttonIcons: BoxedComp = {
-  title: 'Icons',
-  display: component$(() => (
-    <div class="flex flex-col gap-4 items-center justify-around">
-      <Button start={Icon.named('ship-wheel')}>Button start</Button>
-      <Button end={Icon.named('ship-wheel')}>Button end</Button>
-    </div>
-  )),
-  code: `
-import { Button } from '@onwo/ui';
-
-<Button start={GenericIcon.named('settings')}>Button start</Button>
-<Button end={GenericIcon.named('settings')}>Button end</Button>
-`,
-};
-
-const customIcons: BoxedComp = {
-  title: 'Custom icons',
-  display: component$(() => (
-    <div class="flex gap-4 items-center justify-around">
-      <Button variant="outline" end={(_: BaseIconProps) => <b>🚀</b>}>
-        Custom
-      </Button>
-    </div>
-  )),
-  code: `
-import { Button } from '@onwo/ui';
-
-<div class="flex gap-4 items-center justify-around">
-  <Button size="md" variant="outline" end={(_: IconProps) => <b>🚀</b>}>
-    Custom
-  </Button>
-</div>
-`,
+<Button size="xs"> Size XS </Button>
+<Button size="sm"> Size SM </Button>
+<Button size="md"> Size MD </Button>
+<Button size="lg"> Size LG </Button>
+<Button size="xl"> Size XL </Button>`),
 };
 
 export const section: Section = {
   title: 'Button',
   link: 'https://github.com/onwo-cloud/onwo-ui/tree/main/packages/ui/src/components/button',
-  description: 'Multi-variants button element',
+  description: 'Multi-variants button element supporting dynamic slots.',
   aside: component$(() => (
     <span>
-      This component adapts dynamically between a native `{`<button>`}` and custom elements like `
-      {`<div role="button">`}` to prevent HTML parsing conflicts with nested slots during
-      server-side rendering, addressing the issues outlined in{' '}
-      <Link href="/questions/fix-is-not-allowed-as/"> the documentation </Link>.
+      A multi-variant styled button that can be rendered as a div.
     </span>
   )),
-
   default: buttonDefault,
-  others: [buttonVariants, buttonSizes, buttonIcons, customIcons],
+  others: [buttonVariants, buttonSizes],
 };

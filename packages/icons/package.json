@@ -41,7 +41,7 @@
     "lint": "oxlint",
     "lint.fix": "oxlint --fix",
     "lint.watch": "oxlint --watch",
-    "ts-watch": "tsgo --emitDeclarationOnly --incremental --preserveWatchOutput --pretty --watch"
+    "ts.watch": "tsgo --emitDeclarationOnly --incremental --preserveWatchOutput --pretty --watch"
   },
   "devDependencies": {
     "@onwo/primitives": "workspace:*",

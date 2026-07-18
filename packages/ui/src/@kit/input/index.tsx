@@ -1,6 +1,6 @@
-import type { PropsOf } from '@qwik.dev/core';
+import { OwPropsOf } from "~primitives/index";
 
-function Input({ class: className, type, ...props }: PropsOf<'input'>) {
+function Input({ class: className, type, ...props }: OwPropsOf<'input'>) {
   return (
     <input
       type={type}

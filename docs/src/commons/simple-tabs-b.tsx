@@ -22,7 +22,7 @@ export const SimpleTabs = component$<SimpleTabsProps>(
     const activeElement = useComputed$(() => tabRefs[selected.value]);
 
     return (
-      <div class={['bg-paper rounded-full p-1.5 border border-gray-200 w-fit', props.class]}>
+      <div class={['bg-paper rounded-full p-1.5 border border-shade-200 w-fit', props.class]}>
         <div class="flex items-center space-x-0.5 relative">
           <HoverBox activeElement={activeElement} />
           {tabs.map((tab) => (

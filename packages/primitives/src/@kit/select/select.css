@@ -1,7 +1,0 @@
-[role='listbox'][data-closed] {
-  display: none;
-}
-
-[role='listbox'][data-open] {
-  display: revert;
-}

@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Inter Variable Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 84.4932%;
+  descent-override: 21.0381%;
+  size-adjust: 114.6542%;
+}
+@font-face {
+  font-family: "Inter Variable Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 90.4365%;
+  descent-override: 22.518%;
+  line-gap-override: 0%;
+  size-adjust: 107.1194%;
+}
+@font-face {
+  font-family: "Inter Variable Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 96.1571%;
+  descent-override: 23.9423%;
+  size-adjust: 100.7466%;
+}
+
+:root {
+  --font-inter: "Inter Variable", "Inter Variable Fallback: -apple-system", "Inter Variable Fallback: Arial", "Inter Variable Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

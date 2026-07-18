@@ -1,5 +1,5 @@
 import { dynamicIcon } from '~icons/dynamic-icon';
-import { createUiProvider } from '~ui/icon-provider';
+import { createUiProvider } from '@onwo/ui';
 
 // We avoid typechecking on all iconset; we just load the one we need via tsconfig.json
 import { LucideIconSet } from '@onwo/iconset-lucide';

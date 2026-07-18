@@ -1,31 +1,28 @@
-import { component$, PropsOf, Slot } from '@qwik.dev/core';
-
-import { Button } from '../button';
-
+import { $, component$, Slot } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
+import { PopoverTrigger } from '../popover/popover-trigger';
 import { MenuContext } from './dropdown-context';
 
-export const MenuTrigger = component$((props: PropsOf<'div'>) => {
+export const MenuTrigger = component$((props: OwPropsOf<'button'>) => {
   const ctx = MenuContext.use();
 
   return (
-    <Button
-      as="div"
-      aria-haspopup="menu"
-      aria-expanded={ctx.isOpen.value}
+    <PopoverTrigger
+      aria-haspopup="menu" // 👈 Overrides popover default for proper Menu A11y
       ref={ctx.triggerRef}
-      onClick$={() => {
-        ctx.isOpen.value = !ctx.isOpen.value;
-      }}
-      onKeyDown$={(e) => {
-        if (e.key === 'ArrowDown') {
-          e.preventDefault();
-          ctx.isOpen.value = true;
-          ctx.activeIndex.value = 0;
-        }
-      }}
+      onKeyDown$={[
+        $((e: KeyboardEvent) => {
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            ctx.isOpen.value = true;
+            ctx.activeIndex.value = 0; // Highlight first menu item on open
+          }
+        }),
+        props.onKeyDown$,
+      ]}
       {...props}
     >
       <Slot />
-    </Button>
+    </PopoverTrigger>
   );
 });

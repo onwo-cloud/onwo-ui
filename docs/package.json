@@ -11,7 +11,7 @@
   "repository": "https://github.com/onwo-cloud/onwo-ui",
   "type": "module",
   "scripts": {
-    "build": "qwik build",
+    "build": "qwik build && pagefind --site dist",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "qwik check-client src dist && vite build -c adapters/ssg/vite.config.ts",
@@ -21,16 +21,47 @@
     "lint": "echo 123",
     "lint.fix": "oxlint --fix",
     "lint.watch": "oxlint --watch",
-    "ts-watch": "tsgo --noEmit --incremental --preserveWatchOutput --pretty --watch"
+    "ts-watch": "tsc --noEmit --incremental --preserveWatchOutput --pretty --watch"
   },
   "dependencies": {
+    "@onwo/iconset-carbon": "../packages/icons/packages/iconset-carbon/",
+    "@onwo/iconset-circum": "../packages/icons/packages/iconset-circum/",
+    "@onwo/iconset-cuida": "../packages/icons/packages/iconset-cuida/",
+    "@onwo/iconset-flowbite": "../packages/icons/packages/iconset-flowbite/",
+    "@onwo/iconset-fluent": "../packages/icons/packages/iconset-fluent/",
+    "@onwo/iconset-gravity-ui": "../packages/icons/packages/iconset-gravity-ui/",
+    "@onwo/iconset-heroicons": "../packages/icons/packages/iconset-heroicons/",
+    "@onwo/iconset-hugeicons": "../packages/icons/packages/iconset-hugeicons/",
+    "@onwo/iconset-icon-park": "../packages/icons/packages/iconset-icon-park/",
+    "@onwo/iconset-iconamoon": "../packages/icons/packages/iconset-iconamoon/",
+    "@onwo/iconset-iconoir": "../packages/icons/packages/iconset-iconoir/",
+    "@onwo/iconset-lets-icons": "../packages/icons/packages/iconset-lets-icons/",
+    "@onwo/iconset-line-md": "../packages/icons/packages/iconset-line-md/",
+    "@onwo/iconset-lsicon": "../packages/icons/packages/iconset-lsicon/",
     "@onwo/iconset-lucide": "../packages/icons/packages/iconset-lucide/",
     "@onwo/iconset-mdi": "../packages/icons/packages/iconset-mdi/",
+    "@onwo/iconset-mage": "../packages/icons/packages/iconset-mage/",
+    "@onwo/iconset-material-symbols": "../packages/icons/packages/iconset-material-symbols/",
+    "@onwo/iconset-mingcute": "../packages/icons/packages/iconset-mingcute/",
+    "@onwo/iconset-mynaui": "../packages/icons/packages/iconset-mynaui/",
+    "@onwo/iconset-ph": "../packages/icons/packages/iconset-ph/",
+    "@onwo/iconset-proicons": "../packages/icons/packages/iconset-proicons/",
+    "@onwo/iconset-radix-icons": "../packages/icons/packages/iconset-radix-icons/",
+    "@onwo/iconset-ri": "../packages/icons/packages/iconset-ri/",
+    "@onwo/iconset-solar": "../packages/icons/packages/iconset-solar/",
+    "@onwo/iconset-stash": "../packages/icons/packages/iconset-stash/",
+    "@onwo/iconset-streamline": "../packages/icons/packages/iconset-streamline/",
+    "@onwo/iconset-system-uicons": "../packages/icons/packages/iconset-system-uicons/",
+    "@onwo/iconset-tabler": "../packages/icons/packages/iconset-tabler/",
+    "@onwo/iconset-tdesign": "../packages/icons/packages/iconset-tdesign/",
+    "@onwo/iconset-teenyicons": "../packages/icons/packages/iconset-teenyicons/",
     "effect": "^3.21.2",
-    "motion": "^12.38.0"
+    "motion": "^12.38.0",
+    "ogl": "^1.0.11"
   },
   "devDependencies": {
     "@onwo/tailwindcss": "workspace:*",
+    "pagefind": "^1.5.2",
     "playwright": "^1.61.1"
   },
   "engines": {

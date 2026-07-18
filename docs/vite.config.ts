@@ -25,7 +25,16 @@ export default defineConfig((): UserConfig => {
   return {
     plugins: [qwikRouter(), qwikVite(), tsconfigPaths(), tailwindcss({ optimize: false }) ],
     optimizeDeps: {
-      exclude: [],
+      exclude: ['pagefind', '/_pagefind/pagefind.js', '/pagefind/pagefind.js'],
+    },
+    build: {
+      rollupOptions: {
+        external: [
+          'pagefind',
+          '/_pagefind/pagefind.js',
+          '/pagefind/pagefind.js',
+        ],
+      },
     },
 
     server: {

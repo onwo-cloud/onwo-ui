@@ -1,7 +1,7 @@
-import type { PropsOf } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 import { Slot, component$, sync$, $ } from '@qwik.dev/core';
 
-export type LabelProps = PropsOf<'label'>;
+export type LabelProps = OwPropsOf<'label'>;
 
 export const Label = component$<LabelProps>((props) => {
   const handleMouseDownSync$ = sync$((event: MouseEvent) => {

@@ -1,28 +1,24 @@
-import type { PropsOf } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 import { Button as ButtonPrimitive } from '../button';
 import { Slot, component$, $ } from '@qwik.dev/core';
 
 import { useModalContext } from './context';
 
-export type TriggerProps = PropsOf<'div'>;
+export type TriggerProps = OwPropsOf<'div'>;
 
-export const Trigger = component$((props: PropsOf<'div'>) => {
+export const Trigger = component$((props: TriggerProps) => {
   const context = useModalContext();
-
-  const handleClick$ = $(() => {
-    if (context.control.opened.value) return;
-    context.control.opened.value = !context.control.opened.value;
-  });
 
   return (
     <ButtonPrimitive
       as="div"
+      {...props}
+      data-modal-trigger=""
       aria-haspopup="dialog"
       aria-expanded={context.control.opened.value}
       data-open={context.control.opened.value ? '' : undefined}
       data-closed={context.control.opened.value ? undefined : ''}
-      onClick$={[handleClick$, props.onClick$]}
-      {...props}
+      onClick$={[context.control.show$, props.onClick$]}
     >
       <Slot />
     </ButtonPrimitive>

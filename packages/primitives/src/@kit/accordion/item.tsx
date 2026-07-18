@@ -8,7 +8,7 @@ import {
   useSignal,
   useTask$,
 } from '@qwik.dev/core';
-import type { Primitive } from '~primitives/utils/as';
+import type { OwPropsOf } from '~primitives/utils/as';
 
 import { useAccordionRootContext } from './root';
 
@@ -21,7 +21,7 @@ export const AccordionItemContext = createContextId<AccordionContext>('accordion
 // Custom hook for theme management
 export const useAccordionItemContext = () => useContext(AccordionItemContext);
 
-export type ItemProps = Primitive<'div'> & {
+export type ItemProps = OwPropsOf<'div'> & {
   disabled?: boolean;
   name?: string;
   defaultOpen?: boolean;

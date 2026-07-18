@@ -1,6 +1,7 @@
-import { $, component$, type PropsOf } from '@qwik.dev/core';
+import { $, component$ } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 
-type TextareaProps = PropsOf<'textarea'> & {
+type TextareaProps = OwPropsOf<'textarea'> & {
   error?: string;
 };
 

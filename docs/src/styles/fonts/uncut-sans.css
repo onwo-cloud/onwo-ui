@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Uncut Sans Variable Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 88.9217%;
+  descent-override: 21.6545%;
+  size-adjust: 108.5224%;
+}
+@font-face {
+  font-family: "Uncut Sans Variable Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 95.1765%;
+  descent-override: 23.1777%;
+  line-gap-override: 0%;
+  size-adjust: 101.3906%;
+}
+@font-face {
+  font-family: "Uncut Sans Variable Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 101.1969%;
+  descent-override: 24.6438%;
+  size-adjust: 95.3586%;
+}
+
+:root {
+  --font-uncut-sans: "Uncut Sans Variable", "Uncut Sans Variable Fallback: -apple-system", "Uncut Sans Variable Fallback: Arial", "Uncut Sans Variable Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

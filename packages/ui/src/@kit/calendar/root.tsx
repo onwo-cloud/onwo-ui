@@ -1,6 +1,6 @@
 import { $, component$, useSignal, useTask$ } from '@qwik.dev/core';
 import type { CSSProperties, JSXChildren, QRL, Signal } from '@qwik.dev/core';
-import { UiIcon } from '~ui/icon-provider';
+import { UiIcon } from '~ui/commons/icon-provider';
 import { Button as ButtonPrimitive } from '@onwo/primitives/button';
 
 import {
@@ -213,7 +213,7 @@ export const Calendar = component$(
               class="mb-2 mx-1 flex items-center justify-between z-10 relative"
             >
               <HeadNavButton
-                icon={<UiIcon name="chevron-left" />}
+                icon={<UiIcon i="chevron-left" />}
                 onClick$={$(() => triggerAction$(-1))}
               />
 
@@ -244,7 +244,7 @@ export const Calendar = component$(
               </ButtonPrimitive>
 
               <HeadNavButton
-                icon={<UiIcon name="chevron-right" />}
+                icon={<UiIcon i="chevron-right" />}
                 onClick$={$(() => triggerAction$(1))}
               />
             </div>

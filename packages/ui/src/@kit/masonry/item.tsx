@@ -1,15 +1,13 @@
-import type { CSSProperties, JSXChildren } from '@qwik.dev/core';
-import type { AsProps } from '@onwo/primitives';
+import type { CSSProperties } from '@qwik.dev/core';
 import { withAs } from '@onwo/primitives';
 
-type MasonryItemPropsInner = {
+type MasonryItemProps = {
   width: number;
   height: number;
-  children: JSXChildren;
   style?: CSSProperties;
 };
 
-export const MasonryItem = withAs('div')<MasonryItemPropsInner>(
+export const MasonryItem = withAs('div')<MasonryItemProps>(
   ({ As, width, height, ...props }) => (
     <As
       {...props}
@@ -20,5 +18,3 @@ export const MasonryItem = withAs('div')<MasonryItemPropsInner>(
     </As>
   ),
 );
-
-export type MasonryItemProps = AsProps<typeof MasonryItem>;

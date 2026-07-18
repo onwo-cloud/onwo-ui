@@ -1,0 +1,30 @@
+export interface AOMNode {
+  id: string;
+  targetId?: string;
+  tagName: string;
+  role: string | null;
+  accessibleName: string;
+  description: string;
+  value?: string;
+  placeholder?: string;
+  inputType?: string;
+  isHidden: boolean;
+  isFocused: boolean;
+  isDisabled: boolean;
+  isRequired?: boolean;
+  isInvalid?: boolean;
+  isExpanded?: boolean | null;
+  isPressed?: boolean | null;
+  isChecked?: "true" | "false" | "mixed" | null;
+  isSelected?: boolean | null;
+  level?: number | null;
+  valueNow?: string | number | null;
+  valueMin?: string | number | null;
+  valueMax?: string | number | null;
+  valueText?: string | null;
+  attributes: Record<string, string>;
+  issues: string[];
+  children: AOMNode[];
+  isBlockRole?: boolean;
+  headerText?: string;
+}

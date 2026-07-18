@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: add-circle -->
+  <text x="2" y="46.50" class="label">add-circle</text>
+  <g transform="translate(15.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M12 7a1 1 0 0 0-.993.883L11 8v3H8a1 1 0 0 0-.117 1.993L8 13h3v3a1 1 0 0 0 1.993.117L13 16v-3h3a1 1 0 0 0 .117-1.993L16 11h-3V8a1 1 0 0 0-1-1" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: airplay -->
+  <text x="50" y="46.50" class="label">airplay</text>
+  <g transform="translate(63.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M11.514 16.903a.6.6 0 0 1 .976 0l2.766 3.868a.6.6 0 0 1-.488.949H9.237a.6.6 0 0 1-.488-.949z" class="duoicon-primary-layer"/><path fill="currentColor" d="M20 4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-3.71l-3.151-4.407a1.4 1.4 0 0 0-2.278 0L7.711 19H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: alert-octagon -->
+  <text x="98" y="46.50" class="label">alert-octagon</text>
+  <g transform="translate(111.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M15.314 2a2 2 0 0 1 1.414.586l4.686 4.686A2 2 0 0 1 22 8.686v6.628a2 2 0 0 1-.586 1.414l-4.686 4.686a2 2 0 0 1-1.414.586H8.686a2 2 0 0 1-1.414-.586l-4.686-4.686A2 2 0 0 1 2 15.314V8.686a2 2 0 0 1 .586-1.414l4.686-4.686A2 2 0 0 1 8.686 2z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M12 6a1 1 0 0 0-.993.883L11 7v6a1 1 0 0 0 1.993.117L13 13V7a1 1 0 0 0-1-1m0 9a1 1 0 1 0 0 2a1 1 0 0 0 0-2" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: alert-triangle -->
+  <text x="146" y="46.50" class="label">alert-triangle</text>
+  <g transform="translate(159.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m13.299 3.148l8.634 14.954a1.5 1.5 0 0 1-1.299 2.25H3.366a1.5 1.5 0 0 1-1.299-2.25l8.634-14.954c.577-1 2.02-1 2.598 0" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M12 8a1 1 0 0 0-.993.883L11 9v4a1 1 0 0 0 1.993.117L13 13V9a1 1 0 0 0-1-1m0 7a1 1 0 1 0 0 2a1 1 0 0 0 0-2" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: align-bottom -->
+  <text x="194" y="46.50" class="label">align-bottom</text>
+  <g transform="translate(207.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M15 7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: align-center -->
+  <text x="242" y="46.50" class="label">align-center</text>
+  <g transform="translate(255.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M17 17.5a1.5 1.5 0 0 1 .144 2.993L17 20.5H7a1.5 1.5 0 0 1-.144-2.993L7 17.5z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M20 2.5a1.5 1.5 0 0 1 .144 2.993L20 5.5H4a1.5 1.5 0 0 1-.144-2.993L4 2.5z" class="duoicon-primary-layer"/><path fill="currentColor" d="M17 7.5a1.5 1.5 0 0 1 .144 2.993L17 10.5H7a1.5 1.5 0 0 1-.144-2.993L7 7.5z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M20 12.5a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: android -->
+  <text x="290" y="46.50" class="label">android</text>
+  <g transform="translate(303.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M20 14v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-5zm-5-7a1 1 0 1 0 0 2a1 1 0 0 0 0-2M9 7a1 1 0 1 0 0 2a1 1 0 0 0 0-2" class="duoicon-primary-layer"/><path fill="currentColor" fill-rule="evenodd" d="M12 3c1.33 0 2.584.324 3.687.899l.606-.606a1 1 0 1 1 1.414 1.414l-.35.35A7.98 7.98 0 0 1 20 11v1H4v-1a7.98 7.98 0 0 1 2.644-5.942l-.351-.35a1 1 0 1 1 1.414-1.415l.606.606A8 8 0 0 1 12 3" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: app -->
+  <text x="338" y="46.50" class="label">app</text>
+  <g transform="translate(351.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M8.75 13A2.25 2.25 0 0 1 11 15.25v3.5A2.25 2.25 0 0 1 8.75 21h-3.5A2.25 2.25 0 0 1 3 18.75v-3.5A2.25 2.25 0 0 1 5.25 13zm10-10A2.25 2.25 0 0 1 21 5.25v3.5A2.25 2.25 0 0 1 18.75 11h-3.5A2.25 2.25 0 0 1 13 8.75v-3.5A2.25 2.25 0 0 1 15.25 3z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M8.75 3A2.25 2.25 0 0 1 11 5.25v3.5A2.25 2.25 0 0 1 8.75 11h-3.5A2.25 2.25 0 0 1 3 8.75v-3.5A2.25 2.25 0 0 1 5.25 3z" class="duoicon-primary-layer"/><path fill="currentColor" d="M18.75 13A2.25 2.25 0 0 1 21 15.25v3.5A2.25 2.25 0 0 1 18.75 21h-3.5A2.25 2.25 0 0 1 13 18.75v-3.5A2.25 2.25 0 0 1 15.25 13z" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: app-dots -->
+  <text x="386" y="46.50" class="label">app-dots</text>
+  <g transform="translate(399.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M7 11.5c-3.464 0-5.63-3.75-3.897-6.75A4.5 4.5 0 0 1 7 2.5c3.464 0 5.63 3.75 3.897 6.75A4.5 4.5 0 0 1 7 11.5" class="duoicon-primary-layer"/><path fill="currentColor" d="M17 21.5c-3.464 0-5.63-3.75-3.897-6.75A4.5 4.5 0 0 1 17 12.5c3.464 0 5.63 3.75 3.897 6.75A4.5 4.5 0 0 1 17 21.5m0-10c-3.464 0-5.63-3.75-3.897-6.75A4.5 4.5 0 0 1 17 2.5c3.464 0 5.63 3.75 3.897 6.75A4.5 4.5 0 0 1 17 11.5m-10 10c-3.464 0-5.63-3.75-3.897-6.75A4.5 4.5 0 0 1 7 12.5c3.464 0 5.63 3.75 3.897 6.75A4.5 4.5 0 0 1 7 21.5" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: apple -->
+  <text x="434" y="46.50" class="label">apple</text>
+  <g transform="translate(447.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m13.064 6.685l.745-.306c.605-.24 1.387-.485 2.31-.33c1.891.318 3.195 1.339 3.972 2.693c.3.522.058 1.21-.502 1.429c-1.793.701-2.154 3.081-.65 4.283c.233.187.499.33.783.423c.518.17.81.745.64 1.263c-.442 1.342-1.078 2.581-1.831 3.581c-.744.988-1.652 1.808-2.663 2.209c-.66.26-1.368.163-2.045-.005l-.402-.107l-.597-.173c-.271-.079-.55-.147-.824-.147c-.275 0-.553.068-.824.147l-.597.173l-.402.107c-.677.168-1.386.266-2.045.005c-1.273-.504-2.396-1.68-3.245-3.067a13.4 13.4 0 0 1-1.784-4.986c-.227-1.554-.104-3.299.615-4.775c.74-1.521 2.096-2.705 4.163-3.053c.84-.141 1.562.048 2.14.265l.331.13l.584.241c.4.157.715.249 1.064.249c.348 0 .664-.092 1.064-.249" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M11.768 2.768c.976-.977 2.475-1.061 2.828-.707c.354.353.27 1.852-.707 2.828c-.976.976-2.475 1.06-2.828.707c-.354-.353-.27-1.852.707-2.828" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: approved -->
+  <text x="2" y="96.00" class="label">approved</text>
+  <g transform="translate(15.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10.586 2.1a2 2 0 0 1 2.7-.116l.128.117L15.314 4H18a2 2 0 0 1 1.994 1.85L20 6v2.686l1.9 1.9a2 2 0 0 1 .116 2.701l-.117.127l-1.9 1.9V18a2 2 0 0 1-1.85 1.995L18 20h-2.685l-1.9 1.9a2 2 0 0 1-2.701.116l-.127-.116l-1.9-1.9H6a2 2 0 0 1-1.995-1.85L4 18v-2.686l-1.9-1.9a2 2 0 0 1-.116-2.701l.116-.127l1.9-1.9V6a2 2 0 0 1 1.85-1.994L6 4h2.686z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="m15.079 8.983l-4.244 4.244l-1.768-1.768a1 1 0 1 0-1.414 1.415l2.404 2.404a1.1 1.1 0 0 0 1.556 0l4.88-4.881a1 1 0 0 0-1.414-1.414" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: appstore -->
+  <text x="50" y="96.00" class="label">appstore</text>
+  <g transform="translate(63.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M11.873 5.511a1 1 0 0 0-1.797.873l.051.105l.727 1.297l-1.807 3.226a1 1 0 0 0 1.683 1.075l.063-.098l3.08-5.5a1 1 0 0 0-1.683-1.076l-.063.098L12 5.74l-.127-.227zm2.52 4.5a1 1 0 0 0-1.797.873l.052.105l3.08 5.5a1 1 0 0 0 1.796-.872l-.052-.106l-.286-.51h.514a1 1 0 0 0 .117-1.994L17.7 13h-1.634zM12.5 13H6.3a1 1 0 1 0 0 2h.514l-.287.511a1.001 1.001 0 0 0 1.746.978L9.106 15H12.5a1 1 0 1 0 0-2" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: award -->
+  <text x="98" y="96.00" class="label">award</text>
+  <g transform="translate(111.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M12 2c6.158 0 10.007 6.667 6.928 12A8 8 0 0 1 17 16.245v4.61a1.1 1.1 0 0 1-1.486 1.03L12 20.569l-3.514 1.318A1.1 1.1 0 0 1 7 20.856v-4.61C2.192 12.398 3.352 4.788 9.089 2.548A8 8 0 0 1 12 2" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M12 6c3.079 0 5.004 3.333 3.464 6A4 4 0 0 1 12 14c-3.079 0-5.004-3.333-3.464-6A4 4 0 0 1 12 6" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: baby-carriage -->
+  <text x="146" y="96.00" class="label">baby-carriage</text>
+  <g transform="translate(159.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M7.746 2.609c.764-.296 1.566.093 1.877.773L12.643 10H18V8.5A2.5 2.5 0 0 1 20.5 6h.5a1 1 0 1 1 0 2h-.5a.5.5 0 0 0-.5.5V11a9 9 0 0 1-2.489 6.213c1.76.778 2.018 3.17.464 4.305s-3.755.163-3.961-1.751A3 3 0 0 1 14 19.5v-.015a9 9 0 0 1-6 0v.015c0 1.925-2.084 3.127-3.75 2.164c-1.667-.962-1.666-3.368 0-4.33q.117-.067.239-.121C.063 12.574 1.769 4.927 7.746 2.609" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M8.012 4.669A7 7 0 0 0 4.072 10h6.372L8.012 4.67z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: bank -->
+  <text x="194" y="96.00" class="label">bank</text>
+  <g transform="translate(207.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="m12.67 2.217l8.5 4.75A1.5 1.5 0 0 1 22 8.31v1.44c0 .69-.56 1.25-1.25 1.25H20v8h1a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2h1v-8h-.75C2.56 11 2 10.44 2 9.75V8.31c0-.522.27-1.002.706-1.274l8.623-4.819c.422-.211.92-.211 1.342 0z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M12 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2m5 5H7v8h2v-6h2v6h2v-6h2v6h2z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: battery -->
+  <text x="242" y="96.00" class="label">battery</text>
+  <g transform="translate(255.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M18 6a2 2 0 0 1 2 2v1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2v1a2 2 0 0 1-2 2h-5.101l2.664-4.441c.986-1.642.197-3.65-1.405-4.325l.415-.69c.478-.799.543-1.73.255-2.544z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M11.142 6.486a1 1 0 0 1 1.77.925l-.055.104L10.768 11h2.215c.746 0 1.221.773.92 1.427l-.054.103l-2.99 4.985a1 1 0 0 1-1.77-.926l.055-.104L11.233 13H9.019a1.01 1.01 0 0 1-.92-1.427l.054-.103l2.99-4.984z" class="duoicon-primary-layer"/><path fill="currentColor" d="m9.101 6l-2.664 4.441c-.953 1.587-.247 3.516 1.247 4.253l.158.072l-.414.69a3 3 0 0 0-.317 2.354l.06.19H4a2 2 0 0 1-1.995-1.85L2 16V8a2 2 0 0 1 1.85-1.994L4 6z" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: bell -->
+  <text x="290" y="96.00" class="label">bell</text>
+  <g transform="translate(303.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M9.042 19.003h5.916c-.385 2.277-3.09 3.283-4.87 1.811a3 3 0 0 1-1.046-1.811" class="duoicon-primary-layer"/><path fill="currentColor" d="M12 2.003a7.5 7.5 0 0 1 7.5 7.5v4l1.418 3.16A.95.95 0 0 1 20.052 18h-16.1a.95.95 0 0 1-.867-1.338l1.415-3.16V9.49l.005-.25A7.5 7.5 0 0 1 12 2.004z" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: bell-badge -->
+  <text x="338" y="96.00" class="label">bell-badge</text>
+  <g transform="translate(351.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M18.5 9q.508-.002.973-.137q.027.317.027.64v4l1.418 3.16A.95.95 0 0 1 20.052 18h-16.1a.95.95 0 0 1-.867-1.338l1.415-3.16V9.49l.005-.25c.201-5.749 6.533-9.14 11.43-6.123c-1.834 1.973-.845 5.193 1.781 5.795A3.5 3.5 0 0 0 18.5 9" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M18.5 8c1.925 0 3.127-2.083 2.165-3.75A2.5 2.5 0 0 0 18.5 3c-1.925 0-3.127 2.083-2.165 3.75A2.5 2.5 0 0 0 18.5 8m-3.542 11.003c-.385 2.277-3.09 3.283-4.87 1.811a3 3 0 0 1-1.046-1.811z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: book -->
+  <text x="386" y="96.00" class="label">book</text>
+  <g transform="translate(399.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M6 2a2 2 0 0 0-2 2v1a1 1 0 1 0 0 2v2a1 1 0 1 0 0 2v2a1 1 0 1 0 0 2v2a1 1 0 1 0 0 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M8.5 6A1.5 1.5 0 0 0 7 7.5v1A1.5 1.5 0 0 0 8.5 10h7A1.5 1.5 0 0 0 17 8.5v-1A1.5 1.5 0 0 0 15.5 6z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: book-2 -->
+  <text x="434" y="96.00" class="label">book-2</text>
+  <g transform="translate(447.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M3.255 3.667A1.01 1.01 0 0 1 4.022 2H16.5c3.464 0 5.629 3.75 3.897 6.75A4.5 4.5 0 0 1 16.5 11H4.022a1.01 1.01 0 0 1-.767-1.667l.754-.88a3 3 0 0 0 0-3.905l-.754-.88z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M3 16.5A4.5 4.5 0 0 1 7.5 12h12.478a1.01 1.01 0 0 1 .767 1.667l-.755.88a3 3 0 0 0 0 3.905l.755.88A1.01 1.01 0 0 1 19.978 21H7.5A4.5 4.5 0 0 1 3 16.5" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: book-3 -->
+  <text x="2" y="145.50" class="label">book-3</text>
+  <g transform="translate(15.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 5a3 3 0 0 1 3-3h11a2 2 0 0 1 2 2v12.99c0 .168-.038.322-.113.472l-.545 1.09a1 1 0 0 0 0 .895l.543 1.088A1 1 0 0 1 19 22H7a3 3 0 0 1-3-3z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M10 7a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2zM7 18h10.408a3 3 0 0 0 0 2H7a1 1 0 1 1 0-2" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: bookmark -->
+  <text x="50" y="145.50" class="label">bookmark</text>
+  <g transform="translate(63.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M17 2a3 3 0 0 1 3 3v16a1 1 0 0 1-1.625.78l-1.875-1.5l-1.875 1.5a1 1 0 0 1-1.332-.073L12 20.414l-1.293 1.293a1 1 0 0 1-1.332.074L7.5 20.28l-1.875 1.5A1 1 0 0 1 4 21V5a3 3 0 0 1 3-3z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M15 8H9a1 1 0 0 0-.117 1.993L9 10h6a1 1 0 0 0 .117-1.993zm-3 4H9a1 1 0 1 0 0 2h3a1 1 0 1 0 0-2" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: box -->
+  <text x="98" y="145.50" class="label">box</text>
+  <g transform="translate(111.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M20 3a2 2 0 0 1 2 2v3H2V5a2 2 0 0 1 2-2zm-6 10h-4a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: box-2 -->
+  <text x="146" y="145.50" class="label">box-2</text>
+  <g transform="translate(159.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m20.765 7.982l.022.19l.007.194v7.268a2.5 2.5 0 0 1-1.099 2.07l-.15.095l-6.295 3.634l-.124.067l-.126.06v-8.99z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="m13.25 2.567l6.294 3.634q.076.044.148.092L12 10.838L4.308 6.293a3 3 0 0 1 .148-.092l6.294-3.634a2.5 2.5 0 0 1 2.5 0" class="duoicon-primary-layer"/><path fill="currentColor" d="M3.235 7.982L11 12.571v8.988a2 2 0 0 1-.25-.126l-6.294-3.634a2.5 2.5 0 0 1-1.25-2.165V8.366q0-.195.03-.384z" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: bread -->
+  <text x="194" y="145.50" class="label">bread</text>
+  <g transform="translate(207.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M14.194 2.885c2.3-.299 4.458.21 5.645 1.397c.79.791 1.18 1.711 1.16 2.72c-.017.961-.405 1.894-.938 2.764c-.762 1.245-1.952 2.563-3.27 3.915l-.729.74l-1.616 1.617l-.691.682c-1.378 1.346-2.722 2.566-3.989 3.341c-.87.533-1.803.92-2.764.939c-1.009.02-1.929-.37-2.72-1.161c-1.187-1.187-1.696-3.345-1.397-5.645c.307-2.36 1.471-5.035 3.872-7.437c2.402-2.4 5.078-3.565 7.437-3.872" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M13.111 5.149c-.618.178-1.259.43-1.907.768c.52.847 1.299 1.452 2.308 1.789a1 1 0 1 0 .633-1.897c-.434-.145-.774-.36-1.034-.66m-4.42 2.53a14 14 0 0 0-1.406 1.468c.194.251.406.489.621.704c.585.584 1.333 1.145 2.07 1.39a1 1 0 0 0 .742-1.854l-.109-.043c-.323-.107-.812-.43-1.288-.907a5 5 0 0 1-.63-.758m-3 3.986a9.8 9.8 0 0 0-.742 2.283q.631.541 1.492.83a1 1 0 1 0 .633-1.898c-.667-.222-1.112-.612-1.383-1.216z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: bridge -->
+  <text x="242" y="145.50" class="label">bridge</text>
+  <g transform="translate(255.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M15 18a1 1 0 0 1 .117 1.993L15 20h-3a1 1 0 0 1-.117-1.993L12 18z" class="duoicon-primary-layer"/><path fill="currentColor" d="M15 3a1 1 0 0 1 .993.883L16 4v.454c1.59.378 2.85.937 3.775 1.459l.225.13V6a1 1 0 0 1 1.993-.117L22 6v6.9a1.1 1.1 0 0 1-.98 1.094L20.9 14h-4.855c-.539 0-.982-.407-1.039-.93L15 12.954V12.5c.002-2.309-2.496-3.755-4.497-2.602a3 3 0 0 0-1.498 2.426L9 12.5v.455c0 .539-.407.982-.93 1.039L7.954 14H3.1a1.1 1.1 0 0 1-1.094-.98L2 12.9V6a1 1 0 0 1 1.993-.117L4 6v.042a14.3 14.3 0 0 1 3.61-1.49L8 4.455V4a1 1 0 0 1 1.993-.117L10 4v.109a18.3 18.3 0 0 1 3.522-.046l.478.046V4a1 1 0 0 1 1-1" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M13 15a1 1 0 1 1 0 2H9a1 1 0 1 1 0-2z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: briefcase -->
+  <text x="290" y="145.50" class="label">briefcase</text>
+  <g transform="translate(303.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M14 3a3 3 0 0 1 3 3h3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3a3 3 0 0 1 3-3z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M14 5h-4a1 1 0 0 0-.993.883L9 6h6a1 1 0 0 0-.883-.993zm5 5H5a1 1 0 0 0-.117 1.993L5 12h6v1a1 1 0 0 0 1.993.117L13 13v-1h6a1 1 0 0 0 .117-1.993z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: brush -->
+  <text x="2" y="195.00" class="label">brush</text>
+  <g transform="translate(15.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M22 15v5a2 2 0 0 1-2 2h-1v-3a1 1 0 1 0-2 0v3h-4v-3a1 1 0 1 0-2 0v3H7v-3a1 1 0 1 0-2 0v3H4a2 2 0 0 1-2-2v-5z" class="duoicon-primary-layer"/><path fill="currentColor" d="M13 2a2 2 0 0 1 2 2v4a1 1 0 0 0 1 1h4a2 2 0 0 1 2 2v2H2v-2a2 2 0 0 1 2-2h4a1 1 0 0 0 1-1V4a2 2 0 0 1 2-2z" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: brush-2 -->
+  <text x="50" y="195.00" class="label">brush-2</text>
+  <g transform="translate(63.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m20.485 10.586l1.06 1.06a2.5 2.5 0 0 1 .123 3.405l-.122.13l-6.364 6.365a2.5 2.5 0 0 1-3.405.122l-.13-.122l-1.061-1.06z" class="duoicon-primary-layer"/><path fill="currentColor" d="M2.808 2.808c.885-.886 2.01-1.33 3.184-1.203c1.161.125 2.225.792 3.056 1.846c.888 1.127 1.7 2.732 2.336 4.174c.311.704 1.16.874 1.676.475l.093-.081l.615-.615a2.5 2.5 0 0 1 3.405-.122l.13.122l1.768 1.768l-9.9 9.899l-1.767-1.768a2.5 2.5 0 0 1-.122-3.405l.122-.13l.615-.615c.5-.5.354-1.439-.394-1.769c-1.442-.636-3.047-1.448-4.174-2.336c-1.053-.831-1.72-1.895-1.846-3.056c-.127-1.174.317-2.3 1.203-3.184" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: bug -->
+  <text x="98" y="195.00" class="label">bug</text>
+  <g transform="translate(111.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M7.67 5.5a5 5 0 0 1 8.66 0L17.2 7H6.8z" class="duoicon-primary-layer"/><path fill="currentColor" fill-rule="evenodd" d="M3.553 6.106a1 1 0 0 1 1.341.447c.147.293.5.674.973.99C6.353 7.867 6.781 8 7 8h10c.219 0 .647-.133 1.133-.457c.474-.316.826-.697.973-.99a1 1 0 1 1 1.788.894c-.353.707-1 1.326-1.652 1.76a5.5 5.5 0 0 1-.966.516c.297.731.503 1.496.616 2.277H21a1 1 0 1 1 0 2h-2.012a10 10 0 0 1-.74 3.327c.572.33.963.86 1.209 1.35c.349.725.534 1.518.543 2.323a1 1 0 1 1-2 0c0-.374-.101-.966-.332-1.428c-.13-.26-.26-.409-.385-.49c-1.056 1.486-2.539 2.54-4.283 2.835V13a1 1 0 1 0-2 0v8.917c-1.744-.295-3.227-1.35-4.283-2.834c-.126.08-.255.23-.385.49c-.21.447-.323.933-.332 1.427a1 1 0 1 1-2 0a5.5 5.5 0 0 1 .543-2.322c.246-.492.637-1.02 1.209-1.35A10 10 0 0 1 5.012 14H3a1 1 0 1 1 0-2h2.108c.113-.781.32-1.546.616-2.277a5.5 5.5 0 0 1-.966-.516c-.651-.434-1.3-1.053-1.652-1.76a1 1 0 0 1 .447-1.341" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: building -->
+  <text x="146" y="195.00" class="label">building</text>
+  <g transform="translate(159.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M13 3a2 2 0 0 1 1.995 1.85L15 5v14h1V9.5a.5.5 0 0 1 .41-.492L16.5 9H18a2 2 0 0 1 1.995 1.85L20 11v8h1a1 1 0 0 1 .117 1.993L21 21H3a1 1 0 0 1-.117-1.993L3 19h1V5a2 2 0 0 1 1.85-1.995L6 3z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M11 7H8v2h3zm0 4H8v2h3zm0 4H8v2h3z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: bus -->
+  <text x="194" y="195.00" class="label">bus</text>
+  <g transform="translate(207.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M11.022 3H18a3 3 0 0 1 3 3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7c0 .715-.381 1.375-1 1.732v.768a1.5 1.5 0 0 1-3 0V19H7v.5a1.5 1.5 0 0 1-3 0v-.768A2 2 0 0 1 3 17v-7a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1a3 3 0 0 1 3-3z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" fill-rule="evenodd" d="M15 15a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1m-9 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1m5.618-10h2.764l-1.276 2.553a1 1 0 1 0 1.788.894L16.618 5H18a1 1 0 0 1 1 1v5H5V6a1 1 0 0 1 1-1h3.382L8.106 7.553a1 1 0 0 0 1.788.894z" class="duoicon-primary-layer"/>
+  </g>
+  <!-- Cell: cake -->
+  <text x="242" y="195.00" class="label">cake</text>
+  <g transform="translate(255.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M17.707 15.707a.414.414 0 0 1 .586 0a2.41 2.41 0 0 0 2.707.491V20a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2v-3.802c.89.405 1.975.241 2.707-.49a.414.414 0 0 1 .586 0a2.414 2.414 0 0 0 3.414 0a.414.414 0 0 1 .586 0a2.414 2.414 0 0 0 3.414 0a.414.414 0 0 1 .586 0a2.414 2.414 0 0 0 3.414 0zM16.5 2c-.319.638-.028 1.05.225 1.41c.144.203.275.39.275.59a1 1 0 1 1-2 0c0-.552.5-1.5 1.5-2m-8 0c-.319.638-.028 1.05.225 1.41c.144.203.275.39.275.59a1 1 0 1 1-2 0c0-.552.5-1.5 1.5-2m4 0c-.319.638-.028 1.05.225 1.41c.144.203.275.39.275.59a1 1 0 1 1-2 0c0-.552.5-1.5 1.5-2" class="duoicon-primary-layer"/><path fill="currentColor" d="M16 6a1 1 0 0 1 1 1v2h1a3 3 0 0 1 3 3v1.586l-.707.707a.414.414 0 0 1-.586 0a2.414 2.414 0 0 0-3.414 0a.414.414 0 0 1-.586 0a2.414 2.414 0 0 0-3.414 0a.414.414 0 0 1-.586 0a2.414 2.414 0 0 0-3.414 0a.414.414 0 0 1-.586 0a2.414 2.414 0 0 0-3.414 0a.414.414 0 0 1-.586 0L3 13.586V12a3 3 0 0 1 3-3h1V7a1 1 0 1 1 2 0v2h2V7a1 1 0 1 1 2 0v2h2V7a1 1 0 0 1 1-1" class="duoicon-secondary-layer" opacity=".3"/>
+  </g>
+  <!-- Cell: calendar -->
+  <text x="290" y="195.00" class="label">calendar</text>
+  <g transform="translate(303.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7z" class="duoicon-secondary-layer" opacity=".3"/><path fill="currentColor" d="M16 3a1 1 0 0 1 1 1v1h2a2 2 0 0 1 2 2v3H3V7a2 2 0 0 1 2-2h2V4a1 1 0 1 1 2 0v1h6V4a1 1 0 0 1 1-1" class="duoicon-primary-layer"/>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-duo-icons</text>
+  <text x="348" y="139.738" class="overlay-title">duoicons</text>
+  <text x="351" y="190.744" class="overlay-meta">MIT · 91 icons</text>
+</svg>

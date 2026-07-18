@@ -1,16 +1,59 @@
+import { component$, $ } from '@qwik.dev/core';
 import { Avatar, AvatarStatus } from '@onwo/ui/avatar';
 
-import type { BoxedComp, Section } from '.';
-import { component$ } from '@qwik.dev/core';
+import type { BoxedComp, ControlSchema, Section } from '.';
 
-const defaultAvatar: BoxedComp = {
-  title: 'Default',
-  display: component$(() => (
+const avatarControls = {
+  name: {
+    type: 'text',
+    label: 'Name',
+    default: 'John Doe',
+  },
+  size: {
+    type: 'segmented',
+    label: 'Size',
+    default: 'md',
+    options: [
+      { label: 'XS', value: 'xs' },
+      { label: 'SM', value: 'sm' },
+      { label: 'MD', value: 'md' },
+      { label: 'LG', value: 'lg' },
+      { label: 'XL', value: 'xl' },
+      { label: '2XL', value: '2xl' },
+    ],
+  },
+  imageUrl: {
+    type: 'text',
+    label: 'Image URL',
+    default: '',
+    placeholder: '/avatar.png',
+  },
+} as const satisfies ControlSchema;
+
+const defaultAvatar: BoxedComp<typeof avatarControls> = {
+  title: 'Default Playground',
+  controls: avatarControls,
+  display: component$(({ controls }) => (
     <div class="flex w-full justify-center">
-      <Avatar />
+      <Avatar
+        name={controls.name}
+        size={controls.size as any}
+        imageUrl={controls.imageUrl || undefined}
+      />
     </div>
   )),
-  code: `<Avatar />`,
+  code: $((values) => {
+    const props = [
+      values.name ? `name="${values.name}"` : '',
+      values.size !== 'md' ? `size="${values.size}"` : '',
+      values.imageUrl ? `imageUrl="${values.imageUrl}"` : '',
+    ]
+      .filter(Boolean)
+      .join(' ');
+
+    const formattedProps = props ? ` ${props}` : '';
+    return `import { Avatar } from '@onwo/ui/avatar';\n\n<Avatar${formattedProps} />`;
+  }),
 };
 
 const variantsAvatar: BoxedComp = {
@@ -31,11 +74,11 @@ const variantsAvatar: BoxedComp = {
       </div>
     </div>
   )),
-  code: `import { Avatar } from '@onwo/ui';
+  code: $(() => `import { Avatar } from '@onwo/ui/avatar';
 
 <Avatar />
 <Avatar name="md" />
-<Avatar imageUrl="/avatar.png" />`,
+<Avatar imageUrl="/avatar.png" />`),
 };
 
 const sizesAvatar: BoxedComp = {
@@ -46,9 +89,10 @@ const sizesAvatar: BoxedComp = {
       <Avatar name="lg" size="lg" />
     </div>
   )),
-  code: `import { Avatar } from '@onwo/ui';
+  code: $(() => `import { Avatar } from '@onwo/ui/avatar';
 
-<Avatar name="sm" size="sm" />`,
+<Avatar name="sm" size="sm" />
+<Avatar name="lg" size="lg" />`),
 };
 
 const statusAvatar: BoxedComp = {
@@ -63,14 +107,14 @@ const statusAvatar: BoxedComp = {
       </Avatar>
     </div>
   )),
-  code: `import { Avatar } from '@onwo/ui';
+  code: $(() => `import { Avatar, AvatarStatus } from '@onwo/ui/avatar';
 
 <Avatar size="xl" imageUrl="/avatar.png">
   <AvatarStatus class="bg-error" position="top-right" />
 </Avatar>
 <Avatar size="xl" imageUrl="/avatar.png">
   <AvatarStatus />
-</Avatar>`,
+</Avatar>`),
 };
 
 export const section: Section = {

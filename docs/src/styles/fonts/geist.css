@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Geist Sans";
+  src: url("/fonts/Geist-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  font-feature-settings: "ss01", "ss04", "ss06", "ss09";
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Geist Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 89.6331%;
+  descent-override: 26.3102%;
+  size-adjust: 112.1238%;
+}
+@font-face {
+  font-family: "Geist Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 95.9379%;
+  descent-override: 28.1609%;
+  line-gap-override: 0%;
+  size-adjust: 104.7553%;
+}
+@font-face {
+  font-family: "Geist Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 102.0064%;
+  descent-override: 29.9422%;
+  size-adjust: 98.5232%;
+}
+
+:root {
+  --font-geist-sans: Geist, "Geist Fallback: -apple-system", "Geist Fallback: Arial", "Geist Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

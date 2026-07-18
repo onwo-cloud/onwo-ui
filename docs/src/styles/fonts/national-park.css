@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "National Park";
+  src: url("/fonts/NationalPark-Variable.woff2") format("woff2");
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "National Park Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 96.4043%;
+  descent-override: 28.0789%;
+  size-adjust: 106.8417%;
+}
+@font-face {
+  font-family: "National Park Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 103.1853%;
+  descent-override: 30.054%;
+  line-gap-override: 0%;
+  size-adjust: 99.8204%;
+}
+@font-face {
+  font-family: "National Park Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 109.7124%;
+  descent-override: 31.9551%;
+  size-adjust: 93.8819%;
+}
+
+:root {
+  --font-national-park: "National Park", "National Park Fallback: -apple-system", "National Park Fallback: Arial", "National Park Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

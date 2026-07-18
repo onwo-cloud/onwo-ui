@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/fonts/MonaSans-Variable.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Mona Sans ExtraLight Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 99.7779%;
+  descent-override: 29.2926%;
+  size-adjust: 109.2427%;
+}
+@font-face {
+  font-family: "Mona Sans ExtraLight Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 106.7962%;
+  descent-override: 31.353%;
+  line-gap-override: 0%;
+  size-adjust: 102.0635%;
+}
+@font-face {
+  font-family: "Mona Sans ExtraLight Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 113.5516%;
+  descent-override: 33.3363%;
+  size-adjust: 95.9916%;
+}
+
+:root {
+  --font-mona-sans: "Mona Sans ExtraLight", "Mona Sans ExtraLight Fallback: -apple-system", "Mona Sans ExtraLight Fallback: Arial", "Mona Sans ExtraLight Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

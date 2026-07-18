@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/Fraunces[SOFT,WONK,opsz,wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Fraunces Black Fallback: Georgia";
+  src: local('Georgia');
+  ascent-override: 84.1686%;
+  descent-override: 21.9458%;
+  size-adjust: 116.1954%;
+}
+@font-face {
+  font-family: "Fraunces Black Fallback: Times New Roman";
+  src: local('Times New Roman'), local('TimesNewRomanPSMT'), local('Liberation Serif');
+  ascent-override: 76.7013%;
+  descent-override: 19.9988%;
+  line-gap-override: 0%;
+  size-adjust: 127.5077%;
+}
+
+:root {
+  --font-fraunces: "Fraunces Black", "Fraunces Black Fallback: Georgia", "Fraunces Black Fallback: Times New Roman", Georgia, "Times New Roman", Georgia, "Times New Roman", serif;
+}

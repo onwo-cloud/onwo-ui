@@ -1,4 +1,4 @@
-import { component$ } from '@qwik.dev/core';
+import { component$, $ } from '@qwik.dev/core';
 import type { BoxedComp, Section } from '.';
 
 const defaultNavigationMenu: BoxedComp = {
@@ -20,7 +20,6 @@ const defaultNavigationMenu: BoxedComp = {
         class="flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm outline-hidden focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground font-bold"
         tabIndex={-1}
         data-orientation="horizontal"
-        data-radix-collection-item=""
       >
         Music
       </button>
@@ -34,7 +33,6 @@ const defaultNavigationMenu: BoxedComp = {
         class="flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-hidden focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground relative"
         tabIndex={0}
         data-orientation="horizontal"
-        data-radix-collection-item=""
       >
         File
       </button>
@@ -48,7 +46,6 @@ const defaultNavigationMenu: BoxedComp = {
         class="flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-hidden focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground"
         tabIndex={-1}
         data-orientation="horizontal"
-        data-radix-collection-item=""
       >
         Edit
       </button>
@@ -62,7 +59,6 @@ const defaultNavigationMenu: BoxedComp = {
         class="flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-hidden focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground"
         tabIndex={-1}
         data-orientation="horizontal"
-        data-radix-collection-item=""
       >
         View
       </button>
@@ -76,14 +72,12 @@ const defaultNavigationMenu: BoxedComp = {
         class="cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-hidden focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground hidden md:block"
         tabIndex={-1}
         data-orientation="horizontal"
-        data-radix-collection-item=""
       >
         Account
       </button>
     </nav>
   )),
-  code: `
-<nav class="flex h-10 items-center space-x-1 rounded-md border bg-background p-1">
+  code: $(() => `<nav class="flex h-10 items-center space-x-1 rounded-md border bg-background p-1">
   <button class="flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none">
     Music
   </button>
@@ -99,8 +93,7 @@ const defaultNavigationMenu: BoxedComp = {
   <button class="hidden cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none md:block">
     Account
   </button>
-</nav>
-`,
+</nav>`),
 };
 
 export const section: Section = {

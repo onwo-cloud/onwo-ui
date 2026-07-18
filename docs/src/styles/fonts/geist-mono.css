@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  font-feature-settings: "ss01", "ss04", "ss06", "ss09";
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Geist Mono Fallback: Courier New";
+  src: local('Courier New'), 
+       local('CourierNewPSMT'), 
+       local('Liberation Mono');
+  ascent-override: 100.5164%;
+  descent-override: 29.5048%;
+  size-adjust: 99.9837%;
+}
+@font-face {
+  font-family: "Geist Mono Fallback: Inconsolata";
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular');
+  ascent-override: 83.75%;
+  descent-override: 24.5833%;
+  size-adjust: 120%;
+}
+
+:root {
+  --font-geist-mono: "Geist Mono", "Geist Mono Fallback: Courier New", "Geist Mono Fallback: Inconsolata", "Courier New", Inconsolata, "Courier New", Inconsolata, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

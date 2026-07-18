@@ -1,15 +1,5 @@
-import { PageNavigationLink } from '@onwo/ui/page-navigation';
-
-import { PageHeadSection } from '~/commons/page-head-section';
-
 export const GettingStartedPage = () => (
   <div>
-    <PageHeadSection
-      title="Getting started"
-      description="An open-source library of stunning, accessible components in qwik.js."
-      breadcrumbs={[{ label: 'Getting Started', to: '/getting-started' }]}
-    />
-
     <main class="onwo-format w-full">
       <div class="w-full">
         <section>
@@ -31,9 +21,7 @@ export const GettingStartedPage = () => (
 
         <section>
           <div>
-            <PageNavigationLink as="h2" label="Prerequisites" id="prerequisites">
-              Prerequisites
-            </PageNavigationLink>
+            <h2 id="prerequisites"> Prerequisites </h2>
             <div>
               <p>To start using onwo-ui, you will need:</p>
               <ul>
@@ -54,9 +42,7 @@ export const GettingStartedPage = () => (
 
         <section>
           <div>
-            <PageNavigationLink as="h2" label="Setup with qwik" id="qwik-setup">
-              Setup with qwik
-            </PageNavigationLink>
+            <h2 id="qwik-setup"> Setup with qwik </h2>
 
             <div>
               <p>Add onwo-ui dependencies to your project</p>

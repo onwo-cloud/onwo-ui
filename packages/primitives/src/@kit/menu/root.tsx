@@ -1,44 +1,58 @@
-import { $, component$, PropsOf, Slot, useSignal } from '@qwik.dev/core';
-import { useOutsideClick } from '~primitives/hooks/use-outside-click';
-
+import { $, component$, Signal, Slot, useSignal } from '@qwik.dev/core';
+import { PopoverRoot } from '../popover/popover-root';
 import { MenuContext, MenuContextData } from './dropdown-context';
+import type { FloatingOptions } from '../floating';
+import { withAs } from '~primitives/index';
 
-export const MenuRoot = component$((props: PropsOf<'div'>) => {
-  const isOpen = useSignal(false);
-  const containerRef = useSignal<HTMLDivElement>();
-  const itemIds = useSignal<string[]>([]);
-  const activeIndex = useSignal(-1);
+type MenuRootProps = {
+  'bind:open'?: Signal<boolean>;
+  floating?: FloatingOptions;
+};
 
-  const registerItem = $((id: string, _node: HTMLElement) => {
-    itemIds.value = itemIds.value.includes(id) ? itemIds.value : [...itemIds.value, id];
-  });
+export const MenuRoot = withAs('div')<MenuRootProps>(
+  component$(({ As, 'bind:open': givenOpen, floating, ...props }) => {
+    const localOpen = useSignal(false);
+    const isOpen = givenOpen ?? localOpen;
 
-  const unregisterItem = $((id: string) => {
-    itemIds.value = [...itemIds.value.filter((itemId) => itemId !== id)];
-  });
+    const itemIds = useSignal<string[]>([]);
+    const activeIndex = useSignal(-1);
+    const triggerRef = useSignal<HTMLElement>();
 
-  const closeAll = $(() => {
-    isOpen.value = false;
-  });
+    const registerItem = $((id: string) => {
+      itemIds.value = itemIds.value.includes(id) ? itemIds.value : [...itemIds.value, id];
+    });
 
-  useOutsideClick(containerRef, closeAll);
+    const unregisterItem = $((id: string) => {
+      itemIds.value = itemIds.value.filter((itemId) => itemId !== id);
+    });
 
-  const contextValue: MenuContextData = {
-    isOpen,
-    triggerRef: useSignal(),
-    registerItem,
-    unregisterItem,
-    activeIndex,
-    itemIds,
-    closeAll,
-    isSubmenu: false,
-  };
+    const closeAll = $(() => {
+      isOpen.value = false;
+    });
 
-  MenuContext.useProvider(contextValue);
+    const menuContextValue: MenuContextData = {
+      isOpen,
+      triggerRef,
+      registerItem,
+      unregisterItem,
+      activeIndex,
+      itemIds,
+      closeAll,
+      isSubmenu: false,
+    };
 
-  return (
-    <div ref={containerRef} {...props}>
-      <Slot />
-    </div>
-  );
-});
+    MenuContext.useProvider(menuContextValue);
+
+    return (
+      <PopoverRoot 
+        as={As as unknown as 'div'} 
+        bind:open={isOpen} 
+        bind:trigger={triggerRef} // 👈 LINKS TRIGGER SIGNAL TO POPOVER
+        floating={floating} 
+        {...props}
+      >
+        <Slot />
+      </PopoverRoot>
+    );
+  })
+);

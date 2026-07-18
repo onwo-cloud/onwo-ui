@@ -28,7 +28,7 @@ export const CalendarGridButton = (props: CalendarGridButtonProps) => (
       as="div"
       disabled={props.isDisabled}
       name="day"
-      onKeyDown$={$((event) => props.onKeyDown$?.(event))}
+      onKeyDown$={$((event: KeyboardEvent) => props.onKeyDown$?.(event))}
       class={[
         'flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap rounded-md text-sm disabled:pointer-events-none disabled:opacity-50 h-full w-full p-0 font-normal-light rounded-lg',
         props.dim ? 'text-ink-tertiary' : '',

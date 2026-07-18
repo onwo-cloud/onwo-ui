@@ -1,0 +1,72 @@
+---
+data:
+  title: 'What are bind props in Qwik.js?'
+  description: 'Learn what bind:value and other bind: props do in Qwik, how the compiler transforms them into two-way bindings, and why they break when spread through custom components.'
+  tag: 'Core Concepts'
+  version: 'Qwik v2'
+  readTime: '3 min read'
+---
+`bind:*` props are Qwik's shorthand for **two-way binding**. Instead of manually wiring up a value and an event handler, you hand a signal directly to an element and Qwik keeps it in sync in both directions.
+```tsx
+import { component$, useSignal } from '@qwik.dev/core';
+export const Form = component$(() => {
+  const name = useSignal('');
+  return (
+    <>
+      <input bind:value={name} />
+      <p>Hello, {name.value}</p>
+    </>
+  );
+});
+```
+Typing into the input updates `name.value`, and changing `name.value` elsewhere updates the input. It looks like a single prop, but it isn't one at runtime.
+---
+## How bind: actually works
+`bind:value` is a **compile-time transform**, not a real prop. The optimizer sees `bind:value={signal}` on a JSX element and rewrites it before your code runs, into something equivalent to:
+```tsx
+<input
+  value={name.value}
+  onInput$={(_, el) => (name.value = el.value)}
+/>
+```
+This only happens for JSX tags the compiler can see directly. Other common bind targets follow the same pattern — `bind:checked` for checkboxes, `bind:value` for `<select>`, and so on.
+---
+## The pitfall: bind: breaks across prop spreading
+Because the transform is compiler-driven, it needs to see `bind:value={...}` written directly on a JSX tag. If you wrap a native element in your own component and forward props with a spread, the compiler has nothing to attach to, and `bind:value` is silently dropped.
+```tsx
+// ❌ FAILS: bind:value is lost, typing into the input does nothing
+export const Input = component$((props: any) => {
+  return <input {...props} />;
+});
+// Usage
+<Input bind:value={mySignal} />
+```
+Prop spreading defeats this optimization in general, not just for `bind:`. As soon as `{...props}` stands between the JSX tag and the caller, the compiler can no longer see which specific attributes were passed, so it can't rewrite them.
+---
+## The Solution
+Destructure `bind:value` out of `props` explicitly, then re-attach it as its own named attribute on the native element, where the compiler can see and transform it directly.
+```tsx
+// ✅ CORRECT: bind:value is pulled out and re-attached explicitly
+export const Input = component$(
+  ({ 'bind:value': bindValue, ...rest }: any) => {
+    return <input {...rest} bind:value={bindValue} />;
+  }
+);
+// Usage
+<Input bind:value={mySignal} />
+```
+This works because `bind:value={bindValue}` is now written directly in the JSX of `Input`, not hidden behind a spread, so the optimizer can compile it into `value` + `onInput$` as usual.
+---
+## Advanced Usage: Making bind optional
+Real components often need to support both a bound and an unbound input. Destructure `bind:value` conditionally and branch, rather than trying to spread it back in:
+```tsx
+export const Input = component$(
+  ({ 'bind:value': bindValue, ...rest }: any) => {
+    if (bindValue) {
+      return <input {...rest} bind:value={bindValue} />;
+    }
+    return <input {...rest} />;
+  }
+);
+```
+Note: as of Qwik's PR [#7321](https://github.com/QwikDev/qwik/pull/7321), `bind:*` props are supported through spread props directly, which removes the need for this workaround in recent versions. Check your installed Qwik version's changelog before assuming you need it.

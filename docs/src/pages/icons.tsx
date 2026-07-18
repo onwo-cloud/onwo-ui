@@ -1,12 +1,7 @@
-import { PageHeadSection } from '~/commons/page-head-section';
-
 export const IconsPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
-    <PageHeadSection
-      title="Icons"
-      description="A fitted icon library for all your projects"
-      breadcrumbs={[{ label: 'Icons', to: '/icons' }]}
-    />
+      <h1>Icons</h1>
+     <p>A fitted icon library for all your projects</p>
     <div class="onwo-format">
       <p>All icons from lucide.dev</p>
       <p>

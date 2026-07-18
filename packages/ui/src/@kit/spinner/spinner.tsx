@@ -4,7 +4,7 @@ import { withAs } from '@onwo/primitives';
 type SpinnerSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | number;
 
 export type SpinnerProps = {
-	size?: SpinnerSize; // default: md
+  size?: SpinnerSize; // default: md
 };
 
 const style = `
@@ -55,41 +55,40 @@ const style = `
   }
 }`;
 
-export const Spinner = component$(
-	withAs('div')<SpinnerProps>(({ As, size = 'md', class: className, ...props }) => {
-		// eslint-disable-next-line qwik/use-method-usage
-		useStyles$(style);
+export const Spinner =
+  withAs('div')<SpinnerProps>(component$(({ As, size = 'md', class: className, ...props }) => {
+    // eslint-disable-next-line qwik/use-method-usage
+    useStyles$(style);
 
-		// eslint-disable-next-line qwik/use-method-usage
-		const sizePx = useComputed$(() => {
-			switch (size) {
-				case 'xs': {
-					return 12;
-				}
-				case 'sm': {
-					return 16;
-				}
-				case 'md': {
-					return 24;
-				}
-				case 'lg': {
-					return 28;
-				}
-				case 'xl': {
-					return 36;
-				}
-				default: {
-					return size;
-				}
-			}
-		});
+    // eslint-disable-next-line qwik/use-method-usage
+    const sizePx = useComputed$(() => {
+      switch (size) {
+        case 'xs': {
+          return 12;
+        }
+        case 'sm': {
+          return 16;
+        }
+        case 'md': {
+          return 24;
+        }
+        case 'lg': {
+          return 28;
+        }
+        case 'xl': {
+          return 36;
+        }
+        default: {
+          return size;
+        }
+      }
+    });
 
-		return (
-			<As class={['uk-icon uk-spinner', className]} role="status" {...props}>
-				<svg width={sizePx.value} height={sizePx.value} viewBox="0 0 30 30">
-					<circle fill="none" stroke="currentColor" cx="15" cy="15" r="14"></circle>
-				</svg>
-			</As>
-		);
-	}),
-);
+    return (
+      <As class={['uk-icon uk-spinner', className]} role="status" {...props}>
+        <svg width={sizePx.value} height={sizePx.value} viewBox="0 0 30 30">
+          <circle fill="none" stroke="currentColor" cx="15" cy="15" r="14"></circle>
+        </svg>
+      </As>
+    );
+}));

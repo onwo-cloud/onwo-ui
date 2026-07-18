@@ -21,6 +21,6 @@
       "@onwo/primitives/*": ["../primitives/src/@kit/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "scripts"],
   "exclude": ["./lib", "./lib-types"]
 }

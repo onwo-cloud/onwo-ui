@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: a-cane -->
+  <text x="2" y="46.50" class="label">a-cane</text>
+  <g transform="translate(15.00, 15.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M19.5576 44.7684C19.5576 44.7684 32.468 20.4873 33.6417 18.28C34.8154 16.0726 37.4535 8.98102 30.3899 5.22524C23.3263 1.46947 19.1571 7.18063 17.7486 9.82948"/>
+  </g>
+  <!-- Cell: abdominal -->
+  <text x="50" y="46.50" class="label">abdominal</text>
+  <g transform="translate(63.00, 15.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none"><path stroke="#000" stroke-linecap="round" stroke-width="4" d="M7.89926 5C10.7371 8.01931 12.156 11.9408 12.156 16.7645C12.156 24 5.9995 29.5382 4.969 33.5C4.282 36.1412 3.95884 39.3078 3.9995 43"/><path stroke="#000" stroke-linecap="round" stroke-width="4" d="M39.256 5C36.4182 8.01931 34.9992 11.9408 34.9992 16.7645C34.9992 24 41.1558 29.5382 42.1863 33.5C42.8733 36.1412 43.1964 39.3078 43.1558 43"/><path stroke="#000" stroke-linecap="round" stroke-width="4" d="M6.24414 30.8369C12.7693 34.9668 18.6949 37.0317 24.0211 37.0317C29.3472 37.0317 34.9799 34.9668 40.9192 30.8369"/><path fill="#000" d="M24 31C25.3807 31 26.5 29.8807 26.5 28.5C26.5 27.1193 25.3807 26 24 26C22.6193 26 21.5 27.1193 21.5 28.5C21.5 29.8807 22.6193 31 24 31Z"/></g>
+  </g>
+  <!-- Cell: abnormal -->
+  <text x="98" y="46.50" class="label">abnormal</text>
+  <g transform="translate(111.00, 15.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M40 16.3977V6C40 4.89543 39.1046 4 38 4H10C8.89543 4 8 4.89543 8 6V42C8 43.1046 8.89543 44 10 44H20"/><path stroke="#000" stroke-linecap="round" stroke-width="4" d="M16 14H29"/><path stroke="#000" stroke-linecap="round" stroke-width="4" d="M16 21H21"/><circle cx="34" cy="34" r="10" fill="#2F88FF" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" transform="rotate(90 34 34)"/><path stroke="#fff" stroke-linecap="round" stroke-width="4" d="M34 36L34 39"/><circle cx="34" cy="30" r="2" fill="#fff"/></g>
+  </g>
+  <!-- Cell: acceleration -->
+  <text x="146" y="46.50" class="label">acceleration</text>
+  <g transform="translate(159.00, 15.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="4"><path d="M42 35H34"/><path d="M31 42H27"/><path fill="#2F88FF" stroke-linejoin="round" d="M14 22L8 17H4C4 17 9.486 27 11.9999 27H44L38 22H14Z"/><path stroke-linejoin="round" d="M30 22L18.6606 14L16 14L19 22"/><path stroke-linejoin="round" d="M30 27L17.2 39L14 39L18.2667 27"/><path fill="#2F88FF" stroke-linejoin="round" d="M32 11C32 12 29 13 29 13L39 13C39 13 41.8855 13 42.7446 10.7143C43.6299 8.35854 42.0442 5 39.0221 5C36 5 36 8 36 8C36 8 34.1454 7.42857 33 8C31.8546 8.57143 32 10 32 11Z"/></g>
+  </g>
+  <!-- Cell: accept-email -->
+  <text x="194" y="46.50" class="label">accept-email</text>
+  <g transform="translate(207.00, 15.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M44 24V9H24H4V24V39H24"/><path d="M44 34L30 34"/><path d="M35 29L30 34L35 39"/><path d="M4 9L24 24L44 9"/></g>
+  </g>
+  <!-- Cell: acoustic -->
+  <text x="242" y="46.50" class="label">acoustic</text>
+  <g transform="translate(255.00, 15.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="4"><path d="M24 3.99976V43.9998"/><path d="M34 11.9998V35.9998"/><path d="M4 17.9998V29.9998"/><path d="M44 17.9998V29.9998"/><path d="M14 11.9998V35.9998"/></g>
+  </g>
+  <!-- Cell: activity-source -->
+  <text x="290" y="46.50" class="label">activity-source</text>
+  <g transform="translate(303.00, 15.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="#2F88FF" stroke="#000" stroke-linejoin="round" stroke-width="4"><path d="M42 5H6V13H42V5Z"/><path d="M42 20H6V28H42V20Z"/><path d="M42 35H6V43H42V35Z"/></g>
+  </g>
+  <!-- Cell: ad -->
+  <text x="338" y="46.50" class="label">ad</text>
+  <g transform="translate(351.00, 15.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none"><circle cx="24" cy="24" r="20" fill="#2F88FF" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M38 38L35 35"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M10 10L13 13"/><path fill="#2F88FF" d="M21.1429 28L18 17L14.8571 28H21.1429Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M14 31L14.8571 28M22 31L21.1429 28M21.1429 28L18 17L14.8571 28M21.1429 28H14.8571"/><path fill="#2F88FF" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M35 24C35 29 31.4183 31 27 31V17C31.4183 17 35 19 35 24Z"/></g>
+  </g>
+  <!-- Cell: ad-product -->
+  <text x="386" y="46.50" class="label">ad-product</text>
+  <g transform="translate(399.00, 15.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linejoin="round" stroke-width="4"><path d="M44 14L24 4L4 14V34L24 44L44 34V14Z"/><path stroke-linecap="round" d="M4 14L24 24"/><path stroke-linecap="round" d="M24 44V24"/><path stroke-linecap="round" d="M44 14L24 24"/><path stroke-linecap="round" d="M34 9L14 19"/></g>
+  </g>
+  <!-- Cell: add -->
+  <text x="434" y="46.50" class="label">add</text>
+  <g transform="translate(447.00, 15.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-linejoin="round" stroke-width="4"><rect width="36" height="36" x="6" y="6" fill="#2F88FF" stroke="#000" rx="3"/><path stroke="#fff" stroke-linecap="round" d="M24 16V32"/><path stroke="#fff" stroke-linecap="round" d="M16 24L32 24"/></g>
+  </g>
+  <!-- Cell: add-computer -->
+  <text x="2" y="96.00" class="label">add-computer</text>
+  <g transform="translate(15.00, 65.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M25 6H9C7.34315 6 6 7.34315 6 9V31C6 32.6569 7.34315 34 9 34H39C40.6569 34 42 32.6569 42 31V23"/><path d="M24 34V42"/><path d="M30 12H42"/><path d="M36 6V18"/><path d="M14 42L34 42"/></g>
+  </g>
+  <!-- Cell: add-four -->
+  <text x="50" y="96.00" class="label">add-four</text>
+  <g transform="translate(63.00, 65.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M16 6H8C6.89543 6 6 6.89543 6 8V16"/><path d="M16 42H8C6.89543 42 6 41.1046 6 40V32"/><path d="M32 42H40C41.1046 42 42 41.1046 42 40V32"/><path d="M32 6H40C41.1046 6 42 6.89543 42 8V16"/><path d="M32 24L16 24"/><path d="M24 32L24 16"/></g>
+  </g>
+  <!-- Cell: add-item -->
+  <text x="98" y="96.00" class="label">add-item</text>
+  <g transform="translate(111.00, 65.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M24 30V24"/><path fill="#2F88FF" d="M6 30H24H42V42H6V30Z"/><line x1="6" x2="6" y1="12.5" y2="11.5"/><line x1="6" x2="6" y1="18" y2="17"/><line x1="6" x2="6" y1="7" y2="6"/><line x1="42" x2="42" y1="12.5" y2="11.5"/><line x1="42" x2="42" y1="18" y2="17"/><line x1="42" x2="42" y1="7" y2="6"/><line x1="42" x2="41" y1="18" y2="18"/><line x1="7" x2="6" y1="18" y2="18"/><line x1="7" x2="6" y1="6" y2="6"/><line x1="14" x2="13" y1="6" y2="6"/><line x1="21" x2="20" y1="6" y2="6"/><line x1="21" x2="20" y1="18" y2="18"/><line x1="28" x2="27" y1="6" y2="6"/><line x1="14" x2="13" y1="18" y2="18"/><line x1="28" x2="27" y1="18" y2="18"/><line x1="35" x2="34" y1="6" y2="6"/><line x1="35" x2="34" y1="18" y2="18"/><line x1="42" x2="41" y1="6" y2="6"/></g>
+  </g>
+  <!-- Cell: add-mode -->
+  <text x="146" y="96.00" class="label">add-mode</text>
+  <g transform="translate(159.00, 65.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"><path fill="#2F88FF" stroke="#000" d="M24.0033 4L29.2737 9.27038H38.7296V18.7263L44 23.9967L38.7296 29.2737V38.7296H29.2737L24.0033 44L18.7264 38.7296H9.27036V29.2737L4 23.9967L9.27036 18.7263V9.27038H18.7264L24.0033 4Z"/><path stroke="#fff" d="M17 23.9967H31"/><path stroke="#fff" d="M24.0039 17V31"/></g>
+  </g>
+  <!-- Cell: add-music -->
+  <text x="194" y="96.00" class="label">add-music</text>
+  <g transform="translate(207.00, 65.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linejoin="round" stroke-width="4"><path stroke-linecap="round" d="M24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24"/><path fill="#2F88FF" d="M20 24V17.0718L26 20.5359L32 24L26 27.4641L20 30.9282V24Z"/><path stroke-linecap="round" d="M37.0508 32L37.0508 42"/><path stroke-linecap="round" d="M42 36.9497L32 36.9497"/></g>
+  </g>
+  <!-- Cell: add-one -->
+  <text x="242" y="96.00" class="label">add-one</text>
+  <g transform="translate(255.00, 65.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-linejoin="round" stroke-width="4"><path fill="#2F88FF" stroke="#000" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"/><path stroke="#fff" stroke-linecap="round" d="M24 16V32"/><path stroke="#fff" stroke-linecap="round" d="M16 24L32 24"/></g>
+  </g>
+  <!-- Cell: add-pic -->
+  <text x="290" y="96.00" class="label">add-pic</text>
+  <g transform="translate(303.00, 65.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"><path d="M38 21V40C38 41.1046 37.1046 42 36 42H8C6.89543 42 6 41.1046 6 40V12C6 10.8954 6.89543 10 8 10H26.3636"/><path fill="#2F88FF" d="M12.0005 31.0308L18.0005 23L21.0005 26L24.5005 20.5L32.0005 31.0308H12.0005Z"/><path d="M34.0005 10H42.0005"/><path d="M37.9946 5.79541V13.7954"/></g>
+  </g>
+  <!-- Cell: add-picture -->
+  <text x="338" y="96.00" class="label">add-picture</text>
+  <g transform="translate(351.00, 65.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="#000" d="M44 24C44 22.8954 43.1046 22 42 22C40.8954 22 40 22.8954 40 24H44ZM24 8C25.1046 8 26 7.10457 26 6C26 4.89543 25.1046 4 24 4V8ZM39 40H9V44H39V40ZM8 39V9H4V39H8ZM40 24V39H44V24H40ZM9 8H24V4H9V8ZM9 40C8.44772 40 8 39.5523 8 39H4C4 41.7614 6.23857 44 9 44V40ZM39 44C41.7614 44 44 41.7614 44 39H40C40 39.5523 39.5523 40 39 40V44ZM8 9C8 8.44772 8.44771 8 9 8V4C6.23858 4 4 6.23857 4 9H8Z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6 35L16.6931 25.198C17.4389 24.5143 18.5779 24.4953 19.3461 25.1538L32 36"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M28 31L32.7735 26.2265C33.4772 25.5228 34.5914 25.4436 35.3877 26.0408L42 31"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M30 12L42 12"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M36 6V18"/></g>
+  </g>
+  <!-- Cell: add-print -->
+  <text x="386" y="96.00" class="label">add-print</text>
+  <g transform="translate(399.00, 65.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-linecap="round" stroke-width="4"><path stroke="#000" stroke-linejoin="round" d="M12 19H6V6H42V19H36"/><path fill="#2F88FF" stroke="#000" stroke-linejoin="round" d="M12 12H36V44L30 39.5556L24 44L18 39.5556L12 44V12Z"/><path stroke="#fff" d="M20 26H28"/><path stroke="#fff" d="M24 22L24 30"/></g>
+  </g>
+  <!-- Cell: add-subset -->
+  <text x="434" y="96.00" class="label">add-subset</text>
+  <g transform="translate(447.00, 65.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M10 28V35H18"/><path fill="#2F88FF" d="M18 28H42V42H18V35V28Z"/><line x1="6" x2="6" y1="13.5" y2="12.5"/><line x1="6" x2="6" y1="20" y2="19"/><line x1="6" x2="6" y1="7" y2="6"/><line x1="32" x2="32" y1="13.5" y2="12.5"/><line x1="32" x2="32" y1="20" y2="19"/><line x1="32" x2="32" y1="7" y2="6"/><line x1="32" x2="31" y1="20" y2="20"/><line x1="7" x2="6" y1="20" y2="20"/><line x1="7" x2="6" y1="6" y2="6"/><line x1="13" x2="12" y1="6" y2="6"/><line x1="19.5" x2="18.5" y1="6" y2="6"/><line x1="19.5" x2="18.5" y1="20" y2="20"/><line x1="26" x2="25" y1="6" y2="6"/><line x1="13" x2="12" y1="20" y2="20"/><line x1="26" x2="25" y1="20" y2="20"/><line x1="32" x2="31" y1="6" y2="6"/></g>
+  </g>
+  <!-- Cell: add-subtract -->
+  <text x="2" y="145.50" class="label">add-subtract</text>
+  <g transform="translate(15.00, 114.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><rect width="36" height="36" x="6" y="6" fill="#2F88FF" stroke="#000" rx="3"/><path stroke="#fff" d="M27 31H35"/><path stroke="#fff" d="M17 13V21"/><path stroke="#fff" d="M21 17H13"/><path stroke="#fff" d="M34 14L14 34"/></g>
+  </g>
+  <!-- Cell: add-text -->
+  <text x="50" y="145.50" class="label">add-text</text>
+  <g transform="translate(63.00, 114.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="4"><path d="M4 8H32"/><path d="M28 21H44"/><path d="M18 42L18 8"/><path d="M36 42L36 21"/></g>
+  </g>
+  <!-- Cell: add-text-two -->
+  <text x="98" y="145.50" class="label">add-text-two</text>
+  <g transform="translate(111.00, 114.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="4"><circle cx="24" cy="24" r="20" fill="#2F88FF" stroke="#000"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M32 16H16"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M24 34V16"/></g>
+  </g>
+  <!-- Cell: add-three -->
+  <text x="146" y="145.50" class="label">add-three</text>
+  <g transform="translate(159.00, 114.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M24 32L24 16"/><path d="M42 27L42 21"/><path d="M6 27L6 21"/><path d="M14 6H8C6.89543 6 6 6.89543 6 8V14"/><path d="M34 6H40C41.1046 6 42 6.89543 42 8V14"/><path d="M34 42H40C41.1046 42 42 41.1046 42 40V34"/><path d="M14 42H8C6.89543 42 6 41.1046 6 40V34"/><path d="M27 6H21"/><path d="M32 24L16 24"/><path d="M27 42H21"/></g>
+  </g>
+  <!-- Cell: add-two -->
+  <text x="194" y="145.50" class="label">add-two</text>
+  <g transform="translate(207.00, 114.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="4"><path d="M33 7.26261C30.3212 5.81915 27.2563 5 24 5C13.5066 5 5 13.5066 5 24C5 34.4934 13.5066 43 24 43C26.858 43 29.5685 42.369 32 41.2387"/><path stroke-linejoin="round" d="M31 30L43 30"/><path stroke-linejoin="round" d="M15 22L22 29L41 11"/><path stroke-linejoin="round" d="M37 24V36"/></g>
+  </g>
+  <!-- Cell: add-user -->
+  <text x="242" y="145.50" class="label">add-user</text>
+  <g transform="translate(255.00, 114.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><circle cx="24" cy="12" r="8" fill="#2F88FF"/><path d="M42 44C42 34.0589 33.9411 26 24 26C14.0589 26 6 34.0589 6 44"/><path d="M19 39H29"/><path d="M24 34V44"/></g>
+  </g>
+  <!-- Cell: add-web -->
+  <text x="290" y="145.50" class="label">add-web</text>
+  <g transform="translate(303.00, 114.75) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M25 40H7C5.34315 40 4 38.6569 4 37V11C4 9.34315 5.34315 8 7 8H41C42.6569 8 44 9.34315 44 11V24.9412"/><path fill="#2F88FF" stroke="#000" stroke-width="4" d="M4 11C4 9.34315 5.34315 8 7 8H41C42.6569 8 44 9.34315 44 11V20H4V11Z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M32 35H44"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M38 29V41"/><circle r="2" fill="#fff" transform="matrix(0 -1 -1 0 10 14)"/><circle r="2" fill="#fff" transform="matrix(0 -1 -1 0 16 14)"/></g>
+  </g>
+  <!-- Cell: address-book -->
+  <text x="2" y="195.00" class="label">address-book</text>
+  <g transform="translate(15.00, 164.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M8 36V44H40V4H8V12"/><path d="M6 30H10"/><path d="M6 24H10"/><path d="M6 18H10"/><circle cx="24" cy="17" r="4" fill="#2F88FF"/><path d="M32 35C32 30.5817 28.4183 27 24 27C19.5817 27 16 30.5817 16 35"/></g>
+  </g>
+  <!-- Cell: adjacent-item -->
+  <text x="50" y="195.00" class="label">adjacent-item</text>
+  <g transform="translate(63.00, 164.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="#2F88FF" d="M14 29H42V41H14V35V29Z"/><path fill="#2F88FF" d="M14 7H42V19H14V13V7Z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M14 13V19H42V7H14V13ZM14 13H6V35H14M14 35V41H42V29H14V35Z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M14 13H6V35H14"/><path fill="#2F88FF" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M14 29H42V41H14V35V29Z"/><path fill="#2F88FF" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M14 7H42V19H14V13V7Z"/></g>
+  </g>
+  <!-- Cell: adjustment -->
+  <text x="98" y="195.00" class="label">adjustment</text>
+  <g transform="translate(111.00, 164.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path fill="#2F88FF" stroke="#000" d="M5 8C5 6.34315 6.34315 5 8 5H40C41.6569 5 43 6.34315 43 8V40C43 41.6569 41.6569 43 40 43H8C6.34315 43 5 41.6569 5 40V8Z"/><path stroke="#fff" d="M36 12L12 36"/><path stroke="#fff" d="M12 16H20"/><path stroke="#fff" d="M27 33H35"/><path stroke="#fff" d="M16 12V20"/></g>
+  </g>
+  <!-- Cell: adobe-illustrate -->
+  <text x="146" y="195.00" class="label">adobe-illustra…</text>
+  <g transform="translate(159.00, 164.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="4"><path fill="#2F88FF" stroke="#000" d="M39 6H9C7.34315 6 6 7.34315 6 9V39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M20 15L14 33"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M32 33V25"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M32 20V19"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M20 15L26 33"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16 27H24"/></g>
+  </g>
+  <!-- Cell: adobe-indesign -->
+  <text x="194" y="195.00" class="label">adobe-indesign</text>
+  <g transform="translate(207.00, 164.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="4"><path fill="#2F88FF" stroke="#000" d="M39 6H9C7.34315 6 6 7.34315 6 9V39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16 15L16 33"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M32 17L32 33"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M28 33C25.5 33 24 31.4 24 29C24 26.6 25.5 25 28 25C30.5 25 32 25 32 25V33H28Z" clip-rule="evenodd"/></g>
+  </g>
+  <!-- Cell: adobe-lightroom -->
+  <text x="242" y="195.00" class="label">adobe-lightroom</text>
+  <g transform="translate(255.00, 164.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="4"><path fill="#2F88FF" stroke="#000" d="M39 6H9C7.34315 6 6 7.34315 6 9V39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M14 15V33H22"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M28 33V21"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M28 26C30.25 22 32.6286 22 34 22"/></g>
+  </g>
+  <!-- Cell: adobe-photoshop -->
+  <text x="290" y="195.00" class="label">adobe-photoshop</text>
+  <g transform="translate(303.00, 164.25) scale(0.3750, 0.3750) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="4"><path fill="#2F88FF" stroke="#000" d="M39 6H9C7.34315 6 6 7.34315 6 9V39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M14 15V33"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16 25C19 25 23 24.2 23 20C23 15.8 19 15 16 15H14V25H16Z" clip-rule="evenodd"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M34 21.0246C33 21.0246 28 20.5266 28 24.0123C28 27.4979 34 26.5021 34 29.9877C34 33.4734 28 32.9754 28 32.9754"/></g>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-icon-park</text>
+  <text x="348" y="139.738" class="overlay-title">iconpark</text>
+  <text x="351" y="190.744" class="overlay-meta">Apache-2.0 · 2,658 icons</text>
+</svg>

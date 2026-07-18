@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/fonts/SourceSerif4Variable-Roman.ttf.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Source Serif 4 Variable Fallback: Georgia";
+  src: local('Georgia');
+  ascent-override: 102.6332%;
+  descent-override: 33.1874%;
+  size-adjust: 100.9419%;
+}
+@font-face {
+  font-family: "Source Serif 4 Variable Fallback: Times New Roman";
+  src: local('Times New Roman'), local('TimesNewRomanPSMT'), local('Liberation Serif');
+  ascent-override: 93.5278%;
+  descent-override: 30.2431%;
+  line-gap-override: 0%;
+  size-adjust: 110.7692%;
+}
+
+:root {
+  --font-source-serif-4: "Source Serif 4 Variable", "Source Serif 4 Variable Fallback: Georgia", "Source Serif 4 Variable Fallback: Times New Roman", Georgia, "Times New Roman", Georgia, "Times New Roman", serif;
+}

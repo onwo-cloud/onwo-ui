@@ -80,7 +80,7 @@ export const ChangelogTrigger = component$(() => {
         </p>
 
         {latest.newBadge && (
-          <span class="px-2 rounded-md ml-auto py-1 bg-canvas-contrast text-macro text-ink-contrast tracking-tight font-semibold">
+          <span class="px-2 rounded-md ml-auto py-1 bg-shade-1000 text-macro text-shade-0 tracking-tight font-semibold">
             NEW
           </span>
         )}

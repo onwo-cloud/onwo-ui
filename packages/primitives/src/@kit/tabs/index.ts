@@ -1,5 +1,5 @@
 export * from './root';
-export * from './tab';
+export * from './item';
 export * from './list';
 export * from './panels';
 export * from './panel';

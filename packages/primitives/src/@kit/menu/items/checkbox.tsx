@@ -1,8 +1,9 @@
-import { $, component$, PropsOf, QRL, Signal, Slot, useSignal, useTask$ } from '@qwik.dev/core';
+import { $, component$, QRL, Signal, Slot, useSignal, useTask$ } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 
 import { useMenuAndRegisterItem } from '../dropdown-context';
 
-type CheckboxItemProps = PropsOf<'div'> & {
+type CheckboxItemProps = OwPropsOf<'div'> & {
   ['bind:checked']?: Signal<boolean>;
   disabled?: boolean;
   onCheckedChange$?: QRL<(checked: boolean) => void>;

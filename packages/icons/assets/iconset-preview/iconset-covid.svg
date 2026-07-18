@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: covid-19-virus-4 -->
+  <text x="2" y="46.50" class="label">covid-19-virus…</text>
+  <g transform="translate(15.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.25 19.651a3.714 3.714 0 1 0 0-7.428a3.714 3.714 0 0 0 0 7.428M6.631 9.437h1.238m-.619 0v2.786m4.158-1.32l.876.875m-.438-.437l-1.97 1.969m3.874 2.008v1.238m0-.619h-2.786m1.32 4.158l-.876.876m.438-.438l-1.97-1.97m-2.007 3.874H6.631m.619 0v-2.786m-4.158 1.32l-.876-.876m.438.438l1.97-1.97M.75 16.556v-1.238m0 .619h2.786m-1.32-4.159l.876-.875m-.438.438l1.97 1.969M18.5 9.027a2.714 2.714 0 1 0 0-5.428a2.714 2.714 0 0 0 0 5.428m-.452-7.464h.904m-.452 0v2.036m3.039-.964l.64.639m-.32-.32l-1.44 1.44m2.831 1.467v.905m0-.453h-2.036m.965 3.039l-.64.64m.32-.32l-1.44-1.44m-1.467 2.831h-.904m.452 0V9.027m-3.039.965l-.64-.64m.32.32l1.44-1.44M13.75 6.766v-.905m0 .452h2.036m-.965-3.039l.64-.639m-.32.319l1.44 1.44"/>
+  </g>
+  <!-- Cell: covid-19-virus-pandemic-1 -->
+  <text x="50" y="46.50" class="label">covid-19-virus…</text>
+  <g transform="translate(63.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M17.25 20.679a3.429 3.429 0 1 0 0-6.858a3.429 3.429 0 0 0 0 6.858m-.571-9.429h1.142m-.571 0v2.571m3.839-1.218l.808.808m-.404-.404l-1.819 1.819m3.576 1.853v1.142m0-.571h-2.571m1.218 3.839l-.808.808m.404-.404l-1.819-1.819m-1.853 3.576h-1.142m.571 0v-2.571m-3.839 1.218l-.808-.808m.404.404l1.819-1.819m-3.576-1.853v-1.142m0 .571h2.571m-1.218-3.839l.808-.808m-.404.404l1.819 1.819"/><path d="M9.639 22.194A10.808 10.808 0 1 1 22.272 10.14"/><path d="m4.823 20.01l.97-4.851H6.83a1.442 1.442 0 0 0 1.4-1.79l-.721-2.882a1.44 1.44 0 0 0-1.4-1.087H.967M20.2 5.073h-3.916a1.44 1.44 0 0 0-1.4 1.091l-.72 2.881"/></g>
+  </g>
+  <!-- Cell: covid-19-virus-pandemic-2 -->
+  <text x="98" y="46.50" class="label">covid-19-virus…</text>
+  <g transform="translate(111.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M13.885 6.648a5.352 5.352 0 0 1 0 10.7m-.892-14.713h1.784m-.892 0v4.013m5.991-1.901l1.262 1.261m-.631-.63l-2.838 2.838m5.581 2.892v1.784m0-.892h-4.014m1.902 5.992l-1.262 1.261m.631-.631l-2.838-2.838m-2.892 5.581h-1.784m.892 0v-4.013M10.25 21.5a9.5 9.5 0 0 1 0-19z"/><path d="M10.25 2.5A10.92 10.92 0 0 0 5.5 12a10.92 10.92 0 0 0 4.75 9.5m0-12.571H1.665M10 15.071H1.415"/></g>
+  </g>
+  <!-- Cell: covid-19-virus-pandemic-3 -->
+  <text x="146" y="46.50" class="label">covid-19-virus…</text>
+  <g transform="translate(159.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M17.851 8.875a2.94 2.94 0 1 0 0-5.88a2.94 2.94 0 0 0 0 5.88M17.361.79h.98m-.49 0v2.205m3.292-1.045l.693.693m-.347-.346L19.93 3.856m3.066 1.589v.98m0-.49h-2.205m1.045 3.292l-.693.693m.346-.347L19.93 8.014m-1.589 3.066h-.98m.49 0V8.875M14.56 9.92l-.693-.693m.346.346l1.559-1.559m-3.066-1.589v-.98m0 .49h2.205m-1.044-3.292l.693-.693m-.347.347l1.559 1.559m4.515 9.806a9.6 9.6 0 0 1-.606 3.264m-1.809 3.024a9.6 9.6 0 0 1-2.588 2.083m-3.351 1.094c-1.106.143-2.227.1-3.319-.127m-3.253-1.358a9.8 9.8 0 0 1-2.418-2.274m-1.571-3.155a9.2 9.2 0 0 1-.341-3.3m.88-3.413a9.7 9.7 0 0 1 1.9-2.726m2.901-2.002a9.8 9.8 0 0 1 3.22-.808m6.499 9.814A5.789 5.789 0 1 1 10 7.822"/><path d="m8.772 8.1l.355 1.447A1.29 1.29 0 0 1 8.84 10.7l-.653.738a1.3 1.3 0 0 0-.307.65L7.671 13.4a1.285 1.285 0 0 1-1.094 1.071l-1.612.223m11.223.547l-2.073-.885a1.287 1.287 0 0 0-1.764.921l-.27 1.293c-.052.248-.029.507.066.742l.657 1.634"/></g>
+  </g>
+  <!-- Cell: covid-carrier-blood-1 -->
+  <text x="194" y="46.50" class="label">covid-carrier-…</text>
+  <g transform="translate(207.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M20.182 15.067A8.02 8.02 0 0 1 12 23.25a8.02 8.02 0 0 1-8.182-8.182C3.818 8.144 12 .75 12 .75s8.182 7.395 8.182 14.318"/><path d="M12 17.66a2.795 2.795 0 1 0 0-5.59a2.795 2.795 0 0 0 0 5.59m-.466-7.686h.932m-.466 0v2.096m3.129-.993l.659.659m-.329-.33l-1.483 1.483m2.915 1.51v.932m0-.466h-2.096m.993 3.129l-.659.659m.33-.329l-1.483-1.483m-1.51 2.915h-.932m.466 0V17.66m-3.129.993l-.659-.659m.329.33l1.483-1.483m-2.915-1.51v-.932m0 .466h2.096m-.993-3.129l.659-.659m-.33.329l1.483 1.483"/></g>
+  </g>
+  <!-- Cell: covid-carrier-blood-2 -->
+  <text x="242" y="46.50" class="label">covid-carrier-…</text>
+  <g transform="translate(255.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M16.881 10.851a3.517 3.517 0 1 0 0-7.034a3.517 3.517 0 0 0 0 7.034m-.586-9.672h1.172m-.586 0v2.638m3.937-1.25l.829.829m-.414-.414l-1.865 1.865m3.668 1.901V7.92m0-.586h-2.638m1.249 3.937l-.829.829m.415-.414l-1.865-1.865m-1.901 3.667h-1.172m.586 0v-2.637M12.943 12.1l-.829-.829m.415.415l1.865-1.865M10.726 7.92V6.748m0 .586h2.638m-1.25-3.938l.829-.829m-.414.415l1.865 1.865m.442 11.467a6.936 6.936 0 1 1-13.872 0c0-5 4.571-12.548 6.292-15.211a.765.765 0 0 1 1.289 0l.761 1.288"/><path d="M7.9 20.167a3.853 3.853 0 0 1-3.853-3.853"/></g>
+  </g>
+  <!-- Cell: covid-carrier-human -->
+  <text x="290" y="46.50" class="label">covid-carrier-…</text>
+  <g transform="translate(303.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M11.857 20.628a3.163 3.163 0 1 0 0-6.326a3.163 3.163 0 0 0 0 6.326m-.527-8.698h1.054m-.527 0v2.372m3.541-1.124l.746.746m-.373-.373l-1.677 1.677m3.298 1.71v1.054m0-.527H15.02m1.124 3.541l-.746.746m.373-.373l-1.677-1.678M12.384 23H11.33m.527 0v-2.372m-3.541 1.124l-.745-.746m.372.373l1.678-1.678m-3.299-1.709v-1.054m0 .527h2.372m-1.123-3.541l.745-.746m-.373.373l1.678 1.677"/><path d="M9.357 9.004a4.529 4.529 0 1 1 5.286 0a8.41 8.41 0 0 1 5.769 7.98v6.219"/><path d="M3.588 23.203v-6.218a8.41 8.41 0 0 1 5.769-7.981"/></g>
+  </g>
+  <!-- Cell: covid-carrier-packages -->
+  <text x="338" y="46.50" class="label">covid-carrier-…</text>
+  <g transform="translate(351.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 17.357a2.857 2.857 0 1 0 0-5.714a2.857 2.857 0 0 0 0 5.714M11.524 9.5h.952M12 9.5v2.143m3.199-1.015l.673.673m-.336-.337L14.02 12.48M17 14.024v.952m0-.476h-2.143m1.015 3.199l-.673.673m.337-.336L14.02 16.52m-1.544 2.98h-.952m.476 0v-2.143m-3.199 1.015l-.673-.673m.336.337L9.98 16.52M7 14.976v-.952m0 .476h2.143m-1.015-3.199l.673-.673m-.337.336L9.98 12.48"/><path d="M21.167 6.5H2.833C1.821 6.5 1 7.32 1 8.333v12.834C1 22.179 1.82 23 2.833 23h18.334C22.179 23 23 22.18 23 21.167V8.333c0-1.012-.82-1.833-1.833-1.833"/><path d="m22.408 6.985l-3.447-5.169A1.83 1.83 0 0 0 17.435 1H6.565a1.83 1.83 0 0 0-1.526.816L1.592 6.985M12 1v5.5"/></g>
+  </g>
+  <!-- Cell: covid19-virus-1 -->
+  <text x="386" y="46.50" class="label">covid19-virus-1</text>
+  <g transform="translate(399.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25a8.25 8.25 0 1 0 0-16.5a8.25 8.25 0 0 0 0 16.5M13.75.75h-3.5m1.75 0v3m-6.718-.942L4.045 4.045L2.808 5.282m1.237-1.237l2.121 2.121M.75 10.25v3.5m0-1.75h3m-.942 6.718l1.237 1.237l1.237 1.237m-1.237-1.237l2.121-2.121m4.084 5.416h3.5m-1.75 0v-3m6.718.942l1.237-1.237l1.237-1.237m-1.237 1.237l-2.121-2.121m5.416-4.084v-3.5m0 1.75h-3m.942-6.718l-1.237-1.237l-1.237-1.237m1.237 1.237l-2.121 2.121"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.5 11.25a1.75 1.75 0 1 0 0-3.5a1.75 1.75 0 0 0 0 3.5"/><path d="M12.75 17a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75m4-3.625a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/></g>
+  </g>
+  <!-- Cell: covid19-virus-2 -->
+  <text x="434" y="46.50" class="label">covid19-virus-2</text>
+  <g transform="translate(447.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M4.934 7.263L3.269 5.6A1.648 1.648 0 1 1 5.6 3.269l1.663 1.665m0 14.132L5.6 20.731A1.647 1.647 0 1 1 3.269 18.4l1.665-1.666m14.132.003l1.665 1.663a1.648 1.648 0 0 1-2.331 2.331l-1.666-1.665m.003-14.132L18.4 3.269A1.648 1.648 0 0 1 20.731 5.6l-1.665 1.663"/><path d="M20.347 10.354a8.51 8.51 0 0 0-6.7-6.7m-.001 16.693a8.515 8.515 0 0 0 6.7-6.7m-16.693-.001a8.51 8.51 0 0 0 6.7 6.7m.001-16.693a8.51 8.51 0 0 0-6.7 6.7"/><path d="M9.805 6.787c.351-.352.549-.828.549-1.325V2.4a1.646 1.646 0 1 1 3.292 0v3.062c.002.498.201.974.554 1.325M6.787 14.2a1.88 1.88 0 0 0-1.325-.549H2.4a1.646 1.646 0 1 1 0-3.292h3.062c.497 0 .973-.198 1.325-.549m7.413 7.403a1.88 1.88 0 0 0-.549 1.325V21.6a1.646 1.646 0 1 1-3.292 0v-3.062c0-.497-.198-.973-.549-1.325m7.403-7.408c.352.351.828.549 1.325.549H21.6a1.646 1.646 0 0 1 0 3.292h-3.062c-.497 0-.973.198-1.325.549"/></g>
+  </g>
+  <!-- Cell: covid19-virus-3 -->
+  <text x="2" y="96.00" class="label">covid19-virus-3</text>
+  <g transform="translate(15.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.851 4.958L6.215 3.322a2.046 2.046 0 0 0-2.893 2.893l1.6 1.694m11.227 11.133l1.636 1.636a2.046 2.046 0 0 0 2.893-2.893l-1.636-1.636m-14.084 0l-1.636 1.636a2.046 2.046 0 0 0 2.893 2.893l1.636-1.637M19.075 7.909l1.589-1.694a2.047 2.047 0 1 0-2.893-2.893L16.14 4.953"/><path stroke-linecap="round" stroke-linejoin="round" d="M21.205 9.955h-1.291a8.18 8.18 0 0 0-5.869-5.869V2.8a2.045 2.045 0 0 0-4.09 0v1.286a8.18 8.18 0 0 0-5.869 5.869H2.8a2.045 2.045 0 0 0 0 4.09h1.286a8.18 8.18 0 0 0 5.869 5.869v1.291a2.045 2.045 0 0 0 4.09 0v-1.291a8.18 8.18 0 0 0 5.869-5.869h1.291a2.045 2.045 0 1 0 0-4.09"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.534 13.023a2.557 2.557 0 1 0 0-5.114a2.557 2.557 0 0 0 0 5.114"/><path d="M9.443 15.955a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/></g>
+  </g>
+  <!-- Cell: covid19-virus-bat -->
+  <text x="50" y="96.00" class="label">covid19-virus-…</text>
+  <g transform="translate(63.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M17.211 20.568a3.429 3.429 0 1 0 0-6.858a3.429 3.429 0 0 0 0 6.858m-.571-9.429h1.143m-.572 0v2.571m3.839-1.218l.808.808m-.404-.404l-1.819 1.819m3.576 1.853v1.142m0-.571H20.64m1.218 3.839l-.808.808m.404-.404l-1.819-1.819m-1.852 3.576H16.64m.571 0v-2.571m-3.838 1.218l-.809-.808m.404.404l1.819-1.819m-3.576-1.853v-1.142m0 .571h2.572M12.564 13.3l.809-.808m-.405.404l1.819 1.819M8.813.861v4.012L5.665 3.824A3.7 3.7 0 0 0 .789 7.339v2.719s2.485-1.043 4.076 2.619c2.038-2.038 4.075 0 4.075 2.038M14.163.861v4.012l3.147-1.049a3.705 3.705 0 0 1 4.877 3.515"/><path d="M8.813 3.536A4.67 4.67 0 0 1 11.488 2.2c1.014.14 1.954.61 2.675 1.338"/></g>
+  </g>
+  <!-- Cell: covid19-virus-heal-1 -->
+  <text x="98" y="96.00" class="label">covid19-virus-…</text>
+  <g transform="translate(111.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M23.25 17.25a1 1 0 0 0-1-1h-2.5v-2.5a1 1 0 0 0-1-1h-1.5a1 1 0 0 0-1 1v2.5h-2.5a1 1 0 0 0-1 1v1.5a1 1 0 0 0 1 1h2.5v2.5a1 1 0 0 0 1 1h1.5a1 1 0 0 0 1-1v-2.5h2.5a1 1 0 0 0 1-1zM4.183 12.754H2.162a1.413 1.413 0 0 1 0-2.825h2.021m5.746-5.746V2.162a1.413 1.413 0 0 1 2.825 0v2.021"/><path d="M15.405 5.28a7.3 7.3 0 0 0-8.128 0M18.5 9.929a7.25 7.25 0 0 0-1.1-2.652M7.277 17.4a7.3 7.3 0 0 0 2.478 1.061M5.28 7.277a7.3 7.3 0 0 0 0 8.128"/><path d="M6.848 9.511c0-.426-.17-.835-.471-1.137L4.518 6.515a1.414 1.414 0 0 1 2-2l1.856 1.862c.302.301.71.47 1.137.471m0 8.987a1.6 1.6 0 0 0-1.137.471l-1.859 1.859a1.414 1.414 0 0 1-2-2l1.859-1.86c.301-.301.47-.71.471-1.136m6.327-6.321c.426 0 .835-.17 1.136-.471l1.86-1.859a1.414 1.414 0 1 1 2 2l-1.862 1.856a1.6 1.6 0 0 0-.471 1.137"/></g>
+  </g>
+  <!-- Cell: covid19-virus-heal-2 -->
+  <text x="146" y="96.00" class="label">covid19-virus-…</text>
+  <g transform="translate(159.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12.017.75H8.983m1.517 0v2.6m-5.822-.817L3.606 3.606L2.533 4.678m1.073-1.072l1.838 1.838M.75 8.983v3.034m0-1.517h2.6m-.817 5.822l1.073 1.072l1.072 1.073m-1.072-1.073l1.838-1.838M18.467 4.678l-1.073-1.072l-1.072-1.073m1.072 1.073l-1.838 1.838M8.983 9.85a1.517 1.517 0 1 0 0-3.034a1.517 1.517 0 0 0 0 3.034"/><path stroke-linecap="round" stroke-linejoin="round" d="M17.61 9.75a7.15 7.15 0 1 0-7.982 7.842m13.622-.342a1 1 0 0 0-1-1h-2.5v-2.5a1 1 0 0 0-1-1h-1.5a1 1 0 0 0-1 1v2.5h-2.5a1 1 0 0 0-1 1v1.5a1 1 0 0 0 1 1h2.5v2.5a1 1 0 0 0 1 1h1.5a1 1 0 0 0 1-1v-2.5h2.5a1 1 0 0 0 1-1z"/><path d="M10.208 14.434a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/></g>
+  </g>
+  <!-- Cell: covid19-virus-lifelong-1 -->
+  <text x="194" y="96.00" class="label">covid19-virus-…</text>
+  <g transform="translate(207.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M11.167 15.286a3.286 3.286 0 1 0 0-6.572a3.286 3.286 0 0 0 0 6.572m-.548-9.036h1.095m-.547 0v2.464m3.678-1.167l.775.774m-.387-.387L13.49 9.677m3.427 1.775v1.096m0-.548h-2.465m1.168 3.679l-.775.774m.388-.387l-1.743-1.743m-1.776 3.427h-1.095m.548 0v-2.464m-3.679 1.167l-.774-.774m.387.387l1.742-1.743m-3.426-1.775v-1.096m0 .548h2.464M6.714 8.321l.774-.774m-.387.387l1.742 1.743"/><path d="M19.673 17.598a10.267 10.267 0 1 1 1.66-5.6v.934"/><path d="m19.467 11.066l1.867 1.866l1.866-1.866"/></g>
+  </g>
+  <!-- Cell: covid19-virus-lifelong-2 -->
+  <text x="242" y="96.00" class="label">covid19-virus-…</text>
+  <g transform="translate(255.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12.017.767H8.983m1.517 0v2.6M4.678 2.55L3.606 3.622L2.533 4.695m1.073-1.073l1.838 1.839M.75 9v3.033m0-1.516h2.6m-.817 5.821l1.073 1.073l1.072 1.072m-1.072-1.072l1.838-1.839M18.467 4.695l-1.073-1.073l-1.072-1.072m1.072 1.072l-1.838 1.839M8.983 9.867a1.517 1.517 0 1 0 0-3.034a1.517 1.517 0 0 0 0 3.034"/><path stroke-linecap="round" stroke-linejoin="round" d="M17.356 8.483a7.15 7.15 0 1 0-8.889 8.884"/><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 23.233a6 6 0 1 0 0-12a6 6 0 0 0 0 12"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.902 17.233H17.25v-2.651"/><path d="M9.417 13.367a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/></g>
+  </g>
+  <!-- Cell: covid19-virus-patient-1 -->
+  <text x="290" y="96.00" class="label">covid19-virus-…</text>
+  <g transform="translate(303.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 20.679a3.429 3.429 0 1 0 0-6.858a3.429 3.429 0 0 0 0 6.858m-.571-9.429h1.142m-.571 0v2.571m3.839-1.218l.808.808m-.404-.404l-1.819 1.819m3.576 1.853v1.142m0-.571h-2.571m1.218 3.839l-.808.808m.404-.404l-1.819-1.819m-1.853 3.576h-1.142m.571 0v-2.571m-3.839 1.218l-.808-.808m.404.404l1.819-1.819m-3.576-1.853v-1.142m0 .571h2.571m-1.218-3.839l.808-.808m-.404.404l1.819 1.819M7.5 9a4.125 4.125 0 1 0 0-8.25A4.125 4.125 0 0 0 7.5 9M.75 17.25a6.753 6.753 0 0 1 9.4-6.208"/>
+  </g>
+  <!-- Cell: covid19-virus-patient-2 -->
+  <text x="338" y="96.00" class="label">covid19-virus-…</text>
+  <g transform="translate(351.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 20.679a3.429 3.429 0 1 0 0-6.858a3.429 3.429 0 0 0 0 6.858m-.571-9.429h1.142m-.571 0v2.571m3.839-1.218l.808.808m-.404-.404l-1.819 1.819m3.576 1.853v1.142m0-.571h-2.571m1.218 3.839l-.808.808m.404-.404l-1.819-1.819m-1.853 3.576h-1.142m.571 0v-2.571m-3.839 1.218l-.808-.808m.404.404l1.819-1.819m-3.576-1.853v-1.142m0 .571h2.571m-1.218-3.839l.808-.808m-.404.404l1.819 1.819M6 6.75a3 3 0 1 0 0-6a3 3 0 0 0 0 6m4.555 4.138A5.251 5.251 0 0 0 .75 13.5v2.25H3l.75 7.5h4.5l.323-3.232"/>
+  </g>
+  <!-- Cell: covid19-virus-reinfected -->
+  <text x="386" y="96.00" class="label">covid19-virus-…</text>
+  <g transform="translate(399.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <defs><path id="SVGnsEXLNwd" d="m15.664 13.654l-2.914 2.914l2.914 2.914"/></defs><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12.017.75H8.983m1.517 0v2.6m-5.822-.817L3.606 3.606L2.533 4.678m1.073-1.072l1.838 1.838M.75 8.983v3.034m0-1.517h2.6m-.817 5.822l1.073 1.072l1.072 1.073m-1.072-1.073l1.838-1.838M18.467 4.678l-1.073-1.072l-1.072-1.073m1.072 1.073l-1.838 1.838M8.983 9.85a1.517 1.517 0 1 0 0-3.034a1.517 1.517 0 0 0 0 3.034"/><path stroke-linecap="round" stroke-linejoin="round" d="M17.61 9.75a7.15 7.15 0 0 0-1.485-3.668c-2.593-3.305-7.64-3.631-10.637-.687c-2.971 2.919-2.764 7.993.5 10.647a7.15 7.15 0 0 0 3.64 1.55m3.122-1.024h7.159a3.341 3.341 0 1 1 0 6.682h-6.2"/><use href="#SVGnsEXLNwd" stroke-linecap="round" stroke-linejoin="round"/><path stroke-linecap="round" stroke-linejoin="round" d="M12.75 16.568h7.159a3.341 3.341 0 1 1 0 6.682h-6.2"/><use href="#SVGnsEXLNwd" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.15 14.492a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/></g>
+  </g>
+  <!-- Cell: covid19-virus-warning-1 -->
+  <text x="434" y="96.00" class="label">covid19-virus-…</text>
+  <g transform="translate(447.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12.017.75H8.983m1.517 0v2.6m-5.822-.817L3.606 3.606L2.533 4.678m1.073-1.072l1.838 1.838M.75 8.983v3.034m0-1.517h2.6m-.817 5.822l1.073 1.072l1.072 1.073m-1.072-1.073l1.838-1.838M18.467 4.678l-1.073-1.072l-1.072-1.073m1.072 1.073l-1.838 1.838M8.983 9.85a1.517 1.517 0 1 0 0-3.034a1.517 1.517 0 0 0 0 3.034"/><path stroke-linecap="round" stroke-linejoin="round" d="M17.284 8.252a7.148 7.148 0 1 0-7.656 9.34M17.25 18v-3m5.813 5.682a1.773 1.773 0 0 1-1.587 2.568h-8.452a1.773 1.773 0 0 1-1.587-2.568l4.226-8.451a1.774 1.774 0 0 1 3.174 0z"/><path d="M10.092 14.492a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75M17.25 21a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/></g>
+  </g>
+  <!-- Cell: covid19-virus-warning-2 -->
+  <text x="2" y="145.50" class="label">covid19-virus-…</text>
+  <g transform="translate(15.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 18v-3m5.813 5.682a1.773 1.773 0 0 1-1.587 2.568h-8.452a1.773 1.773 0 0 1-1.587-2.568l4.226-8.451a1.774 1.774 0 0 1 3.174 0zm-18.88-7.928H2.162a1.413 1.413 0 0 1 0-2.825h2.021m5.746-5.746V2.162a1.413 1.413 0 0 1 2.825 0v2.021"/><path stroke-linecap="round" stroke-linejoin="round" d="M15.405 5.28a7.3 7.3 0 0 0-8.128 0M18.288 9.1a7.3 7.3 0 0 0-.888-1.823M7.277 17.4a7.3 7.3 0 0 0 1.959.926M5.28 7.277a7.3 7.3 0 0 0 0 8.128"/><path stroke-linecap="round" stroke-linejoin="round" d="M6.848 9.511c0-.426-.17-.835-.471-1.137L4.518 6.515a1.414 1.414 0 0 1 2-2l1.856 1.862c.302.301.71.47 1.137.471m0 8.987a1.6 1.6 0 0 0-1.137.471l-1.859 1.859a1.414 1.414 0 0 1-2-2l1.859-1.86c.301-.301.47-.71.471-1.136m6.327-6.321c.426 0 .835-.17 1.136-.471l1.86-1.859a1.414 1.414 0 1 1 2 2l-1.862 1.856"/><path d="M17.25 21a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/></g>
+  </g>
+  <!-- Cell: covid19-virus-warning-3 -->
+  <text x="50" y="145.50" class="label">covid19-virus-…</text>
+  <g transform="translate(63.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 12.583V6.667m5.472 3.346L11.333 1.58a1.485 1.485 0 0 0-2.666 0L.878 17.447A1.252 1.252 0 0 0 2 19.25h7.75M18 21a3 3 0 1 0 0-6a3 3 0 0 0 0 6m-.5-8.25h1m-.5 0V15m3.359-1.066l.707.707m-.354-.353l-1.591 1.591M23.25 17.5v1m0-.5H21m1.066 3.359l-.707.707m.353-.354l-1.591-1.591M18.5 23.25h-1m.5 0V21m-3.359 1.066l-.707-.707m.354.353l1.591-1.591M12.75 18.5v-1m0 .5H15m-1.066-3.359l.707-.707m-.353.354l1.591 1.591"/><path d="M10 15.983a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/></g>
+  </g>
+  <!-- Cell: graph-cured-decreasing -->
+  <text x="98" y="145.50" class="label">graph-cured-de…</text>
+  <g transform="translate(111.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M21.777 22.5h-21v-21m21 4.5a1 1 0 0 0-1-1h-2.5V2.5a1 1 0 0 0-1-1h-1.5a1 1 0 0 0-1 1V5h-2.5a1 1 0 0 0-1 1v1.5a1 1 0 0 0 1 1h2.5V11a1 1 0 0 0 1 1h1.5a1 1 0 0 0 1-1V8.5h2.5a1 1 0 0 0 1-1z"/><path d="M.777 9.5h1.4a10.83 10.83 0 0 1 8.6 4.25a10.82 10.82 0 0 0 8.6 4.25h3.846"/><path d="M20.833 15.609L23.223 18l-2.39 2.391"/></g>
+  </g>
+  <!-- Cell: graph-cured-increasing -->
+  <text x="146" y="145.50" class="label">graph-cured-in…</text>
+  <g transform="translate(159.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M21.755 22.5h-21v-21"/><path d="M15.755 6a1 1 0 0 0-1-1h-2.5V2.5a1 1 0 0 0-1-1h-1.5a1 1 0 0 0-1 1V5h-2.5a1 1 0 0 0-1 1v1.5a1 1 0 0 0 1 1h2.5V11a1 1 0 0 0 1 1h1.5a1 1 0 0 0 1-1V8.5h2.5a1 1 0 0 0 1-1zm-15 13.512h2.7c8.9 0 16.065-3.387 17.955-12.762"/><path d="m18.571 8.582l2.842-1.832l1.832 2.842"/></g>
+  </g>
+  <!-- Cell: graph-cured-stable -->
+  <text x="194" y="145.50" class="label">graph-cured-st…</text>
+  <g transform="translate(207.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M21.787 22.5h-21v-21"/><path d="M16.537 6a1 1 0 0 0-1-1h-2.5V2.5a1 1 0 0 0-1-1h-1.5a1 1 0 0 0-1 1V5h-2.5a1 1 0 0 0-1 1v1.5a1 1 0 0 0 1 1h2.5V11a1 1 0 0 0 1 1h1.5a1 1 0 0 0 1-1V8.5h2.5a1 1 0 0 0 1-1zm4.285 9.234l2.391 2.391l-2.391 2.391"/><path d="M.787 17.625h.5a10.6 10.6 0 0 0 4.737-1.118L8.446 15.3a6.35 6.35 0 0 1 5.683 0l2.422 1.211a10.6 10.6 0 0 0 4.736 1.118h1.926"/></g>
+  </g>
+  <!-- Cell: graph-death-rate-decreasing -->
+  <text x="242" y="145.50" class="label">graph-death-ra…</text>
+  <g transform="translate(255.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.777 6.375a4.875 4.875 0 1 0-7.877 3.816v.309a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-.309a4.85 4.85 0 0 0 1.877-3.816M16.902 10.5V12m4.875 10.5h-21v-21"/><path stroke-linecap="round" stroke-linejoin="round" d="M.777 9.5h1.4a10.83 10.83 0 0 1 8.6 4.25a10.82 10.82 0 0 0 8.6 4.25h3.846"/><path stroke-linecap="round" stroke-linejoin="round" d="M20.833 15.609L23.223 18l-2.39 2.391"/><path d="M18.777 7.113a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75m-3.752.75a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/></g>
+  </g>
+  <!-- Cell: graph-death-rate-increasing -->
+  <text x="290" y="145.50" class="label">graph-death-ra…</text>
+  <g transform="translate(303.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.753 22.5h-21v-21"/><path stroke-linecap="round" stroke-linejoin="round" d="M15.378 6.375A4.876 4.876 0 1 0 7.5 10.191v.309A1.5 1.5 0 0 0 9 12h3a1.5 1.5 0 0 0 1.5-1.5v-.309a4.85 4.85 0 0 0 1.878-3.816M10.503 10.5V12M.758 19.512h2.7c8.894 0 16.064-3.387 17.954-12.762"/><path stroke-linecap="round" stroke-linejoin="round" d="m18.574 8.582l2.841-1.832l1.832 2.842"/><path d="M12.378 7.125a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75m-3.752.75a.375.375 0 1 1 0-.75m0 .75a.375.375 0 1 0 0-.75"/></g>
+  </g>
+  <!-- Cell: graph-death-rate-stable -->
+  <text x="2" y="195.00" class="label">graph-death-ra…</text>
+  <g transform="translate(15.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.787 22.5h-21v-21"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.162 6.375a4.876 4.876 0 1 0-7.875 3.816v.309a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5v-.309a4.85 4.85 0 0 0 1.875-3.816M11.287 10.5V12m9.535 3.234l2.391 2.391l-2.391 2.391"/><path stroke-linecap="round" stroke-linejoin="round" d="M.787 17.625h.5a10.6 10.6 0 0 0 4.737-1.118L8.446 15.3a6.35 6.35 0 0 1 5.683 0l2.422 1.211a10.6 10.6 0 0 0 4.736 1.118h1.926"/><path d="M13.162 7.125a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75m-3.752.75a.375.375 0 1 1 0-.75m0 .75a.375.375 0 1 0 0-.75"/></g>
+  </g>
+  <!-- Cell: graph-document-infected-report -->
+  <text x="50" y="195.00" class="label">graph-document…</text>
+  <g transform="translate(63.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M17.75 20.532a3.137 3.137 0 1 0 0-6.274a3.137 3.137 0 0 0 0 6.274m-.523-8.627h1.046m-.523 0v2.353m3.512-1.114l.74.739m-.37-.37l-1.664 1.664m3.272 1.695v1.046m0-.523h-2.353m1.115 3.513l-.74.739m.37-.37l-1.664-1.663m-1.695 3.271h-1.046m.523 0v-2.353m-3.512 1.115l-.74-.739m.37.369l1.664-1.663m-3.272-1.696v-1.046m0 .523h2.353m-1.115-3.512l.74-.739m-.37.369l1.664 1.664M3.76 7.115v9h4.5"/><path d="m3.76 13.115l2.689-2.689a1.5 1.5 0 0 1 2.122 0l.581.58a1.5 1.5 0 0 0 2.347-.289l.357-.6"/><path d="M9.01 20.615H2.26a1.5 1.5 0 0 1-1.5-1.5v-16.5a1.5 1.5 0 0 1 1.5-1.5h10.629a1.5 1.5 0 0 1 1.06.439l2.872 2.872a1.5 1.5 0 0 1 .439 1.06v2.379"/></g>
+  </g>
+  <!-- Cell: graph-infected-decreasing -->
+  <text x="98" y="195.00" class="label">graph-infected…</text>
+  <g transform="translate(111.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M21.777 22.5h-21v-21m15.75 8.25a3 3 0 1 0 0-6a3 3 0 0 0 0 6m-.5-8.25h1m-.5 0v2.25m3.359-1.066l.707.707m-.354-.353l-1.591 1.591m3.129 1.621v1m0-.5h-2.25m1.066 3.359l-.707.707m.353-.354l-1.591-1.591M17.027 12h-1m.5 0V9.75m-3.359 1.066l-.707-.707m.353.353l1.591-1.591M11.277 7.25v-1m0 .5h2.25m-1.066-3.359l.707-.707m-.354.354l1.591 1.591"/><path d="M.777 8.875h1.4a10.83 10.83 0 0 1 8.6 4.25a10.82 10.82 0 0 0 8.6 4.25h3.846"/><path d="m20.833 14.984l2.39 2.391l-2.39 2.391"/></g>
+  </g>
+  <!-- Cell: graph-infected-increasing -->
+  <text x="146" y="195.00" class="label">graph-infected…</text>
+  <g transform="translate(159.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M21.755 22.5h-21v-21"/><path d="M.755 19.5h2.7c8.9 0 16.065-3.387 17.955-12.762M10.505 9.75a3 3 0 1 0 0-6a3 3 0 0 0 0 6m-.5-8.25h1m-.5 0v2.25m3.359-1.066l.707.707m-.354-.353l-1.591 1.591m3.129 1.621v1m0-.5h-2.25m1.066 3.359l-.707.707m.353-.354l-1.591-1.591M11.005 12h-1m.5 0V9.75m-3.359 1.066l-.707-.707m.354.353l1.591-1.591M5.255 7.25v-1m0 .5h2.25M6.439 3.391l.707-.707m-.353.354l1.591 1.591"/><path d="m18.571 8.57l2.842-1.832l1.832 2.842"/></g>
+  </g>
+  <!-- Cell: graph-infected-stable -->
+  <text x="194" y="195.00" class="label">graph-infected…</text>
+  <g transform="translate(207.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M21.787 22.5h-21v-21m20.035 13.734l2.391 2.391l-2.391 2.391M11.287 9.75a3 3 0 1 0 0-6a3 3 0 0 0 0 6m-.5-8.25h1m-.5 0v2.25m3.359-1.066l.707.707M15 3.038l-1.591 1.591m3.128 1.621v1m0-.5h-2.25m1.066 3.359l-.707.707m.354-.354l-1.591-1.591M11.787 12h-1m.5 0V9.75m-3.358 1.066l-.707-.707m.353.353l1.591-1.591M6.037 7.25v-1m0 .5h2.25M7.222 3.391l.707-.707m-.354.354l1.591 1.591"/><path d="M.787 17.625h.5a10.6 10.6 0 0 0 4.737-1.118L8.446 15.3a6.35 6.35 0 0 1 5.683 0l2.422 1.211a10.6 10.6 0 0 0 4.736 1.118h1.926"/></g>
+  </g>
+  <!-- Cell: mutation-1 -->
+  <text x="242" y="195.00" class="label">mutation-1</text>
+  <g transform="translate(255.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12.408 1.208H9.375m1.517 0v2.6M5.07 2.992L3.997 4.064L2.925 5.136m1.072-1.072l1.839 1.839M1.142 9.442v3.033m0-1.517h2.6m-.817 5.822l1.072 1.073l1.073 1.072m-1.073-1.072l1.839-1.839M18.858 5.136l-1.072-1.072l-1.072-1.072m1.072 1.072l-1.839 1.839m-6.572 4.406a1.517 1.517 0 1 0 0-3.034a1.517 1.517 0 0 0 0 3.034"/><path stroke-linecap="round" stroke-linejoin="round" d="M17.3 7.791a7.15 7.15 0 1 0-8.442 10.018m10.462 3.137H14.7a1.847 1.847 0 0 1-1.842-1.846v-4.616m3.542-1.846h4.615a1.844 1.844 0 0 1 1.846 1.846V19.1"/><path stroke-linecap="round" stroke-linejoin="round" d="m17.474 19.099l1.846 1.847l-1.846 1.846m.769-8.308l-1.846-1.846l1.846-1.846"/><path d="M9.367 14.6a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75"/></g>
+  </g>
+  <!-- Cell: mutation-2 -->
+  <text x="290" y="195.00" class="label">mutation-2</text>
+  <g transform="translate(303.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M7.528 19.777a3.714 3.714 0 1 0 0-7.428a3.714 3.714 0 0 0 0 7.428M6.909 9.563h1.238m-.619 0v2.786m4.159-1.32l.875.876m-.438-.438l-1.969 1.97m3.873 2.007v1.238m0-.619h-2.785m1.319 4.159l-.875.875m.437-.438l-1.969-1.969m-2.008 3.873H6.909m.619 0v-2.786m-4.158 1.32l-.876-.875m.438.437l1.97-1.969m-3.874-2.008v-1.238m0 .619h2.786m-1.32-4.158l.876-.876m-.438.438l1.97 1.97m13.446-4.283a2.714 2.714 0 1 0 0-5.428a2.714 2.714 0 0 0 0 5.428m-.452-7.464h.905m-.453 0v2.035m3.039-.964l.64.64m-.32-.32l-1.44 1.439m2.831 1.467v.905m0-.452h-2.036m.965 3.038l-.64.64m.32-.32l-1.44-1.439m-1.466 2.831h-.905m.452 0V9.154m-3.039.964l-.64-.64m.32.32l1.44-1.439m-2.831-1.467v-.905m0 .453h2.036m-.965-3.039l.64-.64m-.32.32l1.44 1.439M2.748 7.9V3.283a1.846 1.846 0 0 1 1.846-1.846H9.21"/><path d="M4.594 6.052L2.748 7.898L.902 6.052m20.154 8.385v6.154a1.847 1.847 0 0 1-1.846 1.846h-2.616"/><path d="m19.21 16.283l1.846-1.846l1.846 1.846"/></g>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-covid</text>
+  <text x="348" y="139.738" class="overlay-title">covid icons</text>
+  <text x="351" y="190.744" class="overlay-meta">CC-BY-4.0 · 142 icons</text>
+</svg>

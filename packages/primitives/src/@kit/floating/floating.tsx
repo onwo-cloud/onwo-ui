@@ -1,5 +1,6 @@
-import type { CSSProperties, PropsOf, Signal } from '@qwik.dev/core';
-import { Slot, component$, useSignal, useTask$ } from '@qwik.dev/core';
+import type { Signal } from '@qwik.dev/core';
+import { withAs } from '~primitives/index';
+import { component$, Slot, useSignal, useVisibleTask$, $ } from '@qwik.dev/core';
 import { isServer } from '@qwik.dev/core/build';
 import {
   arrow as _arrow,
@@ -20,123 +21,113 @@ export interface FloatingOptions {
   shift?: boolean;
   arrow?: boolean;
   hide?: 'referenceHidden' | 'escaped';
-  updateOn?:
-  | 'ancestorResize'
-  | 'ancestorScroll'
-  | 'elementResize'
-  | 'layoutShift'
-  | 'animationFrame';
   transform?: string;
 }
 
-export type FloatingProps = {
+type FloatingProps = {
   anchorRef: Signal<HTMLElement | undefined>;
   floating?: FloatingOptions;
-  popoverProps?: Omit<PropsOf<'div'>, 'style'> & { style?: CSSProperties; }
+  ref?: Signal<HTMLElement | undefined> | Signal<Element | undefined> | any;
 };
 
-export const Floating = component$(({ anchorRef, floating = {}, ...props }: FloatingProps) => {
-  const panelRef = useSignal<HTMLElement>();
-  const arrowRef = useSignal<HTMLElement>();
-  // 1. Signal to track if we have successfully positioned the element
-  const isPositioned = useSignal(false);
+export const Floating = withAs('div')<FloatingProps>(
+  component$(({ As, anchorRef, floating = {}, ref: externalRef, ...props }) => {
+    const internalPanelRef = useSignal<HTMLElement>();
+    const arrowRef = useSignal<HTMLElement>();
 
-  useTask$(async ({ track, cleanup }) => {
-    const anchor = track(() => anchorRef.value);
-    const floatOpts = track(() => floating);
-    const panel = track(() => panelRef.value);
+    useVisibleTask$(({ track, cleanup }) => {
+      const floatOpts = track(() => floating);
+      const panel = track(() => internalPanelRef.value);
+      const anchor = track(() => anchorRef.value);
 
-    if (isServer || !anchor || !panel) {
-      // If we lose anchor, hide again
-      isPositioned.value = false;
-      return;
-    }
+      if (isServer || !panel) return;
 
-    try {
-      if (panel.showPopover && !panel.matches(':popover-open')) {
-        panel.showPopover();
-      }
-    } catch (e) {
-      /* Fallback */
-    }
+      const updatePosition = async () => {
+        const currentAnchor = anchorRef.value;
+        const currentPanel = internalPanelRef.value;
 
-    const updatePosition = async () => {
-      if (!panel || !anchor) return;
+        if (!currentPanel || !currentAnchor) return;
 
-      const middleware: Middleware[] = [];
-
-      if (floatOpts.gutter) middleware.push(_offset(floatOpts.gutter));
-      if (floatOpts.flip) middleware.push(_flip());
-      if (floatOpts.shift) middleware.push(_shift());
-      if (floatOpts.hide) middleware.push(_hide({ strategy: floatOpts.hide }));
-      if (floatOpts.arrow && arrowRef.value) {
-        middleware.push(_arrow({ element: arrowRef.value, padding: 0 }));
-      }
-
-      const { x, y, strategy, middlewareData } = await computePosition(
-        anchor as ReferenceElement,
-        panel,
-        {
-          placement: floatOpts.placement || 'bottom',
-          strategy: 'fixed',
-          middleware,
-        },
-      );
-
-      Object.assign(panel.style, {
-        position: strategy,
-        left: `${x}px`,
-        top: `${y}px`,
-        transform: floatOpts.transform,
-      });
-
-      if (middlewareData.arrow && arrowRef.value) {
-        const { x: arrowX, y: arrowY } = middlewareData.arrow;
-        Object.assign(arrowRef.value.style, {
-          left: arrowX != null ? `${arrowX}px` : '',
-          top: arrowY != null ? `${arrowY}px` : '',
-        });
-      }
-
-      // 2. Mark as positioned so we can show it
-      isPositioned.value = true;
-    };
-
-    const cleanupFunc = autoUpdate(anchor as ReferenceElement, panel, updatePosition);
-
-    cleanup(() => {
-      cleanupFunc();
-      try {
-        if (panel.hidePopover && panel.matches(':popover-open')) {
-          panel.hidePopover();
+        // Only compute position if native popover is open
+        if (!currentPanel.matches(':popover-open')) {
+          currentPanel.style.visibility = 'hidden';
+          return;
         }
-      } catch (e) { }
-    });
-  });
 
-  return (
-    <div
-      ref={panelRef}
-      popover="manual"
-      {...props.popoverProps}
-      style={{
-        margin: 0,
-        inset: 'auto',
-        display: 'block',
-        position: 'fixed',
-        zIndex: 9999,
-        width: 'max-content',
-        top: 0,
-        left: 0,
-        // 3. Control visibility based on positioning status
-        // This prevents the user from seeing the menu at 0,0 before calculation finishes
-        opacity: isPositioned.value ? 1 : 0,
-        pointerEvents: isPositioned.value ? 'auto' : 'none',
-        ...props.popoverProps?.style,
-      }}
-    >
-      <Slot />
-      {floating.arrow && <div ref={arrowRef} style={{ position: 'absolute' }} />}
-    </div>
-  );
-});
+        try {
+          const middleware: Middleware[] = [];
+
+          if (floatOpts.gutter) middleware.push(_offset(floatOpts.gutter));
+          if (floatOpts.flip) middleware.push(_flip());
+          if (floatOpts.shift) middleware.push(_shift());
+          if (floatOpts.hide) middleware.push(_hide({ strategy: floatOpts.hide }));
+          if (floatOpts.arrow && arrowRef.value) {
+            middleware.push(_arrow({ element: arrowRef.value, padding: 0 }));
+          }
+
+          const { x, y, strategy, middlewareData } = await computePosition(
+            currentAnchor as ReferenceElement,
+            currentPanel,
+            {
+              placement: floatOpts.placement || 'bottom',
+              strategy: floatOpts.strategy || 'fixed',
+              middleware,
+            },
+          );
+
+          Object.assign(currentPanel.style, {
+            position: strategy,
+            left: `${x}px`,
+            top: `${y}px`,
+            transform: floatOpts.transform || '',
+            visibility: 'visible',
+            pointerEvents: 'auto',
+          });
+
+          if (middlewareData.arrow && arrowRef.value) {
+            const { x: arrowX, y: arrowY } = middlewareData.arrow;
+            Object.assign(arrowRef.value.style, {
+              left: arrowX != null ? `${arrowX}px` : '',
+              top: arrowY != null ? `${arrowY}px` : '',
+            });
+          }
+        } catch (err) {
+          console.warn('Floating computePosition error:', err);
+        }
+      };
+
+      const handleUpdate = () => {
+        updatePosition();
+      };
+
+      // 💥 Always attach event listeners as soon as panel is mounted
+      panel.addEventListener('update-floating', handleUpdate);
+      panel.addEventListener('toggle', handleUpdate);
+
+      let cleanupAutoUpdate: (() => void) | undefined;
+      if (anchor) {
+        cleanupAutoUpdate = autoUpdate(anchor as ReferenceElement, panel, updatePosition);
+      }
+
+      cleanup(() => {
+        panel.removeEventListener('update-floating', handleUpdate);
+        panel.removeEventListener('toggle', handleUpdate);
+        if (cleanupAutoUpdate) cleanupAutoUpdate();
+      });
+    });
+
+    const setRef$ = $((el: HTMLElement) => {
+      internalPanelRef.value = el;
+      if (externalRef) {
+        externalRef.value = el;
+      }
+    });
+
+    return (
+      <As ref={setRef$} {...props}>
+        <Slot />
+        {floating.arrow && <div ref={arrowRef} style={{ position: 'absolute' }} />}
+      </As>
+    );
+  })
+);

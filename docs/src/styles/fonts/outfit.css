@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit[wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Outfit Thin Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 94.2317%;
+  descent-override: 24.5002%;
+  size-adjust: 106.1215%;
+}
+@font-face {
+  font-family: "Outfit Thin Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 100.8599%;
+  descent-override: 26.2236%;
+  line-gap-override: 0%;
+  size-adjust: 99.1474%;
+}
+@font-face {
+  font-family: "Outfit Thin Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 107.2398%;
+  descent-override: 27.8824%;
+  size-adjust: 93.2489%;
+}
+
+:root {
+  --font-outfit: "Outfit Thin", "Outfit Thin Fallback: -apple-system", "Outfit Thin Fallback: Arial", "Outfit Thin Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

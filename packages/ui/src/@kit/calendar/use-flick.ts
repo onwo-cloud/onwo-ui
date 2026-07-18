@@ -1,5 +1,6 @@
 import {
   $,
+  ClassList,
   noSerialize,
   useSignal,
   type NoSerialize,
@@ -22,7 +23,7 @@ export type FlickController = {
     onPointerUp$: any;
     onPointerCancel$: any;
     style: { touchAction: string };
-    class: string;
+    class: ClassList;
   };
 };
 

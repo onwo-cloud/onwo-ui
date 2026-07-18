@@ -1,4 +1,4 @@
-import { component$, useSignal } from '@qwik.dev/core';
+import { component$, useSignal, $ } from '@qwik.dev/core';
 import { Calendar } from '@onwo/ui/calendar';
 
 import type { BoxedComp, Section } from '.';
@@ -15,7 +15,12 @@ const defaultCalendar: BoxedComp = {
       </div>
     );
   }),
-  code: `<Calendar bind:value={calValue} />`,
+  code: $(() => `import { useSignal } from '@qwik.dev/core';
+import { Calendar } from '@onwo/ui/calendar';
+
+const calValue = useSignal<Date>();
+
+<Calendar bind:value={calValue} />`),
 };
 
 export const section: Section = {

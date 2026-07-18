@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: a-b -->
+  <text x="2" y="46.50" class="label">a-b</text>
+  <g transform="translate(15.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M5 15v2c0 1.054.95 2 2 2h3v2H7a4 4 0 0 1-4-4v-2zm13-5l4.4 11h-2.155l-1.201-3h-4.09l-1.199 3h-2.154L16 10zm-1 2.885L15.753 16h2.492zM3 3h6a3 3 0 0 1 2.235 5A3 3 0 0 1 9 13H3zm6 6H5v2h4a1 1 0 1 0 0-2m8-6a4 4 0 0 1 4 4v2h-2V7a2 2 0 0 0-2-2h-3V3zM9 5H5v2h4a1 1 0 0 0 0-2"/>
+  </g>
+  <!-- Cell: ai -->
+  <text x="50" y="46.50" class="label">ai</text>
+  <g transform="translate(63.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M16.4 21h-2.154l-2-5H5.754l-2 5H1.6L8 5h2zm4.6-9v9h-2v-9zM6.554 14h4.892L9 7.885zM19.529 2.32a.507.507 0 0 1 .942 0l.253.61a4.37 4.37 0 0 0 2.25 2.327l.717.32a.53.53 0 0 1 0 .962l-.758.338a4.36 4.36 0 0 0-2.22 2.25l-.246.566a.506.506 0 0 1-.934 0l-.247-.565a4.36 4.36 0 0 0-2.219-2.251l-.76-.338a.53.53 0 0 1 0-.963l.718-.32a4.37 4.37 0 0 0 2.251-2.325z"/>
+  </g>
+  <!-- Cell: ai-generate -->
+  <text x="98" y="46.50" class="label">ai-generate</text>
+  <g transform="translate(111.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m19.713 9.128l-.246.566a.506.506 0 0 1-.934 0l-.246-.566a4.36 4.36 0 0 0-2.22-2.25l-.759-.339a.53.53 0 0 1 0-.963l.717-.319a4.37 4.37 0 0 0 2.251-2.326l.253-.611a.506.506 0 0 1 .942 0l.253.61a4.37 4.37 0 0 0 2.25 2.327l.718.32a.53.53 0 0 1 0 .962l-.76.338a4.36 4.36 0 0 0-2.219 2.251M6 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h2v5a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h7v2z"/>
+  </g>
+  <!-- Cell: ai-generate-2 -->
+  <text x="146" y="46.50" class="label">ai-generate-2</text>
+  <g transform="translate(159.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m20.467 8.694l.246-.566a4.36 4.36 0 0 1 2.22-2.25l.759-.339a.53.53 0 0 0 0-.963l-.717-.319a4.37 4.37 0 0 1-2.251-2.326l-.253-.611a.506.506 0 0 0-.942 0l-.253.61a4.37 4.37 0 0 1-2.25 2.327l-.718.32a.53.53 0 0 0 0 .962l.76.338a4.36 4.36 0 0 1 2.219 2.251l.246.566c.18.414.753.414.934 0M5.8 16h2.154l.6-1.5h2.892l.6 1.5H14.2L11 8H9zm4.2-5.115l.646 1.615H9.354zM15 16V8h2v8zM3 3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-9h-2v8H4V5h10V3z"/>
+  </g>
+  <!-- Cell: ai-generate-text -->
+  <text x="194" y="46.50" class="label">ai-generate-te…</text>
+  <g transform="translate(207.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m20.467 8.694l.246-.566a4.36 4.36 0 0 1 2.22-2.25l.759-.339a.53.53 0 0 0 0-.963l-.717-.319a4.37 4.37 0 0 1-2.251-2.326l-.253-.611a.506.506 0 0 0-.942 0l-.253.61a4.37 4.37 0 0 1-2.25 2.327l-.718.32a.53.53 0 0 0 0 .962l.76.338a4.36 4.36 0 0 1 2.219 2.251l.246.566c.18.414.753.414.934 0M2 4a1 1 0 0 1 1-1h11v2H4v14h16v-8h2v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm5 4h10v3h-2v-1h-2v4h1.5v2h-5v-2H11v-4H9v1H7z"/>
+  </g>
+  <!-- Cell: align-bottom -->
+  <text x="242" y="46.50" class="label">align-bottom</text>
+  <g transform="translate(255.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 19h18v2H3zm5-6h3l-4 4l-4-4h3V3h2zm10 0h3l-4 4l-4-4h3V3h2z"/>
+  </g>
+  <!-- Cell: align-center -->
+  <text x="290" y="46.50" class="label">align-center</text>
+  <g transform="translate(303.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 4h18v2H3zm2 15h14v2H5zm-2-5h18v2H3zm2-5h14v2H5z"/>
+  </g>
+  <!-- Cell: align-justify -->
+  <text x="338" y="46.50" class="label">align-justify</text>
+  <g transform="translate(351.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 4h18v2H3zm0 15h18v2H3zm0-5h18v2H3zm0-5h18v2H3z"/>
+  </g>
+  <!-- Cell: align-left -->
+  <text x="386" y="46.50" class="label">align-left</text>
+  <g transform="translate(399.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 4h18v2H3zm0 15h14v2H3zm0-5h18v2H3zm0-5h14v2H3z"/>
+  </g>
+  <!-- Cell: align-right -->
+  <text x="434" y="46.50" class="label">align-right</text>
+  <g transform="translate(447.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 4h18v2H3zm4 15h14v2H7zm-4-5h18v2H3zm4-5h14v2H7z"/>
+  </g>
+  <!-- Cell: align-top -->
+  <text x="2" y="96.00" class="label">align-top</text>
+  <g transform="translate(15.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 3h18v2H3zm5 8v10H6V11H3l4-4l4 4zm10 0v10h-2V11h-3l4-4l4 4z"/>
+  </g>
+  <!-- Cell: align-vertically -->
+  <text x="50" y="96.00" class="label">align-vertical…</text>
+  <g transform="translate(63.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 11h18v2H3zm15 7v3h-2v-3h-3l4-4l4 4zM8 18v3H6v-3H3l4-4l4 4zM18 6h3l-4 4l-4-4h3V3h2zM8 6h3l-4 4l-4-4h3V3h2z"/>
+  </g>
+  <!-- Cell: asterisk -->
+  <text x="98" y="96.00" class="label">asterisk</text>
+  <g transform="translate(111.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M13 3v7.267l6.294-3.633l1 1.732l-6.293 3.633l6.293 3.635l-1 1.732L13 13.732V21h-2v-7.268l-6.294 3.634l-1-1.732L9.999 12L3.706 8.366l1-1.732L11 10.267V3z"/>
+  </g>
+  <!-- Cell: attachment-2 -->
+  <text x="146" y="96.00" class="label">attachment-2</text>
+  <g transform="translate(159.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m14.829 7.757l-5.657 5.657a1 1 0 1 0 1.414 1.414l5.657-5.656A3 3 0 0 0 12 4.929l-5.657 5.657a5 5 0 0 0 7.071 7.07L19.071 12l1.414 1.414l-5.656 5.657a7 7 0 0 1-9.9-9.9l5.657-5.656a5 5 0 0 1 7.071 7.07L12 16.244A3 3 0 0 1 7.758 12l5.656-5.657z"/>
+  </g>
+  <!-- Cell: bold -->
+  <text x="194" y="96.00" class="label">bold</text>
+  <g transform="translate(207.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M8 11h4.5a2.5 2.5 0 0 0 0-5H8zm10 4.5a4.5 4.5 0 0 1-4.5 4.5H6V4h6.5a4.5 4.5 0 0 1 3.256 7.606A4.5 4.5 0 0 1 18 15.5M8 13v5h5.5a2.5 2.5 0 0 0 0-5z"/>
+  </g>
+  <!-- Cell: bring-forward -->
+  <text x="242" y="96.00" class="label">bring-forward</text>
+  <g transform="translate(255.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M14 3a1 1 0 0 1 1 1v5h5a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1v-5H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm-1 2H5v8h8z"/>
+  </g>
+  <!-- Cell: bring-to-front -->
+  <text x="290" y="96.00" class="label">bring-to-front</text>
+  <g transform="translate(303.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M11 3a1 1 0 0 1 1 1v2h5a1 1 0 0 1 1 1v5h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1v-2H7a1 1 0 0 1-1-1v-5H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm5 5H8v8h8z"/>
+  </g>
+  <!-- Cell: calendar-view -->
+  <text x="338" y="96.00" class="label">calendar-view</text>
+  <g transform="translate(351.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M2 4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm2 15h16V9H4zm7-6H6v4h5z"/>
+  </g>
+  <!-- Cell: carousel-view -->
+  <text x="386" y="96.00" class="label">carousel-view</text>
+  <g transform="translate(399.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M4 3H1v2h2v14H1v2h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1m3 1a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1zm2 1v14h6V5zm10-1a1 1 0 0 1 1-1h3v2h-2v14h2v2h-3a1 1 0 0 1-1-1z"/>
+  </g>
+  <!-- Cell: code-block -->
+  <text x="434" y="96.00" class="label">code-block</text>
+  <g transform="translate(447.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m3.414 6l2.293-2.293l-1.414-1.414L.586 6l3.707 3.707l1.414-1.414zm6.172 0L7.293 3.707l1.414-1.414L12.414 6L8.707 9.707L7.293 8.293zM14 3h7a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8h2v7h16V5h-6z"/>
+  </g>
+  <!-- Cell: code-view -->
+  <text x="2" y="145.50" class="label">code-view</text>
+  <g transform="translate(15.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m16.95 8.465l1.414-1.415l4.95 4.95l-4.95 4.95l-1.414-1.414L20.485 12zm-9.9 0L3.515 12l3.535 3.536l-1.414 1.414L.686 12l4.95-4.95z"/>
+  </g>
+  <!-- Cell: cursor-hand -->
+  <text x="50" y="145.50" class="label">cursor-hand</text>
+  <g transform="translate(63.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M9.5.5A2.5 2.5 0 0 1 12 3v3.803a3 3 0 0 1 1.803-.062l5 1.389A3 3 0 0 1 21 11.02v4.481a7.5 7.5 0 0 1-7.5 7.5c-2.458 0-4.329-.693-5.817-1.999c-1.45-1.273-2.458-3.064-3.35-5.1c-.929-2.126-1.444-3.421-1.724-4.178c-.356-.964.137-2.311 1.477-2.405l.248-.01a4 4 0 0 1 2.666.95V3A2.5 2.5 0 0 1 9.5.5m0 2A.5.5 0 0 0 9 3v11h-.995l-.986.197c-.348-1.74-1.334-2.746-2.422-2.872A88 88 0 0 0 6.166 15.1c.859 1.962 1.725 3.422 2.838 4.399c1.074.943 2.455 1.502 4.496 1.502a5.5 5.5 0 0 0 5.5-5.5v-4.48a1 1 0 0 0-.733-.964l-5-1.389A1 1 0 0 0 12 9.631V11h-2V3a.5.5 0 0 0-.5-.5"/>
+  </g>
+  <!-- Cell: custom-size -->
+  <text x="98" y="145.50" class="label">custom-size</text>
+  <g transform="translate(111.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M8 3h7V.5L18.5 4L15 7.5V5H8v2.5L4.5 4L8 .5zM3 17V6.5h2V17a2 2 0 0 0 2 2h10.5v2H7a4 4 0 0 1-4-4m18-1V9h2.5L20 5.5L16.5 9H19v7h-2.5l3.5 3.5l3.5-3.5z"/>
+  </g>
+  <!-- Cell: delete-column -->
+  <text x="146" y="145.50" class="label">delete-column</text>
+  <g transform="translate(159.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v8a5 5 0 1 1 .213 8.152L13 20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm-1 2H7v14h4zm8 10h-6v2h6z"/>
+  </g>
+  <!-- Cell: delete-row -->
+  <text x="194" y="145.50" class="label">delete-row</text>
+  <g transform="translate(207.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M20 5a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1a5 5 0 1 1-8 0H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm-7 10v2h6v-2zm6-8H5v4h14z"/>
+  </g>
+  <!-- Cell: double-quotes-l -->
+  <text x="242" y="145.50" class="label">double-quotes-l</text>
+  <g transform="translate(255.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179m10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621c.537-.278 1.24-.375 1.929-.311c1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5a3.87 3.87 0 0 1-2.748-1.179"/>
+  </g>
+  <!-- Cell: double-quotes-r -->
+  <text x="290" y="145.50" class="label">double-quotes-r</text>
+  <g transform="translate(303.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.248-5.621c-.537.278-1.24.375-1.93.311c-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179m-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.456 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621c-.537.278-1.24.375-1.929.311C4.591 12.323 3.17 10.842 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.1.49 2.748 1.179"/>
+  </g>
+  <!-- Cell: draggable -->
+  <text x="2" y="195.00" class="label">draggable</text>
+  <g transform="translate(15.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M8.5 7a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m0 6.5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m1.5 5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0M15.5 7a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3m1.5 5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0m-1.5 8a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3"/>
+  </g>
+  <!-- Cell: dropdown-list -->
+  <text x="50" y="195.00" class="label">dropdown-list</text>
+  <g transform="translate(63.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M4 5v14h9v2H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v5h-2V5zm15.707 6.293L19 10.586l-.707.707l-3 3l1.414 1.414L19 13.414l2.293 2.293l1.414-1.414zm-3 6L19 19.586l2.293-2.293l1.414 1.414l-3 3l-.707.707l-.707-.707l-3-3z"/>
+  </g>
+  <!-- Cell: emphasis -->
+  <text x="98" y="195.00" class="label">emphasis</text>
+  <g transform="translate(111.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M12 19a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3m-5.5 0a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3m11 0a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3M18 3v2H8v4h9v2H8v4h10v2H6V3z"/>
+  </g>
+  <!-- Cell: emphasis-cn -->
+  <text x="146" y="195.00" class="label">emphasis-cn</text>
+  <g transform="translate(159.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M12 19a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3m-5.5 0a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3m11 0a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3M13 2v2h6v2h-1.968a18.2 18.2 0 0 1-3.621 6.302a14.7 14.7 0 0 0 5.327 3.042l-.536 1.93A16.7 16.7 0 0 1 12 13.726a16.7 16.7 0 0 1-6.2 3.547l-.536-1.929a14.7 14.7 0 0 0 5.327-3.042a18 18 0 0 1-2.822-4.3h2.24A16 16 0 0 0 12 10.876A16.2 16.2 0 0 0 14.91 6H5V4h6V2z"/>
+  </g>
+  <!-- Cell: english-input -->
+  <text x="194" y="195.00" class="label">english-input</text>
+  <g transform="translate(207.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M14 10h2v.757a4.5 4.5 0 0 1 7 3.743V20h-2v-5.5c0-1.43-1.174-2.5-2.5-2.5S16 13.07 16 14.5V20h-2zm-2-6v2H4v5h8v2H4v5h8v2H2V4z"/>
+  </g>
+  <!-- Cell: flow-chart -->
+  <text x="242" y="195.00" class="label">flow-chart</text>
+  <g transform="translate(255.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M6 21.5A3.5 3.5 0 1 1 9.355 17H15v-2h2V9.242L14.757 7H9v2H3V3h6v2h5.757L18 1.756L22.243 6L19 9.241V15h2v6h-6v-2H9.355A3.5 3.5 0 0 1 6 21.5m0-5a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3m13 .5h-2v2h2zM18 4.586L16.586 6L18 7.414L19.414 6zM7 5H5v2h2z"/>
+  </g>
+  <!-- Cell: focus-mode -->
+  <text x="290" y="195.00" class="label">focus-mode</text>
+  <g transform="translate(303.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M4 3a1 1 0 0 0-1 1v4h2V5h3V3zm16 0h-4v2h3v3h2V4a1 1 0 0 0-1-1M5 16v3h3v2H4a1 1 0 0 1-1-1v-4zm14 0v3h-3v2h4a1 1 0 0 0 1-1v-4zm-9-7a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-ri</text>
+  <text x="348" y="139.738" class="overlay-title">remix icon</text>
+  <text x="351" y="190.744" class="overlay-meta">Apache-2.0 · 162 icons</text>
+</svg>

@@ -29,10 +29,25 @@
       "import": "./lib/@kit/accordion/index.qwik.mjs",
       "types": "./lib-types/@kit/accordion/index.d.ts"
     },
+    "./floating-action-button": {
+      "qwik": "./lib/@kit/floating-action-button/index.qwik.mjs",
+      "import": "./lib/@kit/floating-action-button/index.qwik.mjs",
+      "types": "./lib-types/@kit/floating-action-button/index.d.ts"
+    },
+    "./keybind-registry": {
+      "qwik": "./lib/@kit/keybind-registry/index.qwik.mjs",
+      "import": "./lib/@kit/keybind-registry/index.qwik.mjs",
+      "types": "./lib-types/@kit/keybind-registry/index.d.ts"
+    },
     "./animated": {
       "qwik": "./lib/@kit/animated/index.qwik.mjs",
       "import": "./lib/@kit/animated/index.qwik.mjs",
       "types": "./lib-types/@kit/animated/index.d.ts"
+    },
+    "./page-nav": {
+      "qwik": "./lib/@kit/page-nav/index.qwik.mjs",
+      "import": "./lib/@kit/page-nav/index.qwik.mjs",
+      "types": "./lib-types/@kit/page-nav/index.d.ts"
     },
     "./button": {
       "qwik": "./lib/@kit/button/index.qwik.mjs",
@@ -58,11 +73,6 @@
       "qwik": "./lib/@kit/collapsible/index.qwik.mjs",
       "import": "./lib/@kit/collapsible/index.qwik.mjs",
       "types": "./lib-types/@kit/collapsible/index.d.ts"
-    },
-    "./combobox": {
-      "qwik": "./lib/@kit/combobox/index.qwik.mjs",
-      "import": "./lib/@kit/combobox/index.qwik.mjs",
-      "types": "./lib-types/@kit/combobox/index.d.ts"
     },
     "./floating": {
       "qwik": "./lib/@kit/floating/index.qwik.mjs",
@@ -114,11 +124,6 @@
       "import": "./lib/@kit/radio/index.qwik.mjs",
       "types": "./lib-types/@kit/radio/index.d.ts"
     },
-    "./select": {
-      "qwik": "./lib/@kit/select/index.qwik.mjs",
-      "import": "./lib/@kit/select/index.qwik.mjs",
-      "types": "./lib-types/@kit/select/index.d.ts"
-    },
     "./separator": {
       "qwik": "./lib/@kit/separator/index.qwik.mjs",
       "import": "./lib/@kit/separator/index.qwik.mjs",
@@ -144,11 +149,6 @@
       "import": "./lib/@kit/toggle/index.qwik.mjs",
       "types": "./lib-types/@kit/toggle/index.d.ts"
     },
-    "./toggle-group": {
-      "qwik": "./lib/@kit/toggle-group/index.qwik.mjs",
-      "import": "./lib/@kit/toggle-group/index.qwik.mjs",
-      "types": "./lib-types/@kit/toggle-group/index.d.ts"
-    },
     "./tooltip": {
       "qwik": "./lib/@kit/tooltip/index.qwik.mjs",
       "import": "./lib/@kit/tooltip/index.qwik.mjs",
@@ -173,13 +173,13 @@
   "dependencies": {
     "@floating-ui/core": "^1.7.5",
     "@floating-ui/dom": "^1.7.6",
-    "@oddbird/popover-polyfill": "0.6.0",
     "@tailwindcss/vite": "^4.2.4",
     "body-scroll-lock-upgrade": "^1.1.0",
     "focus-trap": "7.6.5"
   },
   "devDependencies": {
-    "@onwo/tailwindcss": "workspace:*"
+    "@onwo/tailwindcss": "workspace:*",
+    "@playwright/test": "^1.61.1"
   },
   "engines": {
     "node": "^22"

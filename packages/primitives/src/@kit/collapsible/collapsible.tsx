@@ -7,13 +7,13 @@ import {
   $,
   sync$,
   type Signal,
-  type PropsOf,
   useOnDocument,
 } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 
 import { CollapsibleContext } from './collapsible-context';
 
-export interface CollapsibleProps extends PropsOf<'div'> {
+export interface CollapsibleProps extends OwPropsOf<'div'> {
   isExpanded?: Signal<boolean>;
 }
 

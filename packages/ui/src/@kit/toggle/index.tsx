@@ -1,10 +1,11 @@
-import { component$, type PropsOf, Slot } from '@qwik.dev/core';
+import { component$, Slot } from '@qwik.dev/core';
 import { Toggle as HeadlessToggle } from '@onwo/primitives/toggle';
+import { OwPropsOf } from '~primitives/index';
 
 export type ToggleSize = 'sm' | 'md' | 'lg';
 export type ToggleLook = 'default' | 'outline';
 
-export type ToggleProps = PropsOf<typeof HeadlessToggle> & {
+export type ToggleProps = OwPropsOf<typeof HeadlessToggle> & {
   size?: ToggleSize;
   look?: ToggleLook;
 };

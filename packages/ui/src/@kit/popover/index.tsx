@@ -1,14 +1,14 @@
 import { Slot, component$ } from '@qwik.dev/core';
-import type { HPopoverPanelProps } from '@onwo/primitives/popover';
-import { Panel, Root, Trigger } from '@onwo/primitives/popover';
+import { PopoverPanel as PanelPrimitive, PopoverRoot as RootPrimitive, PopoverTrigger as TriggerPrimitive } from '@onwo/primitives/popover';
+import { OwPropsOf } from '~primitives/index';
 
-export const PopoverRoot = Root;
+export const PopoverRoot = RootPrimitive;
 
-export const PopoverTrigger = Trigger;
+export const PopoverTrigger = TriggerPrimitive;
 
-export const PopoverPanel = component$(({ class: className, ...props }: HPopoverPanelProps) => {
+export const PopoverPanel = component$(({ class: className, ...props }: OwPropsOf<typeof PanelPrimitive>) => {
   return (
-    <Panel
+    <PanelPrimitive
       class={[
         'my-transition w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-hidden',
         'data-closing:animate-out data-closing:zoom-out-95 data-closing:fade-out data-open:animate-in data-open:zoom-in-95 data-open:fade-in',
@@ -18,6 +18,6 @@ export const PopoverPanel = component$(({ class: className, ...props }: HPopover
       {...props}
     >
       <Slot />
-    </Panel>
+    </PanelPrimitive>
   );
 });

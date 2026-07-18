@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: accept -->
+  <text x="2" y="46.50" class="label">accept</text>
+  <g transform="translate(15.00, 15.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M640 1755L19 1133l90-90l531 530L1939 275l90 90z"/>
+  </g>
+  <!-- Cell: accept-medium -->
+  <text x="50" y="46.50" class="label">accept-medium</text>
+  <g transform="translate(63.00, 15.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m1902 196l121 120L683 1657L25 999l121-121l537 537z"/>
+  </g>
+  <!-- Cell: access-logo -->
+  <text x="98" y="46.50" class="label">access-logo</text>
+  <g transform="translate(111.00, 15.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1280 64q137 0 274 15q24 3 69 9t101 18t112 28t105 39t77 51t30 64v1472q0 35-30 63t-77 51t-104 39t-113 28t-100 19t-70 9q-137 15-274 15q-138 0-274-15q-24-2-69-9t-101-18t-112-28t-105-39t-77-51t-30-64v-224H85q-35 0-60-25t-25-60V597q0-35 25-60t60-25h427V288q0-35 30-63t77-51t104-39t113-28t100-18t70-10q136-15 274-15m0 128q-65 0-145 4t-162 16t-161 29t-138 47q62 29 139 47t159 29t161 15t147 5q67 0 146-4t161-15t159-29t140-48q-60-28-138-46t-160-30t-163-15t-145-5M403 1207h217l51 153h171L597 688H430l-248 672h170zm1517 532v-303q-66 29-147 48t-168 30t-170 17t-155 5q-73 0-145-4t-145-13q-23 17-51 17H640v203q29 23 78 41t108 31t125 21t126 14t115 8t88 2q35 0 88-2t114-7t127-14t124-22t109-31t78-41m0-446V924q-66 29-147 48t-168 30t-170 17t-155 5q-64 0-128-3t-128-10v384q64 7 128 10t128 3q37 0 90-2t113-7t125-14t123-22t108-30t81-40m0-512V412q-66 29-147 48t-168 30t-170 17t-155 5q-71 0-155-5t-170-16t-167-31t-148-48v100h299q35 0 60 25t25 60v286q64 7 128 10t128 3q37 0 90-2t113-7t125-14t123-22t108-30t81-40M442 1077l69-209l67 209z"/>
+  </g>
+  <!-- Cell: accessibilty-checker -->
+  <text x="146" y="46.50" class="label">accessibilty-c…</text>
+  <g transform="translate(159.00, 15.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M128 128v1792h384v128H0V0h1115l549 549v91h-640V128zm1024 91v293h293zm384 1061l-192 256l-192-256h128V768h128v512zm512 64l-256 192v-128h-192l96-128h96v-128zm-1401 64q9-81 39-155t82-139l91 91q-69 90-84 203zm128 128q15 113 84 203l-91 91q-51-64-81-138t-40-156zm377-505q-113 15-203 84l-91-91q64-51 138-81t156-40zm421 708q69-90 84-203h128q-9 81-39 155t-82 139zm-293 174q113-15 203-84l91 91q-64 51-138 81t-156 40zm-422 7l91-91q90 69 203 84v128q-81-9-155-39t-139-82"/>
+  </g>
+  <!-- Cell: account-activity -->
+  <text x="194" y="46.50" class="label">account-activi…</text>
+  <g transform="translate(207.00, 15.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1792 256v1792H256V256h512q0-53 20-99t55-82t81-55t100-20q53 0 99 20t82 55t55 81t20 100zM640 384v128h768V384h-256V256q0-27-10-50t-27-40t-41-28t-50-10q-27 0-50 10t-40 27t-28 41t-10 50v128zm1024 0h-128v256H512V384H384v1536h1280zm-405 335q42 0 78 15t64 42t42 63t16 78q0 39-15 76t-43 65l-526 531l-358 68l75-351l526-530q28-28 65-42t76-15m51 249q21-23 21-51q0-31-20-50t-52-20q-14 0-27 4t-23 15l-499 503l-27 126l129-25z"/>
+  </g>
+  <!-- Cell: account-browser -->
+  <text x="242" y="46.50" class="label">account-browser</text>
+  <g transform="translate(255.00, 15.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M2048 128v1664H0V128zM128 256v256h1792V256zm1792 1408V640H128v1024zm-710-464q46 26 82 62t62 79t40 93t14 102h-128q0-53-20-99t-55-82t-81-55t-100-20q-53 0-99 20t-82 55t-55 81t-20 100H640q0-52 14-101t39-93t62-80t83-62q-33-35-51-81t-19-95q0-53 20-99t55-82t81-55t100-20q53 0 99 20t82 55t55 81t20 100q0 49-18 95t-52 81m-314-176q0 27 10 50t27 40t41 28t50 10q27 0 50-10t40-27t28-41t10-50q0-27-10-50t-27-40t-41-28t-50-10q-27 0-50 10t-40 27t-28 41t-10 50"/>
+  </g>
+  <!-- Cell: account-management -->
+  <text x="290" y="46.50" class="label">account-manage…</text>
+  <g transform="translate(303.00, 15.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1148 1152q-83-62-179-95t-201-33q-88 0-170 23t-153 64t-129 100t-100 130t-65 153t-23 170H0q0-120 35-231t101-205t156-167t204-115q-56-35-100-82t-76-104t-47-119t-17-129q0-106 40-199t110-162T569 41T768 0t199 40t162 110t110 163t41 199q0 66-16 129t-48 119t-76 103t-101 83q60 23 113 54v152zM384 512q0 80 30 149t82 122t122 83t150 30q79 0 149-30t122-82t83-122t30-150q0-79-30-149t-82-122t-123-83t-149-30q-80 0-149 30t-122 82t-83 123t-30 149m1664 768v768H1024v-768h256v-256h512v256zm-640 0h256v-128h-256zm512 384h-128v128h-128v-128h-256v128h-128v-128h-128v256h768zm0-256h-768v128h768z"/>
+  </g>
+  <!-- Cell: accounts -->
+  <text x="338" y="46.50" class="label">accounts</text>
+  <g transform="translate(351.00, 15.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1024 0q141 0 272 36t245 103t207 160t160 208t103 245t37 272q0 55-10 114t-32 117t-53 108t-74 89t-97 61t-118 23q-54 0-105-14t-96-42t-80-66t-61-88q-30 47-69 85t-85 67t-98 43t-110 15q-102 0-185-44t-141-117t-90-164t-32-187q0-95 31-187t90-164t142-116t185-45q95 0 176 41t144 112V512h128v640q0 53 20 99t55 82t81 55t100 20q44 0 80-18t65-49t50-70t34-83t20-85t7-79q0-123-32-237t-90-214t-141-182t-181-140t-214-91t-238-32q-123 0-237 32t-214 90t-182 141t-140 181t-91 214t-32 238q0 123 32 237t90 214t141 182t181 140t214 91t238 32q178 0 343-68l49 118q-94 39-192 58t-200 20q-141 0-272-36t-245-103t-207-160t-160-208t-103-244t-37-273q0-141 36-272t103-245t160-207t208-160T751 37t273-37m-64 1408q75 0 134-34t101-90t63-123t22-137q0-68-22-136t-63-124t-100-89t-135-35q-75 0-134 34t-101 90t-63 123t-22 137q0 68 22 136t63 124t100 89t135 35"/>
+  </g>
+  <!-- Cell: action-center -->
+  <text x="386" y="46.50" class="label">action-center</text>
+  <g transform="translate(399.00, 15.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 0h2048v1664h-640l-384 384l-384-384H0zm1920 1536V128H128v1408h565l331 331l331-331z"/>
+  </g>
+  <!-- Cell: activate-orders -->
+  <text x="434" y="46.50" class="label">activate-orders</text>
+  <g transform="translate(447.00, 15.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m2029 1453l-557 558l-269-270l90-90l179 178l467-466zM1024 640H640V512h384zm0 256H640V768h384zm-384 128h384v128H640zM512 640H384V512h128zm0 256H384V768h128zm-128 128h128v128H384zm768-384V128H256v1792h896v128H128V0h1115l549 549v731l-128 128V640zm128-128h293l-293-293z"/>
+  </g>
+  <!-- Cell: activity-feed -->
+  <text x="2" y="96.00" class="label">activity-feed</text>
+  <g transform="translate(15.00, 65.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M128 1088V768H0V128h1664v640H448zm0-448h128v139l139-139h1141V256H128zm1920 384v640h-128v320l-320-320H384v-640zm-128 128H512v384h1141l139 139v-139h128z"/>
+  </g>
+  <!-- Cell: add -->
+  <text x="50" y="96.00" class="label">add</text>
+  <g transform="translate(63.00, 65.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M2048 960v128h-960v960H960v-960H0V960h960V0h128v960z"/>
+  </g>
+  <!-- Cell: add-bookmark -->
+  <text x="98" y="96.00" class="label">add-bookmark</text>
+  <g transform="translate(111.00, 65.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m1024 1581l64 32q32 16 64 33v143l-128-64l-640 323V0h1280v1280h-128V128H512v1712q129-65 256-130t256-129m896 83v128h-256v256h-128v-256h-256v-128h256v-256h128v256z"/>
+  </g>
+  <!-- Cell: add-event -->
+  <text x="146" y="96.00" class="label">add-event</text>
+  <g transform="translate(159.00, 65.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1664 128h384v1792H0V128h384V0h128v128h1024V0h128zM384 256H128v256h1792V256h-256v128h-128V256H512v128H384zM128 1792h1792V640H128zm960-1024v384h384v128h-384v384H960v-384H576v-128h384V768z"/>
+  </g>
+  <!-- Cell: add-favorite -->
+  <text x="194" y="96.00" class="label">add-favorite</text>
+  <g transform="translate(207.00, 65.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m1370 1536l-103-329l405-311h-502l-146-467l-138 467H384l397 311l-154 493l397-306l256 197v162l-256-197l-640 492l248-794L0 768h784L1024 0l240 768h784l-632 486l88 282zm422-128v256h256v128h-256v256h-128v-256h-256v-128h256v-256z"/>
+  </g>
+  <!-- Cell: add-favorite-fill -->
+  <text x="242" y="96.00" class="label">add-favorite-f…</text>
+  <g transform="translate(255.00, 65.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m1860 832l-519 399l90 286l-23 19h-128v78l-39 28l-217-167l-519 399l202-643l-519-399h643l193-618l193 618z"/>
+  </g>
+  <!-- Cell: add-friend -->
+  <text x="290" y="96.00" class="label">add-friend</text>
+  <g transform="translate(303.00, 65.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1536 1536h-13q-23-112-81-206t-141-162t-187-106t-218-38q-88 0-170 23t-153 64t-129 100t-100 130t-65 153t-23 170H128q0-120 35-231t101-205t156-167t204-115q-113-74-176-186t-64-248q0-106 40-199t109-163T696 40T896 0t199 40t163 109t110 163t40 200q0 66-16 129t-48 119t-75 103t-101 83q112 43 206 118t162 176zM512 512q0 80 30 149t82 122t122 83t150 30q79 0 149-30t122-82t83-122t30-150q0-79-30-149t-82-122t-123-83t-149-30q-80 0-149 30t-122 82t-83 123t-30 149m1280 1152h256v128h-256v256h-128v-256h-256v-128h256v-256h128z"/>
+  </g>
+  <!-- Cell: add-group -->
+  <text x="338" y="96.00" class="label">add-group</text>
+  <g transform="translate(351.00, 65.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1250 1333q68 34 123 85t93 118h-157q-54-61-128-94t-157-34q-80 0-149 30t-122 82t-83 123t-30 149H512q0-73 20-141t57-129t91-108t118-81q-75-54-116-135t-42-174q0-53-20-99t-55-82t-81-55t-100-20q-53 0-99 20t-82 55t-55 81t-20 100H0q0-52 14-102t39-93t63-80t83-61q-34-35-52-81t-19-95q0-53 20-99t55-82t81-55t100-20q53 0 99 20t82 55t55 81t20 100q0 49-18 95t-53 81q42 23 75 55t60 70q27-40 62-72t76-54t87-35t95-12q48 0 94 12t87 34t77 55t62 72q26-38 59-70t76-55q-34-35-52-81t-19-95q0-53 20-99t55-82t81-55t100-20q53 0 99 20t82 55t55 81t20 100q0 49-18 95t-53 81q46 25 83 61t62 79t40 94t14 102h-128q0-53-20-99t-55-82t-81-55t-100-20q-53 0-99 20t-82 55t-55 81t-20 100q0 92-41 173t-117 136m414-949q-27 0-50 10t-40 27t-28 41t-10 50q0 27 10 50t27 40t41 28t50 10q27 0 50-10t40-27t28-41t10-50q0-27-10-50t-27-40t-41-28t-50-10M384 640q27 0 50-10t40-27t28-41t10-50q0-27-10-50t-27-40t-41-28t-50-10q-27 0-50 10t-40 27t-28 41t-10 50q0 27 10 50t27 40t41 28t50 10m640 640q53 0 99-20t82-55t55-81t20-100q0-53-20-99t-55-82t-81-55t-100-20q-53 0-99 20t-82 55t-55 81t-20 100q0 53 20 99t55 82t81 55t100 20m768 384h256v128h-256v256h-128v-256h-256v-128h256v-256h128z"/>
+  </g>
+  <!-- Cell: add-home -->
+  <text x="386" y="96.00" class="label">add-home</text>
+  <g transform="translate(399.00, 65.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M768 1664v-640h512v768h-128v-640H896v640H256V987l-83 82l-90-90l941-942l941 942l-90 90l-83-82v293h-128V859l-640-640l-640 640v805zm1024 0h256v128h-256v256h-128v-256h-256v-128h256v-256h128z"/>
+  </g>
+  <!-- Cell: add-in -->
+  <text x="434" y="96.00" class="label">add-in</text>
+  <g transform="translate(447.00, 65.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1024 128v896h896v1024H0V128zM896 1920v-768H128v768zm0-896V256H128v768zm896 128h-768v768h768zm-128-768h384v128h-384v384h-128V512h-384V384h384V0h128z"/>
+  </g>
+  <!-- Cell: add-link -->
+  <text x="2" y="145.50" class="label">add-link</text>
+  <g transform="translate(15.00, 114.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M768 1216q0 66 25 124t68 102t102 69t125 25h192v128h-192q-93 0-174-35t-142-96t-96-142t-36-175q0-93 35-174t96-142t142-96t175-36h64v128h-64q-66 0-124 25t-102 69t-69 102t-25 124m768-320V768h64q93 0 174 35t142 96t96 142t36 175q0 88-33 169t-95 144v-313q0-66-25-124t-69-101t-102-69t-124-26zM960 384q93 0 174 35t142 96t96 142t36 175q0 93-35 174t-96 142t-142 96t-175 36h-64v-128h64q66 0 124-25t101-68t69-102t26-125t-25-124t-69-101t-102-69t-124-26H448q-66 0-124 25t-102 69t-69 102t-25 124t25 124t68 102t102 69t125 25h64v128h-64q-93 0-174-35t-142-96t-96-142T0 832q0-93 35-174t96-142t142-96t175-36zm1088 1280v128h-256v256h-128v-256h-256v-128h256v-256h128v256z"/>
+  </g>
+  <!-- Cell: add-notes -->
+  <text x="50" y="145.50" class="label">add-notes</text>
+  <g transform="translate(63.00, 114.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 256h2048v128H0zm0 640V768h2048v128zm0 512v-128h1280v128zm0 512v-128h1280v128zm1790-640v256h256v128h-256v256h-128v-256h-256v-128h256v-256z"/>
+  </g>
+  <!-- Cell: add-online-meeting -->
+  <text x="98" y="145.50" class="label">add-online-mee…</text>
+  <g transform="translate(111.00, 114.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1024 0q141 0 272 36t245 103t207 160t160 208t103 245t37 272q0 99-19 195t-56 189h-309v-128h218q38-126 38-256q0-133-37-256h-363q8 64 12 127t4 129h-128q0-65-4-128t-13-128H657q-8 64-12 127t-5 129q0 65 4 128t13 128h623v128H679q8 39 23 92t37 110t50 112t65 100t78 71t92 27q30 0 57-11t51-30t44-41t37-46h67v222q-63 17-127 25t-129 9q-141 0-272-36t-245-103t-207-160t-160-208t-103-244t-37-273q0-141 36-272t103-245t160-207t208-160T751 37t273-37M731 177q-85 29-161 75T427 357T308 487t-93 153h333q11-59 27-120t39-121t52-116t65-106m0 1694q-36-49-65-105t-51-116t-39-121t-28-121H215q39 81 92 152t120 131t142 105t162 75m-203-591q-8-64-12-127t-4-129q0-65 4-128t12-128H165q-37 123-37 256t37 256zm841-640q-8-39-23-92t-37-110t-50-112t-65-100t-78-71t-92-27q-49 0-91 27t-79 71t-64 99t-51 113t-37 110t-23 92zm464 0q-39-81-92-152t-120-131t-142-105t-162-75q36 49 65 105t51 116t39 121t28 121zm-297 896h384v128h-384v384h-128v-384h-384v-128h384v-384h128z"/>
+  </g>
+  <!-- Cell: add-phone -->
+  <text x="146" y="145.50" class="label">add-phone</text>
+  <g transform="translate(159.00, 114.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1402 1307q39 0 76 15t65 43l191 191q28 28 43 65t15 76t-15 76t-43 65l-96 96q-63 62-143 88t-166 26q-107 0-221-33t-228-94t-223-142t-207-179t-180-207t-143-223t-93-228T0 720q0-77 13-131t40-98t66-85t91-92q28-28 65-43t76-15t76 15t65 43l191 191q28 28 43 65t15 76t-13 69t-32 56t-42 46t-42 40t-33 37t-13 39q0 29 21 50l478 478q21 21 50 21q21 0 39-13t37-32t39-42t46-42t55-33t71-13m-71 613q60 0 101-11t74-34t65-54t72-73q21-21 21-50q0-30-21-51l-191-191q-21-21-51-21q-21 0-39 13t-37 32t-39 42t-45 42t-56 33t-70 13q-40 0-76-15t-65-44l-477-477q-28-28-43-64t-16-77q0-39 13-69t32-56t42-45t42-40t33-37t13-40q0-29-21-50L401 405q-21-21-50-21q-30 0-51 21q-41 41-73 72t-54 64t-33 75t-12 101q0 95 31 197t86 204t130 202t165 188t188 164t201 131t205 86t197 31m717-1536v128h-384v384h-128V512h-384V384h384V0h128v384z"/>
+  </g>
+  <!-- Cell: add-reaction -->
+  <text x="194" y="145.50" class="label">add-reaction</text>
+  <g transform="translate(207.00, 114.75) scale(0.0056, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1792 896q-27 0-50-10t-40-27t-28-41t-10-50q0-27 10-50t27-40t41-28t50-10q27 0 50 10t40 27t28 41t10 50q0 27-10 50t-27 40t-41 28t-50 10m1408 128q0 142-36 272t-103 245t-160 207t-208 160t-245 103t-272 37q-142 0-272-36t-245-103t-207-160t-160-208t-103-245t-37-272q0-141 36-272t103-245t160-207t208-160t245-103t272-37q141 0 272 36t245 103t207 160t160 208t103 245t37 272m-1024 896q123 0 237-32t214-90t182-141t140-181t91-214t32-238q0-123-32-237t-90-214t-141-182t-181-140t-214-91t-238-32q-124 0-238 32t-213 90t-182 141t-140 181t-91 214t-32 238q0 124 32 238t90 213t141 182t181 140t214 91t238 32m384-1024q-27 0-50-10t-40-27t-28-41t-10-50q0-27 10-50t27-40t41-28t50-10q27 0 50 10t40 27t28 41t10 50q0 27-10 50t-27 40t-41 28t-50 10m-384 640q73 0 141-20t128-57t106-90t81-118l115 58q-41 81-101 147t-134 112t-159 71t-177 25t-177-25t-159-71t-134-112t-101-147l115-58q33 65 80 118t107 90t127 57t142 20M512 512v384h384v128H512v384H384v-384H0V896h384V512z"/>
+  </g>
+  <!-- Cell: add-space-after -->
+  <text x="242" y="145.50" class="label">add-space-after</text>
+  <g transform="translate(255.00, 114.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M128 768V640h1792v128zm0-640h1792v128H128zm896 1414l163-163l90 90l-317 317l-317-317l90-90l163 163V896h128z"/>
+  </g>
+  <!-- Cell: add-space-before -->
+  <text x="290" y="145.50" class="label">add-space-befo…</text>
+  <g transform="translate(303.00, 114.75) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M128 1792v-128h1792v128zm0-640h1792v128H128zm1149-451l-317 317l-317-317l90-90l163 163V128h128v646l163-163z"/>
+  </g>
+  <!-- Cell: add-to -->
+  <text x="2" y="195.00" class="label">add-to</text>
+  <g transform="translate(15.00, 164.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1088 960h320v128h-320v320H960v-320H640V960h320V640h128zm-64-832q124 0 238 32t214 90t181 140t140 181t91 214t32 239t-32 238t-90 214t-140 181t-181 140t-214 91t-239 32t-238-32t-214-90t-181-140t-140-181t-91-214t-32-239t32-238t90-214t140-181t181-140t214-91t239-32m0 1664q106 0 204-27t183-78t156-120t120-155t77-184t28-204t-27-204t-78-183t-120-156t-155-120t-184-77t-204-28t-204 27t-183 78t-156 120t-120 155t-77 184t-28 204t27 204t78 183t120 156t155 120t184 77t204 28"/>
+  </g>
+  <!-- Cell: add-to-shopping-list -->
+  <text x="50" y="195.00" class="label">add-to-shoppin…</text>
+  <g transform="translate(63.00, 164.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M640 896H512V768h128zm896 0H768V768h768zM512 1152h128v128H512zm256 0h768v128H768zM640 512H512V384h128zm896 0H768V384h768zm512 1152v128h-256v256h-128v-256h-256v-128h256v-256h128v256zm-1664 0h896v128H256V0h1536v1280h-128V128H384z"/>
+  </g>
+  <!-- Cell: add-work -->
+  <text x="98" y="195.00" class="label">add-work</text>
+  <g transform="translate(111.00, 164.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M2048 384v1024h-128V839l-640 321v120H768v-120L128 839v697h1152v128H0V384h640V256q0-27 10-50t27-40t41-28t50-10h512q27 0 50 10t40 27t28 41t10 50v128zm-1280 0h512V256H768zm384 640H896v128h256zm768-327V512H128v185l640 319V896h512v120zm-128 839h256v128h-256v256h-128v-256h-256v-128h256v-256h128z"/>
+  </g>
+  <!-- Cell: air-tickets -->
+  <text x="146" y="195.00" class="label">air-tickets</text>
+  <g transform="translate(159.00, 164.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M2048 640v1152H0V640h440q1 0 33-10t87-29t126-42t154-51t169-57t172-58t161-54t139-46t103-35t56-19l134 401zm-1206 0h797l-79-239zm1078 128H128v896h1792zm-256 128v128h-128V896zm0 256v128h-128v-128zm0 384h-128v-128h128zm128-384h-128v-128h128zm0 256h-128v-128h128zM469 1280l-85-256h128l64 128h277l-85-256h128l128 256h256q26 0 45 19t19 45t-19 45t-45 19h-256l-128 256H768l85-256z"/>
+  </g>
+  <!-- Cell: airplane -->
+  <text x="194" y="195.00" class="label">airplane</text>
+  <g transform="translate(207.00, 164.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1792 768q52 0 99 20t81 55t55 82t21 99q0 53-20 99t-55 81t-82 55t-99 21h-448l-384 768H512l256-768H512l-64 128H0l128-384L0 640h448l64 128h256L512 0h448l384 768zm0 384q27 0 50-10t40-27t28-41t10-50q0-27-10-50t-27-40t-41-28t-50-10h-527q-99-192-193-383T881 128H690q64 193 127 384t129 384H433l-64-128H178q21 64 41 128t44 128q-23 64-43 128t-42 128h191l64-128h513q-66 192-129 383t-127 385h191q97-193 191-384t193-384z"/>
+  </g>
+  <!-- Cell: airplane-solid -->
+  <text x="242" y="195.00" class="label">airplane-solid</text>
+  <g transform="translate(255.00, 164.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1856 768q40 0 75 15t61 41t41 61t15 75t-15 75t-41 61t-61 41t-75 15h-544l-384 768H662l256-768H256l-67 128H0l108-320L0 640h189l67 128h662L662 0h266l384 768z"/>
+  </g>
+  <!-- Cell: alarm-clock -->
+  <text x="290" y="195.00" class="label">alarm-clock</text>
+  <g transform="translate(303.00, 164.25) scale(0.0088, 0.0088) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1408 1152v128H896V640h128v512zm240-1024q83 0 156 31t127 86t85 127t32 156q0 50-12 97t-35 91t-56 80t-74 64q25 71 37 144t12 148q0 162-56 313t-163 274l200 200l-90 90l-200-200q-122 106-273 162t-314 57q-162 0-313-56t-274-163l-200 200l-90-90l200-200q-106-122-162-273t-57-314q0-75 12-148t37-144q-41-27-74-64t-56-80t-35-90t-12-98q0-83 31-156t86-127t127-85t156-32q49 0 97 12t91 35t80 56t64 74q71-25 144-37t148-12t148 12t144 37q27-41 64-74t80-56t90-35t98-12M400 256q-56 0-105 21t-87 59t-58 86t-22 106q0 62 26 117t75 94q64-124 161-221t221-161q-38-48-93-74t-118-27m624 1664q159 0 298-60t244-165t165-244t61-299q0-159-60-298t-165-244t-244-165t-299-61q-159 0-298 60T482 609T317 853t-61 299q0 159 60 298t165 244t244 165t299 61m795-1181q48-38 74-93t27-118q0-56-21-105t-59-87t-86-58t-106-22q-62 0-117 26t-94 75q124 64 221 161t161 221"/>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-fluent-mdl2</text>
+  <text x="348" y="139.738" class="overlay-title">fluent ui mdl2</text>
+  <text x="351" y="190.744" class="overlay-meta">MIT · 1,735 icons</text>
+</svg>

@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: address-book -->
+  <text x="2" y="46.50" class="label">address-book</text>
+  <g transform="translate(15.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path stroke-linecap="round" d="M8 20.5h9.5a1 1 0 0 0 1-1V6"/><path d="M5 4.075A1.07 1.07 0 0 1 6.066 3h9.444a1.07 1.07 0 0 1 1.066 1.075v13.41a1.07 1.07 0 0 1-1.066 1.075H6.066A1.07 1.07 0 0 1 5 17.485zm3.222 10.213a.79.79 0 0 1 0-1.256a4.2 4.2 0 0 1 2.566-.875c.965 0 1.855.326 2.566.875a.79.79 0 0 1 0 1.256a4.2 4.2 0 0 1-2.566.876a4.2 4.2 0 0 1-2.566-.876Zm2.564-2.884c1.096 0 1.985-1.12 1.985-2.504c0-1.382-.889-2.503-1.985-2.503S8.8 7.517 8.8 8.9s.888 2.504 1.985 2.504Z" clip-rule="evenodd"/></g>
+  </g>
+  <!-- Cell: alert-circle -->
+  <text x="50" y="46.50" class="label">alert-circle</text>
+  <g transform="translate(63.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><circle cx="12" cy="12" r="8.5"/><path stroke-linecap="round" d="M12 7v7m0 3.5v-1"/></g>
+  </g>
+  <!-- Cell: alert -->
+  <text x="98" y="46.50" class="label">alert</text>
+  <g transform="translate(111.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" d="M12 7v7m0 3.5v-1"/>
+  </g>
+  <!-- Cell: arrow-down -->
+  <text x="146" y="46.50" class="label">arrow-down</text>
+  <g transform="translate(159.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M12.013 3L12 20.789m7-6.776L12 21l-7-6.988"/>
+  </g>
+  <!-- Cell: arrow-left -->
+  <text x="194" y="46.50" class="label">arrow-left</text>
+  <g transform="translate(207.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M21 12.013L3.211 12m6.777 7L3 12l6.988-7"/>
+  </g>
+  <!-- Cell: arrow-right -->
+  <text x="242" y="46.50" class="label">arrow-right</text>
+  <g transform="translate(255.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M3 12.013L20.789 12m-6.776 7L21 12l-6.988-7"/>
+  </g>
+  <!-- Cell: arrow-up -->
+  <text x="290" y="46.50" class="label">arrow-up</text>
+  <g transform="translate(303.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M12.013 21L12 3.211m7 6.777L12 3L5 9.988"/>
+  </g>
+  <!-- Cell: bank -->
+  <text x="338" y="46.50" class="label">bank</text>
+  <g transform="translate(351.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M19.5 9.5h-2v7h2v2h-15v-2h2v-7h-2V7L12 3.5L19.5 7z"/><path stroke-linecap="square" d="M9.5 14.5v-6m.5 0h2.603c2.097 0 2.233 3 0 3c2.448 0 2.896 3 0 3H10m0-3h2.56"/><path stroke-linecap="round" d="M11.5 8.5V7m0 9v-1.5"/></g>
+  </g>
+  <!-- Cell: battery-2 -->
+  <text x="386" y="46.50" class="label">battery-2</text>
+  <g transform="translate(399.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M4.5 9.5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1z"/><rect width="1" height="3" x="6.5" y="10.5" rx=".25"/><path stroke-linecap="round" d="M20.5 10.5v3.003"/></g>
+  </g>
+  <!-- Cell: battery-3 -->
+  <text x="434" y="46.50" class="label">battery-3</text>
+  <g transform="translate(447.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M4.5 9.5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1z"/><rect width="1" height="3" x="6.5" y="10.5" rx=".25"/><rect width="1" height="3" x="9.5" y="10.5" rx=".25"/><path stroke-linecap="round" d="M20.5 10.5v3.003"/></g>
+  </g>
+  <!-- Cell: battery-4 -->
+  <text x="2" y="96.00" class="label">battery-4</text>
+  <g transform="translate(15.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M4.5 9.5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1z"/><rect width="1" height="3" x="6.5" y="10.5" rx=".25"/><rect width="1" height="3" x="9.5" y="10.5" rx=".25"/><rect width="1" height="3" x="12.5" y="10.5" rx=".25"/><path stroke-linecap="round" d="M20.5 10.5v3.003"/></g>
+  </g>
+  <!-- Cell: battery-empty -->
+  <text x="50" y="96.00" class="label">battery-empty</text>
+  <g transform="translate(63.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M4.5 9.5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1z"/><path stroke-linecap="round" d="M20.5 10.5v3.003"/></g>
+  </g>
+  <!-- Cell: battery-full -->
+  <text x="98" y="96.00" class="label">battery-full</text>
+  <g transform="translate(111.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M4.5 9.5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1z"/><rect width="1" height="3" x="6.5" y="10.5" rx=".25"/><rect width="1" height="3" x="9.5" y="10.5" rx=".25"/><rect width="1" height="3" x="12.5" y="10.5" rx=".25"/><rect width="1" height="3" x="15.5" y="10.5" rx=".25"/><path stroke-linecap="round" d="M20.5 10.5v3.003"/></g>
+  </g>
+  <!-- Cell: bell -->
+  <text x="146" y="96.00" class="label">bell</text>
+  <g transform="translate(159.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.479 5.749A4.5 4.5 0 0 1 16.5 10v3.7l2.073 1.935a.5.5 0 0 1-.341.865H5.769a.5.5 0 0 1-.342-.866L7.5 13.7V10a4.5 4.5 0 0 1 3.021-4.251a1.5 1.5 0 0 1 2.958 0"/><path d="M10.585 18.5a1.5 1.5 0 0 0 2.83 0z"/></g>
+  </g>
+  <!-- Cell: bitaxe -->
+  <text x="194" y="96.00" class="label">bitaxe</text>
+  <g transform="translate(207.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path stroke-linejoin="round" d="M7.5 3.5h9v17h-9z"/><path stroke-linejoin="round" d="M9.5 5.5h3v3h-3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.5 10.5h5"/><circle cx="12" cy="16" r=".5"/><circle cx="12" cy="16" r="2.5"/></g>
+  </g>
+  <!-- Cell: bitcoin-circle -->
+  <text x="242" y="96.00" class="label">bitcoin-circle</text>
+  <g transform="translate(255.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M20.247 14.052a8.5 8.5 0 0 1-10.302 6.194C5.394 19.11 2.62 14.5 3.754 9.95s5.74-7.33 10.288-6.195c4.562 1.12 7.337 5.744 6.205 10.298Z"/><path stroke-linecap="square" stroke-linejoin="round" d="m9.4 14.912l1.693-6.792m-1.456-.363L13.818 8.8c2.728.68 2.12 3.877-.786 3.153c3.184.794 2.86 4.578-.907 3.639c-1.841-.46-3.813-.95-3.813-.95m1.994-3.368l2.669.665m-1.397-3.698l.363-1.455m-2.42 9.703l.363-1.456m3.634-6.308l.363-1.455m-2.419 9.703l.363-1.456"/></g>
+  </g>
+  <!-- Cell: bitcoin -->
+  <text x="290" y="96.00" class="label">bitcoin</text>
+  <g transform="translate(303.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M10.521 7.95v2.927c1.21.076 3.737.067 3.737-1.43S12.132 7.95 10.521 7.95Z"/><path d="M13.425 6.432c1.983.19 3.538.778 3.71 2.528c.117 1.276-.438 2.035-1.355 2.463c1.481.359 2.382 1.202 2.196 3.072c-.227 2.343-2.035 2.952-4.62 3.08l.004 2.42l-1.522.002l-.004-2.42c-.389-.005-.819.015-1.25.002l.004 2.42l-1.52.001l-.004-2.42l-3.044-.058l.256-1.768s.724.012 1.129.012c.423-.002.549-.293.58-.485l-.008-3.878l.012-2.76c-.046-.288-.248-.634-.87-.644c.033-.03-1.115.001-1.115.001L6 6.38l3.12-.005l-.004-2.37l1.571-.002l.004 2.37c.403-.01.8-.003 1.205-.001l-.004-2.37L13.422 4z"/><path d="M10.5 15.637c.991.036 4.506.247 4.49-1.418c.016-1.713-3.512-1.483-4.49-1.491z"/></g>
+  </g>
+  <!-- Cell: bitty -->
+  <text x="338" y="96.00" class="label">bitty</text>
+  <g transform="translate(351.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><circle cx="12" cy="12" r="8.5"/><circle cx="14" cy="10" r=".5"/><circle cx="10" cy="10" r=".5"/><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14L9 12.5h6l1.5 1.5M13 8.155L15 7m-4 1.155L9 7"/></g>
+  </g>
+  <!-- Cell: block -->
+  <text x="386" y="96.00" class="label">block</text>
+  <g transform="translate(399.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M20.54 8.676v6.876a.69.69 0 0 1-.355.644l-7.132 4.024a2.1 2.1 0 0 1-2.056.002L3.82 16.197a.69.69 0 0 1-.355-.66V8.694a.69.69 0 0 1 .345-.654l7.156-4.172a2.1 2.1 0 0 1 2.117.002l7.112 4.17a.69.69 0 0 1 .344.636Z"/><path d="M3.82 9.253a.699.699 0 0 1-.01-1.213l7.156-4.172a2.1 2.1 0 0 1 2.117.002l7.112 4.17a.699.699 0 0 1-.01 1.212l-7.132 4.024a2.1 2.1 0 0 1-2.056.003z"/></g>
+  </g>
+  <!-- Cell: boat -->
+  <text x="434" y="96.00" class="label">boat</text>
+  <g transform="translate(447.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M16.5 10.5v-4h-9v4m3-6h3v2h-3z"/><path stroke-linecap="round" d="m7 17.5l-1.5-6l6.5-2l6.5 2l-1.5 6"/><path stroke-linecap="round" d="m4.5 16.5l.416.444a2 2 0 0 0 2.918 0l.416-.444l.416.444a2 2 0 0 0 2.918 0L12 16.5l.416.444a2 2 0 0 0 2.918 0l.416-.444l.416.444a2 2 0 0 0 2.918 0l.416-.444M9 12.5l3-1l3 1"/></g>
+  </g>
+  <!-- Cell: brush -->
+  <text x="2" y="145.50" class="label">brush</text>
+  <g transform="translate(15.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M18.5 5.5h-13v7a2 2 0 0 0 2 2h3V18a1.5 1.5 0 0 0 3 0v-3.5h3a2 2 0 0 0 2-2z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 11.5h12M16 6v2m-2.5-2v3.5M8 6v1"/></g>
+  </g>
+  <!-- Cell: buoy -->
+  <text x="50" y="145.50" class="label">buoy</text>
+  <g transform="translate(63.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><path d="m19 7l-2.5 2.5M17 5l-2.5 2.5m-5 9L7 19m.5-4.5L5 17m4.5-9.5L7 5m.5 4.5L5 7m12 12l-2.5-2.5m4.5.5l-2.5-2.5"/></g>
+  </g>
+  <!-- Cell: calendar -->
+  <text x="98" y="145.50" class="label">calendar</text>
+  <g transform="translate(111.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M5.5 8A1.5 1.5 0 0 1 7 6.5h10A1.5 1.5 0 0 1 18.5 8v.5h-13z"/><path stroke-linecap="round" d="M16 5v2M8 5v2"/><path d="M5.5 10.5h13V16a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 16z"/><path stroke-linecap="round" d="M15.75 12.25h1m-3.833 0h1m-3.834 0h1M7.25 14h1m7.5 0h1m-3.833 0h1m-3.834 0h1M7.25 15.75h1m4.667 0h1m-3.834 0h1"/></g>
+  </g>
+  <!-- Cell: camera -->
+  <text x="146" y="145.50" class="label">camera</text>
+  <g transform="translate(159.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path stroke-linejoin="round" d="M15.224 7.947a1 1 0 0 0 .894.553H17.5a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h1.382a1 1 0 0 0 .894-.553l.448-.894a1 1 0 0 1 .894-.553h3.764a1 1 0 0 1 .894.553z"/><circle cx="12" cy="12.5" r="2.5"/></g>
+  </g>
+  <!-- Cell: car -->
+  <text x="194" y="145.50" class="label">car</text>
+  <g transform="translate(207.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><path d="M18.5 5.51c-.2-.59-.59-1.01-1.25-1.01H6.75c-.66 0-1.04.42-1.25 1.01l-2 5.74v7.5c0 .55.2.75.75.75h.5c.55 0 .75-.2.75-.75V17.5h13v1.25c0 .55.2.75.75.75h.5c.55 0 .75-.2.75-.75v-7.5z"/><path d="M6.5 14.5a1 1 0 1 1 0-2a1 1 0 1 1 0 2Zm11 0a1 1 0 1 1 0-2a1 1 0 1 1 0 2Z"/><path stroke-linejoin="round" d="M5.75 9.5L7 6h10l1.25 3.5z"/></g>
+  </g>
+  <!-- Cell: caret-down -->
+  <text x="242" y="145.50" class="label">caret-down</text>
+  <g transform="translate(255.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" d="m19.142 9.929l-6.364 6.364a1 1 0 0 1-1.415 0L5 9.929"/>
+  </g>
+  <!-- Cell: caret-left -->
+  <text x="290" y="145.50" class="label">caret-left</text>
+  <g transform="translate(303.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" d="m14.071 5l-6.364 6.364a1 1 0 0 0 0 1.414l6.364 6.364"/>
+  </g>
+  <!-- Cell: caret-right -->
+  <text x="2" y="195.00" class="label">caret-right</text>
+  <g transform="translate(15.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" d="m9.929 4.858l6.364 6.364a1 1 0 0 1 0 1.414L9.929 19"/>
+  </g>
+  <!-- Cell: caret-up -->
+  <text x="50" y="195.00" class="label">caret-up</text>
+  <g transform="translate(63.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" d="m5 14.071l6.364-6.364a1 1 0 0 1 1.414 0l6.364 6.364"/>
+  </g>
+  <!-- Cell: cart -->
+  <text x="98" y="195.00" class="label">cart</text>
+  <g transform="translate(111.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><circle cx="10" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M3.5 4h2l3.504 11H17"/><path stroke-linecap="round" stroke-linejoin="round" d="M8.224 12.5L6.3 6.5h12.507a.5.5 0 0 1 .475.658l-1.667 5a.5.5 0 0 1-.474.342z"/></g>
+  </g>
+  <!-- Cell: chair -->
+  <text x="146" y="195.00" class="label">chair</text>
+  <g transform="translate(159.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M6.5 5.5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v7h-11z"/><path stroke-linecap="round" d="M17.5 12v7.5m0-7l-11 7m0-7.5v7.5m-1-10h3m7 0h3m-12 3l11 7"/></g>
+  </g>
+  <!-- Cell: channel -->
+  <text x="194" y="195.00" class="label">channel</text>
+  <g transform="translate(207.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor"><rect width="17" height="6" x="3.5" y="9" rx="3"/><path d="M5.5 12a1 1 0 0 1 1-1H13v2H6.5a1 1 0 0 1-1-1Zm9.5-1h2.5a1 1 0 1 1 0 2H15z"/></g>
+  </g>
+  <!-- Cell: channels -->
+  <text x="242" y="195.00" class="label">channels</text>
+  <g transform="translate(255.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M3.5 8.5a1 1 0 0 1 1-1h8v2h-8a1 1 0 0 1-1-1Zm11-1h5a1 1 0 1 1 0 2h-5zm-11 5a1 1 0 0 1 1-1h5v2h-5a1 1 0 0 1-1-1Zm8-1h8a1 1 0 1 1 0 2h-8zm-8 5a1 1 0 0 1 1-1h11v2h-11a1 1 0 0 1-1-1Zm14-1h2a1 1 0 1 1 0 2h-2z"/>
+  </g>
+  <!-- Cell: check -->
+  <text x="290" y="195.00" class="label">check</text>
+  <g transform="translate(303.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M6 13.295L10.913 18L18 6"/>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-bitcoin-icons-outline</text>
+  <text x="348" y="139.738" class="overlay-title">bitcoin icons outline</text>
+  <text x="351" y="190.744" class="overlay-meta">outline · MIT · 165 icons</text>
+</svg>

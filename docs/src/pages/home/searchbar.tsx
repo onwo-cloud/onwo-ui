@@ -81,7 +81,7 @@ export const SearchBar = component$<SearchBarProps>(
           onBlur$={() => (isFocused.value = false)}
           placeholder={placeholder}
           disabled={disabled}
-          class="flex-1 bg-transparent border-none outline-none placeholder-gray-500 text-blue-900 disabled:cursor-not-allowed"
+          class="flex-1 bg-transparent border-none outline-none placeholder-shade-500 text-blue-900 disabled:cursor-not-allowed"
           aria-label={placeholder}
           aria-describedby="search-instructions"
           {...props}
@@ -91,7 +91,7 @@ export const SearchBar = component$<SearchBarProps>(
           <button
             onClick$={handleClear}
             onClickCapture$={(e) => e.stopPropagation()}
-            class="p-1 hover:bg-gray-100 rounded-full transition-colors duration-150 flex-shrink-0"
+            class="p-1 hover:bg-shade-100 rounded-full transition-colors duration-150 flex-shrink-0"
             aria-label="Clear search"
             type="button"
           >

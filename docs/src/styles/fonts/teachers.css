@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Teachers";
+  src: url("/fonts/Teachers-Variable.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Teachers Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 90.8384%;
+  descent-override: 25.1255%;
+  size-adjust: 103.4804%;
+}
+@font-face {
+  font-family: "Teachers Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 97.228%;
+  descent-override: 26.8929%;
+  line-gap-override: 0%;
+  size-adjust: 96.68%;
+}
+@font-face {
+  font-family: "Teachers Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 103.3782%;
+  descent-override: 28.594%;
+  size-adjust: 90.9283%;
+}
+
+:root {
+  --font-teachers: Teachers, "Teachers Fallback: -apple-system", "Teachers Fallback: Arial", "Teachers Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

@@ -1,18 +1,62 @@
-import type { Component, JSXOutput } from '@qwik.dev/core';
+import type { Component, JSXOutput, QRL } from '@qwik.dev/core';
 
-export type BoxedComp = {
-  title: string;
-  display: Component;
-  rowSpan?: number;
-  colSpan?: number;
-  code: string;
+// --- Individual Control Field Types ---
+export type OptionItem<T = string> = {
+  label: string;
+  value: T;
 };
 
+export type ControlField =
+  | {
+    type: 'segmented' | 'radio' | 'select';
+    label: string;
+    default: string;
+    options: OptionItem[];
+  }
+  | {
+    type: 'boolean';
+    label: string;
+    default: boolean;
+  }
+  | {
+    type: 'text';
+    label: string;
+    default: string;
+    placeholder?: string;
+  }
+  | {
+    type: 'number';
+    label: string;
+    default: number;
+    min?: number;
+    max?: number;
+    step?: number;
+  };
+
+export type ControlSchema = Record<string, ControlField>;
+
+// Extract control values record from a schema
+export type ControlValues<T extends ControlSchema> = {
+  [K in keyof T]: T[K]['default'];
+};
+
+// --- Component Box Schema ---
+export type BoxedComp<TSchema extends ControlSchema = ControlSchema> = {
+  title: string;
+  description?: string;
+  controls?: TSchema;
+  display: Component<{ controls: ControlValues<TSchema>, logger: UseLoggerRet }>;
+  code: QRL<(values: ControlValues<TSchema>) => string> | ((values: ControlValues<TSchema>) => string);
+  rowSpan?: number;
+  colSpan?: number;
+};
+
+// --- Section Schema ---
 export type Section = {
   link: string;
   title: string;
   description: string;
-  aside?: (() => JSXOutput) | Component;
+  aside?: Component;
   default: BoxedComp;
   others: BoxedComp[];
 };
@@ -22,32 +66,15 @@ import { section as alertSection } from './alert';
 import { section as animatedSection } from './animated';
 import { section as avatarSection } from './avatar';
 import { section as backdropOverlaySection } from './backdrop-overlay';
-import { section as bottomSheetSection } from './bottom-sheet';
-//import { section as breadcrumbSection } from './breadcrumb';
 import { section as buttonSection } from './button';
 import { section as calendarSection } from './calendar';
 import { section as chipSection } from './chip';
-import { section as drawerSection } from './drawer';
-import { section as dropdownSection } from './dropdown';
-import { section as formSection } from './form';
-import { section as masonrySection } from './masonry';
-import { section as menuItemSection } from './menu-item';
 import { section as modalSection } from './modal';
 import { section as navigationMenuSection } from './navigation-menu';
-import { section as pageNavigationSection } from './page-navigation';
-import { section as paginationSection } from './pagination';
-import { section as popoverSection } from './popover';
-import { section as progressSection } from './progress';
-import { section as searchSection } from './search';
-import { section as selectSection } from './select';
-import { section as snackbarSection } from './snackbar';
 import { section as spinnerSection } from './spinner';
-import { section as switchSection } from './switch';
-import { section as tableSection } from './table';
 import { section as tabsSection } from './tabs';
 import { section as radioSection } from './radio';
-import { section as tagSection } from './tag';
-import { section as tooltipSection } from './tooltip';
+import { UseLoggerRet } from '~/hooks/use-logger';
 
 // Lookup Map from Route Parameter to Kit Section
 export const SECTIONS_MAP = {
@@ -55,35 +82,13 @@ export const SECTIONS_MAP = {
   alert: alertSection,
   animated: animatedSection,
   avatar: avatarSection,
-
   'backdrop-overlay': backdropOverlaySection,
-  'bottom-sheet': bottomSheetSection,
-
-  //breadcrumb: breadcrumbSection, // BROKEN
   button: buttonSection,
   calendar: calendarSection,
-
   chip: chipSection,
-  drawer: drawerSection,
-  dropdown: dropdownSection,
-  form: formSection,
-  masonry: masonrySection,
-  'menu-item': menuItemSection,
-
   modal: modalSection,
   'navigation-menu': navigationMenuSection,
-  'page-navigation': pageNavigationSection,
-  pagination: paginationSection,
-  popover: popoverSection,
-  progress: progressSection,
-  search: searchSection,
-  select: selectSection,
-  snackbar: snackbarSection,
   spinner: spinnerSection,
-  switch: switchSection,
-  table: tableSection,
   tabs: tabsSection,
   radio: radioSection,
-  tag: tagSection,
-  tooltip: tooltipSection,
 };

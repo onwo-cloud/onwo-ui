@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: 3d-move -->
+  <text x="2" y="46.50" class="label">3d-move</text>
+  <g transform="translate(15.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="M8.154 15.846V8.154h7.692v7.692z"/><path stroke="#4147d5" d="M8.154 15.847V8.154h7.692v7.693zM12 2v6.154M22 12h-6.154M9.692 4.308L12 2l2.308 2.308m5.384 5.384L22 12l-2.308 2.308M12 22v-6.154M2 12h6.154m6.154 7.692L12 22l-2.308-2.308m-5.384-5.384L2 12l2.308-2.308"/></g>
+  </g>
+  <!-- Cell: 3d-move-flat -->
+  <text x="50" y="46.50" class="label">3d-move-flat</text>
+  <g transform="translate(63.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#8fbffa" d="M16.596 7.404H7.404v9.193h9.192z"/><path fill="#2859c5" d="M9.188 3.813L11 2l1-1l1 1l1.813 1.813v.937H13v2.654h-2V4.75H9.188zM7.404 11H4.75V9.188h-.937L2 11l-1 1l1 1l1.813 1.813h.937V13h2.654zM11 16.597v2.653H9.188v.938L11 22l1 1l1-1l1.813-1.812v-.938H13v-2.653zM16.596 13h2.654v1.813h.938L22 13l1-1l-1-1l-1.812-1.812h-.938V11h-2.654z"/></g>
+  </g>
+  <!-- Cell: 3d-rotate-y-axis -->
+  <text x="98" y="46.50" class="label">3d-rotate-y-ax…</text>
+  <g transform="translate(111.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="#4147d5" stroke-width="1.5"><path d="M12 1v22m0-6c5.523 0 10-2.238 10-5c0-1.85-2.011-3.467-5-4.331"/><path d="m20 6l-3 1.5l.5 3.5M2.832 10C2.297 10.613 2 11.289 2 12s.297 1.388.832 2M5 8.43c.863-.424 1.878-.769 3-1.014m0 9.168c-1.122-.245-2.137-.59-3-1.013"/></g>
+  </g>
+  <!-- Cell: 3d-rotate-y-axis-flat -->
+  <text x="146" y="46.50" class="label">3d-rotate-y-ax…</text>
+  <g transform="translate(159.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#2859c5" d="M11 23V1h2v22z"/><path fill="#8fbffa" d="m14.974 7.148l2.708-2.38l.966.258l-.524 1.954c1.233.439 2.314 1.018 3.144 1.722C22.282 9.562 23 10.684 23 12c0 1.964-1.566 3.472-3.482 4.43C17.543 17.418 14.883 18 12 18q-.505 0-1-.024v-2.002a19 19 0 0 0 2 0c2.229-.116 4.191-.616 5.624-1.333C20.327 13.79 21 12.798 21 12c0-.535-.287-1.146-1.026-1.773c-.576-.488-1.378-.94-2.37-1.308l-.51 1.903l-.965-.259zm-6.76 1.245c-1.057.23-1.994.552-2.774.934l-.88-1.796c.945-.463 2.038-.832 3.227-1.092zM3 12c0-.415.17-.866.585-1.342L2.08 9.342C1.424 10.092 1 10.992 1 12c0 1.007.424 1.909 1.08 2.658l1.505-1.316C3.17 12.866 3 12.415 3 12m5.213 3.607c-1.056-.231-1.993-.552-2.773-.935l-.88 1.796c.945.463 2.038.833 3.227 1.092z"/></g>
+  </g>
+  <!-- Cell: 3d-scale -->
+  <text x="194" y="46.50" class="label">3d-scale</text>
+  <g transform="translate(207.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path stroke="#4147d5" d="M12 13.75V7.391m0 6.359l5.485 3.84M12 13.75l-5.485 3.84"/><path fill="#d7e0ff" d="M9.25 4.75a2.75 2.75 0 1 0 5.5 0a2.75 2.75 0 1 0-5.5 0m-7.5 14.5a2.75 2.75 0 1 0 5.5 0a2.75 2.75 0 1 0-5.5 0m15 0a2.75 2.75 0 1 0 5.5 0a2.75 2.75 0 1 0-5.5 0"/><path stroke="#4147d5" d="M9.25 4.75a2.75 2.75 0 1 0 5.5 0a2.75 2.75 0 1 0-5.5 0m-7.5 14.5a2.75 2.75 0 1 0 5.5 0a2.75 2.75 0 1 0-5.5 0m15 0a2.75 2.75 0 1 0 5.5 0a2.75 2.75 0 1 0-5.5 0"/></g>
+  </g>
+  <!-- Cell: 3d-scale-flat -->
+  <text x="242" y="46.50" class="label">3d-scale-flat</text>
+  <g transform="translate(255.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#2859c5" d="m13.25 13.1l9.467 6.626l-1.434 2.048L12 15.276l-9.283 6.498l-1.434-2.048l9.467-6.627V1.75h2.5z"/><path fill="#8fbffa" d="M12 1.25a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7m-7.5 14.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7m15 0a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7"/></g>
+  </g>
+  <!-- Cell: add-pdf -->
+  <text x="290" y="46.50" class="label">add-pdf</text>
+  <g transform="translate(303.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="M20 2H2v19l4-2.5h14z"/><path stroke="#4147d5" d="M20 12V2H2v19l4-2.5h6m-6-11h10M6 12h7m10 6.5h-9m4.5-4.5v9"/></g>
+  </g>
+  <!-- Cell: add-pdf-flat -->
+  <text x="338" y="46.50" class="label">add-pdf-flat</text>
+  <g transform="translate(351.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#8fbffa" d="M12.5 19.5v-3.75h3.25V12.5H21V1H1v21.804L6.287 19.5z"/><path fill="#2859c5" d="M15 8H5V6h10zm-3 4.5H5v-2h7zm5.25 1.5v3.25H14v2.5h3.25V23h2.5v-3.25H23v-2.5h-3.25V14z"/></g>
+  </g>
+  <!-- Cell: ai-edit-robot -->
+  <text x="386" y="46.50" class="label">ai-edit-robot</text>
+  <g transform="translate(399.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#fff" d="M.805 9.5V3h8.5v6.5z"/><path fill="#d7e0ff" d="m9.775 22.253l13.1-13.1l-4.4-4.4l-13.1 13.1v4.4z"/><path fill="#fff" d="m19.725 12.303l-4.4-4.4l3.152-3.149l4.398 4.404l-3.15 3.146Z"/><path stroke="#4147d5" d="M.805 9.5V3h8.5v6.5zM5.055 0v3m-1.5 2.25v2m3-2v2m3.22 15.003l13.1-13.1l-4.4-4.4l-13.1 13.1v4.4zm5.55-14.35l4.4 4.4"/></g>
+  </g>
+  <!-- Cell: ai-edit-robot-flat -->
+  <text x="434" y="46.50" class="label">ai-edit-robot-…</text>
+  <g transform="translate(447.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#2859c5" d="M3.656 1.75H0v7.5h9.312v-7.5H5.656V0h-2z"/><path fill="#8fbffa" d="m10.37 22.784l-.22.22H4.689v-5.461l.22-.22l13.1-13.1l.53-.53l.53.53l4.4 4.4l.53.53l-.53.53zM2.136 6.364v-2h1.5v2zm3.416-2v2h1.5v-2z"/><path fill="#2859c5" d="m14.33 7.903l5.46 5.461l1.06-1.06l-5.46-5.461z"/></g>
+  </g>
+  <!-- Cell: ai-folder-robot -->
+  <text x="2" y="96.00" class="label">ai-folder-robot</text>
+  <g transform="translate(15.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="M2 2.5v19h16.364L22 18.305V6.5H12l-4-4z"/><path stroke="#4147d5" d="M22 12.5v-6H12l-4-4H2v19h9"/><path fill="#fff" d="M13.688 22v-6.5H22V22z"/><path stroke="#4147d5" d="M13.688 22v-6.5H22V22zm4.156-9v2.5m-1.457 2.25v2m2.916-2v2"/></g>
+  </g>
+  <!-- Cell: ai-folder-robot-flat -->
+  <text x="50" y="96.00" class="label">ai-folder-robo…</text>
+  <g transform="translate(63.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#2859c5" d="M19.324 15.5H23V23h-9.312v-7.5h3.636v-1.75h2z"/><path fill="#8fbffa" d="M1 2h7.06l4 4H23v8h-2.176v-1.75h-5V14h-3.636v9H1z"/><path fill="#8fbffa" d="M15.887 18.113v2h1.5v-2zm3.416 0v2h1.5v-2z"/></g>
+  </g>
+  <!-- Cell: ai-gaming-robot -->
+  <text x="98" y="96.00" class="label">ai-gaming-robot</text>
+  <g transform="translate(111.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="M1.423 18.169L2.553 8h17l1.13 10.169A3 3 0 0 1 17.7 21.5h-2.148l-1-4.5h-7l-1 4.5H4.405a3 3 0 0 1-2.982-3.331"/><path stroke="#4147d5" d="M11.553 8h-9l-1.13 10.169A3 3 0 0 0 4.405 21.5h2.148l1-4.5h7l1 4.5h2.5c1.6 0 2.845-1.391 2.668-2.982L20.108 13M6.553 10.75v4m2-2h-4"/><path fill="#fff" d="M14.635 9.84v-6.5h8.311v6.5z"/><path stroke="#4147d5" d="M14.635 9.84v-6.5h8.311v6.5zm4.156-9v2.5m-1.459 2.25v2m2.916-2v2"/></g>
+  </g>
+  <!-- Cell: ai-gaming-robot-flat -->
+  <text x="146" y="96.00" class="label">ai-gaming-robo…</text>
+  <g transform="translate(159.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#8fbffa" d="M12 7H2.105l-.099.89l-1.13 10.168A4 4 0 0 0 4.853 22.5h2.95l.174-.783L8.802 18h5.396l.826 3.717l.174.783H18.5a3.685 3.685 0 0 0 3.663-4.092l-.684-6.158H12z"/><path fill="#2859c5" d="M6.25 13.125v1.625h1.5v-1.625h1.625v-1.5H7.75V10h-1.5v1.625H4.625v1.5zM19.156 3.25h3.655v7.5H13.5v-7.5h3.656V1.5h2z"/><path fill="#8fbffa" d="M15.697 5.863v2h1.5v-2zm3.416 0v2h1.5v-2z"/></g>
+  </g>
+  <!-- Cell: ai-generate-voice-spark-2 -->
+  <text x="194" y="96.00" class="label">ai-generate-vo…</text>
+  <g transform="translate(207.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="M4.39 6h8.095v7.286a4.048 4.048 0 1 1-8.095 0z"/><path fill="#fff" d="M14.451 4.5c2 0 4.5-2.5 4.5-4.5c0 2 2.5 4.5 4.5 4.5c-2 0-4.5 2.5-4.5 4.5c0-2-2.5-4.5-4.5-4.5"/><path stroke="#4147d5" d="M14.451 4.5c2 0 4.5-2.5 4.5-4.5c0 2 2.5 4.5 4.5 4.5c-2 0-4.5 2.5-4.5 4.5c0-2-2.5-4.5-4.5-4.5ZM4.39 6h8.095v7.286a4.048 4.048 0 1 1-8.095 0z"/><path stroke="#4147d5" d="M1.15 13.286a7.286 7.286 0 1 0 14.571 0m-7.283 7.285V23"/></g>
+  </g>
+  <!-- Cell: ai-generate-voice-spark-2-flat -->
+  <text x="242" y="96.00" class="label">ai-generate-vo…</text>
+  <g transform="translate(255.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#2859c5" d="M17.951 0c0 .627-.426 1.512-1.207 2.293c-.78.78-1.666 1.207-2.293 1.207v2c.627 0 1.512.427 2.293 1.207c.78.78 1.207 1.666 1.207 2.293h2c0-.627.427-1.512 1.207-2.293c.78-.78 1.666-1.207 2.293-1.207v-2c-.627 0-1.512-.427-2.293-1.207c-.78-.78-1.207-1.666-1.207-2.293z"/><path fill="#8fbffa" d="M4.39 5.5h-.5v7.786a4.548 4.548 0 1 0 9.095 0V5.5z"/><path fill="#2859c5" d="M7.437 21.512A8.287 8.287 0 0 1 .15 13.286h2a6.286 6.286 0 0 0 12.572 0h2a8.287 8.287 0 0 1-7.285 8.226V23h-2z"/></g>
+  </g>
+  <!-- Cell: ai-science-spark -->
+  <text x="290" y="96.00" class="label">ai-science-spa…</text>
+  <g transform="translate(303.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#fff" d="M14 5.5c2 0 4.5-2.5 4.5-4.5c0 2 2.5 4.5 4.5 4.5c-2 0-4.5 2.5-4.5 4.5c0-2-2.5-4.5-4.5-4.5"/><path stroke="#4147d5" stroke-linejoin="round" d="M16.6 12.12c-.909 1.536-2.205 3.198-3.798 4.792c-4.207 4.207-8.896 6.338-10.474 4.76c-1.578-1.577.554-6.267 4.76-10.474c1.29-1.289 2.624-2.383 3.9-3.235q.514-.344 1.012-.632"/><path stroke="#4147d5" stroke-linecap="round" stroke-linejoin="round" d="M7.088 16.912c4.207 4.207 8.896 6.338 10.474 4.76c1.578-1.577-.554-6.267-4.76-10.474C8.593 6.991 3.904 4.86 2.326 6.438c-1.578 1.577.554 6.266 4.76 10.473Z"/><path stroke="#4147d5" d="M14 5.5c2 0 4.5-2.5 4.5-4.5c0 2 2.5 4.5 4.5 4.5c-2 0-4.5 2.5-4.5 4.5c0-2-2.5-4.5-4.5-4.5Z"/></g>
+  </g>
+  <!-- Cell: ai-science-spark-flat -->
+  <text x="338" y="96.00" class="label">ai-science-spa…</text>
+  <g transform="translate(351.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#8fbffa" d="M9.5 7.78c-1.017-.718-2.016-1.302-2.953-1.728c-1.011-.46-2.001-.758-2.894-.812c-.891-.054-1.808.135-2.478.804c-.669.67-.858 1.587-.804 2.478c.054.893.352 1.883.812 2.894c.426.938 1.01 1.937 1.729 2.954c-.719 1.016-1.302 2.015-1.728 2.952c-.46 1.012-.759 2.002-.813 2.895c-.053.89.136 1.808.805 2.477c.669.67 1.586.858 2.477.805c.893-.054 1.883-.353 2.895-.813c.937-.426 1.936-1.01 2.952-1.728c1.017.718 2.016 1.302 2.953 1.728c1.011.46 2.001.759 2.894.812c.891.054 1.809-.135 2.478-.804c.67-.67.858-1.586.804-2.478s-.352-1.883-.812-2.894c-.426-.937-1.01-1.936-1.728-2.952q.51-.725.927-1.427l-1.721-1.019a18 18 0 0 1-.49.781a29 29 0 0 0-1.741-1.9a29 29 0 0 0-1.9-1.74q.456-.3.894-.556L11.053 6.78a20 20 0 0 0-1.553 1M7.836 9.066A15.5 15.5 0 0 0 5.72 7.873c-.884-.402-1.625-.603-2.187-.637c-.563-.033-.824.103-.944.223s-.256.38-.222.943s.235 1.303.637 2.187c.3.661.7 1.375 1.192 2.116a29 29 0 0 1 1.74-1.9a29 29 0 0 1 1.9-1.74Zm-3.64 6.97c-.49.74-.89 1.453-1.192 2.115c-.401.884-.602 1.625-.636 2.187c-.034.563.102.823.222.943s.38.256.943.222s1.303-.235 2.187-.637c.662-.3 1.375-.7 2.116-1.19a29 29 0 0 1-1.9-1.742a29 29 0 0 1-1.74-1.899ZM9.5 18.452a27 27 0 0 1-2.15-1.934a27 27 0 0 1-1.933-2.15a27 27 0 0 1 1.934-2.15c.71-.71 1.434-1.357 2.15-1.933a27 27 0 0 1 2.149 1.934c.712.712 1.36 1.435 1.934 2.15a27 27 0 0 1-1.934 2.149a27 27 0 0 1-2.15 1.934m1.665 1.221c.74.49 1.454.89 2.115 1.191c.884.402 1.626.603 2.187.637c.563.034.824-.103.944-.222s.256-.38.222-.944c-.034-.561-.235-1.302-.637-2.186c-.3-.662-.7-1.375-1.191-2.116a29 29 0 0 1-1.74 1.9a29 29 0 0 1-1.9 1.74"/><path fill="#2859c5" d="M17.817.493c0 .699-.471 1.664-1.314 2.507s-1.809 1.314-2.507 1.314v2c.698 0 1.664.471 2.507 1.314s1.314 1.808 1.314 2.507h2c0-.699.471-1.664 1.314-2.507s1.808-1.314 2.507-1.314v-2c-.699 0-1.664-.471-2.507-1.314S19.817 1.192 19.817.493z"/></g>
+  </g>
+  <!-- Cell: ai-upscale-spark -->
+  <text x="386" y="96.00" class="label">ai-upscale-spa…</text>
+  <g transform="translate(399.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="M2.313 11.313a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path fill="#fff" d="M6 11.313c2.361 0 5.313-2.952 5.313-5.313c0 2.361 2.95 5.313 5.312 5.313c-2.361 0-5.313 2.95-5.313 5.312c0-2.361-2.95-5.313-5.312-5.313Z"/><path stroke="#4147d5" d="M6 11.313c2.361 0 5.313-2.952 5.313-5.313c0 2.361 2.95 5.313 5.312 5.313c-2.361 0-5.313 2.95-5.313 5.312c0-2.361-2.95-5.313-5.312-5.313Zm11.72 6.407l4.593 4.593"/><path stroke="#4147d5" stroke-linejoin="round" d="M2.313 11.313a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/></g>
+  </g>
+  <!-- Cell: ai-upscale-spark-flat -->
+  <text x="434" y="96.00" class="label">ai-upscale-spa…</text>
+  <g transform="translate(447.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#8fbffa" d="M3 11a8 8 0 1 1 16 0a8 8 0 0 1-16 0"/><path fill="#2859c5" d="M3 11a8 8 0 1 1 16 0a8 8 0 0 1-16 0m8-10C5.477 1 1 5.477 1 11s4.477 10 10 10a9.96 9.96 0 0 0 6.329-2.257l4.464 4.464l1.414-1.414l-4.464-4.464A9.96 9.96 0 0 0 21 11c0-5.523-4.477-10-10-10"/><path fill="#2859c5" d="M10 5.688c0 .807-.54 1.896-1.478 2.834S6.495 10 5.687 10v2c.808 0 1.897.54 2.835 1.478c.939.938 1.478 2.027 1.478 2.835h2c0-.808.54-1.896 1.478-2.835S15.505 12 16.313 12v-2c-.808 0-1.896-.54-2.835-1.478S12 6.495 12 5.687z"/></g>
+  </g>
+  <!-- Cell: ai-vehicle-robot-1 -->
+  <text x="2" y="145.50" class="label">ai-vehicle-rob…</text>
+  <g transform="translate(15.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#fff" d="M3.758 16.5h14.091l-2-8H5.758z"/><path fill="#d7e0ff" d="M20.803 20.5h-20v-6.477h20z"/><path fill="#fff" d="M3.053 20.5a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0m10.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0"/><path stroke="#4147d5" d="M11.78 8.5H5.758L4.383 14m12.465-1.5l.375 1.5"/><path stroke="#4147d5" stroke-linecap="square" d="M3.062 20.5H.802v-6.477h20V20.5h-2.26m-10.476 0h5.471"/><path stroke="#4147d5" d="M3.053 20.5a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0m10.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0"/><path fill="#fff" d="M14.885 9.84v-6.5h8.311v6.5z"/><path stroke="#4147d5" d="M14.885 9.84v-6.5h8.311v6.5zm4.156-9v2.5m-1.459 2.25v2m2.916-2v2"/></g>
+  </g>
+  <!-- Cell: ai-vehicle-robot-1-flat -->
+  <text x="50" y="145.50" class="label">ai-vehicle-rob…</text>
+  <g transform="translate(63.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="#8fbffa" fill-rule="evenodd" d="M13.189 7.646H5.174L3.607 13.91H0v7.734h22V13.91h-3.607l-.541-2.165h-4.663z" clip-rule="evenodd"/><path fill="#2859c5" fill-rule="evenodd" d="M13.219 9.646H6.736L5.67 13.91h10.662l-.54-2.165h-2.573z" clip-rule="evenodd"/><path fill="#2859c5" d="M19.47 21.125a2.875 2.875 0 1 1-5.749 0a2.875 2.875 0 0 1 5.75 0Zm-17 0a2.875 2.875 0 1 0 5.75 0a2.875 2.875 0 0 0-5.75 0"/><path fill="#2859c5" fill-rule="evenodd" d="M20.345 2.746h3.656v7.5h-9.312v-7.5h3.656V.996h2z" clip-rule="evenodd"/><path fill="#8fbffa" fill-rule="evenodd" d="M16.887 5.36v2h1.5v-2zm3.416 0v2h1.5v-2z" clip-rule="evenodd"/></g>
+  </g>
+  <!-- Cell: airplane-disabled -->
+  <text x="98" y="145.50" class="label">airplane-disab…</text>
+  <g transform="translate(111.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="m11.895 18.578l-4.027 2.237l-.895-1.79l2.685-2.888v-2.262l-1.18-1.267l-5.98 1.495l-.895-3.133l4.185-2.093L8.223 7.66l1.435-.717v-3.58a2.238 2.238 0 0 1 4.475 0v3.58l8.055 4.027l-.895 3.133l-5.98-1.495l-1.18-.266v3.795l2.685 2.888l-.895 1.79z"/><path stroke="#4147d5" d="m.993 1.125l21.75 21.75m-5.925-9.891l4.475 1.119l.895-3.133l-8.055-4.027v-3.58a2.238 2.238 0 0 0-4.475 0v3.58l-1.435.717m8.341 11.873l-.641 1.282l-4.028-2.237l-4.027 2.237l-.895-1.79l2.685-2.888v-2.262l-1.18-1.267l-5.98 1.495l-.895-3.133l4.185-2.093"/></g>
+  </g>
+  <!-- Cell: airplane-disabled-flat -->
+  <text x="146" y="145.50" class="label">airplane-disab…</text>
+  <g transform="translate(159.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#8fbffa" d="M12 1.182a2.81 2.81 0 0 0-2.81 2.81v3.387L.78 11.584l1.17 4.098l7.24-1.81v3.11l-2.875 3.092L7.628 22.7l4.371-2.428l4.372 2.428l1.312-2.625l-2.874-3.091v-3.111l7.24 1.81l1.17-4.098l-8.41-4.205V3.993A2.81 2.81 0 0 0 12 1.182"/><path fill="#2859c5" d="m22.403 23.707l-22-22L1.818.293l22 22z"/></g>
+  </g>
+  <!-- Cell: alien -->
+  <text x="194" y="145.50" class="label">alien</text>
+  <g transform="translate(207.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="M21 11.412C21 19 12 22 12 22s-9-3-9-10.588C3 6.214 7.03 2 12 2s9 4.214 9 9.412"/><path stroke="#4147d5" d="M21 11.412C21 19 12 22 12 22s-9-3-9-10.588C3 6.214 7.03 2 12 2s9 4.214 9 9.412Z"/><path fill="#fff" d="M18.205 9.795a3.333 3.333 0 0 0-4.41 4.41a3.333 3.333 0 0 0 4.41-4.41m-12.41 0a3.333 3.333 0 0 1 4.41 4.41a3.333 3.333 0 0 1-4.41-4.41"/><path stroke="#4147d5" d="M18.205 9.795a3.333 3.333 0 0 0-4.41 4.41a3.333 3.333 0 0 0 4.41-4.41Zm-12.41 0a3.333 3.333 0 0 1 4.41 4.41a3.333 3.333 0 0 1-4.41-4.41Z"/></g>
+  </g>
+  <!-- Cell: alien-flat -->
+  <text x="242" y="145.50" class="label">alien-flat</text>
+  <g transform="translate(255.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#8fbffa" d="M11.683 22.948L12 22l-.316.949l.316.105l.316-.105L12 22c.316.949.317.949.317.948h.004l.007-.003l.026-.01a8 8 0 0 0 .399-.148a19 19 0 0 0 4.35-2.437C19.476 18.557 22 15.65 22 11.412C22 5.704 17.564 1 12 1C6.435 1 2 5.704 2 11.412c0 4.238 2.524 7.146 4.897 8.938a19 19 0 0 0 4.662 2.555l.087.03l.026.01l.007.002z"/><path fill="#2859c5" d="M6.833 9.5c-.538 0-1.049.116-1.509.324a3.667 3.667 0 0 0 4.852 4.852A3.667 3.667 0 0 0 6.833 9.5m10.334 0c.538 0 1.049.116 1.509.324a3.667 3.667 0 0 1-4.852 4.852A3.667 3.667 0 0 1 17.167 9.5"/></g>
+  </g>
+  <!-- Cell: align-back-2 -->
+  <text x="290" y="145.50" class="label">align-back-2</text>
+  <g transform="translate(303.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#fff" d="M2 2h15v15H2z"/><path fill="#d7e0ff" d="M22 22V7h-5v10H7v5z"/><path stroke="#4147d5" d="M19.5 7H22v15H7v-2.5M14.188 2H17v2.748M4.75 17H2v-2.81m0-9.377V2h2.748"/><path stroke="#4147d5" d="M17 14.188v2.813h-2.748M2 7.625v3.75m15 .001v-3.75M11.375 2h-3.75m0 15h3.75"/></g>
+  </g>
+  <!-- Cell: align-back-2-flat -->
+  <text x="2" y="195.00" class="label">align-back-2-f…</text>
+  <g transform="translate(15.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#8fbffa" d="M20.5 6.25h-.75v13.5H6.25v3h16.5V6.25z"/><path fill="#2859c5" d="M18 2V1h-3.813v2H16v1.748h2zM1 17v1h3.75v-2H3v-1.81H1zM1 1h3.748v2H3v1.813H1zm16 17h1v-3.812h-2V16h-1.748v2zM1 11.377v-3.75h2v3.75zm17 0v-3.75h-2v3.75zM7.625 1h3.75v2h-3.75zm0 17h3.75v-2h-3.75z"/></g>
+  </g>
+  <!-- Cell: align-left-1 -->
+  <text x="50" y="195.00" class="label">align-left-1</text>
+  <g transform="translate(63.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="M6 14h15.5v6H6zM6 4h9.5v6H6z"/><path stroke="#4147d5" d="M6 14h15.5v6H6zM6 4h9.5v6H6zM2.5 1v22"/></g>
+  </g>
+  <!-- Cell: align-left-1-flat -->
+  <text x="98" y="195.00" class="label">align-left-1-f…</text>
+  <g transform="translate(111.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" fill-rule="evenodd" clip-rule="evenodd"><path fill="#8fbffa" d="M16.5 3H5v7.5h11.5zm6 10.5H5V21h17.5z"/><path fill="#2859c5" d="M1.5 23V1h2v22z"/></g>
+  </g>
+  <!-- Cell: align-object-bottom -->
+  <text x="146" y="195.00" class="label">align-object-b…</text>
+  <g transform="translate(159.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="M2 2h20v20H2z"/><path stroke="#4147d5" d="M2 2h20v20H2z"/><path fill="#fff" d="M6 14h12v4H6z"/><path stroke="#4147d5" d="M6 14h12v4H6z"/></g>
+  </g>
+  <!-- Cell: align-object-bottom-flat -->
+  <text x="194" y="195.00" class="label">align-object-b…</text>
+  <g transform="translate(207.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="#8fbffa" d="M1 1h22v22H1z"/><path fill="#2859c5" d="M5.5 13.5h13v5h-13z"/></g>
+  </g>
+  <!-- Cell: align-text-center -->
+  <text x="242" y="195.00" class="label">align-text-cen…</text>
+  <g transform="translate(255.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke-width="1.5"><path fill="#d7e0ff" d="M2 2h20v20H2z"/><path stroke="#4147d5" d="M2 2h20v20H2zm4 6.5h12M6 12h12M6 15.5h12"/></g>
+  </g>
+  <!-- Cell: align-text-center-flat -->
+  <text x="290" y="195.00" class="label">align-text-cen…</text>
+  <g transform="translate(303.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none"><path fill="#8fbffa" d="M1 1h22v22H1z"/><path fill="#2859c5" fill-rule="evenodd" d="M19 9H5V7h14zm0 4H5v-2h14zM5 17h14v-2H5z" clip-rule="evenodd"/></g>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-streamline-sharp-color</text>
+  <text x="348" y="139.738" class="overlay-title">sharp color icons</text>
+  <text x="351" y="190.744" class="overlay-meta">CC-BY-4.0 · 1,000 icons</text>
+</svg>

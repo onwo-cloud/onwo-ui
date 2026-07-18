@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: accessibility-access-for-hearing-loss -->
+  <text x="2" y="46.50" class="label">accessibility-…</text>
+  <g transform="translate(15.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M5.5 9a6.5 6.5 0 0 1 13 0c0 .662-.111 1.32-.328 1.944l-2.85 8.195A3.52 3.52 0 0 1 12 21.5c-.98 0-1.865-.352-2.5-1m6-11.5a3.5 3.5 0 1 0-7 0m15-8.5L18 6m-6 6L.5 23.5"/>
+  </g>
+  <!-- Cell: accessibility-access-to-low-vision -->
+  <text x="50" y="46.50" class="label">accessibility-…</text>
+  <g transform="translate(63.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="m16 13.5l6 10m-12-15c0 2.4 3.546 4 5 4m-5-4v5.25m0-5.25a2 2 0 0 0-2-2H6.5A3.5 3.5 0 0 0 3 10v3m2.76-6.421V14L10 16.5v.5c0 1.5 0 3.5.75 5c0 0 .75 1.5 1.75 1.5m-5.75-6.627C6.56 20.03 5.415 22.853 3 23.5m4.359-19s-1.6-1-1.6-2.25a1.746 1.746 0 1 1 3.495 0C9.254 3.5 7.66 4.5 7.66 4.5z"/>
+  </g>
+  <!-- Cell: accessibility-assistive-listening-device -->
+  <text x="98" y="46.50" class="label">accessibility-…</text>
+  <g transform="translate(111.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M2 22L.5 23.5M5 19l-1.5 1.5m4.5-2L5.5 16m4.5-2l-1.5 1.5M13 11l-1.5 1.5M19 .5A4.5 4.5 0 0 1 23.5 5M19 3.5A1.5 1.5 0 0 1 20.5 5m-15 4a6.5 6.5 0 0 1 13 0c0 .662-.111 1.32-.328 1.944l-2.85 8.195A3.52 3.52 0 0 1 12 21.5c-.98 0-1.865-.352-2.5-1m6-11.5a3.5 3.5 0 1 0-7 0"/>
+  </g>
+  <!-- Cell: accessibility-audio-description -->
+  <text x="146" y="46.50" class="label">accessibility-…</text>
+  <g transform="translate(159.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="m2.75 16.25l1.605-2.841m0 0L7.408 8H8.75v5.409m-4.395 0H4.25m.105 0H8.75m0 0V16.5m9.25-9s.5 1.5.5 4.5s-.5 4.5-.5 4.5m2.5-9S21 9 21 12s-.5 4.5-.5 4.5m-19 4S.5 17 .5 12s1-8.5 1-8.5h21s1 3.5 1 8.5s-1 8.5-1 8.5zM11 16V8h3.75c.644 0 1.25.522 1.25 1.167v5.666c0 .645-.606 1.167-1.25 1.167z"/>
+  </g>
+  <!-- Cell: accessibility-braille -->
+  <text x="194" y="46.50" class="label">accessibility-…</text>
+  <g transform="translate(207.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M8.5 15A2.5 2.5 0 0 0 6 12.5h-.5v8H6A2.5 2.5 0 0 1 8.5 23m0-6V5.5H9A2.5 2.5 0 0 1 11.5 8v2.5m6 12.5v-8a2.5 2.5 0 0 0-2.5-2.5h-.55m.05 2.5v-2a2.5 2.5 0 0 0-2.5-2.5h-.5m0 0V15M1.5 1v2m6-2v2m6-2v2m3-2v2m6-2v2m-21 2v2m3-2v2m12-2v2m3-2v2m3-2v2"/>
+  </g>
+  <!-- Cell: accessibility-children-must-be-supervised -->
+  <text x="242" y="46.50" class="label">accessibility-…</text>
+  <g transform="translate(255.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M19.25 24v-3.667c0-1.145.784-2.074 1.75-2.074v-6.222S19.688 11 17.5 11S14 12.037 14 12.037v6.222c.967 0 1.75.929 1.75 2.075V24M9 24v-6.5a2 2 0 0 1 2-2v-8s-1.5-1-4-1s-4 1-4 1v8a2 2 0 0 1 2 2V24M17.373 9S16 8.125 16 7.031c0-.845.672-1.531 1.502-1.531S19 6.186 19 7.031C19 8.125 17.63 9 17.63 9zM6.85 4.5s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0C8.746 3.5 7.15 4.5 7.15 4.5z"/>
+  </g>
+  <!-- Cell: accessibility-closed-captioning -->
+  <text x="290" y="46.50" class="label">accessibility-…</text>
+  <g transform="translate(303.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M10.333 9.5v-1a1.5 1.5 0 0 0-1.5-1.5H6a1.5 1.5 0 0 0-1.5 1.5v7A1.5 1.5 0 0 0 6 17h2.833a1.5 1.5 0 0 0 1.5-1.5v-1m9-5v-1a1.5 1.5 0 0 0-1.5-1.5H15a1.5 1.5 0 0 0-1.5 1.5v7A1.5 1.5 0 0 0 15 17h2.833a1.5 1.5 0 0 0 1.5-1.5v-1M1.5 20.5S.5 17 .5 12s1-8.5 1-8.5h21s1 3.5 1 8.5s-1 8.5-1 8.5z"/>
+  </g>
+  <!-- Cell: accessibility-crutch -->
+  <text x="338" y="46.50" class="label">accessibility-…</text>
+  <g transform="translate(351.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M5 13.5h6m-4.5 0v4c.96.96 1.5 2.263 1.5 3.621m0 0V23.5m0-2.379c0-1.358.54-2.66 1.5-3.621v-4m-3 10h3m4.5.5v-6.5a2 2 0 0 1 2-2v-8s-1.5-1-4-1s-4 1-4 1V12m3.85-7.5s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0c0 1.25-1.596 2.25-1.596 2.25z"/>
+  </g>
+  <!-- Cell: accessibility-electric-wheelchair -->
+  <text x="386" y="46.50" class="label">accessibility-…</text>
+  <g transform="translate(399.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M7 18.5a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5Zm0 0L5 6m2 12.5h5.5a2 2 0 0 1 2 2m0 0a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3Zm5.5 3c-1 0-1.75-1.5-1.75-1.5c-.75-1.5-.75-2.5-.75-4v-2H9l-.24-1.5M17.5 10h-3.05a2.5 2.5 0 0 1-2.17-1.26L11 6.5h-.588a2.5 2.5 0 0 0-2.469 2.895L8.52 13m-2.4 0H16.5a3 3 0 0 0 3-3v-.5m-8.9-5S9 3.5 9 2.25a1.747 1.747 0 1 1 3.496 0c0 1.25-1.596 2.25-1.596 2.25z"/>
+  </g>
+  <!-- Cell: accessibility-guest-height-limit -->
+  <text x="434" y="46.50" class="label">accessibility-…</text>
+  <g transform="translate(447.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M9.524 22v-4.5a2 2 0 0 1 2-2v-6s-1.5-1-4-1s-4 1-4 1v6a2 2 0 0 1 2 2V22M23.936.5H.064m23.873 23H.063M18.524 3v18m0-18c0 .358.205.804.419 1.171c.285.49.66.918 1.088 1.276c.332.278.728.553.993.553m-2.5-3c0 .358-.206.804-.42 1.171c-.285.49-.659.918-1.087 1.276c-.333.278-.728.553-.993.553m2.5 15c0-.358.205-.804.419-1.171c.285-.49.66-.918 1.088-1.276c.332-.278.728-.553.993-.553m-2.5 3c0-.358-.206-.804-.42-1.171a4.9 4.9 0 0 0-1.087-1.276c-.333-.278-.728-.553-.993-.553M7.374 6.5s-1.6-1-1.6-2.25a1.746 1.746 0 1 1 3.495 0c0 1.25-1.595 2.25-1.595 2.25z"/>
+  </g>
+  <!-- Cell: accessibility-guest-within-height-limit-must-be-supervised -->
+  <text x="2" y="96.00" class="label">accessibility-…</text>
+  <g transform="translate(15.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M6.578 21.86v-4.437a1.97 1.97 0 0 1 1.971-1.972V9.535S7.07 8.55 4.606 8.55s-3.944.986-3.944.986v5.916c1.089 0 1.972.883 1.972 1.972v4.436m12.817 0v-3.615c0-.887.662-1.607 1.479-1.607v-4.82s-1.11-.803-2.958-.803s-2.958.803-2.958.803v4.82c.817 0 1.48.72 1.48 1.607v3.615M23.83.662H.17m23.66 22.676H.17M21.366 3.127v17.746m0-17.746c0 .353.203.793.414 1.155c.281.483.65.904 1.072 1.257c.328.274.718.545.98.545m-2.466-2.957c0 .353-.202.793-.413 1.155c-.281.483-.65.904-1.072 1.257c-.328.274-.718.545-.98.545m2.465 14.79c0-.354.203-.794.414-1.156c.281-.483.65-.904 1.072-1.257c.328-.274.718-.545.98-.545m-2.466 2.957c0-.353-.202-.793-.413-1.155a4.8 4.8 0 0 0-1.072-1.257c-.328-.274-.718-.545-.98-.545M4.458 6.577S2.88 5.591 2.88 4.36c0-.953.773-1.725 1.726-1.725s1.72.772 1.72 1.725c0 1.232-1.573 2.218-1.573 2.218zm9.389 2.712s-1.354-.863-1.354-1.941c0-.834.663-1.51 1.48-1.51c.818 0 1.478.676 1.478 1.51c0 1.078-1.35 1.94-1.35 1.94z"/>
+  </g>
+  <!-- Cell: accessibility-no-access-for-service-animal-2 -->
+  <text x="50" y="96.00" class="label">accessibility-…</text>
+  <g transform="translate(63.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="m.5.5l14.749 14.749M23.5 23.5l-8.251-8.251M19 24v-9.357a2.5 2.5 0 0 0 2.5-2.5v-.357h-3.786c-.986 0-1.785-.8-1.785-1.786v2.782c0 .882-.242 1.732-.68 2.467M9.5 20v1.75c0 .966.784 1.75 1.75 1.75h.393v-2.71a4.81 4.81 0 0 1 2.143-4.004q.11-.074.214-.152M14 20h1.5v.292c0 .875 0 1.458.45 2.333c.001.002.45.875 1.05.875M5.5 24v-6.5a2 2 0 0 0-2-2v-8s1.5-1 4-1s4 1 4 1v4m-4.15-7s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0C9.246 3.5 7.65 4.5 7.65 4.5z"/>
+  </g>
+  <!-- Cell: accessibility-no-access-for-service-animal-3 -->
+  <text x="98" y="96.00" class="label">accessibility-…</text>
+  <g transform="translate(111.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="m.5.5l23 23M7.052 17s-2.708 0-4.393 2.973C2.125 20.915 2 22.02 2 23.101V24v-4.995a7.464 7.464 0 0 1 6.444-7.394L9 11.534M7.052 17l3.657.671A20 20 0 0 0 14.32 18h.93l.25.25v2.042c0 .875 0 1.458.45 2.333c0 0 .45.875 1.05.875M7.052 17s-1.266 1.224-1.88 3.648c-.137.54-.172 1.099-.172 1.656V24M.5 8v3.5a3 3 0 0 0 3 3h.013M19.5 14V9.5h1a3 3 0 0 0 3-3v-1H19A2.5 2.5 0 0 1 16.5 3a8.6 8.6 0 0 1-2.992 6.523M19.5 14v5.5m0-5.5a6.24 6.24 0 0 1-5.923-4.27l-.07-.207M8.5 0c0 5.5 2.5 8.5 5 9.5l.008.023m0 0A8.6 8.6 0 0 1 11.068 11"/>
+  </g>
+  <!-- Cell: accessibility-no-access-for-service-animal-4 -->
+  <text x="146" y="96.00" class="label">accessibility-…</text>
+  <g transform="translate(159.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="m.5.5l15.848 15.848M23.5 23.5l-7.152-7.152M11.5 18a5.5 5.5 0 1 0-2 4.243m2-10.743v-5h-1.172a3 3 0 0 0-2.906 2.255l-.966 3.764M21 21v-6.357a2.5 2.5 0 0 0 2.5-2.5v-.357h-3.786c-.986 0-1.785-.8-1.785-1.786v2.782a4.82 4.82 0 0 1-1.581 3.566M11.5 20v1.75c0 .966.784 1.75 1.75 1.75h.393v-2.71c0-1.264.496-2.462 1.357-3.35M16 20h1.5v.292c0 .875 0 1.458.45 2.333c.001.002.45.875 1.05.875m-7.65-19s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0c0 1.25-1.596 2.25-1.596 2.25z"/>
+  </g>
+  <!-- Cell: accessibility-no-wheelchair-access -->
+  <text x="194" y="96.00" class="label">accessibility-…</text>
+  <g transform="translate(207.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="m.5.5l9.582 9.582M23.5 23.5L10.082 10.082M14.5 18A5.5 5.5 0 1 1 9 12.5m5.5-.5V6.5h-1.172a3 3 0 0 0-2.906 2.255l-.34 1.327M17.5 17.5v.5c0 1.5 0 2.5.75 4c0 0 .75 1.5 1.75 1.5m-5.65-19s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0c0 1.25-1.596 2.25-1.596 2.25z"/>
+  </g>
+  <!-- Cell: accessibility-prosthetic-arm -->
+  <text x="242" y="96.00" class="label">accessibility-…</text>
+  <g transform="translate(255.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M10 18v6m4 0v-6.5a2 2 0 0 1 2-2v-8s-1.5-1-4-1s-4 1-4 1V11m1.5 4.5H8m0 0H6.5m1.5 0V12m3.85-7.5s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0c0 1.25-1.596 2.25-1.596 2.25z"/>
+  </g>
+  <!-- Cell: accessibility-prosthetic-leg -->
+  <text x="290" y="96.00" class="label">accessibility-…</text>
+  <g transform="translate(303.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M10 24v-6.5a2 2 0 0 0-2-2v-8s1.5-1 4-1s4 1 4 1v8a2 2 0 0 0-2 2V19m-1.5 4.5H14m0 0h1.5m-1.5 0V20M11.85 4.5s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0c0 1.25-1.596 2.25-1.596 2.25z"/>
+  </g>
+  <!-- Cell: accessibility-ramp-down -->
+  <text x="338" y="96.00" class="label">accessibility-…</text>
+  <g transform="translate(351.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M1 23.5v-7h.5S9 21 23 23M13.57 9.782a4.424 4.424 0 1 0 3.256 4.734M13.57 9.782l1.078-1.729a3 3 0 0 1 3.322-1.31l1.042.28l-1.027 3.831M13.57 9.782a4.425 4.425 0 0 1 3.256 4.734m3.852 6.33c-1.235-1.32-1.74-2.618-1.276-4.348l.335-1.25l-2.733-.732h-.178m2.539-9.352s-1.213-1.302-.908-2.44a1.65 1.65 0 0 1 2.021-1.167a1.647 1.647 0 0 1 1.163 2.02c-.305 1.139-2.003 1.66-2.003 1.66z"/>
+  </g>
+  <!-- Cell: accessibility-ramp-down-arrow -->
+  <text x="386" y="96.00" class="label">accessibility-…</text>
+  <g transform="translate(399.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M1 23h22v-1C9 18.772 1.5 13 1.5 13H1zm22.5-8.746L11 7m12.5 7.254c-.498-.29-.944-.95-1.274-1.559a8 8 0 0 1-.856-2.622c-.106-.712-.155-1.514.068-1.902m2.062 6.083c-.498-.29-1.29-.348-1.98-.33a7.9 7.9 0 0 0-2.687.566c-.667.263-1.382.622-1.605 1.01"/>
+  </g>
+  <!-- Cell: accessibility-ramp-up -->
+  <text x="434" y="96.00" class="label">accessibility-…</text>
+  <g transform="translate(447.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M23 23.5v-7h-.5S15 21 1 23m3.28-11.366a4.424 4.424 0 1 0 5.145 2.382M4.28 11.634l.069-2.036a3 3 0 0 1 2.222-2.796l1.042-.28l1.027 3.833m-4.36 1.28a4.425 4.425 0 0 1 5.145 2.381m6.543 3.647c-1.73-.527-2.816-1.4-3.28-3.13l-.334-1.249l-2.733.732h-.196m-2.436-9.28s-1.701-.52-2.006-1.658A1.65 1.65 0 0 1 6.15 1.057a1.647 1.647 0 0 1 2.017 1.168c.305 1.138-.904 2.439-.904 2.439z"/>
+  </g>
+  <!-- Cell: accessibility-ramp-up-arrow -->
+  <text x="2" y="145.50" class="label">accessibility-…</text>
+  <g transform="translate(15.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M23 23H1v-1c14-3.228 21.5-9 21.5-9h.5zM13 8.247L.5 15.5M13 8.246c-.498.29-.944.95-1.274 1.559a8 8 0 0 0-.856 2.622c-.106.712-.155 1.514.068 1.902M13 8.246c-.498.29-1.29.348-1.98.33a7.9 7.9 0 0 1-2.687-.566C7.666 7.747 6.95 7.388 6.728 7"/>
+  </g>
+  <!-- Cell: accessibility-service-animal-1 -->
+  <text x="50" y="145.50" class="label">accessibility-…</text>
+  <g transform="translate(63.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M11.5 18a5.5 5.5 0 1 0-2 4.243m2-9.243V6.5h-1.172a3 3 0 0 0-2.906 2.255l-.966 3.764M21 24v-9.357a2.5 2.5 0 0 0 2.5-2.5v-.357h-3.786c-.986 0-1.785-.8-1.785-1.786v2.782a4.81 4.81 0 0 1-2.143 4.004a4.81 4.81 0 0 0-2.143 4.004v2.71h-.393a1.75 1.75 0 0 1-1.75-1.75V20m4.5 0h1.5v.292c0 .875 0 1.458.45 2.333c.001.002.45.875 1.05.875m-7.65-19s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0c0 1.25-1.596 2.25-1.596 2.25z"/>
+  </g>
+  <!-- Cell: accessibility-service-animal-2 -->
+  <text x="98" y="145.50" class="label">accessibility-…</text>
+  <g transform="translate(111.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M19 24v-9.357a2.5 2.5 0 0 0 2.5-2.5v-.357h-3.786c-.986 0-1.785-.8-1.785-1.786v2.782a4.81 4.81 0 0 1-2.143 4.004a4.81 4.81 0 0 0-2.143 4.004v2.71h-.393a1.75 1.75 0 0 1-1.75-1.75V20m4.5 0h1.5v.292c0 .875 0 1.458.45 2.333c.001.002.45.875 1.05.875M5.5 24v-6.5a2 2 0 0 0-2-2v-8s1.5-1 4-1s4 1 4 1V15M7.35 4.5s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0C9.246 3.5 7.65 4.5 7.65 4.5z"/>
+  </g>
+  <!-- Cell: accessibility-service-animal-3 -->
+  <text x="146" y="145.50" class="label">accessibility-…</text>
+  <g transform="translate(159.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M7.052 17s-2.708 0-4.393 2.973C2.125 20.915 2 22.02 2 23.101V24v-4.995a7.464 7.464 0 0 1 6.444-7.394l.626-.086A8.606 8.606 0 0 0 16.5 3A2.5 2.5 0 0 0 19 5.5h4.5v1a3 3 0 0 1-3 3h-1v10.792c0 .875 0 1.458.45 2.333c0 0 .45.875 1.05.875M7.052 17l3.657.671A20 20 0 0 0 14.32 18h1.18m-8.448-1s-1.266 1.224-1.88 3.648c-.137.54-.172 1.099-.172 1.656V24m10.5-6v2.292c0 .875 0 1.458.45 2.333c0 0 .45.875 1.05.875M15.5 18l-.234-.312C13.613 15.483 12.443 12.702 12.9 10m2.599 8c2.564-.56 4-2.5 4-4a6.24 6.24 0 0 1-5.923-4.27L13.5 9.5c-2.5-1-5-4-5-9.5m-8 8v3.5a3 3 0 0 0 3 3h.013"/>
+  </g>
+  <!-- Cell: accessibility-sign-language -->
+  <text x="194" y="145.50" class="label">accessibility-…</text>
+  <g transform="translate(207.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M.5 24V6H1a3 3 0 0 1 3 3v4V3h.5a3 3 0 0 1 3 3v6.5h2a3 3 0 0 1 3 3v6h-2A2.5 2.5 0 0 0 8 24m1-8.5V19m0-1.75h3.5M23.5 0v18H23a3 3 0 0 1-3-3v-4v10h-.5a3 3 0 0 1-3-3v-6.5h-2a3 3 0 0 1-3-3v-6h2A2.5 2.5 0 0 0 16 0m-1 8.5V5m0 1.75h-3.5"/>
+  </g>
+  <!-- Cell: accessibility-telecoil -->
+  <text x="242" y="145.50" class="label">accessibility-…</text>
+  <g transform="translate(255.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M19 16.5h5m-2.5.5v5m2-21.5L18 6m-6 6L.5 23.5M5.5 9a6.5 6.5 0 0 1 13 0c0 .662-.111 1.32-.328 1.944l-2.85 8.195A3.52 3.52 0 0 1 12 21.5c-.98 0-1.865-.352-2.5-1m6-11.5a3.5 3.5 0 1 0-7 0"/>
+  </g>
+  <!-- Cell: accessibility-visual-impairment -->
+  <text x="290" y="145.50" class="label">accessibility-…</text>
+  <g transform="translate(303.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M14.278 14.278a3.222 3.222 0 0 0-4.556-4.556M6.584 6.584l10.832 10.832M4.204 9.204l9.992 9.992M0 12c1.276 0 2.5 1 3.5 2l2.606 2.947a8.08 8.08 0 0 0 11.788 0L20.5 14c1-1 2.224-2 3.5-2c-1.276 0-2.5-1-3.5-2l-2.606-2.947a8.08 8.08 0 0 0-11.788 0L3.5 10c-1 1-2.224 2-3.5 2Z"/>
+  </g>
+  <!-- Cell: accessibility-volume-control-telephone -->
+  <text x="2" y="195.00" class="label">accessibility-…</text>
+  <g transform="translate(15.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M15.553 10.972c2.08-2.194 2.08-5.75 0-7.944M17.95 13.5c3.402-3.59 3.402-9.41 0-13M13.5 8.806c.945-.998.945-2.614 0-3.612M6.94 23.5c-4.587-5.247-4.587-13.753 0-19h3.56v4.75H7.534v9.5H10.5v4.75z"/>
+  </g>
+  <!-- Cell: accessibility-walker -->
+  <text x="50" y="195.00" class="label">accessibility-…</text>
+  <g transform="translate(63.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M10.004 23.5c-1 0-1.75-1.5-1.75-1.5c-.75-1.5-.75-3.5-.75-5v-.5l-5-2.5v-.25l1.803-5.228A3 3 0 0 1 7.143 6.5h1.36l.519 4.588a3 3 0 0 0 2.941 2.412H12m-6.496 4c-.21 0-.466.133-.737.344C2.962 19.24 2.504 21.718 2.504 24m8.996-.2a26 26 0 0 0 2-10v-.3h6v.3a26 26 0 0 0 2 10m-8.878-3.3h7.756M8.354 4.5s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0c0 1.25-1.596 2.25-1.596 2.25z"/>
+  </g>
+  <!-- Cell: accessibility-wheelchair-1 -->
+  <text x="98" y="195.00" class="label">accessibility-…</text>
+  <g transform="translate(111.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M20 23.5c-1 0-1.75-1.5-1.75-1.5c-.75-1.5-.75-2.5-.75-4v-1.5h-3.207M15 13l1.192-3.576c.204-.612.363-1.269.172-1.885C15.943 6.18 14.561 5.5 12.5 5.5c-2.5 0-3.667 1-3.667 1l-1.333 4m4.833-3l-1.747 5.232M9 23.5a5.5 5.5 0 1 1 0-11a5.5 5.5 0 0 1 0 11Zm7.805-19s1.81-.557 2.135-1.776A1.77 1.77 0 0 0 17.698.561a1.75 1.75 0 0 0-2.146 1.25c-.324 1.219.962 2.61.962 2.61z"/>
+  </g>
+  <!-- Cell: accessibility-wheelchair-2 -->
+  <text x="146" y="195.00" class="label">accessibility-…</text>
+  <g transform="translate(159.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M14.5 6.439V12M20 23.5c-1 0-1.75-1.5-1.75-1.5c-.75-1.5-.75-2.5-.75-4v-1.5h-3.207M11.027 6.394L9.46 12.52M3.5 4s4 2.5 9.5 2.5S22.5 4 22.5 4M9 23.5a5.5 5.5 0 1 1 0-11a5.5 5.5 0 0 1 0 11Zm3.85-19s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0c0 1.25-1.596 2.25-1.596 2.25z"/>
+  </g>
+  <!-- Cell: accessibility-wheelchair-basketball -->
+  <text x="194" y="195.00" class="label">accessibility-…</text>
+  <g transform="translate(207.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M17 23.5c-1 0-1.75-1.5-1.75-1.5c-.75-1.5-.75-2.5-.75-4v-1.5h-3.207M6.5 12.522l2.136-4.35a3 3 0 0 1 2.69-1.672H12.5l2.47 2.47a1.81 1.81 0 0 0 2.56 0L20.5 6m-4.75 1.25L18.5 4.5M6 23.5a5.5 5.5 0 1 1 0-11a5.5 5.5 0 0 1 0 11Zm15.5-19a2 2 0 1 1 0-4a2 2 0 0 1 0 4Zm-9.805 0s-1.81-.557-2.135-1.776A1.77 1.77 0 0 1 10.802.561a1.75 1.75 0 0 1 2.146 1.25c.324 1.219-.962 2.61-.962 2.61z"/>
+  </g>
+  <!-- Cell: accessibility-wheelchair-tennis -->
+  <text x="242" y="195.00" class="label">accessibility-…</text>
+  <g transform="translate(255.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M17 23.5c-1 0-1.75-1.5-1.75-1.5c-.75-1.5-.75-2.5-.75-4v-1.5h-3.207M8 6.5c-2.5 0-3.5 1.5-4.5 4m3 2.022l2.136-4.35a3 3 0 0 1 2.69-1.672H12.5l2.463 4.105a1.84 1.84 0 0 0 2.44.682L21.26 9.25l-.38-1.447m0 0c-.229-.867-.84-1.63-2.453-3.244c-.38-.38-.7-1.02-.838-1.544c-.28-1.066.34-2.16 1.387-2.446s2.122.346 2.402 1.412c.08.305.127.675.123 1.034c-.003.258-.03.51-.09.73c-.605 2.22-.76 3.191-.531 4.058ZM6 23.5a5.5 5.5 0 1 1 0-11a5.5 5.5 0 0 1 0 11Zm6.305-19s1.81-.557 2.135-1.776A1.77 1.77 0 0 0 13.198.561a1.75 1.75 0 0 0-2.146 1.25c-.324 1.219.962 2.61.962 2.61z"/>
+  </g>
+  <!-- Cell: arrows-down-2-short-arrow -->
+  <text x="290" y="195.00" class="label">arrows-down-2-…</text>
+  <g transform="translate(303.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" d="M1.5 12c1.11 0 2.771 1.1 4.166 2.212c1.796 1.432 3.365 3.141 4.563 5.102c.897 1.469 1.758 3.253 1.758 4.686M22.5 12c-1.11 0-2.771 1.1-4.166 2.212c-1.796 1.432-3.365 3.141-4.563 5.102c-.897 1.469-1.758 3.253-1.758 4.686M12 24V0"/>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-streamline-guidance</text>
+  <text x="348" y="139.738" class="overlay-title">guidance</text>
+  <text x="351" y="190.744" class="overlay-meta">CC-BY-4.0 · 360 icons</text>
+</svg>

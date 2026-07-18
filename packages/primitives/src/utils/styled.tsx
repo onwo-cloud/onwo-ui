@@ -1,15 +1,14 @@
-import type { Component, PropsOf, QwikHTMLElements } from '@qwik.dev/core';
+import type { ClassList, Component, QwikHTMLElements } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 
 // Define types for the possible interpolation values
 type InterpolationFunction<P> = (props: P) => string | number | boolean | null | undefined;
 type InterpolationValue = string | number | boolean | null | undefined;
 type Interpolation<P> = InterpolationValue | InterpolationFunction<P>;
 
-type Class = QwikHTMLElements['div']['class'];
-
 const styledcn_ =
-  <C extends Component<{ class?: Class }>>(Comp: C | string) =>
-    <P extends PropsOf<typeof Comp>>(
+  <C,>(Comp: C) =>
+    <P extends OwPropsOf<C>,>(
       strings: TemplateStringsArray,
       ...interpolations: Array<Interpolation<P>>
     ) => {
@@ -34,7 +33,8 @@ const styledcn_ =
       }, '');
 
       // Return the component with the combined class
-      const ret = ({ class: _class, ...props }: P) => {
+      // Intersect P with { class?: ClassList } to satisfy the compiler during destructuring
+      const ret = ({ class: _class, ...props }: P & { class?: ClassList }) => {
         // Process any function interpolations with the actual props
         let processedClassName = className;
         interpolations.forEach((value, i) => {
@@ -47,7 +47,8 @@ const styledcn_ =
           }
         });
 
-        return <Comp class={[processedClassName, _class]} {...props} />;
+        const C = Comp as any;
+        return <C class={[processedClassName, _class]} {...props} />;
       };
 
       return Object.assign(ret, { styledClasses: className });

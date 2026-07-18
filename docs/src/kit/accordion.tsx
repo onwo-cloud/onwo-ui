@@ -1,17 +1,26 @@
+import { component$, $ } from '@qwik.dev/core';
 import { styledcn } from '@onwo/primitives';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@onwo/ui/accordion';
 
-import type { BoxedComp, Section } from '.';
-import { component$ } from '@qwik.dev/core';
+import type { BoxedComp, ControlSchema, Section } from '.';
 
 const ContainerAccordion = styledcn.tag('div')`px-16 w-full`;
 
-const defaultAccordion: BoxedComp = {
-  title: 'Default',
+const accordionControls = {
+  singleOpen: {
+    type: 'boolean',
+    label: 'Single Open',
+    default: false,
+  },
+} as const satisfies ControlSchema;
+
+const defaultAccordion: BoxedComp<typeof accordionControls> = {
+  title: 'Default Playground',
   colSpan: 2,
-  display: component$(() => (
+  controls: accordionControls,
+  display: component$(({ controls }) => (
     <ContainerAccordion>
-      <Accordion class="w-full">
+      <Accordion singleOpen={controls.singleOpen} class="w-full">
         <AccordionItem>
           <AccordionTrigger>Is it accessible?</AccordionTrigger>
           <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
@@ -31,9 +40,11 @@ const defaultAccordion: BoxedComp = {
       </Accordion>
     </ContainerAccordion>
   )),
-  code: `import { Accordion } from '@onwo/ui';
+  code: $((values) => {
+    const singleOpenProp = values.singleOpen ? ' singleOpen' : '';
+    return `import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@onwo/ui/accordion';
 
-<Accordion class="w-full">
+<Accordion${singleOpenProp} class="w-full">
   <AccordionItem>
     <AccordionTrigger>Is it accessible?</AccordionTrigger>
     <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
@@ -46,7 +57,8 @@ const defaultAccordion: BoxedComp = {
     <AccordionTrigger>Is it animated?</AccordionTrigger>
     <AccordionContent>Yes. It's animated by default, but you can disable it if you prefer.</AccordionContent>
   </AccordionItem>
-</Accordion>`,
+</Accordion>`;
+  }),
 };
 
 const singleOpenAccordion: BoxedComp = {
@@ -73,7 +85,7 @@ const singleOpenAccordion: BoxedComp = {
       </Accordion>
     </ContainerAccordion>
   )),
-  code: `import { Accordion } from '@onwo/ui';
+  code: $(() => `import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@onwo/ui/accordion';
 
 <Accordion singleOpen class="w-full">
   <AccordionItem>
@@ -88,7 +100,7 @@ const singleOpenAccordion: BoxedComp = {
     <AccordionTrigger>Is it animated?</AccordionTrigger>
     <AccordionContent>Yes. It's animated by default, but you can disable it if you prefer.</AccordionContent>
   </AccordionItem>
-</Accordion>`,
+</Accordion>`),
 };
 
 export const section: Section = {

@@ -1,6 +1,5 @@
-import type { PropsOf } from '@qwik.dev/core';
 import { SvgIcon } from '@onwo/primitives/svg-icon';
-import { withAs } from '~primitives/index';
+import { OwPropsOf, withAs } from '~primitives/index';
 import type { OneKeyOf } from '~ui/utils/types';
 
 export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
@@ -14,7 +13,7 @@ type AvatarPropsInner = {
   }>
 >;
 
-export type AvatarProps = PropsOf<typeof Avatar>;
+export type AvatarProps = OwPropsOf<typeof Avatar>;
 
 export const Avatar = withAs('div')<AvatarPropsInner>(
   ({ As, imageUrl, size = 'md', children, name, class: className, ...props }) => (

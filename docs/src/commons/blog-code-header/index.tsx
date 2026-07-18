@@ -15,7 +15,7 @@ export const BlogCodeHeader = (props: BlogCodeHeaderProps) => (
       borderTopLeftRadius: 'var(--code-blog-rounding, 0px)',
       borderTopRightRadius: 'var(--code-blog-rounding, 0px)',
     }}
-    class="flex bg-[#030711] text-[white] border border-[#10141e] rounded-t-md text-xs gap-4 justify-between px-3 py-1 items-center"
+    class="flex bg-shade-950 text-[white] border border-shade-950 rounded-t-md text-xs gap-4 justify-between px-3 py-1 items-center"
   >
     <span class="select-none">{props.language}</span>
   </div>

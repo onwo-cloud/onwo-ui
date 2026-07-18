@@ -1,11 +1,11 @@
 import { component$ } from '@qwik.dev/core';
-import {  RouterOutlet, useQwikRouter } from '@qwik.dev/router';
+import { RouterOutlet, useQwikRouter } from '@qwik.dev/router';
 import { Toaster } from '@onwo/ui/toaster';
 
 import { RouterHead } from './commons/router-head';
 import './global.css';
 import { UIProvider } from './utils/icon';
-import { PageNavigationProvider } from '~ui/@kit/page-navigation';
+import { defineKeybindModule, KeybindRegistryProvider } from '~primitives/@kit/keybind-registry';
 
 const Heuristics = component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
@@ -18,8 +18,18 @@ const Heuristics = component$(() => {
   return <></>;
 });
 
+const vimModule = defineKeybindModule({
+  name: 'vim',
+  mappings: {
+    'l': 'navigate:right',
+    'h': 'navigate:left',
+    'j': 'navigate:down',
+    'k': 'navigate:up',
+  },
+});
+
 export default component$(() => {
-  useQwikRouter();
+  useQwikRouter({ viewTransition: false });
 
   return (
     <>
@@ -32,14 +42,14 @@ export default component$(() => {
         <Heuristics />
         <RouterHead />
       </head>
-      <body class="theme-onwo-light">
-        <PageNavigationProvider class="h-screen flex flex-col">
-          <Toaster position="bottom-right">
-            <UIProvider>
-              <RouterOutlet />
-            </UIProvider>
-          </Toaster>
-        </PageNavigationProvider>
+      <body class="theme-onwo-light bg-shade-25 text-shade-1000">
+          <UIProvider>
+            <KeybindRegistryProvider modules={[vimModule]}>
+              <Toaster position="bottom-right">
+                <RouterOutlet />
+              </Toaster>
+            </KeybindRegistryProvider>
+          </UIProvider>
       </body>
     </>
   );

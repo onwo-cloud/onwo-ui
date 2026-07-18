@@ -1,7 +1,5 @@
-/* eslint-disable qwik/use-method-usage */
 import type { CSSProperties, QRL, Signal } from '@qwik.dev/core';
-import { Slot, component$, useComputed$, useSignal, useStyles$, useTask$ } from '@qwik.dev/core';
-import type { AsProps } from '~primitives/utils/as';
+import { component$, Slot, useComputed$, useSignal, useStyles$, useTask$ } from '@qwik.dev/core';
 import { withAs } from '~primitives/utils/as';
 
 const animationStyles = `
@@ -115,67 +113,61 @@ const getAnimationStyle = (animType: 'in' | 'out', animation: Animation) => {
   return styles;
 };
 
-type AnimatedPropsInner = {
+type AnimatedProps = {
   visible?: Signal<boolean>;
   in?: Animation;
   out?: Animation;
   onOutEnd$?: QRL<() => void>;
 };
 
-export const Animated = component$(
-  withAs('div')<AnimatedPropsInner>(
-    ({
-      As,
-      visible,
-      style,
-      in: inAnimation,
-      out: outAnimation,
-      onOutEnd$,
-      ...props
-    }) => {
-      const mounted = useSignal<boolean>(visible?.value ?? true);
-      useStyles$(animationStyles);
+export const Animated =
+  withAs('div')<AnimatedProps>(component$(({
+    As,
+    visible,
+    style,
+    in: inAnimation,
+    out: outAnimation,
+    onOutEnd$,
+    ...props
+  }) => {
+    const mounted = useSignal<boolean>(visible?.value ?? true);
+    useStyles$(animationStyles);
 
-      const inStyle = inAnimation && getAnimationStyle('in', inAnimation);
-      const outStyle = outAnimation && getAnimationStyle('out', outAnimation);
+    const inStyle = inAnimation && getAnimationStyle('in', inAnimation);
+    const outStyle = outAnimation && getAnimationStyle('out', outAnimation);
 
-      useTask$(({ track, cleanup }) => {
-        if (!visible) return;
-        track(() => visible.value);
-        if (visible.value === true || !outStyle) {
-          mounted.value = visible.value;
-          return;
-        }
-        const animationTime =
-          (outAnimation.delayMs ?? 0) + (outAnimation.durationMs ?? DEFAULT_ANIMATION_DURATION);
-        const timeoutId = setTimeout(() => {
-          mounted.value = false;
-          onOutEnd$?.();
-        }, animationTime);
+    useTask$(({ track, cleanup }) => {
+      if (!visible) return;
+      track(() => visible.value);
+      if (visible.value === true || !outStyle) {
+        mounted.value = visible.value;
+        return;
+      }
+      const animationTime =
+        (outAnimation.delayMs ?? 0) + (outAnimation.durationMs ?? DEFAULT_ANIMATION_DURATION);
+      const timeoutId = setTimeout(() => {
+        mounted.value = false;
+        onOutEnd$?.();
+      }, animationTime);
 
-        cleanup(() => clearTimeout(timeoutId));
-      });
+      cleanup(() => clearTimeout(timeoutId));
+    });
 
-      const styles = useComputed$(() => {
-        if (!visible || visible.value === true) {
-          return { ...inStyle, ...style };
-        } else {
-          return { ...outStyle, ...style };
-        }
-      });
+    const styles = useComputed$(() => {
+      if (!visible || visible.value === true) {
+        return { ...inStyle, ...style };
+      } else {
+        return { ...outStyle, ...style };
+      }
+    });
 
-      return (
-        <div>
-          {mounted.value && (
-            <As style={styles.value} {...props}>
-              <Slot />
-            </As>
-          )}
-        </div>
-      );
-    },
-  ),
-);
-
-type Prettify<T> = { [K in keyof T]: T[K] } & {};
-export type AnimatedProps = Prettify<AsProps<typeof Animated>>;
+    return (
+      <div>
+        {mounted.value && (
+          <As style={styles.value} {...props}>
+            <Slot />
+          </As>
+        )}
+      </div>
+    );
+  }));

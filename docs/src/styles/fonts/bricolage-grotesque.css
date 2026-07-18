@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/fonts/BricolageGrotesque[opsz,wdth,wght].woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Bricolage Grotesque 96pt ExtraBold Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 86.8495%;
+  descent-override: 25.2144%;
+  size-adjust: 107.0818%;
+}
+@font-face {
+  font-family: "Bricolage Grotesque 96pt ExtraBold Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 92.9585%;
+  descent-override: 26.9879%;
+  line-gap-override: 0%;
+  size-adjust: 100.0447%;
+}
+@font-face {
+  font-family: "Bricolage Grotesque 96pt ExtraBold Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 98.8386%;
+  descent-override: 28.6951%;
+  size-adjust: 94.0928%;
+}
+
+:root {
+  --font-bricolage-grotesque: "Bricolage Grotesque 96pt ExtraBold", "Bricolage Grotesque 96pt ExtraBold Fallback: -apple-system", "Bricolage Grotesque 96pt ExtraBold Fallback: Arial", "Bricolage Grotesque 96pt ExtraBold Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

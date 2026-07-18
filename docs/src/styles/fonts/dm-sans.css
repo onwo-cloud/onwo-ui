@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans[opsz,wght].woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "DM Sans 9pt Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 87.7223%;
+  descent-override: 27.4132%;
+  size-adjust: 113.0842%;
+}
+@font-face {
+  font-family: "DM Sans 9pt Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 93.8926%;
+  descent-override: 29.3415%;
+  line-gap-override: 0%;
+  size-adjust: 105.6526%;
+}
+@font-face {
+  font-family: "DM Sans 9pt Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 99.8318%;
+  descent-override: 31.1975%;
+  size-adjust: 99.3671%;
+}
+
+:root {
+  --font-dm-sans: "DM Sans 9pt", "DM Sans 9pt Fallback: -apple-system", "DM Sans 9pt Fallback: Arial", "DM Sans 9pt Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

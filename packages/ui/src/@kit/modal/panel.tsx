@@ -29,7 +29,6 @@ export const ModalPanel = component$((props: ModalPanelProps) => {
           width: 'calc(100% - calc(var(--spacing) * 8))',
           height: 'calc(100% - calc(var(--spacing) * 8))',
         }}
-        bind:opened={opened}
         bind:override={keepMounted}
       >
         <Animated

@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: accessibility -->
+  <text x="2" y="46.50" class="label">accessibility</text>
+  <g transform="translate(15.00, 15.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M448 112c-66.82 17.92-119.55 32-192 32s-125.18-14.08-192-32l-16 51c48 20.53 96.71 35.16 147.2 53.2L144 496l56.4 16L246 336h20l45.6 176l56.4-16l-51.2-279.8C367.26 199.93 416 183.53 464 164Zm-192 0a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56"/>
+  </g>
+  <!-- Cell: add-circle -->
+  <text x="50" y="46.50" class="label">add-circle</text>
+  <g transform="translate(63.00, 15.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48m96 224h-80v80h-32v-80h-80v-32h80v-80h32v80h80Z"/>
+  </g>
+  <!-- Cell: add -->
+  <text x="98" y="46.50" class="label">add</text>
+  <g transform="translate(111.00, 15.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="32" d="M256 112v288m144-144H112"/>
+  </g>
+  <!-- Cell: airplane -->
+  <text x="146" y="46.50" class="label">airplane</text>
+  <g transform="translate(159.00, 15.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M407.72 208c-2.72 0-14.44.08-18.67.31l-57.77 1.52L198.06 48h-62.81l74.59 164.61l-97.31 1.44L68.25 160H16.14l20.61 94.18c.15.54.33 1.07.53 1.59a.26.26 0 0 1 0 .15a15 15 0 0 0-.53 1.58L15.86 352h51.78l45.45-55l96.77 2.17L135.24 464h63l133-161.75l57.77 1.54c4.29.23 16 .31 18.66.31c24.35 0 44.27-3.34 59.21-9.94C492.22 283 496 265.46 496 256c0-30.06-33-48-88.28-48m-71.29 87.9"/>
+  </g>
+  <!-- Cell: alarm -->
+  <text x="194" y="46.50" class="label">alarm</text>
+  <g transform="translate(207.00, 15.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m403.79 64.11l-3.27-.1H400c-14.73 0-28.55 5.91-40.52 15S344 96 344 96l88 86s11.25-5.71 17.61-13.85s14.28-18.08 14.32-37.11c.07-35.49-26.33-64.89-60.14-66.93m-295.58 0l3.27-.1h.52c14.73 0 28.55 5.91 40.52 15S168 96 168 96l-88 86s-11.25-5.71-17.61-13.85S48.11 150.07 48.07 131C48 95.55 74.4 66.15 108.21 64.11"/><path fill="currentColor" d="M391.3 384.6a.06.06 0 0 1 0-.08C425 344 441 288.24 427 229.23c-13.64-57.52-72.67-115.69-130.34-128.66C182 74.79 80.07 161.71 80.07 272a175.15 175.15 0 0 0 40.78 112.52a.06.06 0 0 1 0 .08L73 432a.06.06 0 0 0 0 .08l23 22.51a.06.06 0 0 0 .08 0l47.43-47.37a.06.06 0 0 1 .08 0a175.64 175.64 0 0 0 225.05 0h.07L416 454.59a.06.06 0 0 0 .08 0L440 432ZM272.07 288H160v-31.9l.05-.05h80V144h32Z"/>
+  </g>
+  <!-- Cell: albums -->
+  <text x="242" y="46.50" class="label">albums</text>
+  <g transform="translate(255.00, 15.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M128 64h256v32H128zm-32 48h320v32H96zm368 336H48V160h416Z"/>
+  </g>
+  <!-- Cell: alert-circle -->
+  <text x="290" y="46.50" class="label">alert-circle</text>
+  <g transform="translate(303.00, 15.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="none" d="M240 304h32l6-160h-44z"/><path fill="currentColor" d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48m20 319.91h-40v-40h40ZM272 304h-32l-6-160h44Z"/>
+  </g>
+  <!-- Cell: alert -->
+  <text x="338" y="46.50" class="label">alert</text>
+  <g transform="translate(351.00, 15.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="32" d="m240 80l8 240h16l8-240zm0 320h32v32h-32z"/>
+  </g>
+  <!-- Cell: american-football -->
+  <text x="386" y="46.50" class="label">american-footb…</text>
+  <g transform="translate(399.00, 15.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M120.9 120.51c-44.75 44.56-67.29 101.05-78.64 145.9l202.31 201.44c45.05-11.3 101.78-33.74 146.53-78.3s67.29-101.05 78.64-145.91L267.43 42.21C222.38 53.51 165.65 76 120.9 120.51m214 33.63l22.52 22.42l-33.78 33.63l22.52 22.42L323.55 255L301 232.61L278.52 255L301 277.45l-22.51 22.42L256 277.45l-22.52 22.42L256 322.29l-22.52 22.42L211 322.29l-33.78 33.63l-22.55-22.42l33.78-33.63l-22.52-22.42L188.45 255L211 277.45L233.48 255L211 232.61l22.51-22.42L256 232.61l22.52-22.42L256 187.77l22.52-22.42L301 187.77Zm143.58 44.27C485.85 143.65 464 48.05 464 48.05s-96.14-21.88-151.14-14.54c-2.54.33-5.21.72-8 1.14l172.47 171.71c.43-2.76.81-5.42 1.15-7.95M33.52 311.65C26.15 366.41 48.05 464 48.05 464s60 16 99.86 16a392 392 0 0 0 51.23-3.45c2.54-.33 5.21-.72 8-1.15L34.67 303.7c-.43 2.76-.81 5.42-1.15 7.95"/>
+  </g>
+  <!-- Cell: analytics -->
+  <text x="434" y="46.50" class="label">analytics</text>
+  <g transform="translate(447.00, 15.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M450 128a46 46 0 0 0-44.11 59l-71.37 71.36a45.88 45.88 0 0 0-29 0l-52.91-52.91a46 46 0 1 0-89.12 0L75 293.88A46.08 46.08 0 1 0 106.11 325l87.37-87.36a45.85 45.85 0 0 0 29 0l52.92 52.92a46 46 0 1 0 89.12 0L437 218.12A46 46 0 1 0 450 128"/>
+  </g>
+  <!-- Cell: aperture -->
+  <text x="2" y="96.00" class="label">aperture</text>
+  <g transform="translate(15.00, 65.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m216 48l129.49 128.18V48zm-34.53 10.38L80 134h176zM336 344h128V216zm118-162L378 80v176zM48 166v128l128-128zm282 288l102-76H256zM58 330l76 102V256zm287.49-107.88l-55.55-55.46h-67.88l-55.55 55.46v67.76l55.62 55.52c.44 0 .88-.06 1.33-.06h66.48l55.55-55.46ZM165.98 336.09L166 464h128z"/>
+  </g>
+  <!-- Cell: apps -->
+  <text x="50" y="96.00" class="label">apps</text>
+  <g transform="translate(63.00, 65.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <rect width="112" height="112" x="48" y="48" fill="currentColor" rx="8" ry="8"/><rect width="112" height="112" x="200" y="48" fill="currentColor" rx="8" ry="8"/><rect width="112" height="112" x="352" y="48" fill="currentColor" rx="8" ry="8"/><rect width="112" height="112" x="48" y="200" fill="currentColor" rx="8" ry="8"/><rect width="112" height="112" x="200" y="200" fill="currentColor" rx="8" ry="8"/><rect width="112" height="112" x="352" y="200" fill="currentColor" rx="8" ry="8"/><rect width="112" height="112" x="48" y="352" fill="currentColor" rx="8" ry="8"/><rect width="112" height="112" x="200" y="352" fill="currentColor" rx="8" ry="8"/><rect width="112" height="112" x="352" y="352" fill="currentColor" rx="8" ry="8"/>
+  </g>
+  <!-- Cell: archive -->
+  <text x="98" y="96.00" class="label">archive</text>
+  <g transform="translate(111.00, 65.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <rect width="448" height="80" x="32" y="48" fill="currentColor" rx="12" ry="12"/><path fill="currentColor" d="M64 160v280a24 24 0 0 0 24 24h336a24 24 0 0 0 24-24V160Zm192 230.63L169.32 304L192 281.32l48 48.05V208h32v121.37l48.07-48.07l22.61 22.64Z"/>
+  </g>
+  <!-- Cell: arrow-back-circle -->
+  <text x="146" y="96.00" class="label">arrow-back-cir…</text>
+  <g transform="translate(159.00, 65.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M48 256c0 114.87 93.13 208 208 208s208-93.13 208-208S370.87 48 256 48S48 141.13 48 256m224-80.09L208.42 240H358v32H208.42L272 336.09l-22.7 22.54L147.46 256L249.3 153.37Z"/>
+  </g>
+  <!-- Cell: arrow-back -->
+  <text x="194" y="96.00" class="label">arrow-back</text>
+  <g transform="translate(207.00, 65.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="48" d="M244 400L100 256l144-144M120 256h292"/>
+  </g>
+  <!-- Cell: arrow-down-circle -->
+  <text x="242" y="96.00" class="label">arrow-down-cir…</text>
+  <g transform="translate(255.00, 65.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M256 464c114.87 0 208-93.13 208-208S370.87 48 256 48S48 141.13 48 256s93.13 208 208 208m-80.09-224L240 303.58V154h32v149.58L336.09 240l22.54 22.71L256 364.54L153.37 262.7Z"/>
+  </g>
+  <!-- Cell: arrow-down-left-box -->
+  <text x="290" y="96.00" class="label">arrow-down-lef…</text>
+  <g transform="translate(303.00, 65.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M32 480V315.636h32v109.737l43.636-43.637v22.628h22.628L86.627 448h109.737v32zm286.628-264L130.264 404.364H480V32H107.636v349.736L296 193.373z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-down-right-box -->
+  <text x="338" y="96.00" class="label">arrow-down-rig…</text>
+  <g transform="translate(351.00, 65.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M480 480H315.636v-32h109.737l-43.637-43.636h22.628v-22.628L448 425.372V315.636h32zM216 193.372l188.364 188.364V32H32v372.364h349.736L193.373 216z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-down -->
+  <text x="386" y="96.00" class="label">arrow-down</text>
+  <g transform="translate(399.00, 65.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="48" d="m112 268l144 144l144-144M256 392V100"/>
+  </g>
+  <!-- Cell: arrow-forward-circle -->
+  <text x="434" y="96.00" class="label">arrow-forward-…</text>
+  <g transform="translate(447.00, 65.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M464 256c0-114.87-93.13-208-208-208S48 141.13 48 256s93.13 208 208 208s208-93.13 208-208m-224 80.09L303.58 272H154v-32h149.58L240 175.91l22.71-22.54L364.54 256L262.7 358.63Z"/>
+  </g>
+  <!-- Cell: arrow-forward -->
+  <text x="2" y="145.50" class="label">arrow-forward</text>
+  <g transform="translate(15.00, 114.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="48" d="m268 112l144 144l-144 144m124-144H100"/>
+  </g>
+  <!-- Cell: arrow-redo-circle -->
+  <text x="50" y="145.50" class="label">arrow-redo-cir…</text>
+  <g transform="translate(63.00, 114.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M48 256c0 114.87 93.13 208 208 208s208-93.13 208-208S370.87 48 256 48S48 141.13 48 256m98 88c0-68.13 22.67-137.14 119.17-137.14V152L366 248l-100.83 96v-54.86c-66.69 0-91.32 19.29-119.17 54.86"/>
+  </g>
+  <!-- Cell: arrow-redo -->
+  <text x="98" y="145.50" class="label">arrow-redo</text>
+  <g transform="translate(111.00, 114.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M48 399.26C48 335.19 62.44 284 90.91 247c34.38-44.67 88.68-68.77 161.56-71.75V72L464 252L252.47 432V329.35c-44.25 1.19-77.66 7.58-104.27 19.84c-28.75 13.25-49.6 33.05-72.08 58.7L48 440Z"/>
+  </g>
+  <!-- Cell: arrow-undo-circle -->
+  <text x="146" y="145.50" class="label">arrow-undo-cir…</text>
+  <g transform="translate(159.00, 114.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208s208-93.13 208-208S370.87 48 256 48m-9.17 241.14V344L146 248l100.83-96v54.86c96.5 0 119.17 69 119.17 137.14c-27.85-35.57-52.48-54.86-119.17-54.86"/>
+  </g>
+  <!-- Cell: arrow-undo -->
+  <text x="194" y="145.50" class="label">arrow-undo</text>
+  <g transform="translate(207.00, 114.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="m464 440l-28.12-32.11c-22.48-25.65-43.33-45.45-72.08-58.7c-26.61-12.26-60-18.65-104.27-19.84V432L48 252L259.53 72v103.21c72.88 3 127.18 27.08 161.56 71.75C449.56 284 464 335.19 464 399.26Z"/>
+  </g>
+  <!-- Cell: arrow-up-circle -->
+  <text x="242" y="145.50" class="label">arrow-up-circle</text>
+  <g transform="translate(255.00, 114.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208s208-93.13 208-208S370.87 48 256 48m80.09 224L272 208.42V358h-32V208.42L175.91 272l-22.54-22.7L256 147.46L358.63 249.3Z"/>
+  </g>
+  <!-- Cell: arrow-up-left-box -->
+  <text x="290" y="145.50" class="label">arrow-up-left-…</text>
+  <g transform="translate(303.00, 114.75) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M32 32h164.364v32H86.627l43.637 43.636h-22.628v22.628L64 86.627v109.737H32zm264 286.627L107.636 130.264V480H480V107.636H130.264L318.628 296z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-up-right-box -->
+  <text x="2" y="195.00" class="label">arrow-up-right…</text>
+  <g transform="translate(15.00, 164.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M480 32v164.364h-32V86.627l-43.636 43.637v-22.628h-22.628L425.373 64H315.636V32zM193.373 296l188.363-188.364H32V480h372.364V130.264L216 318.627z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-up -->
+  <text x="50" y="195.00" class="label">arrow-up</text>
+  <g transform="translate(63.00, 164.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="48" d="m112 244l144-144l144 144M256 120v292"/>
+  </g>
+  <!-- Cell: at-circle -->
+  <text x="98" y="195.00" class="label">at-circle</text>
+  <g transform="translate(111.00, 164.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M256.41 48.74c-114.85 0-208 93.11-208 208s93.12 208 208 208s208-93.12 208-208s-93.16-208-208-208M381.22 252c-2.85 32.63-16.78 49.7-28 58.26s-24.69 12.34-36.33 10.26a41.63 41.63 0 0 1-27-17.52a60.84 60.84 0 0 1-43.72 17.9a51.65 51.65 0 0 1-38.55-16.83c-11.39-12.42-17-30.36-15.33-49.23c3.05-35 30.92-57.39 56.87-61.48c27.21-4.29 52.24 6.54 62.91 19.46l3.84 4.66l-6.34 50.38c-1.19 14.34 3.29 23.48 12.29 25.1c2.39.42 8.11-.13 14.38-4.93c6.72-5.15 15.14-16 17.1-38.47c2.32-26.55-4.35-49.19-19.28-65.49c-15.5-16.9-39.1-25.84-68.24-25.84c-54 0-101.81 44.43-106.57 99c-2.29 26.2 5.66 50.68 22.39 68.93C198 344 221 353.88 246.29 353.88c19 0 30.61-2.05 49.49-8.78l13.22-4.69l9.39 26.37l-13.19 4.7c-21.82 7.77-36.68 10.4-58.88 10.4c-33.28 0-63.57-13.06-85.3-36.77c-22.09-24.11-32.62-56.17-29.65-90.29c2.91-33.33 18.46-64.63 43.77-88.12s57.57-36.49 90.7-36.49c37.2 0 67.94 12.08 88.88 34.93c20.05 21.91 29.48 52.75 26.5 86.86"/><path fill="currentColor" d="M253.51 221c-14.83 2.33-31.55 15.84-33.34 36.26c-1 11.06 2 21.22 8.08 27.87a23.63 23.63 0 0 0 17.91 7.75c19.7 0 33.8-14.79 36.8-38.59l1.75-13.89h.09l1.65-13.11a49.63 49.63 0 0 0-32.94-6.3Z"/>
+  </g>
+  <!-- Cell: at -->
+  <text x="146" y="195.00" class="label">at</text>
+  <g transform="translate(159.00, 164.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M407.6 115.78c-32.07-35-79.47-53.51-137.09-53.51c-51 0-100.69 19.8-139.82 55.76s-63.13 83.84-67.63 134.83c-4.55 51.67 11.41 100.29 44.94 136.9c33.37 36.44 80.07 56.51 131.49 56.51c32.52 0 53.61-2.36 85.48-15.75l14.75-6.2l-12.4-29.5l-14.75 6.18c-27.15 11.4-43.78 13.25-73.08 13.25c-42.34 0-80.65-16.38-107.89-46.12c-27.4-29.92-40.42-69.86-36.66-112.48c7.84-89 86.6-161.4 175.57-161.4c48.4 0 87.65 14.91 113.49 43.13c24.61 26.87 35.6 63.92 31.79 107.15c-3.29 37.35-17.76 55.74-29.32 64.6c-11 8.44-22 10.18-28 9.11c-17.68-3.13-26.87-20.46-24.59-46.29l9.93-109.12L311.9 160l-2 22.29a79.7 79.7 0 0 0-57.32-24c-23.8 0-46.54 10.07-64 28.37c-16.77 17.53-27.23 41.05-29.45 66.22c-2.45 27.87 5.75 54.34 22.51 72.64a76.14 76.14 0 0 0 56.88 24.77A93 93 0 0 0 310 318a60 60 0 0 0 42.88 31.81c16.89 3 36.73-2.69 53.08-15.21c30.19-23.13 39.36-60.19 41.74-87.2c4.52-51.7-9.7-98.4-40.1-131.62m-126.34 186a62.2 62.2 0 0 1-42.81 16.53a43.94 43.94 0 0 1-33.28-14.38c-10.71-11.7-15.9-29.27-14.23-48.22c3.23-36.68 30.29-65.4 61.61-65.4a48.16 48.16 0 0 1 35.88 15.82c10.87 11.87 16.2 28.87 14.63 46.73c-1.78 20.28-9.33 37.14-21.8 48.88Z"/>
+  </g>
+  <!-- Cell: attach -->
+  <text x="194" y="195.00" class="label">attach</text>
+  <g transform="translate(207.00, 164.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="32" d="M216.08 192v143.55a40.08 40.08 0 0 0 80.15 0l.13-188.55a67.94 67.94 0 1 0-135.87 0v189.82a95.51 95.51 0 0 0 191 0V159.44"/>
+  </g>
+  <!-- Cell: backspace -->
+  <text x="242" y="195.00" class="label">backspace</text>
+  <g transform="translate(255.00, 164.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M144 96L32 256l112 160h304V96Zm215.3 226.34L336.67 345l-65-65l-65 65L184 322.34l65-65l-65-65l22.63-22.63l65 65l65-65l22.63 22.63l-65 65Z"/>
+  </g>
+  <!-- Cell: bag-add -->
+  <text x="290" y="195.00" class="label">bag-add</text>
+  <g transform="translate(303.00, 164.25) scale(0.0352, 0.0352) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M460 160h-88v-12A116.13 116.13 0 0 0 258.89 32h-5.78A116.13 116.13 0 0 0 140 148v12H52a4 4 0 0 0-4 4v300a16 16 0 0 0 16 16h384a16 16 0 0 0 16-16V164a4 4 0 0 0-4-4m-280-11c0-41.84 33.41-76.56 75.25-77A76.08 76.08 0 0 1 332 148v12H180Zm156 187h-64v64h-32v-64h-64v-32h64v-64h32v64h64Z"/>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-ion-sharp</text>
+  <text x="348" y="139.738" class="overlay-title">ionicons sharp</text>
+  <text x="351" y="190.744" class="overlay-meta">sharp · MIT · 425 icons</text>
+</svg>

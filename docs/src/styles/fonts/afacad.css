@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Afacad";
+  src: url("/fonts/Afacad-Variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Afacad Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 104.4888%;
+  descent-override: 34.8296%;
+  size-adjust: 95.7041%;
+}
+@font-face {
+  font-family: "Afacad Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 111.8385%;
+  descent-override: 37.2795%;
+  line-gap-override: 0%;
+  size-adjust: 89.4146%;
+}
+@font-face {
+  font-family: "Afacad Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 118.9129%;
+  descent-override: 39.6376%;
+  size-adjust: 84.0952%;
+}
+
+:root {
+  --font-afacad: Afacad, "Afacad Fallback: -apple-system", "Afacad Fallback: Arial", "Afacad Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

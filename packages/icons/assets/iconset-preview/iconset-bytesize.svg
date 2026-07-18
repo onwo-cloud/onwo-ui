@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: activity -->
+  <text x="2" y="46.50" class="label">activity</text>
+  <g transform="translate(15.00, 15.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16h7l3 13l4-26l3 13h7"/>
+  </g>
+  <!-- Cell: alert -->
+  <text x="50" y="46.50" class="label">alert</text>
+  <g transform="translate(63.00, 15.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16 3l14 26H2Zm0 8v8m0 4v2"/>
+  </g>
+  <!-- Cell: archive -->
+  <text x="98" y="46.50" class="label">archive</text>
+  <g transform="translate(111.00, 15.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10v18h24V10M2 4v6h28V4Zm10 11h8"/>
+  </g>
+  <!-- Cell: arrow-bottom -->
+  <text x="146" y="46.50" class="label">arrow-bottom</text>
+  <g transform="translate(159.00, 15.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 22l10 8l10-8m-10 8V2"/>
+  </g>
+  <!-- Cell: arrow-left -->
+  <text x="194" y="46.50" class="label">arrow-left</text>
+  <g transform="translate(207.00, 15.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6L2 16l8 10M2 16h28"/>
+  </g>
+  <!-- Cell: arrow-right -->
+  <text x="242" y="46.50" class="label">arrow-right</text>
+  <g transform="translate(255.00, 15.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m22 6l8 10l-8 10m8-10H2"/>
+  </g>
+  <!-- Cell: arrow-top -->
+  <text x="290" y="46.50" class="label">arrow-top</text>
+  <g transform="translate(303.00, 15.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 10l10-8l10 8M16 2v28"/>
+  </g>
+  <!-- Cell: backwards -->
+  <text x="338" y="46.50" class="label">backwards</text>
+  <g transform="translate(351.00, 15.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 2L2 16l14 14V16l14 14V2L16 16Z"/>
+  </g>
+  <!-- Cell: bag -->
+  <text x="386" y="46.50" class="label">bag</text>
+  <g transform="translate(399.00, 15.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 9v20h22V9Zm5 0s0-6 6-6s6 6 6 6"/>
+  </g>
+  <!-- Cell: ban -->
+  <text x="434" y="46.50" class="label">ban</text>
+  <g transform="translate(447.00, 15.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="m6 6l20 20"/></g>
+  </g>
+  <!-- Cell: bell -->
+  <text x="2" y="96.00" class="label">bell</text>
+  <g transform="translate(15.00, 65.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17c0-5 1-11 8-11s8 6 8 11s3 8 3 8H5s3-3 3-8m12 8s0 4-4 4s-4-4-4-4m4-22v3"/>
+  </g>
+  <!-- Cell: book -->
+  <text x="50" y="96.00" class="label">book</text>
+  <g transform="translate(63.00, 65.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7S9 1 2 6v22c7-5 14 0 14 0s7-5 14 0V6c-7-5-14 1-14 1m0 0v21"/>
+  </g>
+  <!-- Cell: bookmark -->
+  <text x="98" y="96.00" class="label">bookmark</text>
+  <g transform="translate(111.00, 65.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 2h20v28L16 20L6 30Z"/>
+  </g>
+  <!-- Cell: calendar -->
+  <text x="146" y="96.00" class="label">calendar</text>
+  <g transform="translate(159.00, 65.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 6v24h28V6Zm0 9h28M7 3v6m6-6v6m6-6v6m6-6v6"/>
+  </g>
+  <!-- Cell: camera -->
+  <text x="194" y="96.00" class="label">camera</text>
+  <g transform="translate(207.00, 65.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 8h7l3-4h8l3 4h7v18H2Z"/><circle cx="16" cy="16" r="5"/></g>
+  </g>
+  <!-- Cell: caret-bottom -->
+  <text x="242" y="96.00" class="label">caret-bottom</text>
+  <g transform="translate(255.00, 65.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30 10L16 26L2 10Z"/>
+  </g>
+  <!-- Cell: caret-left -->
+  <text x="290" y="96.00" class="label">caret-left</text>
+  <g transform="translate(303.00, 65.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 30L6 16L22 2Z"/>
+  </g>
+  <!-- Cell: caret-right -->
+  <text x="338" y="96.00" class="label">caret-right</text>
+  <g transform="translate(351.00, 65.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 30l16-14L10 2Z"/>
+  </g>
+  <!-- Cell: caret-top -->
+  <text x="386" y="96.00" class="label">caret-top</text>
+  <g transform="translate(399.00, 65.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30 22L16 6L2 22Z"/>
+  </g>
+  <!-- Cell: cart -->
+  <text x="434" y="96.00" class="label">cart</text>
+  <g transform="translate(447.00, 65.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6 6h24l-3 13H9m18 4H10L5 2H2"/><circle cx="25" cy="27" r="2"/><circle cx="12" cy="27" r="2"/></g>
+  </g>
+  <!-- Cell: checkmark -->
+  <text x="2" y="145.50" class="label">checkmark</text>
+  <g transform="translate(15.00, 114.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m2 20l10 8L30 4"/>
+  </g>
+  <!-- Cell: chevron-bottom -->
+  <text x="50" y="145.50" class="label">chevron-bottom</text>
+  <g transform="translate(63.00, 114.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30 12L16 24L2 12"/>
+  </g>
+  <!-- Cell: chevron-left -->
+  <text x="98" y="145.50" class="label">chevron-left</text>
+  <g transform="translate(111.00, 114.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 30L8 16L20 2"/>
+  </g>
+  <!-- Cell: chevron-right -->
+  <text x="146" y="145.50" class="label">chevron-right</text>
+  <g transform="translate(159.00, 114.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 30l12-14L12 2"/>
+  </g>
+  <!-- Cell: chevron-top -->
+  <text x="194" y="145.50" class="label">chevron-top</text>
+  <g transform="translate(207.00, 114.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30 20L16 8L2 20"/>
+  </g>
+  <!-- Cell: clipboard -->
+  <text x="242" y="145.50" class="label">clipboard</text>
+  <g transform="translate(255.00, 114.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v4h8V2zm-1 2H6v26h20V4h-5"/>
+  </g>
+  <!-- Cell: clock -->
+  <text x="290" y="145.50" class="label">clock</text>
+  <g transform="translate(303.00, 114.75) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M16 8v8l4 4"/></g>
+  </g>
+  <!-- Cell: close -->
+  <text x="2" y="195.00" class="label">close</text>
+  <g transform="translate(15.00, 164.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 30L30 2m0 28L2 2"/>
+  </g>
+  <!-- Cell: code -->
+  <text x="50" y="195.00" class="label">code</text>
+  <g transform="translate(63.00, 164.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m10 9l-7 8l7 8M22 9l7 8l-7 8M18 7l-4 20"/>
+  </g>
+  <!-- Cell: compose -->
+  <text x="98" y="195.00" class="label">compose</text>
+  <g transform="translate(111.00, 164.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M27 15v15H2V5h15m13 1l-4-4L9 19l-2 6l6-2Zm-8 0l4 4ZM9 19l4 4Z"/>
+  </g>
+  <!-- Cell: creditcard -->
+  <text x="146" y="195.00" class="label">creditcard</text>
+  <g transform="translate(159.00, 164.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 7v18h28V7Zm3 11h4m-4 3h6"/><path fill="currentColor" d="M2 11v2h28v-2Z"/></g>
+  </g>
+  <!-- Cell: desktop -->
+  <text x="194" y="195.00" class="label">desktop</text>
+  <g transform="translate(207.00, 164.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 29s0-5 6-5s6 5 6 5zM2 6v17h28V6z"/>
+  </g>
+  <!-- Cell: download -->
+  <text x="242" y="195.00" class="label">download</text>
+  <g transform="translate(255.00, 164.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 22c-9 1-8-10 0-9C6 2 23 2 22 10c10-3 10 13 1 12m-12 4l5 4l5-4m-5-10v14"/>
+  </g>
+  <!-- Cell: edit -->
+  <text x="290" y="195.00" class="label">edit</text>
+  <g transform="translate(303.00, 164.25) scale(0.5625, 0.5625) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m30 7l-5-5L5 22l-2 7l7-2Zm-9-1l5 5ZM5 22l5 5Z"/>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-bytesize</text>
+  <text x="348" y="139.738" class="overlay-title">bytesize icons</text>
+  <text x="351" y="190.744" class="overlay-meta">MIT · 102 icons</text>
+</svg>

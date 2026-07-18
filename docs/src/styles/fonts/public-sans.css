@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Public Sans";
+  src: url("/fonts/PublicSans[wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* FALLBACKS */
+@font-face {
+  font-family: "Public Sans Thin Fallback: -apple-system";
+  src: local('System Font'), local('.SFNS-Regular');
+  ascent-override: 86.8669%;
+  descent-override: 20.5737%;
+  size-adjust: 109.3627%;
+}
+@font-face {
+  font-family: "Public Sans Thin Fallback: Arial";
+  src: local('Arial'), local('ArialMT'), local('Liberation Sans');
+  ascent-override: 92.9771%;
+  descent-override: 22.0209%;
+  line-gap-override: 0%;
+  size-adjust: 102.1757%;
+}
+@font-face {
+  font-family: "Public Sans Thin Fallback: Noto Sans";
+  src: local('Noto Sans Regular'), local('NotoSans-Regular');
+  ascent-override: 98.8584%;
+  descent-override: 23.4138%;
+  size-adjust: 96.097%;
+}
+
+:root {
+  --font-public-sans: "Public Sans Thin", "Public Sans Thin Fallback: -apple-system", "Public Sans Thin Fallback: Arial", "Public Sans Thin Fallback: Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, "Noto Sans", -apple-system, Arial, Ubuntu, "Noto Sans", sans-serif;
+}

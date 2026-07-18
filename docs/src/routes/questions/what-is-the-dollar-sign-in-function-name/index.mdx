@@ -1,0 +1,106 @@
+---
+data:
+  title: "What does '$' at the end of a function do in Qwik.js?"
+  description: "Learn how the '$' suffix acts as a strict instruction to the Qwik Optimizer, turning arguments into lazy-loaded QRLs and forcing closure serialization."
+  tag: 'Core Concepts'
+  version: 'Qwik v2'
+  readTime: '4 min read'
+---
+
+In Qwik, seeing a `$` at the end of a function name (like `component$`, `useTask$`, `useComputed$`, or `onClick$`) is incredibly common. However, the `$` is not a feature of JavaScript itself—it is a strict instruction to the **Qwik Optimizer** (Qwik's compiler).
+
+When the Optimizer parses your code during the build process, it looks for any function call ending with a `$`. When it finds one, it automatically intercepts the code and extracts the **first argument** into a lazy-loaded QRL (Qwik URL).
+
+```tsx
+import { component$, useComputed$ } from '@qwik.dev/core';
+
+export const MyComponent = component$(() => {
+  // The arrow function inside useComputed$ is extracted!
+  const computed = useComputed$(() => {
+    return "This code is lazy-loaded!";
+  });
+
+  return <div>{computed.value}</div>;
+});
+```
+
+---
+
+## How the `$` actually works
+
+The `$` suffix triggers a **compile-time transform**. The Qwik Optimizer physically moves your code into separate files so it can be downloaded by the browser only when needed.
+
+If you write this in your source code:
+
+```tsx
+// BEFORE (Your Code)
+useComputed$(() => doSomething());
+```
+
+The Optimizer transforms your code during the build step into something like this:
+
+```javascript
+// AFTER (Compiled Code)
+import { qrl } from '@qwik.dev/core';
+
+// 1. The Optimizer extracts your arrow function into a separate chunk
+export const extracted_function = () => doSomething(); 
+
+// 2. It replaces your argument with a QRL pointer to that chunk
+useComputedQrl(qrl('./chunk-abc.js', 'extracted_function'));
+```
+
+---
+
+## The Rules of the `$` Suffix
+
+Because this is a compiler trick, there are strict rules about how it behaves:
+
+### 1. It only converts the *first* argument
+The Optimizer assumes that only the **first argument** of a `$` function is the one that needs to be lazy-loaded. 
+
+```tsx
+// The arrow function becomes a QRL, but "some string" stays exactly as is.
+myCustomFunction$(() => doSomething(), "some string");
+```
+
+### 2. You can't just append `$` to a normal function
+If you write a standard JavaScript function and just add a `$` to its name, the Optimizer will still turn the first argument into a QRL. Your function will break because it will receive a `QRL` object instead of the actual function you intended to pass.
+
+If you want to create your own custom `$` function, Qwik provides a utility called `implicit$FirstArg`:
+
+```tsx
+import { implicit$FirstArg, type QRL } from '@qwik.dev/core';
+
+// 1. Write the base function that explicitly EXPECTS a QRL
+export const myCustomFunctionQrl = (callbackQrl: QRL<() => void>) => {
+  // do something with the lazy-loaded callback
+};
+
+// 2. Use Qwik's utility to generate the developer-friendly $ version
+export const myCustomFunction$ = implicit$FirstArg(myCustomFunctionQrl);
+```
+
+### 3. Prop names ending in `$`
+The exact same rule applies to JSX props. When the compiler sees `<button onClick$={() => console.log('hi')}>`, it extracts the arrow function into a QRL and serializes it into the HTML DOM as a string pointer: `on:click="chunk.js#symbol"`.
+
+---
+
+## The Hidden Magic: Closure Capturing
+
+The `$` suffix does one more critical thing: **it captures closures**. 
+
+When the Optimizer extracts your function into a separate file, it needs a way to remember the variables that were used inside that function but defined outside of it.
+
+```tsx
+export const MyComponent = component$((props) => {
+  useComputed$(() => {
+    // The Optimizer sees you are using 'props' inside this lazy-loaded chunk!
+    console.log(props.role); 
+  });
+});
+```
+
+Because `props` is referenced inside the `$()` closure, you explicitly tell the compiler: *"I need these props on the client!"* 
+
+To make this work, Qwik automatically **serializes the captured variables** (in this case, the `props` object) into the initial HTML payload. When the client wakes up and downloads the chunk, Qwik restores the exact state of those variables so the function can run seamlessly. This is why wrapping complex prop-merging logic in `useComputed$(...)` is often the secret to fixing missing data and hydration mismatches on the client.

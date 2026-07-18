@@ -1,5 +1,5 @@
 import { Slot, component$, useStyles$ } from '@qwik.dev/core';
-import type { Primitive } from '@onwo/primitives';
+import type { OwPropsOf } from '@onwo/primitives';
 
 export const style = `
 .mm-masonry {
@@ -40,7 +40,7 @@ type MasonryProps = {
   gap?: number;
 };
 
-export const Masonry = component$((props: Primitive<'div'> & MasonryProps) => {
+export const Masonry = component$((props: OwPropsOf<'div'> & MasonryProps) => {
   useStyles$(style);
 
   return (

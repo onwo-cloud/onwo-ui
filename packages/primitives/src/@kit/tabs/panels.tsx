@@ -1,12 +1,12 @@
 import { Slot, component$ } from '@qwik.dev/core';
-import type { Primitive } from '~primitives/utils/as';
+import type { OwPropsOf } from '~primitives/utils/as';
 
-export type PanelsProps = Primitive<'div'> & {
+export type TabsPanelsProps = OwPropsOf<'div'> & {
   id?: string;
   selected?: number;
 };
 
-export const Panels = component$<PanelsProps>(({ id, class: className, ...props }) => {
+export const TabsPanels = component$<TabsPanelsProps>(({ id, class: className, ...props }) => {
   return (
     <div id={id} class={className} {...props}>
       <Slot />

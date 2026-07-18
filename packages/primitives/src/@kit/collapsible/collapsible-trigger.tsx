@@ -1,4 +1,5 @@
-import { component$, Slot, useContext, $, sync$, type PropsOf } from '@qwik.dev/core';
+import { component$, Slot, useContext, $, sync$ } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 
 import { Button as ButtonPrimitive } from '../button';
 
@@ -11,7 +12,7 @@ export const triggerKeyDownSync = sync$((e: KeyboardEvent) => {
   }
 });
 
-export const CollapsibleTrigger = component$<PropsOf<'div'>>(
+export const CollapsibleTrigger = component$<OwPropsOf<'div'>>(
   ({ onClick$, onKeyDown$, ...props }) => {
     const ctx = useContext(CollapsibleContext);
 

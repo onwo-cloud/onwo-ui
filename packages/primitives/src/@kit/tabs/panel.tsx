@@ -1,16 +1,15 @@
 import { Slot, component$, useComputed$ } from '@qwik.dev/core';
-import type { ValidName } from '~primitives/types/case-control';
-import type { Primitive } from '~primitives/utils/as';
+import type { OwPropsOf } from '~primitives/utils/as';
 
-import { useTabsContext } from './use-tabs-context';
+import { TabsContext } from './use-tabs-context';
 
-export type PanelProps<TabName extends string> = Primitive<'div'> & {
-  for?: ValidName<TabName>;
+export type TabsPanelProps = OwPropsOf<'div'> & {
+  for?: string;
 };
 
-export const Panel = component$(
-  <N extends string>({ class: className, for: forTab, ...props }: PanelProps<N>) => {
-    const context = useTabsContext();
+export const TabsPanel = component$(
+  ({ class: className, for: forTab, ...props }: TabsPanelProps) => {
+    const context = TabsContext.use();
     const tabName = useComputed$(() => forTab ?? String(++context.panelIndex));
     const isActive = useComputed$(() => tabName.value === context.selected.value);
 

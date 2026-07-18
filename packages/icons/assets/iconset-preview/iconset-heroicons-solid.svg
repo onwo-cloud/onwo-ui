@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: academic-cap -->
+  <text x="2" y="46.50" class="label">academic-cap</text>
+  <g transform="translate(15.00, 15.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M10.394 2.08a1 1 0 0 0-.788 0l-7 3a1 1 0 0 0 0 1.84L5.25 8.051a1 1 0 0 1 .356-.257l4-1.714a1 1 0 1 1 .788 1.838l-2.727 1.17l1.94.831a1 1 0 0 0 .787 0l7-3a1 1 0 0 0 0-1.838zM3.31 9.397L5 10.12v4.102a9 9 0 0 0-1.05-.174a1 1 0 0 1-.89-.89a11.1 11.1 0 0 1 .25-3.762m5.99 7.177A9 9 0 0 0 7 14.935v-3.957l1.818.78a3 3 0 0 0 2.364 0l5.508-2.361a11 11 0 0 1 .25 3.762a1 1 0 0 1-.89.89a8.97 8.97 0 0 0-5.35 2.524a1 1 0 0 1-1.4 0M6 18a1 1 0 0 0 1-1v-2.065a9 9 0 0 0-2-.712V17a1 1 0 0 0 1 1"/>
+  </g>
+  <!-- Cell: adjustments -->
+  <text x="50" y="46.50" class="label">adjustments</text>
+  <g transform="translate(63.00, 15.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M5 4a1 1 0 0 0-2 0v7.268a2 2 0 0 0 0 3.464V16a1 1 0 1 0 2 0v-1.268a2 2 0 0 0 0-3.464zm6 0a1 1 0 1 0-2 0v1.268a2 2 0 0 0 0 3.464V16a1 1 0 1 0 2 0V8.732a2 2 0 0 0 0-3.464zm5-1a1 1 0 0 1 1 1v7.268a2 2 0 0 1 0 3.464V16a1 1 0 1 1-2 0v-1.268a2 2 0 0 1 0-3.464V4a1 1 0 0 1 1-1"/>
+  </g>
+  <!-- Cell: adjustments-horizontal -->
+  <text x="98" y="46.50" class="label">adjustments-ho…</text>
+  <g transform="translate(111.00, 15.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M10 3.75a2 2 0 1 0-4 0a2 2 0 0 0 4 0Zm7.25.75a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM5 3.75a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 .75.75ZM4.25 17a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5Zm13 0a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM9 10a.75.75 0 0 1-.75.75h-5.5a.75.75 0 0 1 0-1.5h5.5A.75.75 0 0 1 9 10Zm8.25.75a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM14 10a2 2 0 1 0-4 0a2 2 0 0 0 4 0Zm-4 6.25a2 2 0 1 0-4 0a2 2 0 0 0 4 0Z"/>
+  </g>
+  <!-- Cell: adjustments-vertical -->
+  <text x="146" y="46.50" class="label">adjustments-ve…</text>
+  <g transform="translate(159.00, 15.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M17 2.75a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0v-5.5Zm0 13a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5ZM3.75 15a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM4.5 2.75a.75.75 0 0 0-1.5 0v5.5a.75.75 0 0 0 1.5 0v-5.5ZM10 11a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0v-5.5A.75.75 0 0 1 10 11Zm.75-8.25a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5ZM10 6a2 2 0 1 0 0 4a2 2 0 0 0 0-4Zm-6.25 4a2 2 0 1 0 0 4a2 2 0 0 0 0-4Zm12.5 0a2 2 0 1 0 0 4a2 2 0 0 0 0-4Z"/>
+  </g>
+  <!-- Cell: annotation -->
+  <text x="194" y="46.50" class="label">annotation</text>
+  <g transform="translate(207.00, 15.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M18 13V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3l3 3l3-3h3a2 2 0 0 0 2-2M5 7a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1m1 3a1 1 0 1 0 0 2h3a1 1 0 1 0 0-2z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: archive -->
+  <text x="242" y="46.50" class="label">archive</text>
+  <g transform="translate(255.00, 15.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <g fill="currentColor"><path d="M4 3a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4z"/><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm5 3a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1" clip-rule="evenodd"/></g>
+  </g>
+  <!-- Cell: archive-box -->
+  <text x="290" y="46.50" class="label">archive-box</text>
+  <g transform="translate(303.00, 15.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <g fill="currentColor"><path d="M2 3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2Z"/><path fill-rule="evenodd" d="M2 7.5h16l-.811 7.71a2 2 0 0 1-1.99 1.79H4.802a2 2 0 0 1-1.99-1.79L2 7.5ZM7 11a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1Z" clip-rule="evenodd"/></g>
+  </g>
+  <!-- Cell: archive-box-arrow-down -->
+  <text x="338" y="46.50" class="label">archive-box-ar…</text>
+  <g transform="translate(351.00, 15.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M2 3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2Zm0 4.5h16l-.811 7.71a2 2 0 0 1-1.99 1.79H4.802a2 2 0 0 1-1.99-1.79L2 7.5ZM10 9a.75.75 0 0 1 .75.75v2.546l.943-1.048a.75.75 0 1 1 1.114 1.004l-2.25 2.5a.75.75 0 0 1-1.114 0l-2.25-2.5a.75.75 0 1 1 1.114-1.004l.943 1.048V9.75A.75.75 0 0 1 10 9Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: archive-box-x-mark -->
+  <text x="386" y="46.50" class="label">archive-box-x-…</text>
+  <g transform="translate(399.00, 15.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <g fill="currentColor"><path d="M2 3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2Z"/><path fill-rule="evenodd" d="M2 7.5h16l-.811 7.71a2 2 0 0 1-1.99 1.79H4.802a2 2 0 0 1-1.99-1.79L2 7.5Zm5.22 1.72a.75.75 0 0 1 1.06 0L10 10.94l1.72-1.72a.75.75 0 1 1 1.06 1.06L11.06 12l1.72 1.72a.75.75 0 1 1-1.06 1.06L10 13.06l-1.72 1.72a.75.75 0 0 1-1.06-1.06L8.94 12l-1.72-1.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></g>
+  </g>
+  <!-- Cell: arrow-circle-down -->
+  <text x="434" y="46.50" class="label">arrow-circle-d…</text>
+  <g transform="translate(447.00, 15.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16m1-11a1 1 0 1 0-2 0v3.586L7.707 9.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l3-3a1 1 0 0 0-1.414-1.414L11 10.586z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-circle-left -->
+  <text x="2" y="96.00" class="label">arrow-circle-l…</text>
+  <g transform="translate(15.00, 65.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16m.707-10.293a1 1 0 0 0-1.414-1.414l-3 3a1 1 0 0 0 0 1.414l3 3a1 1 0 0 0 1.414-1.414L9.414 11H13a1 1 0 1 0 0-2H9.414z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-circle-right -->
+  <text x="50" y="96.00" class="label">arrow-circle-r…</text>
+  <g transform="translate(63.00, 65.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16m3.707-8.707l-3-3a1 1 0 0 0-1.414 1.414L10.586 9H7a1 1 0 1 0 0 2h3.586l-1.293 1.293a1 1 0 1 0 1.414 1.414l3-3a1 1 0 0 0 0-1.414" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-circle-up -->
+  <text x="98" y="96.00" class="label">arrow-circle-up</text>
+  <g transform="translate(111.00, 65.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16m3.707-8.707l-3-3a1 1 0 0 0-1.414 0l-3 3a1 1 0 0 0 1.414 1.414L9 9.414V13a1 1 0 1 0 2 0V9.414l1.293 1.293a1 1 0 0 0 1.414-1.414" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-down -->
+  <text x="146" y="96.00" class="label">arrow-down</text>
+  <g transform="translate(159.00, 65.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M16.707 10.293a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414 0l-6-6a1 1 0 1 1 1.414-1.414L9 14.586V3a1 1 0 0 1 2 0v11.586l4.293-4.293a1 1 0 0 1 1.414 0" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-down-circle -->
+  <text x="194" y="96.00" class="label">arrow-down-cir…</text>
+  <g transform="translate(207.00, 65.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16Zm.75-11.25a.75.75 0 0 0-1.5 0v4.59L7.3 9.24a.75.75 0 0 0-1.1 1.02l3.25 3.5a.75.75 0 0 0 1.1 0l3.25-3.5a.75.75 0 1 0-1.1-1.02l-1.95 2.1V6.75Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-down-left -->
+  <text x="242" y="96.00" class="label">arrow-down-left</text>
+  <g transform="translate(255.00, 65.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M16.78 3.22a.75.75 0 0 0-1.06 0L4.5 14.44V6.75a.75.75 0 0 0-1.5 0v9.5c0 .414.336.75.75.75h9.5a.75.75 0 0 0 0-1.5H5.56L16.78 4.28a.75.75 0 0 0 0-1.06Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-down-on-square -->
+  <text x="290" y="96.00" class="label">arrow-down-on-…</text>
+  <g transform="translate(303.00, 65.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M13.75 7h-3v5.296l1.943-2.048a.75.75 0 0 1 1.114 1.004l-3.25 3.5a.75.75 0 0 1-1.114 0l-3.25-3.5a.75.75 0 1 1 1.114-1.004l1.943 2.048V7h1.5V1.75a.75.75 0 0 0-1.5 0V7h-3A2.25 2.25 0 0 0 4 9.25v7.5A2.25 2.25 0 0 0 6.25 19h7.5A2.25 2.25 0 0 0 16 16.75v-7.5A2.25 2.25 0 0 0 13.75 7Z"/>
+  </g>
+  <!-- Cell: arrow-down-on-square-stack -->
+  <text x="338" y="96.00" class="label">arrow-down-on-…</text>
+  <g transform="translate(351.00, 65.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M8 1a.75.75 0 0 1 .75.75V6h-1.5V1.75A.75.75 0 0 1 8 1Zm-.75 5v3.296l-.943-1.048a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.114 0l2.25-2.5a.75.75 0 0 0-1.114-1.004L8.75 9.296V6h2A2.25 2.25 0 0 1 13 8.25v4.5A2.25 2.25 0 0 1 10.75 15h-5.5A2.25 2.25 0 0 1 3 12.75v-4.5A2.25 2.25 0 0 1 5.25 6h2ZM7 16.75v-.25h3.75a3.75 3.75 0 0 0 3.75-3.75V10h.25A2.25 2.25 0 0 1 17 12.25v4.5A2.25 2.25 0 0 1 14.75 19h-5.5A2.25 2.25 0 0 1 7 16.75Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-down-right -->
+  <text x="386" y="96.00" class="label">arrow-down-rig…</text>
+  <g transform="translate(399.00, 65.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M4.28 3.22a.75.75 0 0 0-1.06 1.06L14.44 15.5H6.75a.75.75 0 0 0 0 1.5h9.5a.747.747 0 0 0 .75-.75v-9.5a.75.75 0 0 0-1.5 0v7.69L4.28 3.22Z"/>
+  </g>
+  <!-- Cell: arrow-down-tray -->
+  <text x="434" y="96.00" class="label">arrow-down-tray</text>
+  <g transform="translate(447.00, 65.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <g fill="currentColor"><path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z"/><path d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z"/></g>
+  </g>
+  <!-- Cell: arrow-left -->
+  <text x="2" y="145.50" class="label">arrow-left</text>
+  <g transform="translate(15.00, 114.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M9.707 16.707a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 1.414L5.414 9H17a1 1 0 1 1 0 2H5.414l4.293 4.293a1 1 0 0 1 0 1.414" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-left-circle -->
+  <text x="50" y="145.50" class="label">arrow-left-cir…</text>
+  <g transform="translate(63.00, 114.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <g fill="none"><g clip-path="url(#svgIDa)"><path fill="currentColor" fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16Zm3.25-7.25a.75.75 0 0 0 0-1.5H8.66l2.1-1.95a.75.75 0 1 0-1.02-1.1l-3.5 3.25a.75.75 0 0 0 0 1.1l3.5 3.25a.75.75 0 0 0 1.02-1.1l-2.1-1.95h4.59Z" clip-rule="evenodd"/></g><defs><clipPath id="svgIDa"><path fill="#fff" d="M0 0h20v20H0z"/></clipPath></defs></g>
+  </g>
+  <!-- Cell: arrow-left-on-rectangle -->
+  <text x="98" y="145.50" class="label">arrow-left-on-…</text>
+  <g transform="translate(111.00, 114.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M3 4.25A2.25 2.25 0 0 1 5.25 2h5.5A2.25 2.25 0 0 1 13 4.25v2a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 0-.75-.75h-5.5a.75.75 0 0 0-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 0 0 .75-.75v-2a.75.75 0 0 1 1.5 0v2A2.25 2.25 0 0 1 10.75 18h-5.5A2.25 2.25 0 0 1 3 15.75V4.25Z"/><path d="M19 10a.75.75 0 0 0-.75-.75H8.704l1.048-.943a.75.75 0 1 0-1.004-1.114l-2.5 2.25a.75.75 0 0 0 0 1.114l2.5 2.25a.75.75 0 1 0 1.004-1.114l-1.048-.943h9.546A.75.75 0 0 0 19 10Z"/></g>
+  </g>
+  <!-- Cell: arrow-long-down -->
+  <text x="146" y="145.50" class="label">arrow-long-down</text>
+  <g transform="translate(159.00, 114.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10 2a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V2.75A.75.75 0 0 1 10 2Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-long-left -->
+  <text x="194" y="145.50" class="label">arrow-long-left</text>
+  <g transform="translate(207.00, 114.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-long-right -->
+  <text x="242" y="145.50" class="label">arrow-long-rig…</text>
+  <g transform="translate(255.00, 114.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-long-up -->
+  <text x="290" y="145.50" class="label">arrow-long-up</text>
+  <g transform="translate(303.00, 114.75) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10 18a.75.75 0 0 1-.75-.75V4.66L7.3 6.76a.75.75 0 1 1-1.1-1.02l3.25-3.5a.75.75 0 0 1 1.1 0l3.25 3.5a.75.75 0 0 1-1.1 1.02l-1.95-2.1v12.59A.75.75 0 0 1 10 18Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-narrow-down -->
+  <text x="2" y="195.00" class="label">arrow-narrow-d…</text>
+  <g transform="translate(15.00, 164.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M14.707 12.293a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L9 14.586V3a1 1 0 0 1 2 0v11.586l2.293-2.293a1 1 0 0 1 1.414 0" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-narrow-left -->
+  <text x="50" y="195.00" class="label">arrow-narrow-l…</text>
+  <g transform="translate(63.00, 164.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M7.707 14.707a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 1.414L5.414 9H17a1 1 0 1 1 0 2H5.414l2.293 2.293a1 1 0 0 1 0 1.414" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-narrow-right -->
+  <text x="98" y="195.00" class="label">arrow-narrow-r…</text>
+  <g transform="translate(111.00, 164.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M12.293 5.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-2.293-2.293a1 1 0 0 1 0-1.414" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-narrow-up -->
+  <text x="146" y="195.00" class="label">arrow-narrow-up</text>
+  <g transform="translate(159.00, 164.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5.293 7.707a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1-1.414 1.414L11 5.414V17a1 1 0 1 1-2 0V5.414L6.707 7.707a1 1 0 0 1-1.414 0" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-path -->
+  <text x="194" y="195.00" class="label">arrow-path</text>
+  <g transform="translate(207.00, 164.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10 4.5c-1.215 0-2.417.055-3.604.162a.68.68 0 0 0-.615.597a39.78 39.78 0 0 0-.25 3.15l1.689-1.69A.75.75 0 1 1 8.28 7.78l-2.999 3a.75.75 0 0 1-1.06 0l-3.001-3a.75.75 0 0 1 1.06-1.06l1.748 1.747c.042-1.141.13-2.27.264-3.386a2.18 2.18 0 0 1 1.97-1.913a41.51 41.51 0 0 1 7.477 0a2.18 2.18 0 0 1 1.969 1.913c.064.534.117 1.07.16 1.61a.75.75 0 0 1-1.495.12a39.518 39.518 0 0 0-.154-1.552a.68.68 0 0 0-.615-.597A40.013 40.013 0 0 0 10 4.5Zm4.719 4.72a.75.75 0 0 1 1.06 0l3.001 3a.75.75 0 1 1-1.06 1.06l-1.748-1.747a41.309 41.309 0 0 1-.264 3.386a2.18 2.18 0 0 1-1.97 1.913a41.534 41.534 0 0 1-7.477 0a2.18 2.18 0 0 1-1.969-1.913a41.176 41.176 0 0 1-.16-1.61a.75.75 0 0 1 1.495-.12c.041.52.093 1.037.154 1.552a.68.68 0 0 0 .615.597a40.012 40.012 0 0 0 7.208 0a.68.68 0 0 0 .615-.597c.124-1.038.208-2.088.25-3.15l-1.689 1.69a.75.75 0 0 1-1.06-1.061l2.999-3Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-right -->
+  <text x="242" y="195.00" class="label">arrow-right</text>
+  <g transform="translate(255.00, 164.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10.293 3.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-4.293-4.293a1 1 0 0 1 0-1.414" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: arrow-right-circle -->
+  <text x="290" y="195.00" class="label">arrow-right-ci…</text>
+  <g transform="translate(303.00, 164.25) scale(0.9000, 0.9000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16ZM6.75 9.25a.75.75 0 0 0 0 1.5h4.59l-2.1 1.95a.75.75 0 0 0 1.02 1.1l3.5-3.25a.75.75 0 0 0 0-1.1l-3.5-3.25a.75.75 0 1 0-1.02 1.1l2.1 1.95H6.75Z" clip-rule="evenodd"/>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-heroicons-solid</text>
+  <text x="348" y="139.738" class="overlay-title">heroicons v1 solid</text>
+  <text x="351" y="190.744" class="overlay-meta">MIT · 389 icons</text>
+</svg>

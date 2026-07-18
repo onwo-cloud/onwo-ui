@@ -1,16 +1,35 @@
+import { component$, $ } from '@qwik.dev/core';
 import { Spinner } from '@onwo/ui/spinner';
 
-import type { BoxedComp, Section } from '.';
-import { component$ } from '@qwik.dev/core';
+import type { BoxedComp, ControlSchema, Section } from '.';
 
-const defaultSpinner: BoxedComp = {
-  title: 'Default',
-  display: component$(() => (
+const spinnerControls = {
+  size: {
+    type: 'segmented',
+    label: 'Size',
+    default: 'md',
+    options: [
+      { label: 'XS', value: 'xs' },
+      { label: 'SM', value: 'sm' },
+      { label: 'MD', value: 'md' },
+      { label: 'LG', value: 'lg' },
+      { label: 'XL', value: 'xl' },
+    ],
+  },
+} as const satisfies ControlSchema;
+
+const defaultSpinner: BoxedComp<typeof spinnerControls> = {
+  title: 'Default Playground',
+  controls: spinnerControls,
+  display: component$(({ controls }) => (
     <div class="flex justify-center">
-      <Spinner />
+      <Spinner size={controls.size as any} />
     </div>
   )),
-  code: `<Spinner />`,
+  code: $((values) => {
+    const sizeProp = values.size !== 'md' ? ` size="${values.size}"` : '';
+    return `import { Spinner } from '@onwo/ui/spinner';\n\n<Spinner${sizeProp} />`;
+  }),
 };
 
 const spinnerSizes: BoxedComp = {
@@ -25,14 +44,14 @@ const spinnerSizes: BoxedComp = {
       <Spinner size={48} />
     </div>
   )),
-  code: `import { Spinner } from '@onwo/ui';
+  code: $(() => `import { Spinner } from '@onwo/ui/spinner';
 
 <Spinner size="xs" />
 <Spinner size="sm" />
 <Spinner />
 <Spinner size="lg" />
 <Spinner size="xl" />
-<Spinner size={48} />`,
+<Spinner size={48} />`),
 };
 
 const spinnerColors: BoxedComp = {
@@ -45,12 +64,12 @@ const spinnerColors: BoxedComp = {
       <Spinner class="text-neutron" />
     </div>
   )),
-  code: `import { Button } from '@onwo/ui';
+  code: $(() => `import { Spinner } from '@onwo/ui/spinner';
 
 <Spinner class="text-success" />
 <Spinner class="text-warn" />
 <Spinner class="text-scarab" />
-<Spinner class="text-neutron" />`,
+<Spinner class="text-neutron" />`),
 };
 
 export const section: Section = {

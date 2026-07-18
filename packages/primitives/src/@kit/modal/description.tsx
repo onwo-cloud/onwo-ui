@@ -1,9 +1,9 @@
-import type { PropsOf } from '@qwik.dev/core';
+import { OwPropsOf } from '~primitives/index';
 import { Slot, component$ } from '@qwik.dev/core';
 
 import { useModalContext } from './context';
 
-export type ModalDescriptionProps = PropsOf<'p'>;
+export type ModalDescriptionProps = OwPropsOf<'p'>;
 
 export const Description = component$((props: ModalDescriptionProps) => {
   const context = useModalContext();

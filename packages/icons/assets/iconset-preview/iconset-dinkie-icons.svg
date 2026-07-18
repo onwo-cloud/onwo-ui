@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: abacus -->
+  <text x="2" y="46.50" class="label">abacus</text>
+  <g transform="translate(15.00, 15.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 12h11V1H0Zm1-1V6h2v1H2v1h1v1H2v1h1v1Zm3 0v-1h1V9H4V8h1V7H4V6h3v3H6v1h1v1ZM1 5V2h2v1H2v1h1v1Zm7 6v-1h1V9H8V6h2v5ZM4 5V4h1V3H4V2h3v1H6v1h1v1Zm4 0V4h1V3H8V2h2v3Zm0 0"/>
+  </g>
+  <!-- Cell: accept-circle -->
+  <text x="50" y="46.50" class="label">accept-circle</text>
+  <g transform="translate(63.00, 15.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M6 10h2V4h1V3H2v1h5v5H6Zm-5 1h1v-1H1Zm-1-1h1V3H0Zm2 2h7v-1H2Zm0-4h4V5H2Zm1-1V6h2v1ZM1 3h1V2H1Zm8 8h1v-1H9ZM2 2h7V1H2Zm8 8h1V3h-1ZM9 3h1V2H9Zm0 0"/>
+  </g>
+  <!-- Cell: accordion -->
+  <text x="98" y="46.50" class="label">accordion</text>
+  <g transform="translate(111.00, 15.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1 11h4V2H1v1h2v1H2v1h1v1H2v1h1v1H2v1h1v1H1Zm-1-1h1V3H0Zm6 1h1V2H6Zm3-2V8h1v1Zm-1 2h3V2H8Zm1-4V6h1v1Zm0-2V4h1v1Zm0 0"/>
+  </g>
+  <!-- Cell: address-book -->
+  <text x="146" y="46.50" class="label">address-book</text>
+  <g transform="translate(159.00, 15.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 12h9v-2h1V9H9V6h1V5H8v6H1V2h9V1H0Zm2-2h5V8H6v1H3V8H2Zm1-2h3V7H3Zm0-2h3V4H5v1H4V4H3Zm1-2h1V3H4Zm6 5h1V6h-1Zm0-4h1V2h-1Zm0 0"/>
+  </g>
+  <!-- Cell: address-book-small -->
+  <text x="194" y="46.50" class="label">address-book-s…</text>
+  <g transform="translate(207.00, 15.75) scale(2.2500, 2.2500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 9h8V7h1V4H8V3H7v5H1V1h7v2h1V0H0Zm2-2h1V6H2Zm1-1h2V5H3Zm2 1h1V6H5ZM3 4h2V2H3Zm0 0"/>
+  </g>
+  <!-- Cell: adjustments -->
+  <text x="242" y="46.50" class="label">adjustments</text>
+  <g transform="translate(255.00, 15.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M9 12h1V7h1V4h-1V1H9v3H8v3h1Zm-8 0h1V8h1V5H2V1H1v4H0v3h1Zm0-5V6h1v1Zm4 5h1v-2h1V7H6V1H5v6H4v3h1Zm0-3V8h1v1Zm4-3V5h1v1Zm0 0"/>
+  </g>
+  <!-- Cell: adobe-after-effects -->
+  <text x="290" y="46.50" class="label">adobe-after-ef…</text>
+  <g transform="translate(303.00, 15.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 11h1V9h1V8h3v1h1V6H5v1H2V6H1V2H0Zm1 1h9v-1H1Zm1-6h1V4H2Zm2 0h1V4H4ZM3 4h1V3H3Zm7 7h1V2h-1v3H9v1H8V5H7v4h3ZM8 8V7h2v1ZM1 2h9V1H1Zm7 3h1V4H8Zm0 0"/>
+  </g>
+  <!-- Cell: adobe-animate -->
+  <text x="338" y="46.50" class="label">adobe-animate</text>
+  <g transform="translate(351.00, 15.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 11h1V9h1V8h3v1h1V6H5v1H2V6H1V2H0Zm1 1h9v-1H1Zm1-6h1V4H2Zm2 0h1V4H4ZM3 4h1V3H3Zm4 5h1V6h1V5H7Zm3 2h1V2h-1v4H9v3h1ZM1 2h9V1H1Zm0 0"/>
+  </g>
+  <!-- Cell: adobe-audition -->
+  <text x="386" y="46.50" class="label">adobe-audition</text>
+  <g transform="translate(399.00, 15.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 11h1V9h1V8h3v1h1V6H5v1H2V6H1V2H0Zm1 1h9v-1H1Zm1-6h1V4H2Zm2 0h1V4H4ZM3 4h1V3H3Zm4 4h1V5H7Zm3 3h1V2h-1v3H9v3H8v1h2ZM1 2h9V1H1Zm0 0"/>
+  </g>
+  <!-- Cell: adobe-illustrator -->
+  <text x="434" y="46.50" class="label">adobe-illustra…</text>
+  <g transform="translate(447.00, 15.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M2 9h1V8h3v1h1V6H6v1H3V6H2Zm-2 2h1V2H0Zm1 1h9v-1H1Zm2-6h1V4H3Zm2 0h1V4H5ZM4 4h1V3H4Zm4 5h1V5H8Zm2 2h1V2h-1ZM1 2h9V1H1Zm7 2h1V3H8Zm0 0"/>
+  </g>
+  <!-- Cell: adobe-in-design -->
+  <text x="2" y="96.00" class="label">adobe-in-design</text>
+  <g transform="translate(15.00, 65.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M5 9h3V3H7v2H6v1h1v2H6V6H5Zm-5 2h1V2H0Zm1 1h9v-1H1Zm2-3h1V3H3Zm7 2h1V2h-1ZM1 2h9V1H1Zm0 0"/>
+  </g>
+  <!-- Cell: adobe-photoshop -->
+  <text x="50" y="96.00" class="label">adobe-photoshop</text>
+  <g transform="translate(63.00, 65.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M2 9h1V7h2V6H3V4h2V3H2Zm-2 2h1V2H0Zm1 1h9v-1H1Zm6-3h2V7H8v1H7ZM5 6h1V4H5Zm2 1h1V6h1V5H7Zm3 4h1V2h-1ZM1 2h9V1H1Zm0 0"/>
+  </g>
+  <!-- Cell: adobe-premiere -->
+  <text x="98" y="96.00" class="label">adobe-premiere</text>
+  <g transform="translate(111.00, 65.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M2 9h1V7h2V6H3V4h2V3H2Zm-2 2h1V2H0Zm1 1h9v-1H1Zm4-6h1V4H5Zm2 3h1V6h1V5H7Zm3 2h1V2h-1ZM1 2h9V1H1Zm0 0"/>
+  </g>
+  <!-- Cell: adult -->
+  <text x="146" y="96.00" class="label">adult</text>
+  <g transform="translate(159.00, 65.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 12h11v-2h-1v1H6v-1H5v1H1v-1H0Zm1-2h1V9H1Zm1-1h2V8H2Zm2 1h1V9H4Zm2 0h1V9H6ZM3 7h1V6H3Zm1 1h3V7H4ZM2 6h1V5h1V4H3V2H2Zm5 3h2V8H7Zm2 1h1V9H9ZM7 7h1V6H7ZM4 4h3V3H4Zm4 2h1V2H8v2H7v1h1ZM3 2h5V1H3Zm0 0"/>
+  </g>
+  <!-- Cell: adult-small -->
+  <text x="194" y="96.00" class="label">adult-small</text>
+  <g transform="translate(207.00, 65.25) scale(2.2500, 2.2500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 9h9V7H8v1H5V7H4v1H1V7H0Zm1-2h1V6H1Zm2 0h1V6h1v1h1V6h1V5H2v1h1ZM1 5h1V4h1V3H2V1H1Zm6 2h1V6H7ZM3 3h3V2H3ZM2 1h5V0H2Zm5 4h1V1H7v2H6v1h1Zm0 0"/>
+  </g>
+  <!-- Cell: advantage-circle -->
+  <text x="242" y="96.00" class="label">advantage-circ…</text>
+  <g transform="translate(255.00, 65.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 10h1V8h1v1h1V8h1v1H6v1h2V8h1V7H8V6h1V3H5v3h2v1H4V5H3v1H2v1h1Zm-2 1h1v-1H1Zm-1-1h1V3H0Zm2 2h7v-1H2Zm0-7h1V4H2ZM1 3h1V2H1Zm8 8h1v-1H9ZM3 4h1V3H3Zm3 1V4h2v1ZM2 2h7V1H2Zm8 8h1V3h-1ZM9 3h1V2H9Zm0 0"/>
+  </g>
+  <!-- Cell: airplane -->
+  <text x="290" y="96.00" class="label">airplane</text>
+  <g transform="translate(303.00, 65.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M2 12h2V9H3V8H0v2h1V9h1v1h1v1H2Zm-1-1h1v-1H1Zm3-2h1V8H4ZM3 8h1V7H3Zm4 3h1V9H7ZM1 5h2V4H1Zm4 3h1V7H5ZM4 7h1V6H4Zm2 2h1V8H6ZM3 6h1V5H3ZM0 4h1V3h3V2H0Zm8 8h2V8H9v3H8ZM6 7h1V6H6ZM5 6h1V5H5ZM4 4h2V3H4Zm4 4h1V6H8ZM7 6h1V5H7ZM6 5h1V4H6Zm2 0h1V4H8ZM7 4h1V3H7Zm2 0h1V3H9ZM8 3h1V2H8Zm2 0h1V1H9v1h1Zm0 0"/>
+  </g>
+  <!-- Cell: alarm-clock -->
+  <text x="338" y="96.00" class="label">alarm-clock</text>
+  <g transform="translate(351.00, 65.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 3H2v1h1Zm0 0h5V2H6V1H5v1H3Zm-1 9h1v-1H2Zm0-2h1V9H2ZM1 9h1V4H1Zm2 2h5v-1H3Zm5 1h1v-1H8ZM0 4h1V3h1V2H0Zm8 6h1V9H8ZM5 7h3V6H6V4H5Zm4 2h1V4H9ZM8 4h1V3H8Zm2 0h1V2H9v1h1Zm0 0"/>
+  </g>
+  <!-- Cell: alien-monster -->
+  <text x="386" y="96.00" class="label">alien-monster</text>
+  <g transform="translate(399.00, 65.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M4 12h1v-2h1v2h1v-2h1V9h2V8H9V5H8V3H7v1H4V3H3v2H2v3H1v1h2v1h1Zm-2 0h1v-2H2ZM0 8h1V3H0Zm4 0V6h1v2Zm4 4h1v-2H8ZM1 3h1V2H1Zm5 5V6h1v2Zm4 0h1V3h-1ZM9 3h1V2H9Zm0 0"/>
+  </g>
+  <!-- Cell: alien-monster-small -->
+  <text x="434" y="96.00" class="label">alien-monster-…</text>
+  <g transform="translate(447.00, 65.25) scale(2.2500, 2.2500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 9h1V7h1v2h1V7h1V6h1V5H7V3H6V2H3v1H2v2H1v1h1v1h1ZM1 9h1V7H1ZM0 5h1V2H0Zm3 0V4h1v1Zm4 4h1V7H7ZM5 5V4h1v1ZM2 2h1V1H2Zm4 0h1V1H6Zm2 3h1V2H8Zm0 0"/>
+  </g>
+  <!-- Cell: alipay -->
+  <text x="2" y="145.50" class="label">alipay</text>
+  <g transform="translate(15.00, 114.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M10 11H1v1h9Zm0 0h1V2h-1v6H8V5H6V4h3V3H6V2h4V1H1v1h4v1H2v1h3v1H3v1h4v2H6v1h2v1h2ZM0 11h1V9h1V8H1V2H0Zm2-1h4V9H2Zm0-2h4V7H2Zm0 0"/>
+  </g>
+  <!-- Cell: alipay-small -->
+  <text x="50" y="145.50" class="label">alipay-small</text>
+  <g transform="translate(63.00, 114.75) scale(2.2500, 2.2500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1 9h7V8h1V1H8v6H7v1H1ZM0 8h1V1H0Zm2-1h3V6H3V5H2Zm4 0h1V6H6ZM5 6h1V4H5V3h2V2H5V1h3V0H1v1h3v1H2v1h2v1H3v1h2Zm0 0"/>
+  </g>
+  <!-- Cell: anchor -->
+  <text x="98" y="145.50" class="label">anchor</text>
+  <g transform="translate(111.00, 114.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M5 9H4v1h1Zm0 0h1V5h2V4H6V3H5v1H3v1h2Zm-5 1h1V8h1V7H1V6H0Zm2 2h7v-1h1v-1H7v1H4v-1H1v1h1Zm4-2h1V9H6Zm4 0h1V6h-1v1H9v1h1ZM4 3h1V2h1v1h1V1H4Zm0 0"/>
+  </g>
+  <!-- Cell: anchor-small -->
+  <text x="146" y="145.50" class="label">anchor-small</text>
+  <g transform="translate(159.00, 114.75) scale(2.2500, 2.2500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M4 7H1v1h1v1h5V8h1V7H5v1H4Zm0 0h1V4h1V3H5V2H4v1H3v1h1ZM0 7h1V6h1V5H1V4H0Zm8 0h1V4H8v1H7v1h1ZM3 2h1V1h1v1h1V0H3Zm0 0"/>
+  </g>
+  <!-- Cell: android -->
+  <text x="194" y="145.50" class="label">android</text>
+  <g transform="translate(207.00, 114.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M4 12h1v-2h1v2h1v-2h1V6H3v4h1ZM1 9h1V6H1Zm2-4h5V3H7v1H6V3h1V2H4v1h1v1H4V3H3Zm0-3h1V1H3Zm6 7h1V6H9ZM7 2h1V1H7Zm0 0"/>
+  </g>
+  <!-- Cell: annotation -->
+  <text x="242" y="145.50" class="label">annotation</text>
+  <g transform="translate(255.00, 114.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M0 12h4v-1H2v-1H1v1H0Zm2-2h1V9H2ZM1 9h1V8H1Zm3 2h1v-1H4ZM0 8h1V3H0Zm3 0h3V7H3Zm2 2h4V9H5ZM1 3h1V2H1Zm2 3h5V5H3Zm6 3h1V8H9ZM3 4h5V3H3ZM2 2h7V1H2Zm8 6h1V3h-1ZM9 3h1V2H9Zm0 0"/>
+  </g>
+  <!-- Cell: antenna-bars -->
+  <text x="290" y="145.50" class="label">antenna-bars</text>
+  <g transform="translate(303.00, 114.75) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1 2H0v9h1Zm0 0h9V1H1Zm0 10h9v-1H1Zm1-3h1V7H2Zm2 0h1V6H4Zm2 0h1V5H6Zm2 0h1V4H8Zm2 2h1V2h-1Zm0 0"/>
+  </g>
+  <!-- Cell: anyway-fm -->
+  <text x="2" y="195.00" class="label">anyway-fm</text>
+  <g transform="translate(15.00, 164.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M5 7h2V6H6V4H5v1H4v1h1Zm-4 3h1V9H1Zm1 1h1v-1H2ZM0 9h1V5H0Zm3 3h5v-1H3Zm0-4h1V6H3ZM1 5h1V4H1Zm3 4h3V8H4Zm4 2h1v-1H8ZM2 4h1V3H2Zm7 6h1V9H9ZM7 6h1V5H7ZM3 3h3V2h1V1H5v1H3Zm7 6h1V5h-1ZM8 5h1V3H8ZM7 3h1V2H7Zm0 0"/>
+  </g>
+  <!-- Cell: app-notifacation -->
+  <text x="50" y="195.00" class="label">app-notifacati…</text>
+  <g transform="translate(63.00, 164.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M8 5h2V4h1V2h-1V1H8v1H7v2h1Zm-8 6h1V3H0Zm1 1h8v-1H1Zm8-1h1V6H9ZM1 3h5V2H1Zm0 0"/>
+  </g>
+  <!-- Cell: app-notifacation-small -->
+  <text x="98" y="195.00" class="label">app-notifacati…</text>
+  <g transform="translate(111.00, 164.25) scale(2.2500, 2.2500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M6 4h2V3h1V1H8V0H6v1H5v2h1ZM0 8h1V2H0Zm1 1h6V8H1Zm0-7h3V1H1Zm6 6h1V5H7Zm0 0"/>
+  </g>
+  <!-- Cell: app-store -->
+  <text x="146" y="195.00" class="label">app-store</text>
+  <g transform="translate(159.00, 164.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M3 10h1V9h2V8H4V7H3v1H2v1h1Zm-3 1h1V2H0Zm1 1h9v-1H1Zm3-5h1V5H4Zm3 3h1V9h1V8H8V7H7ZM6 7h1V5H6ZM5 5h1V4H5ZM4 4h1V3H4Zm2 0h1V3H6ZM1 2h9V1H1Zm9 9h1V2h-1Zm0 0"/>
+  </g>
+  <!-- Cell: apple -->
+  <text x="194" y="195.00" class="label">apple</text>
+  <g transform="translate(207.00, 164.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M5 4h1V3h1V2h1V1H6v1H5Zm-3 7h1v-1H2Zm1 1h2v-1H3Zm-2-2h1V5H1Zm4 1h1v-1H5Zm1 1h2v-1H6Zm2-1h1v-1H8ZM2 5h2V4H2Zm7 5h1V9H9ZM4 6h3V5H4Zm4 3h1V6H8ZM7 5h2V4H7Zm2 1h1V5H9Zm0 0"/>
+  </g>
+  <!-- Cell: apple-small -->
+  <text x="242" y="195.00" class="label">apple-small</text>
+  <g transform="translate(255.00, 164.25) scale(2.2500, 2.2500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M1 8h1V4H1Zm1 1h2V8H2Zm2-1h1V7H4Zm1 1h2V8H5ZM2 4h2V3H2Zm2 1h1V4H4Zm3 3h1V7H7ZM6 7h1V5H6ZM5 4h2V3H5ZM4 2h1V1H4Zm3 3h1V4H7ZM5 1h1V0H5Zm0 0"/>
+  </g>
+  <!-- Cell: arrows-maximize -->
+  <text x="290" y="195.00" class="label">arrows-maximize</text>
+  <g transform="translate(303.00, 164.25) scale(1.5000, 1.5000) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" d="M9 5h1V2H7v1h1v1h1Zm-9 7h3v-1H2v-1H1V9H0Zm2-2h1V9H2Zm1-1h1V8H3ZM0 5h1V4h1V3h1V2H0Zm2 0h1V4H2Zm1 1h1V5H3Zm3 3h1V8H6Zm1 1h1V9H7Zm0 2h3V9H9v1H8v1H7ZM6 6h1V5H6Zm1-1h1V4H7Zm0 0"/>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-dinkie-icons</text>
+  <text x="348" y="139.738" class="overlay-title">dinkie icons</text>
+  <text x="351" y="190.744" class="overlay-meta">MIT · 853 icons</text>
+</svg>

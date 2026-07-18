@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 198" width="480" height="198">
+  <style>
+    .bg { fill: #FFFFFF; stroke: #E0E0E0; }
+    .grid-line { stroke: #E0E0E0; stroke-width: 1; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 6px; font-weight: 500; fill: #B3B5BA; }
+    .overlay-cat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+    .overlay-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14.5px; font-weight: 700; fill: #17181C; }
+    .overlay-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 400; fill: #797C82; }
+  </style>
+
+  <rect width="480" height="198" class="bg" />
+
+  <line x1="0" y1="49.5" x2="480" y2="49.5" class="grid-line" />
+  <line x1="0" y1="99" x2="336" y2="99" class="grid-line" />
+  <line x1="0" y1="148.5" x2="336" y2="148.5" class="grid-line" />
+  <line x1="48" y1="0" x2="48" y2="198" class="grid-line" />
+  <line x1="96" y1="0" x2="96" y2="198" class="grid-line" />
+  <line x1="144" y1="0" x2="144" y2="198" class="grid-line" />
+  <line x1="192" y1="0" x2="192" y2="198" class="grid-line" />
+  <line x1="240" y1="0" x2="240" y2="198" class="grid-line" />
+  <line x1="288" y1="0" x2="288" y2="198" class="grid-line" />
+  <line x1="336" y1="0" x2="336" y2="99" class="grid-line" />
+  <line x1="384" y1="0" x2="384" y2="99" class="grid-line" />
+  <line x1="432" y1="0" x2="432" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="480" y2="99" class="grid-line" />
+  <line x1="336" y1="99" x2="336" y2="198" class="grid-line" />
+
+  <!-- Cell: 3ds-max-logo -->
+  <text x="2" y="46.50" class="label">3ds-max-logo</text>
+  <g transform="translate(15.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="m3.5 5.5l2-4H16L21.5 12zm0 13l2 4H16L21.5 12z"/><path d="M9.318 7.601L4.5 12l4.818 4.4M16 22.5l-4.432-4.047M16 1.5l-4.432 4.047"/><path d="M3.5 5.5h8l10 6.5l-10 6.5h-8m8-10v7"/></g>
+  </g>
+  <!-- Cell: 3ds-max-logo-block -->
+  <text x="50" y="46.50" class="label">3ds-max-logo-b…</text>
+  <g transform="translate(63.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm1.886 3.776a.5.5 0 0 1 .447-.276h7a.5.5 0 0 1 .443.268l3.665 6.997a.5.5 0 0 1 .059.225v.027a.5.5 0 0 1-.059.219l-3.665 6.996a.5.5 0 0 1-.443.268h-7a.5.5 0 0 1-.447-.276l-1.333-2.667a.5.5 0 0 1 .277-.694l3.1-1.12l-2.6-2.374a.5.5 0 0 1 0-.738l2.6-2.375l-3.1-1.12a.5.5 0 0 1-.277-.693zm4.947 5.529L16.528 12l-4.695 1.695zm-1-.361v4.112l-.84.304L7.408 12l2.585-2.36zM7.643 18.5l-.834-1.667h4.41l1.825 1.667zm9.027-5.04l-4.476 2.91l1.997 1.823zm-2.479-7.653l2.48 4.732l-4.477-2.909zM13.044 5.5L11.22 7.167H6.81L7.642 5.5z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: 3ds-max-logo-solid -->
+  <text x="98" y="46.50" class="label">3ds-max-logo-s…</text>
+  <g transform="translate(111.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M4.83 1.165A.75.75 0 0 1 5.5.75H16a.75.75 0 0 1 .664.402l5.497 10.493a.8.8 0 0 1 .089.336V12a.8.8 0 0 1-.035.228a.7.7 0 0 1-.054.127l-5.497 10.493a.75.75 0 0 1-.664.402H5.5a.75.75 0 0 1-.67-.415l-2-4a.75.75 0 0 1 .415-1.04l4.65-1.68l-3.9-3.561a.75.75 0 0 1 0-1.108l3.9-3.562l-4.65-1.679a.75.75 0 0 1-.416-1.04zm5.92 13.92l-1.26.455L5.611 12L9.49 8.46l1.261.455zM19.292 12l-7.042 2.543V9.457zM4.714 19.25l1.25 2.5h8.102l-2.738-2.5zm11.073 2.04l3.719-7.1l-6.714 4.365zm0-18.58l3.719 7.1l-6.714-4.365zm-9.823-.46h8.102l-2.738 2.5H4.714z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: 500px-logo-1 -->
+  <text x="146" y="46.50" class="label">500px-logo-1</text>
+  <g transform="translate(159.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linejoin="round" d="M7.5 7.5H3l-1 4h1s.5-.85 2.496-.85c1.6 0 2.36 1.35 2.36 2.85s-.856 3-3.356 3c-2 0-3-1.5-3-2.5m7.5-.5c0-1 .5-3 3-3s5 6 7.5 6s3-2 3-3s-.5-3-3-3s-5 6-7.5 6s-3-2-3-3Z"/>
+  </g>
+  <!-- Cell: 500px-logo-1-block -->
+  <text x="194" y="46.50" class="label">500px-logo-1-b…</text>
+  <g transform="translate(207.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm.184 7.267H8.8v1.066H6.016l-.397 1.588l.073-.043c.358-.203.896-.372 1.683-.372c.74 0 1.317.322 1.694.83c.185.25.316.536.4.838c.077-.249.192-.506.36-.747c.416-.592 1.115-1.027 2.171-1.027c.652 0 1.224.384 1.69.803c.332.3.66.664.977 1.034c.316-.37.644-.734.976-1.034c.466-.419 1.039-.803 1.69-.803c1.056 0 1.756.435 2.17 1.027c.394.562.497 1.214.497 1.64s-.103 1.077-.496 1.639c-.415.592-1.115 1.027-2.17 1.027c-.652 0-1.225-.384-1.69-.803c-.333-.3-.661-.663-.977-1.034c-.316.37-.645.735-.977 1.034c-.466.42-1.038.803-1.69.803c-1.056 0-1.755-.435-2.17-1.027a2.7 2.7 0 0 1-.368-.77a2.4 2.4 0 0 1-.546.962c-.498.532-1.25.835-2.25.835C4.95 15.733 4 14.428 4 13.423h1.067c0 .416.472 1.244 1.6 1.244c.779 0 1.22-.23 1.47-.498c.258-.276.383-.665.383-1.102c0-.452-.116-.838-.308-1.096c-.178-.24-.44-.398-.837-.398c-.632 0-.982.134-1.157.233a.7.7 0 0 0-.17.129l-.143.243h-1.7zm10.178 4.8c.345.408.672.78.995 1.07c.422.38.739.53.976.53c.722 0 1.09-.277 1.297-.573c.229-.327.303-.742.303-1.027c0-.286-.074-.7-.303-1.028c-.208-.296-.575-.572-1.297-.572c-.237 0-.553.149-.976.53c-.323.29-.65.661-.995 1.07m-1.39 0c-.345-.409-.673-.78-.995-1.07c-.423-.381-.74-.53-.977-.53c-.722 0-1.089.276-1.296.572c-.23.327-.304.742-.304 1.028c0 .285.075.7.304 1.027c.207.296.574.573 1.296.573c.237 0 .554-.15.976-.53c.323-.29.65-.662.995-1.07Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: 500px-logo-1-solid -->
+  <text x="242" y="46.50" class="label">500px-logo-1-s…</text>
+  <g transform="translate(255.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M7.5 6.75H2.414l-1.375 5.5h2.39l.201-.342a1 1 0 0 1 .24-.181c.244-.139.737-.327 1.626-.327c.56 0 .927.222 1.177.56c.27.362.433.904.433 1.54c0 .616-.176 1.163-.538 1.55c-.352.376-.973.7-2.068.7c-1.586 0-2.25-1.164-2.25-1.75H.75c0 1.414 1.336 3.25 3.75 3.25c1.405 0 2.462-.426 3.163-1.175c.376-.402.622-.868.768-1.352c.108.36.273.733.517 1.082c.583.834 1.567 1.445 3.052 1.445c.916 0 1.721-.54 2.377-1.13c.467-.42.928-.933 1.373-1.454c.445.521.906 1.033 1.373 1.454c.656.59 1.46 1.13 2.377 1.13c1.485 0 2.469-.612 3.052-1.445c.553-.79.698-1.707.698-2.305s-.145-1.515-.698-2.305c-.583-.833-1.567-1.445-3.052-1.445c-.916 0-1.721.54-2.377 1.13c-.467.42-.928.933-1.373 1.454c-.444-.521-.906-1.033-1.373-1.454c-.656-.59-1.46-1.13-2.377-1.13c-1.485 0-2.469.612-3.052 1.445c-.237.338-.399.7-.507 1.05a3.6 3.6 0 0 0-.563-1.18C7.348 10.352 6.536 9.9 5.496 9.9c-1.107 0-1.863.236-2.367.523q-.053.03-.102.06l.559-2.233H7.5zm10.627 8.255c-.454-.408-.915-.93-1.4-1.505c.485-.575.946-1.097 1.4-1.505c.594-.535 1.04-.745 1.373-.745c1.015 0 1.531.389 1.823.805c.322.46.427 1.043.427 1.445s-.105.985-.427 1.445c-.292.417-.808.805-1.823.805c-.334 0-.779-.21-1.373-.745m-4.754-3.01c.454.408.915.93 1.4 1.505c-.486.575-.946 1.097-1.4 1.505c-.594.535-1.04.745-1.373.745c-1.015 0-1.531-.388-1.823-.805c-.322-.46-.427-1.043-.427-1.445s.105-.985.427-1.445c.292-.416.808-.805 1.823-.805c.334 0 .779.21 1.373.745" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: 500px-logo-2 -->
+  <text x="290" y="46.50" class="label">500px-logo-2</text>
+  <g transform="translate(303.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path stroke-linecap="round" d="M16.5 20a1.5 1.5 0 1 0-1.5-1.5v3m4.5-4.5l3 3m0-3l-3 3"/><path d="M6.5 8.5H1.857v2.712A2.5 2.5 0 1 1 1.55 13M8 11.75a3.25 3.25 0 1 0 6.5 0a3.25 3.25 0 1 0-6.5 0m8 0a3.25 3.25 0 1 0 6.5 0a3.25 3.25 0 1 0-6.5 0"/></g>
+  </g>
+  <!-- Cell: 500px-logo-2-block -->
+  <text x="338" y="46.50" class="label">500px-logo-2-b…</text>
+  <g transform="translate(351.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm-.792 6.686c0-.295.24-.535.535-.535h3.311v1.07H5.278v.58A2.318 2.318 0 1 1 4 11.359l1.048-.213a1.249 1.249 0 1 0 .153-.894a.535.535 0 0 1-.993-.276zm10.978 6.953a.535.535 0 0 0-.535.535v2.14a.535.535 0 0 1-1.07 0v-2.14a1.605 1.605 0 1 1 1.605 1.605a.535.535 0 0 1 0-1.07a.535.535 0 0 0 0-1.07m1.761-.913a.535.535 0 0 1 .757 0l.691.692l.692-.692a.535.535 0 0 1 .756.757l-.691.691l.691.692a.535.535 0 1 1-.756.756l-.692-.691l-.691.691a.535.535 0 1 1-.757-.756l.692-.692l-.692-.691a.535.535 0 0 1 0-.757M9.66 10.36a1.783 1.783 0 1 1 3.566 0a1.783 1.783 0 0 1-3.566 0m1.783-2.852a2.853 2.853 0 1 0 2.853 2.852a2.853 2.853 0 1 0 5.705 0a2.853 2.853 0 0 0-5.705 0a2.853 2.853 0 0 0-2.853-2.852m5.705 1.07a1.783 1.783 0 1 0 0 3.565a1.783 1.783 0 0 0 0-3.566Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: 500px-logo-2-solid -->
+  <text x="386" y="46.50" class="label">500px-logo-2-s…</text>
+  <g transform="translate(399.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M1.857 7.25a.75.75 0 0 0-.75.75v3.212a.75.75 0 0 0 1.393.387a1.749 1.749 0 0 1 3.25.901a1.75 1.75 0 0 1-3.465.35l-1.47.3a3.25 3.25 0 1 0 1.792-3.587V8.75H6.5v-1.5zM16.5 17.75a.75.75 0 0 0-.75.75v3a.75.75 0 0 1-1.5 0v-3a2.25 2.25 0 1 1 2.25 2.25a.75.75 0 0 1 0-1.5a.75.75 0 0 0 0-1.5m3.53-1.28a.75.75 0 1 0-1.06 1.06l.97.97l-.97.97a.75.75 0 1 0 1.06 1.06l.97-.97l.97.97a.75.75 0 1 0 1.06-1.06l-.97-.97l.97-.97a.75.75 0 1 0-1.06-1.06l-.97.97zm-8.78-7.22a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5m-4 2.5a4 4 0 1 1 8 0a4 4 0 0 1-8 0m9.5 0a2.5 2.5 0 1 1 5 0a2.5 2.5 0 0 1-5 0m2.5-4a4 4 0 1 0 0 8a4 4 0 0 0 0-8" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: about-me-logo -->
+  <text x="434" y="46.50" class="label">about-me-logo</text>
+  <g transform="translate(447.00, 15.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="none" stroke="currentColor" stroke-linejoin="round" d="M2 9v8m0-5.5c.5-.5 1.5-2 3.5-2c.835 0 2 .5 2 1.5v6m5 0v-6c0-1-1.165-1.5-2-1.5c-1.48 0-2.414.822-3 1.452M15 13a3.5 3.5 0 0 0 6.247 2.169M15 13a3.5 3.5 0 1 1 7 0z"/>
+  </g>
+  <!-- Cell: about-me-logo-block -->
+  <text x="2" y="96.00" class="label">about-me-logo-…</text>
+  <g transform="translate(15.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zM4 15.182V9h1.09v.693C5.572 9.328 6.232 9 7.092 9c.397 0 .863.115 1.246.357c.14.088.276.2.394.333A3.2 3.2 0 0 1 10.727 9c.397 0 .864.115 1.247.357c.39.247.753.671.753 1.28v4.545h-1.09v-4.546c0-.119-.061-.24-.246-.357a1.3 1.3 0 0 0-.664-.188c-.746 0-1.256.357-1.636.731v4.36H8v-4.546c0-.119-.06-.24-.245-.357a1.3 1.3 0 0 0-.664-.188c-.98 0-1.514.59-1.93 1.049l-.07.077v3.965zm10.984-2.546H20v-.545a3.09 3.09 0 1 0-.665 1.916l-.856-.677a2 2 0 0 1-3.495-.694m1.925-2.545a2 2 0 0 0-1.925 1.455h3.85a2 2 0 0 0-1.925-1.455" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: about-me-logo-solid -->
+  <text x="50" y="96.00" class="label">about-me-logo-…</text>
+  <g transform="translate(63.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M1.25 8.75v8.5h1.5v-5.452l.096-.106c.572-.632 1.306-1.442 2.654-1.442c.29 0 .648.092.912.259c.255.16.338.327.338.491v6.25h1.5v-5.995c.522-.514 1.224-1.005 2.25-1.005c.29 0 .648.092.912.259c.255.16.338.327.338.491v6.25h1.5V11c0-.836-.5-1.42-1.036-1.759A3.3 3.3 0 0 0 10.5 8.75c-1.197 0-2.093.449-2.745.95a2.5 2.5 0 0 0-.541-.459A3.3 3.3 0 0 0 5.5 8.75c-1.182 0-2.09.451-2.75.953V8.75zm22 5h-6.896a2.751 2.751 0 0 0 4.805.954l1.177.93A4.25 4.25 0 1 1 23.25 13zm-6.896-1.5a2.751 2.751 0 0 1 5.293 0z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-after-effects-logo -->
+  <text x="98" y="96.00" class="label">adobe-after-ef…</text>
+  <g transform="translate(111.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="m4.5 16.5l3-9h1l3 9m-6-3.5h5m8.5 2.5s-1.146.5-2.209.5C15.176 16 14 14.22 14 13c0-1.5.704-3 3-3c1.6 0 2 1.714 2 2.5h-5"/><path d="M1.5 4.5a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3z"/></g>
+  </g>
+  <!-- Cell: adobe-after-effects-logo-block -->
+  <text x="146" y="96.00" class="label">adobe-after-ef…</text>
+  <g transform="translate(159.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zM3.512 16.472l3.194-9.128v-.66h2.55l3.534 9.788H10.6l-.832-2.287H6.309l-.775 2.287zm3.345-4.233H9.2L8.03 8.422zM19.329 14.6v1.7c-.347.14-1.308.417-2.381.417c-1.342 0-3.78-.643-3.78-3.988c0-2.948 2.174-3.798 3.78-3.798c1.436 0 3.042 1.058 3.042 3.08v1.323h-4.648c.132.535.691 1.606 1.87 1.606s1.903-.227 2.117-.34m-3.969-2.683h2.703c-.032-.466-.34-1.399-1.323-1.399s-1.33.932-1.38 1.399" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-after-effects-logo-solid -->
+  <text x="194" y="96.00" class="label">adobe-after-ef…</text>
+  <g transform="translate(207.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M4.65.75a3.9 3.9 0 0 0-3.9 3.9v14.7a3.9 3.9 0 0 0 3.9 3.9h14.7a3.9 3.9 0 0 0 3.9-3.9V4.65a3.9 3.9 0 0 0-3.9-3.9zm-2.4 3.9a2.4 2.4 0 0 1 2.4-2.4h14.7a2.4 2.4 0 0 1 2.4 2.4v14.7a2.4 2.4 0 0 1-2.4 2.4H4.65a2.4 2.4 0 0 1-2.4-2.4zm1.262 11.822l3.194-9.128v-.66h2.55l3.534 9.788H10.6l-.832-2.287H6.309l-.775 2.287zm3.345-4.233H9.2L8.03 8.422zM19.329 14.6v1.7c-.347.14-1.308.417-2.381.417c-1.342 0-3.78-.643-3.78-3.988c0-2.948 2.174-3.798 3.78-3.798c1.436 0 3.042 1.058 3.042 3.08v1.323h-4.648c.132.535.691 1.606 1.87 1.606s1.903-.227 2.117-.34m-3.969-2.683h2.703c-.032-.466-.34-1.399-1.323-1.399s-1.33.932-1.38 1.399" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-animate-logo -->
+  <text x="242" y="96.00" class="label">adobe-animate-…</text>
+  <g transform="translate(255.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M14.5 9v7.5m0-5.5s1.108-1.5 2.708-1.5C19 9.5 19 11.447 19 16.5"/><path d="M1.5 4.5a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3z"/><path d="m4.5 16.5l3-9h1l3 9m-6-3.5h5"/></g>
+  </g>
+  <!-- Cell: adobe-animate-logo-block -->
+  <text x="290" y="96.00" class="label">adobe-animate-…</text>
+  <g transform="translate(303.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zM3.512 16.472l3.194-9.128v-.66h2.55l3.534 9.788H10.6l-.832-2.287H6.309l-.775 2.287zm3.345-4.233H9.2L8.03 8.422zm9.057 4.233h-2.057V8.968h1.706c.187 0 .187.56.187.56s.792-.724 2.245-.724c2.02 0 2.446 1.98 2.407 2.97v4.698H18.37v-4.699c0-.42-.328-1.099-1.17-1.099c-.672 0-1.137.312-1.285.468v5.33Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-animate-logo-solid -->
+  <text x="338" y="96.00" class="label">adobe-animate-…</text>
+  <g transform="translate(351.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M.75 4.65a3.9 3.9 0 0 1 3.9-3.9h14.7a3.9 3.9 0 0 1 3.9 3.9v14.7a3.9 3.9 0 0 1-3.9 3.9H4.65a3.9 3.9 0 0 1-3.9-3.9zm3.9-2.4a2.4 2.4 0 0 0-2.4 2.4v14.7a2.4 2.4 0 0 0 2.4 2.4h14.7a2.4 2.4 0 0 0 2.4-2.4V4.65a2.4 2.4 0 0 0-2.4-2.4zM3.512 16.472l3.194-9.128v-.66h2.55l3.534 9.788H10.6l-.832-2.287H6.309l-.775 2.287zm3.345-4.233H9.2L8.03 8.422zm7 4.233h2.057v-5.33c.148-.156.613-.468 1.286-.468c.841 0 1.169.678 1.169 1.1v4.698h2.033v-4.699c.04-.99-.388-2.969-2.407-2.969c-1.453 0-2.245.725-2.245.725s0-.561-.187-.561h-1.706z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-audio-logo -->
+  <text x="386" y="96.00" class="label">adobe-audio-lo…</text>
+  <g transform="translate(399.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M1.5 4.5a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3z"/><path d="m4.5 16.5l3-9h1l3 9m-6-3.5h5M19 9v7.5m0-2S17.892 16 16.292 16C14.5 16 14.5 14.053 14.5 9"/></g>
+  </g>
+  <!-- Cell: adobe-audio-logo-block -->
+  <text x="434" y="96.00" class="label">adobe-audio-lo…</text>
+  <g transform="translate(447.00, 65.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zM3.512 16.472l3.194-9.128v-.66h2.55l3.534 9.788H10.6l-.832-2.287H6.309l-.775 2.287zm3.345-4.233H9.2L8.03 8.422zm10.99-3.435h2.058v7.504h-1.707c-.187 0-.187-.56-.187-.56s-.791.724-2.244.724c-2.02 0-2.447-1.98-2.408-2.97V8.805h2.034v4.699c0 .42.327 1.099 1.169 1.099c.673 0 1.138-.312 1.286-.468v-5.33Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-audio-logo-solid -->
+  <text x="2" y="145.50" class="label">adobe-audio-lo…</text>
+  <g transform="translate(15.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M.75 4.65a3.9 3.9 0 0 1 3.9-3.9h14.7a3.9 3.9 0 0 1 3.9 3.9v14.7a3.9 3.9 0 0 1-3.9 3.9H4.65a3.9 3.9 0 0 1-3.9-3.9zm3.9-2.4a2.4 2.4 0 0 0-2.4 2.4v14.7a2.4 2.4 0 0 0 2.4 2.4h14.7a2.4 2.4 0 0 0 2.4-2.4V4.65a2.4 2.4 0 0 0-2.4-2.4zM3.512 16.472l3.194-9.128v-.66h2.55l3.534 9.788H10.6l-.832-2.287H6.309l-.775 2.287zm3.345-4.233H9.2L8.03 8.422zm13.048-3.435h-2.057v5.33c-.148.156-.613.468-1.286.468a1.12 1.12 0 0 1-1.169-1.1V8.805H13.36v4.699c-.039.99.388 2.969 2.408 2.969c1.453 0 2.244-.725 2.244-.725s0 .561.187.561h1.707V8.804Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-bridge-logo -->
+  <text x="50" y="145.50" class="label">adobe-bridge-l…</text>
+  <g transform="translate(63.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M7 16v-4.5h2.75a2.25 2.25 0 0 1 0 4.5zm0-4.5v-4h2.5a2 2 0 1 1 0 4z"/><path d="M1.5 4.5a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3zM15 9v7.5"/><path d="M15 11.5c.547-1.11 1.563-2 3.5-2"/></g>
+  </g>
+  <!-- Cell: adobe-bridge-logo-block -->
+  <text x="98" y="145.50" class="label">adobe-bridge-l…</text>
+  <g transform="translate(111.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm1 5.5h3.5a3 3 0 0 1 2.394 4.808A3.25 3.25 0 0 1 9.75 17H6zm4.5 3a1 1 0 0 1-1 1H8v-2h1.5a1 1 0 0 1 1 1M8 15v-2.5h1.75a1.25 1.25 0 1 1 0 2.5zm6-5.5V17h2v-4.25a2.35 2.35 0 0 1 .768-.824c.377-.242.921-.426 1.732-.426v-2c-.976 0-1.807.196-2.5.56V9.5z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-bridge-logo-solid -->
+  <text x="146" y="145.50" class="label">adobe-bridge-l…</text>
+  <g transform="translate(159.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M.75 4.65a3.9 3.9 0 0 1 3.9-3.9h14.7a3.9 3.9 0 0 1 3.9 3.9v14.7a3.9 3.9 0 0 1-3.9 3.9H4.65a3.9 3.9 0 0 1-3.9-3.9zm3.9-2.4a2.4 2.4 0 0 0-2.4 2.4v14.7a2.4 2.4 0 0 0 2.4 2.4h14.7a2.4 2.4 0 0 0 2.4-2.4V4.65a2.4 2.4 0 0 0-2.4-2.4zM9.5 6.5H6V17h3.75a3.25 3.25 0 0 0 2.144-5.692A3 3 0 0 0 9.5 6.5m0 4a1 1 0 1 0 0-2H8v2zm-1.5 2V15h1.75a1.25 1.25 0 1 0 0-2.5zm6 4.5V9.5h2v.56c.693-.364 1.524-.56 2.5-.56v2c-.81 0-1.355.184-1.732.426a2.35 2.35 0 0 0-.768.823V17z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-cloud-logo -->
+  <text x="194" y="145.50" class="label">adobe-cloud-lo…</text>
+  <g transform="translate(207.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path stroke-linecap="round" d="M13.659 12.226S10.553 9 8 9a4 4 0 0 0 0 8"/><path stroke-linecap="round" d="M7.865 12.405S11.739 17 14.5 17A5 5 0 1 0 13 7.229"/><path d="M14.75 19.5A7.75 7.75 0 1 0 8.982 6.574A6.5 6.5 0 1 0 8 19.5z"/></g>
+  </g>
+  <!-- Cell: adobe-cloud-logo-block -->
+  <text x="242" y="145.50" class="label">adobe-cloud-lo…</text>
+  <g transform="translate(255.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm8.956 17.044a6.044 6.044 0 1 0-4.62-9.943a4.978 4.978 0 1 0-.358 9.943zm-.594-8.074a2.574 2.574 0 1 1 .772 5.03c-.238 0-.6-.108-1.076-.38a9 9 0 0 1-1.377-1.015a16 16 0 0 1-1.418-1.411c-.386-.436-1.015-.665-1.516-.243c-.52.438-.381 1.117.02 1.57a18 18 0 0 0 1.598 1.59c.496.434 1.083.89 1.698 1.243c.598.343 1.322.646 2.071.646a4.574 4.574 0 1 0-1.372-8.938a1 1 0 1 0 .6 1.908m-6.37 3.051c0-1.092.885-1.978 1.978-1.978c.602 0 1.426.417 2.227 1.006a11.5 11.5 0 0 1 1.183 1.007c.409.4 1.043.547 1.497.11c.49-.471.319-1.13-.096-1.538a13.5 13.5 0 0 0-1.398-1.19c-.83-.61-2.114-1.395-3.413-1.395a3.978 3.978 0 0 0 0 7.957a1 1 0 0 0 0-2a1.98 1.98 0 0 1-1.978-1.979" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-cloud-logo-solid -->
+  <text x="290" y="145.50" class="label">adobe-cloud-lo…</text>
+  <g transform="translate(303.00, 114.75) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M15 20.5A8.5 8.5 0 1 0 8.504 6.518A7 7 0 1 0 8 20.5zM7.99 10.249a3.189 3.189 0 0 0 0 6.377a1 1 0 0 1 0 2a5.188 5.188 0 1 1 0-10.377c1.672 0 3.318.95 4.467 1.786a16 16 0 0 1 2.2 1.923a1 1 0 1 1-1.486 1.338c-.076-.085-.838-.88-1.89-1.643c-1.089-.792-2.292-1.404-3.292-1.404Zm6.053-1.49a4.025 4.025 0 1 1 1.208 7.867c-.45 0-1.02-.181-1.684-.552c-.65-.363-1.312-.865-1.925-1.397c-1.009-.878-1.788-1.75-2.155-2.159l-.184-.203A1 1 0 0 0 7.86 13.7l.017.018l.05.057l.04.044l.126.141c.136.152.317.352.536.583a24 24 0 0 0 1.7 1.642c.67.583 1.447 1.18 2.262 1.634c.801.448 1.722.806 2.66.806A6.025 6.025 0 1 0 13.443 6.85a1 1 0 1 0 .6 1.908Z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-illustrator-logo -->
+  <text x="2" y="195.00" class="label">adobe-illustra…</text>
+  <g transform="translate(15.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M16.5 8a.5.5 0 0 1 0-1m0 1a.5.5 0 0 0 0-1m0 3v7"/><path d="M1.5 4.5a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3z"/><path d="m6.5 17l3-9h1l3 9m-6-3.5h5"/></g>
+  </g>
+  <!-- Cell: adobe-illustrator-logo-block -->
+  <text x="50" y="195.00" class="label">adobe-illustra…</text>
+  <g transform="translate(63.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm11.448 7.672a1 1 0 1 0 0-2a1 1 0 0 0 0 2m1 8.3V9.749h-2v7.223zm-12.572 0L8.07 7.844v-.66h2.551l3.534 9.788h-2.192l-.832-2.287H7.673l-.775 2.287zm3.345-4.233h2.343L9.393 8.922z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-illustrator-logo-solid -->
+  <text x="98" y="195.00" class="label">adobe-illustra…</text>
+  <g transform="translate(111.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M.75 4.65a3.9 3.9 0 0 1 3.9-3.9h14.7a3.9 3.9 0 0 1 3.9 3.9v14.7a3.9 3.9 0 0 1-3.9 3.9H4.65a3.9 3.9 0 0 1-3.9-3.9zm3.9-2.4a2.4 2.4 0 0 0-2.4 2.4v14.7a2.4 2.4 0 0 0 2.4 2.4h14.7a2.4 2.4 0 0 0 2.4-2.4V4.65a2.4 2.4 0 0 0-2.4-2.4zm11.798 6.422a1 1 0 1 0 0-2a1 1 0 0 0 0 2m1 8.3V9.749h-2v7.223zM8.07 7.844l-3.194 9.128h2.022l.775-2.287h3.458l.832 2.287h2.192L10.62 7.183H8.07zm2.494 4.895H8.221l1.172-3.817z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-indesign-logo -->
+  <text x="146" y="195.00" class="label">adobe-indesign…</text>
+  <g transform="translate(159.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M8.5 8v9M16 7v4m0 0v5c-1.5.667-4.5.778-4.5-2.5c0-3.108 3-3.167 4.5-2.5Z"/><path d="M1.5 4.5a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3z"/></g>
+  </g>
+  <!-- Cell: adobe-indesign-logo-block -->
+  <text x="194" y="195.00" class="label">adobe-indesign…</text>
+  <g transform="translate(207.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm10 5.5h2v9.79c-.565.196-1.954.59-2.988.59c-1.292 0-3.582-.665-3.582-3.766c0-2.687 2.237-3.7 4.57-3.7zm0 4.624v4c-.83 0-2.5-.213-2.5-2s1.67-2 2.5-2M9 7.5H7v9h2z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-indesign-logo-solid -->
+  <text x="242" y="195.00" class="label">adobe-indesign…</text>
+  <g transform="translate(255.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <path fill="currentColor" fill-rule="evenodd" d="M4.65.75a3.9 3.9 0 0 0-3.9 3.9v14.7a3.9 3.9 0 0 0 3.9 3.9h14.7a3.9 3.9 0 0 0 3.9-3.9V4.65a3.9 3.9 0 0 0-3.9-3.9zm-2.4 3.9a2.4 2.4 0 0 1 2.4-2.4h14.7a2.4 2.4 0 0 1 2.4 2.4v14.7a2.4 2.4 0 0 1-2.4 2.4H4.65a2.4 2.4 0 0 1-2.4-2.4zM15 6.5h2v9.79c-.565.196-1.954.59-2.988.59c-1.292 0-3.582-.665-3.582-3.766c0-2.687 2.237-3.7 4.57-3.7zm0 4.624v4c-.83 0-2.5-.213-2.5-2s1.67-2 2.5-2M9 7.5H7v9h2z" clip-rule="evenodd"/>
+  </g>
+  <!-- Cell: adobe-lightroom-logo -->
+  <text x="290" y="195.00" class="label">adobe-lightroo…</text>
+  <g transform="translate(303.00, 164.25) scale(0.7500, 0.7500) translate(0, 0)" color="#17181C">
+    <g fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M7 6v10.5h5"/><path d="M1.5 4.5a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3zm13.5 5V17"/><path d="M15 12c.547-1.11 1.563-2 3.5-2"/></g>
+  </g>
+
+  <text x="347" y="116.744" class="overlay-cat">@onwo/iconset-streamline-logos</text>
+  <text x="348" y="139.738" class="overlay-title">logos free icons</text>
+  <text x="351" y="190.744" class="overlay-meta">CC-BY-4.0 · 1,362 icons</text>
+</svg>

@@ -6,7 +6,7 @@ import {
   useContext,
   useContextProvider,
 } from '@qwik.dev/core';
-import type { Primitive } from '~primitives/utils/as';
+import type { OwPropsOf } from '~primitives/utils/as';
 
 type AccordionContext = {
   singleOpen?: boolean;
@@ -26,7 +26,7 @@ export const useAccordionRootContextProvider = (singleOpen: boolean): AccordionC
   return data;
 };
 
-export type RootProps = Primitive<'div'> & {
+export type RootProps = OwPropsOf<'div'> & {
   singleOpen?: boolean;
 };
 

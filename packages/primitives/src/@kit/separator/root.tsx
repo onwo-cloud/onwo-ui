@@ -1,8 +1,8 @@
-import type { Primitive } from '~primitives/utils/as';
+import type { OwPropsOf } from '~primitives/utils/as';
 
 type Orientation = 'horizontal' | 'vertical';
 
-export type RootProps = Primitive<'div'> & {
+export type RootProps = OwPropsOf<'div'> & {
   orientation?: Orientation;
   /**
    * Whether or not the component is purely decorative. When true, accessibility-related attributes

@@ -1,9 +1,9 @@
 import { Slot, component$ } from '@qwik.dev/core';
-import type { Primitive } from '~primitives/utils/as';
+import type { OwPropsOf } from '~primitives/utils/as';
 
-import { useTabsContextProvider } from './use-tabs-context';
+import { TabsContext } from './use-tabs-context';
 
-export type RootProps = Primitive<'div'> & {
+export type TabsRootProps = OwPropsOf<'div'> & {
   defaultSelected?: string;
   /**
    * Determines whether tabs are activated automatically when focused with the keyboard.
@@ -14,9 +14,12 @@ export type RootProps = Primitive<'div'> & {
   selectOnFocus?: boolean;
 };
 
-export const Root = component$((props: RootProps) => {
+export const TabsRoot = component$((props: TabsRootProps) => {
   // Pass the new prop into the provider
-  const ctx = useTabsContextProvider(props.defaultSelected, props.selectOnFocus ? 'automatic' : 'manual');
+  const ctx = TabsContext.useProvider({
+    defaultSelected: props.defaultSelected,
+    activationMode: props.selectOnFocus ? 'automatic' : 'manual'
+  });
 
   return (
     <div id={ctx.name} {...props}>

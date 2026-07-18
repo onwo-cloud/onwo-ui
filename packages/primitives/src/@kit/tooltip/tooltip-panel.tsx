@@ -1,23 +1,55 @@
-import { Slot, component$, useContext } from '@qwik.dev/core';
+import { Slot, component$, $ } from '@qwik.dev/core';
+import type { PopoverPanelProps } from '~primitives/@kit/popover';
+import { PopoverPanel, usePopoverContext } from '~primitives/@kit/popover';
 
-import { Panel as PopoverPanel, type HPopoverPanelProps } from '../popover/popover-panel';
+export type TooltipPanelProps = PopoverPanelProps & {
+  /**
+   * If true, enables mouse interaction inside the tooltip (e.g., selectable text/links).
+   * Defaults to `false` so the tooltip panel doesn't interfere with cursor movements.
+   */
+  interactive?: boolean;
+};
 
-import { TooltipContextId } from './tooltip-context';
+export const TooltipPanel = component$((props: TooltipPanelProps) => {
+  const context = usePopoverContext();
+  const {
+    role = 'tooltip',
+    side = 'top',
+    interactive = false,
+    onMouseLeave$,
+    class: className,
+    ...restProps
+  } = props;
 
-export type PanelProps = HPopoverPanelProps;
+  const isOpen = context.control.opened.value;
 
-/**
- * HTooltipPanel is the panel component for the Tooltip.
- */
-export const Panel = component$((props: PanelProps) => {
-  const context = useContext(TooltipContextId);
+  const handleMouseLeave$ = [
+    $((e: MouseEvent) => {
+      const relatedTarget = e.relatedTarget as HTMLElement | null;
+      if (
+        relatedTarget &&
+        (context.control.panelRef.value?.contains(relatedTarget) ||
+          context.control.triggerRef.value?.contains(relatedTarget))
+      ) {
+        return;
+      }
+      context.control.hide$();
+    }),
+    onMouseLeave$,
+  ];
 
   return (
     <PopoverPanel
-      {...props}
-      role="tooltip"
-      onToggle$={(e) => context.onOpenChange$(e.newState as 'open' | 'closed')}
-      id={context.localId}
+      role={role}
+      side={side}
+      aria-hidden={!isOpen}
+      onMouseLeave$={handleMouseLeave$}
+      class={[
+        // Ensure closed or non-interactive tooltips never capture mouse events
+        isOpen && interactive ? 'pointer-events-auto' : 'pointer-events-none',
+        className,
+      ]}
+      {...restProps}
     >
       <Slot />
     </PopoverPanel>

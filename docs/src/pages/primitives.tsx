@@ -1,14 +1,5 @@
-import { PageNavigationLink } from '@onwo/ui/page-navigation';
-
-import { PageHeadSection } from '~/commons/page-head-section';
-
 export const PrimitivesPage = () => (
   <div class="flex flex-col grow max-w-screen-xl">
-    <PageHeadSection
-      title="Primitives"
-      description="Reusables building block"
-      breadcrumbs={[{ label: 'Primitives', to: '/primitives' }]}
-    />
     <div class="onwo-format">
       <p>
         In our UI library, primitives are the unstyled building blocks that contain the core logic
@@ -17,9 +8,7 @@ export const PrimitivesPage = () => (
         components.
       </p>
 
-      <PageNavigationLink as="h2" id="goals" label="Why the separation">
-        Why the separation?
-      </PageNavigationLink>
+      <h2 id="goals"> Why the separation? </h2>
       <p>
         This is not exactly a new pattern, it became the standard for ui library design and we get a
         lot from it, here is a quick breakdown:

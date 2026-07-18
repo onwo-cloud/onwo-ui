@@ -102,10 +102,10 @@ export default component$(() => {
   );
 
   return (
-    <div class="bg-[#FCFCFC] min-h-screen w-full px-[48px] py-[60px] flex flex-col gap-[48px] font-sans antialiased overflow-y-auto">
+    <div class="bg-shade-50 min-h-screen w-full px-[48px] py-[60px] flex flex-col gap-[48px] font-sans antialiased overflow-y-auto">
       
       {/* --- FILTER & TOGGLE CONTROL BAR --- */}
-      <div class="border-b border-[#0000000D] border-solid pb-[32px] flex flex-wrap items-center justify-between gap-[24px]">
+      <div class="border-b border-shade-1000/5 border-solid pb-[32px] flex flex-wrap items-center justify-between gap-[24px]">
         
         {/* Search input field matching design system parameters */}
         <div class="relative w-full max-w-[320px]">
@@ -113,7 +113,7 @@ export default component$(() => {
             type="text"
             placeholder="FILTER COMPONENTS..."
             bind:value={filterQuery}
-            class="w-full bg-[#FFFFFF] border border-[#0000000D] border-solid px-[16px] py-[10px] text-[11px] tracking-[var(--tracking-eyebrow)] text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-300 rounded-sm uppercase font-sans"
+            class="w-full bg-shade-0 border border-shade-1000/5 border-solid px-[16px] py-[10px] text-[11px] tracking-[var(--tracking-eyebrow)] text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-300 rounded-sm uppercase font-sans"
           />
           {filterQuery.value && (
             <button
@@ -127,13 +127,13 @@ export default component$(() => {
         </div>
 
         {/* View toggle segments */}
-        <div class="flex bg-slate-100/80 p-[4px] rounded-sm border border-[#0000000D] border-solid select-none">
+        <div class="flex bg-slate-100/80 p-[4px] rounded-sm border border-shade-1000/5 border-solid select-none">
           <button
             type="button"
             onClick$={$(() => { viewMode.value = 'all'; })}
             class={`px-[16px] py-[8px] text-[9px] font-bold uppercase tracking-[var(--tracking-eyebrow)] transition-all rounded-sm ${
               viewMode.value === 'all'
-                ? 'bg-[#FFFFFF] text-slate-800 shadow-[0_1px_2px_rgba(0,0,0,0.05)]'
+                ? 'bg-shade-0 text-slate-800 shadow-[0_1px_2px_rgba(0,0,0,0.05)]'
                 : 'text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -144,7 +144,7 @@ export default component$(() => {
             onClick$={$(() => { viewMode.value = 'components'; })}
             class={`px-[16px] py-[8px] text-[9px] font-bold uppercase tracking-[var(--tracking-eyebrow)] transition-all rounded-sm ${
               viewMode.value === 'components'
-                ? 'bg-[#FFFFFF] text-slate-800 shadow-[0_1px_2px_rgba(0,0,0,0.05)]'
+                ? 'bg-shade-0 text-slate-800 shadow-[0_1px_2px_rgba(0,0,0,0.05)]'
                 : 'text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -155,7 +155,7 @@ export default component$(() => {
             onClick$={$(() => { viewMode.value = 'pages'; })}
             class={`px-[16px] py-[8px] text-[9px] font-bold uppercase tracking-[var(--tracking-eyebrow)] transition-all rounded-sm ${
               viewMode.value === 'pages'
-                ? 'bg-[#FFFFFF] text-slate-800 shadow-[0_1px_2px_rgba(0,0,0,0.05)]'
+                ? 'bg-shade-0 text-slate-800 shadow-[0_1px_2px_rgba(0,0,0,0.05)]'
                 : 'text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -177,7 +177,7 @@ export default component$(() => {
           if (!variants || Object.keys(variants).length === 0) return null;
 
           return (
-            <div key={key} class="flex flex-col gap-[48px] pb-[64px] border-b border-[#0000000D] border-solid last:border-0">
+            <div key={key} class="flex flex-col gap-[48px] pb-[64px] border-b border-shade-1000/5 border-solid last:border-0">
               
               {/* --- 1. COMPONENTS SECTION --- */}
               {(viewMode.value === 'all' || viewMode.value === 'components') && (
@@ -192,10 +192,10 @@ export default component$(() => {
                     {Object.entries(variants).map(([vKey, htmlMarkup]) => (
                       <div
                         key={vKey}
-                        class="relative bg-[#FFFFFF] border border-[#0000000D] border-solid box-border aspect-[3/2] overflow-hidden flex items-center justify-center p-[42px] pt-[48px] rounded-sm"
+                        class="relative bg-shade-0 border border-shade-1000/5 border-solid box-border aspect-[3/2] overflow-hidden flex items-center justify-center p-[42px] pt-[48px] rounded-sm"
                       >
                         {/* Variant watermark label matching custom typography */}
-                        <div class="absolute top-[12px] left-[16px] text-[#0A0A0A66] font-sans text-[9px] tracking-[var(--tracking-eyebrow)] leading-[12px] uppercase select-none pointer-events-none">
+                        <div class="absolute top-[12px] left-[16px] text-shade-950/40 font-sans text-[9px] tracking-[var(--tracking-eyebrow)] leading-[12px] uppercase select-none pointer-events-none">
                           variant/{vKey}
                         </div>
 
@@ -218,7 +218,7 @@ export default component$(() => {
                   {/* High Fidelity Full-Scale Page Canvas (styled to match your specifications) */}
                   {pageHtml ? (
                     <div 
-                      class="relative bg-[#FFFFFF] border border-[#0000000D] border-solid box-border w-full overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
+                      class="relative bg-shade-0 border border-shade-1000/5 border-solid box-border w-full overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
                       dangerouslySetInnerHTML={pageHtml}
                     />
                   ) : (

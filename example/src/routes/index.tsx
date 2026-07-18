@@ -24,7 +24,7 @@ export const UIProvider = createUiProvider({
 export default component$(() => {
   return (
     <UIProvider>
-      <UiIcon name="chevron-up" />
+      <UiIcon i="chevron-up" />
     </UIProvider>
   );
 });

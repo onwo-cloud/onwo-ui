@@ -1,7 +1,7 @@
-import type { PropsOf } from '@qwik.dev/core';
 import { Item } from '@onwo/primitives/accordion';
+import { OwPropsOf } from '~primitives/index';
 
-export const AccordionItem = (props: PropsOf<typeof Item>) => {
+export const AccordionItem = (props: OwPropsOf<typeof Item>) => {
   return (
     <Item class="border-b border-line" {...props}>
       {props.children}

@@ -1,6 +1,6 @@
-import type { PropsOf } from '@qwik.dev/core';
+import { OwPropsOf } from "~primitives/index";
 
-type BadgeProps = PropsOf<'div'> & {
+type BadgeProps = OwPropsOf<'div'> & {
   look?: 'primary' | 'secondary' | 'alert' | 'outline';
 };
 
